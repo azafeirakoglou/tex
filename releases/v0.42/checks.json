@@ -1,0 +1,15 @@
+{
+  "version": "0.42",
+  "status": "passed",
+  "tests": {
+    "colors_checkboxes_preflight": 31,
+    "header_pdf_regressions": 11,
+    "toc_pdf_regressions": 4,
+    "total": 46
+  },
+  "pdf_pairs_passed": 9,
+  "main_pages_per_edition": 20,
+  "all_output_pages": 82,
+  "overfull_boxes": 0,
+  "logos_unchanged_from_v041_per_edition": 12
+}

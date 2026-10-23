@@ -61,12 +61,25 @@
 \endgroup
 \makeatother
 \chaptermark{INITIALCHAPTER}
+% The first section shares a page with the chapter reset. Its short title,
+% without the displayed number, is the running section label.
+\section[FIRSTSECTION]{First long section title}
 \markboth{ORIGINALLEFT}{ORIGINALRIGHT}
 \FixtureBodyFrame
 BODYNORMALONE
 \clearpage
+% Seed the first legacy mark before sectionmark changes its right component;
+% the independent booksection class must still select SECONDSECTION here.
+\markboth{ORIGINALLEFT}{ORIGINALRIGHT}
+\section[SECONDSECTION]{Second long section title}
+\markboth{ORIGINALLEFT}{ORIGINALRIGHT}
 \FixtureBodyFrame
 BODYNORMALTWO
+% A later section on this same page must not replace its first section in
+% the running header. It must take effect on the following assessment pages.
+\par\vspace{100mm}
+\section[THIRDSECTION]{Third long section title}
+\markboth{ORIGINALLEFT}{ORIGINALRIGHT}
 \begin{Assessment}{ASSESSMENTONE}
 BODYFIRSTONE
 \newpage

@@ -16,7 +16,7 @@
 % Το τελικό PDF παράγεται με XeLaTeX. Όχι με pdfLaTeX.
 % ===========================================================================
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{styles/universalbook}[2026/10/23 Modular Greek textbook design v0.41]
+\ProvidesPackage{styles/universalbook}[2026/10/23 Modular Greek textbook design v0.42]
 % Γραμματοσειρές OpenType/TrueType. Η αλλαγή γίνεται από τον config.
 \RequirePackage{fontspec}
 \RequirePackage{polyglossia}
@@ -253,9 +253,15 @@
 % Αν θέλεις μεγαλύτερο πουλί, άλλαξε BookHeaderIconHeight στον config.
 % ---------------------------------------------------------------------------
 \pagestyle{fancy}
+% Ανεξάρτητα page marks: οι προσωρινοί τίτλοι φύλλων/κριτηρίων δεν
+% αλλάζουν την ενότητα. Η πρώτη ενότητα που αρχίζει στη σελίδα κερδίζει.
+% Το δεύτερο class καλύπτει reset κεφαλαίου και section στην ίδια σελίδα.
+\NewMarkClass{booksection}
+\NewMarkClass{booksection-nonempty}
 \newcommand{\BookRunningChapterNumber}{}
 \newcommand{\BookRunningChapterTitle}{}
 \newcommand{\BookRememberRunningChapter}[1]{%
+  \InsertMark{booksection}{}%
   \gdef\BookRunningChapterTitle{#1}%
   \ifnum\value{chapter}>0\relax
     \xdef\BookRunningChapterNumber{\thechapter}%
@@ -281,6 +287,25 @@
     \gdef\BookRunningChapterNumber{}%
   \fi
   \markboth{#1}{#1}%
+}
+\renewcommand{\sectionmark}[1]{%
+  \InsertMark{booksection}{#1}%
+  \InsertMark{booksection-nonempty}{#1}%
+  \markright{#1}%
+}
+% Το FirstMark δεν διαβάζει προκαταβολικά τίτλους της επόμενης σελίδας.
+% Αν το πρώτο mark είναι το κενό reset κεφαλαίου, επιλέγουμε την πρώτη
+% μη κενή section μόνο εφόσον υπάρχει section μετά το reset στη σελίδα.
+\newcommand{\BookWithHeaderSection}[1]{%
+  \begingroup
+  \protected@edef\BookCurrentHeaderSection{\FirstMark{booksection}}%
+  \ifdefempty{\BookCurrentHeaderSection}{%
+    \protected@edef\BookCurrentHeaderSection{\LastMark{booksection}}%
+    \ifdefempty{\BookCurrentHeaderSection}{}{%
+      \protected@edef\BookCurrentHeaderSection{\FirstMark{booksection-nonempty}}}%
+  }{}%
+  \ifdefempty{\BookCurrentHeaderSection}{}{#1}%
+  \endgroup
 }
 \makeatother
 % Το ίδιο vector σήμα και στις δύο εκδόσεις, με το δεύτερο μελάνι.
@@ -318,7 +343,7 @@
 }
 % Το πουλί βρίσκεται στην εξωτερική άκρη. Στις ζυγές καθρεφτίζεται.
 \newcommand{\BookHeaderBirdEven}{\reflectbox{\BookHeaderIcon}}
-% ΕΝΙΑΙΑ μορφοποίηση κεφαλίδας: τίτλος προς τη ράχη, μόνο σήμα εξωτερικά.
+% ΕΝΙΑΙΑ μορφοποίηση: κεφάλαιο προς τη ράχη, section δίπλα στο σήμα.
 % Το #1 είναι κοινό για κανονικές και εξεταστικές σελίδες.
 % [LO]/[RE] = εσωτερική θέση· [RO]/[LE] = εξωτερική θέση.
 % Η \nouppercase αποτρέπει αυτόματη μετατροπή του τίτλου σε κεφαλαία.
@@ -327,8 +352,12 @@
 \newcommand{\BookApplyRunningHeaders}[1]{%
   \fancyhead[LO]{\BookHeaderTitleFont\color{\BookHeaderTitleColor}\nouppercase{#1}}%
   \fancyhead[RE]{\BookHeaderTitleFont\color{\BookHeaderTitleColor}\nouppercase{#1}}%
-  \fancyhead[RO]{\BookHeaderTitleFont\BookHeaderIcon}%
-  \fancyhead[LE]{\BookHeaderTitleFont\BookHeaderBirdEven}%
+  \fancyhead[RO]{\BookHeaderTitleFont\color{\BookHeaderTitleColor}%
+    \BookWithHeaderSection{\nouppercase{\BookCurrentHeaderSection}\hspace{\BookHeaderIconGap}}%
+    \BookHeaderIcon}%
+  \fancyhead[LE]{\BookHeaderTitleFont\color{\BookHeaderTitleColor}%
+    \BookHeaderBirdEven
+    \BookWithHeaderSection{\hspace{\BookHeaderIconGap}\nouppercase{\BookCurrentHeaderSection}}}%
 }
 % Κανονικές σελίδες: τίτλος κεφαλαίου αντί τίτλου κριτηρίου.
 \fancyhf{}
@@ -379,12 +408,13 @@
 % ---------------------------------------------------------------------------
 % ΚΑΝΟΝΑΣ ΙΕΡΑΡΧΙΑΣ:
 %   chapter    = Κεφάλαιο/Ενότητα, π.χ. «1 Κίνηση σε μία διάσταση».
-%   section    = Ομαδικός τίτλος «Φύλλα εργασίας» / «Κριτήρια Αξιολόγησης».
-%   subsection = Κάθε επιμέρους φύλλο ή κριτήριο με τίτλο και σελίδα.
+%   section    = Κανονική αριθμημένη ενότητα θεωρίας.
+%   bookcollection = Μη αριθμημένη ομάδα φύλλων/κριτηρίων (επίπεδο 1).
+%   bookitem   = Κάθε φύλλο ή κριτήριο με τίτλο και σελίδα (επίπεδο 2).
 %
 % Αυτό σημαίνει ότι τα συμπληρωματικά υλικά ΕΝΤΑΣΣΟΝΤΑΙ στο κεφάλαιο
 % μέσα στο οποίο έχουν τοποθετηθεί στο book-content.tex.
-% Δεν αποκτούν αρίθμηση 1.3 ή 1.4: τα ονόματα είναι άτιτλα στο TOC.
+% Δεν αποκτούν αρίθμηση 1.3 ή 1.4: οι τίτλοι τους είναι μη αριθμημένοι.
 %
 % ΧΡΩΜΑΤΑ ΣΤΑ ΠΕΡΙΕΧΟΜΕΝΑ (v0.19):
 % - ΟΛΕΣ οι καταχωρίσεις παραμένουν στο κανονικό μαύρο του TOC.
@@ -399,11 +429,12 @@
 % το είδος υλικού, τυπώνεται ξανά η αντίστοιχη επικεφαλίδα.
 % Με \phantomsection ο σύνδεσμος δείχνει στην αρχή της ομάδας.
 % Με δύο/τρεις διαδοχικές μεταγλωττίσεις ενημερώνονται οι σωστές σελίδες.
+\input{styles/book-toc.tex}
 \newcommand{\BookTOCActiveCollection}{}
 \newcommand{\BookTOCOpenCollection}[2]{%
   \ifdefstring{\BookTOCActiveCollection}{#1}{}{%
     \phantomsection%
-    \addcontentsline{toc}{section}{#2}%
+    \addcontentsline{toc}{bookcollection}{#2}%
     \gdef\BookTOCActiveCollection{#1}%
   }%
 }
@@ -716,12 +747,12 @@
 % ΦΥΛΛΟ ΕΡΓΑΣΙΑΣ: κατασκευάζει την κεφαλίδα και αυξάνει μετρητή.
 % \WorksheetOpening{Ενότητα 1}{Μετατόπιση και διάστημα}
 % Αυτή η καταχώριση γίνεται αυτόματα για ΚΑΘΕ φύλλο εργασίας.
-% Το πρώτο φύλλο προσθέτει και την ομάδα «Φύλλα εργασίας» (επίπεδο section).
-% Κάθε φύλλο είναι subsection μέσα στο τρέχον κεφάλαιο.
+% Το πρώτο φύλλο προσθέτει και την ομάδα «Φύλλα εργασίας» (bookcollection).
+% Κάθε φύλλο είναι bookitem μέσα στο τρέχον κεφάλαιο.
 % Στο TOC εμφανίζεται «Φύλλο εργασίας 1 — Θέση, μετατόπιση ...».
 \newcommand{\WorksheetOpening}[2]{\clearpage\setcounter{exercise}{0}\refstepcounter{worksheet}%
  \BookTOCOpenCollection{worksheet}{Φύλλα εργασίας}%
- \phantomsection\addcontentsline{toc}{subsection}{Φύλλο εργασίας\space\theworksheet\space—\space #2}%
+ \phantomsection\addcontentsline{toc}{bookitem}{Φύλλο εργασίας\space\theworksheet\space—\space #2}%
  \markboth{Φύλλα εργασίας}{Φύλλα εργασίας}\vspace*{2mm}\noindent\begin{tcolorbox}[enhanced,sharp corners,boxrule=0pt,colback=BookPrimary,left=4mm,right=4mm,top=3mm,bottom=3mm,overlay={\fill[BookSecondary] ([xshift=-18mm]frame.north east) rectangle (frame.south east);\node[text=white,font=\bfseries\Large] at ([xshift=-9mm]frame.east) {\theworksheet};}]\color{white}{\footnotesize\bfseries\BookShortName\enspace·\enspace #1}\par{\BookHeadingFont\bfseries\large \LabelWorksheet}\par{\small #2}\end{tcolorbox}\medskip}
 \newcommand{\WorksheetSection}[1]{\Needspace{3\baselineskip}\vspace{5pt}\noindent\colorbox{BookSecondary}{\parbox{\dimexpr\linewidth-2\fboxsep\relax}{\color{white}\bfseries\small #1}}\par\smallskip}
 \newcommand{\AnswerLine}{\par\vspace{4mm}\noindent\color{BookPaleRule}\rule{\linewidth}{.3pt}\color{BookInk}\par\vspace{3mm}}
@@ -828,7 +859,7 @@
  \refstepcounter{assessment}\setcounter{assessmentquestion}{0}\setcounter{assessmenttotal}{0}%
  % Καταχώριση στο TOC με τίτλο και σωστή σελίδα, χωρίς χειροκίνητες γραμμές.
  \BookTOCOpenCollection{assessment}{Κριτήρια Αξιολόγησης}%
- \phantomsection\addcontentsline{toc}{subsection}{Κριτήριο αξιολόγησης\space\theassessment\space—\space #2}%
+ \phantomsection\addcontentsline{toc}{bookitem}{Κριτήριο αξιολόγησης\space\theassessment\space—\space #2}%
  \gdef\BookAssessmentTopicLetter{Α}%
  \markboth{#2}{#2}\pagestyle{bookassessment}\thispagestyle{bookassessment}%
  \par\noindent

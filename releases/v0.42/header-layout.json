@@ -1,0 +1,307 @@
+{
+  "version": "0.42",
+  "comparison_reference": "releases/v0.41",
+  "logos_unchanged": true,
+  "editions": {
+    "PRINT": {
+      "reference_sha256": "bce9b9304bc6ff712e60145902404b22bc2d9544d5d1c4352c1dce5b0763e3db",
+      "new_sha256": "410044267ffb9e357d8c13d576345558acf29dcd16da46fba7b4d44940e70d92",
+      "headers": [
+        {
+          "physical_page": 6,
+          "chapter": "1. Κίνηση σε μία διάσταση",
+          "section": "Περιγραφή της κίνησης",
+          "logo_bbox_bp": [
+            48.75052261352539,
+            14.174641609191895,
+            68.50862884521484,
+            31.140962600708008
+          ],
+          "same_vector_points_and_position": true
+        },
+        {
+          "physical_page": 7,
+          "chapter": "1. Κίνηση σε μία διάσταση",
+          "section": "Από το διάγραμμα στη φυσική ερμηνεία",
+          "logo_bbox_bp": [
+            413.38116455078125,
+            14.174641609191895,
+            433.1392517089844,
+            31.140962600708008
+          ],
+          "same_vector_points_and_position": true
+        },
+        {
+          "physical_page": 8,
+          "chapter": "1. Κίνηση σε μία διάσταση",
+          "section": "Εφαρμογές και εξάσκηση",
+          "logo_bbox_bp": [
+            48.75052261352539,
+            14.174641609191895,
+            68.50862884521484,
+            31.140962600708008
+          ],
+          "same_vector_points_and_position": true
+        },
+        {
+          "physical_page": 9,
+          "chapter": "1. Κίνηση σε μία διάσταση",
+          "section": "Εφαρμογές και εξάσκηση",
+          "logo_bbox_bp": [
+            413.38116455078125,
+            14.174641609191895,
+            433.1392517089844,
+            31.140962600708008
+          ],
+          "same_vector_points_and_position": true
+        },
+        {
+          "physical_page": 10,
+          "chapter": "1. Κίνηση σε μία διάσταση",
+          "section": "Εφαρμογές και εξάσκηση",
+          "logo_bbox_bp": [
+            48.75052261352539,
+            14.174641609191895,
+            68.50862884521484,
+            31.140962600708008
+          ],
+          "same_vector_points_and_position": true
+        },
+        {
+          "physical_page": 11,
+          "chapter": "1. Κίνηση σε μία διάσταση",
+          "section": "Εφαρμογές και εξάσκηση",
+          "logo_bbox_bp": [
+            413.38116455078125,
+            14.174641609191895,
+            433.1392517089844,
+            31.140962600708008
+          ],
+          "same_vector_points_and_position": true
+        },
+        {
+          "physical_page": 12,
+          "chapter": "1. Κίνηση σε μία διάσταση",
+          "section": "Εφαρμογές και εξάσκηση",
+          "logo_bbox_bp": [
+            48.75052261352539,
+            14.174641609191895,
+            68.50862884521484,
+            31.140962600708008
+          ],
+          "same_vector_points_and_position": true
+        },
+        {
+          "physical_page": 13,
+          "chapter": "1. Κίνηση σε μία διάσταση",
+          "section": "Εφαρμογές και εξάσκηση",
+          "logo_bbox_bp": [
+            413.38116455078125,
+            14.174641609191895,
+            433.1392517089844,
+            31.140962600708008
+          ],
+          "same_vector_points_and_position": true
+        },
+        {
+          "physical_page": 14,
+          "chapter": "1. Κίνηση σε μία διάσταση",
+          "section": "Εφαρμογές και εξάσκηση",
+          "logo_bbox_bp": [
+            48.75052261352539,
+            14.174641609191895,
+            68.50862884521484,
+            31.140962600708008
+          ],
+          "same_vector_points_and_position": true
+        },
+        {
+          "physical_page": 15,
+          "chapter": "1. Κίνηση σε μία διάσταση",
+          "section": "Εφαρμογές και εξάσκηση",
+          "logo_bbox_bp": [
+            413.38116455078125,
+            14.174641609191895,
+            433.1392517089844,
+            31.140962600708008
+          ],
+          "same_vector_points_and_position": true
+        },
+        {
+          "physical_page": 18,
+          "chapter": "2. Συναρτήσεις και γραφήματα",
+          "section": "Η συνάρτηση πρώτου βαθμού",
+          "logo_bbox_bp": [
+            48.75052261352539,
+            14.174641609191895,
+            68.50862884521484,
+            31.140962600708008
+          ],
+          "same_vector_points_and_position": true
+        },
+        {
+          "physical_page": 19,
+          "chapter": "2. Συναρτήσεις και γραφήματα",
+          "section": "Η συνάρτηση πρώτου βαθμού",
+          "logo_bbox_bp": [
+            413.38116455078125,
+            14.174641609191895,
+            433.1392517089844,
+            31.140962600708008
+          ],
+          "same_vector_points_and_position": true
+        }
+      ]
+    },
+    "SCREEN": {
+      "reference_sha256": "6d9c5e3ccd619b3fcab5a0788e1b0f4aa1cac6dad8dcfa5d6c602d36b4cfe1c8",
+      "new_sha256": "ecdfd8a1dd4c5075c38cee2cf34b4c9d862f2b4fb312550b5133c0f8ecd31a05",
+      "headers": [
+        {
+          "physical_page": 6,
+          "chapter": "1. Κίνηση σε μία διάσταση",
+          "section": "Περιγραφή της κίνησης",
+          "logo_bbox_bp": [
+            48.75052261352539,
+            14.174641609191895,
+            68.50862884521484,
+            31.140962600708008
+          ],
+          "same_vector_points_and_position": true
+        },
+        {
+          "physical_page": 7,
+          "chapter": "1. Κίνηση σε μία διάσταση",
+          "section": "Από το διάγραμμα στη φυσική ερμηνεία",
+          "logo_bbox_bp": [
+            413.38116455078125,
+            14.174641609191895,
+            433.1392517089844,
+            31.140962600708008
+          ],
+          "same_vector_points_and_position": true
+        },
+        {
+          "physical_page": 8,
+          "chapter": "1. Κίνηση σε μία διάσταση",
+          "section": "Εφαρμογές και εξάσκηση",
+          "logo_bbox_bp": [
+            48.75052261352539,
+            14.174641609191895,
+            68.50862884521484,
+            31.140962600708008
+          ],
+          "same_vector_points_and_position": true
+        },
+        {
+          "physical_page": 9,
+          "chapter": "1. Κίνηση σε μία διάσταση",
+          "section": "Εφαρμογές και εξάσκηση",
+          "logo_bbox_bp": [
+            413.38116455078125,
+            14.174641609191895,
+            433.1392517089844,
+            31.140962600708008
+          ],
+          "same_vector_points_and_position": true
+        },
+        {
+          "physical_page": 10,
+          "chapter": "1. Κίνηση σε μία διάσταση",
+          "section": "Εφαρμογές και εξάσκηση",
+          "logo_bbox_bp": [
+            48.75052261352539,
+            14.174641609191895,
+            68.50862884521484,
+            31.140962600708008
+          ],
+          "same_vector_points_and_position": true
+        },
+        {
+          "physical_page": 11,
+          "chapter": "1. Κίνηση σε μία διάσταση",
+          "section": "Εφαρμογές και εξάσκηση",
+          "logo_bbox_bp": [
+            413.38116455078125,
+            14.174641609191895,
+            433.1392517089844,
+            31.140962600708008
+          ],
+          "same_vector_points_and_position": true
+        },
+        {
+          "physical_page": 12,
+          "chapter": "1. Κίνηση σε μία διάσταση",
+          "section": "Εφαρμογές και εξάσκηση",
+          "logo_bbox_bp": [
+            48.75052261352539,
+            14.174641609191895,
+            68.50862884521484,
+            31.140962600708008
+          ],
+          "same_vector_points_and_position": true
+        },
+        {
+          "physical_page": 13,
+          "chapter": "1. Κίνηση σε μία διάσταση",
+          "section": "Εφαρμογές και εξάσκηση",
+          "logo_bbox_bp": [
+            413.38116455078125,
+            14.174641609191895,
+            433.1392517089844,
+            31.140962600708008
+          ],
+          "same_vector_points_and_position": true
+        },
+        {
+          "physical_page": 14,
+          "chapter": "1. Κίνηση σε μία διάσταση",
+          "section": "Εφαρμογές και εξάσκηση",
+          "logo_bbox_bp": [
+            48.75052261352539,
+            14.174641609191895,
+            68.50862884521484,
+            31.140962600708008
+          ],
+          "same_vector_points_and_position": true
+        },
+        {
+          "physical_page": 15,
+          "chapter": "1. Κίνηση σε μία διάσταση",
+          "section": "Εφαρμογές και εξάσκηση",
+          "logo_bbox_bp": [
+            413.38116455078125,
+            14.174641609191895,
+            433.1392517089844,
+            31.140962600708008
+          ],
+          "same_vector_points_and_position": true
+        },
+        {
+          "physical_page": 18,
+          "chapter": "2. Συναρτήσεις και γραφήματα",
+          "section": "Η συνάρτηση πρώτου βαθμού",
+          "logo_bbox_bp": [
+            48.75052261352539,
+            14.174641609191895,
+            68.50862884521484,
+            31.140962600708008
+          ],
+          "same_vector_points_and_position": true
+        },
+        {
+          "physical_page": 19,
+          "chapter": "2. Συναρτήσεις και γραφήματα",
+          "section": "Η συνάρτηση πρώτου βαθμού",
+          "logo_bbox_bp": [
+            413.38116455078125,
+            14.174641609191895,
+            433.1392517089844,
+            31.140962600708008
+          ],
+          "same_vector_points_and_position": true
+        }
+      ]
+    }
+  }
+}

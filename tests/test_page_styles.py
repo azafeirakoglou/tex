@@ -147,6 +147,27 @@ class PageStyleTests(unittest.TestCase):
     def header_text(self, page):
         return " ".join(span["text"] for span in page["header"])
 
+    def chapter_label(self, page):
+        labels = [span for span in page["header"]
+                  if re.match(r"[123]\. ", span["text"])]
+        self.assertEqual(len(labels), 1, f"Page {page['index']}: missing chapter label")
+        return labels[0]
+
+    def section_label(self, page):
+        chapter = self.chapter_label(page)
+        labels = [span for span in page["header"] if span is not chapter]
+        self.assertLessEqual(len(labels), 1, f"Page {page['index']}: unexpected header text")
+        return labels[0] if labels else None
+
+    def expected_section(self, marker):
+        if marker == "BODY-NORMAL-ONE":
+            return "FIRSTSECTION"
+        if marker == "BODY-NORMAL-TWO":
+            return "SECONDSECTION"
+        if marker in NORMAL + CRITERIA + MARKRIGHT:
+            return "THIRDSECTION"
+        return None
+
     def test_both_original_marks_return_after_each_sequential_assessment(self):
         for edition in self.documents:
             for marker in NORMAL:
@@ -170,17 +191,30 @@ class PageStyleTests(unittest.TestCase):
                 for page in pair:
                     with self.subTest(edition=edition, page=page["index"]):
                         header = self.header_text(page)
-                        self.assertEqual(header, "1. INITIALCHAPTER")
+                        self.assertEqual(self.chapter_label(page)["text"], "1. INITIALCHAPTER")
                         self.assertNotIn(title, header)
                         self.assertIn("LMPROBE " + title, page["mark_probes"])
                         self.assertIn("RMPROBE " + title, page["mark_probes"])
             for marker in NORMAL + MARKRIGHT:
-                self.assertEqual(self.header_text(self.find(edition, marker)), "1. INITIALCHAPTER")
+                self.assertEqual(self.chapter_label(self.find(edition, marker))["text"], "1. INITIALCHAPTER")
             worksheet = self.find(edition, "BODY-AFTER-CHAPTER")
-            self.assertEqual(self.header_text(worksheet), "2. CHAPTEROPENER")
+            self.assertEqual(self.chapter_label(worksheet)["text"], "2. CHAPTEROPENER")
             self.assertIn("Φύλλα εργασίας", worksheet["mark_probes"])
             final = self.find(edition, "BODY-FINAL-ASSESSMENT")
-            self.assertEqual(self.header_text(final), "3. PHOTOCHAPTER")
+            self.assertEqual(self.chapter_label(final)["text"], "3. PHOTOCHAPTER")
+
+    def test_section_short_titles_follow_page_marks_and_reset_at_both_chapter_openers(self):
+        for edition in self.documents:
+            for marker in RUNNING:
+                page = self.find(edition, marker)
+                with self.subTest(edition=edition, marker=marker):
+                    label = self.section_label(page)
+                    expected = self.expected_section(marker)
+                    self.assertEqual(label["text"] if label else None, expected)
+                    if label:
+                        self.assertNotRegex(label["text"], r"\d")
+                        self.assertNotIn("long section title", self.header_text(page))
+                        self.assertNotIn("ASSESSMENT", label["text"])
 
     def test_unnumbered_chapter_labels_do_not_reuse_the_previous_chapter_number(self):
         for edition in self.documents:
@@ -234,9 +268,10 @@ class PageStyleTests(unittest.TestCase):
                 with self.subTest(edition=edition, page=page["index"]):
                     self.assertFalse(page["header_images"], "Header bird must contain no raster image")
                     self.assertEqual(len(page["birds"]), 1)
-                    self.assertEqual(len(page["header"]), 1)
-                    label = page["header"][0]
+                    label = self.chapter_label(page)
                     label_rgb = tuple((label["color"] >> shift) & 255 for shift in (16, 8, 0))
+                    for header_span in page["header"]:
+                        self.assertEqual(header_span["color"], label["color"])
                     for path in page["birds"][0]["paths"]:
                         self.assertIn("f", path["type"], "Bird must use filled vector paths")
                         for channel, expected in zip(path["fill"], label_rgb):
@@ -343,19 +378,20 @@ class PageStyleTests(unittest.TestCase):
     def test_running_and_plain_pages_share_header_rules_fonts_and_footer_alignment(self):
         for edition in self.documents:
             pages = [self.find(edition, marker) for marker in RUNNING]
-            reference_header = pages[0]["header"]
+            reference_header = self.chapter_label(pages[0])
             reference_footer = pages[0]["footer"][0]
             reference_rule = pages[0]["rules"][0]
             footer_anchors = {}
-            for page in pages:
+            for marker, page in zip(RUNNING, pages):
                 with self.subTest(edition=edition, page=page["index"]):
-                    self.assertEqual(len(page["header"]), 1, "Only the inner chapter label belongs in the header")
-                    label = page["header"][0]
-                    ref_label = reference_header[0]
-                    self.assertEqual(label["font"], "Inter-Regular")
-                    self.assertEqual(label["color"], ref_label["color"])
-                    self.assertAlmostEqual(label["size"], 8 * 72 / 72.27, delta=.01)
-                    self.assertAlmostEqual(label["bbox"][1], reference_header[0]["bbox"][1], delta=.02)
+                    self.assertEqual(len(page["header"]), 2 if self.expected_section(marker) else 1)
+                    label = self.chapter_label(page)
+                    ref_label = reference_header
+                    for span in page["header"]:
+                        self.assertEqual(span["font"], "Inter-Regular")
+                        self.assertEqual(span["color"], ref_label["color"])
+                        self.assertAlmostEqual(span["size"], 8 * 72 / 72.27, delta=.01)
+                        self.assertAlmostEqual(span["bbox"][1], ref_label["bbox"][1], delta=.02)
                     if edition == "screen":
                         self.assertEqual(label["color"], 0x203B63)
                     anchor = label["bbox"][0] if page["index"] % 2 else label["bbox"][2]
@@ -364,6 +400,19 @@ class PageStyleTests(unittest.TestCase):
                     bird_bounds = page["birds"][0]["bbox"]
                     self.assertTrue(label["bbox"][2] < bird_bounds[0] if page["index"] % 2
                                     else label["bbox"][0] > bird_bounds[2])
+                    section = self.section_label(page)
+                    if section:
+                        # The configured gap separates text from the logical
+                        # frame; its transparent inset adds a little visible
+                        # space before the actual vector ink.
+                        frame_inset = self.geometry["frame_ink_bbox"][0]
+                        expected_gap = (1.2 + frame_inset * 6.4 / 139) * 72 / 25.4
+                        gap = (bird_bounds[0] - section["bbox"][2] if page["index"] % 2
+                               else section["bbox"][0] - bird_bounds[2])
+                        self.assertAlmostEqual(gap, expected_gap, delta=.03)
+                        self.assertTrue(label["bbox"][2] < section["bbox"][0] if page["index"] % 2
+                                        else section["bbox"][2] < label["bbox"][0],
+                                        "Chapter and section labels must not overlap")
                     self.assertEqual(len(page["rules"]), 1)
                     rule = page["rules"][0]
                     self.assertAlmostEqual(rule["width"], .35 * 72 / 72.27, delta=.002)
@@ -441,7 +490,7 @@ class PageStyleTests(unittest.TestCase):
             final = self.find(edition, "BODY-FINAL-ASSESSMENT")
             self.assertEqual(final["index"], len(pages))
             self.assertEqual(len(pages), 18)
-            self.assertEqual(self.header_text(final), "3. PHOTOCHAPTER")
+            self.assertEqual(self.chapter_label(final)["text"], "3. PHOTOCHAPTER")
             self.assertIn("LMPROBE ASSESSMENTFINAL", final["mark_probes"])
             self.assertIn("RMPROBE ASSESSMENTFINAL", final["mark_probes"])
 
