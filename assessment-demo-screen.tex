@@ -1,0 +1,25 @@
+%!TEX TS-program = xelatex
+% ===========================================================================
+% ΚΕΝΤΡΙΚΗ ΕΚΚΙΝΗΣΗ XeLaTeX — SCREEN (ΜΠΛΕ)
+% ===========================================================================
+% Δομή: 1) κλάση book, 2) μεταβλητές config, 3) επιλογή παλέτας,
+% 4) φόρτωση μορφοποίησης, 5) περιεχόμενο.
+% twoside: υποστήριξη αντικριστών σελίδων / κατοπτρικά περιθώρια.
+% openright: τα κεφάλαια αρχίζουν δεξιά, μαζί με \cleardoublepage.
+% Δεν επιβάλλουμε επιπλέον κενή αριστερή απέναντι από την έναρξη.
+% Δεν γράφουμε κείμενο κεφαλαίων σε αυτό το αρχείο.
+% Μεταγλώττιση: xelatex main.tex (δύο φορές).
+% ===========================================================================
+
+\documentclass[11pt,twoside,openright]{book}
+\input{config/book-config.tex}
+% SCREEN: οι δύο επόμενες επιλογές ανήκουν ΜΟΝΟ στα αρχεία εισόδου.
+% Δεν αλλάζουμε ποτέ χρώματα μέσα στα chapters/*.tex.
+\newif\ifBookTwoInkProof
+\BookTwoInkProoffalse
+\newif\ifPrintThreeInk
+\PrintThreeInkfalse
+\usepackage{styles/universalbook}
+\begin{document}
+\input{chapters/demo-assessment.tex}
+\end{document}

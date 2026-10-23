@@ -1,0 +1,16 @@
+%!TEX TS-program = xelatex
+% ==========================================================================
+% PRINT: κύρια έκδοση — δύο πλάκες (100/55/10% K + 100/55/10% spot SecondInkRedProof).
+% Το PDF είναι ΤΕΧΝΙΚΟ ΔΟΚΙΜΙΟ και ΟΧΙ τελικό αρχείο τυπογραφείου.
+% ΟΛΟ το περιεχόμενο προέρχεται από το ίδιο book-content.tex του SCREEN.
+% ==========================================================================
+\documentclass[11pt,twoside,openright]{book}
+\input{config/book-config.tex}
+\newif\ifPrintThreeInk
+\PrintThreeInkfalse
+\newif\ifBookTwoInkProof
+\BookTwoInkProoftrue
+\usepackage{styles/universalbook}
+\begin{document}
+\input{book-content.tex}
+\end{document}

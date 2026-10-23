@@ -1,0 +1,894 @@
+% ===========================================================================
+% ΚΑΘΟΛΙΚΟ ΣΥΣΤΗΜΑ ΜΑΚΕΤΑΣ — universalbook.sty (πηγαίος πυρήνας)
+% ===========================================================================
+% ΔΙΑΒΑΣΕ ΠΡΩΤΑ το README_ΟΔΗΓΟΣ.md και το config/book-config.tex.
+% Μη χρειάζεται να πειράξεις αυτό το αρχείο για απλές αλλαγές χρωμάτων,
+% γραμματοσειρών, περιθωρίων, τίτλων ή μεγέθους εικόνας.
+%
+% Αρχιτεκτονική:
+%   config/book-config.tex        = παράμετροι χρήστη
+%   config/palette-screen.tex    = χρώματα ψηφιακής έκδοσης
+%   config/palette-print2-spot.tex = δοκιμαστικό spot δεύτερο μελάνι
+%   styles/universalbook.sty     = διαμόρφωση παραμέτρων σε οπτικά στοιχεία
+%   chapters/*.tex              = πραγματικό κείμενο βιβλίου
+%
+% Το % δηλώνει σχόλιο, επομένως το TeX δεν εκτελεί αυτή τη γραμμή.
+% Το τελικό PDF παράγεται με XeLaTeX. Όχι με pdfLaTeX.
+% ===========================================================================
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{styles/universalbook}[2026/10/23 Modular Greek textbook design v0.33]
+% Γραμματοσειρές OpenType/TrueType. Η αλλαγή γίνεται από τον config.
+\RequirePackage{fontspec}
+\RequirePackage{polyglossia}
+\setdefaultlanguage{greek}
+\setotherlanguage{english}
+\RequirePackage{unicode-math}
+\setmainfont{\BodyFontName}[Ligatures=TeX,BoldFont=\BodyBoldFontName,
+  ItalicFont=\BodyItalicFontName,BoldItalicFont=\BodyBoldItalicFontName]
+\setsansfont{\BodyFontName}[Ligatures=TeX,BoldFont=\BodyBoldFontName,
+  ItalicFont=\BodyItalicFontName,BoldItalicFont=\BodyBoldItalicFontName]
+\setmonofont{DejaVu Sans Mono}
+\newfontfamily\greekfonttt{DejaVu Sans Mono}
+\newfontfamily\BookHeadingFont{\HeadingFontName}[Ligatures=TeX,BoldFont=\HeadingBoldFontName,
+  ItalicFont=\HeadingItalicFontName,BoldItalicFont=\HeadingBoldItalicFontName]
+\newfontfamily\greekfont{\BodyFontName}[Script=Default,Ligatures=TeX,BoldFont=\BodyBoldFontName,
+  ItalicFont=\BodyItalicFontName,BoldItalicFont=\BodyBoldItalicFontName]
+\newfontfamily\greekfontsf{\BodyFontName}[Script=Default,Ligatures=TeX,BoldFont=\BodyBoldFontName,
+  ItalicFont=\BodyItalicFontName,BoldItalicFont=\BodyBoldItalicFontName]
+\expandafter\setmathfont\expandafter{\MathFontName}
+% Εικονικά χρωματικά ονόματα: οι σελίδες μιλούν BookPrimary κ.λπ.,
+% όχι απευθείας RGB/CMYK. Έτσι αλλάζει το εκτυπωτικό προφίλ κεντρικά.
+\RequirePackage{xcolor}
+% ===================== ΕΠΙΛΟΓΗ ΧΡΩΜΑΤΙΚΟΥ ΠΡΟΦΙΛ ==========================
+% Μόνο το main-print2.tex ενεργοποιεί το BookTwoInkProoftrue.
+% Το κύριο περιεχόμενο, οι εντολές, οι ασκήσεις και οι εξισώσεις είναι ΙΔΙΕΣ.
+\ifBookTwoInkProof
+  \RequirePackage[xcolor]{xespotcolor}
+  \input{config/palette-print2-spot.tex}
+\else
+  \input{config/palette-screen.tex}
+\fi
+% ΜΟΝΑΔΙΚΗ ΠΗΓΗ ΑΝΤΙΣΤΟΙΧΙΣΗΣ SCREEN/PRINT — v0.27.
+% Παράγεται από το config/color-map.json. Τα BookPrimary/BookSecondary
+% σημαίνουν το ΙΔΙΟ πράγμα και στις δύο εκδόσεις, αν και με άλλο μελάνι.
+% Τα χαρακτηριστικά της PRINT υπερισχύουν έναντι της οπτικής SCREEN.
+\input{config/color-roles.tex}
+
+% Διαστάσεις σελίδας και αντικριστά περιθώρια.
+\RequirePackage{geometry}
+% \geometry κατασκευάζει το τελικό «καλούπι» 17 x 24 cm.
+% Το twoside της κλάσης book φροντίζει να αντιστρέφονται inner/outer.
+% Οι πραγματικές τιμές έρχονται από config/book-config.tex, δεν είναι κρυφές εδώ.
+\geometry{paperwidth=\BookTrimWidth,paperheight=\BookTrimHeight,
+ inner=\BookMarginInner,outer=\BookMarginOuter,
+ top=\BookMarginTop,bottom=\BookMarginBottom,
+ headheight=31pt,headsep=4mm,footskip=11mm}
+\RequirePackage{microtype}
+\RequirePackage{graphicx}
+\input{styles/book-assets.tex}
+% Διανυσματικά σχήματα Φυσικής/Μαθηματικών και τετραγωνάκια ερωτήσεων.
+\RequirePackage{tikz}
+\usetikzlibrary{arrows.meta,calc,positioning,decorations.pathreplacing}
+% Το χρώμα γραμμής δεν πρέπει να διαρρέει στο κείμενο ενός κόμβου.
+\tikzset{every node/.append style={text=BookInk}}
+% Κοινές γραφικές συμβάσεις βιβλίου: εντολές και στυλ από ένα αρχείο.
+% Εδώ φορτώνεται και το PGFPlots για διαγράμματα με άξονες/βαθμονόμηση.
+% Οι μορφές των σχημάτων είναι ανεξάρτητες από το SCREEN/PRINT προφίλ.
+\RequirePackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\input{styles/book-figures.tex}
+% Πλαίσια που μπορούν να σπάνε με ασφάλεια από σελίδα σε σελίδα.
+\RequirePackage[most]{tcolorbox}
+\tcbuselibrary{breakable,skins,theorems}
+% Ακόμη και οι προεπιλογές των κουτιών ανήκουν στην εγκεκριμένη παλέτα.
+% Αποφεύγουμε το εσωτερικό black!75 του tcolorbox, ακόμη κι όταν καλύπτεται.
+\tcbset{colframe=BookPanelBorder,colback=white,coltext=BookInk,
+  coltitle=BookInk,colbacktitle=BookPrimary}
+\RequirePackage{tabularx,booktabs,array,multicol,enumitem,needspace,colortbl,caption}
+% Κεφαλίδες που εναλλάσσονται ανά ζυγή/μονή σελίδα.
+\RequirePackage{fancyhdr}
+\RequirePackage{titlesec}
+\RequirePackage{etoolbox}
+\RequirePackage{hyperref}
+\hypersetup{hidelinks,pdfauthor={Textbook Template},pdftitle={\BookTitle\space - Design Proof}}
+\AtBeginDocument{\color{BookInk}}
+\RequirePackage{amsthm}
+\RequirePackage{ragged2e}
+% Σε αυτόματα κενές σελίδες (από \cleardoublepage) κρύβει
+% κεφαλίδες/υποσέλιδα, χωρίς να επηρεάζει την αρίθμηση.
+\RequirePackage{emptypage}
+\renewcommand{\baselinestretch}{1.10}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{3.7pt plus 1.1pt minus .6pt}
+\setlist[itemize]{topsep=3pt,itemsep=1.5pt,parsep=0pt,leftmargin=15pt}
+% Όλες οι enumerate λίστες έχουν μπλε μόνο το label, όχι το κείμενο.
+% Παράδειγμα \begin{enumerate}[label=\roman*)] ... \end{enumerate}
+\setlist[enumerate]{topsep=3pt,itemsep=2.1pt,parsep=0pt,leftmargin=18pt,
+  label=\arabic*.,font=\color{\BookListLabelColor}\bfseries}
+\setlist[enumerate,2]{label=\roman*),leftmargin=16pt,font=\color{\BookListLabelColor}\bfseries}
+% Greek alphabet labels: local option label=\BookGreekIndex{\value{enumi}})
+\newcommand{\BookGreekIndex}[1]{\ifcase#1\or α\or β\or γ\or δ\or ε\or στ\or ζ\or η\or θ\or ι\or κ\or λ\or μ\or ν\or ξ\or ο\or π\or ρ\or σ\or τ\else\number#1\fi}
+\newcommand{\BookGreekItems}{label=\BookGreekIndex{\value{enumi}}),font=\color{\BookListLabelColor}\bfseries}
+% Alphabetical Greek labels without numeral prime marks.
+\makeatletter
+\newcommand{\@BookGreek}[1]{\ifcase#1\or α\or β\or γ\or δ\or ε\or στ\or ζ\or η\or θ\or ι\or κ\or λ\or μ\or ν\or ξ\or ο\or π\or ρ\or σ\or τ\else ?\fi}
+\newcommand{\BookGreek}[1]{\expandafter\@BookGreek\csname c@#1\endcsname}
+\AddEnumerateCounter\BookGreek\@BookGreek{γ}
+\makeatother
+\newenvironment{greeklist}{\begin{enumerate}[label=\BookGreek*)]}{\end{enumerate}}
+% Latin alternatives, all blue through the global enumerate font:
+% [label=\Roman*.], [label=\Alph*.], [label=\roman*)]
+
+\setlength{\columnsep}{6mm}
+\setlength{\columnseprule}{0pt}
+\setlength{\emergencystretch}{2em}
+\widowpenalty=10000
+\clubpenalty=10000
+\interlinepenalty=50
+\raggedbottom
+\color{BookInk}
+
+% ---------------------------------------------------------------------------
+% ΛΕΖΑΝΤΕΣ ΦΩΤΟΓΡΑΦΙΩΝ / ΣΧΗΜΑΤΩΝ / ΠΙΝΑΚΩΝ
+% \caption{...} δημιουργεί λεζάντα και αυξάνει την αρίθμηση του κεφαλαίου.
+% \label{fig:...} αποθηκεύει αναφορά, 
+% \ref{fig:...} τη χρησιμοποιεί.
+% BookItalicCaptionstrue στον config κάνει την περιγραφή πλάγια.
+% ---------------------------------------------------------------------------
+\DeclareCaptionFont{BookCaptionSize}{\fontsize{\BookCaptionSize}{\BookCaptionLineHeight}\selectfont}
+\DeclareCaptionFont{BookCaptionBlue}{\color{BookSecondary}}
+\DeclareCaptionFont{BookCaptionItalic}{\itshape}
+\DeclareCaptionFont{BookCaptionRegular}{\upshape}
+\ifBookItalicCaptions
+  \captionsetup{font={BookCaptionSize,BookCaptionBlue,BookCaptionItalic},labelfont={bf,BookCaptionRegular},
+   justification=centering,singlelinecheck=false,skip=5pt}
+\else
+  \captionsetup{font={BookCaptionSize,BookCaptionBlue,BookCaptionRegular},labelfont={bf},
+   justification=centering,singlelinecheck=false,skip=5pt}
+\fi
+\captionsetup[figure]{name=\BookFigureCaptionName,position=bottom}
+\captionsetup[table]{name=\BookTableCaptionName,position=bottom}
+\AtBeginDocument{\addto\captionsgreek{\renewcommand{\figurename}{\BookFigureCaptionName}\renewcommand{\tablename}{\BookTableCaptionName}}}
+\renewcommand{\thefigure}{\thechapter.\arabic{figure}}
+\renewcommand{\thetable}{\thechapter.\arabic{table}}
+% ---------------------------------------------------------------------------
+% v0.23 — ΔΥΟ ΟΜΟΙΟΜΟΡΦΟΙ ΠΙΝΑΚΕΣ, ΜΟΝΟ ΜΙΑ ΟΠΤΙΚΗ ΔΙΑΦΟΡΑ
+% ---------------------------------------------------------------------------
+% Κοινά στοιχεία:  ίδια γραμματοσειρά (\small), ίδιο ύψος γραμμής,
+% ίδια σκούρα κεφαλίδα με λευκά γράμματα, χωρίς κάθετες γραμμές.
+% Διαφορά: BookStripedTable = χρωματίζει κάθε δεύτερη ΓΡΑΜΜΗ δεδομένων.
+%          BookPlainTable   = αφήνει ΟΛΕΣ τις γραμμές δεδομένων λευκές.
+% Το \rowcolors{2} ξεκινά από τη δεύτερη γραμμή του tabularx: η πρώτη
+% είναι η κεφαλίδα, στην οποία εφαρμόζουμε ρητά \BookTableHeaderRow.
+% Το \begingroup ... \endgroup αποτρέπει να επηρεάζονται άλλοι πίνακες.
+% Οι τρεις παράμετροι (σκούρο, αχνό και ύψος) είναι στο book-config.tex.
+\newenvironment{BookStripedTable}{%
+  \begingroup\small\renewcommand{\arraystretch}{\BookTableRowStretch}%
+  \rowcolors{2}{\BookTableStripeFill}{white}%
+}{\endgroup}
+\newenvironment{BookPlainTable}{%
+  \begingroup\small\renewcommand{\arraystretch}{\BookTableRowStretch}%
+  \rowcolors{2}{white}{white}%
+}{\endgroup}
+% Το \BookTableHeaderRow τοποθετείται ακριβώς στην αρχή της πρώτης
+% γραμμής, μέσα στο tabularx. Για παράδειγμα:
+% \BookTableHeaderRow
+% \BookTableHead{Μέγεθος} & \BookTableHead{Μονάδα} \\
+\newcommand{\BookTableHeaderRow}{\rowcolor{\BookTableHeaderFill}}
+\newcommand{\BookTableHead}[1]{{\color{white}\bfseries #1}}
+% Συμβατότητα: παλαιότερα αρχεία μπορούν να διατηρήσουν το BookColorTable.
+% Η συμπεριφορά του είναι πλέον ίδια με εκείνη του BookStripedTable.
+\newenvironment{BookColorTable}{\begin{BookStripedTable}}{\end{BookStripedTable}}
+% ΜΟΝΟ για παλαιούς πίνακες με λευκή κεφαλίδα, που έχουν ήδη γραφτεί.
+% Στους δύο νέους τύπους χρησιμοποιούμε ΠΑΝΤΑ \BookTableHead.
+\newcommand{\BookPlainTableHead}[1]{{\color{BookPrimary}\bfseries #1}}
+
+% ---------------------------------------------------------------------------
+% ΤΙΤΛΟΙ ΘΕΩΡΙΑΣ
+% \section και \subsection είναι κανονικές ενότητες του LaTeX.
+% \BookSection είναι ο μεγάλος θεματικός τίτλος (μπλε λωρίδα).
+% \BookMinorHeading χρησιμοποιείται για μικρότερα διακριτά τμήματα.
+% ---------------------------------------------------------------------------
+\titleformat{\section}[hang]{\BookHeadingFont\bfseries\fontsize{12.5}{16}\selectfont\color{BookPrimary}}{\thesection}{.6em}{}
+\titlespacing*{\section}{0pt}{12pt plus 4pt}{5pt}
+\titleformat{\subsection}[hang]{\BookHeadingFont\bfseries\fontsize{10.5}{13.5}\selectfont\color{BookPrimary}}{\thesubsection}{.55em}{}
+\titlespacing*{\subsection}{0pt}{9pt plus 2pt}{3pt}
+\newcommand{\BookMinorHeading}[1]{\Needspace{4\baselineskip}\par\medskip{\BookHeadingFont\bfseries\fontsize{11}{14}\selectfont\color{BookPrimary}#1}\par\smallskip}
+
+% ---------------------------------------------------------------------------
+% ΔΙΑΚΡΙΣΗ ΜΕΓΑΛΩΝ ΚΑΙ ΜΙΚΡΩΝ ΚΑΤΗΓΟΡΙΩΝ ΕΡΩΤΗΣΕΩΝ
+% «Ερωτήσεις θεωρίας»: \BookSection / \BookTheorySection
+% «Σωστό / Λάθος»: \BookQuestionHeading (μικρότερη υποκατηγορία).
+% Η εναλλακτική εμφάνιση με διάστικτες γραμμές παραμένει ως switch.
+% ---------------------------------------------------------------------------
+% Use vertical-mode rules (\hrule), not rule-in-a-paragraph, for tight and reliable rhythm.
+% ΒΑΣΙΚΗ ΕΝΟΤΗΤΑ («Θεωρία», «Λυμένα παραδείγματα» κ.λπ.).
+% Η εντολή \BookSection{τίτλος} επαναχρησιμοποιεί αυτό το περιβάλλον.
+% ΣΤΑΘΕΡΗ ΑΠΟΣΤΑΣΗ v0.19: \addvspace{10pt} πριν από τη λωρίδα.
+% Το LaTeX συγχωνεύει διαδοχικές κάθετες αποστάσεις όταν βρίσκονται
+% σε κατακόρυφη λειτουργία. Έτσι, μετά από \section, δεν χρειάζεται
+% ποτέ χειροκίνητο \vspace στο αρχείο κεφαλαίου.
+% Το \Needspace κρατά αρκετό χώρο για να μη μείνει η λωρίδα ορφανή.
+% Για τη νέα μορφή BookMajorHeadingBandtrue: συμπαγής μπλε λωρίδα με λευκά.
+% Η εναλλακτική (false) είναι η παλιότερη μορφή τίτλου με λεπτή γραμμή.
+\newcommand{\BookMajorSection}[1]{%
+  \par\Needspace{5\baselineskip}\addvspace{10pt}%
+  \ifBookMajorHeadingBand
+    \noindent\begin{tcolorbox}[enhanced,sharp corners,boxrule=0pt,frame hidden,
+      colback=BookPrimary,
+      top=\BookMajorBandTopPad,bottom=\BookMajorBandBottomPad,
+      left=3mm,right=3mm,before skip=0pt,after skip=8pt]
+      {\BookHeadingFont\fontsize{\BookMajorBandSize}{15}\selectfont\color{white}#1}
+    \end{tcolorbox}%
+  \else
+    \noindent{\BookHeadingFont\fontsize{13.5}{18}\selectfont\color{BookPrimary}#1}\par\nobreak\vskip5pt%
+    {\color{BookSecondary}\hrule height \BookTheoryRuleWidth}\nobreak\vskip8pt%
+  \fi
+}
+% The same heading system is applied to every major textbook section.
+\newcommand{\BookSection}[1]{\BookMajorSection{#1}}
+% Backward-compatible alias for existing question-section source.
+\let\BookTheorySection\BookMajorSection
+\newcommand{\BookQuestionHeading}[1]{%
+  \par\Needspace{4\baselineskip}\addvspace{8pt}%
+  \noindent{\BookHeadingFont\fontsize{10.1}{13}\selectfont\color{BookPrimary}#1}\par\nobreak\vskip3pt%
+  \ifBookQuestionDottedRules
+    {\color{BookPaleRule}\hbox to \linewidth{\leaders\hbox to 4pt{\hfil.\hfil}\hfill}}\nobreak\vskip4pt%
+  \else
+    {\color{BookPanelBorder}\hrule height \BookQuestionRuleWidth}\nobreak\vskip4pt%
+  \fi
+}
+% Οι δύο επιλογές είναι μέσα σε \mbox: δεν σπάνε μεταξύ τους.
+% Αν δεν χωράνε στο τέλος μιας πρότασης, μεταφέρονται μαζί στην επόμενη γραμμή.
+% BookTrueFalseGap ελέγχει το μεταξύ τους διάστημα.
+\newcommand{\TrueFalseChoices}{\mbox{{\color{BookSecondary}Σ}\,\CheckSquare\hspace{\BookTrueFalseGap}{\color{BookSecondary}Λ}\,\CheckSquare}}
+% Χρήση: μέσα σε enumerate γράψε \TrueFalseItem{Η πρόταση ...}.
+% Η εντολή εισάγει \item, τυπώνει την πρόταση και μετά τις δύο επιλογές.
+\newcommand{\TrueFalseItem}[1]{\item #1\unskip\nobreak\hspace{0.6em}\TrueFalseChoices}
+% ---------------------------------------------------------------------------
+% ΚΕΦΑΛΙΔΕΣ / ΥΠΟΣΕΛΙΔΑ
+% Για μονές/ζυγές σελίδες του book class χρησιμοποιούμε fancyhdr.
+% «Ενότητα N» προκύπτει αυτόματα από τον μετρητή chapter.
+% Ο τίτλος ενότητας διαβάζεται από τη \leftmark.
+% Αν θέλεις μεγαλύτερο πουλί, άλλαξε BookHeaderIconHeight στον config.
+% ---------------------------------------------------------------------------
+\pagestyle{fancy}
+\newcommand{\BookHeaderUnitLabel}{\BookChapterHeaderPrefix~\thechapter}
+% Το εικονίδιο οθόνης είναι μπλε· το εκτυπωτικό είναι αμιγώς μαύρο.
+% v0.32: το ίδιο ουδέτερο σήμα και στις δύο εκδόσεις.
+\newcommand{\BookHeaderIconFile}{\BookAssetPath{header_icon}}
+\newcommand{\BookHeaderIcon}{\raisebox{-0.65ex}{\BookUseAsset[height=\BookHeaderIconHeight]{header_icon}}}
+% ΕΝΑ ΚΕΝΤΡΙΚΟ ΠΕΡΙΕΧΟΜΕΝΟ ΓΙΑ ΟΛΑ ΤΑ ΥΠΟΣΕΛΙΔΑ
+% Δεν αλλάζουμε εδώ τη φράση ή τη θέση. Αλλάζουμε μόνο τα switches
+% BookFooterMode και BookFooterPosition στο config/book-config.tex.
+% \ifdefstring (etoolbox) συγκρίνει μια ρύθμιση με τη λέξη "number".
+\newcommand{\BookFooterContent}{%
+  \ifdefstring{\BookFooterMode}{number}{\thepage}{%
+    \BookShortName\enspace·\enspace σελ.\ \thepage}%
+}
+% Κοινή γραμματοσειρά, μέγεθος και χρώμα για όλα τα είδη σελίδων.
+\newcommand{\BookFooterText}{{\sffamily\scriptsize\color{BookInk}\BookFooterContent}}
+% Η ίδια εντολή καλείται για normal, plain και bookassessment.
+% center: footer στο κέντρο· outer: αριστερά στις ζυγές/δεξιά στις μονές.
+\newcommand{\BookApplyFooter}{%
+  \ifdefstring{\BookFooterPosition}{outer}{%
+    \fancyfoot[LE,RO]{\BookFooterText}%
+  }{%
+    \fancyfoot[C]{\BookFooterText}%
+  }%
+}
+% v0.24 — Η γραμμή της ΚΕΦΑΛΙΔΑΣ παραμένει ως έχει.
+% Το ΥΠΟΣΕΛΙΔΟ δεν έχει καμία γραμμή: εμφανίζει μόνο το περιεχόμενο
+% της \BookFooterText (εξ ορισμού τον αριθμό στην εξωτερική άκρη).
+% Ισχύει τόσο στις κανονικές σελίδες όσο και στα κριτήρια αξιολόγησης.
+\newcommand{\BookApplyPageRules}{%
+  \renewcommand{\headrulewidth}{\BookHeaderRuleWidth}%
+  \renewcommand{\footrulewidth}{0pt}%
+  \renewcommand{\headrule}{\hbox to\headwidth{\color{\BookHeaderRuleColor}\leaders\hrule height \headrulewidth\hfill}}%
+  \renewcommand{\footrule}{}%
+}
+% Το πουλί βρίσκεται στην εξωτερική άκρη. Στις ζυγές καθρεφτίζεται.
+\newcommand{\BookHeaderBirdEven}{\reflectbox{\BookHeaderIcon}}
+% ΕΝΙΑΙΑ μορφοποίηση κεφαλίδας. ΜΟΝΟ το #1 αλλάζει:
+%   για κανονικές σελίδες: «Ενότητα 1»
+%   για διαγωνίσματα:    «Κριτήριο αξιολόγησης 1»
+% [LO]/[RE] = εσωτερική θέση· [RO]/[LE] = εξωτερική θέση.
+% Η \nouppercase αποτρέπει αυτόματη μετατροπή του τίτλου σε κεφαλαία.
+\newcommand{\BookApplyRunningHeaders}[1]{%
+  \fancyhead[LO]{\BookHeaderLabelFont\color{\BookHeaderLabelColor}#1}%
+  \fancyhead[RE]{\BookHeaderLabelFont\color{\BookHeaderLabelColor}#1}%
+  \fancyhead[RO]{\BookHeaderTitleFont\color{\BookHeaderTitleColor}\nouppercase{\leftmark}\hspace{\BookHeaderIconGap}\BookHeaderIcon}%
+  \fancyhead[LE]{\BookHeaderBirdEven\hspace{\BookHeaderIconGap}\BookHeaderTitleFont\color{\BookHeaderTitleColor}\nouppercase{\leftmark}}%
+}
+% Κανονικές σελίδες: τίτλος κεφαλαίου αντί τίτλου κριτηρίου.
+\fancyhf{}
+\BookApplyPageRules
+\BookApplyRunningHeaders{\BookHeaderUnitLabel}
+\BookApplyFooter
+\fancypagestyle{plain}{\fancyhf{}\BookApplyFooter\renewcommand{\headrulewidth}{0pt}\renewcommand{\footrulewidth}{0pt}\renewcommand{\footrule}{}}
+% ΑΝΟΙΓΜΑ ΚΕΦΑΛΑΙΟΥ: η εντολή \cleardoublepage των μακροεντολών
+% \BookChapter και \BookChapterPhoto τελειώνει την προηγούμενη ύλη
+% και ξεκινά τη νέα ενότητα στη δεξιά (μονή) σελίδα.
+% Προσθέτει μόνο την κενή σελίδα που τυχόν χρειάζεται για τη σωστή φορά.
+% Δεν υπάρχει πλέον ειδικός κανόνας για ΠΑΝΤΑ κενή απέναντι αριστερή.
+
+% ------- COVER & CHAPTER OPENINGS -------
+\newcommand{\BookCover}{%
+\begin{titlepage}\thispagestyle{empty}
+\begin{tikzpicture}[remember picture,overlay]
+  \fill[BookPrimary] (current page.north west) rectangle ([yshift=-104mm]current page.north east);
+  \fill[BookSecondary] ([yshift=-104mm]current page.north west) rectangle ([yshift=-107mm]current page.north east);
+\end{tikzpicture}
+\vspace*{21mm}
+{\small\bfseries\color{white}%
+\ifdefempty{\BookLogoFile}{\MakeUppercase{\BookPublisher}}{\BookUseAsset[height=12mm]{\BookLogoFile}}}\par\vspace{13mm}
+{\BookHeadingFont\bfseries\color{white}\fontsize{34}{40}\selectfont \BookSubject}\par\vspace{2mm}
+{\BookHeadingFont\bfseries\color{white}\fontsize{23}{28}\selectfont \BookLevel}\par\vspace{6mm}
+{\color{white}\fontsize{10}{14}\selectfont\BookSubtitle}\par
+\vspace*{84mm}
+\begin{tikzpicture}\draw[BookSecondary,line width=1.5pt] (0,0)--(12.7,0);\end{tikzpicture}\par\medskip
+{\BookHeadingFont\bfseries\fontsize{17}{22}\selectfont\color{BookPrimary}Σχεδιαστικό δείγμα}\par
+{\small\color{BookInk}Ενιαία μακέτα βιβλίων — Φυσική · Μαθηματικά · άλλες επιστήμες}\par\vfill
+{\small \BookAuthors}\par\smallskip
+{\footnotesize\color{BookSecondary}\BookEdition}\par
+\end{titlepage}}
+% Replace this subject-neutral artwork using \renewcommand{\BookChapterGraphic}{...}.
+\newcommand{\BookChapterGraphic}{%
+\begin{tikzpicture}[scale=.95]
+ \foreach \r in {0.65,1.4,2.15} {\draw[BookPaleRule,line width=.8pt] (0,0) circle (\r);}
+ \draw[BookPrimary,line width=1pt] (-4,-1.4)..controls(-1.7,.4)and(1.7,-.4)..(4,1.4);
+ \fill[BookPrimary] (-2.15,0) circle (2.7pt);
+ \fill[BookAlert] (0,2.15) circle (2.7pt);
+ \fill[BookSecondary] (2.15,0) circle (2.7pt);
+\end{tikzpicture}}
+% The third argument is a list of 4--6 short \item learning outcomes.
+% Χωρίς φωτογραφία, εναλλακτική έναρξη κεφαλαίου.
+% #1 τίτλος, #2 υπότιτλος, #3 λίστα \item για το «Τι θα μάθουμε».
+% ---------------------------------------------------------------------------
+% ΑΥΤΟΜΑΤΟΣ ΠΙΝΑΚΑΣ ΠΕΡΙΕΧΟΜΕΝΩΝ ΓΙΑ ΦΥΛΛΑ/ΚΡΙΤΗΡΙΑ (v0.18)
+% ---------------------------------------------------------------------------
+% ΚΑΝΟΝΑΣ ΙΕΡΑΡΧΙΑΣ:
+%   chapter    = Κεφάλαιο/Ενότητα, π.χ. «1 Κίνηση σε μία διάσταση».
+%   section    = Ομαδικός τίτλος «Φύλλα εργασίας» / «Κριτήρια Αξιολόγησης».
+%   subsection = Κάθε επιμέρους φύλλο ή κριτήριο με τίτλο και σελίδα.
+%
+% Αυτό σημαίνει ότι τα συμπληρωματικά υλικά ΕΝΤΑΣΣΟΝΤΑΙ στο κεφάλαιο
+% μέσα στο οποίο έχουν τοποθετηθεί στο book-content.tex.
+% Δεν αποκτούν αρίθμηση 1.3 ή 1.4: τα ονόματα είναι άτιτλα στο TOC.
+%
+% ΧΡΩΜΑΤΑ ΣΤΑ ΠΕΡΙΕΧΟΜΕΝΑ (v0.19):
+% - ΟΛΕΣ οι καταχωρίσεις παραμένουν στο κανονικό μαύρο του TOC.
+% - Ιεραρχία δηλώνεται ΜΟΝΟ με μέγεθος, ένταση και εσοχή:
+%     Κεφάλαιο > αριθμημένη section > ομαδικός τίτλος > επιμέρους τίτλος.
+% - Δεν χρησιμοποιούμε δεύτερο εκτυπωτικό μελάνι στα περιεχόμενα.
+% - Τα χρώματα των τίτλων ΜΕΣΑ στις σελίδες ΔΕΝ αλλάζουν.
+%
+% Το BookTOCActiveCollection κρατά το είδος της τελευταίας ομάδας, ώστε
+% να μην επαναλαμβάνεται άσκοπα ο ομαδικός τίτλος για διαδοχικά φύλλα.
+% Μηδενίζεται όταν αρχίζει νέο κεφάλαιο. Αν μεταξύ δύο ομάδων αλλάξει
+% το είδος υλικού, τυπώνεται ξανά η αντίστοιχη επικεφαλίδα.
+% Με \phantomsection ο σύνδεσμος δείχνει στην αρχή της ομάδας.
+% Με δύο/τρεις διαδοχικές μεταγλωττίσεις ενημερώνονται οι σωστές σελίδες.
+\newcommand{\BookTOCActiveCollection}{}
+\newcommand{\BookTOCOpenCollection}[2]{%
+  \ifdefstring{\BookTOCActiveCollection}{#1}{}{%
+    \phantomsection%
+    \addcontentsline{toc}{section}{#2}%
+    \gdef\BookTOCActiveCollection{#1}%
+  }%
+}
+
+% ---------------------------------------------------------------------------
+% v0.29 — ΣΤΟΧΟΙ ΚΕΦΑΛΑΙΟΥ: ΜΟΝΟ ΛΕΠΤΗ ΑΡΙΣΤΕΡΗ ΓΡΑΜΜΗ (ΕΠΙΛΟΓΗ Β).
+% Δεν προσθέτουμε σκιασμένο φόντο/πλήρες περίγραμμα, ούτε ρητό.
+% Ίδιο BookOpeningGoalsPanel ΚΑΙ για τις δύο διαδρομές έναρξης κεφαλαίου,
+% χωρίς φωτογραφία (BookChapter) ή με φωτογραφία (BookChapterPhoto).
+% Χρωματικός ρόλος BookSecondary και στις δύο εκδόσεις.
+% Ο συγγραφέας δίνει μόνο τις 4–6 υπάρχουσες γραμμές \item.
+% Το προαιρετικό #1 είναι η απόσταση μεταξύ των στόχων (4pt ή 6pt).
+% Δεν συγχέεται με το ξεχωριστό LearningGoals των φύλλων εργασίας.
+% ---------------------------------------------------------------------------
+\newtcolorbox{BookOpeningGoalsPanel}{%
+  enhanced,sharp corners,boxrule=0pt,frame hidden,
+  colback=white,borderline west={\BookOpeningGoalsRuleWidth}{0pt}{\BookOpeningGoalsAccent},
+  top=1.1mm,bottom=1.1mm,left=\BookOpeningGoalsLeftPadding,right=1mm,
+  before skip=0pt,after skip=0pt
+}
+\newcommand{\BookOpeningGoals}[2][4pt]{%
+  \begin{BookOpeningGoalsPanel}
+  {\BookHeadingFont\fontsize{14}{18}\selectfont\color{\BookOpeningGoalsAccent}\LabelChapterGoals}\par\vspace{2mm}
+  \begin{itemize}[label={\textcolor{\BookOpeningGoalsAccent}{\textbullet}},leftmargin=5.4mm,itemsep=#1,topsep=0pt,partopsep=0pt,parsep=0pt]
+    \color{BookInk}\fontsize{10.2}{14.5}\selectfont
+    #2
+  \end{itemize}
+  \end{BookOpeningGoalsPanel}%
+}
+
+\newcommand{\BookChapter}[3]{%
+ \cleardoublepage
+ \refstepcounter{chapter}\setcounter{section}{0}\setcounter{subsection}{0}\gdef\BookTOCActiveCollection{}
+ \addcontentsline{toc}{chapter}{\protect\numberline{\thechapter}#1}
+ \markboth{#1}{#1}
+ \thispagestyle{empty}
+ \begin{tikzpicture}[remember picture,overlay]
+  \fill[BookPrimary] (current page.north west) rectangle ([yshift=-84mm]current page.north east);
+ \end{tikzpicture}
+ \vspace*{15mm}
+ {\color{white}\sffamily\bfseries\fontsize{9.5}{12}\selectfont ΕΝΟΤΗΤΑ \thechapter}\par\vspace{14mm}
+ {\BookHeadingFont\bfseries\color{white}\fontsize{24}{29}\selectfont #1}\par\vspace{4mm}
+ {\color{white}\fontsize{10}{14}\selectfont #2}\par
+ \vspace*{42mm}
+ \BookOpeningGoals[6pt]{#3}
+ \vfill
+ {\color{BookSecondary}\rule{20mm}{0.4pt}}\par
+ \vspace*{7mm}
+ \clearpage}
+
+
+% -------- CHAPTER OPENER WITH PHOTO / VECTOR ILLUSTRATION --------
+% #1 title, #2 subtitle, #3 digital asset, #4 tiny source credit, #5 4--6 itemize bullets.
+% Κεφάλαιο με φωτογραφία: 5 παράμετροι σε συγκεκριμένη σειρά:
+% #1 Τίτλος, #2 Υπότιτλος, #3 αρχείο εικόνας, #4 μικρή πηγή,
+% #5 λίστα τεσσάρων έως έξι \item (με {} γύρω από ολόκληρη τη λίστα).
+% Η σελίδα τίτλου ανοίγει ΠΑΝΤΑ δεξιά με \cleardoublepage.
+% Δεν επιβάλλεται ειδική κενή σελίδα απέναντι από τον τίτλο.
+\NewDocumentCommand{\BookChapterPhoto}{m m m m +m}{%
+ \cleardoublepage
+ \refstepcounter{chapter}\setcounter{section}{0}\setcounter{subsection}{0}\gdef\BookTOCActiveCollection{}
+ \addcontentsline{toc}{chapter}{\protect\numberline{\thechapter}#1}
+ \markboth{#1}{#1}\thispagestyle{empty}
+ \begin{tikzpicture}[remember picture,overlay]
+   \fill[BookPrimary] (current page.north west) rectangle ([yshift=-75mm]current page.north east);
+ \end{tikzpicture}
+ \vspace*{13mm}
+ {\color{white}\sffamily\bfseries\fontsize{9.5}{12}\selectfont ΕΝΟΤΗΤΑ \thechapter}\par\vspace{13mm}
+ {\BookHeadingFont\color{white}\fontsize{23}{28}\selectfont #1}\par\vspace{4mm}
+ {\color{white}\fontsize{9.7}{13}\selectfont #2}\par
+ \vspace{18mm}
+ \begin{center}
+   % Ενιαίο μητρώο εικαστικών και συμβατότητα με τα παλιά ονόματα.
+   % Η προσθήκη εικόνας γίνεται στο color-map.json, όχι με νέο if εδώ.
+   \BookUseAsset[width=\linewidth,height=\BookChapterPhotoHeight,keepaspectratio]{#3}%
+
+ \end{center}
+ \vspace{-1mm}
+ {\raggedleft\fontsize{7.4}{10}\selectfont\color{BookSecondary}\itshape #4\par}
+ \vspace{8mm}
+ \BookOpeningGoals{#5}
+ \vfill\clearpage
+}
+
+% -------- TYPOGRAPHIC SYMBOLS --------
+% Unicode text symbols, not emoji/TikZ. Inter and Noto Serif do not both contain
+% the required glyphs, so we use a dedicated fallback symbol font.
+% All settings can be controlled from config/book-config.tex.
+\newfontfamily\BookSymbolFont{\SymbolFontName}[Script=Default]
+\newcommand{\BookWarningIcon}{{\BookSymbolFont\fontsize{\AlertSymbolSize}{11}\selectfont\raisebox{\AlertSymbolRaise}{\AlertSymbolText}}}
+\newcommand{\BookThinkIcon}{{\BookSymbolFont\fontsize{\ThinkSymbolSize}{11}\selectfont\raisebox{\ThinkSymbolRaise}{\ThinkSymbolText}}}
+
+% ---------------------------------------------------------------------------
+% ΔΙΔΑΚΤΙΚΑ ΚΟΥΤΙΑ (tcolorbox)
+% Ένα semantic περιβάλλον σημαίνει ότι κάθε αντίστοιχη χρήση στο βιβλίο
+% έχει ίδια εμφάνιση. Π.χ. \begin{ThinkBox}...\end{ThinkBox}.
+% BookSoft = ανοιχτό φόντο, BookPrimary = βαθύ μπλε, BookAlert = προσοχή.
+% Η παλέτα αλλάζει ξεχωριστά για οθόνη και δοκιμαστική εκτύπωση.
+% ---------------------------------------------------------------------------
+\tcbset{BookPanel/.style={enhanced,breakable,sharp corners,boxrule=.35pt,top=2.4mm,bottom=2.4mm,left=3.5mm,right=3.5mm,before skip=7pt,after skip=8pt}}
+\newtcolorbox{LearningGoals}{BookPanel,colback=BookSoft,colframe=BookSecondary,borderline west={2.1pt}{0pt}{BookSecondary},title={\LabelGoals},fonttitle=\bfseries\sffamily\small,coltitle=BookPrimary,attach title to upper={\par\medskip},before upper={\small}}
+% v0.30: Κοινό θεμέλιο BookCallout για ΟΛΑ τα διδακτικά callouts.
+% Οποιαδήποτε αλλαγή στην κοινή γεωμετρία γίνεται μόνο μία φορά εδώ.
+% Το περιβάλλον BookCallout ΔΕΝ είναι νέα εντολή συγγραφής, αλλά tcolorbox style.
+% Ο συγγραφέας χρησιμοποιεί απαράλλακτα AttentionBox / ThinkBox / HistoryBox.
+% left=17.5mm: δεσμεύει μια στενή αριστερή ζώνη για το εικονίδιο.
+% frame.west: το κατακόρυφο κέντρο όλου του κουτιού. Σε breakable κουτί
+% σχεδιάζουμε το εικονίδιο μόνο στο πρώτο τμήμα, στο δικό του μέσο.
+\tcbset{BookCallout/.style={%
+  enhanced,breakable,sharp corners,boxrule=0pt,frame hidden,
+  top=2.6mm,bottom=2.6mm,left=17.5mm,right=3.6mm,
+  before skip=7pt,after skip=8pt
+}}
+\newcommand{\BookCalloutCenteredIcon}[1]{%
+  \node[anchor=center,inner sep=0pt] at
+  ([xshift=\BookCalloutIconOffset]frame.west) {#1};%
+}
+% v0.28: Η λάμπα, ο τίτλος και η αριστερή γραμμή του ThinkBox μοιράζονται
+% τον ίδιο ρόλο BookThinkAccent (SCREEN BookSecondary / PRINT 55% spot).
+% Τα εικονίδια είναι vector TikZ και βάφονται αποκλειστικά με
+% σημασιολογικά χρώματα της παλέτας (SCREEN ή PRINT), όχι με τρίτο μελάνι.
+% Η κλίμακα του δοκιμίου Β μένει ίδια· v0.26 αυξάνει μόνο το πάχος λάμπας.
+\newcommand{\BookCalloutBulb}{%
+  \begin{tikzpicture}[x=1mm,y=1mm,scale=\BookCalloutIconScale,
+    line cap=round,line join=round]
+    \draw[draw=BookThinkAccent,line width=.90pt] (-2.5,1.1)
+      .. controls (-2.6,2.7) and (-1.5,3.7) .. (0,3.7)
+      .. controls (1.5,3.7) and (2.6,2.7) .. (2.5,1.1)
+      .. controls (2.45,-.3) and (1.15,-.65) .. (1,-1.8)
+      -- (-1,-1.8)
+      .. controls (-1.15,-.65) and (-2.45,-.3) .. cycle;
+    \draw[draw=BookThinkAccent,line width=.90pt] (-1.05,-2.55)--(1.05,-2.55);
+    \draw[draw=BookThinkAccent,line width=.90pt] (-.7,-3.25)--(.7,-3.25);
+    \draw[draw=BookThinkAccent,line width=.80pt] (0,4.65)--(0,5.35);
+    \draw[draw=BookThinkAccent,line width=.80pt] (-3.3,3.55)--(-3.9,4.1);
+    \draw[draw=BookThinkAccent,line width=.80pt] (3.3,3.55)--(3.9,4.1);
+    \draw[draw=BookThinkAccent,line width=.80pt] (-3.65,.6)--(-4.35,.6);
+    \draw[draw=BookThinkAccent,line width=.80pt] (3.65,.6)--(4.35,.6);
+  \end{tikzpicture}%
+}
+\newcommand{\BookCalloutWarning}{%
+  \begin{tikzpicture}[x=1mm,y=1mm,scale=\BookCalloutIconScale,
+    line cap=round,line join=round]
+    \draw[draw=BookAlert,line width=.82pt]
+      (0,4.25)--(-3.9,-2.75)--(3.9,-2.75)--cycle;
+    \draw[draw=BookAlert,line width=.90pt] (0,1.65)--(0,-.48);
+    \fill[BookAlert] (0,-1.65) circle (.37);
+  \end{tikzpicture}%
+}
+% v0.30: Συμμετρικό, minimal ανοικτό βιβλίο για HistoryBox.
+% Οι πάνω/κάτω καμπύλες είναι κατοπτρικές γύρω από y=0.
+% Τρεις σύντομες γραμμές ανά σελίδα (όχι μία). Δεν υπάρχει εικόνα bitmap.
+% Ίδια κλίμακα/σταθερή αριστερή ζώνη όπως στα άλλα δύο callouts.
+% Το χρώμα BookHistoryBorder είναι ουδέτερο γκρι SCREEN / 55% μαύρο PRINT.
+\newcommand{\BookCalloutOpenBook}{%
+  \begin{tikzpicture}[x=1mm,y=1mm,scale=\BookCalloutIconScale,
+    line cap=round,line join=round]
+    % Περίγραμμα δύο συμμετρικών ανοιγμένων σελίδων (πάνω/κάτω).
+    \draw[draw=BookHistoryBorder,line width=.90pt]
+      (0,3.30)
+      .. controls (-1.2,3.95) and (-2.9,3.95) .. (-4.1,3.30)
+      -- (-4.1,-3.30)
+      .. controls (-2.9,-3.95) and (-1.2,-3.95) .. (0,-3.30)
+      .. controls (1.2,-3.95) and (2.9,-3.95) .. (4.1,-3.30)
+      -- (4.1,3.30)
+      .. controls (2.9,3.95) and (1.2,3.95) .. cycle;
+    % Σταθερή ευθεία ράχη, χωρίς άνισες καμπυλότητες.
+    \draw[draw=BookHistoryBorder,line width=.78pt] (0,3.30)--(0,-3.30);
+    % Τρεις εσωτερικές γραμμές ανά σελίδα, συμμετρικά.
+    \foreach \y in {1.65,.40,-.85}{%
+      \draw[draw=BookHistoryBorder,line width=.53pt] (-3.15,\y)--(-.85,\y);
+      \draw[draw=BookHistoryBorder,line width=.53pt] (.85,\y)--(3.15,\y);
+    }%
+  \end{tikzpicture}%
+}
+\newfontfamily\BookMediumLabelFont{\BookMediumFontName}[Script=Default]
+% Τα διαφορετικά στοιχεία παραμένουν το φόντο, το χρώμα της γραμμής,
+% ο τίτλος/γραμματοσειρά του και το σχέδιο. Όλα τα υπόλοιπα κοινά.
+\newtcolorbox{AttentionBox}{%
+  BookCallout,
+  colback=BookAlertBackground,
+  borderline west={1.35pt}{0pt}{BookAlert},
+  before upper={\noindent{\sffamily\bfseries\fontsize{9.1}{11.5}\selectfont\color{BookAlert}\LabelAlert}\par\smallskip\small},
+  overlay unbroken={\BookCalloutCenteredIcon{\BookCalloutWarning}},
+  overlay first={\BookCalloutCenteredIcon{\BookCalloutWarning}}
+}
+\newtcolorbox{ThinkBox}{%
+  BookCallout,
+  colback=BookThinkBackground,
+  borderline west={1.35pt}{0pt}{BookThinkAccent},
+  before upper={\noindent{\BookMediumLabelFont\fontsize{\BookThinkLabelSize}{11.5}\selectfont\color{BookThinkAccent}\LabelThink}\par\smallskip\small},
+  overlay unbroken={\BookCalloutCenteredIcon{\BookCalloutBulb}},
+  overlay first={\BookCalloutCenteredIcon{\BookCalloutBulb}}
+}
+% ---------------------------------------------------------------------------
+% ΙΣΤΟΡΙΚΕΣ ΙΣΤΟΡΙΕΣ: HistoryBox
+% Χρήση: \begin{HistoryBox}[Προαιρετικός τίτλος] ... \end{HistoryBox}
+% Κληρονομεί το BookCallout, ακριβώς όπως ThinkBox και AttentionBox.
+% SCREEN: ουδέτερο πολύ αχνό ΓΚΡΙ, όχι κίτρινο.
+% PRINT: 10% μαύρο φόντο + 55% μαύρο στην αριστερή γραμμή.
+% Μοναδικό περιεχόμενο: ένα προαιρετικό θέμα, έπειτα οποιοδήποτε κείμενο,
+% μαθηματικό τύπο, εικόνα ή υποσημείωση. Το breakable επιτρέπει αλλαγή σελίδας.
+% ---------------------------------------------------------------------------
+% v0.30: Το HistoryBox ΚΛΗΡΟΝΟΜΕΙ από BookCallout.
+% Πλέον έχει ακριβώς το ίδιο πλάτος πλευρικής ζώνης (17.5mm),
+% κατακόρυφο κεντράρισμα στο frame.west και τις ίδιες αποστάσεις.
+% Μόνο το γκρι χρώμα, ο τίτλος και το σχέδιο διαφέρουν.
+% Το ίδιο όνομα HistoryBox και το ίδιο προαιρετικό όρισμα εξακολουθούν
+% να ισχύουν για κάθε παλιό κεφάλαιο. Σε breakable κουτί το εικονίδιο
+% τοποθετείται στο κατακόρυφο μέσο του πρώτου τμήματος.
+\newtcolorbox{HistoryBox}[1][]{%
+  BookCallout,
+  colback=BookHistorySoft,
+  borderline west={1.35pt}{0pt}{BookHistoryBorder},
+  before upper={\noindent{\BookMediumLabelFont\fontsize{9.2}{11.5}\selectfont
+    \color{BookHistory}\LabelHistory\ifstrempty{#1}{}{ — #1}}\par\smallskip\small},
+  overlay unbroken={\BookCalloutCenteredIcon{\BookCalloutOpenBook}},
+  overlay first={\BookCalloutCenteredIcon{\BookCalloutOpenBook}}
+}
+
+% ---------------------------------------------------------------------------
+% ΡΗΣΕΙΣ / ΑΠΟΦΘΕΓΜΑΤΑ: BookQuote
+% Χρήση: \BookQuote{Σύντομη ρήση}{Συγγραφέας}[Προαιρετική πηγή]
+%   - ΔΕΝ είναι κουτί: μηδενική σκίαση/περίγραμμα, μόνο λευκός χώρος.
+%   - Η ρήση χρησιμοποιεί την υπάρχουσα Noto Serif (BookHeadingFont) πλάγια.
+%   - Το εισαγωγικό είναι BookSecondary (μπλε SCREEN, 55% spot PRINT).
+%   - Το όνομα/πηγή μπαίνουν δεξιά, στην ίδια μονάδα με τη ρήση.
+%   - \Needspace & minipage κρατούν ΟΛΟ το σύντομο απόσπασμα μαζί.
+%     Για παραθέματα πολλών παραγράφων προτείνεται ξεχωριστή δομή.
+% Δεν εισάγουμε νέες γραμματοσειρές ή νέα εκτυπωτικά μελάνια.
+% ---------------------------------------------------------------------------
+\NewDocumentCommand{\BookQuote}{m m o}{%
+  \par\Needspace{5\baselineskip}\addvspace{10pt}%
+  \noindent\hspace*{3mm}%
+  \begin{minipage}{\dimexpr\linewidth-7mm\relax}%
+    \raggedright%
+    {\BookHeadingFont\color{BookSecondary}\fontsize{22}{23}\selectfont “\kern2mm}%
+    {\BookHeadingFont\itshape\color{BookInk}\fontsize{11.4}{16.4}\selectfont #1}\par\vspace{4pt}%
+    {\raggedleft\sffamily\fontsize{8.5}{11}\selectfont\color{BookInk}— #2\par}%
+    \IfNoValueF{#3}{\vspace{1pt}{\raggedleft\sffamily\fontsize{7.3}{10}\selectfont
+       \color{BookHistory}#3\par}}%
+  \end{minipage}%
+  \par\addvspace{10pt}%
+}
+% Worked-example title is set in the SAME ProblemBox to keep title and statement together.
+% Two styles are switched centrally in config/book-config.tex.
+% Κατά την έναρξη ενός workedexample αποθηκεύεται ο τίτλος του.
+% Το επόμενο ProblemBox τον εμφανίζει πάνω στη σκούρα λωρίδα.
+\newcommand{\BookCurrentExampleTitle}{}
+\newcommand{\BookExampleLabel}{\LabelExample\space\theworkedexample\enspace—\enspace\BookCurrentExampleTitle}
+\ifBookExampleDarkHeader
+  \newtcolorbox{ProblemBox}{enhanced,breakable,sharp corners,
+    colback=BookProblemBackground,colframe=BookPanelBorder,boxrule=.35pt,
+    colbacktitle=BookPrimary,coltitle=white,
+    fonttitle=\BookHeadingFont\fontsize{\BookExampleTitleFontSize}{\BookExampleTitleLineHeight}\selectfont,
+    title={\BookExampleLabel},
+    toptitle=\BookExampleBarPad,bottomtitle=\BookExampleBarPad,
+    lefttitle=3.4mm,righttitle=3.4mm,
+    top=2.7mm,bottom=2.6mm,left=3.5mm,right=3.5mm,
+    before skip=7pt,after skip=8pt,before upper={\small}}
+\else
+  \newtcolorbox{ProblemBox}{BookPanel,colback=BookProblemBackground,colframe=BookPanelBorder,
+    before upper={\small\noindent{\BookHeadingFont\fontsize{\BookExampleTitleFontSize}{\BookExampleTitleLineHeight}\selectfont\color{BookPrimary}\BookExampleLabel}\par\nobreak\vskip3pt{\color{BookPaleRule}\hrule height .40pt}\nobreak\vskip8pt}}
+\fi
+\newtcolorbox{MethodBox}{BookPanel,colback=BookMethodSoft,colframe=BookPanelBorder,borderline west={2.1pt}{0pt}{BookSecondary},title={\LabelMethod},fonttitle=\BookHeadingFont\bfseries\small,coltitle=BookPrimary,attach title to upper={\par\smallskip},before upper={\small}}
+\newtcolorbox{KeyFormula}{BookPanel,colback=BookSoft,colframe=BookPanelBorder,halign=center,top=3mm,bottom=3mm}
+% ---------------------------------------------------------------------------
+% ΔΟΜΗ ΓΙΑ ΜΑΘΗΜΑΤΙΚΑ / ΓΕΝΙΚΕΣ ΕΠΙΣΤΗΜΕΣ
+% Ορισμοί και θεωρήματα αριθμούνται ανά chapter.
+% Η 
+% Η \ref αναζητεί \label σε κάθε τέτοιο περιβάλλον.
+% ---------------------------------------------------------------------------
+\newcounter{bookdefinition}[chapter]
+\renewcommand{\thebookdefinition}{\thechapter.\arabic{bookdefinition}}
+\newcounter{booktheorem}[chapter]
+\renewcommand{\thebooktheorem}{\thechapter.\arabic{booktheorem}}
+% v0.30: Κοινή αρχιτεκτονική για Ορισμούς και Θεωρήματα.
+% Χρησιμοποιεί το υπάρχον BookPanel, όχι το BookCallout: οι μαθηματικές
+% δηλώσεις έχουν αρίθμηση και γραμμή/τίτλο, χωρίς ζώνη εικονιδίου.
+% v0.31: Τίτλος και αριστερή γραμμή Ορισμού/Θεωρήματος είναι ΠΑΝΤΑ
+% το ίδιο BookStatementAccent (πρωτεύον και σε SCREEN και σε PRINT).
+% Το αχνό φόντο του Θεωρήματος είναι 10% ΔΕΥΤΕΡΟΥ ΜΕΛΑΝΙΟΥ
+% και ΟΧΙ μαύρο στην PRINT, ώστε να ταιριάζει με τη μπλε SCREEN.
+% Οι αποστάσεις, αριθμητές και εντολές του συγγραφέα δεν αλλάζουν.
+\tcbset{BookStatement/.style={BookPanel,
+  colframe=BookPanelBorder,
+  fonttitle=\BookHeadingFont\bfseries\small,
+  coltitle=BookStatementAccent,
+  attach title to upper={\par\medskip}
+}}
+\NewDocumentEnvironment{definitionbox}{O{}}{%
+ \refstepcounter{bookdefinition}
+ \begin{tcolorbox}[BookStatement,colback=BookSoft,
+   borderline west={2.1pt}{0pt}{BookStatementAccent},
+   title={\LabelDefinition\space\thebookdefinition\ifstrempty{#1}{}{ — #1}}]
+}{\end{tcolorbox}}
+\NewDocumentEnvironment{theorembox}{O{}}{%
+ \refstepcounter{booktheorem}
+ \begin{tcolorbox}[BookStatement,colback=BookMethodSoft,
+   borderline west={2.1pt}{0pt}{BookStatementAccent},
+   title={\LabelTheorem\space\thebooktheorem\ifstrempty{#1}{}{ — #1}}]
+}{\end{tcolorbox}}
+\renewcommand{\proofname}{\LabelProof}
+\newcounter{workedexample}[chapter]
+\renewcommand{\theworkedexample}{\arabic{workedexample}}
+\NewDocumentEnvironment{workedexample}{m}{%
+ \Needspace{7\baselineskip}\refstepcounter{workedexample}
+ \def\BookCurrentExampleTitle{#1}%
+ \par\medskip
+ }{\par\medskip}
+\newcommand{\SolutionHeading}{\par\vspace{2pt}{\BookMediumLabelFont\fontsize{\BookSolutionLabelSize}{13}\selectfont\color{BookPrimary}\LabelSolution}\par\smallskip}
+\newcounter{exercise}[chapter]
+\renewcommand{\theexercise}{\arabic{exercise}}
+% Generic exercise: source ID is kept for stable cross-reference but hidden by default.
+% Passing an empty second argument makes the statement start immediately after '1 |'.
+% Named exercise subtypes (e.g., worksheet prompts) still support a visible title.
+% ΠΑΡΑΔΕΙΓΜΑ ΧΡΗΣΗΣ: \begin{exercise}[PHY-A-015]{}Κείμενο...\end{exercise}
+% #1 προαιρετικό μοναδικό ID, #2 προαιρετικός τίτλος (κενό στις άλυτες).
+% Το ορατό αποτέλεσμα είναι «15 | Εκφώνηση...».
+\NewDocumentEnvironment{exercise}{O{} m}{%
+ \Needspace{4\baselineskip}\refstepcounter{exercise}%
+ \ifstrempty{#1}{}{\label{ex:#1}}%
+ \par\addvspace{6pt}\noindent\leavevmode
+ \mbox{{\fontsize{\BookExerciseNumberSize}{14}\selectfont\bfseries\color{BookPrimary}\theexercise}%
+   \hspace{2.3mm}{\color{BookSecondary}\rule{\BookExerciseSeparatorWidth}{\BookExerciseSeparatorHeight}}}%
+ \nobreak\hspace{2.6mm}%
+ % Τίτλος άσκησης (π.χ. «Σωστό ή Λάθος;»): μαύρος και μόνο αυτός ημίτονος/έντονος.
+ % ΚΡΙΣΙΜΟ: το πρόσθετο {...} περιορίζει το χρώμα και το bold στον τίτλο.
+ % Χωρίς το group, το \color{BookPrimary} και το \bfseries κληρονομούνταν
+ % σε ΟΛΟ το κείμενο της εκφώνησης του Φύλλου Εργασίας.
+ % Η ίδια η εκφώνηση μένει στην κανονική Inter, 100% μαύρη.
+ \ifstrempty{#2}{}{{\sffamily\bfseries\color{BookInk}#2}\enspace}%
+ \color{BookInk}% Ρητή επαναφορά μαύρου και στην περίπτωση κενού τίτλου.
+ \ifBookShowExerciseIDs\ifstrempty{#1}{}{\hfill{\scriptsize\color{BookSecondary}\texttt{#1}}\par\noindent}\fi
+ \ignorespaces
+}{\par\addvspace{3pt}}
+\newcommand{\Answer}[1]{\ifShowAnswers{\par\smallskip\fontsize{8.2}{11}\selectfont\itshape\color{BookSecondary}[Απ.: #1]\par}\fi}
+\newcommand{\TopicTag}[1]{{\sffamily\bfseries\footnotesize\color{BookSecondary}#1}}
+\newcounter{worksheet}[chapter]
+% ΦΥΛΛΟ ΕΡΓΑΣΙΑΣ: κατασκευάζει την κεφαλίδα και αυξάνει μετρητή.
+% \WorksheetOpening{Ενότητα 1}{Μετατόπιση και διάστημα}
+% Αυτή η καταχώριση γίνεται αυτόματα για ΚΑΘΕ φύλλο εργασίας.
+% Το πρώτο φύλλο προσθέτει και την ομάδα «Φύλλα εργασίας» (επίπεδο section).
+% Κάθε φύλλο είναι subsection μέσα στο τρέχον κεφάλαιο.
+% Στο TOC εμφανίζεται «Φύλλο εργασίας 1 — Θέση, μετατόπιση ...».
+\newcommand{\WorksheetOpening}[2]{\clearpage\setcounter{exercise}{0}\refstepcounter{worksheet}%
+ \BookTOCOpenCollection{worksheet}{Φύλλα εργασίας}%
+ \phantomsection\addcontentsline{toc}{subsection}{Φύλλο εργασίας\space\theworksheet\space—\space #2}%
+ \markboth{Φύλλα εργασίας}{Φύλλα εργασίας}\vspace*{2mm}\noindent\begin{tcolorbox}[enhanced,sharp corners,boxrule=0pt,colback=BookPrimary,left=4mm,right=4mm,top=3mm,bottom=3mm,overlay={\fill[BookSecondary] ([xshift=-18mm]frame.north east) rectangle (frame.south east);\node[text=white,font=\bfseries\Large] at ([xshift=-9mm]frame.east) {\theworksheet};}]\color{white}{\footnotesize\bfseries\BookShortName\enspace·\enspace #1}\par{\BookHeadingFont\bfseries\large \LabelWorksheet}\par{\small #2}\end{tcolorbox}\medskip}
+\newcommand{\WorksheetSection}[1]{\Needspace{3\baselineskip}\vspace{5pt}\noindent\colorbox{BookSecondary}{\parbox{\dimexpr\linewidth-2\fboxsep\relax}{\color{white}\bfseries\small #1}}\par\smallskip}
+\newcommand{\AnswerLine}{\par\vspace{4mm}\noindent\color{BookPaleRule}\rule{\linewidth}{.3pt}\color{BookInk}\par\vspace{3mm}}
+\newcommand{\AnswerGrid}[1]{\par\begin{tikzpicture}\foreach \y in {0,...,#1}{\draw[BookPaleRule,line width=.3pt] (0,-\y*.60) -- (12.6,-\y*.60);}\end{tikzpicture}\par}
+% Τετραγωνάκι απάντησης: το BookCheckSquareSize είναι σε εκατοστά.
+% Δεν χρησιμοποιούμε το Unicode □, γιατί το ύψος του εξαρτάται από τη γραμματοσειρά.
+\newcommand{\CheckSquare}{\tikz[baseline=-0.5ex]\draw[BookPrimary,line width=.55pt] (0,0) rectangle (\BookCheckSquareSize,\BookCheckSquareSize);}
+% ΔΙΣΤΗΛΗ ΔΙΑΤΑΞΗ: \begin{multicols}{2} ... \end{multicols}.
+% Προσοχή: σε στενή στήλη οι μακριές εξισώσεις μπορεί να απαιτούν μία στήλη.
+% Σε δίστηλες Σ/Λ χρησιμοποίησε \TrueFalseItem{...}, όχι χειροκίνητα □.
+% generic two-column text block: use \begin{multicols}{2} and \end{multicols}
+% --------------------------------------------------------------------------
+% ΛΥΣΕΙΣ ΑΛΥΤΩΝ ΑΣΚΗΣΕΩΝ: με ίδιο μπλε νούμερο και διαχωριστικό.
+% Η λύση αναζητεί τον εσωτερικό κωδικό της αρχικής άσκησης.
+% Παράδειγμα: \begin{booksolution}{PHY-A-001} ... \end{booksolution}
+% \ref{ex:PHY-A-001} εμφανίζει τον αυτόματο αριθμό της άσκησης.
+% Αν αλλάξει η σειρά ασκήσεων, η παραπομπή ενημερώνεται στη 2η compile.
+% Δεν επαναλαμβάνουμε την εκφώνηση ούτε προσθέτουμε το ThinkBox.
+% --------------------------------------------------------------------------
+\NewDocumentEnvironment{booksolution}{m}{%
+ \Needspace{4\baselineskip}\par\addvspace{6pt}\noindent\leavevmode
+ \mbox{{\fontsize{\BookExerciseNumberSize}{14}\selectfont\bfseries\color{BookPrimary}\ref{ex:#1}}%
+  \hspace{2.3mm}{\color{BookSecondary}\rule{\BookExerciseSeparatorWidth}{\BookExerciseSeparatorHeight}}}%
+ \nobreak\hspace{2.6mm}\ignorespaces
+}{\par\addvspace{4pt}}
+% ===========================================================================
+% ΚΡΙΤΗΡΙΑ ΑΞΙΟΛΟΓΗΣΗΣ (v0.15) — ΜΙΑ ΜΑΚΕΤΑ ΓΙΑ ΒΙΒΛΙΟ ΚΑΙ ΔΙΑΓΩΝΙΣΜΑ
+% ===========================================================================
+% Κεντρικές επιλογές από τον συγγραφέα:
+%   \begin{Assessment}{Ευθύγραμμη κίνηση} ... \end{Assessment}
+%   \begin{Assessment}[student=true,date=true,duration={90 λεπτά}]{Τίτλος}
+%   \begin{Assessment}[date={18/10/2026}]{Τίτλος}
+% Το student=true δημιουργεί πεδίο ονοματεπωνύμου· προεπιλογή false.
+% Το date=true δημιουργεί κενό πεδίο ημερομηνίας· date={...} συγκεκριμένη.
+% Το duration είναι ελεύθερο κείμενο· προεπιλογή κενό (καμία διάρκεια).
+% Η ενότητα δεν δημιουργεί άσκοπο χώρο για απενεργοποιημένα πεδία.
+%
+%   \AssessmentTopic{Α}      -> ΘΕΜΑ Α, μηδενίζει τον μετρητή ερωτήσεων
+%   \begin{AssessmentQuestion}[5] Κείμενο... \end{AssessmentQuestion}
+%   \begin{AssessmentQuestion}    Κείμενο... \end{AssessmentQuestion}
+% Τα ερωτήματα αριθμούνται αυτόματα Α1., Α2., Β1. κ.ο.κ.
+% Οι μονάδες γράφονται δεξιά και είναι ΠΡΟΑΙΡΕΤΙΚΕΣ.
+% Το περιεχόμενο του ερωτήματος μπορεί να έχει μαθηματικά, λίστες και TikZ.
+% Προαιρετική επαλήθευση αθροίσματος: \AssessmentPointsCheck[100]
+% Εμφανίζει προειδοποίηση στο LOG αν το άθροισμα είναι διαφορετικό.
+% Η εμφάνιση χρησιμοποιεί μόνο BookPrimary, BookSoft και BookInk,
+% άρα λειτουργεί και στο SCREEN και στο ελεγχόμενο δίχρωμο PRINT.
+% ===========================================================================
+\newcounter{assessment}
+\newcounter{assessmenttopic}[assessment]
+\newcounter{assessmentquestion}
+\newcounter{assessmenttotal}
+% Η ορατή αρίθμηση επανεκκινεί ανά ΘΕΜΑ· ο σύνδεσμος πρέπει να είναι μοναδικός.
+\renewcommand{\theHassessmentquestion}{\arabic{assessment}.\arabic{assessmenttopic}.\arabic{assessmentquestion}}
+\newcommand{\BookAssessmentTopicLetter}{Α}
+\renewcommand{\theassessmentquestion}{\BookAssessmentTopicLetter\arabic{assessmentquestion}}
+
+% Αποθήκευση προαιρετικών παραμέτρων με pgfkeys (ήδη υπάρχει λόγω TikZ).
+\pgfkeys{/bookassessment/.is family,/bookassessment,
+ student/.store in=\BookAssessmentStudentSetting,
+ date/.store in=\BookAssessmentDateSetting,
+ duration/.store in=\BookAssessmentDurationSetting}
+
+% Οι εξεταστικές σελίδες έχουν δική τους κεφαλίδα, όχι «Ενότητα Ν».
+% Το πουλί εξακολουθεί να καθρεφτίζεται στις αριστερές σελίδες.
+\fancypagestyle{bookassessment}{%
+  \fancyhf{}%
+  % ΙΔΙΕΣ ρυθμίσεις τίτλου, χρωμάτων, πουλιού και γραμμής με το fancy.
+  % Το Κείμενο της κεφαλίδας αλλάζει ανεξάρτητα από τη μπλε λωρίδα.
+  \BookApplyRunningHeaders{\BookAssessmentHeaderLabel\space\theassessment}%
+  \BookApplyFooter%
+  \BookApplyPageRules%
+}
+
+% Προαιρετική εμφάνιση κενής ή συγκεκριμένης ημερομηνίας.
+\newcommand{\BookAssessmentDateLine}{%
+ \ifdefstring{\BookAssessmentDateSetting}{false}{}{%
+   \ifdefstring{\BookAssessmentDateSetting}{true}{Ημερομηνία: \rule{26mm}{.35pt}}{Ημερομηνία: \BookAssessmentDateSetting}%
+ }%
+}
+
+% Ενιαίο περιβάλλον. Προκαλεί νέα σελίδα, όχι επιπλέον «δεξιά» λευκή.
+% Τα επιμέρους πεδία έχουν ακριβώς μηδενικό ύψος όταν λείπουν.
+\NewDocumentEnvironment{Assessment}{O{} m}{%
+ \clearpage
+ \pgfkeys{/bookassessment/.cd,student=false,date=false,duration={},#1}%
+ \refstepcounter{assessment}\setcounter{assessmentquestion}{0}\setcounter{assessmenttotal}{0}%
+ % Καταχώριση στο TOC με τίτλο και σωστή σελίδα, χωρίς χειροκίνητες γραμμές.
+ \BookTOCOpenCollection{assessment}{Κριτήρια Αξιολόγησης}%
+ \phantomsection\addcontentsline{toc}{subsection}{Κριτήριο αξιολόγησης\space\theassessment\space—\space #2}%
+ \gdef\BookAssessmentTopicLetter{Α}%
+ \markboth{#2}{#2}\pagestyle{bookassessment}\thispagestyle{bookassessment}%
+ \par\noindent
+ \begin{tcolorbox}[enhanced,sharp corners,frame hidden,boxrule=0pt,
+     colback=BookPrimary,left=4mm,right=4mm,top=3mm,bottom=3mm,
+     before skip=0pt,after skip=7pt]
+   {\sffamily\fontsize{8.6}{11}\selectfont\color{white}\LabelAssessment\space\theassessment}\par\vspace{1.4mm}%
+   {\BookHeadingFont\fontsize{16}{20}\selectfont\color{white}#2}%
+ \end{tcolorbox}%
+ \ifdefstring{\BookAssessmentStudentSetting}{true}{%
+   \par\noindent{\small\color{BookInk}Ονοματεπώνυμο: \rule{\dimexpr\linewidth-39mm\relax}{.35pt}}\par\vspace{3pt}%
+ }{}%
+ \ifdefstring{\BookAssessmentDateSetting}{false}{%
+   \ifdefempty{\BookAssessmentDurationSetting}{}{\par\noindent{\small\color{BookInk}Διάρκεια: \BookAssessmentDurationSetting}\par\vspace{3pt}}%
+ }{%
+   \par\noindent{\small\color{BookInk}\BookAssessmentDateLine\hfill
+     \ifdefempty{\BookAssessmentDurationSetting}{}{Διάρκεια: \BookAssessmentDurationSetting}}\par\vspace{3pt}%
+ }%
+ \par\vspace{5pt}%
+}{%
+ \par\clearpage\pagestyle{fancy}%
+}
+
+% Δομή ΘΕΜΑ Α, ΘΕΜΑ Β, ΘΕΜΑ Γ ή ΘΕΜΑ Δ.
+% Μπορείς να δώσεις όσα θέματα χρειάζεσαι, όχι αναγκαστικά τέσσερα.
+\NewDocumentCommand{\AssessmentTopic}{m}{%
+ \par\Needspace{5\baselineskip}\addvspace{10pt}%
+ \stepcounter{assessmenttopic}%
+ \gdef\BookAssessmentTopicLetter{#1}%
+ \setcounter{assessmentquestion}{0}%
+ \noindent\begin{tcolorbox}[enhanced,sharp corners,frame hidden,boxrule=0pt,
+   colback=BookSoft,left=3mm,right=3mm,top=1.7mm,bottom=1.7mm,
+   before skip=0pt,after skip=7pt]
+  {\sffamily\bfseries\fontsize{10.4}{13}\selectfont\color{BookPrimary}\LabelAssessmentTopic\space #1}%
+ \end{tcolorbox}%
+}
+
+% Ερώτημα Α1./Β2./Γ3. με προαιρετικές μονάδες δεξιά σε νέα γραμμή.
+% Προϋπόθεση για το αυτόματο άθροισμα: οι μονάδες είναι ακέραιος αριθμός.
+% Η \Needspace κρατά μαζί τον αριθμό και την αρχή της εκφώνησης.
+\NewDocumentEnvironment{AssessmentQuestion}{o}{%
+ \par\Needspace{3\baselineskip}\addvspace{7pt}%
+ \refstepcounter{assessmentquestion}%
+ \IfNoValueF{#1}{\addtocounter{assessmenttotal}{#1}}%
+ \noindent\leavevmode
+ {\sffamily\bfseries\color{BookPrimary}\theassessmentquestion.}\nobreak\hspace{2.5mm}%
+ \ignorespaces
+}{%
+ \par\IfNoValueF{#1}{%
+    \nobreak\vspace{2pt}{\raggedleft\sffamily\fontsize{8.7}{11.5}\selectfont
+       \color{BookInk}(\LabelAssessmentPoints\space #1)\par}%
+ }%
+ \addvspace{6pt}%
+}
+
+% Προαιρετικός έλεγχος 100 ή άλλου συνόλου, χωρίς εμφάνιση στο PDF.
+\NewDocumentCommand{\AssessmentPointsCheck}{O{100}}{%
+ \ifnum\value{assessmenttotal}=#1\relax
+   \typeout{ASSESSMENT POINTS OK: \arabic{assessmenttotal}/#1}%
+ \else
+   \PackageWarning{universalbook}{Assessment points: \arabic{assessmenttotal}; expected #1}%
+ \fi
+}
+% ---------------------------------------------------------------------------
+% ΠΡΟΑΙΡΕΤΙΚΕΣ ΛΥΣΕΙΣ ΚΡΙΤΗΡΙΩΝ — χωρίς νέο κουτί, όπως οι άλυτες.
+% Μέσα σε ένα AssessmentQuestion γράψε \label{asq:KRI1-A1} μετά την έναρξη.
+% Στις συγκεντρωτικές λύσεις γράψε:
+%   \begin{AssessmentSolution}{asq:KRI1-A1}
+%      Το σωστό είναι το (γ), επειδή ...
+%   \end{AssessmentSolution}
+% Η \ref επιστρέφει Α1, Β2 κ.λπ. ακόμη και αν αλλάξει η αρίθμηση.
+% ---------------------------------------------------------------------------
+\NewDocumentEnvironment{AssessmentSolution}{m}{%
+ \Needspace{3\baselineskip}\par\addvspace{7pt}\noindent\leavevmode
+ \mbox{{\sffamily\bfseries\color{BookPrimary}\ref{#1}}%
+   \hspace{2.3mm}{\color{BookSecondary}\rule{\BookExerciseSeparatorWidth}{\BookExerciseSeparatorHeight}}}%
+ \nobreak\hspace{2.6mm}\ignorespaces
+}{\par\addvspace{5pt}}
+
+\endinput

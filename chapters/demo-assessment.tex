@@ -1,0 +1,101 @@
+% =======================================================================
+% ΚΡΙΤΗΡΙΟ ΑΞΙΟΛΟΓΗΣΗΣ — ΔΟΚΙΜΑΣΤΙΚΟ ΠΕΡΙΕΧΟΜΕΝΟ
+% =======================================================================
+% Τα συγκεκριμένα διαγωνίσματα αφορούν την Ενότητα 1 (Κινηματική).
+% Τοποθετούνται πριν από το επόμενο κεφάλαιο στο book-content.tex,
+% ώστε να εμφανίζονται ΕΝΤΟΣ της Ενότητας 1 στα περιεχόμενα.
+% Ολες οι μορφοποιήσεις ορίζονται κεντρικά.
+% Τα παρακάτω ΔΕΝ αποτελούν ολοκληρωμένο επιστημονικά διαγώνισμα προς χρήση.
+% Είναι σχεδιαστικές δοκιμές των περιβαλλόντων και των σημείων.
+\begin{Assessment}[student=true,date=true,duration={90 λεπτά}]{Ευθύγραμμη κίνηση}
+\AssessmentTopic{Α}
+\begin{AssessmentQuestion}[5]\label{asq:KRI1-A1}
+Η ταχύτητα ενός σώματος παραμένει σταθερή κατά μέτρο και κατεύθυνση.
+Η επιτάχυνσή του είναι:
+\begin{enumerate}[label=\BookGreek*. ,leftmargin=7mm,itemsep=1pt]
+\item θετική. \item αρνητική. \item μηδενική. \item μεταβαλλόμενη.
+\end{enumerate}
+\end{AssessmentQuestion}
+\begin{AssessmentQuestion}[5]
+Να χαρακτηρίσετε την πρόταση ως σωστή ή λανθασμένη:
+«Το διάστημα είναι πάντοτε ίσο με το μέτρο της μετατόπισης».
+\TrueFalseChoices
+\end{AssessmentQuestion}
+\begin{AssessmentQuestion}[5]
+Το μέτρο της μέσης διανυσματικής ταχύτητας ενός σώματος
+υπολογίζεται από τη σχέση $|\bar{\upsilon}|=\frac{|\Delta x|}{\Delta t}$.
+Να αναφέρετε τις μονάδες SI των μεγεθών $\Delta x$ και $\Delta t$.
+\end{AssessmentQuestion}
+\begin{AssessmentQuestion}[5]
+Ένα κινητό κινείται από τη θέση $x_1=-2\,\mathrm{m}$ στη θέση
+$x_2=6\,\mathrm{m}$. Ποια είναι η αλγεβρική μετατόπισή του;
+\end{AssessmentQuestion}
+\begin{AssessmentQuestion}[5]
+Να ορίσετε τη μέση αριθμητική ταχύτητα σε μια κίνηση.
+\end{AssessmentQuestion}
+
+\AssessmentTopic{Β}
+\begin{AssessmentQuestion}[12]
+Δύο κινητά Α και Β κινούνται στον ίδιο άξονα.
+Τα διαγράμματα θέσης--χρόνου φαίνονται παρακάτω.
+\begin{center}
+\begin{tikzpicture}[scale=.67]
+ \draw[book/axis] (0,0)--(6.4,0) node[right]{$t\ (\mathrm{s})$};
+ \draw[book/axis] (0,-.4)--(0,3.9) node[above]{$x\ (\mathrm{m})$};
+ \draw[book/velocity] (0,.35)--(5.4,3.55) node[right]{A};
+ \draw[book/accel] (0,3.1)--(5.4,1.05) node[right]{B};
+\end{tikzpicture}
+\end{center}
+Ποιο κινητό έχει θετική και ποιο αρνητική αλγεβρική ταχύτητα;
+Να αιτιολογήσετε την επιλογή σας.
+\end{AssessmentQuestion}
+\begin{AssessmentQuestion}[13]
+Δύο σώματα διανύουν σε ίσους χρόνους διαστήματα $12\,\mathrm{m}$ και
+$18\,\mathrm{m}$ αντίστοιχα. Ποιο έχει μεγαλύτερη μέση αριθμητική ταχύτητα;
+\end{AssessmentQuestion}
+
+\AssessmentTopic{Γ}
+\begin{AssessmentQuestion}[10]\label{asq:KRI1-G1}
+Ένα κινητό ξεκινά από τη θέση $x_0=2\,\mathrm{m}$ και κινείται με
+σταθερή ταχύτητα $\upsilon=3\,\mathrm{m/s}$.
+Να γράψετε την εξίσωση της θέσης του.
+\end{AssessmentQuestion}
+\begin{AssessmentQuestion}[15]
+Για το προηγούμενο κινητό, να υπολογίσετε τη θέση του τη χρονική στιγμή
+$t=4\,\mathrm{s}$ και τη μετατόπισή του στο ίδιο χρονικό διάστημα.
+\end{AssessmentQuestion}
+
+\AssessmentTopic{Δ}
+\begin{AssessmentQuestion}[9]
+Ένα σώμα αρχίζει να κινείται από την ηρεμία με σταθερή επιτάχυνση
+$\alpha=2\,\mathrm{m/s^2}$. Να υπολογίσετε την ταχύτητά του τη στιγμή
+$t=5\,\mathrm{s}$.
+\end{AssessmentQuestion}
+\begin{AssessmentQuestion}[8]
+Να υπολογίσετε τη μετατόπισή του στα πρώτα $5\,\mathrm{s}$.
+\end{AssessmentQuestion}
+\begin{AssessmentQuestion}[8]
+Να σχεδιάσετε ποιοτικά το διάγραμμα ταχύτητας--χρόνου για
+$0\leq t\leq5\,\mathrm{s}$.
+\end{AssessmentQuestion}
+% Προαιρετικός έλεγχος στο αρχείο LOG: 25+25+25+25=100.
+\AssessmentPointsCheck[100]
+\end{Assessment}
+
+% Δεύτερο, σύντομο κριτήριο: ΟΥΤΕ στοιχεία μαθητή ΟΥΤΕ ημερομηνία
+% ΟΥΤΕ διάρκεια. Κάποια ερωτήματα δεν έχουν μονάδες.
+\begin{Assessment}{Σύντομη επανάληψη: μετατόπιση}
+\AssessmentTopic{Α}
+\begin{AssessmentQuestion}
+Ποια είναι η διαφορά ανάμεσα στη μετατόπιση και στο διάστημα;
+\end{AssessmentQuestion}
+\begin{AssessmentQuestion}[5]
+Δίνεται $x_A=4\,\mathrm{m}$ και $x_B=-1\,\mathrm{m}$.
+Να βρείτε τη μετατόπιση από το Α στο Β.
+\end{AssessmentQuestion}
+\AssessmentTopic{Β}
+\begin{AssessmentQuestion}
+Να εξηγήσετε αν είναι δυνατόν η μετατόπιση ενός κινητού να είναι μηδέν,
+ενώ το διάστημα που έχει διανύσει είναι μεγαλύτερο από μηδέν.
+\end{AssessmentQuestion}
+\end{Assessment}

@@ -1,0 +1,29 @@
+% v0.33 — κοινό μητρώο εικαστικών PRINT / SCREEN.
+% Οι δηλώσεις παράγονται από το config/color-map.json.
+\newcommand{\BookDeclareAsset}[3]{%
+  \expandafter\def\csname BookAssetPath@#1\endcsname{#2}%
+  \expandafter\def\csname BookAssetKind@#1\endcsname{#3}%
+  \BookDeclareAssetAlias{#1}{#1}%
+  \BookDeclareAssetAlias{#2}{#1}%
+}
+\newcommand{\BookDeclareAssetAlias}[2]{%
+  \expandafter\def\csname BookAssetKey@#1\endcsname{#2}%
+}
+\newcommand{\BookAssetPath}[1]{%
+  \csname BookAssetPath@\csname BookAssetKey@#1\endcsname\endcsname
+}
+\NewDocumentCommand{\BookUseAsset}{O{} m}{%
+  \ifcsname BookAssetKey@#2\endcsname
+    \begingroup
+    \edef\BookSelectedAsset{\csname BookAssetKey@#2\endcsname}%
+    \edef\BookSelectedKind{\csname BookAssetKind@\BookSelectedAsset\endcsname}%
+    \ifdefstring{\BookSelectedKind}{tex}{%
+      \input{\BookAssetPath{#2}}%
+    }{\includegraphics[#1]{\BookAssetPath{#2}}}%
+    \endgroup
+  \else
+    \PackageError{universalbook}{Unregistered asset: #2}%
+      {Add its path and type to config/color-map.json, then run make colors-regenerate.}%
+  \fi
+}
+\input{config/generated-assets.tex}

@@ -1,0 +1,239 @@
+% ===========================================================================
+% ΚΕΝΤΡΙΚΕΣ ΡΥΘΜΙΣΕΙΣ ΒΙΒΛΙΟΥ — ΞΕΚΙΝΑ ΑΠΟ ΕΔΩ
+% ===========================================================================
+% Αυτό είναι το πιο χρήσιμο αρχείο αν θέλεις να αλλάξεις την εμφάνιση μόνος σου.
+% Τις τιμές τις αλλάζεις εδώ και όχι χειροκίνητα μέσα σε κάθε κεφάλαιο.
+% Παράδειγμα: άλλαξε \BookLevel από Α΄ σε Β΄ Λυκείου.
+% Κάθε γραμμή που αρχίζει με % είναι σχόλιο: δεν τυπώνεται στο βιβλίο.
+% \newcommand{\Ονομα}{τιμή} ορίζει μια μεταβλητή για το υπόλοιπο έργο.
+% ===========================================================================
+% 1. Ταυτότητα βιβλίου / μεταδεδομένα
+
+\newcommand{\BookSubject}{Φυσική}
+\newcommand{\BookLevel}{Α΄ Λυκείου}
+\newcommand{\BookTitle}{Φυσική Α΄ Λυκείου}
+\newcommand{\BookSubtitle}{Θεωρία · Μεθοδολογία · Παραδείγματα · Ασκήσεις}
+\newcommand{\BookPublisher}{ΕΚΔΟΤΙΚΟ ΠΡΟΤΥΠΟ}
+\newcommand{\BookAuthors}{Δοκιμαστική μακέτα — όχι τελικό βιβλίο}
+\newcommand{\BookEdition}{Καθολική μακέτα v0.32 · Οκτώβριος 2026}
+\newcommand{\BookShortName}{Φυσική Α΄ Λυκείου}
+
+% ---------------------------------------------------------------------------
+% ΥΠΟΣΕΛΙΔΟ — ΔΥΟ ΑΝΕΞΑΡΤΗΤΕΣ ΡΥΘΜΙΣΕΙΣ, ΜΙΑ ΦΟΡΑ ΓΙΑ ΟΛΟ ΤΟ ΒΙΒΛΙΟ
+% ---------------------------------------------------------------------------
+% BookFooterMode:
+%   full   = Φυσική Α΄ Λυκείου · σελ. 12   (διαθέσιμη εναλλακτική)
+%   number = 12                           (ΠΡΟΕΠΙΛΟΓΗ: μόνο αριθμός)
+% BookFooterPosition:
+%   center = κεντραρισμένο σε κάθε σελίδα (εναλλακτική)
+%   outer  = ΠΡΟΕΠΙΛΟΓΗ: αριστερά στις ζυγές, δεξιά στις μονές.
+% Για αλλαγή τροποποίησε ΜΟΝΟ τις δύο παρακάτω τιμές.
+% Ισχύουν αυτόματα για κανονικές, plain και εξεταστικές σελίδες.
+% Εξώφυλλο, αρχή κεφαλαίου και σκόπιμα κενές σελίδες παραμένουν χωρίς υποσέλιδο.
+% v0.24: χωρίς οριζόντια γραμμή κάτω, μόνο το περιεχόμενο (αριθμός).
+% Η γραμμή της κεφαλίδας παραμένει αμετάβλητη.
+\newcommand{\BookFooterMode}{number}
+\newcommand{\BookFooterPosition}{outer}
+% 2. Απαντήσεις στο PDF
+% \ShowAnswerstrue: εμφανίζονται οι σύντομες απαντήσεις/υποδείξεις.
+% \ShowAnswersfalse: αποκρύπτονται, χωρίς να σβήνεται το περιεχόμενό τους.
+
+\newif\ifShowAnswers
+\ShowAnswerstrue
+% 3. Γραμματοσειρές — δεν διανέμουμε αρχεία γραμματοσειρών στο ZIP.
+% Body: ελληνικό κυρίως κείμενο, Heading: τίτλοι, Math: εξισώσεις.
+% Η STIX Two Math είναι ΠΡΟΣΩΡΙΝΗ δοκιμαστική επιλογή.
+% Περιμένουμε την αισθητική έγκριση της Θάλειας.
+% Για επιστροφή στην παλιά MathFontName: latinmodern-math.otf
+% Για το βάρος Medium/Semibold αλλάζεις μόνο τα αντίστοιχα ονόματα εδώ.
+% Μετά εκτελείς XeLaTeX δύο φορές για ενημέρωση παραπομπών και αρίθμησης.
+
+\newcommand{\BodyFontName}{Inter}
+\newcommand{\BodyBoldFontName}{Inter SemiBold}
+\newcommand{\BodyItalicFontName}{Inter Italic}
+\newcommand{\BodyBoldItalicFontName}{Inter SemiBold Italic}
+\newcommand{\HeadingFontName}{Noto Serif}
+\newcommand{\HeadingBoldFontName}{Noto Serif Medium}
+\newcommand{\HeadingItalicFontName}{Noto Serif Italic}
+\newcommand{\HeadingBoldItalicFontName}{Noto Serif Medium Italic}
+\newcommand{\MathFontName}{STIXTwoMath-Regular.ttf}
+% 4. ΕΙΚΟΝΙΔΙΑ ΔΙΔΑΚΤΙΚΩΝ ΚΟΥΤΙΩΝ — v0.25
+% Η εμφάνιση Β εγκρίθηκε: μεγαλύτερα διανυσματικά εικονίδια στην αριστερή
+% ζώνη, κεντραρισμένα στο ΥΨΟΣ του κουτιού, με κάθετη γραμμή αριστερά.
+% Δεν υπάρχει πλέον σύμβολο μέσα στον τίτλο. Ο συγγραφέας εξακολουθεί
+% να γράφει απλώς \begin{ThinkBox} ή \begin{AttentionBox}.
+% \BookCalloutIconScale: κοινή κλίμακα για λάμπα και προειδοποιητικό τρίγωνο.
+% \BookCalloutIconOffset: απόσταση του ΚΕΝΤΡΟΥ κάθε εικονιδίου από το
+% αριστερό όριο του κουτιού. Το πλάτος της ζώνης ορίζεται στο κοινό
+% στυλ BookCallout του styles/universalbook.sty.
+\newcommand{\BookCalloutIconScale}{1.11}
+\newcommand{\BookCalloutIconOffset}{8.7mm}
+% Ιστορική συμβατότητα: παλιές εντολές χαρακτήρων (όχι πλέον στους τίτλους).
+% Διατηρούνται σε περίπτωση που χρησιμοποιούνται σε παλαιότερα αρχεία.
+\newcommand{\SymbolFontName}{DejaVu Sans}
+\newcommand{\AlertSymbolText}{▲}
+\newcommand{\ThinkSymbolText}{◉}
+\newcommand{\AlertSymbolSize}{9.0}
+\newcommand{\ThinkSymbolSize}{9.0}
+\newcommand{\AlertSymbolRaise}{0ex}
+\newcommand{\ThinkSymbolRaise}{0ex}
+
+
+% 5. Κείμενα ετικετών: ονόματα πλαισίων και ενοτήτων.
+% Για γενικό βιβλίο π.χ. Μαθηματικών, τα αλλάζεις εδώ χωρίς επέμβαση στο sty.
+
+% v0.29: ξεχωριστή ετικέτα μαθησιακών στόχων στην ΑΡΧΗ ΚΕΦΑΛΑΙΟΥ.
+% Δεν επηρεάζει το περιβάλλον LearningGoals των φύλλων εργασίας.
+\newcommand{\LabelChapterGoals}{Τι θα μάθουμε}
+\newcommand{\LabelGoals}{Διδακτικοί στόχοι}
+\newcommand{\LabelAlert}{ΠΡΟΣΟΧΗ}
+\newcommand{\LabelThink}{Πώς σκέφτομαι}
+\newcommand{\LabelHistory}{Ιστορίες από τη Φυσική}
+\newcommand{\LabelMethod}{ΜΕΘΟΔΟΛΟΓΙΑ}
+\newcommand{\LabelExample}{Παράδειγμα}
+\newcommand{\LabelExercise}{Άσκηση}
+\newcommand{\LabelSolution}{Λύση}
+\newcommand{\LabelWorksheet}{ΦΥΛΛΟ ΕΡΓΑΣΙΑΣ}
+% v0.15: ονομασίες των Κριτηρίων Αξιολόγησης — αλλάζουν κεντρικά.
+\newcommand{\LabelAssessment}{ΚΡΙΤΗΡΙΟ ΑΞΙΟΛΟΓΗΣΗΣ}
+\newcommand{\LabelAssessmentTopic}{ΘΕΜΑ}
+\newcommand{\LabelAssessmentPoints}{Μονάδες}
+\newcommand{\BookLogoFile}{} % e.g. assets/publisher-logo.pdf; leave empty for text logo
+\newcommand{\LabelDefinition}{Ορισμός}
+\newcommand{\LabelTheorem}{Θεώρημα}
+\newcommand{\LabelProof}{Απόδειξη}
+
+% Version v0.3 based on preferred typography B (Inter body, Noto Serif headings).
+% Geometric Unicode label symbols: ▲ ΠΡΟΣΟΧΗ / ◉ Πώς σκέφτομαι.
+% Font names are referenced by name; no font files are distributed.
+
+% 6. Αριθμήσεις, κεφαλίδα και λεζάντες.
+% Τα μεγέθη τυπογραφίας δίνονται σε pt εκτός αν γράφονται με μονάδα mm.
+% \BookExerciseNumberSize: μέγεθος του μπλε «1 |» των άλυτων.
+% \BookHeaderIconHeight: ύψος πουλιού στην κεφαλίδα και των δύο αντικριστών.
+
+% 1 = show blue labels for all enumerate lists; actual numbers can be changed per list.
+\newcommand{\BookListLabelColor}{BookSecondary}
+\newcommand{\BookExerciseNumberSize}{11.4}
+% Leave exercise titles empty in main problem sets: \begin{exercise}[ID]{}...
+% Keep optional IDs in the source for future cross-references.
+\newif\ifBookShowExerciseIDs
+\BookShowExerciseIDsfalse
+% Height of the publisher/header emblem; one value changes the entire book.
+\newcommand{\BookHeaderIconHeight}{6.4mm}
+
+% ---------------------------------------------------------------------------
+% v0.22 — ΚΕΦΑΛΙΔΕΣ: κοινή μορφοποίηση και πεζοκεφαλαία ως προεπιλογή.
+% ---------------------------------------------------------------------------
+% Το κείμενο της ΚΕΦΑΛΙΔΑΣ είναι ανεξάρτητο από τη λωρίδα τίτλου.
+% Για παράδειγμα, η γραμμή στην κορυφή μπορεί να γράφει
+% «Κριτήριο αξιολόγησης 1», ενώ η μπλε λωρίδα παραμένει
+% «ΚΡΙΤΗΡΙΟ ΑΞΙΟΛΟΓΗΣΗΣ 1» από τη μεταβλητή \LabelAssessment.
+% Η \nouppercase στο sty αποτρέπει την αυτόματη κεφαλαιοποίηση των τίτλων,
+% ενώ εδώ δίνουμε απευθείας την επιθυμητή γραφή της ετικέτας.
+\newcommand{\BookChapterHeaderPrefix}{Ενότητα}
+\newcommand{\BookAssessmentHeaderLabel}{Κριτήριο αξιολόγησης}
+% Κοινή γραμματοσειρά, μέγεθος και βάρος για τους δύο τύπους κεφαλίδας:
+\newcommand{\BookHeaderLabelFont}{\sffamily\scriptsize\bfseries}
+\newcommand{\BookHeaderTitleFont}{\sffamily\scriptsize}
+% Χρωματικοί ρόλοι: αλλάζουν αυτομάτως μεταξύ SCREEN και PRINT.
+\newcommand{\BookHeaderLabelColor}{BookPrimary}
+\newcommand{\BookHeaderTitleColor}{BookInk}
+\newcommand{\BookHeaderRuleColor}{BookSecondary}
+% Το πλάτος γραμμής και η απόσταση τίτλου/πουλιού ορίζονται μια φορά.
+\newcommand{\BookHeaderRuleWidth}{.35pt}
+\newcommand{\BookHeaderIconGap}{1.2mm}
+% Το ύψος του πουλιού ρυθμίζεται από την BookHeaderIconHeight παραπάνω.
+% Η θέση του μένει εξωτερικά στις αντικριστές σελίδες, και στις ζυγές
+% το σήμα κατοπτρίζεται χωρίς αλλαγή εικόνας.
+
+% 6α. Αντικριστά περιθώρια: εσωτερικό = πλευρά ράχης, εξωτερικό = άκρη.
+% Δοκιμαστικές τιμές, ΟΧΙ οριστικές προδιαγραφές τυπογραφείου.
+% Εδώ 17 + 20 mm αντί για 20 + 16 mm, ώστε να μείνει περισσότερος χώρος έξω.
+% Το class book με twoside αντιστρέφει αυτόματα τα περιθώρια σε ζυγές σελίδες.
+\newcommand{\BookMarginInner}{17mm}
+% Καθαρό μέγεθος δοκιμίου. Το ξάκρισμα παραμένει ανοικτή προδιαγραφή.
+\newcommand{\BookTrimWidth}{170mm}
+\newcommand{\BookTrimHeight}{240mm}
+\newcommand{\BookMarginOuter}{20mm}
+\newcommand{\BookMarginTop}{19mm}
+\newcommand{\BookMarginBottom}{20mm}
+
+% 6β. Η αρχή κάθε κεφαλαίου τοποθετείται πάντα σε ΜΟΝΗ/ΔΕΞΙΑ σελίδα.
+% Αυτό υλοποιείται με την απλή \cleardoublepage στο universalbook.sty.
+% Αν η επόμενη σελίδα θα ήταν αριστερή, το LaTeX προσθέτει ΜΙΑ λευκή.
+% ΔΕΝ απαιτείται λευκή η αριστερή σελίδα απέναντι από κάθε τίτλο.
+% Δεν υπάρχει πλέον πρόσθετη επιλογή ή ειδικός μετρητής για αυτό.
+
+\newcommand{\BookExerciseSeparatorWidth}{0.75pt}
+\newcommand{\BookExerciseSeparatorHeight}{11.0pt}
+% Float caption settings are controlled here, not inside chapters.
+\newcommand{\BookCaptionSize}{9.1}
+\newcommand{\BookCaptionLineHeight}{12}
+\newcommand{\BookFigureCaptionName}{Σχήμα}
+\newcommand{\BookTableCaptionName}{Πίνακας}
+% v0.23: κοινές παράμετροι ΚΑΙ για τους δύο πίνακες.
+% Αλλάζεις τον χρωματισμό μόνο εδώ, όχι σε κάθε tabularx.
+% PRINT: τα BookPrimary / BookRowTint μετατρέπονται αυτόματα σε
+% 100% / 10% του προσωρινού δεύτερου μελανιού. Κανένα νέο μελάνι.
+\newcommand{\BookTableHeaderFill}{BookPrimary}
+\newcommand{\BookTableStripeFill}{BookRowTint}
+\newcommand{\BookTableRowStretch}{1.33}
+% When changed to false, figure/table descriptions become upright instead of italic.
+\newif\ifBookItalicCaptions
+\BookItalicCaptionstrue
+\newcommand{\BookChapterPhotoHeight}{60mm}
+% v0.29: λεπτή, διακριτική πλευρική γραμμή στο «Τι θα μάθουμε».
+% BookSecondary = μεσαίο μπλε στην SCREEN / 55% του 2ου μελανιού PRINT.
+% Καμία αλλαγή στο κείμενο των \item από τον συγγραφέα.
+\newcommand{\BookOpeningGoalsAccent}{BookSecondary}
+\newcommand{\BookOpeningGoalsRuleWidth}{1.35pt}
+\newcommand{\BookOpeningGoalsLeftPadding}{4.3mm}
+
+% 7. Ιεραρχία τίτλων και πλαίσια λυμένων παραδειγμάτων.
+% Κάθε τιμή *true* ανοίγει μια οπτική επιλογή· *false* την απενεργοποιεί.
+% Με BookExampleDarkHeadertrue ο τίτλος είναι λευκός σε σκούρα μπλε λωρίδα.
+% Με BookMajorHeadingBandtrue οι βασικές ενότητες έχουν δική τους μπλε μπάρα.
+
+% Example title in dark-blue band (true), or on pale-blue background with a hairline (false).
+\newif\ifBookExampleDarkHeader
+\BookExampleDarkHeadertrue
+% Major sections: compact blue bar with white text (true), legacy heading + rule (false).
+\newif\ifBookMajorHeadingBand
+\BookMajorHeadingBandtrue
+% Small subsection rules: solid thin rule (false), dotted leader (true).
+\newif\ifBookQuestionDottedRules
+\BookQuestionDottedRulesfalse
+% Compact heading bands, distinct from the running header and worksheet banners.
+\newcommand{\BookMajorBandSize}{11.7}
+\newcommand{\BookMajorBandTopPad}{1.35mm}
+\newcommand{\BookMajorBandBottomPad}{1.35mm}
+% True/false checkboxes and spacing. Length is in centimeters.
+\newcommand{\BookCheckSquareSize}{.27}
+\newcommand{\BookTrueFalseGap}{3.1mm}
+
+% 8. Μικροτυπογραφία: διάκενα, ύψη γραμμών και βάρη ετικετών.
+% Χρήσιμο όταν ζητηθεί αλλαγή από την επιμελήτρια των εκδόσεων.
+
+\newcommand{\BookExampleTitleFontSize}{10.4}
+\newcommand{\BookExampleTitleLineHeight}{13.5}
+\newcommand{\BookExampleBarPad}{2.0mm}
+\newcommand{\BookThinkLabelSize}{9.0}
+\newcommand{\BookSolutionLabelSize}{10.2}
+\newcommand{\BookTheoryRuleWidth}{0.55pt}
+\newcommand{\BookQuestionRuleWidth}{0.35pt}
+
+\newcommand{\BookMediumFontName}{Inter Medium}
+
+% ==========================================================================
+% 9. ΓΡΑΦΙΚΑ — ΚΕΝΤΡΙΚΑ ΜΕΓΕΘΗ (v0.14)
+% Τα παρακάτω χρησιμοποιούνται μόνο στα κοινά στυλ TikZ/PGFPlots.
+% Δεν χρειάζεται να γράφεις αριθμούς pt μέσα σε κάθε διάγραμμα.
+% Μεγάλωσε βέλη/σύμβολα εδώ και θα ενημερωθούν όλα τα νέα σχήματα.
+% ==========================================================================
+\newcommand{\BookFigAxisWidth}{0.72pt}    % κύριοι άξονες
+\newcommand{\BookFigVectorWidth}{1.12pt}  % βέλη φυσικών μεγεθών
+\newcommand{\BookFigGraphWidth}{1.05pt}   % κύριες καμπύλες
+\newcommand{\BookFigAuxWidth}{0.45pt}     % βοηθητικά/οδηγοί
+\newcommand{\BookFigArrowLength}{2.5mm}  % μήκος αιχμής
+\newcommand{\BookFigArrowWidth}{1.7mm}   % άνοιγμα αιχμής

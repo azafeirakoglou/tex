@@ -1,0 +1,96 @@
+% ======================================================================
+% ΣΥΝΤΟΜΟ ΔΕΙΓΜΑ ΣΥΝΕΡΓΑΤΩΝ — Η ΙΔΙΑ ΥΛΗ ΣΕ SCREEN ΚΑΙ PRINT.
+% Δοκιμαστική ύλη μόνο· δεν αποτελεί τελικό εγκεκριμένο κεφάλαιο.
+% ======================================================================
+\mainmatter
+\BookChapterPhoto{Κίνηση σε μία διάσταση}{Δείγμα νέας εκδοτικής μακέτας — Φυσική Α΄ Λυκείου}
+{assets/chapter-photo-sample.png}{Προσωρινό εικαστικό δείγμα για αξιολόγηση}{%
+\item Να διακρίνουμε τη θέση, τη μετατόπιση και το διάστημα.
+\item Να ορίζουμε τη θετική φορά του άξονα.
+\item Να υπολογίζουμε τη μετατόπιση με μαθηματική σχέση.
+\item Να ερμηνεύουμε την κλίση ενός διαγράμματος θέσης–χρόνου.
+}
+\BookSection{Θεωρία}
+\section{Θέση και μετατόπιση}
+Για να περιγράψουμε την κίνηση ενός σώματος ορίζουμε έναν άξονα \(x'x\) και επιλέγουμε τη θετική φορά. Η \textbf{μετατόπιση} ενός κινητού κατά τη μετακίνησή του από τη θέση \(x_A\) στη θέση \(x_B\) είναι:
+\begin{KeyFormula}
+\[ \Delta x=x_B-x_A \]
+\end{KeyFormula}
+\begin{center}
+\begin{tikzpicture}[x=.85cm,>=Stealth]
+  \draw[BookPrimary,->](-4,0)--(6,0) node[right] {\(x\)};
+  \foreach \x in {-3,0,5}{\draw[BookPrimary](\x,0.08)--(\x,-0.08) node[below]{\scriptsize \(\x\)};}
+  \fill[BookInk] (-3,0) circle(1.8pt) node[above]{\small A};
+  \fill[BookInk] (5,0) circle(1.8pt) node[above]{\small B};
+  \draw[BookSecondary,very thick,-{Stealth[length=3mm]}](-3,.7)--(5,.7) node[midway,above]{\(\Delta x\)};
+\end{tikzpicture}
+\end{center}
+\begin{AttentionBox}
+Η \textbf{μετατόπιση} εξαρτάται μόνο από την αρχική και την τελική θέση, ενώ το \textbf{διάστημα} εξαρτάται από τη διαδρομή.
+\end{AttentionBox}
+% Δείγματα ιστορικού ενθέτου και ρήσης. Χωρίς αποδιδόμενη πραγματική ρήση.
+\begin{HistoryBox}[Η εξέλιξη της μέτρησης]
+Η μέτρηση των φυσικών μεγεθών συνδέεται με την ιστορία των επιστημών.
+Αυτό είναι δοκιμαστικό κείμενο που θα αντικατασταθεί από τεκμηριωμένη ιστορία.
+\end{HistoryBox}
+\BookQuote{Η παρατήρηση γεννά ερωτήσεις· η μέτρηση μας βοηθά να τις ελέγξουμε.}
+{Δοκιμαστική ρήση}[Πρωτότυπο κείμενο επίδειξης μορφοποίησης]
+% Κρατάμε τη λωρίδα μαζί με το πρώτο λυμένο παράδειγμα.
+\Needspace{12\baselineskip}
+\BookSection{Λυμένα παραδείγματα}
+\begin{workedexample}{Μετατόπιση κινητού σε ευθεία}
+\begin{ProblemBox}
+Ένα κινητό βρίσκεται στη θέση \(x_A=-3\,\mathrm{m}\) και στη συνέχεια στη θέση \(x_B=5\,\mathrm{m}\). Να υπολογίσετε τη μετατόπιση και να προσδιορίσετε τη φορά της.
+\end{ProblemBox}
+\begin{ThinkBox}
+Υπολογίζουμε τη διαφορά τελικής και αρχικής θέσης. Το πρόσημο του αποτελέσματος δηλώνει τη φορά ως προς τον άξονα.
+\end{ThinkBox}
+\SolutionHeading
+\[\Delta x=x_B-x_A=5-(-3)=+8\,\mathrm{m}.\]
+\end{workedexample}
+\BookSection{Ερωτήσεις θεωρίας}
+\BookQuestionHeading{Σωστό / Λάθος}
+\begin{enumerate}[leftmargin=6mm]
+\TrueFalseItem{Η μετατόπιση είναι διανυσματικό μέγεθος.}
+\TrueFalseItem{Το διάστημα μπορεί να έχει αρνητική τιμή.}
+\end{enumerate}
+\BookSection{Άλυτες ασκήσεις}
+\begin{exercise}[PHY-A-001]{}
+Κινητό μετακινείται από τη θέση \(x_A=2\,\mathrm{m}\) στη θέση \(x_B=-7\,\mathrm{m}\). Να βρείτε τη μετατόπισή του και να εξετάσετε το πρόσημό της.
+\end{exercise}
+\begin{exercise}[PHY-A-002]{}
+Ένα κινητό κινείται με σταθερή ταχύτητα \(\upsilon=4\,\mathrm{m/s}\) επί \(\Delta t=5\,\mathrm{s}\). Να υπολογιστεί η μετατόπισή του.
+\end{exercise}
+\begin{exercise}[PHY-A-003]{}
+Κινητό μεταβαίνει από το σημείο \(A\) με \(x_A=0\,\mathrm{m}\) στο σημείο \(B\) με \(x_B=6\,\mathrm{m}\) και κατόπιν επιστρέφει στο \(C\) με \(x_C=2\,\mathrm{m}\).
+\begin{enumerate}[label=\BookGreek*)]
+\item Να υπολογίσετε τη συνολική μετατόπιση.
+\item Να βρείτε το συνολικό διάστημα.
+\end{enumerate}
+\end{exercise}
+\begin{exercise}[PHY-A-004]{}
+Για κινητό που κινείται με σταθερή ταχύτητα δίνεται η σχέση \(x=2+3t\) (S.I.). Να προσδιορίσετε την αρχική θέση, την ταχύτητα και τη θέση τη χρονική στιγμή \(t=4\,\mathrm{s}\).
+\end{exercise}
+\clearpage
+\BookSection{Λύσεις ασκήσεων}
+\BookMinorHeading{Ενότητα 1 — Κίνηση σε μία διάσταση}
+\begin{booksolution}{PHY-A-001}
+Από τον ορισμό της μετατόπισης:
+\[\Delta x=x_B-x_A=-7-2=-9\,\mathrm{m}.\]
+Το αρνητικό πρόσημο δείχνει μετατόπιση προς την αρνητική φορά του άξονα.
+\end{booksolution}
+\begin{booksolution}{PHY-A-002}
+Στην ευθύγραμμη ομαλή κίνηση:
+\[\Delta x=\upsilon\Delta t=4\cdot5=20\,\mathrm{m}.\]
+\end{booksolution}
+\begin{booksolution}{PHY-A-003}
+\textbf{α)} Η συνολική μετατόπιση εξαρτάται μόνο από την αρχική και την τελική θέση:
+\[\Delta x=x_C-x_A=2-0=2\,\mathrm{m}.\]
+\textbf{β)} Το συνολικό διάστημα είναι το άθροισμα των επιμέρους αποστάσεων:
+\[s=|6-0|+|2-6|=6+4=10\,\mathrm{m}.\]
+\end{booksolution}
+\begin{booksolution}{PHY-A-004}
+Συγκρίνοντας τη σχέση \(x=2+3t\) με τη \(x=x_0+\upsilon t\), βρίσκουμε:
+\[x_0=2\,\mathrm{m},\qquad\upsilon=3\,\mathrm{m/s}.\]
+Για \(t=4\,\mathrm{s}\): \(x=2+3\cdot 4=14\,\mathrm{m}\).
+\end{booksolution}

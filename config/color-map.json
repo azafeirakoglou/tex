@@ -1,0 +1,138 @@
+{
+  "schema_version": 3,
+  "version": "0.33",
+  "authoritative_edition": "PRINT",
+  "screen_purpose": "Blue RGB aesthetic counterpart of PRINT roles. Not a proof of final spot-ink hue.",
+  "spot_ink_name": "SecondInkRedProof",
+  "approved_tints_pending_press": [
+    100,
+    55,
+    10
+  ],
+  "colors": {
+    "Spot100": {
+      "print_ink": "SECOND",
+      "tint": 100
+    },
+    "Spot55": {
+      "print_ink": "SECOND",
+      "tint": 55
+    },
+    "Spot10": {
+      "print_ink": "SECOND",
+      "tint": 10
+    },
+    "Black100": {
+      "print_ink": "BLACK",
+      "tint": 100
+    },
+    "Black55": {
+      "print_ink": "BLACK",
+      "tint": 55
+    },
+    "Black10": {
+      "print_ink": "BLACK",
+      "tint": 10
+    }
+  },
+  "semantic": {
+    "BookPrimary": "Spot100",
+    "BookSecondary": "Spot55",
+    "BookThinkAccent": "Spot55",
+    "BookSoft": "Spot10",
+    "BookAlert": "Spot100",
+    "BookHistorySoft": "Black10",
+    "BookHistory": "Black55",
+    "BookInk": "Black100",
+    "BookMethodSoft": "Spot10",
+    "BookProblemBackground": "Spot10",
+    "BookThinkBackground": "Spot10",
+    "BookRowTint": "Spot10",
+    "BookPaleRule": "Spot10",
+    "BookAlertBackground": "Spot10",
+    "BookPanelBorder": "Spot10",
+    "BookHistoryBorder": "Black55",
+    "BookFigAxisColor": "Black100",
+    "BookFigObjectColor": "Black100",
+    "BookFigVelocityColor": "Spot55",
+    "BookFigAccelColor": "Spot100",
+    "BookFigForceColor": "Spot100",
+    "BookFigWeightColor": "Black100",
+    "BookFigFrictionColor": "Black100",
+    "BookFigGuideColor": "Black55",
+    "BookFigPlotAColor": "Spot55",
+    "BookFigPlotBColor": "Spot100",
+    "BookStatementAccent": "Spot100"
+  },
+  "white": "white",
+  "assets": {
+    "chapter_photo": {
+      "active_path": "assets/photo-K-3tones.png",
+      "source_file": "archive/legacy-sources/chapter-photo-original.png",
+      "mode": "shared-three-level-neutral-image",
+      "approved_for_press": false,
+      "kind": "raster",
+      "aliases": [
+        "assets/chapter-photo-sample.png"
+      ]
+    },
+    "math_chapter_art": {
+      "active_path": "assets/math-chapter-art.tex",
+      "source_file": "archive/legacy-sources/math-chapter-art.tex",
+      "mode": "shared-neutral-image",
+      "approved_for_press": false,
+      "kind": "tex",
+      "aliases": [
+        "assets/math-chapter-art.pdf"
+      ]
+    },
+    "header_icon": {
+      "active_path": "assets/header-icon-black.png",
+      "mode": "shared-neutral-image",
+      "approved_for_press": false,
+      "kind": "raster",
+      "aliases": []
+    }
+  },
+  "figure_conventions_approved": false,
+  "figure_conventions_note": "Demo colors and vector styles are provisional. No color conventions for physical quantities have been approved.",
+  "visual_rules": {
+    "ThinkBox": {
+      "accent": "BookThinkAccent",
+      "background": "BookThinkBackground"
+    },
+    "AttentionBox": {
+      "accent": "BookAlert",
+      "background": "BookAlertBackground"
+    },
+    "HistoryBox": {
+      "accent": "BookHistory",
+      "background": "BookHistorySoft"
+    },
+    "definitionbox": {
+      "accent": "BookStatementAccent",
+      "background": "BookSoft"
+    },
+    "theorembox": {
+      "accent": "BookStatementAccent",
+      "background": "BookMethodSoft"
+    },
+    "ProblemBox": {
+      "background": "BookProblemBackground"
+    },
+    "striped_table": {
+      "header": "BookPrimary",
+      "stripe": "BookRowTint"
+    }
+  },
+  "screen_base_hex": {
+    "SECOND": "203B63",
+    "BLACK": "000000"
+  },
+  "spot_alternate_cmyk": [
+    0,
+    1,
+    1,
+    0
+  ]
+}

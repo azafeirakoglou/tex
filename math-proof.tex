@@ -1,0 +1,19 @@
+% Αυτόνομο υπόδειγμα για Μαθηματικά. Χρησιμοποιεί το ΙΔΙΟ sty/config,
+% ώστε να επιβεβαιώνεται ότι το πρότυπο δεν εξαρτάται από τη Φυσική.
+%!TEX TS-program = xelatex
+\documentclass[11pt,twoside,openright]{book}
+\input{config/book-config.tex}
+\renewcommand{\BookSubject}{Μαθηματικά}
+\renewcommand{\BookLevel}{Α΄ Λυκείου}
+\renewcommand{\BookTitle}{Μαθηματικά Α΄ Λυκείου}
+\renewcommand{\BookShortName}{Μαθηματικά Α΄ Λυκείου}
+\renewcommand{\BookSubtitle}{Ορισμοί · Θεωρήματα · Παραδείγματα · Ασκήσεις}
+\newif\ifPrintThreeInk
+\PrintThreeInkfalse
+\usepackage{styles/universalbook}
+\begin{document}
+\frontmatter
+\BookCover
+\mainmatter
+\include{chapters/demo-math}
+\end{document}

@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "artifacts": [
+    {
+      "name": "Inter-4.1.zip",
+      "url": "https://github.com/rsms/inter/releases/download/v4.1/Inter-4.1.zip",
+      "sha256": "9883fdd4a49d4fb66bd8177ba6625ef9a64aa45899767dde3d36aa425756b11e"
+    },
+    {
+      "name": "NotoSerif-Regular.ttf",
+      "url": "https://raw.githubusercontent.com/notofonts/noto-fonts/ffebf8c1ee449e544955a7e813c54f9b73848eac/hinted/ttf/NotoSerif/NotoSerif-Regular.ttf",
+      "sha256": "c8f669ceb2c9c60ccf55198b305e08a997ffca79a38cc7eeb551e643cbe66505"
+    },
+    {
+      "name": "NotoSerif-Italic.ttf",
+      "url": "https://raw.githubusercontent.com/notofonts/noto-fonts/ffebf8c1ee449e544955a7e813c54f9b73848eac/hinted/ttf/NotoSerif/NotoSerif-Italic.ttf",
+      "sha256": "0ea81d6b54fc8aa5dff0fd6ebe7cfa431e9e6cf747a8d4aa33581fa0aaccffea"
+    },
+    {
+      "name": "NotoSerif-Medium.ttf",
+      "url": "https://raw.githubusercontent.com/notofonts/noto-fonts/ffebf8c1ee449e544955a7e813c54f9b73848eac/hinted/ttf/NotoSerif/NotoSerif-Medium.ttf",
+      "sha256": "90eeb03ad7b03e67037091c061c13b12dba7d21e63f54d19d196f181c5958f86"
+    },
+    {
+      "name": "NotoSerif-MediumItalic.ttf",
+      "url": "https://raw.githubusercontent.com/notofonts/noto-fonts/ffebf8c1ee449e544955a7e813c54f9b73848eac/hinted/ttf/NotoSerif/NotoSerif-MediumItalic.ttf",
+      "sha256": "a45b7e6cfa740f00694bd4ec6da14470a742e8c3843c663ad1282900be63a647"
+    },
+    {
+      "name": "NotoSerif-OFL.txt",
+      "url": "https://raw.githubusercontent.com/notofonts/noto-fonts/ffebf8c1ee449e544955a7e813c54f9b73848eac/LICENSE",
+      "sha256": "0dab92d0544f7b233403f14b84a663bdbfa746982eda629e7f4f9ffe1b036feb"
+    },
+    {
+      "name": "STIXTwoMath-Regular.ttf",
+      "url": "https://raw.githubusercontent.com/google/fonts/45e3d5269e4a17d823f6d84470bc084dc5ae46f6/ofl/stixtwomath/STIXTwoMath-Regular.ttf",
+      "sha256": "562551b15b836e6e01d1b7350909baf3c8c8d83260c1190fbf4544333e6936de"
+    },
+    {
+      "name": "STIXTwoMath-OFL.txt",
+      "url": "https://raw.githubusercontent.com/google/fonts/45e3d5269e4a17d823f6d84470bc084dc5ae46f6/ofl/stixtwomath/OFL.txt",
+      "sha256": "0c8825913b60d858aacdb33c4ca6660a7d64b0d6464702efbb19313f5765861a"
+    },
+    {
+      "name": "loadhyph-el-monoton.tex",
+      "url": "https://raw.githubusercontent.com/hyphenation/tex-hyphen/5684c0f51c0b81133db2efbe60a408b4155a3ff5/hyph-utf8/tex/generic/hyph-utf8/loadhyph/loadhyph-el-monoton.tex",
+      "sha256": "b82464512dbbc228218ef23a7a8aede965976ee39c26d043eb5e009d87a0e7e4"
+    },
+    {
+      "name": "hyph-el-monoton.tex",
+      "url": "https://raw.githubusercontent.com/hyphenation/tex-hyphen/5684c0f51c0b81133db2efbe60a408b4155a3ff5/hyph-utf8/tex/generic/hyph-utf8/patterns/tex/hyph-el-monoton.tex",
+      "sha256": "a3aa9ecba9c00dd958a2b1d1d3b3aa851701f6d0027ef9cc9d7365e432c5acb0"
+    }
+  ]
+}

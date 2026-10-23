@@ -1,0 +1,213 @@
+% ===========================================================================
+% ΔΟΚΙΜΑΣΤΙΚΟ ΚΕΦΑΛΑΙΟ ΦΥΣΙΚΗΣ — ΟΧΙ Η ΝΕΑ ΣΧΟΛΙΚΗ ΥΛΗ
+% ===========================================================================
+% Το αρχείο αποτελεί «κατάλογο» των δομικών στοιχείων του template.
+% Τα κείμενα, οι τιμές και οι ασκήσεις είναι παραδείγματα δοκιμής.
+% Το \BookChapterPhoto παίρνει: τίτλο, υπότιτλο, εικόνα, πηγή, \item στόχους.
+% Μπορείς να αλλάξεις το κείμενο χωρίς να αγγίξεις τα κουτιά/γραμματοσειρές.
+% ===========================================================================
+\BookChapterPhoto{Κίνηση σε μία διάσταση}{Φυσική — δείγμα μακέτας, όχι κείμενο προς δημοσίευση}{assets/chapter-photo-sample.png}{Ενδεικτική εικόνα από το προηγούμενο βιβλίο· προσωρινή για τη μακέτα}{%
+\item Να διακρίνεις τη θέση, τη μετατόπιση και το διάστημα.
+\item Να επιλέγεις τη θετική φορά ενός άξονα αναφοράς.
+\item Να υπολογίζεις τη μετατόπιση από δύο θέσεις.
+\item Να ερμηνεύεις το πρόσημο της ταχύτητας.
+\item Να διαβάζεις απλά διαγράμματα κίνησης.
+}
+% Κύρια ενότητα: η μπλε λωρίδα ορίζεται στο universalbook.sty.
+\BookSection{Θεωρία}
+\section{Περιγραφή της κίνησης}
+Για την περιγραφή της ευθύγραμμης κίνησης ορίζουμε έναν άξονα αναφοράς και θετική φορά. Η θέση ενός σώματος προσδιορίζεται από την αλγεβρική τιμή της συντεταγμένης του.
+% Τα παλαιότερα δοκιμαστικά σχέδια χρησιμοποιούν πλέον book/axis,
+% book/velocity και book/plotA: κοινά στυλ από styles/book-figures.tex.
+% KeyFormula = πλαίσιο ανάδειξης βασικής εξίσωσης.
+% Εντός του χρησιμοποιούμε κανονική μαθηματική σύνταξη \(...\) ή \[...\].
+\begin{KeyFormula}
+\(\Delta x=x_{\mathrm{τελ}}-x_{\mathrm{αρχ}}\qquad\text{και}\qquad \upsilon=\dfrac{\Delta x}{\Delta t}\)
+\end{KeyFormula}
+\begin{center}
+\begin{tikzpicture}[x=.95cm,y=.8cm,>=Stealth]
+\draw[book/axis] (-5,0)--(5,0) node[right] {$x$};
+\foreach \x in {-4,-2,0,2,4} {\draw[BookPrimary] (\x,.10)--(\x,-.10) node[below=2pt]{\footnotesize $\x$};}
+\fill[BookPrimary] (-3,0) circle (1.6pt) node[above]{\scriptsize A};
+\fill[BookPrimary] (3,0) circle (1.6pt) node[above]{\scriptsize B};
+\draw[book/velocity] (-3,.64)--(3,.64) node[midway,above] {\footnotesize $\Delta x$};
+\end{tikzpicture}
+\end{center}
+% «▲ ΠΡΟΣΟΧΗ»: έχει δικό του semantic χρώμα/σύμβολο, άρα κάθε
+% προειδοποίηση στο βιβλίο μένει οπτικά πανομοιότυπη.
+\begin{AttentionBox}
+Η μετατόπιση είναι διανυσματικό μέγεθος, ενώ το διάστημα είναι μονόμετρο. Δεν ταυτίζονται σε κάθε κίνηση.
+\end{AttentionBox}
+\section{Από το διάγραμμα στη φυσική ερμηνεία}
+Η μορφή της γραφικής παράστασης παρέχει πληροφορίες για την κινητική κατάσταση. Στο ακόλουθο δοκιμαστικό διάγραμμα η θέση αυξάνεται γραμμικά με τον χρόνο.
+\begin{center}
+\begin{tikzpicture}[x=.65cm,y=.40cm,>=Stealth]
+\draw[book/axis] (0,0)--(8.0,0) node[right] {$t\,(s)$};
+\draw[book/axis] (0,0)--(0,7.0) node[above] {$x\,(m)$};
+\foreach \x in {2,4,6}{\draw[BookPrimary] (\x,.10)--(\x,-.10) node[below]{\scriptsize $\x$};}
+\foreach \y in {2,4,6}{\draw[BookPrimary] (.10,\y)--(-.10,\y) node[left]{\scriptsize $\y$};}
+\draw[book/plotA] (0,1)--(7.2,6.4);
+\draw[book/guide] (4,0)--(4,4);
+\fill[BookFigPlotAColor] (4,4) circle (2pt);
+\end{tikzpicture}
+\end{center}
+% MethodBox = μεθοδολογία ή αλληλουχία βημάτων επίλυσης.
+\begin{MethodBox}
+\textbf{Βήμα 1.} Διαβάζουμε τις μονάδες των αξόνων.\par
+\textbf{Βήμα 2.} Επιλέγουμε δύο σημεία της γραφικής παράστασης.\par
+\textbf{Βήμα 3.} Υπολογίζουμε τον λόγο μεταβολής θέσης προς χρόνο.\par
+\textbf{Βήμα 4.} Ελέγχουμε το πρόσημο και τη φυσική σημασία.
+\end{MethodBox}
+
+% figure = πλωτό σχήμα, που μπορεί να μετακινηθεί ελαφρά από το LaTeX.
+% \caption δίνει μπλε/italic λεζάντα, \label/\ref ασφαλή αρίθμηση.
+% htbp = εδώ / πάνω / κάτω / ξεχωριστή σελίδα κατά περίπτωση.
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[x=.86cm,y=.69cm,>=Stealth]
+\draw[book/axis] (-5,0)--(5,0) node[right] {$x$};
+\foreach \x in {-4,-2,0,2,4}{\draw[BookPrimary] (\x,.07)--(\x,-.07) node[below=2pt]{\scriptsize $\x$};}
+\fill[BookPrimary] (-3,0) circle (1.5pt) node[below=5pt]{\scriptsize A};
+\fill[BookPrimary] (3,0) circle (1.5pt) node[below=5pt]{\scriptsize B};
+\draw[book/velocity] (-3,.7)--(3,.7) node[midway,above=1pt] {$\Delta x$};
+\end{tikzpicture}
+\caption{Μετατόπιση κινητού από την αρχική θέση Α στην τελική θέση Β.}\label{fig:displacement}
+\end{figure}
+Όπως φαίνεται στο Σχήμα~\ref{fig:displacement}, η μετατόπιση παριστάνεται με διάνυσμα από την αρχική προς την τελική θέση.
+\BookMinorHeading{Πίνακας με επιστημονικά δεδομένα}
+\begin{table}[htbp]
+\centering
+% BookStripedTable: κοινή σκούρα κεφαλίδα, αχνές εναλλάξ γραμμές.
+% tabularx: το X προσαρμόζεται αυτόματα στο διαθέσιμο πλάτος.
+\begin{BookStripedTable}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X>{\centering\arraybackslash}p{25mm}>{\raggedright\arraybackslash}p{35mm}@{}}
+\BookTableHeaderRow
+\BookTableHead{Μέγεθος} & \BookTableHead{Σύμβολο} & \BookTableHead{Μονάδα S.I.}\\
+Μήκος & $\ell$ & μέτρο (m)\\
+Μάζα & $m$ & χιλιόγραμμο (kg)\\
+Χρόνος & $t$ & δευτερόλεπτο (s)\\
+Ταχύτητα & $\upsilon$ & μέτρο ανά δευτερόλεπτο (m/s)\\
+Επιτάχυνση & $a$ & μέτρο ανά δευτερόλεπτο$^2$ (m/s$^2$)\\
+\end{tabularx}
+\end{BookStripedTable}
+\caption{Ενδεικτικά φυσικά μεγέθη και μονάδες μέτρησης.}\label{tab:quantities}
+\end{table}
+
+% «Λίγη ιστορία»: προαιρετικός τίτλος σε [ ] και κείμενο μέσα.
+\begin{HistoryBox}[Η γέννηση της μέτρησης]
+Η ιστορία των μετρήσεων στη Φυσική μπορεί να αξιοποιείται ως σύντομο διάλειμμα από τον κύριο κορμό της θεωρίας. Το ένθετο υποστηρίζει εικόνα, λεζάντα και σαφή αναφορά πηγής. Στην τελική έκδοση εδώ θα μπει τεκμηριωμένο ιστορικό κείμενο.
+\par\medskip{\footnotesize\itshape Πηγή: συμπληρώνεται μετά τον επιστημονικό έλεγχο.}
+\end{HistoryBox}
+% Ρήση χωρίς πλαίσιο ή σκίαση. Στο δοκίμιο το κείμενο είναι ΠΡΩΤΟΤΥΠΟ,
+% όχι πραγματικό απόφθεγμα ιστορικού προσώπου.
+\BookQuote{Η παρατήρηση γεννά ερωτήσεις· η μέτρηση μας βοηθά να τις ελέγξουμε.}
+  {Δοκιμαστική ρήση}[Πρωτότυπο κείμενο επίδειξης μορφοποίησης]
+\clearpage
+% v0.19: κανονική αριθμημένη υποενότητα (εμφανίζεται στον πίνακα περιεχομένων).
+% Περιλαμβάνει τα λυμένα, τις ερωτήσεις θεωρίας και τις άλυτες ασκήσεις.
+% Δεν γράφουμε χειροκίνητες αποστάσεις ανάμεσα στον τίτλο και την μπλε λωρίδα:
+% τις καθορίζει κεντρικά το styles/universalbook.sty.
+\section{Εφαρμογές και εξάσκηση}
+% Η ίδια κύρια μπλε λωρίδα χρησιμοποιείται και εδώ.
+\BookSection{Λυμένα παραδείγματα}
+% workedexample αυξάνει μόνο του την αρίθμηση παραδειγμάτων.
+% Ο τίτλος μπαίνει στο ανοιχτό μπλε ProblemBox, πάνω στη σκούρα λωρίδα.
+\begin{workedexample}{Υπολογισμός μετατόπισης}
+% ProblemBox = γαλάζιο πλαίσιο εκφώνησης (όχι λύσης).
+\begin{ProblemBox}
+Ένα σώμα κινείται πάνω σε ευθεία από τη θέση \(x_1=-3\,\mathrm{m}\) στη θέση \(x_2=5\,\mathrm{m}\).\par
+\begin{enumerate}[label=\BookGreek*),font=\color{BookSecondary}\bfseries,leftmargin=7mm,topsep=1pt,itemsep=0pt]
+\item Να υπολογιστεί η μετατόπιση.
+\item Να προσδιοριστεί η φορά της.
+\end{enumerate}
+\end{ProblemBox}
+% «◉ Πώς σκέφτομαι»: σύντομη στρατηγική, όχι πλήρης λύση.
+\begin{ThinkBox}
+Ξεκινώ από τον ορισμό της μετατόπισης και εξετάζω το πρόσημο του αποτελέσματος. Το θετικό πρόσημο δηλώνει κατεύθυνση προς τη θετική φορά του άξονα.
+\end{ThinkBox}
+% Ετικέτα «Λύση» με σκόπιμα ήπια γραφή.
+\SolutionHeading
+{\color{BookSecondary}\bfseries α)} Από τον ορισμό της μετατόπισης:
+\[\Delta x=x_2-x_1=5-(-3)=8\,\mathrm{m}.\]
+{\color{BookSecondary}\bfseries β)} Η μετατόπιση έχει θετική αλγεβρική τιμή, επομένως κατευθύνεται προς τη θετική φορά του άξονα.
+\end{workedexample}
+\begin{workedexample}{Σταθερή ταχύτητα}
+\begin{ProblemBox}
+Ένα κινητό διανύει μετατόπιση \(\Delta x=60\,\mathrm{m}\) σε χρονικό διάστημα \(\Delta t=12\,\mathrm{s}\). Να υπολογιστεί η αλγεβρική τιμή της σταθερής ταχύτητας.
+\end{ProblemBox}
+\begin{ThinkBox}
+Στην ευθύγραμμη ομαλή κίνηση χρησιμοποιώ τον λόγο \(\Delta x/\Delta t\) και ελέγχω τις μονάδες του αποτελέσματος.
+\end{ThinkBox}
+\SolutionHeading
+\[\upsilon=\frac{\Delta x}{\Delta t}=\frac{60\,\mathrm{m}}{12\,\mathrm{s}}=5\,\mathrm{m/s}.\]
+\end{workedexample}
+\clearpage
+% BookTheorySection = εναλλακτική ονομασία του BookSection.
+\BookTheorySection{Ερωτήσεις θεωρίας}
+% Δίστηλες σύντομες ερωτήσεις. Για μακροσκελείς ασκήσεις χρησιμοποίησε 1 στήλη.
+\begin{multicols}{2}\RaggedRight\raggedcolumns
+% Υποκατηγορία με διακριτικό μικρό τίτλο/γραμμή.
+% Κάθε \TrueFalseItem προσθέτει αυτόματα και τα δύο αδιάσπαστα κουτάκια.
+\BookQuestionHeading{Σωστό / Λάθος}
+\begin{enumerate}[label=\arabic*.,leftmargin=13pt]
+\TrueFalseItem{Το διάστημα είναι διανυσματικό μέγεθος.}
+\TrueFalseItem{Η μετατόπιση εξαρτάται από την αρχική και την τελική θέση.}
+\TrueFalseItem{Η ταχύτητα στην ΕΟΚ είναι σταθερή.}
+\end{enumerate}
+\BookQuestionHeading{Πολλαπλής επιλογής}
+Ποια μονάδα χρησιμοποιούμε στο S.I. για την ταχύτητα;
+\begin{enumerate}[label=\BookGreek*),font=\color{BookSecondary}\bfseries,leftmargin=16pt]
+\item \CheckSquare\hspace{1.1mm}m
+\item \CheckSquare\hspace{1.1mm}s
+\item \CheckSquare\hspace{1.1mm}m/s
+\item \CheckSquare\hspace{1.1mm}m/s$^2$
+\end{enumerate}
+\columnbreak
+\BookQuestionHeading{Ερωτήσεις κρίσεως}
+\begin{enumerate}[label=\arabic*.,leftmargin=13pt]
+\item Είναι δυνατόν ένα κινητό να έχει μηδενική μετατόπιση και μη μηδενικό διάστημα; Αιτιολόγησε.
+\item Πότε το μέτρο της μετατόπισης ισούται με το διάστημα;
+\end{enumerate}
+\BookQuestionHeading{Διαδοχικά βήματα (i–iv)}
+\begin{enumerate}[label=\roman*),leftmargin=15pt,itemsep=0pt]
+\item Επιλογή άξονα.
+\item Σχεδίαση δυνάμεων.
+\item Εφαρμογή νόμου.
+\item Έλεγχος μονάδων.
+\end{enumerate}
+\BookQuestionHeading{Συμπλήρωση κενών}
+Συμπληρώστε: Το σύμβολο \(\Delta x\) δηλώνει τη \underline{\hspace{15mm}}.
+% Σύντομη απάντηση/υπόδειξη. Κρύβεται μέσω \ShowAnswersfalse.
+\Answer{μετατόπιση}
+\end{multicols}
+% Οι άλυτες είναι «1 | Εκφώνηση», χωρίς ξεχωριστό τίτλο άσκησης.
+\BookSection{Άλυτες ασκήσεις}
+% [PHY-A-001] = ID στον πηγαίο κώδικα και \label{ex:PHY-A-001}.
+% Το {} δηλώνει ότι δεν θέλουμε ορατό τίτλο δίπλα στον αριθμό.
+\begin{exercise}[PHY-A-001]{}
+Ένα κινητό βρίσκεται αρχικά στη θέση \(x_A=2\,\mathrm m\) και στη συνέχεια στη θέση \(x_B=-7\,\mathrm m\). Να υπολογίσετε τη μετατόπισή του και να περιγράψετε τη φορά.
+\Answer{$\Delta x=-9\,\mathrm m$, προς την αρνητική φορά.}
+\end{exercise}
+\begin{exercise}[PHY-A-002]{}
+Ένα σώμα κινείται με σταθερή ταχύτητα. Να εξηγήσετε ποια είναι η επιτάχυνσή του και να σχεδιάσετε ποιοτικά το διάγραμμα επιτάχυνσης–χρόνου.
+\Answer{$\alpha=0$.}
+\end{exercise}
+\begin{exercise}[PHY-A-003]{}
+Ένα κινητό κινείται σε ευθεία με σταθερή θετική ταχύτητα. Να σχεδιάσετε τα διαγράμματα $x-t$ και $\upsilon-t$ και να εξηγήσετε τη σημασία της κλίσης τους.
+\end{exercise}
+\begin{exercise}[PHY-A-004]{}
+Ένα σώμα κινείται από τη θέση $x_A=0$ στη θέση $x_B=6\,\mathrm m$ και επιστρέφει στη θέση $x_C=2\,\mathrm m$.
+\begin{enumerate}[label=\BookGreek*),leftmargin=18pt,itemsep=0pt]
+\item Να βρείτε τη συνολική μετατόπιση.
+\item Να υπολογίσετε το συνολικό διάστημα.
+\item Να εξετάσετε αν τα δύο μεγέθη ταυτίζονται.
+\end{enumerate}
+\Answer{$\Delta x=2\,\mathrm m$, $s=10\,\mathrm m$.}
+\end{exercise}
+\begin{exercise}[PHY-A-005]{}
+Δύο σώματα κινούνται πάνω στον ίδιο άξονα. Το πρώτο έχει $\upsilon_1=3\,\mathrm{m/s}$ και το δεύτερο $\upsilon_2=-2\,\mathrm{m/s}$. Να σχολιάσετε τη φορά τους.
+\end{exercise}
+\begin{exercise}[PHY-A-006]{}
+Ένα κινητό επιστρέφει στο σημείο εκκίνησης. Είναι μηδέν η μετατόπιση; Είναι απαραίτητα μηδέν και το διάστημα; Αιτιολογήστε.
+\end{exercise}
+

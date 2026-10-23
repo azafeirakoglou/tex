@@ -1,0 +1,144 @@
+% ===========================================================================
+% ΕΚΠΑΙΔΕΥΤΙΚΟ ΠΑΡΑΡΤΗΜΑ ΣΧΗΜΑΤΩΝ — 5 ΑΝΕΞΑΡΤΗΤΕΣ ΣΕΛΙΔΕΣ
+% ===========================================================================
+% ΟΛΟ το περιεχόμενο είναι κοινό στις δύο παλέτες.
+% Οι γεωμετρίες και οι κώδικες \draw μένουν ίδιες· τα χρώματα μεταφράζονται
+% αυτόματα από το styles/book-figures.tex και την παλέτα του PDF.
+% Η αρίθμηση figure είναι προσανατολιστική για αυτή την ανεξάρτητη έκδοση.
+\setcounter{chapter}{1}
+\markboth{Εγχειρίδιο σχημάτων}{Εγχειρίδιο σχημάτων}
+\thispagestyle{plain}
+\begin{center}
+{\BookHeadingFont\color{BookPrimary}\fontsize{17}{22}\selectfont Εγχειρίδιο διαγραμμάτων και σχημάτων}\par
+\smallskip
+{\color{BookInk}\small Ενιαία σχεδίαση Φυσικής · XeLaTeX / TikZ / PGFPlots · v0.14}
+\end{center}
+\BookSection{Α. Βασικές αρχές}
+\begin{itemize}
+\item \textbf{Κοινό ύφος:} λευκό φόντο, καθαρές γραμμές, χωρίς σκιά ή περιττό τρισδιάστατο εφέ.
+\item \textbf{Αναγνώσιμα βέλη:} σταθερό πάχος και κοινή αιχμή για διανύσματα ίδιου τύπου.
+\item \textbf{Φυσική σημασία:} οι φοράς των αξόνων και οι θετικές κατευθύνσεις γράφονται ρητά.
+\item \textbf{Δύο μελάνια:} οι διαφορές φαίνονται και με συνεχείς/διακεκομμένες γραμμές, όχι μόνο από το χρώμα.
+\item \textbf{Μονάδες:} πάντα όρθιες, π.χ. $x\,(\mathrm{m})$ και $t\,(\mathrm{s})$.
+\end{itemize}
+\BookSection{Β. Άξονες, σημεία και μετατόπιση}
+\noindent\textit{Παράδειγμα:} $x_A=-2\,\mathrm{m}$ και $x_B=1\,\mathrm{m}$. Η μετατόπιση είναι θετική.
+\begin{center}
+\begin{tikzpicture}[x=1.02cm,y=.95cm]
+  % Καθολικός άξονας: χρώμα, πάχος και αιχμή ορίζονται κεντρικά.
+  \draw[book/axis] (-3.2,0)--(3.5,0) node[book/physlabel,right] {$x$};
+  \foreach \x in {-3,-2,-1,0,1,2,3}{
+    \draw[BookFigAxisColor,line width=.4pt] (\x,.07)--(\x,-.07);
+    \node[book/physlabel,below=2pt] at (\x,-.09) {\scriptsize $\x$};
+  }
+  \node[book/endpoint] at (-2,0) {};
+  \node[book/physlabel,above=2pt] at (-2,0) {$A$};
+  \node[book/endpoint] at (1,0) {};
+  \node[book/physlabel,above=2pt] at (1,0) {$B$};
+  \draw[book/velocity] (-2,.80)--(1,.80)
+       node[above,midway,book/physlabel] {$\Delta x=+3\,\mathrm{m}$};
+\end{tikzpicture}
+\captionof{figure}{Προσανατολισμένος άξονας θέσης και διάνυσμα μετατόπισης.}
+\label{fig:guide-displacement}
+\end{center}
+\textbf{Κώδικας:} \texttt{\textbackslash draw[book/axis]} για τον άξονα, \texttt{\textbackslash draw[book/velocity]} για το μπλε βέλος.
+\clearpage
+\BookSection{Γ. Ελεύθερο διάγραμμα δυνάμεων}
+\noindent Μοντέλο σώματος με οριζόντια δύναμη, τριβή, βάρος, κάθετη αντίδραση και ταχύτητα προς τα δεξιά.
+\begin{center}
+\begin{tikzpicture}[x=1.05cm,y=1cm]
+  % Το σώμα είναι με λευκό φόντο ώστε να μην προσθέτει εκτυπωτικό μελάνι.
+  \draw[book/body] (-.8,-.38) rectangle (.8,.38);
+  \node[font=\small] at (0,0) {$m$};
+  % Τα βέλη δυνάμεων σχεδιάζονται από το κέντρο στο διάγραμμα ελευθέρου σώματος.
+  \draw[book/weight] (0,-.05)--(0,-1.48) node[below,book/physlabel] {$\vec{w}$};
+  \draw[book/force] (.5,0)--(2.35,0) node[right,book/physlabel] {$\vec F$};
+  \draw[book/friction] (-.5,-.08)--(-2.4,-.08) node[left,book/physlabel] {$\vec f$};
+  \draw[book/weight] (0,.2)--(0,1.52) node[above,book/physlabel] {$\vec N$};
+  \draw[book/velocity] (.0,1.95)--(1.4,1.95) node[right,book/physlabel] {$\vec\upsilon$};
+\end{tikzpicture}
+\captionof{figure}{Σχηματικές δυνάμεις: η τριβή έχει επιπλέον διακεκομμένο μοτίβο.}
+\label{fig:guide-forces}
+\end{center}
+\BookSection{Δ. Οριζόντια βολή — σύμβαση αξόνων}
+\noindent Όπως στα διδακτικά μας σχήματα: $O(0,0)$ στο σημείο βολής, θετικός $x$ δεξιά και θετικός $y$ \textbf{προς τα κάτω}.
+\begin{center}
+\begin{tikzpicture}[x=1.08cm,y=-.69cm]
+  % y με αρνητική μονάδα σχεδίασης: θετικοί μαθηματικοί y πάνε ΚΑΤΩ.
+  \draw[book/axis] (0,0)--(5.0,0) node[above,book/physlabel] {$x$};
+  \draw[book/axis] (0,-.16)--(0,3.30) node[left,book/physlabel] {$y$};
+  \node[book/endpoint,label=above left:{$O(0,0)$}] at (0,0) {};
+  \draw[book/trajectory,domain=0:4,samples=70,smooth,variable=\t]
+     plot ({\t},{.18*\t*\t});
+  \draw[book/velocity] (.05,-.46)--(1.5,-.46)
+     node[midway,above,book/physlabel] {$\vec\upsilon_0$};
+  \draw[book/guide] (4,0)--(4,2.88);
+  \node[book/endpoint] at (4,2.88) {};
+  \node[book/physlabel,below] at (4,2.88) {$s$};
+\end{tikzpicture}
+\captionof{figure}{Οριζόντια βολή με θετικό κατακόρυφο άξονα προς τα κάτω.}
+\label{fig:guide-projectile}
+\end{center}
+\clearpage
+\BookSection{Ε. Γραφικές παραστάσεις PGFPlots}
+\noindent Οι άξονες αποκτούν αυτόματα ίδια πάχη και σημάνσεις. Οι διαφορετικές σειρές διακρίνονται με \textbf{συνεχή} και \textbf{διακεκομμένη} γραμμή.
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[book/plot,xmin=0,xmax=8,ymin=0,ymax=6,
+  xtick={0,2,4,6,8},ytick={0,1,2,3,4,5,6},
+  xlabel={$t\,(\mathrm{s})$},ylabel={$x\,(\mathrm{m})$}]
+  % Σταθερή θετική ταχύτητα \upsilon=0.5 m/s, αρχική θέση 1 m.
+  \addplot[book/seriesA,domain=0:8,samples=2]{1+0.5*x};
+  \addplot[book/seriesPoints] coordinates {(0,1) (4,3) (8,5)};
+\end{axis}
+\end{tikzpicture}
+\captionof{figure}{Διάγραμμα θέσης–χρόνου: $x=1+0.5t$ σε μονάδες SI.}
+\label{fig:guide-xt}
+\end{center}
+\medskip
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[book/plot,xmin=0,xmax=8,ymin=0,ymax=4,
+ xtick={0,2,4,6,8},ytick={0,1,2,3,4},
+ xlabel={$t\,(\mathrm{s})$},ylabel={$\upsilon\,(\mathrm{m/s})$}]
+ \addplot[book/seriesA,domain=0:8,samples=2]{2};
+ \addplot[book/seriesB,domain=0:8,samples=2]{1+0.25*x};
+\end{axis}
+\end{tikzpicture}
+\captionof{figure}{Δύο ενδεικτικές κινήσεις: συνεχής καμπύλη Α και διακεκομμένη Β.}
+\label{fig:guide-vt}
+\end{center}
+\clearpage
+\BookSection{ΣΤ. Σχηματική αναπαράσταση — τροχαλία}
+\noindent Το σχήμα σχεδιάζεται χωρίς σκιές ή κλίσεις προοπτικής, ώστε να διαβάζεται καθαρά σε μικρό μέγεθος.
+\begin{center}
+\begin{tikzpicture}[x=1cm,y=1cm]
+  \draw[book/body] (-2.0,2.6) -- (2.0,2.6);
+  \draw[book/guide] (0,2.6)--(0,2.02);
+  \draw[book/body] (0,1.6) circle (.52);
+  \fill[BookFigObjectColor] (0,1.6) circle (1.6pt);
+  % Νήμα — δύο κατακόρυφα τμήματα και άνω ημικύκλιο.
+  \draw[BookFigObjectColor,line width=.85pt] (-.52,.05)--(-.52,1.6) arc[start angle=180,end angle=0,radius=.52] --(.52,-.30);
+  \draw[book/body] (-.97,-.65) rectangle (-.07,.05);
+  \draw[book/body] (.07,-1.0) rectangle (.97,-.30);
+  \node at (-.52,-.30) {$m_1$};
+  \node at (.52,-.65) {$m_2$};
+  \draw[book/weight] (-.52,-.65)--(-.52,-1.43) node[below,book/physlabel] {$\vec w_1$};
+  \draw[book/weight] (.52,-1.00)--(.52,-1.78) node[below,book/physlabel] {$\vec w_2$};
+\end{tikzpicture}
+\captionof{figure}{Ιδανική τροχαλία με δύο σώματα και ενδεικτικά βέλη βάρους.}
+\label{fig:guide-pulley}
+\end{center}
+\BookSection{Ζ. Παραπομπές, στυλ και γρήγορος έλεγχος}
+\noindent Ο κώδικας κάθε διαγράμματος μπαίνει στο αρχείο κεφαλαίου, αλλά \textbf{οι κανόνες εμφάνισης} μένουν στο \texttt{styles/book-figures.tex}.
+\begin{itemize}
+ \item Άξονας: \texttt{book/axis} · ταχύτητα: \texttt{book/velocity}.\par Επιτάχυνση: \texttt{book/accel}.
+ \item Βάρος: \texttt{book/weight} · δύναμη: \texttt{book/force} · τριβή: \texttt{book/friction}.
+ \item Βοηθητική γραμμή: \texttt{book/guide}.\par Καμπύλες PGFPlots: \texttt{book/seriesA} και \texttt{book/seriesB}.
+ \item Γράφημα PGFPlots: \texttt{\textbackslash begin\{axis\}[book/plot,...]}.
+ \item Κάτω από \textit{κάθε} σχήμα: \texttt{\textbackslash caption\{...\}} και \texttt{\textbackslash label\{fig:...\}}.
+ \item Μην χρησιμοποιείς \texttt{red}, \texttt{blue}, \texttt{orange}, \texttt{black!40} απευθείας μέσα στα σχήματα.
+\end{itemize}
+\noindent\textbf{Πριν από την παράδοση:} έλεγξε γράμματα/μονάδες, φορά θετικών αξόνων, διανύσματα, αν τα διακεκομμένα διακρίνονται στην ασπρόμαυρη εκτύπωση και αν η εκτυπωτική μορφή έχει μόνο δύο πλάκες.
+\smallskip
+{\footnotesize\color{BookHistory}Η μαθηματική γραμματοσειρά STIX Two Math και οι εκτυπωτικές τονικότητες αποτελούν ακόμη προτεινόμενες ρυθμίσεις, υπό εκδοτική έγκριση.}

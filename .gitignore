@@ -1,0 +1,16 @@
+# Local toolchain, fonts, TeX formats and caches
+.local/
+.venv/
+__pycache__/
+# Build products are isolated here
+build/
+dist/
+# Legacy/manual XeLaTeX invocations
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.xdv
