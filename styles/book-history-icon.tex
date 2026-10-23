@@ -1,0 +1,45 @@
+% Ιστορικά ένθετα: διανυσματικό φτερό καλλιγραφίας με μελανοδοχείο.
+% Μόνο ο ρόλος BookHistory βάφει το σχέδιο· τα πάχη μένουν φυσικά pt.
+\newcommand{\BookCalloutQuillInk}{%
+  \begin{tikzpicture}[x=1mm,y=1mm,
+    scale={\BookCalloutIconScale*\BookHistoryIconScale},
+    line cap=round,line join=round]
+    % Σώμα, ώμοι και μικρός λαιμός του ανοιχτού μελανοδοχείου.
+    \draw[draw=BookHistory,line width=\BookHistoryIconOutlineWidth]
+      (-3.75,-2.3)--(-3.75,-2.7)
+      .. controls (-3.75,-2.95) and (-4.55,-3.05) .. (-4.55,-3.5)
+      --(-4.55,-4.35)
+      .. controls (-4.55,-4.7) and (-4.35,-4.8) .. (-4,-4.8)
+      --(-1.4,-4.8)
+      .. controls (-1.05,-4.8) and (-.85,-4.7) .. (-.85,-4.35)
+      --(-.85,-3.5)
+      .. controls (-.85,-3.05) and (-1.65,-2.95) .. (-1.65,-2.7)
+      --(-1.65,-2.3);
+    \draw[draw=BookHistory,line width=\BookHistoryIconOutlineWidth]
+      (-2.7,-2.3) ellipse (1.05 and .3);
+    % Δύο ασύμμετρες σημαίες με μικρές εγκοπές: διαβάζονται ως φτερό.
+    \draw[draw=BookHistory,line width=\BookHistoryIconOutlineWidth]
+      (4.6,5.4)
+      .. controls (1.9,5.45) and (-.5,3.7) .. (-.85,1.7)
+      --(-.38,1.96)--(-1.05,1.12)
+      .. controls (-1.1,.6) and (-.75,.15) .. (-.35,-.05)
+      .. controls (.5,.1) and (1.05,.4) .. (1.48,1.11)
+      --(.8,1.13)--(1.25,1.55)
+      .. controls (3.25,2.35) and (4.35,3.85) .. cycle;
+    % Συνεχής καμπύλη ράχη και λεπτή πένα που μπαίνει στο στόμιο.
+    \draw[draw=BookHistory,line width=\BookHistoryIconOutlineWidth]
+      (-2.7,-2.3)
+      .. controls (-1.6,-.45) and (1.8,2.4) .. (4.3,5.1);
+    % Λίγες καθαρές νευρώσεις, με αρκετό κενό στο πραγματικό μέγεθος.
+    \draw[draw=BookHistory,line width=\BookHistoryIconDetailWidth]
+      (-.72,1.03).. controls (-.3,1.2) and (.14,1.23) .. (.58,1.23);
+    \draw[draw=BookHistory,line width=\BookHistoryIconDetailWidth]
+      (-.24,2.55).. controls (.24,2.55) and (.73,2.43) .. (1.22,2.03);
+    \draw[draw=BookHistory,line width=\BookHistoryIconDetailWidth]
+      (1.05,3.98).. controls (1.52,3.9) and (1.91,3.62) .. (2.2,3.14);
+    \draw[draw=BookHistory,line width=\BookHistoryIconDetailWidth]
+      (1.7,1.82).. controls (1.92,2.45) and (2.03,2.93) .. (2.2,3.14);
+    \draw[draw=BookHistory,line width=\BookHistoryIconDetailWidth]
+      (3.24,3.05).. controls (3.18,3.6) and (3.12,3.96) .. (3.2,4.2);
+  \end{tikzpicture}%
+}

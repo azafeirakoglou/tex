@@ -121,7 +121,7 @@ def validate_callouts(root,m):
     expected={
         'AttentionBox':('BookDeclareCallout',r'\BookCalloutWarning',r'\LabelAlert'),
         'ThinkBox':('BookDeclareCallout',r'\BookCalloutBulb',r'\LabelThink'),
-        'HistoryBox':('BookDeclareTitledCallout',r'\BookCalloutOpenBook',r'\LabelHistory'),
+        'HistoryBox':('BookDeclareTitledCallout',r'\BookCalloutQuillInk',r'\LabelHistory'),
     }
     declarations={}
     for command in ['BookDeclareCallout','BookDeclareTitledCallout']:

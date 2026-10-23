@@ -1,0 +1,37 @@
+{
+  "version": "0.44",
+  "status": "passed",
+  "reference": "v0.43",
+  "editions": {
+    "PRINT": {
+      "reference_sha256": "74ac8c6c2fe63df45597bc726de71b7e489b86304357a967ccc9fec7fc39bf4c",
+      "new_sha256": "6417dbf2700d79f6849d8bb4d306d186ea1f46301de784520f2c79eb39ba2b7d",
+      "new_icon": "quill and inkwell",
+      "new_path_bounds_mm": [
+        9.140853012932672,
+        10.23973888821072
+      ],
+      "path_count": 9,
+      "stroke_widths_pdf_bp": [
+        0.6774600148200989,
+        0.8966400027275085
+      ],
+      "same_center_strokes_color_box_and_body_text_layout": true
+    },
+    "SCREEN": {
+      "reference_sha256": "cae8fe20392097a993d746db221479d15cc9352ebf9eecea53c7d5117b0e4dde",
+      "new_sha256": "fd2bc8d90173e03d93356572fa3d4fd23465b1349821454456343e8c291b0410",
+      "new_icon": "quill and inkwell",
+      "new_path_bounds_mm": [
+        9.140853012932672,
+        10.23973888821072
+      ],
+      "path_count": 9,
+      "stroke_widths_pdf_bp": [
+        0.6774600148200989,
+        0.8966400027275085
+      ],
+      "same_center_strokes_color_box_and_body_text_layout": true
+    }
+  }
+}
