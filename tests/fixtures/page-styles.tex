@@ -1,0 +1,57 @@
+% Real PDF fixture: two distinct running marks survive sequential assessments.
+% Both parities, plain pages, automatic blanks and chapter openers are covered.
+\documentclass[11pt,twoside,openright]{book}
+\input{config/book-config.tex}
+\newif\ifBookTwoInkProof
+\ifdefined\PageStylesPrint
+  \BookTwoInkProoftrue
+\else
+  \BookTwoInkProoffalse
+\fi
+\newif\ifPrintThreeInk
+\PrintThreeInkfalse
+\usepackage{styles/universalbook}
+% Expose the standard right mark through the ordinary label as well as the
+% left mark through the ordinary title. This observes both mark components.
+\renewcommand{\BookHeaderUnitLabel}{\rightmark}
+\begin{document}
+\setcounter{chapter}{1}
+\markboth{ORIGINALLEFT}{ORIGINALRIGHT}
+BODYNORMALONE
+\clearpage
+BODYNORMALTWO
+\begin{Assessment}{ASSESSMENTONE}
+BODYFIRSTONE
+\newpage
+BODYFIRSTTWO
+\end{Assessment}
+BODYAFTERFIRST
+\clearpage
+\begin{Assessment}{ASSESSMENTTWO}
+BODYSECONDONE
+\newpage
+BODYSECONDTWO
+\end{Assessment}
+BODYAFTERSECOND
+\clearpage
+% A subsequent ordinary markright must retain the original left component.
+\markright{NEXTRIGHT}
+BODYAFTERMARKRIGHT
+\clearpage
+BODYMARKRIGHTEVEN
+\clearpage
+\thispagestyle{plain}
+BODYPLAIN
+\clearpage
+% At this point the next page is even: cleardoublepage must insert an empty
+% verso rather than accidentally retaining a running header or a page number.
+\cleardoublepage
+\BookChapter{CHAPTEROPENER}{BODYCHAPTER}{\item A short fixture goal.}
+BODYAFTERCHAPTER
+\clearpage
+\thispagestyle{empty}
+BODYEXPLICITEMPTY
+\begin{Assessment}{ASSESSMENTFINAL}
+BODYFINALASSESSMENT
+\end{Assessment}
+\end{document}

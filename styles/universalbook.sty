@@ -16,7 +16,7 @@
 % Το τελικό PDF παράγεται με XeLaTeX. Όχι με pdfLaTeX.
 % ===========================================================================
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{styles/universalbook}[2026/10/23 Modular Greek textbook design v0.35]
+\ProvidesPackage{styles/universalbook}[2026/10/23 Modular Greek textbook design v0.36]
 % Γραμματοσειρές OpenType/TrueType. Η αλλαγή γίνεται από τον config.
 \RequirePackage{fontspec}
 \RequirePackage{polyglossia}
@@ -254,8 +254,7 @@
 % ---------------------------------------------------------------------------
 \pagestyle{fancy}
 \newcommand{\BookHeaderUnitLabel}{\BookChapterHeaderPrefix~\thechapter}
-% Το εικονίδιο οθόνης είναι μπλε· το εκτυπωτικό είναι αμιγώς μαύρο.
-% v0.32: το ίδιο ουδέτερο σήμα και στις δύο εκδόσεις.
+% Το ίδιο ουδέτερο μαύρο σήμα και στις δύο εκδόσεις.
 \newcommand{\BookHeaderIconFile}{\BookAssetPath{header_icon}}
 \newcommand{\BookHeaderIcon}{\raisebox{-0.65ex}{\BookUseAsset[height=\BookHeaderIconHeight]{header_icon}}}
 % ΕΝΑ ΚΕΝΤΡΙΚΟ ΠΕΡΙΕΧΟΜΕΝΟ ΓΙΑ ΟΛΑ ΤΑ ΥΠΟΣΕΛΙΔΑ
@@ -294,11 +293,13 @@
 %   για διαγωνίσματα:    «Κριτήριο αξιολόγησης 1»
 % [LO]/[RE] = εσωτερική θέση· [RO]/[LE] = εξωτερική θέση.
 % Η \nouppercase αποτρέπει αυτόματη μετατροπή του τίτλου σε κεφαλαία.
+% Και στις δύο πλευρές εφαρμόζουμε πρώτα την κοινή γραμματοσειρά:
+% το -0.65ex του εικονιδίου πρέπει να μετριέται στο ίδιο μέγεθος.
 \newcommand{\BookApplyRunningHeaders}[1]{%
   \fancyhead[LO]{\BookHeaderLabelFont\color{\BookHeaderLabelColor}#1}%
   \fancyhead[RE]{\BookHeaderLabelFont\color{\BookHeaderLabelColor}#1}%
   \fancyhead[RO]{\BookHeaderTitleFont\color{\BookHeaderTitleColor}\nouppercase{\leftmark}\hspace{\BookHeaderIconGap}\BookHeaderIcon}%
-  \fancyhead[LE]{\BookHeaderBirdEven\hspace{\BookHeaderIconGap}\BookHeaderTitleFont\color{\BookHeaderTitleColor}\nouppercase{\leftmark}}%
+  \fancyhead[LE]{\BookHeaderTitleFont\color{\BookHeaderTitleColor}\BookHeaderBirdEven\hspace{\BookHeaderIconGap}\nouppercase{\leftmark}}%
 }
 % Κανονικές σελίδες: τίτλος κεφαλαίου αντί τίτλου κριτηρίου.
 \fancyhf{}
@@ -771,10 +772,19 @@
  }%
 }
 
+% Τα ιδιωτικά ονόματα της LaTeX διαβάζονται μόνο μέσα σε αυτό το μικρό scope.
+\makeatletter
+\newcommand{\BookSaveAssessmentMarks}{\let\BookAssessmentSavedMarks\@themark}
+\newcommand{\BookRestoreAssessmentMarks}{\expandafter\markboth\BookAssessmentSavedMarks}
+\makeatother
+
 % Ενιαίο περιβάλλον. Προκαλεί νέα σελίδα, όχι επιπλέον «δεξιά» λευκή.
 % Τα επιμέρους πεδία έχουν ακριβώς μηδενικό ύψος όταν λείπουν.
 \NewDocumentEnvironment{Assessment}{O{} m}{%
  \clearpage
+ % Το markboth ενημερώνει καθολικά το ζεύγος τίτλων της LaTeX.
+ % Κρατάμε το ακριβές προηγούμενο ζεύγος μέσα στην ομάδα του περιβάλλοντος.
+ \BookSaveAssessmentMarks
  \pgfkeys{/bookassessment/.cd,student=false,date=false,duration={},#1}%
  \refstepcounter{assessment}\setcounter{assessmentquestion}{0}\setcounter{assessmenttotal}{0}%
  % Καταχώριση στο TOC με τίτλο και σωστή σελίδα, χωρίς χειροκίνητες γραμμές.
@@ -801,6 +811,8 @@
  \par\vspace{5pt}%
 }{%
  \par\clearpage\pagestyle{fancy}%
+ % Επαναφέρουμε μέσω markboth ώστε να ενημερωθούν και τα marks σελιδοποίησης.
+ \BookRestoreAssessmentMarks
 }
 
 % Δομή ΘΕΜΑ Α, ΘΕΜΑ Β, ΘΕΜΑ Γ ή ΘΕΜΑ Δ.
