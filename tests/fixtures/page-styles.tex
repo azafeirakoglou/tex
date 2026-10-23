@@ -11,9 +11,18 @@
 \newif\ifPrintThreeInk
 \PrintThreeInkfalse
 \usepackage{styles/universalbook}
-% Expose the standard right mark through the ordinary label as well as the
-% left mark through the ordinary title. This observes both mark components.
-\renewcommand{\BookHeaderUnitLabel}{\rightmark}
+% Observe both transient marks at shipout, without changing the production
+% header or depending on marks from the previously shipped page.
+\newif\ifFixtureProbeMarks
+\FixtureProbeMarkstrue
+\newsavebox{\FixtureBackHeaderBox}
+\newsavebox{\FixtureDepthHeaderBox}
+\AddToHook{shipout/foreground}{%
+  \ifFixtureProbeMarks
+    \put(20mm,-220mm){\makebox[0pt][l]{\BookHeaderTitleFont\color{BookInk}%
+      LMPROBE\space\leftmark\space RMPROBE\space\rightmark}}%
+  \fi
+}
 % Zero-size overlay: exposes both actual text-block edges in the PDF without
 % affecting paragraph width, vertical spacing or the fixture's page count.
 \newcommand{\FixtureBodyFrame}{%
@@ -33,6 +42,25 @@
 \typeout{HEADERICONMETRICS:\the\wd0:\the\ht0:\the\dp0}%
 \endgroup
 \setcounter{chapter}{1}
+% Exercise the standard chaptermark route, then give the transient marks
+% deliberately different values from the stored running chapter title. Set
+% both the first and last page marks so leftmark/rightmark have known values.
+\markboth{ORIGINALLEFT}{ORIGINALRIGHT}
+% Exercise the book flags for unnumbered chapters without adding pages.
+% Cache the public rendered label before restoring the ordinary chapter.
+\makeatletter
+\begingroup
+\@mainmatterfalse
+\chaptermark{BACKCHAPTER}
+\global\setbox\FixtureBackHeaderBox=\hbox{\BookHeaderTitleFont\BookHeaderUnitLabel}%
+\endgroup
+\begingroup
+\c@secnumdepth=-1\relax
+\chaptermark{DEPTHCHAPTER}
+\global\setbox\FixtureDepthHeaderBox=\hbox{\BookHeaderTitleFont\BookHeaderUnitLabel}%
+\endgroup
+\makeatother
+\chaptermark{INITIALCHAPTER}
 \markboth{ORIGINALLEFT}{ORIGINALRIGHT}
 \FixtureBodyFrame
 BODYNORMALONE
@@ -59,6 +87,7 @@ BODYAFTERMARKRIGHT
 \clearpage
 BODYMARKRIGHTEVEN
 \clearpage
+\FixtureProbeMarksfalse
 \thispagestyle{plain}
 BODYPLAIN
 \clearpage
@@ -66,14 +95,22 @@ BODYPLAIN
 % verso rather than accidentally retaining a running header or a page number.
 \cleardoublepage
 \BookChapter{CHAPTEROPENER}{BODYCHAPTER}{\item A short fixture goal.}
+\FixtureProbeMarkstrue
+\WorksheetOpening{Fixture}{Worksheet title}
 BODYAFTERCHAPTER
 \clearpage
+\FixtureProbeMarksfalse
 \thispagestyle{empty}
 BODYEXPLICITEMPTY
 % A reference at the same nominal size lets PDF tests compare ink bounds
 % independently of the running-header placement, without adding a page.
 \par\vspace{8mm}
 \noindent{\BookHeaderTitleFont\BookHeaderIcon}
+\par\noindent{\BookHeaderTitleFont BACKPROBE\space\usebox{\FixtureBackHeaderBox}}
+\par\noindent{\BookHeaderTitleFont DEPTHPROBE\space\usebox{\FixtureDepthHeaderBox}}
+% The photo route starts on a recto and must refresh the stored chapter label.
+\BookChapterPhoto{PHOTOCHAPTER}{BODYPHOTOCHAPTER}{chapter_photo}{Fixture credit}{\item A short photo fixture goal.}
+\FixtureProbeMarkstrue
 \begin{Assessment}{ASSESSMENTFINAL}
 BODYFINALASSESSMENT
 \end{Assessment}

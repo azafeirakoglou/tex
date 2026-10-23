@@ -16,7 +16,7 @@
 % Το τελικό PDF παράγεται με XeLaTeX. Όχι με pdfLaTeX.
 % ===========================================================================
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{styles/universalbook}[2026/10/23 Modular Greek textbook design v0.40]
+\ProvidesPackage{styles/universalbook}[2026/10/23 Modular Greek textbook design v0.41]
 % Γραμματοσειρές OpenType/TrueType. Η αλλαγή γίνεται από τον config.
 \RequirePackage{fontspec}
 \RequirePackage{polyglossia}
@@ -248,12 +248,41 @@
 % ---------------------------------------------------------------------------
 % ΚΕΦΑΛΙΔΕΣ / ΥΠΟΣΕΛΙΔΑ
 % Για μονές/ζυγές σελίδες του book class χρησιμοποιούμε fancyhdr.
-% «Ενότητα N» προκύπτει αυτόματα από τον μετρητή chapter.
-% Ο τίτλος ενότητας διαβάζεται από τη \leftmark.
+% Αριθμός και τίτλος κεφαλαίου αποθηκεύονται κατά την έναρξή του.
+% Τα marks φύλλων εργασίας/κριτηρίων δεν αλλάζουν αυτή την κεφαλίδα.
 % Αν θέλεις μεγαλύτερο πουλί, άλλαξε BookHeaderIconHeight στον config.
 % ---------------------------------------------------------------------------
 \pagestyle{fancy}
-\newcommand{\BookHeaderUnitLabel}{\BookChapterHeaderPrefix~\thechapter}
+\newcommand{\BookRunningChapterNumber}{}
+\newcommand{\BookRunningChapterTitle}{}
+\newcommand{\BookRememberRunningChapter}[1]{%
+  \gdef\BookRunningChapterTitle{#1}%
+  \ifnum\value{chapter}>0\relax
+    \xdef\BookRunningChapterNumber{\thechapter}%
+  \else
+    \gdef\BookRunningChapterNumber{}%
+  \fi
+}
+\newcommand{\BookHeaderUnitLabel}{%
+  \ifdefempty{\BookRunningChapterTitle}{\leftmark}{%
+    \ifdefempty{\BookRunningChapterNumber}{}{\BookRunningChapterNumber.\enspace}%
+    \BookRunningChapterTitle}%
+}
+% Καλύπτει και την κανονική \chapter, πέρα από τα δύο custom ανοίγματα.
+\makeatletter
+\renewcommand{\chaptermark}[1]{%
+  \BookRememberRunningChapter{#1}%
+  % Η book δεν αριθμεί κεφάλαια στο backmatter ή με secnumdepth < 0.
+  \if@mainmatter
+    \ifnum\c@secnumdepth<0\relax
+      \gdef\BookRunningChapterNumber{}%
+    \fi
+  \else
+    \gdef\BookRunningChapterNumber{}%
+  \fi
+  \markboth{#1}{#1}%
+}
+\makeatother
 % Το ίδιο vector σήμα και στις δύο εκδόσεις, με το δεύτερο μελάνι.
 % Η κλίμακα εφαρμόζεται στο κοινό πλαίσιο 160 × 139 του εικαστικού.
 \newcommand{\BookHeaderIconFile}{\BookAssetPath{header_icon}}
@@ -289,18 +318,17 @@
 }
 % Το πουλί βρίσκεται στην εξωτερική άκρη. Στις ζυγές καθρεφτίζεται.
 \newcommand{\BookHeaderBirdEven}{\reflectbox{\BookHeaderIcon}}
-% ΕΝΙΑΙΑ μορφοποίηση κεφαλίδας. ΜΟΝΟ το #1 αλλάζει:
-%   για κανονικές σελίδες: «Ενότητα 1»
-%   για διαγωνίσματα:    «Κριτήριο αξιολόγησης 1»
+% ΕΝΙΑΙΑ μορφοποίηση κεφαλίδας: τίτλος προς τη ράχη, μόνο σήμα εξωτερικά.
+% Το #1 είναι κοινό για κανονικές και εξεταστικές σελίδες.
 % [LO]/[RE] = εσωτερική θέση· [RO]/[LE] = εξωτερική θέση.
 % Η \nouppercase αποτρέπει αυτόματη μετατροπή του τίτλου σε κεφαλαία.
 % Και στις δύο πλευρές εφαρμόζουμε πρώτα την κοινή γραμματοσειρά:
 % το -0.65ex του εικονιδίου πρέπει να μετριέται στο ίδιο μέγεθος.
 \newcommand{\BookApplyRunningHeaders}[1]{%
-  \fancyhead[LO]{\BookHeaderLabelFont\color{\BookHeaderLabelColor}#1}%
-  \fancyhead[RE]{\BookHeaderLabelFont\color{\BookHeaderLabelColor}#1}%
-  \fancyhead[RO]{\BookHeaderTitleFont\color{\BookHeaderTitleColor}\nouppercase{\leftmark}\hspace{\BookHeaderIconGap}\BookHeaderIcon}%
-  \fancyhead[LE]{\BookHeaderTitleFont\color{\BookHeaderTitleColor}\BookHeaderBirdEven\hspace{\BookHeaderIconGap}\nouppercase{\leftmark}}%
+  \fancyhead[LO]{\BookHeaderTitleFont\color{\BookHeaderTitleColor}\nouppercase{#1}}%
+  \fancyhead[RE]{\BookHeaderTitleFont\color{\BookHeaderTitleColor}\nouppercase{#1}}%
+  \fancyhead[RO]{\BookHeaderTitleFont\BookHeaderIcon}%
+  \fancyhead[LE]{\BookHeaderTitleFont\BookHeaderBirdEven}%
 }
 % Κανονικές σελίδες: τίτλος κεφαλαίου αντί τίτλου κριτηρίου.
 \fancyhf{}
@@ -409,6 +437,7 @@
 \newcommand{\BookChapter}[3]{%
  \cleardoublepage
  \refstepcounter{chapter}\setcounter{section}{0}\setcounter{subsection}{0}\gdef\BookTOCActiveCollection{}
+ \BookRememberRunningChapter{#1}%
  \addcontentsline{toc}{chapter}{\protect\numberline{\thechapter}#1}
  \markboth{#1}{#1}
  \thispagestyle{empty}
@@ -437,6 +466,7 @@
 \NewDocumentCommand{\BookChapterPhoto}{m m m m +m}{%
  \cleardoublepage
  \refstepcounter{chapter}\setcounter{section}{0}\setcounter{subsection}{0}\gdef\BookTOCActiveCollection{}
+ \BookRememberRunningChapter{#1}%
  \addcontentsline{toc}{chapter}{\protect\numberline{\thechapter}#1}
  \markboth{#1}{#1}\thispagestyle{empty}
  \begin{tikzpicture}[remember picture,overlay]
@@ -763,13 +793,13 @@
  date/.store in=\BookAssessmentDateSetting,
  duration/.store in=\BookAssessmentDurationSetting}
 
-% Οι εξεταστικές σελίδες έχουν δική τους κεφαλίδα, όχι «Ενότητα Ν».
+% Οι εξεταστικές σελίδες κρατούν την κοινή κεφαλίδα του κεφαλαίου.
 % Το πουλί εξακολουθεί να καθρεφτίζεται στις αριστερές σελίδες.
 \fancypagestyle{bookassessment}{%
   \fancyhf{}%
   % ΙΔΙΕΣ ρυθμίσεις τίτλου, χρωμάτων, πουλιού και γραμμής με το fancy.
-  % Το Κείμενο της κεφαλίδας αλλάζει ανεξάρτητα από τη μπλε λωρίδα.
-  \BookApplyRunningHeaders{\BookAssessmentHeaderLabel\space\theassessment}%
+  % Η λωρίδα μέσα στη σελίδα εξακολουθεί να δηλώνει το κριτήριο.
+  \BookApplyRunningHeaders{\BookHeaderUnitLabel}%
   \BookApplyFooter%
   \BookApplyPageRules%
 }

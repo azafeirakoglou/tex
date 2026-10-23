@@ -35,6 +35,12 @@ NORMAL = ("BODY-NORMAL-ONE", "BODY-NORMAL-TWO", "BODY-AFTER-FIRST",
 CRITERIA = ("BODY-FIRST-ONE", "BODY-FIRST-TWO", "BODY-SECOND-ONE", "BODY-SECOND-TWO")
 MARKRIGHT = ("BODY-AFTER-MARKRIGHT", "BODY-MARKRIGHT-EVEN")
 RUNNING = NORMAL + CRITERIA + MARKRIGHT + ("BODY-AFTER-CHAPTER", "BODY-FINAL-ASSESSMENT")
+# Actual ink anchors measured in the approved v0.40 release PDF. The title
+# redesign must not move, scale or recenter the outer logo.
+LOGO_ANCHORS_BP = {
+    1: (413.38116455078125, 14.174641609191895, 433.1392517089844, 31.140962600708008),
+    0: (48.75052261352539, 14.174641609191895, 68.50862884521484, 31.140962600708008),
+}
 
 
 def vector_group(paths):
@@ -75,6 +81,8 @@ def page_data(page, index):
     return {
         "index": index,
         "text": page.get_text(),
+        "mark_probes": " ".join(span["text"] for span in spans
+                                 if 580 < span["bbox"][1] < 635),
         "width": page.rect.width,
         "header": [s for s in spans if s["bbox"][1] < 45],
         "footer": [s for s in spans if s["bbox"][1] > 640],
@@ -143,29 +151,42 @@ class PageStyleTests(unittest.TestCase):
         for edition in self.documents:
             for marker in NORMAL:
                 with self.subTest(edition=edition, marker=marker):
-                    header = self.header_text(self.find(edition, marker))
-                    self.assertIn("ORIGINALLEFT", header)
-                    self.assertIn("ORIGINALRIGHT", header)
-                    self.assertNotIn("ASSESSMENT", header)
+                    probes = self.find(edition, marker)["mark_probes"]
+                    self.assertIn("LMPROBE ORIGINALLEFT", probes)
+                    self.assertIn("RMPROBE ORIGINALRIGHT", probes)
+                    self.assertNotIn("ASSESSMENT", probes)
             for marker in MARKRIGHT:
                 with self.subTest(edition=edition, marker=marker):
-                    header = self.header_text(self.find(edition, marker))
-                    self.assertIn("ORIGINALLEFT", header)
-                    self.assertIn("NEXTRIGHT", header)
-                    self.assertNotIn("ORIGINALRIGHT", header)
+                    probes = self.find(edition, marker)["mark_probes"]
+                    self.assertIn("LMPROBE ORIGINALLEFT", probes)
+                    self.assertIn("RMPROBE NEXTRIGHT", probes)
+                    self.assertNotIn("ORIGINALRIGHT", probes)
 
-    def test_each_assessment_keeps_its_own_title_and_number_on_both_parities(self):
+    def test_chapter_label_survives_assessment_worksheet_and_all_chapter_routes(self):
         for edition in self.documents:
-            for prefix, number, title in (("FIRST", "1", "ASSESSMENTONE"),
-                                          ("SECOND", "2", "ASSESSMENTTWO")):
+            for prefix, title in (("FIRST", "ASSESSMENTONE"), ("SECOND", "ASSESSMENTTWO")):
                 pair = [self.find(edition, f"BODY-{prefix}-{suffix}") for suffix in ("ONE", "TWO")]
                 self.assertEqual({page["index"] % 2 for page in pair}, {0, 1})
                 for page in pair:
                     with self.subTest(edition=edition, page=page["index"]):
                         header = self.header_text(page)
-                        self.assertIn(title, header)
-                        self.assertIn("Κριτήριο αξιολόγησης " + number, header)
-                        self.assertNotIn("ORIGINAL", header)
+                        self.assertEqual(header, "1. INITIALCHAPTER")
+                        self.assertNotIn(title, header)
+                        self.assertIn("LMPROBE " + title, page["mark_probes"])
+                        self.assertIn("RMPROBE " + title, page["mark_probes"])
+            for marker in NORMAL + MARKRIGHT:
+                self.assertEqual(self.header_text(self.find(edition, marker)), "1. INITIALCHAPTER")
+            worksheet = self.find(edition, "BODY-AFTER-CHAPTER")
+            self.assertEqual(self.header_text(worksheet), "2. CHAPTEROPENER")
+            self.assertIn("Φύλλα εργασίας", worksheet["mark_probes"])
+            final = self.find(edition, "BODY-FINAL-ASSESSMENT")
+            self.assertEqual(self.header_text(final), "3. PHOTOCHAPTER")
+
+    def test_unnumbered_chapter_labels_do_not_reuse_the_previous_chapter_number(self):
+        for edition in self.documents:
+            text = " ".join(self.find(edition, "BODY-EXPLICIT-EMPTY")["text"].split())
+            self.assertIn("BACKPROBE BACKCHAPTER", text)
+            self.assertIn("DEPTHPROBE DEPTHCHAPTER", text)
 
     def test_header_bird_height_vertical_position_and_horizontal_mirror_match(self):
         for edition in self.documents:
@@ -191,6 +212,8 @@ class PageStyleTests(unittest.TestCase):
                     bird = page["birds"][0]
                     x0, y0, x1, y1 = bird["bbox"]
                     (odd if page["index"] % 2 else even)[page["index"]] = (x0, x1)
+                    for actual, expected in zip(bird["bbox"], LOGO_ANCHORS_BP[page["index"] % 2]):
+                        self.assertAlmostEqual(actual, expected, delta=.02)
                     self.assertAlmostEqual(y1 - y0, body_bounds.height, delta=.02)
                     self.assertAlmostEqual(x1 - x0, body_bounds.width, delta=.02)
                     self.assertAlmostEqual(y0, reference_top, delta=.02)
@@ -211,7 +234,8 @@ class PageStyleTests(unittest.TestCase):
                 with self.subTest(edition=edition, page=page["index"]):
                     self.assertFalse(page["header_images"], "Header bird must contain no raster image")
                     self.assertEqual(len(page["birds"]), 1)
-                    label = next(s for s in page["header"] if s["font"] == "Inter-SemiBold")
+                    self.assertEqual(len(page["header"]), 1)
+                    label = page["header"][0]
                     label_rgb = tuple((label["color"] >> shift) & 255 for shift in (16, 8, 0))
                     for path in page["birds"][0]["paths"]:
                         self.assertIn("f", path["type"], "Bird must use filled vector paths")
@@ -325,15 +349,21 @@ class PageStyleTests(unittest.TestCase):
             footer_anchors = {}
             for page in pages:
                 with self.subTest(edition=edition, page=page["index"]):
-                    self.assertEqual(len(page["header"]), 2)
-                    label = next(s for s in page["header"] if s["font"] == "Inter-SemiBold")
-                    title = next(s for s in page["header"] if s["font"] == "Inter-Regular")
-                    self.assertEqual(title["color"], 0)
-                    ref_label = next(s for s in reference_header if s["font"] == "Inter-SemiBold")
+                    self.assertEqual(len(page["header"]), 1, "Only the inner chapter label belongs in the header")
+                    label = page["header"][0]
+                    ref_label = reference_header[0]
+                    self.assertEqual(label["font"], "Inter-Regular")
                     self.assertEqual(label["color"], ref_label["color"])
-                    for span in (label, title):
-                        self.assertAlmostEqual(span["size"], 8 * 72 / 72.27, delta=.01)
-                        self.assertAlmostEqual(span["bbox"][1], reference_header[0]["bbox"][1], delta=.02)
+                    self.assertAlmostEqual(label["size"], 8 * 72 / 72.27, delta=.01)
+                    self.assertAlmostEqual(label["bbox"][1], reference_header[0]["bbox"][1], delta=.02)
+                    if edition == "screen":
+                        self.assertEqual(label["color"], 0x203B63)
+                    anchor = label["bbox"][0] if page["index"] % 2 else label["bbox"][2]
+                    expected_anchor = (20 if page["index"] % 2 else 150) * 72 / 25.4
+                    self.assertAlmostEqual(anchor, expected_anchor, delta=.02)
+                    bird_bounds = page["birds"][0]["bbox"]
+                    self.assertTrue(label["bbox"][2] < bird_bounds[0] if page["index"] % 2
+                                    else label["bbox"][0] > bird_bounds[2])
                     self.assertEqual(len(page["rules"]), 1)
                     rule = page["rules"][0]
                     self.assertAlmostEqual(rule["width"], .35 * 72 / 72.27, delta=.002)
@@ -395,10 +425,10 @@ class PageStyleTests(unittest.TestCase):
             self.assertFalse(plain["rules"])
             self.assertEqual(len(plain["footer"]), 1)
             blanks = [page for page in self.documents[edition] if not page["text"].strip()]
-            self.assertEqual(len(blanks), 1)
-            self.assertEqual(blanks[0]["index"] % 2, 0)
-            for page in (blanks[0], self.find(edition, "BODY-CHAPTER"),
-                         self.find(edition, "BODY-EXPLICIT-EMPTY")):
+            self.assertEqual(len(blanks), 2)
+            self.assertEqual([page["index"] for page in blanks], [12, 16])
+            for page in (*blanks, self.find(edition, "BODY-CHAPTER"),
+                         self.find(edition, "BODY-PHOTO-CHAPTER"), self.find(edition, "BODY-EXPLICIT-EMPTY")):
                 with self.subTest(edition=edition, page=page["index"]):
                     self.assertFalse(page["header"])
                     self.assertFalse(page["birds"])
@@ -410,9 +440,10 @@ class PageStyleTests(unittest.TestCase):
         for edition, pages in self.documents.items():
             final = self.find(edition, "BODY-FINAL-ASSESSMENT")
             self.assertEqual(final["index"], len(pages))
-            self.assertEqual(len(pages), 16)
-            self.assertIn("ASSESSMENTFINAL", self.header_text(final))
-            self.assertIn("Κριτήριο αξιολόγησης 3", self.header_text(final))
+            self.assertEqual(len(pages), 18)
+            self.assertEqual(self.header_text(final), "3. PHOTOCHAPTER")
+            self.assertIn("LMPROBE ASSESSMENTFINAL", final["mark_probes"])
+            self.assertIn("RMPROBE ASSESSMENTFINAL", final["mark_probes"])
 
 
 if __name__ == "__main__":

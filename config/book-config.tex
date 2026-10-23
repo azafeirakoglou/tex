@@ -15,7 +15,7 @@
 \newcommand{\BookSubtitle}{Θεωρία · Μεθοδολογία · Παραδείγματα · Ασκήσεις}
 \newcommand{\BookPublisher}{ΕΚΔΟΤΙΚΟ ΠΡΟΤΥΠΟ}
 \newcommand{\BookAuthors}{Δοκιμαστική μακέτα — όχι τελικό βιβλίο}
-\newcommand{\BookEdition}{Καθολική μακέτα v0.40 · Οκτώβριος 2026}
+\newcommand{\BookEdition}{Καθολική μακέτα v0.41 · Οκτώβριος 2026}
 \newcommand{\BookShortName}{Φυσική Α΄ Λυκείου}
 
 % ---------------------------------------------------------------------------
@@ -133,25 +133,26 @@
 \newcommand{\BookHeaderIconHeight}{6.4mm}
 
 % ---------------------------------------------------------------------------
-% v0.22 — ΚΕΦΑΛΙΔΕΣ: κοινή μορφοποίηση και πεζοκεφαλαία ως προεπιλογή.
+% v0.41 — ΚΕΦΑΛΙΔΕΣ: κεφάλαιο εσωτερικά, μόνο λογότυπο εξωτερικά.
 % ---------------------------------------------------------------------------
-% Το κείμενο της ΚΕΦΑΛΙΔΑΣ είναι ανεξάρτητο από τη λωρίδα τίτλου.
-% Για παράδειγμα, η γραμμή στην κορυφή μπορεί να γράφει
-% «Κριτήριο αξιολόγησης 1», ενώ η μπλε λωρίδα παραμένει
-% «ΚΡΙΤΗΡΙΟ ΑΞΙΟΛΟΓΗΣΗΣ 1» από τη μεταβλητή \LabelAssessment.
+% Κοινό κείμενο: «1. Κίνηση σε μία διάσταση», στο δεύτερο μελάνι.
+% Διατηρείται και στα φύλλα εργασίας/κριτήρια του ίδιου κεφαλαίου.
 % Η \nouppercase στο sty αποτρέπει την αυτόματη κεφαλαιοποίηση των τίτλων,
 % ενώ εδώ δίνουμε απευθείας την επιθυμητή γραφή της ετικέτας.
-\newcommand{\BookChapterHeaderPrefix}{Ενότητα}
-\newcommand{\BookAssessmentHeaderLabel}{Κριτήριο αξιολόγησης}
-% Κοινή γραμματοσειρά, μέγεθος και βάρος για τους δύο τύπους κεφαλίδας:
-\newcommand{\BookHeaderLabelFont}{\sffamily\scriptsize\bfseries}
+% Κοινή γραμματοσειρά κεφαλίδας. Η ίδια εφαρμόζεται πριν το λογότυπο,
+% ώστε η μετατόπιση σε ex να μη μεταβάλλει τη θέση του στις αντικριστές.
 \newcommand{\BookHeaderTitleFont}{\sffamily\scriptsize}
 % Χρωματικοί ρόλοι: αλλάζουν αυτομάτως μεταξύ SCREEN και PRINT.
-\newcommand{\BookHeaderLabelColor}{BookPrimary}
-\newcommand{\BookHeaderTitleColor}{BookInk}
+\newcommand{\BookHeaderTitleColor}{BookPrimary}
 \newcommand{\BookHeaderRuleColor}{BookSecondary}
-% Το πλάτος γραμμής και η απόσταση τίτλου/πουλιού ορίζονται μια φορά.
+% Το πάχος γραμμής ορίζεται μία φορά.
 \newcommand{\BookHeaderRuleWidth}{.35pt}
+% Παλιές παράμετροι: διατηρούνται για συμβατότητα με παλαιότερες μακέτες.
+% Η νέα κοινή κεφαλίδα χρησιμοποιεί τα BookHeaderTitleFont/TitleColor.
+\newcommand{\BookChapterHeaderPrefix}{Ενότητα}
+\newcommand{\BookAssessmentHeaderLabel}{Κριτήριο αξιολόγησης}
+\newcommand{\BookHeaderLabelFont}{\sffamily\scriptsize\bfseries}
+\newcommand{\BookHeaderLabelColor}{BookPrimary}
 \newcommand{\BookHeaderIconGap}{1.2mm}
 % Το ύψος του πουλιού ρυθμίζεται από την BookHeaderIconHeight παραπάνω.
 % Η θέση του μένει εξωτερικά στις αντικριστές σελίδες, και στις ζυγές
