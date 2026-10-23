@@ -81,6 +81,9 @@ def page_data(page, index):
         "body_vectors": vector_group([path for path in filled if 45 < path["rect"].y0 < 630]),
         "rules": [d for d in drawings
                   if d["rect"].y1 < 45 and d["rect"].width > 300],
+        "body_frames": [d for d in drawings if d.get("color") is not None
+                        and d["rect"].width > 300 and d["rect"].height < 10
+                        and d["rect"].y0 > 45],
     }
 
 
@@ -324,6 +327,33 @@ class PageStyleTests(unittest.TestCase):
             self.assertAlmostEqual(footer["bbox"][1], reference_footer["bbox"][1], delta=.02)
             self.assertAlmostEqual(footer["bbox"][2] if parity else footer["bbox"][0],
                                    footer_anchors[parity], delta=.02)
+
+    def test_mirrored_body_margins_and_outer_footer_anchors_match_in_both_editions(self):
+        frame_positions = {}
+        for edition in self.documents:
+            for marker in ("BODY-NORMAL-ONE", "BODY-NORMAL-TWO"):
+                page = self.find(edition, marker)
+                with self.subTest(edition=edition, page=page["index"]):
+                    self.assertEqual(len(page["body_frames"]), 1)
+                    frame = page["body_frames"][0]["rect"]
+                    left_mm = frame.x0 * 25.4 / 72
+                    right_mm = (page["width"] - frame.x1) * 25.4 / 72
+                    self.assertAlmostEqual(left_mm, 20 if page["index"] % 2 else 17, delta=.01)
+                    self.assertAlmostEqual(right_mm, 17 if page["index"] % 2 else 20, delta=.01)
+                    self.assertAlmostEqual(frame.width * 25.4 / 72, 133, delta=.01)
+                    frame_positions[edition, marker] = tuple(frame)
+            for marker in RUNNING + ("BODY-PLAIN",):
+                page = self.find(edition, marker)
+                with self.subTest(edition=edition, page=page["index"], footer=True):
+                    self.assertEqual(len(page["footer"]), 1)
+                    footer = page["footer"][0]["bbox"]
+                    gap_mm = ((page["width"] - footer[2]) if page["index"] % 2
+                              else footer[0]) * 25.4 / 72
+                    self.assertAlmostEqual(gap_mm, 17, delta=.01)
+        for marker in ("BODY-NORMAL-ONE", "BODY-NORMAL-TWO"):
+            for actual, expected in zip(frame_positions["print", marker],
+                                        frame_positions["screen", marker]):
+                self.assertAlmostEqual(actual, expected, delta=.02)
 
     def test_plain_empty_automatic_blank_and_chapter_opener_policies(self):
         for edition in self.documents:

@@ -14,6 +14,16 @@
 % Expose the standard right mark through the ordinary label as well as the
 % left mark through the ordinary title. This observes both mark components.
 \renewcommand{\BookHeaderUnitLabel}{\rightmark}
+% Zero-size overlay: exposes both actual text-block edges in the PDF without
+% affecting paragraph width, vertical spacing or the fixture's page count.
+\newcommand{\FixtureBodyFrame}{%
+  \noindent\begin{tikzpicture}[overlay]
+    \draw[BookInk,line width=.2pt]
+      (0,-1mm)--(0,1mm)
+      (0,0)--(\linewidth,0)
+      (\linewidth,-1mm)--(\linewidth,1mm);
+  \end{tikzpicture}%
+}
 \begin{document}
 % Logical cassette dimensions include the transparent margin around the ink.
 % The vector ink itself therefore need not occupy the full 6.4 mm height.
@@ -24,8 +34,10 @@
 \endgroup
 \setcounter{chapter}{1}
 \markboth{ORIGINALLEFT}{ORIGINALRIGHT}
+\FixtureBodyFrame
 BODYNORMALONE
 \clearpage
+\FixtureBodyFrame
 BODYNORMALTWO
 \begin{Assessment}{ASSESSMENTONE}
 BODYFIRSTONE
