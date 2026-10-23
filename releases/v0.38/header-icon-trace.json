@@ -1,0 +1,27 @@
+{
+  "source": "archive/legacy-sources/header-icon-black.png",
+  "source_sha256": "5e006390a7ab7366ee249f3ca0c061ff6ecd8d942c03a25cfe24ef99ee107b91",
+  "canvas": [
+    160,
+    139
+  ],
+  "contours": 2,
+  "vertices": 710,
+  "different_pixels": 0,
+  "iou": 1.0,
+  "method": "exact pixel-edge contours; collinear simplification only; no smoothing",
+  "tikz_pdf_check": {
+    "canvas_pdf_points": [
+      0.0,
+      0.0,
+      160.0,
+      139.0
+    ],
+    "raster_size": [
+      160,
+      139
+    ],
+    "different_pixels": 0,
+    "iou": 1.0
+  }
+}

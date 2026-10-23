@@ -15,6 +15,13 @@
 % left mark through the ordinary title. This observes both mark components.
 \renewcommand{\BookHeaderUnitLabel}{\rightmark}
 \begin{document}
+% Logical cassette dimensions include the transparent margin around the ink.
+% The vector ink itself therefore need not occupy the full 6.4 mm height.
+\begingroup
+\BookHeaderTitleFont
+\setbox0=\hbox{\BookHeaderIcon}%
+\typeout{HEADERICONMETRICS:\the\wd0:\the\ht0:\the\dp0}%
+\endgroup
 \setcounter{chapter}{1}
 \markboth{ORIGINALLEFT}{ORIGINALRIGHT}
 BODYNORMALONE
@@ -51,6 +58,10 @@ BODYAFTERCHAPTER
 \clearpage
 \thispagestyle{empty}
 BODYEXPLICITEMPTY
+% A reference at the same nominal size lets PDF tests compare ink bounds
+% independently of the running-header placement, without adding a page.
+\par\vspace{8mm}
+\noindent{\BookHeaderTitleFont\BookHeaderIcon}
 \begin{Assessment}{ASSESSMENTFINAL}
 BODYFINALASSESSMENT
 \end{Assessment}

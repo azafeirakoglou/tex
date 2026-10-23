@@ -146,7 +146,7 @@ class WholeSourceTests(unittest.TestCase):
 
     def test_neutral_rgb_raster_still_requires_native_gray(self):
         from PIL import Image
-        p=self.root/'assets/header-icon-black.png'
+        p=self.root/'assets/photo-K-3tones.png'
         with Image.open(p) as im:
             rgb=im.convert('RGB')
         rgb.save(p)
