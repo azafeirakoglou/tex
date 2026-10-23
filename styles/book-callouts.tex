@@ -1,0 +1,42 @@
+% Κοινή κατασκευή AttentionBox / ThinkBox / HistoryBox.
+% Οι δηλώσεις στο τέλος αλλάζουν μόνο φόντο, τόνο έμφασης, εικονίδιο,
+% και ετικέτα. Γεωμετρία, τίτλος, πλευρική γραμμή και συμπεριφορά
+% αλλαγής σελίδας υλοποιούνται μία φορά για όλα τα κουτιά.
+% Προαπαιτούμενα: BookCallout, BookCalloutCenteredIcon, BookMediumLabelFont
+% και οι τρεις σχεδιαστικές εντολές εικονιδίων του universalbook.sty.
+
+\providecommand{\BookCalloutLabelSize}{9.2}
+\providecommand{\BookCalloutLabelLeading}{11.5}
+
+% Ο τίτλος είναι σώμα του κουτιού (όχι δεύτερο ανεξάρτητο title box).
+% Το προαιρετικό θέμα διατηρεί τη σύνταξη HistoryBox[Θέμα].
+\newcommand{\BookCalloutHeading}[3]{%
+  \noindent{\BookMediumLabelFont
+    \fontsize{\BookCalloutLabelSize}{\BookCalloutLabelLeading}\selectfont
+    \color{#1}#2\ifstrempty{#3}{}{ — #3}}\par\smallskip\small
+}
+
+% Πέντε παράμετροι: φόντο / έμφαση / εικονίδιο / τίτλος / θέμα.
+% Το ίδιο overlay χρησιμοποιείται σε ενιαίο και πρώτο σπασμένο τμήμα.
+% Τα επόμενα τμήματα κρατούν τη γεωμετρία χωρίς να επαναλαμβάνουν icon.
+\tcbset{BookCalloutRender/.style n args={5}{%
+  BookCallout,
+  colback=#1,
+  borderline west={1.35pt}{0pt}{#2},
+  before upper={\BookCalloutHeading{#2}{#4}{#5}},
+  overlay unbroken={\BookCalloutCenteredIcon{#3}},
+  overlay first={\BookCalloutCenteredIcon{#3}}
+}}
+
+% Λεπτά περιβλήματα με την παλιά ακριβώς δημόσια σύνταξη.
+% Η μόνη διαφορά του δεύτερου είναι το προαιρετικό θέμα.
+\newcommand{\BookDeclareCallout}[5]{%
+  \newtcolorbox{#1}{BookCalloutRender={#2}{#3}{#4}{#5}{}}%
+}
+\newcommand{\BookDeclareTitledCallout}[5]{%
+  \newtcolorbox{#1}[1][]{BookCalloutRender={#2}{#3}{#4}{#5}{##1}}%
+}
+
+\BookDeclareCallout{AttentionBox}{BookAlertBackground}{BookAlert}{\BookCalloutWarning}{\LabelAlert}
+\BookDeclareCallout{ThinkBox}{BookThinkBackground}{BookThinkAccent}{\BookCalloutBulb}{\LabelThink}
+\BookDeclareTitledCallout{HistoryBox}{BookHistorySoft}{BookHistory}{\BookCalloutOpenBook}{\LabelHistory}

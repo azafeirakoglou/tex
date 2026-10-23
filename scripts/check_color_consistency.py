@@ -80,6 +80,99 @@ def active_sources(root, m):
     return sorted(p for p in paths if p.relative_to(root).as_posix() not in GENERATED)
 
 
+def command_arguments(text, command, arity):
+    """Read literal braced arguments with nesting, skipping command definitions."""
+    matches=[]
+    for match in re.finditer(r'\\'+re.escape(command)+r'\b',text):
+        pos=match.end()
+        args=[]
+        for _ in range(arity):
+            while pos<len(text) and text[pos].isspace():
+                pos+=1
+            if pos>=len(text) or text[pos]!='{':
+                break
+            depth=1
+            first=pos+1
+            pos+=1
+            while pos<len(text) and depth:
+                if text[pos]=='{' and (pos==0 or text[pos-1]!='\\'):
+                    depth+=1
+                elif text[pos]=='}' and (pos==0 or text[pos-1]!='\\'):
+                    depth-=1
+                pos+=1
+            if depth:
+                break
+            args.append(text[first:pos-1])
+        if len(args)==arity:
+            matches.append(args)
+    return matches
+
+
+def validate_callouts(root,m):
+    """Check delegation and role declarations, rather than duplicated box bodies."""
+    path=root/'styles/book-callouts.tex'
+    if not path.exists():
+        return ['Callouts: missing shared styles/book-callouts.tex']
+    text=without_comments(path.read_text(encoding='utf-8'))
+    style=without_comments((root/'styles/universalbook.sty').read_text(encoding='utf-8'))
+    errors=[]
+    if r'\input{styles/book-callouts.tex}' not in re.sub(r'\s+','',style):
+        errors.append('Callouts: shared construction is not loaded by universalbook.sty')
+    expected={
+        'AttentionBox':('BookDeclareCallout',r'\BookCalloutWarning',r'\LabelAlert'),
+        'ThinkBox':('BookDeclareCallout',r'\BookCalloutBulb',r'\LabelThink'),
+        'HistoryBox':('BookDeclareTitledCallout',r'\BookCalloutOpenBook',r'\LabelHistory'),
+    }
+    declarations={}
+    for command in ['BookDeclareCallout','BookDeclareTitledCallout']:
+        for env,bg,accent,icon,title in command_arguments(text,command,5):
+            if env not in expected:
+                errors.append('Callouts: undeclared visual rules for '+env)
+                continue
+            if env in declarations:
+                errors.append(env+': duplicate callout declaration')
+            declarations[env]=(command,bg,accent,icon,title)
+    for env,(command,icon,title) in expected.items():
+        rule=m['visual_rules'][env]
+        wanted=(command,rule['background'],rule['accent'],icon,title)
+        if declarations.get(env)!=wanted:
+            errors.append(env+': must use the shared factory with its registered roles/icon/title')
+    # Reject private redefinitions which would escape the shared renderer.
+    direct=r'\\(?:newtcolorbox|renewtcolorbox|newenvironment|renewenvironment|NewDocumentEnvironment|RenewDocumentEnvironment)\s*\{(AttentionBox|ThinkBox|HistoryBox)\}'
+    for p in active_sources(root,m):
+        if p.exists() and re.search(direct,without_comments(p.read_text(encoding='utf-8'))):
+            errors.append(str(p.relative_to(root))+': direct callout definition bypasses shared construction')
+    # One renderer owns the title, accent rule and both first-piece overlays.
+    compact=re.sub(r'\s+','',text)
+    required=[
+        'BookCalloutRender/.stylenargs={5}{BookCallout,',
+        'colback=#1',
+        'borderlinewest={1.35pt}{0pt}{#2}',
+        r'beforeupper={\BookCalloutHeading{#2}{#4}{#5}}',
+        r'overlayunbroken={\BookCalloutCenteredIcon{#3}}',
+        r'overlayfirst={\BookCalloutCenteredIcon{#3}}',
+    ]
+    if any(part not in compact for part in required):
+        errors.append('Callouts: common background/rule/title/first-piece icon pipeline is incomplete')
+    # Verify both public-signature wrappers actually delegate to that renderer.
+    wrappers={}
+    pattern=r'\\newcommand\s*\{\\(BookDeclare(?:Titled)?Callout)\}\s*\[5\]\s*'
+    for match in re.finditer(pattern,text):
+        tail=text[match.end():]
+        bodies=command_arguments('\\ReadBody'+tail,'ReadBody',1)
+        if bodies:
+            wrappers[match.group(1)]=re.sub(r'\s+','',bodies[0][0])
+    for command in ['BookDeclareCallout','BookDeclareTitledCallout']:
+        body=wrappers.get(command,'')
+        if 'BookCalloutRender=' not in body:
+            errors.append('Callouts: factory '+command+' must delegate to the common renderer')
+    if r'\newtcolorbox{#1}{' not in wrappers.get('BookDeclareCallout',''):
+        errors.append('Callouts: plain environments must retain their no-argument signature')
+    if r'\newtcolorbox{#1}[1][]' not in wrappers.get('BookDeclareTitledCallout',''):
+        errors.append('Callouts: HistoryBox must retain its optional-title signature')
+    return errors
+
+
 def validate(root):
     m = json.loads((root/'config/color-map.json').read_text(encoding='utf-8'))
     errors = validate_map(m)
@@ -104,20 +197,9 @@ def validate(root):
             asset = match.group(1)
             if not asset.startswith(('\\','#')) and asset not in valid_assets:
                 errors.append(label+': unregistered asset '+asset)
-    # Keep the declared visual structure tied to the actual callout definitions.
+    # All three callouts must delegate to the one shared construction pipeline.
+    errors.extend(validate_callouts(root,m))
     style = (root/'styles/universalbook.sty').read_text(encoding='utf-8')
-    for env in ['ThinkBox','AttentionBox','HistoryBox']:
-        block = re.search(r'\\newtcolorbox\{%s\}.*?(?=\\newtcolorbox|\\NewDocumentEnvironment|\\newcommand\{\\BookQuote\}|\Z)' % env,style,re.S)
-        if not block:
-            errors.append(env+': missing environment')
-            continue
-        b = block.group(0)
-        rule = m['visual_rules'][env]
-        if 'colback='+rule['background'] not in b or 'BookCallout,' not in b:
-            errors.append(env+': incorrect background/base style')
-        accent = 'BookHistoryBorder' if env=='HistoryBox' else rule['accent']
-        if 'borderline west={1.35pt}{0pt}{'+accent+'}' not in b:
-            errors.append(env+': incorrect accent line')
     for env in ['definitionbox','theorembox']:
         block = re.search(r'\\NewDocumentEnvironment\{%s\}.*?(?=\\NewDocumentEnvironment|\\renewcommand\{\\proofname\}|\Z)' % env,style,re.S)
         if not block:

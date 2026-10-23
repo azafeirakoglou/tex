@@ -73,6 +73,10 @@
 \newcommand{\BookBulbOutlineWidth}{1.08pt}
 \newcommand{\BookBulbRayWidth}{.95pt}
 \newcommand{\BookBulbFilamentWidth}{.85pt}
+% v0.35: χαμηλό, πλατύ ανοιχτό βιβλίο με διακριτές καμπύλες σελίδων.
+\newcommand{\BookOpenBookScale}{0.90}
+\newcommand{\BookOpenBookOutlineWidth}{.90pt}
+\newcommand{\BookOpenBookDetailWidth}{.68pt}
 \newcommand{\BookCalloutIconOffset}{8.7mm}
 % Ιστορική συμβατότητα: παλιές εντολές χαρακτήρων (όχι πλέον στους τίτλους).
 % Διατηρούνται σε περίπτωση που χρησιμοποιούνται σε παλαιότερα αρχεία.
@@ -224,7 +228,11 @@
 \newcommand{\BookExampleTitleFontSize}{10.4}
 \newcommand{\BookExampleTitleLineHeight}{13.5}
 \newcommand{\BookExampleBarPad}{2.0mm}
-\newcommand{\BookThinkLabelSize}{9.0}
+% Κοινό μέγεθος για τίτλους ThinkBox / AttentionBox / HistoryBox.
+\newcommand{\BookCalloutLabelSize}{9.2}
+\newcommand{\BookCalloutLabelLeading}{11.5}
+% Παλιό όνομα για αναφορά· οι αλλαγές γίνονται στο BookCalloutLabelSize.
+\newcommand{\BookThinkLabelSize}{\BookCalloutLabelSize}
 \newcommand{\BookSolutionLabelSize}{10.2}
 \newcommand{\BookTheoryRuleWidth}{0.55pt}
 \newcommand{\BookQuestionRuleWidth}{0.35pt}

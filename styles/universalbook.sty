@@ -16,7 +16,7 @@
 % Το τελικό PDF παράγεται με XeLaTeX. Όχι με pdfLaTeX.
 % ===========================================================================
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{styles/universalbook}[2026/10/23 Modular Greek textbook design v0.34]
+\ProvidesPackage{styles/universalbook}[2026/10/23 Modular Greek textbook design v0.35]
 % Γραμματοσειρές OpenType/TrueType. Η αλλαγή γίνεται από τον config.
 \RequirePackage{fontspec}
 \RequirePackage{polyglossia}
@@ -528,76 +528,39 @@
     \fill[BookAlert] (0,-1.65) circle (.37);
   \end{tikzpicture}%
 }
-% v0.30: Συμμετρικό, minimal ανοικτό βιβλίο για HistoryBox.
-% Οι πάνω/κάτω καμπύλες είναι κατοπτρικές γύρω από y=0.
-% Τρεις σύντομες γραμμές ανά σελίδα (όχι μία). Δεν υπάρχει εικόνα bitmap.
-% Ίδια κλίμακα/σταθερή αριστερή ζώνη όπως στα άλλα δύο callouts.
-% Το χρώμα BookHistoryBorder είναι ουδέτερο γκρι SCREEN / 55% μαύρο PRINT.
+% v0.35: νέο σχέδιο από την αρχή — πλατύ βιβλίο με χαμηλή κεντρική πτύχωση.
+% Καμπύλα φύλλα, ξεχωριστό εξώφυλλο και γραμμές που ακολουθούν τις σελίδες.
+% Η γεωμετρία είναι κοινή στα δύο PDF· μόνο ο σημασιολογικός ρόλος δίνει χρώμα.
 \newcommand{\BookCalloutOpenBook}{%
-  \begin{tikzpicture}[x=1mm,y=1mm,scale=\BookCalloutIconScale,
+  \begin{tikzpicture}[x=1mm,y=1mm,scale={\BookCalloutIconScale*\BookOpenBookScale},
     line cap=round,line join=round]
-    % Περίγραμμα δύο συμμετρικών ανοιγμένων σελίδων (πάνω/κάτω).
-    \draw[draw=BookHistoryBorder,line width=.90pt]
-      (0,3.30)
-      .. controls (-1.2,3.95) and (-2.9,3.95) .. (-4.1,3.30)
-      -- (-4.1,-3.30)
-      .. controls (-2.9,-3.95) and (-1.2,-3.95) .. (0,-3.30)
-      .. controls (1.2,-3.95) and (2.9,-3.95) .. (4.1,-3.30)
-      -- (4.1,3.30)
-      .. controls (2.9,3.95) and (1.2,3.95) .. cycle;
-    % Σταθερή ευθεία ράχη, χωρίς άνισες καμπυλότητες.
-    \draw[draw=BookHistoryBorder,line width=.78pt] (0,3.30)--(0,-3.30);
-    % Τρεις εσωτερικές γραμμές ανά σελίδα, συμμετρικά.
-    \foreach \y in {1.65,.40,-.85}{%
-      \draw[draw=BookHistoryBorder,line width=.53pt] (-3.15,\y)--(-.85,\y);
-      \draw[draw=BookHistoryBorder,line width=.53pt] (.85,\y)--(3.15,\y);
+    % Εξώφυλλο κάτω από τα δύο ανοιχτά φύλλα.
+    \draw[draw=BookHistory,line width=\BookOpenBookOutlineWidth]
+      (-4.9,2.1)--(-4.9,-2.2)
+      .. controls (-3,-1.9) and (-1.2,-2.2) .. (0,-3.15)
+      .. controls (1.2,-2.2) and (3,-1.9) .. (4.9,-2.2)--(4.9,2.1);
+    % Ασύγχυτο σχήμα ανοικτού βιβλίου: χαμηλά το κέντρο, ψηλά οι έξω άκρες.
+    \draw[draw=BookHistory,line width=\BookOpenBookOutlineWidth]
+      (0,-2.65)
+      .. controls (-1.1,-1.7) and (-2.8,-1.3) .. (-4.5,-1.7)
+      --(-4.5,2.6)
+      .. controls (-2.8,2.95) and (-1.1,2.2) .. (0,1.2)
+      .. controls (1.1,2.2) and (2.8,2.95) .. (4.5,2.6)
+      --(4.5,-1.7)
+      .. controls (2.8,-1.3) and (1.1,-1.7) .. cycle;
+    \draw[draw=BookHistory,line width=\BookOpenBookOutlineWidth] (0,1.2)--(0,-2.65);
+    % Τρεις καμπύλες αράδες σε κάθε σελίδα, με ανοικτή κεντρική ζώνη.
+    \foreach \y in {0,-.95,-1.9}{%
+      \draw[draw=BookHistory,line width=\BookOpenBookDetailWidth]
+        (-3.45,1.3+\y) .. controls (-2.55,1.25+\y) and (-1.55,.9+\y) .. (-.85,.5+\y);
+      \draw[draw=BookHistory,line width=\BookOpenBookDetailWidth]
+        (3.45,1.3+\y) .. controls (2.55,1.25+\y) and (1.55,.9+\y) .. (.85,.5+\y);
     }%
   \end{tikzpicture}%
 }
 \newfontfamily\BookMediumLabelFont{\BookMediumFontName}[Script=Default]
-% Τα διαφορετικά στοιχεία παραμένουν το φόντο, το χρώμα της γραμμής,
-% ο τίτλος/γραμματοσειρά του και το σχέδιο. Όλα τα υπόλοιπα κοινά.
-\newtcolorbox{AttentionBox}{%
-  BookCallout,
-  colback=BookAlertBackground,
-  borderline west={1.35pt}{0pt}{BookAlert},
-  before upper={\noindent{\sffamily\bfseries\fontsize{9.1}{11.5}\selectfont\color{BookAlert}\LabelAlert}\par\smallskip\small},
-  overlay unbroken={\BookCalloutCenteredIcon{\BookCalloutWarning}},
-  overlay first={\BookCalloutCenteredIcon{\BookCalloutWarning}}
-}
-\newtcolorbox{ThinkBox}{%
-  BookCallout,
-  colback=BookThinkBackground,
-  borderline west={1.35pt}{0pt}{BookThinkAccent},
-  before upper={\noindent{\BookMediumLabelFont\fontsize{\BookThinkLabelSize}{11.5}\selectfont\color{BookThinkAccent}\LabelThink}\par\smallskip\small},
-  overlay unbroken={\BookCalloutCenteredIcon{\BookCalloutBulb}},
-  overlay first={\BookCalloutCenteredIcon{\BookCalloutBulb}}
-}
-% ---------------------------------------------------------------------------
-% ΙΣΤΟΡΙΚΕΣ ΙΣΤΟΡΙΕΣ: HistoryBox
-% Χρήση: \begin{HistoryBox}[Προαιρετικός τίτλος] ... \end{HistoryBox}
-% Κληρονομεί το BookCallout, ακριβώς όπως ThinkBox και AttentionBox.
-% SCREEN: ουδέτερο πολύ αχνό ΓΚΡΙ, όχι κίτρινο.
-% PRINT: 10% μαύρο φόντο + 55% μαύρο στην αριστερή γραμμή.
-% Μοναδικό περιεχόμενο: ένα προαιρετικό θέμα, έπειτα οποιοδήποτε κείμενο,
-% μαθηματικό τύπο, εικόνα ή υποσημείωση. Το breakable επιτρέπει αλλαγή σελίδας.
-% ---------------------------------------------------------------------------
-% v0.30: Το HistoryBox ΚΛΗΡΟΝΟΜΕΙ από BookCallout.
-% Πλέον έχει ακριβώς το ίδιο πλάτος πλευρικής ζώνης (17.5mm),
-% κατακόρυφο κεντράρισμα στο frame.west και τις ίδιες αποστάσεις.
-% Μόνο το γκρι χρώμα, ο τίτλος και το σχέδιο διαφέρουν.
-% Το ίδιο όνομα HistoryBox και το ίδιο προαιρετικό όρισμα εξακολουθούν
-% να ισχύουν για κάθε παλιό κεφάλαιο. Σε breakable κουτί το εικονίδιο
-% τοποθετείται στο κατακόρυφο μέσο του πρώτου τμήματος.
-\newtcolorbox{HistoryBox}[1][]{%
-  BookCallout,
-  colback=BookHistorySoft,
-  borderline west={1.35pt}{0pt}{BookHistoryBorder},
-  before upper={\noindent{\BookMediumLabelFont\fontsize{9.2}{11.5}\selectfont
-    \color{BookHistory}\LabelHistory\ifstrempty{#1}{}{ — #1}}\par\smallskip\small},
-  overlay unbroken={\BookCalloutCenteredIcon{\BookCalloutOpenBook}},
-  overlay first={\BookCalloutCenteredIcon{\BookCalloutOpenBook}}
-}
+% Μία κοινή κατασκευή για τίτλο, γραμμή, φόντο και εικονίδιο των τριών κουτιών.
+\input{styles/book-callouts.tex}
 
 % ---------------------------------------------------------------------------
 % ΡΗΣΕΙΣ / ΑΠΟΦΘΕΓΜΑΤΑ: BookQuote

@@ -101,6 +101,39 @@ class WholeSourceTests(unittest.TestCase):
         p.write_text(p.read_text()+r'\textcolor{red}{Unmanaged}',encoding='utf-8')
         self.assertTrue(any('main-print2.tex' in e and 'unmanaged' in e for e in validate(self.root)))
 
+    def test_private_callout_redefinition_is_rejected(self):
+        p=self.root/'styles/universalbook.sty'
+        p.write_text(p.read_text()+r'\newtcolorbox{ThinkBox}{colback=BookThinkBackground}')
+        self.assertTrue(any('bypasses shared construction' in e for e in validate(self.root)))
+
+    def test_callout_role_drift_is_rejected(self):
+        p=self.root/'styles/book-callouts.tex'
+        p.write_text(p.read_text().replace(
+            r'\BookDeclareCallout{ThinkBox}{BookThinkBackground}',
+            r'\BookDeclareCallout{ThinkBox}{BookAlertBackground}'))
+        self.assertTrue(any('ThinkBox: must use the shared factory' in e for e in validate(self.root)))
+
+    def test_factory_must_actually_delegate_to_shared_renderer(self):
+        p=self.root/'styles/book-callouts.tex'
+        p.write_text(p.read_text().replace(
+            r'\newtcolorbox{#1}{BookCalloutRender=',
+            r'\newtcolorbox{#1}{BookPanel='))
+        self.assertTrue(any('must delegate to the common renderer' in e for e in validate(self.root)))
+
+    def test_callout_break_overlay_cannot_be_removed_for_one_box(self):
+        p=self.root/'styles/book-callouts.tex'
+        p.write_text(p.read_text().replace(
+            r'overlay first={\BookCalloutCenteredIcon{#3}}',
+            'overlay first={}'))
+        self.assertTrue(any('first-piece icon pipeline is incomplete' in e for e in validate(self.root)))
+
+    def test_history_optional_title_signature_is_preserved(self):
+        p=self.root/'styles/book-callouts.tex'
+        p.write_text(p.read_text().replace(
+            r'\BookDeclareTitledCallout{HistoryBox}',
+            r'\BookDeclareCallout{HistoryBox}'))
+        self.assertTrue(any('HistoryBox: must use the shared factory' in e for e in validate(self.root)))
+
     def test_generated_file_drift_fails(self):
         p=self.root/'config/palette-screen.tex'
         p.write_text(p.read_text().replace('8493A9','7E93A9'))
