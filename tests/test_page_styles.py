@@ -4,6 +4,8 @@ One shared fixture is compiled per edition. No source-text matching is used:
 assertions inspect text, vector geometry and rules in the actual PDFs.
 """
 import importlib.util
+from collections import Counter, defaultdict
+import hashlib
 import json
 import math
 from pathlib import Path
@@ -96,6 +98,16 @@ class PageStyleTests(unittest.TestCase):
         cls.temp = tempfile.TemporaryDirectory(prefix="book-page-styles-")
         cls.addClassCleanup(cls.temp.cleanup)
         cls.documents, cls.paths, cls.icon_metrics = {}, {}, {}
+        cls.geometry = json.loads((ROOT / "assets/header-icon-geometry.json").read_text(encoding="utf-8"))
+        cls.source_path = ROOT / cls.geometry["source_path"]
+        with Image.open(cls.source_path) as source:
+            cls.source_size = source.size
+            foreground = source.getchannel("A").point(lambda alpha: 255 if alpha >= 128 else 0)
+        cls.source_bbox = foreground.getbbox()
+        if cls.source_bbox is None:
+            raise AssertionError("The supplied header logo has no opaque foreground")
+        cls.source_reference = ImageChops.invert(foreground)
+        cls.source_ink_pixels = foreground.histogram()[255]
         for edition in ("screen", "print"):
             folder = Path(cls.temp.name) / edition
             folder.mkdir()
@@ -165,10 +177,11 @@ class PageStyleTests(unittest.TestCase):
             self.assertAlmostEqual((height + depth) * 25.4 / 72.27, 6.4, delta=.01)
             self.assertAlmostEqual(logical_width / (height + depth), 160 / 139, delta=.002)
             self.assertLessEqual(body_bounds.height, (height + depth) * 72 / 72.27 + .02)
+            frame_ink = self.geometry["frame_ink_bbox"]
             self.assertAlmostEqual(body_bounds.width / (logical_width * 72 / 72.27),
-                                   152 / 160, delta=.002)
+                                   (frame_ink[2] - frame_ink[0]) / 160, delta=.002)
             self.assertAlmostEqual(body_bounds.height / ((height + depth) * 72 / 72.27),
-                                   130 / 139, delta=.002)
+                                   (frame_ink[3] - frame_ink[1]) / 139, delta=.002)
             reference_top = pages[0]["birds"][0]["bbox"][1]
             reference_shape, reference_points = path_geometry(pages[0]["birds"][0])
             odd, even = {}, {}
@@ -231,57 +244,75 @@ class PageStyleTests(unittest.TestCase):
                         self.assertEqual(values, {255}, "Bird must not mark any other ink plate")
             self.assertTrue(found_spot)
 
-    def test_vector_bird_matches_the_archived_binary_shape_on_its_native_grid(self):
-        # The approved old image is retained solely as geometry evidence. Work
-        # at its native grid so recoloring does not affect the comparison.
-        reference_file = ROOT / "archive/legacy-sources/header-icon-black.png"
-        with Image.open(reference_file) as image:
-            reference = image.convert("L")
-        self.assertEqual(reference.size, (160, 139))
-        self.assertLessEqual(set(PDF.pixels(reference)), {0, 255})
+    def test_vector_bird_matches_the_uploaded_alpha_shape_on_its_native_grid(self):
+        # Derive the reference independently from the actual uploaded RGBA
+        # file, not from a generated raster, vector file or declared mask.
+        reference = self.source_reference
+        width, height = self.source_size
+        source_x0, source_y0, source_x1, source_y1 = self.source_bbox
+        ink_width, ink_height = source_x1 - source_x0, source_y1 - source_y0
+        self.assertEqual(self.geometry["schema_version"], 1)
+        self.assertEqual(self.geometry["source_alpha_threshold"], 128)
+        self.assertEqual(self.geometry["source_size"], list(self.source_size))
+        self.assertEqual(self.geometry["source_ink_bbox"], list(self.source_bbox))
+        self.assertEqual(self.geometry["source_ink_pixels"], self.source_ink_pixels)
+        self.assertEqual(self.geometry["source_sha256"], hashlib.sha256(self.source_path.read_bytes()).hexdigest())
+        self.assertEqual(self.geometry["frame_size"], [160, 139])
+        scale = 130 / ink_height
+        translate_x = (160 - ink_width * scale) / 2 - source_x0 * scale
+        translate_y = 4 - source_y0 * scale
+        transform = self.geometry["source_to_frame"]
+        self.assertAlmostEqual(transform["scale"], scale, delta=1e-12)
+        for actual, expected in zip(transform["translate"], (translate_x, translate_y)):
+            self.assertAlmostEqual(actual, expected, delta=1e-10)
+        expected_frame = (source_x0 * scale + translate_x, 4,
+                          source_x1 * scale + translate_x, 134)
+        for actual, expected in zip(self.geometry["frame_ink_bbox"], expected_frame):
+            self.assertAlmostEqual(actual, expected, delta=1e-9)
         page = self.find("screen", "BODY-EXPLICIT-EMPTY")
         bounds = fitz.Rect(page["body_vectors"][0]["bbox"])
-        logical_width, height, depth = self.icon_metrics["screen"]
-        cassette_width = logical_width * 72 / 72.27
-        cassette_height = (height + depth) * 72 / 72.27
-        # Pixel contour ink bounds are (4, 4, 156, 134) on the 160x139
-        # cassette. Recover the full transparent margin around the ink.
-        x0 = bounds.x0 - 4 / 160 * cassette_width
-        y0 = bounds.y0 - 4 / 139 * cassette_height
-        cassette = fitz.Rect(x0, y0, x0 + cassette_width, y0 + cassette_height)
-        # Invert actual PDF coordinates into the native pixel-edge grid. PDF
-        # number serialization introduces <.01 pixel rounding here; assert the
-        # grid explicitly before sampling the exact filled shape at pixel
-        # centers. This avoids renderer-specific rules for pixels that merely
-        # touch an edge (Ghostscript conservatively marks such edge pixels).
-        actual = Image.new("L", (160, 139), 255)
+        # The independent cassette/aspect tests above validate the physical
+        # scale. Normalize the ink bounds here to cancel global PDF transform
+        # rounding, then invert the actual path vertices to the source grid.
+        # No tolerance is allowed in the final binary mask comparison.
+        actual_pixels = bytearray(b"\xff" * (width * height))
         for path in page["body_vectors"][0]["paths"]:
-            edges = []
+            events = defaultdict(list)
             for item in path["items"]:
                 self.assertEqual(item[0], "l", "Lossless pixel contours must retain straight edges")
                 endpoints = []
                 for point in item[1:]:
-                    x = (point.x - cassette.x0) / cassette.width * 160
-                    y = (point.y - cassette.y0) / cassette.height * 139
-                    self.assertAlmostEqual(x, round(x), delta=.01)
-                    self.assertAlmostEqual(y, round(y), delta=.01)
+                    x = source_x0 + (point.x - bounds.x0) / bounds.width * ink_width
+                    y = source_y0 + (point.y - bounds.y0) / bounds.height * ink_height
+                    self.assertAlmostEqual(x, round(x), delta=.02)
+                    self.assertAlmostEqual(y, round(y), delta=.02)
                     endpoints.append((round(x), round(y)))
                 (xa, ya), (xb, yb) = endpoints
                 self.assertTrue(xa == xb or ya == yb, "Pixel contours must remain axis-aligned")
-                edges.append(((xa, ya), (xb, yb)))
-            for y in range(139):
-                center_y = y + .5
-                crossings = []
-                for (xa, ya), (xb, yb) in edges:
-                    if ya <= center_y < yb:
-                        crossings.append((xa, 1))
-                    elif yb <= center_y < ya:
-                        crossings.append((xb, -1))
-                for x in range(160):
-                    winding = sum(direction for edge_x, direction in crossings if edge_x <= x + .5)
+                self.assertTrue(0 <= xa <= width and 0 <= xb <= width)
+                self.assertTrue(0 <= ya <= height and 0 <= yb <= height)
+                if ya != yb:
+                    start, end = min(ya, yb), max(ya, yb)
+                    direction = 1 if yb > ya else -1
+                    events[start].append((xa, direction))
+                    events[end].append((xa, -direction))
+            # Active edge events make the high-resolution source check
+            # proportional to edges + scanline crossings, not pixels*edges.
+            active = Counter()
+            for y in range(height):
+                for x, direction in events.get(y, ()):
+                    active[x] += direction
+                    if not active[x]:
+                        del active[x]
+                winding, previous_x = 0, 0
+                for x in sorted(active):
                     inside = winding % 2 != 0 if path.get("even_odd") else winding != 0
-                    if inside:
-                        actual.putpixel((x, y), 0)
+                    if inside and previous_x < x:
+                        actual_pixels[y * width + previous_x:y * width + x] = b"\0" * (x - previous_x)
+                    winding += active[x]
+                    previous_x = x
+                self.assertEqual(winding, 0, "The filled PDF contour must close on every scanline")
+        actual = Image.frombytes("L", (width, height), bytes(actual_pixels))
         difference = ImageChops.difference(actual, reference)
         self.assertIsNone(difference.getbbox(), "Vector contour changes the original bird silhouette")
 

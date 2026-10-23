@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "source_path": "archive/legacy-sources/header-icon-original-hires.png",
+  "source_sha256": "d031f856abc51b1983a6c088b4ddee81331c8a95fdaae402cbbfcd12fa179941",
+  "source_size": [
+    1987,
+    1854
+  ],
+  "source_alpha_threshold": 128,
+  "source_ink_bbox": [
+    100,
+    177,
+    1841,
+    1672
+  ],
+  "source_ink_pixels": 486476,
+  "frame_size": [
+    160,
+    139
+  ],
+  "frame_ink_bbox": [
+    4.304347826086956,
+    4,
+    155.69565217391303,
+    134
+  ],
+  "source_to_frame": {
+    "scale": 0.08695652173913043,
+    "translate": [
+      -4.391304347826087,
+      -11.391304347826088
+    ]
+  },
+  "contours": 2,
+  "vertices": 8202,
+  "method": "alpha>=128 exact pixel-edge contours; collinear simplification only"
+}

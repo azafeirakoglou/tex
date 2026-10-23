@@ -1,0 +1,80 @@
+{
+  "source_path": "archive/legacy-sources/header-icon-original-hires.png",
+  "source_sha256": "d031f856abc51b1983a6c088b4ddee81331c8a95fdaae402cbbfcd12fa179941",
+  "source_dimensions": [
+    1987,
+    1854
+  ],
+  "source_mode": "RGBA",
+  "mask_rule": "alpha >= 128; edge antialiasing discarded, not converted into ink tints",
+  "native_ink_bbox_exclusive": [
+    100,
+    177,
+    1841,
+    1672
+  ],
+  "native_ink_dimensions": [
+    1741,
+    1495
+  ],
+  "native_ink_pixels": 486476,
+  "boundary_edges_before_collinear_simplification": 13784,
+  "paths": 2,
+  "vertices": 8202,
+  "vertices_per_path": [
+    6288,
+    1914
+  ],
+  "ambiguous_diagonal_vertices": 0,
+  "canvas": [
+    160,
+    139
+  ],
+  "affine_transform": {
+    "scale_exact": "2/23",
+    "scale": 0.08695652173913043,
+    "translate_x_exact": "-101/23",
+    "translate_y_exact": "-262/23",
+    "matrix_exact": [
+      [
+        "2/23",
+        "0",
+        "-101/23"
+      ],
+      [
+        "0",
+        "2/23",
+        "-262/23"
+      ],
+      [
+        "0",
+        "0",
+        "1"
+      ]
+    ]
+  },
+  "transformed_ink_bbox": [
+    4.304347826086956,
+    4.0,
+    155.69565217391303,
+    134.0
+  ],
+  "visible_ink_height_units": 130,
+  "header_canvas_height_mm": 6.4,
+  "visible_ink_height_mm": 5.985611510791367,
+  "native_svg_roundtrip": {
+    "different_pixels": 0,
+    "added_pixels": 0,
+    "removed_pixels": 0,
+    "iou": 1.0
+  },
+  "transformed_svg_inverse_affine_roundtrip": {
+    "different_pixels": 0,
+    "added_pixels": 0,
+    "removed_pixels": 0,
+    "iou": 1.0
+  },
+  "geometry": "exact pixel-edge contours with collinear simplification only; no smoothing or shape fitting",
+  "fill": "BookPrimary in TikZ; currentColor in SVG; no stroke, opacity or background rectangle",
+  "version": "0.40"
+}
