@@ -16,7 +16,7 @@
 % Το τελικό PDF παράγεται με XeLaTeX. Όχι με pdfLaTeX.
 % ===========================================================================
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{styles/universalbook}[2026/10/23 Modular Greek textbook design v0.42]
+\ProvidesPackage{styles/universalbook}[2026/10/23 Modular Greek textbook design v0.43]
 % Γραμματοσειρές OpenType/TrueType. Η αλλαγή γίνεται από τον config.
 \RequirePackage{fontspec}
 \RequirePackage{polyglossia}
@@ -591,18 +591,19 @@
     \fill[BookAlert] (0,-1.65) circle (.37);
   \end{tikzpicture}%
 }
-% v0.35: νέο σχέδιο από την αρχή — πλατύ βιβλίο με χαμηλή κεντρική πτύχωση.
+% v0.43: το ύψος του ανοιχτού βιβλίου αυξάνεται ανεξάρτητα από το πλάτος.
 % Καμπύλα φύλλα, ξεχωριστό εξώφυλλο και γραμμές που ακολουθούν τις σελίδες.
 % Η γεωμετρία είναι κοινή στα δύο PDF· μόνο ο σημασιολογικός ρόλος δίνει χρώμα.
 \newcommand{\BookCalloutOpenBook}{%
   \begin{tikzpicture}[x=1mm,y=1mm,scale={\BookCalloutIconScale*\BookOpenBookScale},
+    yscale=\BookOpenBookHeightScale,
     line cap=round,line join=round]
     % Εξώφυλλο κάτω από τα δύο ανοιχτά φύλλα.
     \draw[draw=BookHistory,line width=\BookOpenBookOutlineWidth]
       (-4.9,2.1)--(-4.9,-2.2)
       .. controls (-3,-1.9) and (-1.2,-2.2) .. (0,-3.15)
       .. controls (1.2,-2.2) and (3,-1.9) .. (4.9,-2.2)--(4.9,2.1);
-    % Ασύγχυτο σχήμα ανοικτού βιβλίου: χαμηλά το κέντρο, ψηλά οι έξω άκρες.
+    % Ανοικτό βιβλίο: χαμηλά το κέντρο, ψηλά οι έξω άκρες.
     \draw[draw=BookHistory,line width=\BookOpenBookOutlineWidth]
       (0,-2.65)
       .. controls (-1.1,-1.7) and (-2.8,-1.3) .. (-4.5,-1.7)

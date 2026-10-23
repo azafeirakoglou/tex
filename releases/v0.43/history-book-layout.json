@@ -1,0 +1,35 @@
+{
+  "version": "0.43",
+  "status": "passed",
+  "reference": "v0.42",
+  "editions": {
+    "PRINT": {
+      "reference_sha256": "410044267ffb9e357d8c13d576345558acf29dcd16da46fba7b4d44940e70d92",
+      "new_sha256": "74ac8c6c2fe63df45597bc726de71b7e489b86304357a967ccc9fec7fc39bf4c",
+      "old_mm": [
+        9.790175459120007,
+        6.093889448377821
+      ],
+      "new_mm": [
+        9.790175459120007,
+        7.9220401340060755
+      ],
+      "height_ratio": 1.2999973499871915,
+      "same_width_center_strokes_color_box_and_body_text_layout": true
+    },
+    "SCREEN": {
+      "reference_sha256": "ecdfd8a1dd4c5075c38cee2cf34b4c9d862f2b4fb312550b5133c0f8ecd31a05",
+      "new_sha256": "cae8fe20392097a993d746db221479d15cc9352ebf9eecea53c7d5117b0e4dde",
+      "old_mm": [
+        9.790175459120007,
+        6.093889448377821
+      ],
+      "new_mm": [
+        9.790175459120007,
+        7.9220401340060755
+      ],
+      "height_ratio": 1.2999973499871915,
+      "same_width_center_strokes_color_box_and_body_text_layout": true
+    }
+  }
+}

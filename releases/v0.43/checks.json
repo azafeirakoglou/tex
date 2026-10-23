@@ -1,0 +1,10 @@
+{
+  "version": "0.43",
+  "status": "passed",
+  "source_color_tests_run": 20,
+  "pdf_pairs_passed": 9,
+  "main_pages_per_edition": 20,
+  "all_output_pages": 82,
+  "overfull_boxes": 0,
+  "comparison": "history-book-layout.json"
+}
