@@ -1,0 +1,39 @@
+{
+  "version": "0.45",
+  "status": "passed",
+  "reference": "v0.44",
+  "editions": {
+    "PRINT": {
+      "reference_sha256": "6417dbf2700d79f6849d8bb4d306d186ea1f46301de784520f2c79eb39ba2b7d",
+      "new_sha256": "6ff16f17c226053d4d8ed565c6ba1fd4014a599aa063c4e9bdf19a8299141bc6",
+      "new_icon": "hourglass with sand",
+      "new_path_bounds_mm": [
+        7.592398325602214,
+        9.590392218695747
+      ],
+      "path_count": 6,
+      "sand_and_caps_use_same_ink_tint": true,
+      "stroke_widths_pdf_bp": [
+        0.6774600148200989,
+        0.8966400027275085
+      ],
+      "same_center_strokes_color_box_and_body_text_layout": true
+    },
+    "SCREEN": {
+      "reference_sha256": "fd2bc8d90173e03d93356572fa3d4fd23465b1349821454456343e8c291b0410",
+      "new_sha256": "c1519649116e18b6f385ab15092457a60891d72be3fac790ec98d6cfebd96e3d",
+      "new_icon": "hourglass with sand",
+      "new_path_bounds_mm": [
+        7.592398325602214,
+        9.590392218695747
+      ],
+      "path_count": 6,
+      "sand_and_caps_use_same_ink_tint": true,
+      "stroke_widths_pdf_bp": [
+        0.6774600148200989,
+        0.8966400027275085
+      ],
+      "same_center_strokes_color_box_and_body_text_layout": true
+    }
+  }
+}

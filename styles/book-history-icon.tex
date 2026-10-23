@@ -1,45 +1,37 @@
-% Ιστορικά ένθετα: διανυσματικό φτερό καλλιγραφίας με μελανοδοχείο.
-% Μόνο ο ρόλος BookHistory βάφει το σχέδιο· τα πάχη μένουν φυσικά pt.
-\newcommand{\BookCalloutQuillInk}{%
+% Ιστορικά ένθετα: διανυσματική κλεψύδρα με ορατή άμμο.
+% Μόνο BookHistory (55% μαύρο), χωρίς διαφάνεια ή πρόσθετες τονικότητες.
+\newcommand{\BookCalloutHourglass}{%
   \begin{tikzpicture}[x=1mm,y=1mm,
     scale={\BookCalloutIconScale*\BookHistoryIconScale},
     line cap=round,line join=round]
-    % Σώμα, ώμοι και μικρός λαιμός του ανοιχτού μελανοδοχείου.
+    % Συμμετρικό γυάλινο σώμα με στενό λαιμό στο κέντρο.
     \draw[draw=BookHistory,line width=\BookHistoryIconOutlineWidth]
-      (-3.75,-2.3)--(-3.75,-2.7)
-      .. controls (-3.75,-2.95) and (-4.55,-3.05) .. (-4.55,-3.5)
-      --(-4.55,-4.35)
-      .. controls (-4.55,-4.7) and (-4.35,-4.8) .. (-4,-4.8)
-      --(-1.4,-4.8)
-      .. controls (-1.05,-4.8) and (-.85,-4.7) .. (-.85,-4.35)
-      --(-.85,-3.5)
-      .. controls (-.85,-3.05) and (-1.65,-2.95) .. (-1.65,-2.7)
-      --(-1.65,-2.3);
-    \draw[draw=BookHistory,line width=\BookHistoryIconOutlineWidth]
-      (-2.7,-2.3) ellipse (1.05 and .3);
-    % Δύο ασύμμετρες σημαίες με μικρές εγκοπές: διαβάζονται ως φτερό.
-    \draw[draw=BookHistory,line width=\BookHistoryIconOutlineWidth]
-      (4.6,5.4)
-      .. controls (1.9,5.45) and (-.5,3.7) .. (-.85,1.7)
-      --(-.38,1.96)--(-1.05,1.12)
-      .. controls (-1.1,.6) and (-.75,.15) .. (-.35,-.05)
-      .. controls (.5,.1) and (1.05,.4) .. (1.48,1.11)
-      --(.8,1.13)--(1.25,1.55)
-      .. controls (3.25,2.35) and (4.35,3.85) .. cycle;
-    % Συνεχής καμπύλη ράχη και λεπτή πένα που μπαίνει στο στόμιο.
-    \draw[draw=BookHistory,line width=\BookHistoryIconOutlineWidth]
-      (-2.7,-2.3)
-      .. controls (-1.6,-.45) and (1.8,2.4) .. (4.3,5.1);
-    % Λίγες καθαρές νευρώσεις, με αρκετό κενό στο πραγματικό μέγεθος.
+      (-2.95,4.15)
+      .. controls (-2.95,2.0) and (-2.1,1.3) .. (-.55,.30)
+      .. controls (-.32,.12) and (-.32,-.12) .. (-.55,-.30)
+      .. controls (-2.1,-1.3) and (-2.95,-2.0) .. (-2.95,-4.15)
+      --(2.95,-4.15)
+      .. controls (2.95,-2.0) and (2.1,-1.3) .. (.55,-.30)
+      .. controls (.32,-.12) and (.32,.12) .. (.55,.30)
+      .. controls (2.1,1.3) and (2.95,2.0) .. (2.95,4.15)--cycle;
+    % Λίγη άμμος επάνω και χαμηλός σωρός κάτω, στον ίδιο ακριβώς τόνο.
+    \fill[BookHistory]
+      (-1.9,2.2)--(1.9,2.2)
+      .. controls (1.3,1.45) and (.7,1.05) .. (.12,.45)
+      --(-.12,.45)
+      .. controls (-.7,1.05) and (-1.3,1.45) .. cycle;
+    \fill[BookHistory]
+      (-2.4,-3.65)
+      .. controls (-1.6,-3.3) and (-.9,-2.5) .. (0,-2.15)
+      .. controls (.9,-2.5) and (1.6,-3.3) .. (2.4,-3.65)--cycle;
     \draw[draw=BookHistory,line width=\BookHistoryIconDetailWidth]
-      (-.72,1.03).. controls (-.3,1.2) and (.14,1.23) .. (.58,1.23);
-    \draw[draw=BookHistory,line width=\BookHistoryIconDetailWidth]
-      (-.24,2.55).. controls (.24,2.55) and (.73,2.43) .. (1.22,2.03);
-    \draw[draw=BookHistory,line width=\BookHistoryIconDetailWidth]
-      (1.05,3.98).. controls (1.52,3.9) and (1.91,3.62) .. (2.2,3.14);
-    \draw[draw=BookHistory,line width=\BookHistoryIconDetailWidth]
-      (1.7,1.82).. controls (1.92,2.45) and (2.03,2.93) .. (2.2,3.14);
-    \draw[draw=BookHistory,line width=\BookHistoryIconDetailWidth]
-      (3.24,3.05).. controls (3.18,3.6) and (3.12,3.96) .. (3.2,4.2);
+      (0,.1)--(0,-1.8);
+    % Συμπαγείς μικρές βάσεις, καθαρές και στο πραγματικό μέγεθος.
+    \fill[BookHistory,rounded corners=.18mm]
+      (-3.8,4.15) rectangle (3.8,4.8);
+    \fill[BookHistory,rounded corners=.18mm]
+      (-3.8,-4.8) rectangle (3.8,-4.15);
   \end{tikzpicture}%
 }
+% Συμβατότητα παλιού εσωτερικού ονόματος με το ενεργό ιστορικό σύμβολο.
+\newcommand{\BookCalloutQuillInk}{\BookCalloutHourglass}
