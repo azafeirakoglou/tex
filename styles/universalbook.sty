@@ -16,7 +16,7 @@
 % Το τελικό PDF παράγεται με XeLaTeX. Όχι με pdfLaTeX.
 % ===========================================================================
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{styles/universalbook}[2026/10/23 Modular Greek textbook design v0.33]
+\ProvidesPackage{styles/universalbook}[2026/10/23 Modular Greek textbook design v0.34]
 % Γραμματοσειρές OpenType/TrueType. Η αλλαγή γίνεται από τον config.
 \RequirePackage{fontspec}
 \RequirePackage{polyglossia}
@@ -495,23 +495,28 @@
 % τον ίδιο ρόλο BookThinkAccent (SCREEN BookSecondary / PRINT 55% spot).
 % Τα εικονίδια είναι vector TikZ και βάφονται αποκλειστικά με
 % σημασιολογικά χρώματα της παλέτας (SCREEN ή PRINT), όχι με τρίτο μελάνι.
-% Η κλίμακα του δοκιμίου Β μένει ίδια· v0.26 αυξάνει μόνο το πάχος λάμπας.
+% v0.34: λίγο μικρότερη λάμπα, ενισχυμένες γραμμές και ορατό νήμα.
 \newcommand{\BookCalloutBulb}{%
-  \begin{tikzpicture}[x=1mm,y=1mm,scale=\BookCalloutIconScale,
+  \begin{tikzpicture}[x=1mm,y=1mm,scale={\BookCalloutIconScale*\BookBulbScale},
     line cap=round,line join=round]
-    \draw[draw=BookThinkAccent,line width=.90pt] (-2.5,1.1)
+    \draw[draw=BookThinkAccent,line width=\BookBulbOutlineWidth] (-2.5,1.1)
       .. controls (-2.6,2.7) and (-1.5,3.7) .. (0,3.7)
       .. controls (1.5,3.7) and (2.6,2.7) .. (2.5,1.1)
       .. controls (2.45,-.3) and (1.15,-.65) .. (1,-1.8)
       -- (-1,-1.8)
       .. controls (-1.15,-.65) and (-2.45,-.3) .. cycle;
-    \draw[draw=BookThinkAccent,line width=.90pt] (-1.05,-2.55)--(1.05,-2.55);
-    \draw[draw=BookThinkAccent,line width=.90pt] (-.7,-3.25)--(.7,-3.25);
-    \draw[draw=BookThinkAccent,line width=.80pt] (0,4.65)--(0,5.35);
-    \draw[draw=BookThinkAccent,line width=.80pt] (-3.3,3.55)--(-3.9,4.1);
-    \draw[draw=BookThinkAccent,line width=.80pt] (3.3,3.55)--(3.9,4.1);
-    \draw[draw=BookThinkAccent,line width=.80pt] (-3.65,.6)--(-4.35,.6);
-    \draw[draw=BookThinkAccent,line width=.80pt] (3.65,.6)--(4.35,.6);
+    \draw[draw=BookThinkAccent,line width=\BookBulbOutlineWidth] (-1.05,-2.55)--(1.05,-2.55);
+    \draw[draw=BookThinkAccent,line width=\BookBulbOutlineWidth] (-.7,-3.25)--(.7,-3.25);
+    % Δύο στηρίγματα και τρεις κορυφές του νήματος βολφραμίου.
+    \draw[draw=BookThinkAccent,line width=\BookBulbFilamentWidth]
+      (-.5,-1.3)--(-.85,.35)--(-1.2,1.0)
+      --(-.8,1.65)--(-.4,1.0)--(0,1.65)--(.4,1.0)--(.8,1.65)--(1.2,1.0)
+      --(.85,.35)--(.5,-1.3);
+    \draw[draw=BookThinkAccent,line width=\BookBulbRayWidth] (0,4.65)--(0,5.35);
+    \draw[draw=BookThinkAccent,line width=\BookBulbRayWidth] (-3.3,3.55)--(-3.9,4.1);
+    \draw[draw=BookThinkAccent,line width=\BookBulbRayWidth] (3.3,3.55)--(3.9,4.1);
+    \draw[draw=BookThinkAccent,line width=\BookBulbRayWidth] (-3.65,.6)--(-4.35,.6);
+    \draw[draw=BookThinkAccent,line width=\BookBulbRayWidth] (3.65,.6)--(4.35,.6);
   \end{tikzpicture}%
 }
 \newcommand{\BookCalloutWarning}{%
