@@ -1,0 +1,264 @@
+[
+  {
+    "target": "print2",
+    "pages": 20,
+    "overfull": 0,
+    "underfull": 0,
+    "unresolved": [],
+    "missing_characters": [],
+    "warnings": []
+  },
+  {
+    "target": "starter-screen",
+    "pages": 4,
+    "overfull": 0,
+    "underfull": 0,
+    "unresolved": [],
+    "missing_characters": [],
+    "warnings": []
+  },
+  {
+    "target": "starter-print2",
+    "pages": 4,
+    "overfull": 0,
+    "underfull": 0,
+    "unresolved": [],
+    "missing_characters": [],
+    "warnings": []
+  },
+  {
+    "target": "stress-screen",
+    "pages": 68,
+    "overfull": 0,
+    "underfull": 0,
+    "unresolved": [],
+    "missing_characters": [],
+    "warnings": [
+      "Package caption Warning: Unused \\captionsetup[figure] on input line 149."
+    ]
+  },
+  {
+    "target": "stress-print2",
+    "pages": 68,
+    "overfull": 0,
+    "underfull": 0,
+    "unresolved": [],
+    "missing_characters": [],
+    "warnings": [
+      "Package caption Warning: Unused \\captionsetup[figure] on input line 149."
+    ]
+  },
+  {
+    "target": "screen",
+    "pages": 20,
+    "overfull": 0,
+    "underfull": 0,
+    "unresolved": [],
+    "missing_characters": [],
+    "warnings": []
+  },
+  {
+    "target": "sample-screen",
+    "pages": 5,
+    "overfull": 0,
+    "underfull": 0,
+    "unresolved": [],
+    "missing_characters": [],
+    "warnings": [
+      "Package caption Warning: Unused \\captionsetup[figure] on input line 149.",
+      "Package caption Warning: Unused \\captionsetup[table] on input line 150."
+    ]
+  },
+  {
+    "target": "sample-print2",
+    "pages": 5,
+    "overfull": 0,
+    "underfull": 0,
+    "unresolved": [],
+    "missing_characters": [],
+    "warnings": [
+      "Package caption Warning: Unused \\captionsetup[figure] on input line 149.",
+      "Package caption Warning: Unused \\captionsetup[table] on input line 150."
+    ]
+  },
+  {
+    "target": "figures-screen",
+    "pages": 6,
+    "overfull": 0,
+    "underfull": 1,
+    "unresolved": [],
+    "missing_characters": [],
+    "warnings": [
+      "Package caption Warning: The option `hypcap=true' will be ignored for this",
+      "Package caption Warning: The option `hypcap=true' will be ignored for this",
+      "Package caption Warning: The option `hypcap=true' will be ignored for this",
+      "Package caption Warning: The option `hypcap=true' will be ignored for this",
+      "Package caption Warning: The option `hypcap=true' will be ignored for this",
+      "Package caption Warning: The option `hypcap=true' will be ignored for this",
+      "Package caption Warning: The option `hypcap=true' will be ignored for this",
+      "Package caption Warning: Unused \\captionsetup[table] on input line 150."
+    ]
+  },
+  {
+    "target": "figures-print2",
+    "pages": 6,
+    "overfull": 0,
+    "underfull": 1,
+    "unresolved": [],
+    "missing_characters": [],
+    "warnings": [
+      "Package caption Warning: The option `hypcap=true' will be ignored for this",
+      "Package caption Warning: The option `hypcap=true' will be ignored for this",
+      "Package caption Warning: The option `hypcap=true' will be ignored for this",
+      "Package caption Warning: The option `hypcap=true' will be ignored for this",
+      "Package caption Warning: The option `hypcap=true' will be ignored for this",
+      "Package caption Warning: The option `hypcap=true' will be ignored for this",
+      "Package caption Warning: The option `hypcap=true' will be ignored for this",
+      "Package caption Warning: Unused \\captionsetup[table] on input line 150."
+    ]
+  },
+  {
+    "target": "assessment-screen",
+    "pages": 4,
+    "overfull": 0,
+    "underfull": 0,
+    "unresolved": [],
+    "missing_characters": [],
+    "warnings": [
+      "Package caption Warning: Unused \\captionsetup[figure] on input line 149.",
+      "Package caption Warning: Unused \\captionsetup[table] on input line 150."
+    ]
+  },
+  {
+    "target": "assessment-print2",
+    "pages": 4,
+    "overfull": 0,
+    "underfull": 0,
+    "unresolved": [],
+    "missing_characters": [],
+    "warnings": [
+      "Package caption Warning: Unused \\captionsetup[figure] on input line 149.",
+      "Package caption Warning: Unused \\captionsetup[table] on input line 150."
+    ]
+  },
+  {
+    "target": "tables-screen",
+    "pages": 1,
+    "overfull": 0,
+    "underfull": 1,
+    "unresolved": [],
+    "missing_characters": [],
+    "warnings": [
+      "Package caption Warning: Unused \\captionsetup[figure] on input line 149.",
+      "Package caption Warning: Unused \\captionsetup[table] on input line 150."
+    ]
+  },
+  {
+    "target": "tables-print2",
+    "pages": 1,
+    "overfull": 0,
+    "underfull": 1,
+    "unresolved": [],
+    "missing_characters": [],
+    "warnings": [
+      "Package caption Warning: Unused \\captionsetup[figure] on input line 149.",
+      "Package caption Warning: Unused \\captionsetup[table] on input line 150."
+    ]
+  },
+  {
+    "target": "opening-goals-screen",
+    "pages": 3,
+    "overfull": 0,
+    "underfull": 0,
+    "unresolved": [],
+    "missing_characters": [],
+    "warnings": [
+      "Package caption Warning: Unused \\captionsetup[figure] on input line 149.",
+      "Package caption Warning: Unused \\captionsetup[table] on input line 150."
+    ]
+  },
+  {
+    "target": "opening-goals-print2",
+    "pages": 3,
+    "overfull": 0,
+    "underfull": 0,
+    "unresolved": [],
+    "missing_characters": [],
+    "warnings": [
+      "Package caption Warning: Unused \\captionsetup[figure] on input line 149.",
+      "Package caption Warning: Unused \\captionsetup[table] on input line 150."
+    ]
+  },
+  {
+    "target": "history-statements-screen",
+    "pages": 2,
+    "overfull": 0,
+    "underfull": 0,
+    "unresolved": [],
+    "missing_characters": [],
+    "warnings": [
+      "Package caption Warning: Unused \\captionsetup[figure] on input line 149.",
+      "Package caption Warning: Unused \\captionsetup[table] on input line 150."
+    ]
+  },
+  {
+    "target": "history-statements-print2",
+    "pages": 2,
+    "overfull": 0,
+    "underfull": 0,
+    "unresolved": [],
+    "missing_characters": [],
+    "warnings": [
+      "Package caption Warning: Unused \\captionsetup[figure] on input line 149.",
+      "Package caption Warning: Unused \\captionsetup[table] on input line 150."
+    ]
+  },
+  {
+    "target": "callouts-screen",
+    "pages": 1,
+    "overfull": 0,
+    "underfull": 0,
+    "unresolved": [],
+    "missing_characters": [],
+    "warnings": [
+      "Package caption Warning: Unused \\captionsetup[figure] on input line 149.",
+      "Package caption Warning: Unused \\captionsetup[table] on input line 150."
+    ]
+  },
+  {
+    "target": "callouts-print2",
+    "pages": 1,
+    "overfull": 0,
+    "underfull": 0,
+    "unresolved": [],
+    "missing_characters": [],
+    "warnings": [
+      "Package caption Warning: Unused \\captionsetup[figure] on input line 149.",
+      "Package caption Warning: Unused \\captionsetup[table] on input line 150."
+    ]
+  },
+  {
+    "target": "palette-screen",
+    "pages": 1,
+    "overfull": 0,
+    "underfull": 0,
+    "unresolved": [],
+    "missing_characters": [],
+    "warnings": [
+      "Package caption Warning: Unused \\captionsetup[figure] on input line 149.",
+      "Package caption Warning: Unused \\captionsetup[table] on input line 150."
+    ]
+  },
+  {
+    "target": "palette-print2",
+    "pages": 1,
+    "overfull": 0,
+    "underfull": 0,
+    "unresolved": [],
+    "missing_characters": [],
+    "warnings": [
+      "Package caption Warning: Unused \\captionsetup[figure] on input line 149.",
+      "Package caption Warning: Unused \\captionsetup[table] on input line 150."
+    ]
+  }
+]

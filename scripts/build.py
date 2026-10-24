@@ -2,6 +2,7 @@
 """Build one edition with its own aux tree, using latexmk convergence."""
 from pathlib import Path
 import argparse
+import os
 import subprocess
 import sys
 from setup_environment import ROOT, LOCAL, runtime_env
@@ -9,6 +10,10 @@ from setup_environment import ROOT, LOCAL, runtime_env
 # Existing public target names remain valid. Every target has an isolated output tree.
 TARGETS = {
     'print2': ('main-print2.tex', 'Physics_A_Print_Technical', 'print'),
+    'starter-screen': ('starter.tex', 'Starter_Screen', 'starter-screen'),
+    'starter-print2': ('starter-print2.tex', 'Starter_Print', 'starter-print2'),
+    'stress-screen': ('stress-screen.tex', 'Stress_Screen', 'stress-screen'),
+    'stress-print2': ('stress-print2.tex', 'Stress_Print', 'stress-print2'),
     'screen': ('main.tex', 'Physics_A_Screen', 'screen'),
     'sample-screen': ('collab-screen.tex', 'Sample_Collaborators_Blue', 'sample-screen'),
     'sample-print2': ('collab-print2.tex', 'Sample_Collaborators_Print_Technical', 'sample-print2'),
@@ -44,6 +49,8 @@ def main():
     command = ['latexmk', '-xelatex', '-interaction=nonstopmode', '-halt-on-error',
                '-file-line-error', '-synctex=1', '-e', '$max_repeat = 8;',
                '-outdir=' + str(output), '-jobname=' + jobname, source]
+    if os.environ.get('BOOK_FORCE_REBUILD') == '1':
+        command.insert(1, '-g')
     return subprocess.run(command, cwd=ROOT, env=runtime_env()).returncode
 
 

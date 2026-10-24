@@ -1,0 +1,34 @@
+% Πίνακες πολλών σελίδων: ίδια κεφαλίδα, τόνοι και γραμματοσειρά με τους
+% σύντομους πίνακες. Χρησιμοποιούνται σε μία στήλη, έξω από table/multicols.
+% Σύνταξη: \begin{BookLongTable}[Λεζάντα\label{tab:key}]{στήλες}{κεφαλίδα}
+% Το header περιέχει \BookTableHead{...} & ... χωρίς τελικό \\
+% Το columns χρησιμοποιεί p{...}/l/c/r, όχι X. Το συνολικό πλάτος μαζί με
+% tabcolsep πρέπει να χωράει στη \linewidth. Οι γραμμές γράφονται κανονικά.
+\RequirePackage{longtable}
+\newcommand{\BookLongTableStart}[4]{%
+  \begingroup\small\color{BookInk}%
+  \renewcommand{\arraystretch}{\BookTableRowStretch}%
+  \setlength{\LTleft}{0pt plus 1fill}\setlength{\LTright}{0pt plus 1fill}%
+  \setlength{\LTpre}{6pt}\setlength{\LTpost}{8pt}%
+  \setlength{\LTcapwidth}{\linewidth}%
+  \rowcolors{2}{#1}{white}%
+  \ifstrempty{#2}{%
+    \def\BookLongFirstHead{\BookTableHeaderRow #4\\}%
+  }{%
+    \def\BookLongFirstHead{\caption{#2}\\\BookTableHeaderRow #4\\}%
+  }%
+  \longtable{#3}%
+  \BookLongFirstHead
+  \endfirsthead
+  \BookTableHeaderRow #4\\
+  \endhead
+  \endfoot
+  \endlastfoot
+}
+\newcommand{\BookLongTableEnd}{\endlongtable\endgroup}
+\newenvironment{BookLongTable}[3][]{%
+  \BookLongTableStart{\BookTableStripeFill}{#1}{#2}{#3}%
+}{\BookLongTableEnd}
+\newenvironment{BookLongPlainTable}[3][]{%
+  \BookLongTableStart{white}{#1}{#2}{#3}%
+}{\BookLongTableEnd}

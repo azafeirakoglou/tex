@@ -15,7 +15,7 @@
 \newcommand{\BookSubtitle}{Θεωρία · Μεθοδολογία · Παραδείγματα · Ασκήσεις}
 \newcommand{\BookPublisher}{ΕΚΔΟΤΙΚΟ ΠΡΟΤΥΠΟ}
 \newcommand{\BookAuthors}{Δοκιμαστική μακέτα — όχι τελικό βιβλίο}
-\newcommand{\BookEdition}{Καθολική μακέτα v0.46 · Οκτώβριος 2026}
+\newcommand{\BookEdition}{Καθολική μακέτα v1.0.0 · Οκτώβριος 2026}
 \newcommand{\BookShortName}{Φυσική Α΄ Λυκείου}
 
 % ---------------------------------------------------------------------------
@@ -42,8 +42,8 @@
 \ShowAnswerstrue
 % 3. Γραμματοσειρές — δεν διανέμουμε αρχεία γραμματοσειρών στο ZIP.
 % Body: ελληνικό κυρίως κείμενο, Heading: τίτλοι, Math: εξισώσεις.
-% Η STIX Two Math είναι ΠΡΟΣΩΡΙΝΗ δοκιμαστική επιλογή.
-% Περιμένουμε την αισθητική έγκριση της Θάλειας.
+% Σταθερές προεπιλογές v1.0.0: Inter / Noto Serif / STIX Two Math.
+% Τα ονόματα παραμένουν ρυθμιζόμενα για επόμενα βιβλία.
 % Για επιστροφή στην παλιά MathFontName: latinmodern-math.otf
 % Για το βάρος Medium/Semibold αλλάζεις μόνο τα αντίστοιχα ονόματα εδώ.
 % Μετά εκτελείς XeLaTeX δύο φορές για ενημέρωση παραπομπών και αρίθμησης.
@@ -269,3 +269,17 @@
 \newcommand{\BookFigAuxWidth}{0.45pt}     % βοηθητικά/οδηγοί
 \newcommand{\BookFigArrowLength}{2.5mm}  % μήκος αιχμής
 \newcommand{\BookFigArrowWidth}{1.7mm}   % άνοιγμα αιχμής
+
+% v1.0.0 — κοινή τυπογραφία και διαστάσεις σχημάτων.
+\newcommand{\BookFigLabelFont}{\sffamily\fontsize{9}{11}\selectfont}
+\newcommand{\BookFigTickFont}{\sffamily\fontsize{8}{9.6}\selectfont}
+\newcommand{\BookFigObjectWidth}{0.80pt}
+\newcommand{\BookFigTickWidth}{0.50pt}
+\newcommand{\BookFigGridWidth}{0.30pt}
+\newcommand{\BookFigPlotWidth}{104mm}
+\newcommand{\BookFigPlotHeight}{60mm}
+\newcommand{\BookFigColumnPlotWidth}{46mm}
+\newcommand{\BookFigColumnPlotHeight}{35mm}
+% Μέγιστο συνολικό πλάτος μαζί με γράμματα/μονάδες.
+\newcommand{\BookFigMaxWidth}{133mm}
+\newcommand{\BookFigColumnMaxWidth}{63.5mm}

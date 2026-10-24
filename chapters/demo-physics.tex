@@ -18,19 +18,19 @@
 \section{Περιγραφή της κίνησης}
 Για την περιγραφή της ευθύγραμμης κίνησης ορίζουμε έναν άξονα αναφοράς και θετική φορά. Η θέση ενός σώματος προσδιορίζεται από την αλγεβρική τιμή της συντεταγμένης του.
 % Τα παλαιότερα δοκιμαστικά σχέδια χρησιμοποιούν πλέον book/axis,
-% book/velocity και book/plotA: κοινά στυλ από styles/book-figures.tex.
+% book/mainvector και book/maincurve: κοινά στυλ από styles/book-figures.tex.
 % KeyFormula = πλαίσιο ανάδειξης βασικής εξίσωσης.
 % Εντός του χρησιμοποιούμε κανονική μαθηματική σύνταξη \(...\) ή \[...\].
 \begin{KeyFormula}
 \(\Delta x=x_{\mathrm{τελ}}-x_{\mathrm{αρχ}}\qquad\text{και}\qquad \upsilon=\dfrac{\Delta x}{\Delta t}\)
 \end{KeyFormula}
 \begin{center}
-\begin{tikzpicture}[x=.95cm,y=.8cm,>=Stealth]
-\draw[book/axis] (-5,0)--(5,0) node[right] {$x$};
-\foreach \x in {-4,-2,0,2,4} {\draw[BookPrimary] (\x,.10)--(\x,-.10) node[below=2pt]{\footnotesize $\x$};}
-\fill[BookPrimary] (-3,0) circle (1.6pt) node[above]{\scriptsize A};
-\fill[BookPrimary] (3,0) circle (1.6pt) node[above]{\scriptsize B};
-\draw[book/velocity] (-3,.64)--(3,.64) node[midway,above] {\footnotesize $\Delta x$};
+\begin{tikzpicture}[x=.95cm,y=.8cm]
+\draw[book/axis] (-5,0)--(5,0) node[book/physlabel,right] {$x\,(\mathrm{m})$};
+\foreach \x in {-4,-2,0,2,4} {\draw[book/tick] (\x,.10)--(\x,-.10) node[book/ticklabel,below=2pt]{$\x$};}
+\node[book/endpoint] at (-3,0) {};\node[book/physlabel,above=2pt] at (-3,0) {A};
+\node[book/endpoint] at (3,0) {};\node[book/physlabel,above=2pt] at (3,0) {B};
+\draw[book/mainvector] (-3,.64)--(3,.64) node[book/physlabel,midway,above] {$\Delta x$};
 \end{tikzpicture}
 \end{center}
 % «▲ ΠΡΟΣΟΧΗ»: έχει δικό του semantic χρώμα/σύμβολο, άρα κάθε
@@ -41,14 +41,14 @@
 \section{Από το διάγραμμα στη φυσική ερμηνεία}
 Η μορφή της γραφικής παράστασης παρέχει πληροφορίες για την κινητική κατάσταση. Στο ακόλουθο δοκιμαστικό διάγραμμα η θέση αυξάνεται γραμμικά με τον χρόνο.
 \begin{center}
-\begin{tikzpicture}[x=.65cm,y=.40cm,>=Stealth]
-\draw[book/axis] (0,0)--(8.0,0) node[right] {$t\,(s)$};
-\draw[book/axis] (0,0)--(0,7.0) node[above] {$x\,(m)$};
-\foreach \x in {2,4,6}{\draw[BookPrimary] (\x,.10)--(\x,-.10) node[below]{\scriptsize $\x$};}
-\foreach \y in {2,4,6}{\draw[BookPrimary] (.10,\y)--(-.10,\y) node[left]{\scriptsize $\y$};}
-\draw[book/plotA] (0,1)--(7.2,6.4);
+\begin{tikzpicture}[x=.65cm,y=.40cm]
+\draw[book/axis] (0,0)--(8.0,0) node[book/physlabel,right] {$t\,(\mathrm{s})$};
+\draw[book/axis] (0,0)--(0,7.0) node[book/physlabel,above] {$x\,(\mathrm{m})$};
+\foreach \x in {2,4,6}{\draw[book/tick] (\x,.10)--(\x,-.10) node[book/ticklabel,below]{$\x$};}
+\foreach \y in {2,4,6}{\draw[book/tick] (.10,\y)--(-.10,\y) node[book/ticklabel,left]{$\y$};}
+\draw[book/maincurve] (0,1)--(7.2,6.4);
 \draw[book/guide] (4,0)--(4,4);
-\fill[BookFigPlotAColor] (4,4) circle (2pt);
+\node[book/pointMain] at (4,4) {};
 \end{tikzpicture}
 \end{center}
 % MethodBox = μεθοδολογία ή αλληλουχία βημάτων επίλυσης.
@@ -64,12 +64,12 @@
 % htbp = εδώ / πάνω / κάτω / ξεχωριστή σελίδα κατά περίπτωση.
 \begin{figure}[htbp]
 \centering
-\begin{tikzpicture}[x=.86cm,y=.69cm,>=Stealth]
-\draw[book/axis] (-5,0)--(5,0) node[right] {$x$};
-\foreach \x in {-4,-2,0,2,4}{\draw[BookPrimary] (\x,.07)--(\x,-.07) node[below=2pt]{\scriptsize $\x$};}
-\fill[BookPrimary] (-3,0) circle (1.5pt) node[below=5pt]{\scriptsize A};
-\fill[BookPrimary] (3,0) circle (1.5pt) node[below=5pt]{\scriptsize B};
-\draw[book/velocity] (-3,.7)--(3,.7) node[midway,above=1pt] {$\Delta x$};
+\begin{tikzpicture}[x=.86cm,y=.69cm]
+\draw[book/axis] (-5,0)--(5,0) node[book/physlabel,right] {$x\,(\mathrm{m})$};
+\foreach \x in {-4,-2,0,2,4}{\draw[book/tick] (\x,.07)--(\x,-.07) node[book/ticklabel,below=2pt]{$\x$};}
+\node[book/endpoint] at (-3,0) {};\node[book/physlabel,below=5pt] at (-3,0) {A};
+\node[book/endpoint] at (3,0) {};\node[book/physlabel,below=5pt] at (3,0) {B};
+\draw[book/mainvector] (-3,.7)--(3,.7) node[book/physlabel,midway,above=1pt] {$\Delta x$};
 \end{tikzpicture}
 \caption{Μετατόπιση κινητού από την αρχική θέση Α στην τελική θέση Β.}\label{fig:displacement}
 \end{figure}

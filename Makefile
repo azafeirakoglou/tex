@@ -4,7 +4,8 @@ BOOK_TARGETS = print2 screen
 SAMPLE_TARGETS = sample-screen sample-print2 figures-screen figures-print2 \
  assessment-screen assessment-print2 tables-screen tables-print2 \
  opening-goals-screen opening-goals-print2 history-statements-screen history-statements-print2 \
- callouts-screen callouts-print2 palette-screen palette-print2
+ callouts-screen callouts-print2 palette-screen palette-print2 \
+ starter-screen starter-print2 stress-screen stress-print2
 
 .PHONY: all book samples setup check-colors check-palette colors-regenerate clean \
  $(BOOK_TARGETS) $(SAMPLE_TARGETS)
@@ -42,3 +43,11 @@ export: preflight
 .PHONY: preflight-all
 preflight-all: all
 	$(PYTHON) scripts/validate_suite.py
+
+# Stable release: all targets, all tests, fresh pair/stress reports, then export.
+# The export command above remains available for an explicitly labelled proof.
+RELEASE_OUT ?= dist
+RELEASE_JOBS ?= 2
+.PHONY: release
+release:
+	$(PYTHON) scripts/release.py --out "$(RELEASE_OUT)" --jobs $(RELEASE_JOBS)

@@ -12,7 +12,8 @@ PAIRS = [('print2', 'screen'), ('sample-print2', 'sample-screen'),
          ('figures-print2', 'figures-screen'), ('assessment-print2', 'assessment-screen'),
          ('tables-print2', 'tables-screen'), ('opening-goals-print2', 'opening-goals-screen'),
          ('history-statements-print2', 'history-statements-screen'),
-         ('callouts-print2', 'callouts-screen'), ('palette-print2', 'palette-screen')]
+         ('callouts-print2', 'callouts-screen'), ('palette-print2', 'palette-screen'),
+         ('starter-print2', 'starter-screen'), ('stress-print2', 'stress-screen')]
 
 
 def pdf(target):
@@ -23,8 +24,12 @@ def pdf(target):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--dpi', type=int, default=72)
+    parser.add_argument('--out', type=Path, default=ROOT / 'build' / 'validation',
+                        help='Report directory inside this checkout')
     args = parser.parse_args()
-    output = ROOT / 'build' / 'validation'
+    output = args.out.resolve()
+    if not output.is_relative_to(ROOT):
+        parser.error('--out must be inside this checkout so reports remain portable')
     output.mkdir(parents=True, exist_ok=True)
     results = []
     for print_target, screen_target in PAIRS:

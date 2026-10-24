@@ -17,12 +17,12 @@
 \[ \Delta x=x_B-x_A \]
 \end{KeyFormula}
 \begin{center}
-\begin{tikzpicture}[x=.85cm,>=Stealth]
-  \draw[BookPrimary,->](-4,0)--(6,0) node[right] {\(x\)};
-  \foreach \x in {-3,0,5}{\draw[BookPrimary](\x,0.08)--(\x,-0.08) node[below]{\scriptsize \(\x\)};}
-  \fill[BookInk] (-3,0) circle(1.8pt) node[above]{\small A};
-  \fill[BookInk] (5,0) circle(1.8pt) node[above]{\small B};
-  \draw[BookSecondary,very thick,-{Stealth[length=3mm]}](-3,.7)--(5,.7) node[midway,above]{\(\Delta x\)};
+\begin{tikzpicture}[x=.85cm]
+  \draw[book/axis](-4,0)--(6,0) node[book/physlabel,right] {\(x\,(\mathrm{m})\)};
+  \foreach \x in {-3,0,5}{\draw[book/tick](\x,0.08)--(\x,-0.08) node[book/ticklabel,below]{\(\x\)};}
+  \node[book/endpoint] at (-3,0) {};\node[book/physlabel,above=2pt] at (-3,0) {A};
+  \node[book/endpoint] at (5,0) {};\node[book/physlabel,above=2pt] at (5,0) {B};
+  \draw[book/mainvector](-3,.7)--(5,.7) node[book/physlabel,midway,above]{\(\Delta x\)};
 \end{tikzpicture}
 \end{center}
 \begin{AttentionBox}

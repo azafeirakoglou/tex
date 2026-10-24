@@ -1,7 +1,7 @@
 % ===========================================================================
 % ΚΑΘΟΛΙΚΟ ΣΥΣΤΗΜΑ ΜΑΚΕΤΑΣ — universalbook.sty (πηγαίος πυρήνας)
 % ===========================================================================
-% ΔΙΑΒΑΣΕ ΠΡΩΤΑ το README_ΟΔΗΓΟΣ.md και το config/book-config.tex.
+% ΔΙΑΒΑΣΕ ΠΡΩΤΑ τα README.md / docs/AUTHORING.md και config/book-config.tex.
 % Μη χρειάζεται να πειράξεις αυτό το αρχείο για απλές αλλαγές χρωμάτων,
 % γραμματοσειρών, περιθωρίων, τίτλων ή μεγέθους εικόνας.
 %
@@ -16,7 +16,7 @@
 % Το τελικό PDF παράγεται με XeLaTeX. Όχι με pdfLaTeX.
 % ===========================================================================
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{styles/universalbook}[2026/10/24 Modular Greek textbook design v0.46]
+\ProvidesPackage{styles/universalbook}[2026/10/24 Modular Greek textbook design v1.0.0]
 % Γραμματοσειρές OpenType/TrueType. Η αλλαγή γίνεται από τον config.
 \RequirePackage{fontspec}
 \RequirePackage{polyglossia}
@@ -179,6 +179,8 @@
 % Συμβατότητα: παλαιότερα αρχεία μπορούν να διατηρήσουν το BookColorTable.
 % Η συμπεριφορά του είναι πλέον ίδια με εκείνη του BookStripedTable.
 \newenvironment{BookColorTable}{\begin{BookStripedTable}}{\end{BookStripedTable}}
+% Πολυσέλιδοι πίνακες με επαναλαμβανόμενη κεφαλίδα, κοινή παλέτα.
+\input{styles/book-longtables.tex}
 % ΜΟΝΟ για παλαιούς πίνακες με λευκή κεφαλίδα, που έχουν ήδη γραφτεί.
 % Στους δύο νέους τύπους χρησιμοποιούμε ΠΑΝΤΑ \BookTableHead.
 \newcommand{\BookPlainTableHead}[1]{{\color{BookPrimary}\bfseries #1}}
@@ -262,6 +264,7 @@
 \newcommand{\BookRunningChapterTitle}{}
 \newcommand{\BookRememberRunningChapter}[1]{%
   \InsertMark{booksection}{}%
+  \gdef\BookTOCActiveCollection{}%
   \gdef\BookRunningChapterTitle{#1}%
   \ifnum\value{chapter}>0\relax
     \xdef\BookRunningChapterNumber{\thechapter}%
@@ -309,7 +312,11 @@
 % Το ίδιο vector σήμα και στις δύο εκδόσεις, με το δεύτερο μελάνι.
 % Η κλίμακα εφαρμόζεται στο κοινό πλαίσιο 160 × 139 του εικαστικού.
 \newcommand{\BookHeaderIconFile}{\BookAssetPath{header_icon}}
-\newcommand{\BookHeaderIcon}{\raisebox{-0.65ex}{\resizebox{!}{\BookHeaderIconHeight}{\BookUseAsset{header_icon}}}}
+% Το ίδιο διανυσματικό σχέδιο αναλύεται μία φορά, όχι σε κάθε σελίδα.
+% Η τελική κλίμακα/μετατόπιση εξακολουθεί να εφαρμόζεται στην κοινή κεφαλίδα.
+\newsavebox{\BookHeaderArtworkBox}
+\AtBeginDocument{\sbox{\BookHeaderArtworkBox}{\BookUseAsset{header_icon}}}
+\newcommand{\BookHeaderIcon}{\raisebox{-0.65ex}{\resizebox{!}{\BookHeaderIconHeight}{\usebox{\BookHeaderArtworkBox}}}}
 % ΕΝΑ ΚΕΝΤΡΙΚΟ ΠΕΡΙΕΧΟΜΕΝΟ ΓΙΑ ΟΛΑ ΤΑ ΥΠΟΣΕΛΙΔΑ
 % Δεν αλλάζουμε εδώ τη φράση ή τη θέση. Αλλάζουμε μόνο τα switches
 % BookFooterMode και BookFooterPosition στο config/book-config.tex.
@@ -400,7 +407,7 @@
 \end{tikzpicture}}
 % The third argument is a list of 4--6 short \item learning outcomes.
 % Χωρίς φωτογραφία, εναλλακτική έναρξη κεφαλαίου.
-% #1 τίτλος, #2 υπότιτλος, #3 λίστα \item για το «Τι θα μάθουμε».
+% [σύντομος τίτλος κεφαλίδας] προαιρετικά· μετά τίτλος, υπότιτλος και στόχοι.
 % ---------------------------------------------------------------------------
 % ΑΥΤΟΜΑΤΟΣ ΠΙΝΑΚΑΣ ΠΕΡΙΕΧΟΜΕΝΩΝ ΓΙΑ ΦΥΛΛΑ/ΚΡΙΤΗΡΙΑ (v0.18)
 % ---------------------------------------------------------------------------
@@ -463,60 +470,86 @@
   \end{BookOpeningGoalsPanel}%
 }
 
-\newcommand{\BookChapter}[3]{%
- \cleardoublepage
- \refstepcounter{chapter}\setcounter{section}{0}\setcounter{subsection}{0}\gdef\BookTOCActiveCollection{}
- \BookRememberRunningChapter{#1}%
- \addcontentsline{toc}{chapter}{\protect\numberline{\thechapter}#1}
- \markboth{#1}{#1}
- \thispagestyle{empty}
- \begin{tikzpicture}[remember picture,overlay]
-  \fill[BookPrimary] (current page.north west) rectangle ([yshift=-84mm]current page.north east);
- \end{tikzpicture}
- \vspace*{15mm}
- {\color{white}\sffamily\bfseries\fontsize{9.5}{12}\selectfont ΕΝΟΤΗΤΑ \thechapter}\par\vspace{14mm}
- {\BookHeadingFont\bfseries\color{white}\fontsize{24}{29}\selectfont #1}\par\vspace{4mm}
- {\color{white}\fontsize{10}{14}\selectfont #2}\par
- \vspace*{42mm}
- \BookOpeningGoals[6pt]{#3}
- \vfill
- {\color{BookSecondary}\rule{20mm}{0.4pt}}\par
- \vspace*{7mm}
- \clearpage}
+% Οι επικεφαλίδες μετρώνται πριν σχεδιαστεί η χρωματιστή επιφάνεια.
+% Έτσι οι μεγάλοι πλήρεις τίτλοι δεν αφήνουν λευκό κείμενο έξω από το χρώμα.
+\newsavebox{\BookChapterHeadingBox}
+\newsavebox{\BookChapterGoalsBox}
+\newsavebox{\BookChapterCreditBox}
+\newsavebox{\BookChapterPageBox}
+\newlength{\BookChapterBandHeight}
+\newlength{\BookChapterGap}
+\newlength{\BookChapterImageMaxHeight}
+\newcommand{\BookChapterBand}[2]{%
+  \setlength{\BookChapterBandHeight}{\dimexpr\BookMarginTop+#1+\ht\BookChapterHeadingBox+\dp\BookChapterHeadingBox+9mm\relax}%
+  \ifdim\BookChapterBandHeight<#2\relax\setlength{\BookChapterBandHeight}{#2}\fi
+  \par\nointerlineskip
+  \vbox to0pt{\hbox{\begin{tikzpicture}[remember picture,overlay]
+      \fill[BookPrimary] (current page.north west) rectangle
+        ([yshift=-\BookChapterBandHeight]current page.north east);
+    \end{tikzpicture}}\vss}%
+  \nointerlineskip
+}
+\NewDocumentCommand{\BookChapter}{O{} m m +m}{%
+  \cleardoublepage
+  \refstepcounter{chapter}\setcounter{section}{0}\setcounter{subsection}{0}\gdef\BookTOCActiveCollection{}
+  \ifstrempty{#1}{\BookRememberRunningChapter{#2}}{\BookRememberRunningChapter{#1}}%
+  \addcontentsline{toc}{chapter}{\protect\numberline{\thechapter}#2}%
+  \markboth{#2}{#2}\thispagestyle{empty}%
+  \setbox\BookChapterHeadingBox=\vbox{\hsize=\linewidth\parindent=0pt\parskip=0pt
+    {\color{white}\sffamily\bfseries\fontsize{9.5}{12}\selectfont ΕΝΟΤΗΤΑ \thechapter\par}%
+    \vskip14mm
+    {\BookHeadingFont\bfseries\color{white}\fontsize{24}{29}\selectfont\RaggedRight #2\par}%
+    \vskip4mm
+    {\color{white}\fontsize{10}{14}\selectfont\RaggedRight #3\par}%
+  }%
+  \setbox\BookChapterGoalsBox=\vbox{\hsize=\linewidth\BookOpeningGoals[6pt]{#4}}%
+  \BookChapterBand{15mm}{84mm}%
+  \setlength{\BookChapterGap}{\dimexpr\textheight-15mm-\ht\BookChapterHeadingBox-\dp\BookChapterHeadingBox-\ht\BookChapterGoalsBox-\dp\BookChapterGoalsBox-15mm\relax}%
+  \ifdim\BookChapterGap>42mm\setlength{\BookChapterGap}{42mm}\fi
+  \ifdim\BookChapterGap<9mm
+    \PackageError{universalbook}{Chapter title/goals exceed the opening page}{Shorten the full title or the learning goals.}%
+    \setlength{\BookChapterGap}{9mm}%
+  \fi
+  \setbox\BookChapterPageBox=\vbox{\hsize=\linewidth\offinterlineskip
+    \kern15mm\copy\BookChapterHeadingBox
+    \kern\BookChapterGap\copy\BookChapterGoalsBox}%
+  \noindent\usebox{\BookChapterPageBox}\par
+  \vfill{\color{BookSecondary}\rule{20mm}{.4pt}}\par\vspace*{7mm}\clearpage
+}
 
-
-% -------- CHAPTER OPENER WITH PHOTO / VECTOR ILLUSTRATION --------
-% #1 title, #2 subtitle, #3 digital asset, #4 tiny source credit, #5 4--6 itemize bullets.
-% Κεφάλαιο με φωτογραφία: 5 παράμετροι σε συγκεκριμένη σειρά:
-% #1 Τίτλος, #2 Υπότιτλος, #3 αρχείο εικόνας, #4 μικρή πηγή,
-% #5 λίστα τεσσάρων έως έξι \item (με {} γύρω από ολόκληρη τη λίστα).
-% Η σελίδα τίτλου ανοίγει ΠΑΝΤΑ δεξιά με \cleardoublepage.
-% Δεν επιβάλλεται ειδική κενή σελίδα απέναντι από τον τίτλο.
-\NewDocumentCommand{\BookChapterPhoto}{m m m m +m}{%
- \cleardoublepage
- \refstepcounter{chapter}\setcounter{section}{0}\setcounter{subsection}{0}\gdef\BookTOCActiveCollection{}
- \BookRememberRunningChapter{#1}%
- \addcontentsline{toc}{chapter}{\protect\numberline{\thechapter}#1}
- \markboth{#1}{#1}\thispagestyle{empty}
- \begin{tikzpicture}[remember picture,overlay]
-   \fill[BookPrimary] (current page.north west) rectangle ([yshift=-75mm]current page.north east);
- \end{tikzpicture}
- \vspace*{13mm}
- {\color{white}\sffamily\bfseries\fontsize{9.5}{12}\selectfont ΕΝΟΤΗΤΑ \thechapter}\par\vspace{13mm}
- {\BookHeadingFont\color{white}\fontsize{23}{28}\selectfont #1}\par\vspace{4mm}
- {\color{white}\fontsize{9.7}{13}\selectfont #2}\par
- \vspace{18mm}
- \begin{center}
-   % Ενιαίο μητρώο εικαστικών και συμβατότητα με τα παλιά ονόματα.
-   % Η προσθήκη εικόνας γίνεται στο color-map.json, όχι με νέο if εδώ.
-   \BookUseAsset[width=\linewidth,height=\BookChapterPhotoHeight,keepaspectratio]{#3}%
-
- \end{center}
- \vspace{-1mm}
- {\raggedleft\fontsize{7.4}{10}\selectfont\color{BookSecondary}\itshape #4\par}
- \vspace{8mm}
- \BookOpeningGoals{#5}
- \vfill\clearpage
+% [short running title] optional; then fulltitle, subtitle, asset, credit, goals.
+% Η διαθέσιμη φωτογραφία προσαρμόζεται όταν ο πλήρης τίτλος έχει πολλές γραμμές.
+\NewDocumentCommand{\BookChapterPhoto}{O{} m m m m +m}{%
+  \cleardoublepage
+  \refstepcounter{chapter}\setcounter{section}{0}\setcounter{subsection}{0}\gdef\BookTOCActiveCollection{}
+  \ifstrempty{#1}{\BookRememberRunningChapter{#2}}{\BookRememberRunningChapter{#1}}%
+  \addcontentsline{toc}{chapter}{\protect\numberline{\thechapter}#2}%
+  \markboth{#2}{#2}\thispagestyle{empty}%
+  \setbox\BookChapterHeadingBox=\vbox{\hsize=\linewidth\parindent=0pt\parskip=0pt
+    {\color{white}\sffamily\bfseries\fontsize{9.5}{12}\selectfont ΕΝΟΤΗΤΑ \thechapter\par}%
+    \vskip13mm
+    {\BookHeadingFont\color{white}\fontsize{23}{28}\selectfont\RaggedRight #2\par}%
+    \vskip4mm
+    {\color{white}\fontsize{9.7}{13}\selectfont\RaggedRight #3\par}%
+  }%
+  \setbox\BookChapterGoalsBox=\vbox{\hsize=\linewidth\BookOpeningGoals{#6}}%
+  \setbox\BookChapterCreditBox=\vbox{\hsize=\linewidth\parskip=0pt
+    {\raggedleft\fontsize{7.4}{10}\selectfont\color{BookSecondary}\itshape #5\par}}%
+  \setlength{\BookChapterImageMaxHeight}{\dimexpr\textheight-13mm-\ht\BookChapterHeadingBox-\dp\BookChapterHeadingBox-18mm-\ht\BookChapterCreditBox-\dp\BookChapterCreditBox-8mm-\ht\BookChapterGoalsBox-\dp\BookChapterGoalsBox-9mm\relax}%
+  \ifdim\BookChapterImageMaxHeight>\BookChapterPhotoHeight\relax
+    \setlength{\BookChapterImageMaxHeight}{\BookChapterPhotoHeight}%
+  \fi
+  \ifdim\BookChapterImageMaxHeight<25mm
+    \PackageError{universalbook}{Chapter title/goals leave no room for artwork}{Shorten the full title/goals or use BookChapter without artwork.}%
+    \setlength{\BookChapterImageMaxHeight}{25mm}%
+  \fi
+  \BookChapterBand{13mm}{75mm}%
+  \setbox\BookChapterPageBox=\vbox{\hsize=\linewidth\offinterlineskip
+    \kern13mm\copy\BookChapterHeadingBox\kern18mm
+    \hbox to\linewidth{\hfil
+      \BookUseAsset[width=\linewidth,height=\BookChapterImageMaxHeight,keepaspectratio]{#4}\hfil}%
+    \kern1mm\copy\BookChapterCreditBox\kern8mm\copy\BookChapterGoalsBox}%
+  \noindent\usebox{\BookChapterPageBox}\par\vfill\clearpage
 }
 
 % -------- TYPOGRAPHIC SYMBOLS --------
@@ -719,6 +752,9 @@
 \newcommand{\SolutionHeading}{\par\vspace{2pt}{\BookMediumLabelFont\fontsize{\BookSolutionLabelSize}{13}\selectfont\color{BookPrimary}\LabelSolution}\par\smallskip}
 \newcounter{exercise}[chapter]
 \renewcommand{\theexercise}{\arabic{exercise}}
+% Η ορατή αρίθμηση ξαναρχίζει ανά φύλλο, οι PDF προορισμοί μένουν μοναδικοί.
+\newcounter{bookexerciseanchor}
+\renewcommand{\theHexercise}{\arabic{bookexerciseanchor}}
 % Generic exercise: source ID is kept for stable cross-reference but hidden by default.
 % Passing an empty second argument makes the statement start immediately after '1 |'.
 % Named exercise subtypes (e.g., worksheet prompts) still support a visible title.
@@ -726,7 +762,7 @@
 % #1 προαιρετικό μοναδικό ID, #2 προαιρετικός τίτλος (κενό στις άλυτες).
 % Το ορατό αποτέλεσμα είναι «15 | Εκφώνηση...».
 \NewDocumentEnvironment{exercise}{O{} m}{%
- \Needspace{4\baselineskip}\refstepcounter{exercise}%
+ \Needspace{4\baselineskip}\stepcounter{bookexerciseanchor}\refstepcounter{exercise}%
  \ifstrempty{#1}{}{\label{ex:#1}}%
  \par\addvspace{6pt}\noindent\leavevmode
  \mbox{{\fontsize{\BookExerciseNumberSize}{14}\selectfont\bfseries\color{BookPrimary}\theexercise}%

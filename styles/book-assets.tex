@@ -1,5 +1,41 @@
 % v0.33 — κοινό μητρώο εικαστικών PRINT / SCREEN.
 % Οι δηλώσεις παράγονται από το config/color-map.json.
+\newsavebox{\BookTexAssetRawBox}
+\newsavebox{\BookTexAssetScaledBox}
+\newif\ifBookTexAssetKeepAspect
+\makeatletter
+\define@key{BookTexAsset}{width}{\def\BookTexAssetWidth{#1}}
+\define@key{BookTexAsset}{height}{\def\BookTexAssetHeight{#1}}
+\define@key{BookTexAsset}{keepaspectratio}[true]{%
+  \csname BookTexAssetKeepAspect#1\endcsname}
+% Τα καταχωρισμένα TeX vectors υπακούουν στα ίδια όρια εικόνας με τα raster.
+% Χωρίς επιλογές διατηρούν το αρχικό τους μέγεθος.
+\newcommand{\BookRenderTeXAsset}[2]{%
+  \let\BookTexAssetWidth\@empty\let\BookTexAssetHeight\@empty
+  \BookTexAssetKeepAspectfalse\setkeys{BookTexAsset}{#1}%
+  \sbox{\BookTexAssetRawBox}{\input{#2}}%
+  \ifx\BookTexAssetWidth\@empty
+    \ifx\BookTexAssetHeight\@empty
+      \usebox{\BookTexAssetRawBox}%
+    \else
+      \resizebox{!}{\BookTexAssetHeight}{\usebox{\BookTexAssetRawBox}}%
+    \fi
+  \else
+    \ifx\BookTexAssetHeight\@empty
+      \resizebox{\BookTexAssetWidth}{!}{\usebox{\BookTexAssetRawBox}}%
+    \else
+      \ifBookTexAssetKeepAspect
+        \sbox{\BookTexAssetScaledBox}{\resizebox{\BookTexAssetWidth}{!}{\usebox{\BookTexAssetRawBox}}}%
+        \ifdim\dimexpr\ht\BookTexAssetScaledBox+\dp\BookTexAssetScaledBox\relax>\BookTexAssetHeight\relax
+          \resizebox{!}{\BookTexAssetHeight}{\usebox{\BookTexAssetRawBox}}%
+        \else\usebox{\BookTexAssetScaledBox}\fi
+      \else
+        \resizebox{\BookTexAssetWidth}{\BookTexAssetHeight}{\usebox{\BookTexAssetRawBox}}%
+      \fi
+    \fi
+  \fi
+}
+\makeatother
 \newcommand{\BookDeclareAsset}[3]{%
   \expandafter\def\csname BookAssetPath@#1\endcsname{#2}%
   \expandafter\def\csname BookAssetKind@#1\endcsname{#3}%
@@ -18,7 +54,7 @@
     \edef\BookSelectedAsset{\csname BookAssetKey@#2\endcsname}%
     \edef\BookSelectedKind{\csname BookAssetKind@\BookSelectedAsset\endcsname}%
     \ifdefstring{\BookSelectedKind}{tex}{%
-      \input{\BookAssetPath{#2}}%
+      \BookRenderTeXAsset{#1}{\BookAssetPath{#2}}%
     }{\includegraphics[#1]{\BookAssetPath{#2}}}%
     \endgroup
   \else

@@ -1,0 +1,66 @@
+% Αντικατάστησε τίτλο, υπότιτλο, στόχους και περιεχόμενο με τη δική σου ύλη.
+% Η BookChapter δίνει άνοιγμα κεφαλαίου χωρίς φωτογραφία.
+\BookChapter{Κίνηση σε μία διάσταση}{Θέση και μετατόπιση}{%
+  \item Να ορίζεις έναν προσανατολισμένο άξονα αναφοράς.
+  \item Να διαβάζεις την αλγεβρική τιμή της θέσης.
+  \item Να υπολογίζεις τη μετατόπιση από δύο θέσεις.
+  \item Να ερμηνεύεις το πρόσημο της μετατόπισης.
+}
+
+% Προαιρετικός σύντομος τίτλος: section[κεφαλίδα/TOC]{πλήρης τίτλος}.
+\section[Θέση και μετατόπιση]{Θέση και μετατόπιση}
+Η θέση ενός σώματος σε έναν άξονα δίνεται από τη συντεταγμένη του.
+Για κίνηση από τη θέση $x_A$ στη θέση $x_B$, η μετατόπιση είναι
+\begin{equation}\label{eq:starter-displacement}
+  \Delta x=x_B-x_A.
+\end{equation}
+
+\begin{ThinkBox}
+Επιλέγω τη θετική φορά, σημειώνω τις δύο θέσεις και αφαιρώ την αρχική
+από την τελική τιμή. Το πρόσημο δείχνει τη φορά της μετατόπισης.
+\end{ThinkBox}
+
+% Το μέγεθος των γραμμάτων και τα πάχη προέρχονται από τα κοινά styles.
+% Η έμφαση είναι ανά σχήμα: εδώ τονίζεται η μετατόπιση.
+\begin{figure}[htbp]
+  \centering
+  \begin{tikzpicture}[x=.8cm,y=.8cm]
+    \draw[book/axis] (-3.2,0)--(3.5,0)
+      node[book/physlabel,right] {$x\,(\mathrm{m})$};
+    \foreach \x in {-2,0,2}{%
+      \draw[book/tick] (\x,.08)--(\x,-.08);
+      \node[book/ticklabel,below=2pt] at (\x,-.08) {$\x$};
+    }
+    \node[book/endpoint] at (-2,0) {};
+    \node[book/endpoint] at (2,0) {};
+    \node[book/physlabel,above] at (-2,0) {$A$};
+    \node[book/physlabel,above] at (2,0) {$B$};
+    \draw[book/mainvector] (-2,.65)--(2,.65)
+      node[book/physlabel,midway,above] {$\Delta x$};
+  \end{tikzpicture}
+  \caption{Μετατόπιση από τη θέση Α στη θέση Β.}\label{fig:starter-displacement}
+\end{figure}
+
+Στο Σχήμα~\ref{fig:starter-displacement}, η σχέση~\eqref{eq:starter-displacement}
+δίνει $\Delta x=2-(-2)=4\,\mathrm{m}$.
+
+\begin{table}[htbp]
+  \centering
+  \begin{BookStripedTable}
+  \begin{tabularx}{\linewidth}{@{}X>{\centering\arraybackslash}p{25mm}@{}}
+    \BookTableHeaderRow
+    \BookTableHead{Μέγεθος} & \BookTableHead{Τιμή}\\
+    Αρχική θέση $x_A$ & $-2\,\mathrm{m}$\\
+    Τελική θέση $x_B$ & $2\,\mathrm{m}$\\
+    Μετατόπιση $\Delta x$ & $4\,\mathrm{m}$\\
+  \end{tabularx}
+  \end{BookStripedTable}
+  \caption{Θέσεις και μετατόπιση του παραδείγματος.}\label{tab:starter-values}
+\end{table}
+
+\BookSection{Ερωτήσεις}
+\begin{exercise}[START-001]{Σωστό ή λάθος;}
+  Η μετατόπιση εξαρτάται από την αρχική και την τελική θέση.
+  \TrueFalseChoices
+\end{exercise}
+\Answer{Σωστό.}

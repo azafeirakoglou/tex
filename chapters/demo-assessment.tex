@@ -40,10 +40,10 @@ $x_2=6\,\mathrm{m}$. Ποια είναι η αλγεβρική μετατόπι�
 Τα διαγράμματα θέσης--χρόνου φαίνονται παρακάτω.
 \begin{center}
 \begin{tikzpicture}[scale=.67]
- \draw[book/axis] (0,0)--(6.4,0) node[right]{$t\ (\mathrm{s})$};
- \draw[book/axis] (0,-.4)--(0,3.9) node[above]{$x\ (\mathrm{m})$};
- \draw[book/velocity] (0,.35)--(5.4,3.55) node[right]{A};
- \draw[book/accel] (0,3.1)--(5.4,1.05) node[right]{B};
+ \draw[book/axis] (0,0)--(6.4,0) node[book/physlabel,right]{$t\,(\mathrm{s})$};
+ \draw[book/axis] (0,-.4)--(0,3.9) node[book/physlabel,above]{$x\,(\mathrm{m})$};
+ \draw[book/maincurve] (0,.35)--(5.4,3.55) node[book/physlabel,right]{A};
+ \draw[book/secondarycurve] (0,3.1)--(5.4,1.05) node[book/physlabel,right]{B};
 \end{tikzpicture}
 \end{center}
 Ποιο κινητό έχει θετική και ποιο αρνητική αλγεβρική ταχύτητα;

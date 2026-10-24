@@ -1,99 +1,68 @@
 % ===========================================================================
-% ΕΝΙΑΙΟ ΣΥΣΤΗΜΑ ΣΧΗΜΑΤΩΝ ΦΥΣΙΚΗΣ — styles/book-figures.tex
+% ΚΟΙΝΟ ΣΥΣΤΗΜΑ ΣΧΗΜΑΤΩΝ v1.0.0 — TikZ / PGFPlots
 % ===========================================================================
-% ΤΟ ΔΙΑΒΑΖΟΥΜΕ ΩΣ «ΛΕΞΙΚΟ» ΣΧΕΔΙΑΣΗΣ. Οι εντολές δεν δημιουργούν μόνες
-% τους φυσικά σχήματα: ορίζουν εμφάνιση, όχι περιεχόμενο/γεωμετρία.
-% Φορτώνεται από universalbook.sty ΜΕΤΑ την εκάστοτε παλέτα χρωμάτων.
-% Αυτό σημαίνει ότι δεν γράφουμε ποτέ HTML/CMYK χρώματα στα chapters/*.tex.
-%
-% ΣΥΜΦΩΝΗΜΕΝΗ ΒΑΣΗ (24/10/2026): μαύρο για άξονες/αντικείμενα/γράμματα,
-% δεύτερο μελάνι για το κύριο στοιχείο ΑΝΑ ΣΧΗΜΑ και διάκριση με μοτίβα.
-% Δεν συμφωνήθηκε σταθερό χρώμα ανά φυσικό μέγεθος.
-% Η βάση αυτή εκκρεμεί να εφαρμοστεί συστηματικά στα παλιά δείγματα.
-% Βλ. docs/FIGURES_PENDING.md για τις συγκεκριμένες εργασίες που απομένουν.
-%
-% ΠΡΟΣΟΧΗ — ΕΚΚΡΕΜΕΙ ΟΡΙΣΤΙΚΟΠΟΙΗΣΗ ΤΩΝ ΠΑΛΙΩΝ ΔΕΙΓΜΑΤΩΝ.
-% Οι υπάρχουσες μορφές είναι ΠΡΟΣΩΡΙΝΑ δείγματα από παλαιότερη εργασία,
-% ΟΧΙ συμβάσεις που εγκρίθηκαν σε αυτό το project. Δεν έχει συμφωνηθεί
-% χρωματικός κώδικας για ταχύτητα, επιτάχυνση, δυνάμεις, βάρος, τριβή,
-% σχήματα/βέλη ή γενικός προσανατολισμός αξόνων.
-% Κανένα AI δεν πρέπει να τις θεωρεί δεσμευτικές για νέο βιβλίο.
-% Έχουν επίσης εγκριθεί κοινή γεωμετρία/ίδια δεδομένα σε SCREEN και PRINT
-% και PRINT δύο μελάνια. Οι αναλυτικές προδιαγραφές μένουν ανοιχτές.
-% Οι μορφοποιήσεις book/velocity, book/friction κ.λπ. παραμένουν μόνο
-% για τεχνική συμβατότητα με τα ενδεικτικά demo μέχρι να τις ορίσει ο χρήστης.
-% ---------------------------------------------------------------------------
+% Μαύρο: άξονες, αντικείμενα, γράμματα και στοιχεία αναφοράς.
+% Δεύτερο μελάνι: κύριο στοιχείο / σειρές του συγκεκριμένου σχήματος.
+% Σειρές διακρίνονται και με μοτίβο· δεν υπάρχει σταθερό χρώμα ανά φυσικό μέγεθος.
+% Τα ίδια δεδομένα/γεωμετρία χρησιμοποιούνται σε PRINT και SCREEN.
+% Πάχη, αιχμές, γραμματοσειρές και διαστάσεις: config/book-config.tex.
+% Συνολικό πλάτος μαζί με γράμματα: έως133mm ή63,5mm στη στήλη.
 
-% ---------------------------------------------------------------------------
-% v0.27 — ΧΡΩΜΑΤΑ ΣΧΗΜΑΤΩΝ: ΜΟΝΟ ΣΗΜΑΣΙΟΛΟΓΙΚΟΙ ΡΟΛΟΙ
-% Όλες οι τιμές BookFig*Color ορίζονται από το config/color-map.json
-% και φορτώνονται μία φορά στο config/color-roles.tex.
-% Έτσι το BookSecondary της ταχύτητας είναι το 55% και στο PRINT.
-% ΑΠΑΓΟΡΕΥΟΝΤΑΙ εδώ κλάδοι SCREEN/PRINT και απευθείας ProofRed*.
-% Τα ενδεικτικά χρώματα φυσικών μεγεθών ΔΕΝ είναι τελικά.
-% Οι άξονες και η τριβή στα δείγματα χρησιμοποιούν προς το παρόν
-% ουδέτερο BookInk σε SCREEN/PRINT (καμία κρυφή πορτοκαλί εξαίρεση).
-% ---------------------------------------------------------------------------
-
-% ---------------------------------------------------------------------------
-% TikZ: χρήση \draw[book/axis] ...; ή \draw[book/velocity] ...;
-% Οι διακεκομμένες γραμμές ερμηνεύονται στο υπόμνημα, όχι αποκλειστικά
-% μέσω χρώματος. Οι αιχμές δεν αλλάζουν μεταξύ διαφορετικών συγγραφέων.
-% ---------------------------------------------------------------------------
 \tikzset{
+  every node/.append style={font=\BookFigLabelFont,text=BookInk},
   book/.cd,
-  axis/.style={draw=BookFigAxisColor,->,line width=\BookFigAxisWidth,
-               >={Stealth[length=\BookFigArrowLength,width=\BookFigArrowWidth]}},
-  origin/.style={circle,fill=BookFigAxisColor,inner sep=1.3pt},
-  body/.style={draw=BookFigObjectColor,fill=white,thick,line join=round},
-  velocity/.style={draw=BookFigVelocityColor,->,line width=\BookFigVectorWidth,
-                   >={Stealth[length=\BookFigArrowLength,width=\BookFigArrowWidth]}},
-  accel/.style={draw=BookFigAccelColor,->,line width=\BookFigVectorWidth,dash pattern=on 6pt off 2pt,
-                >={Stealth[length=\BookFigArrowLength,width=\BookFigArrowWidth]}},
-  force/.style={draw=BookFigForceColor,->,line width=\BookFigVectorWidth,
-                >={Stealth[length=\BookFigArrowLength,width=\BookFigArrowWidth]}},
-  weight/.style={draw=BookFigWeightColor,->,line width=\BookFigVectorWidth,
-                 >={Stealth[length=\BookFigArrowLength,width=\BookFigArrowWidth]}},
-  friction/.style={draw=BookFigFrictionColor,->,line width=\BookFigVectorWidth,dash pattern=on 5pt off 1.8pt on 1pt off 1.8pt,
-                   >={Stealth[length=\BookFigArrowLength,width=\BookFigArrowWidth]}},
+  arrow/.style={>={Stealth[length=\BookFigArrowLength,width=\BookFigArrowWidth]}},
+  axis/.style={book/arrow,draw=BookFigAxisColor,->,line width=\BookFigAxisWidth},
+  tick/.style={draw=BookFigAxisColor,line width=\BookFigTickWidth},
+  body/.style={draw=BookFigObjectColor,fill=white,line width=\BookFigObjectWidth,line join=round},
+  mainvector/.style={book/arrow,draw=BookFigMainColor,->,line width=\BookFigVectorWidth,solid},
+  secondaryvector/.style={book/mainvector,draw=BookFigAltColor,dash pattern=on 6pt off 2.5pt},
+  referencevector/.style={book/mainvector,draw=BookFigReferenceColor,solid},
+  maincurve/.style={draw=BookFigMainColor,line width=\BookFigGraphWidth,solid},
+  secondarycurve/.style={book/maincurve,draw=BookFigAltColor,dash pattern=on 6pt off 2.5pt},
+  referencecurve/.style={book/maincurve,draw=BookFigReferenceColor,solid},
   guide/.style={draw=BookFigGuideColor,line width=\BookFigAuxWidth,dashed},
-  trajectory/.style={draw=BookFigVelocityColor,line width=\BookFigGraphWidth},
-  plotA/.style={draw=BookFigPlotAColor,line width=\BookFigGraphWidth},
-  plotB/.style={draw=BookFigPlotBColor,line width=\BookFigGraphWidth,dash pattern=on 6pt off 2.5pt},
-  physlabel/.style={font=\small,inner sep=2pt,text=BookInk},
-  endpoint/.style={circle,fill=BookFigObjectColor,inner sep=1.4pt}
+  physlabel/.style={font=\BookFigLabelFont,inner sep=2pt,text=BookInk},
+  ticklabel/.style={font=\BookFigTickFont,inner sep=2pt,text=BookInk},
+  origin/.style={circle,fill=BookFigAxisColor,inner sep=1.3pt},
+  endpoint/.style={circle,fill=BookFigObjectColor,inner sep=1.4pt},
+  pointMain/.style={circle,fill=BookFigMainColor,inner sep=1.4pt},
+  % Συμβατότητα παλιών συγγραφικών αρχείων. Νέα σχήματα: γενικοί ρόλοι επάνω.
+  velocity/.style={book/mainvector},
+  accel/.style={book/secondaryvector},
+  force/.style={book/mainvector},
+  weight/.style={book/referencevector},
+  friction/.style={book/referencevector,dash pattern=on 5pt off 1.8pt on 1pt off 1.8pt},
+  trajectory/.style={book/maincurve},
+  plotA/.style={book/maincurve},
+  plotB/.style={book/secondarycurve}
 }
 
-% ---------------------------------------------------------------------------
-% PGFPLOTS: κοινές διαστάσεις, μονάδες, άξονες, grid και διακριτές σειρές.
-% \begin{axis}[book/plot, xlabel={$t\,(\mathrm{s})$},ylabel={$x\,(\mathrm{m})$}]
-%   \addplot[book/seriesA] {1+0.5*x};
-% \end{axis}
-% Όταν το axis βρίσκεται μέσα σε tikzpicture, παραμένει ΔΙΑΝΥΣΜΑΤΙΚΟ.
-% ---------------------------------------------------------------------------
 \pgfplotsset{
   book/plot/.style={
-    width=10.4cm,height=6.0cm,
+    width=\BookFigPlotWidth,height=\BookFigPlotHeight,
+    scale only axis=true,
     axis lines=left,
-    axis line style={draw=BookFigAxisColor,line width=\BookFigAxisWidth,->},
-    tick style={draw=BookFigAxisColor,line width=.5pt},
-    ticklabel style={font=\scriptsize,color=BookInk},
-    label style={font=\small,color=BookInk},
-    xlabel style={at={(axis description cs:1.01,0)},anchor=west},
-    ylabel style={at={(axis description cs:0,1.02)},anchor=south,rotate=0},
+    axis line style={draw=BookFigAxisColor,line width=\BookFigAxisWidth,
+      -{Stealth[length=\BookFigArrowLength,width=\BookFigArrowWidth]}},
+    tick style={draw=BookFigAxisColor,line width=\BookFigTickWidth},
+    ticklabel style={font=\BookFigTickFont,color=BookInk},
+    label style={font=\BookFigLabelFont,color=BookInk},
+    legend style={font=\BookFigLabelFont,text=BookInk,draw=none,fill=none},
+    xlabel style={at={(axis description cs:.5,-.13)},anchor=north},
+    ylabel style={at={(axis description cs:0,1.03)},anchor=south west,rotate=-90},
     grid=major,
-    major grid style={draw=BookFigGuideColor,line width=.3pt,densely dotted},
-    clip=false,
-    enlarge x limits={upper,value=0.04},
-    enlarge y limits={upper,value=0.06}
+    major grid style={draw=BookFigGridColor,line width=\BookFigGridWidth,densely dotted},
+    clip=true,
+    enlarge x limits={upper,value=.04},
+    enlarge y limits={upper,value=.06}
   },
-  book/seriesA/.style={color=BookFigPlotAColor,very thick,solid,mark=none},
-  book/seriesB/.style={color=BookFigPlotBColor,very thick,dashed,mark=none},
-  book/seriesPoints/.style={only marks,mark=*,mark size=1.65pt,color=BookFigPlotAColor}
+  book/plot-column/.style={book/plot,
+    width=\BookFigColumnPlotWidth,height=\BookFigColumnPlotHeight,
+    xlabel style={at={(axis description cs:.5,-.23)},anchor=north}},
+  book/seriesA/.style={color=BookFigMainColor,line width=\BookFigGraphWidth,solid,mark=none},
+  book/seriesB/.style={color=BookFigAltColor,line width=\BookFigGraphWidth,
+    dash pattern=on 6pt off 2.5pt,mark=none},
+  book/seriesReference/.style={color=BookFigReferenceColor,line width=\BookFigGraphWidth,solid,mark=none},
+  book/seriesPoints/.style={only marks,mark=*,mark size=1.65pt,color=BookFigMainColor}
 }
-
-% ΚΕΝΤΡΙΚΟΙ ΚΑΝΟΝΕΣ ΓΙΑ ΦΩΤΟΤΥΠΙΑ / ΔΥΟ ΜΕΛΑΝΙΑ:
-% - μη βασίζεσαι αποκλειστικά στο χρώμα όταν ξεχωρίζεις δύο φυσικά μεγέθη,
-% - μην χρησιμοποιείς αυθαίρετα RGB μέσα σε έναν πίνακα ή διάγραμμα,
-% - τα άκρα/μονάδες/βέλη να διαβάζονται χωρίς το χρωματικό υπόμνημα,
-% - έλεγξε την απεικόνιση στην εκτύπωση 17x24 cm πριν την οριστικοποίηση.

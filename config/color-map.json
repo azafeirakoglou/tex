@@ -1,6 +1,6 @@
 {
   "schema_version": 3,
-  "version": "0.46",
+  "version": "1.0.0",
   "authoritative_edition": "PRINT",
   "screen_purpose": "Blue RGB aesthetic counterpart of PRINT roles. Not a proof of final spot-ink hue.",
   "spot_ink_name": "SecondInkRedProof",
@@ -54,15 +54,19 @@
     "BookHistoryBorder": "Black55",
     "BookFigAxisColor": "Black100",
     "BookFigObjectColor": "Black100",
-    "BookFigVelocityColor": "Spot55",
+    "BookFigVelocityColor": "Spot100",
     "BookFigAccelColor": "Spot100",
     "BookFigForceColor": "Spot100",
     "BookFigWeightColor": "Black100",
     "BookFigFrictionColor": "Black100",
     "BookFigGuideColor": "Black55",
-    "BookFigPlotAColor": "Spot55",
+    "BookFigPlotAColor": "Spot100",
     "BookFigPlotBColor": "Spot100",
-    "BookStatementAccent": "Spot100"
+    "BookStatementAccent": "Spot100",
+    "BookFigMainColor": "Spot100",
+    "BookFigAltColor": "Spot100",
+    "BookFigReferenceColor": "Black100",
+    "BookFigGridColor": "Black55"
   },
   "white": "white",
   "assets": {
@@ -97,8 +101,8 @@
       ]
     }
   },
-  "figure_conventions_approved": false,
-  "figure_conventions_note": "Demo colors and vector styles are provisional. No color conventions for physical quantities have been approved.",
+  "figure_conventions_approved": true,
+  "figure_conventions_note": "Stable defaults approved2026-10-24: black axes/objects/labels; secondink for perfigure emphasis; linepatterns distinguish series. No fixed color by physical quantity. Printer specifications remainpending.",
   "visual_rules": {
     "ThinkBox": {
       "accent": "BookThinkAccent",
