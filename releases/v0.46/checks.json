@@ -1,0 +1,19 @@
+{
+  "version": "0.46",
+  "status": "passed",
+  "tests_run": {
+    "source_colors": 20,
+    "header_pdf_regressions": 11,
+    "total": 31
+  },
+  "pdf_pairs_passed": 9,
+  "main_pages_per_edition": 20,
+  "all_output_pages": 82,
+  "overfull_boxes": 0,
+  "header_font": "Inter Regular",
+  "header_size_tex_pt": 8,
+  "header_chapter_number_removed": true,
+  "common_callout_outline_tex_pt": 1.08,
+  "diagram_color_basis_approved": "black axes/objects/labels;secondink perfigure emphasis;pattern differentiation",
+  "diagram_remaining_work": "FIGURES_PENDING.md"
+}

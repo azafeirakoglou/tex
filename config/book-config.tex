@@ -15,7 +15,7 @@
 \newcommand{\BookSubtitle}{Θεωρία · Μεθοδολογία · Παραδείγματα · Ασκήσεις}
 \newcommand{\BookPublisher}{ΕΚΔΟΤΙΚΟ ΠΡΟΤΥΠΟ}
 \newcommand{\BookAuthors}{Δοκιμαστική μακέτα — όχι τελικό βιβλίο}
-\newcommand{\BookEdition}{Καθολική μακέτα v0.45 · Οκτώβριος 2026}
+\newcommand{\BookEdition}{Καθολική μακέτα v0.46 · Οκτώβριος 2026}
 \newcommand{\BookShortName}{Φυσική Α΄ Λυκείου}
 
 % ---------------------------------------------------------------------------
@@ -67,15 +67,19 @@
 % αριστερό όριο του κουτιού. Το πλάτος της ζώνης ορίζεται στο κοινό
 % στυλ BookCallout του styles/universalbook.sty.
 \newcommand{\BookCalloutIconScale}{1.11}
+% v0.46: κοινό εξωτερικό περίγραμμα και για τα τρία ενεργά εικονίδια.
+\newcommand{\BookCalloutOutlineWidth}{1.08pt}
+\newcommand{\BookWarningOutlineWidth}{\BookCalloutOutlineWidth}
+\newcommand{\BookWarningDetailWidth}{.90pt}
 % v0.34: η λάμπα είναι 10% μικρότερη από την κοινή κλίμακα.
 % Η γεωμετρική κλίμακα δεν μειώνει τα πάχη γραμμής του TikZ.
 \newcommand{\BookBulbScale}{0.90}
-\newcommand{\BookBulbOutlineWidth}{1.08pt}
+\newcommand{\BookBulbOutlineWidth}{\BookCalloutOutlineWidth}
 \newcommand{\BookBulbRayWidth}{.95pt}
 \newcommand{\BookBulbFilamentWidth}{.85pt}
 % v0.45: κλεψύδρα με άμμο στα ιστορικά ένθετα.
 \newcommand{\BookHistoryIconScale}{0.90}
-\newcommand{\BookHistoryIconOutlineWidth}{.90pt}
+\newcommand{\BookHistoryIconOutlineWidth}{\BookCalloutOutlineWidth}
 \newcommand{\BookHistoryIconDetailWidth}{.68pt}
 % Συμβατότητα: οι παρακάτω ρυθμίσεις αφορούν το παλιό εικονίδιο βιβλίου.
 % Το HistoryBox χρησιμοποιεί πλέον την BookCalloutHourglass.
@@ -142,7 +146,7 @@
 % ---------------------------------------------------------------------------
 % v0.42 — ΚΕΦΑΛΙΔΕΣ: κεφάλαιο εσωτερικά, section δίπλα στο λογότυπο.
 % ---------------------------------------------------------------------------
-% Κοινό κείμενο: «1. Κίνηση σε μία διάσταση», στο δεύτερο μελάνι.
+% Κοινό κείμενο χωρίς αριθμό: «Κίνηση σε μία διάσταση», στο δεύτερο μελάνι.
 % Διατηρείται και στα φύλλα εργασίας/κριτήρια του ίδιου κεφαλαίου.
 % Η \nouppercase στο sty αποτρέπει την αυτόματη κεφαλαιοποίηση των τίτλων,
 % ενώ εδώ δίνουμε απευθείας την επιθυμητή γραφή της ετικέτας.

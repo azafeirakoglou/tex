@@ -1,0 +1,377 @@
+{
+  "version": "0.46",
+  "status": "passed",
+  "reference": "v0.45",
+  "editions": {
+    "PRINT": {
+      "reference_sha256": "6ff16f17c226053d4d8ed565c6ba1fd4014a599aa063c4e9bdf19a8299141bc6",
+      "new_sha256": "ea296acb3f48473df7f56b935cdf3f7f81bcf03ea60e5bb7e1769bc5662eca99",
+      "headers": [
+        {
+          "page": 6,
+          "texts": [
+            "Περιγραφή της κίνησης",
+            "Κίνηση σε μία διάσταση"
+          ],
+          "font": "Inter-Regular",
+          "size_tex_pt": 8,
+          "logo_unchanged": true
+        },
+        {
+          "page": 7,
+          "texts": [
+            "Κίνηση σε μία διάσταση",
+            "Από το διάγραμμα στη φυσική ερμηνεία"
+          ],
+          "font": "Inter-Regular",
+          "size_tex_pt": 8,
+          "logo_unchanged": true
+        },
+        {
+          "page": 8,
+          "texts": [
+            "Εφαρμογές και εξάσκηση",
+            "Κίνηση σε μία διάσταση"
+          ],
+          "font": "Inter-Regular",
+          "size_tex_pt": 8,
+          "logo_unchanged": true
+        },
+        {
+          "page": 9,
+          "texts": [
+            "Κίνηση σε μία διάσταση",
+            "Εφαρμογές και εξάσκηση"
+          ],
+          "font": "Inter-Regular",
+          "size_tex_pt": 8,
+          "logo_unchanged": true
+        },
+        {
+          "page": 10,
+          "texts": [
+            "Εφαρμογές και εξάσκηση",
+            "Κίνηση σε μία διάσταση"
+          ],
+          "font": "Inter-Regular",
+          "size_tex_pt": 8,
+          "logo_unchanged": true
+        },
+        {
+          "page": 11,
+          "texts": [
+            "Κίνηση σε μία διάσταση",
+            "Εφαρμογές και εξάσκηση"
+          ],
+          "font": "Inter-Regular",
+          "size_tex_pt": 8,
+          "logo_unchanged": true
+        },
+        {
+          "page": 12,
+          "texts": [
+            "Εφαρμογές και εξάσκηση",
+            "Κίνηση σε μία διάσταση"
+          ],
+          "font": "Inter-Regular",
+          "size_tex_pt": 8,
+          "logo_unchanged": true
+        },
+        {
+          "page": 13,
+          "texts": [
+            "Κίνηση σε μία διάσταση",
+            "Εφαρμογές και εξάσκηση"
+          ],
+          "font": "Inter-Regular",
+          "size_tex_pt": 8,
+          "logo_unchanged": true
+        },
+        {
+          "page": 14,
+          "texts": [
+            "Εφαρμογές και εξάσκηση",
+            "Κίνηση σε μία διάσταση"
+          ],
+          "font": "Inter-Regular",
+          "size_tex_pt": 8,
+          "logo_unchanged": true
+        },
+        {
+          "page": 15,
+          "texts": [
+            "Κίνηση σε μία διάσταση",
+            "Εφαρμογές και εξάσκηση"
+          ],
+          "font": "Inter-Regular",
+          "size_tex_pt": 8,
+          "logo_unchanged": true
+        },
+        {
+          "page": 18,
+          "texts": [
+            "Η συνάρτηση πρώτου βαθμού",
+            "Συναρτήσεις και γραφήματα"
+          ],
+          "font": "Inter-Regular",
+          "size_tex_pt": 8,
+          "logo_unchanged": true
+        },
+        {
+          "page": 19,
+          "texts": [
+            "Συναρτήσεις και γραφήματα",
+            "Η συνάρτηση πρώτου βαθμού"
+          ],
+          "font": "Inter-Regular",
+          "size_tex_pt": 8,
+          "logo_unchanged": true
+        }
+      ],
+      "icons": [
+        {
+          "icon": "Προσοχή",
+          "before": {
+            "outline_tex_pt": 0.82,
+            "stroke_rgb": [
+              246,
+              141,
+              111
+            ]
+          },
+          "after": {
+            "outline_tex_pt": 1.08,
+            "stroke_rgb": [
+              246,
+              141,
+              111
+            ]
+          }
+        },
+        {
+          "icon": "Πώς σκέφτομαι",
+          "before": {
+            "outline_tex_pt": 1.08,
+            "stroke_rgb": [
+              246,
+              141,
+              111
+            ]
+          },
+          "after": {
+            "outline_tex_pt": 1.08,
+            "stroke_rgb": [
+              246,
+              141,
+              111
+            ]
+          }
+        },
+        {
+          "icon": "Ιστορίες",
+          "before": {
+            "outline_tex_pt": 0.9,
+            "stroke_rgb": [
+              115,
+              115,
+              115
+            ]
+          },
+          "after": {
+            "outline_tex_pt": 1.08,
+            "stroke_rgb": [
+              115,
+              115,
+              115
+            ]
+          }
+        }
+      ]
+    },
+    "SCREEN": {
+      "reference_sha256": "c1519649116e18b6f385ab15092457a60891d72be3fac790ec98d6cfebd96e3d",
+      "new_sha256": "69f95d000255476be2231972b9bd56840990ec5cce6883fcf96fe74020511c1f",
+      "headers": [
+        {
+          "page": 6,
+          "texts": [
+            "Περιγραφή της κίνησης",
+            "Κίνηση σε μία διάσταση"
+          ],
+          "font": "Inter-Regular",
+          "size_tex_pt": 8,
+          "logo_unchanged": true
+        },
+        {
+          "page": 7,
+          "texts": [
+            "Κίνηση σε μία διάσταση",
+            "Από το διάγραμμα στη φυσική ερμηνεία"
+          ],
+          "font": "Inter-Regular",
+          "size_tex_pt": 8,
+          "logo_unchanged": true
+        },
+        {
+          "page": 8,
+          "texts": [
+            "Εφαρμογές και εξάσκηση",
+            "Κίνηση σε μία διάσταση"
+          ],
+          "font": "Inter-Regular",
+          "size_tex_pt": 8,
+          "logo_unchanged": true
+        },
+        {
+          "page": 9,
+          "texts": [
+            "Κίνηση σε μία διάσταση",
+            "Εφαρμογές και εξάσκηση"
+          ],
+          "font": "Inter-Regular",
+          "size_tex_pt": 8,
+          "logo_unchanged": true
+        },
+        {
+          "page": 10,
+          "texts": [
+            "Εφαρμογές και εξάσκηση",
+            "Κίνηση σε μία διάσταση"
+          ],
+          "font": "Inter-Regular",
+          "size_tex_pt": 8,
+          "logo_unchanged": true
+        },
+        {
+          "page": 11,
+          "texts": [
+            "Κίνηση σε μία διάσταση",
+            "Εφαρμογές και εξάσκηση"
+          ],
+          "font": "Inter-Regular",
+          "size_tex_pt": 8,
+          "logo_unchanged": true
+        },
+        {
+          "page": 12,
+          "texts": [
+            "Εφαρμογές και εξάσκηση",
+            "Κίνηση σε μία διάσταση"
+          ],
+          "font": "Inter-Regular",
+          "size_tex_pt": 8,
+          "logo_unchanged": true
+        },
+        {
+          "page": 13,
+          "texts": [
+            "Κίνηση σε μία διάσταση",
+            "Εφαρμογές και εξάσκηση"
+          ],
+          "font": "Inter-Regular",
+          "size_tex_pt": 8,
+          "logo_unchanged": true
+        },
+        {
+          "page": 14,
+          "texts": [
+            "Εφαρμογές και εξάσκηση",
+            "Κίνηση σε μία διάσταση"
+          ],
+          "font": "Inter-Regular",
+          "size_tex_pt": 8,
+          "logo_unchanged": true
+        },
+        {
+          "page": 15,
+          "texts": [
+            "Κίνηση σε μία διάσταση",
+            "Εφαρμογές και εξάσκηση"
+          ],
+          "font": "Inter-Regular",
+          "size_tex_pt": 8,
+          "logo_unchanged": true
+        },
+        {
+          "page": 18,
+          "texts": [
+            "Η συνάρτηση πρώτου βαθμού",
+            "Συναρτήσεις και γραφήματα"
+          ],
+          "font": "Inter-Regular",
+          "size_tex_pt": 8,
+          "logo_unchanged": true
+        },
+        {
+          "page": 19,
+          "texts": [
+            "Συναρτήσεις και γραφήματα",
+            "Η συνάρτηση πρώτου βαθμού"
+          ],
+          "font": "Inter-Regular",
+          "size_tex_pt": 8,
+          "logo_unchanged": true
+        }
+      ],
+      "icons": [
+        {
+          "icon": "Προσοχή",
+          "before": {
+            "outline_tex_pt": 0.82,
+            "stroke_rgb": [
+              132,
+              147,
+              169
+            ]
+          },
+          "after": {
+            "outline_tex_pt": 1.08,
+            "stroke_rgb": [
+              132,
+              147,
+              169
+            ]
+          }
+        },
+        {
+          "icon": "Πώς σκέφτομαι",
+          "before": {
+            "outline_tex_pt": 1.08,
+            "stroke_rgb": [
+              132,
+              147,
+              169
+            ]
+          },
+          "after": {
+            "outline_tex_pt": 1.08,
+            "stroke_rgb": [
+              132,
+              147,
+              169
+            ]
+          }
+        },
+        {
+          "icon": "Ιστορίες",
+          "before": {
+            "outline_tex_pt": 0.9,
+            "stroke_rgb": [
+              115,
+              115,
+              115
+            ]
+          },
+          "after": {
+            "outline_tex_pt": 1.08,
+            "stroke_rgb": [
+              115,
+              115,
+              115
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

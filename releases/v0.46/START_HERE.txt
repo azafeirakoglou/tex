@@ -1,0 +1,7 @@
+Universal Book Template v0.46
+
+PRINT: black + provisional red spot; SCREEN: black + blue. Both are proofs.
+If the chat PDF viewer fails, download/extract this ZIP and open the PDFs locally.
+The PNG comparison is a rendered preview, not a print master.
+For source/build instructions see source/README.md and source/SETUP.md.
+Printer ink, three tint percentages, bleed and PDF/X remain pending.
