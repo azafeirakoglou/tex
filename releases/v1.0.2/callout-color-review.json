@@ -1,0 +1,72 @@
+{
+  "status": "passed",
+  "shared_role": "BookCalloutAccent",
+  "canonical_swatch": "Spot100",
+  "screen_hex": "203B63",
+  "print_ink": "SecondInkRedProof",
+  "print_tint_percent": 100,
+  "editions": {
+    "screen": {
+      "attention": {
+        "page": 6,
+        "thin_rule_pt": 0.35,
+        "left_rule_pt": 2.0,
+        "title_matches_100_percent_reference": true,
+        "icon_paths": 3,
+        "all_icon_parts_match_reference": true
+      },
+      "history": {
+        "page": 7,
+        "thin_rule_pt": 0.35,
+        "left_rule_pt": 2.0,
+        "title_matches_100_percent_reference": true,
+        "icon_paths": 6,
+        "all_icon_parts_match_reference": true
+      },
+      "problem": {
+        "page": 8,
+        "thin_rule_pt": 0.35,
+        "border_tint_percent": 55
+      },
+      "think": {
+        "page": 8,
+        "thin_rule_pt": 0.35,
+        "left_rule_pt": 2.0,
+        "title_matches_100_percent_reference": true,
+        "icon_paths": 9,
+        "all_icon_parts_match_reference": true
+      }
+    },
+    "print": {
+      "attention": {
+        "page": 6,
+        "thin_rule_pt": 0.35,
+        "left_rule_pt": 2.0,
+        "title_matches_100_percent_reference": true,
+        "icon_paths": 3,
+        "all_icon_parts_match_reference": true
+      },
+      "history": {
+        "page": 7,
+        "thin_rule_pt": 0.35,
+        "left_rule_pt": 2.0,
+        "title_matches_100_percent_reference": true,
+        "icon_paths": 6,
+        "all_icon_parts_match_reference": true
+      },
+      "problem": {
+        "page": 8,
+        "thin_rule_pt": 0.35,
+        "border_tint_percent": 55
+      },
+      "think": {
+        "page": 8,
+        "thin_rule_pt": 0.35,
+        "left_rule_pt": 2.0,
+        "title_matches_100_percent_reference": true,
+        "icon_paths": 9,
+        "all_icon_parts_match_reference": true
+      }
+    }
+  }
+}

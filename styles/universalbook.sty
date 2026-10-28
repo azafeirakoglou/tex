@@ -16,7 +16,7 @@
 % Το τελικό PDF παράγεται με XeLaTeX. Όχι με pdfLaTeX.
 % ===========================================================================
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{styles/universalbook}[2026/10/28 Modular Greek textbook design v1.0.1]
+\ProvidesPackage{styles/universalbook}[2026/10/28 Modular Greek textbook design v1.0.2]
 % Γραμματοσειρές OpenType/TrueType. Η αλλαγή γίνεται από τον config.
 \RequirePackage{fontspec}
 \RequirePackage{polyglossia}
@@ -585,41 +585,41 @@
   \node[anchor=center,inner sep=0pt] at
   ([xshift=\BookCalloutIconOffset]frame.west) {#1};%
 }
-% v0.28: Η λάμπα, ο τίτλος και η αριστερή γραμμή του ThinkBox μοιράζονται
-% τον ίδιο ρόλο BookThinkAccent (SCREEN BookSecondary / PRINT 55% spot).
+% v1.0.2: Τα τρία ενεργά εικονίδια, οι τίτλοι και τα περιγράμματα των κουτιών
+% μοιράζονται τον BookCalloutAccent (SCREEN μπλε / PRINT δεύτερο spot, 100%).
 % Τα εικονίδια είναι vector TikZ και βάφονται αποκλειστικά με
 % σημασιολογικά χρώματα της παλέτας (SCREEN ή PRINT), όχι με τρίτο μελάνι.
 % v0.34: λίγο μικρότερη λάμπα, ενισχυμένες γραμμές και ορατό νήμα.
 \newcommand{\BookCalloutBulb}{%
   \begin{tikzpicture}[x=1mm,y=1mm,scale={\BookCalloutIconScale*\BookBulbScale},
     line cap=round,line join=round]
-    \draw[draw=BookThinkAccent,line width=\BookBulbOutlineWidth] (-2.5,1.1)
+    \draw[draw=BookCalloutAccent,line width=\BookBulbOutlineWidth] (-2.5,1.1)
       .. controls (-2.6,2.7) and (-1.5,3.7) .. (0,3.7)
       .. controls (1.5,3.7) and (2.6,2.7) .. (2.5,1.1)
       .. controls (2.45,-.3) and (1.15,-.65) .. (1,-1.8)
       -- (-1,-1.8)
       .. controls (-1.15,-.65) and (-2.45,-.3) .. cycle;
-    \draw[draw=BookThinkAccent,line width=\BookBulbOutlineWidth] (-1.05,-2.55)--(1.05,-2.55);
-    \draw[draw=BookThinkAccent,line width=\BookBulbOutlineWidth] (-.7,-3.25)--(.7,-3.25);
+    \draw[draw=BookCalloutAccent,line width=\BookBulbOutlineWidth] (-1.05,-2.55)--(1.05,-2.55);
+    \draw[draw=BookCalloutAccent,line width=\BookBulbOutlineWidth] (-.7,-3.25)--(.7,-3.25);
     % Δύο στηρίγματα και τρεις κορυφές του νήματος βολφραμίου.
-    \draw[draw=BookThinkAccent,line width=\BookBulbFilamentWidth]
+    \draw[draw=BookCalloutAccent,line width=\BookBulbFilamentWidth]
       (-.5,-1.3)--(-.85,.35)--(-1.2,1.0)
       --(-.8,1.65)--(-.4,1.0)--(0,1.65)--(.4,1.0)--(.8,1.65)--(1.2,1.0)
       --(.85,.35)--(.5,-1.3);
-    \draw[draw=BookThinkAccent,line width=\BookBulbRayWidth] (0,4.65)--(0,5.35);
-    \draw[draw=BookThinkAccent,line width=\BookBulbRayWidth] (-3.3,3.55)--(-3.9,4.1);
-    \draw[draw=BookThinkAccent,line width=\BookBulbRayWidth] (3.3,3.55)--(3.9,4.1);
-    \draw[draw=BookThinkAccent,line width=\BookBulbRayWidth] (-3.65,.6)--(-4.35,.6);
-    \draw[draw=BookThinkAccent,line width=\BookBulbRayWidth] (3.65,.6)--(4.35,.6);
+    \draw[draw=BookCalloutAccent,line width=\BookBulbRayWidth] (0,4.65)--(0,5.35);
+    \draw[draw=BookCalloutAccent,line width=\BookBulbRayWidth] (-3.3,3.55)--(-3.9,4.1);
+    \draw[draw=BookCalloutAccent,line width=\BookBulbRayWidth] (3.3,3.55)--(3.9,4.1);
+    \draw[draw=BookCalloutAccent,line width=\BookBulbRayWidth] (-3.65,.6)--(-4.35,.6);
+    \draw[draw=BookCalloutAccent,line width=\BookBulbRayWidth] (3.65,.6)--(4.35,.6);
   \end{tikzpicture}%
 }
 \newcommand{\BookCalloutWarning}{%
   \begin{tikzpicture}[x=1mm,y=1mm,scale=\BookCalloutIconScale,
     line cap=round,line join=round]
-    \draw[draw=BookAlert,line width=\BookWarningOutlineWidth]
+    \draw[draw=BookCalloutAccent,line width=\BookWarningOutlineWidth]
       (0,4.25)--(-3.9,-2.75)--(3.9,-2.75)--cycle;
-    \draw[draw=BookAlert,line width=\BookWarningDetailWidth] (0,1.65)--(0,-.48);
-    \fill[BookAlert] (0,-1.65) circle (.37);
+    \draw[draw=BookCalloutAccent,line width=\BookWarningDetailWidth] (0,1.65)--(0,-.48);
+    \fill[BookCalloutAccent] (0,-1.65) circle (.37);
   \end{tikzpicture}%
 }
 % v0.43: το ύψος του ανοιχτού βιβλίου αυξάνεται ανεξάρτητα από το πλάτος.
@@ -654,7 +654,7 @@
   \end{tikzpicture}%
 }
 \newfontfamily\BookMediumLabelFont{\BookMediumFontName}[Script=Default]
-% Ενεργό ιστορικό εικονίδιο v0.45: κλεψύδρα με άμμο, ίδιο μελάνι.
+% Ενεργό ιστορικό εικονίδιο: κλεψύδρα με άμμο, κοινό δεύτερο μελάνι 100%.
 \input{styles/book-history-icon.tex}
 % Μία κοινή κατασκευή για τίτλο, γραμμή, φόντο και εικονίδιο των τριών κουτιών.
 \input{styles/book-callouts.tex}

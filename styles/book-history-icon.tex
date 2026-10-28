@@ -1,11 +1,11 @@
 % Ιστορικά ένθετα: διανυσματική κλεψύδρα με ορατή άμμο.
-% Μόνο BookHistory (55% μαύρο), χωρίς διαφάνεια ή πρόσθετες τονικότητες.
+% Κοινό BookCalloutAccent (δεύτερο μελάνι 100%), χωρίς πρόσθετες τονικότητες.
 \newcommand{\BookCalloutHourglass}{%
   \begin{tikzpicture}[x=1mm,y=1mm,
     scale={\BookCalloutIconScale*\BookHistoryIconScale},
     line cap=round,line join=round]
     % Συμμετρικό γυάλινο σώμα με στενό λαιμό στο κέντρο.
-    \draw[draw=BookHistory,line width=\BookHistoryIconOutlineWidth]
+    \draw[draw=BookCalloutAccent,line width=\BookHistoryIconOutlineWidth]
       (-2.95,4.15)
       .. controls (-2.95,2.0) and (-2.1,1.3) .. (-.55,.30)
       .. controls (-.32,.12) and (-.32,-.12) .. (-.55,-.30)
@@ -15,21 +15,21 @@
       .. controls (.32,-.12) and (.32,.12) .. (.55,.30)
       .. controls (2.1,1.3) and (2.95,2.0) .. (2.95,4.15)--cycle;
     % Λίγη άμμος επάνω και χαμηλός σωρός κάτω, στον ίδιο ακριβώς τόνο.
-    \fill[BookHistory]
+    \fill[BookCalloutAccent]
       (-1.9,2.2)--(1.9,2.2)
       .. controls (1.3,1.45) and (.7,1.05) .. (.12,.45)
       --(-.12,.45)
       .. controls (-.7,1.05) and (-1.3,1.45) .. cycle;
-    \fill[BookHistory]
+    \fill[BookCalloutAccent]
       (-2.4,-3.65)
       .. controls (-1.6,-3.3) and (-.9,-2.5) .. (0,-2.15)
       .. controls (.9,-2.5) and (1.6,-3.3) .. (2.4,-3.65)--cycle;
-    \draw[draw=BookHistory,line width=\BookHistoryIconDetailWidth]
+    \draw[draw=BookCalloutAccent,line width=\BookHistoryIconDetailWidth]
       (0,.1)--(0,-1.8);
     % Συμπαγείς μικρές βάσεις, καθαρές και στο πραγματικό μέγεθος.
-    \fill[BookHistory,rounded corners=.18mm]
+    \fill[BookCalloutAccent,rounded corners=.18mm]
       (-3.8,4.15) rectangle (3.8,4.8);
-    \fill[BookHistory,rounded corners=.18mm]
+    \fill[BookCalloutAccent,rounded corners=.18mm]
       (-3.8,-4.8) rectangle (3.8,-4.15);
   \end{tikzpicture}%
 }
