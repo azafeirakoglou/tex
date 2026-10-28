@@ -16,7 +16,7 @@
 % Το τελικό PDF παράγεται με XeLaTeX. Όχι με pdfLaTeX.
 % ===========================================================================
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{styles/universalbook}[2026/10/28 Modular Greek textbook design v1.0.2]
+\ProvidesPackage{styles/universalbook}[2026/10/28 Modular Greek textbook design v1.0.3]
 % Γραμματοσειρές OpenType/TrueType. Η αλλαγή γίνεται από τον config.
 \RequirePackage{fontspec}
 \RequirePackage{polyglossia}
@@ -101,14 +101,18 @@
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{3.7pt plus 1.1pt minus .6pt}
 \setlist[itemize]{topsep=3pt,itemsep=1.5pt,parsep=0pt,leftmargin=15pt}
-% Όλες οι enumerate λίστες έχουν μπλε μόνο το label, όχι το κείμενο.
+% Μία κοινή εμφάνιση για ετικέτες λιστών και ενδείξεις μέσα σε λύσεις.
+% Το τοπικό group του inline helper δεν αφήνει το χρώμα να περάσει στο κείμενο.
+\newcommand{\BookListLabelFont}{\color{\BookListLabelColor}\bfseries}
+\newcommand{\BookListLabel}[1]{{\BookListLabelFont #1}}
+% Όλες οι enumerate λίστες χρωματίζουν μόνο το label, όχι το κείμενο.
 % Παράδειγμα \begin{enumerate}[label=\roman*)] ... \end{enumerate}
 \setlist[enumerate]{topsep=3pt,itemsep=2.1pt,parsep=0pt,leftmargin=18pt,
-  label=\arabic*.,font=\color{\BookListLabelColor}\bfseries}
-\setlist[enumerate,2]{label=\roman*),leftmargin=16pt,font=\color{\BookListLabelColor}\bfseries}
+  label=\arabic*.,font=\BookListLabelFont}
+\setlist[enumerate,2]{label=\roman*),leftmargin=16pt,font=\BookListLabelFont}
 % Greek alphabet labels: local option label=\BookGreekIndex{\value{enumi}})
 \newcommand{\BookGreekIndex}[1]{\ifcase#1\or α\or β\or γ\or δ\or ε\or στ\or ζ\or η\or θ\or ι\or κ\or λ\or μ\or ν\or ξ\or ο\or π\or ρ\or σ\or τ\else\number#1\fi}
-\newcommand{\BookGreekItems}{label=\BookGreekIndex{\value{enumi}}),font=\color{\BookListLabelColor}\bfseries}
+\newcommand{\BookGreekItems}{label=\BookGreekIndex{\value{enumi}}),font=\BookListLabelFont}
 % Alphabetical Greek labels without numeral prime marks.
 \makeatletter
 \newcommand{\@BookGreek}[1]{\ifcase#1\or α\or β\or γ\or δ\or ε\or στ\or ζ\or η\or θ\or ι\or κ\or λ\or μ\or ν\or ξ\or ο\or π\or ρ\or σ\or τ\else ?\fi}

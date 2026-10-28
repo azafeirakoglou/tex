@@ -15,7 +15,7 @@
 \newcommand{\BookSubtitle}{Θεωρία · Μεθοδολογία · Παραδείγματα · Ασκήσεις}
 \newcommand{\BookPublisher}{ΕΚΔΟΤΙΚΟ ΠΡΟΤΥΠΟ}
 \newcommand{\BookAuthors}{Δοκιμαστική μακέτα — όχι τελικό βιβλίο}
-\newcommand{\BookEdition}{Καθολική μακέτα v1.0.2 · Οκτώβριος 2026}
+\newcommand{\BookEdition}{Καθολική μακέτα v1.0.3 · Οκτώβριος 2026}
 \newcommand{\BookShortName}{Φυσική Α΄ Λυκείου}
 
 % ---------------------------------------------------------------------------
@@ -137,8 +137,9 @@
 % \BookExerciseNumberSize: μέγεθος του μπλε «1 |» των άλυτων.
 % \BookHeaderIconHeight: ύψος πουλιού στην κεφαλίδα και των δύο αντικριστών.
 
-% 1 = show blue labels for all enumerate lists; actual numbers can be changed per list.
-\newcommand{\BookListLabelColor}{BookSecondary}
+% Κοινός ρόλος για αριθμημένες λίστες και ενδείξεις λύσεων.
+% BookListAccent ορίζεται στο color-map.json: δεύτερο μελάνι 100%.
+\newcommand{\BookListLabelColor}{BookListAccent}
 \newcommand{\BookExerciseNumberSize}{11.4}
 % Leave exercise titles empty in main problem sets: \begin{exercise}[ID]{}...
 % Keep optional IDs in the source for future cross-references.

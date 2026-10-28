@@ -1,0 +1,208 @@
+{
+  "status": "passed",
+  "shared_role": "BookListAccent",
+  "canonical_swatch": "Spot100",
+  "screen_hex": "203B63",
+  "print_tint_percent": 100,
+  "targets": {
+    "print2": {
+      "label_counts": {
+        "arabic": 8,
+        "greek": 15,
+        "roman": 4
+      },
+      "following_text_black_checks": 23,
+      "pages": 20
+    },
+    "starter-screen": {
+      "label_counts": {
+        "arabic": 0,
+        "greek": 0,
+        "roman": 0
+      },
+      "following_text_black_checks": 0,
+      "pages": 4
+    },
+    "starter-print2": {
+      "label_counts": {
+        "arabic": 0,
+        "greek": 0,
+        "roman": 0
+      },
+      "following_text_black_checks": 0,
+      "pages": 4
+    },
+    "stress-screen": {
+      "label_counts": {
+        "arabic": 63,
+        "greek": 2,
+        "roman": 0
+      },
+      "following_text_black_checks": 63,
+      "pages": 68
+    },
+    "stress-print2": {
+      "label_counts": {
+        "arabic": 63,
+        "greek": 2,
+        "roman": 0
+      },
+      "following_text_black_checks": 63,
+      "pages": 68
+    },
+    "screen": {
+      "label_counts": {
+        "arabic": 8,
+        "greek": 15,
+        "roman": 4
+      },
+      "following_text_black_checks": 23,
+      "pages": 20
+    },
+    "sample-screen": {
+      "label_counts": {
+        "arabic": 2,
+        "greek": 4,
+        "roman": 0
+      },
+      "following_text_black_checks": 6,
+      "pages": 5
+    },
+    "sample-print2": {
+      "label_counts": {
+        "arabic": 2,
+        "greek": 4,
+        "roman": 0
+      },
+      "following_text_black_checks": 6,
+      "pages": 5
+    },
+    "figures-screen": {
+      "label_counts": {
+        "arabic": 0,
+        "greek": 0,
+        "roman": 0
+      },
+      "following_text_black_checks": 0,
+      "pages": 6
+    },
+    "figures-print2": {
+      "label_counts": {
+        "arabic": 0,
+        "greek": 0,
+        "roman": 0
+      },
+      "following_text_black_checks": 0,
+      "pages": 6
+    },
+    "assessment-screen": {
+      "label_counts": {
+        "arabic": 0,
+        "greek": 4,
+        "roman": 0
+      },
+      "following_text_black_checks": 4,
+      "pages": 4
+    },
+    "assessment-print2": {
+      "label_counts": {
+        "arabic": 0,
+        "greek": 4,
+        "roman": 0
+      },
+      "following_text_black_checks": 4,
+      "pages": 4
+    },
+    "tables-screen": {
+      "label_counts": {
+        "arabic": 0,
+        "greek": 0,
+        "roman": 0
+      },
+      "following_text_black_checks": 0,
+      "pages": 1
+    },
+    "tables-print2": {
+      "label_counts": {
+        "arabic": 0,
+        "greek": 0,
+        "roman": 0
+      },
+      "following_text_black_checks": 0,
+      "pages": 1
+    },
+    "opening-goals-screen": {
+      "label_counts": {
+        "arabic": 0,
+        "greek": 0,
+        "roman": 0
+      },
+      "following_text_black_checks": 0,
+      "pages": 3
+    },
+    "opening-goals-print2": {
+      "label_counts": {
+        "arabic": 0,
+        "greek": 0,
+        "roman": 0
+      },
+      "following_text_black_checks": 0,
+      "pages": 3
+    },
+    "history-statements-screen": {
+      "label_counts": {
+        "arabic": 0,
+        "greek": 0,
+        "roman": 0
+      },
+      "following_text_black_checks": 0,
+      "pages": 2
+    },
+    "history-statements-print2": {
+      "label_counts": {
+        "arabic": 0,
+        "greek": 0,
+        "roman": 0
+      },
+      "following_text_black_checks": 0,
+      "pages": 2
+    },
+    "callouts-screen": {
+      "label_counts": {
+        "arabic": 0,
+        "greek": 0,
+        "roman": 0
+      },
+      "following_text_black_checks": 0,
+      "pages": 1
+    },
+    "callouts-print2": {
+      "label_counts": {
+        "arabic": 0,
+        "greek": 0,
+        "roman": 0
+      },
+      "following_text_black_checks": 0,
+      "pages": 1
+    },
+    "palette-screen": {
+      "label_counts": {
+        "arabic": 0,
+        "greek": 0,
+        "roman": 0
+      },
+      "following_text_black_checks": 0,
+      "pages": 1
+    },
+    "palette-print2": {
+      "label_counts": {
+        "arabic": 0,
+        "greek": 0,
+        "roman": 0
+      },
+      "following_text_black_checks": 0,
+      "pages": 1
+    }
+  },
+  "screen_reference_hex": "203B63"
+}
