@@ -1,0 +1,253 @@
+{
+  "status": "passed",
+  "screen_main_pdf": {
+    "attention": {
+      "page": 6,
+      "thin_rule_pt": 0.35,
+      "rgb": [
+        0.5180000066757202,
+        0.5759999752044678,
+        0.6629999876022339
+      ],
+      "rectangle": [
+        48.36334991455078,
+        284.1176452636719,
+        425.0273742675781,
+        342.2606506347656
+      ],
+      "left_rule_pt": 2.0
+    },
+    "history": {
+      "page": 7,
+      "thin_rule_pt": 0.35,
+      "rgb": [
+        0.45100000500679016,
+        0.45100000500679016,
+        0.45100000500679016
+      ],
+      "rectangle": [
+        56.86735153198242,
+        392.4648132324219,
+        433.5313720703125,
+        496.0676574707031
+      ],
+      "left_rule_pt": 2.0
+    },
+    "problem": {
+      "page": 8,
+      "thin_rule_pt": 0.35,
+      "rgb": [
+        0.5180000066757202,
+        0.5759999752044678,
+        0.6629999876022339
+      ],
+      "rectangle": [
+        48.36334991455078,
+        131.697998046875,
+        425.0273742675781,
+        234.03665161132812
+      ]
+    },
+    "think": {
+      "page": 8,
+      "thin_rule_pt": 0.35,
+      "rgb": [
+        0.5180000066757202,
+        0.5759999752044678,
+        0.6629999876022339
+      ],
+      "rectangle": [
+        48.36334991455078,
+        242.35397338867188,
+        425.0273742675781,
+        313.8806457519531
+      ],
+      "left_rule_pt": 2.0
+    }
+  },
+  "print_main_pdf": {
+    "attention": {
+      "page": 6,
+      "thin_rule_pt": 0.35,
+      "preview_rgb": [
+        0.9633325934410095,
+        0.5537346601486206,
+        0.43718624114990234
+      ],
+      "left_rule_pt": 2.0
+    },
+    "history": {
+      "page": 7,
+      "thin_rule_pt": 0.35,
+      "preview_rgb": [
+        0.44994276762008667,
+        0.45001906156539917,
+        0.44994276762008667
+      ],
+      "left_rule_pt": 2.0
+    },
+    "problem": {
+      "page": 8,
+      "thin_rule_pt": 0.35,
+      "preview_rgb": [
+        0.9633325934410095,
+        0.5537346601486206,
+        0.43718624114990234
+      ]
+    },
+    "think": {
+      "page": 8,
+      "thin_rule_pt": 0.35,
+      "preview_rgb": [
+        0.9633325934410095,
+        0.5537346601486206,
+        0.43718624114990234
+      ],
+      "left_rule_pt": 2.0
+    }
+  },
+  "split_callouts": {
+    "screen": {
+      "history": [
+        {
+          "page": 15,
+          "horizontal_edges": 1
+        },
+        {
+          "page": 16,
+          "horizontal_edges": 0
+        },
+        {
+          "page": 17,
+          "horizontal_edges": 0
+        },
+        {
+          "page": 18,
+          "horizontal_edges": 0
+        },
+        {
+          "page": 19,
+          "horizontal_edges": 1
+        }
+      ],
+      "think": [
+        {
+          "page": 20,
+          "horizontal_edges": 1
+        },
+        {
+          "page": 21,
+          "horizontal_edges": 0
+        },
+        {
+          "page": 22,
+          "horizontal_edges": 0
+        },
+        {
+          "page": 23,
+          "horizontal_edges": 0
+        },
+        {
+          "page": 24,
+          "horizontal_edges": 1
+        }
+      ],
+      "attention": [
+        {
+          "page": 25,
+          "horizontal_edges": 1
+        },
+        {
+          "page": 26,
+          "horizontal_edges": 0
+        },
+        {
+          "page": 27,
+          "horizontal_edges": 0
+        },
+        {
+          "page": 28,
+          "horizontal_edges": 0
+        },
+        {
+          "page": 29,
+          "horizontal_edges": 1
+        }
+      ]
+    },
+    "print": {
+      "history": [
+        {
+          "page": 15,
+          "horizontal_edges": 1
+        },
+        {
+          "page": 16,
+          "horizontal_edges": 0
+        },
+        {
+          "page": 17,
+          "horizontal_edges": 0
+        },
+        {
+          "page": 18,
+          "horizontal_edges": 0
+        },
+        {
+          "page": 19,
+          "horizontal_edges": 1
+        }
+      ],
+      "think": [
+        {
+          "page": 20,
+          "horizontal_edges": 1
+        },
+        {
+          "page": 21,
+          "horizontal_edges": 0
+        },
+        {
+          "page": 22,
+          "horizontal_edges": 0
+        },
+        {
+          "page": 23,
+          "horizontal_edges": 0
+        },
+        {
+          "page": 24,
+          "horizontal_edges": 1
+        }
+      ],
+      "attention": [
+        {
+          "page": 25,
+          "horizontal_edges": 1
+        },
+        {
+          "page": 26,
+          "horizontal_edges": 0
+        },
+        {
+          "page": 27,
+          "horizontal_edges": 0
+        },
+        {
+          "page": 28,
+          "horizontal_edges": 0
+        },
+        {
+          "page": 29,
+          "horizontal_edges": 1
+        }
+      ]
+    }
+  },
+  "alternative_problem_heading": {
+    "status": "passed",
+    "thin_rule_pt": 0.35,
+    "ink": "SECOND",
+    "tint": 55
+  }
+}

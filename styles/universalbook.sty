@@ -16,7 +16,7 @@
 % Το τελικό PDF παράγεται με XeLaTeX. Όχι με pdfLaTeX.
 % ===========================================================================
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{styles/universalbook}[2026/10/24 Modular Greek textbook design v1.0.0]
+\ProvidesPackage{styles/universalbook}[2026/10/28 Modular Greek textbook design v1.0.1]
 % Γραμματοσειρές OpenType/TrueType. Η αλλαγή γίνεται από τον config.
 \RequirePackage{fontspec}
 \RequirePackage{polyglossia}
@@ -691,7 +691,8 @@
 \newcommand{\BookExampleLabel}{\LabelExample\space\theworkedexample\enspace—\enspace\BookCurrentExampleTitle}
 \ifBookExampleDarkHeader
   \newtcolorbox{ProblemBox}{enhanced,breakable,sharp corners,
-    colback=BookProblemBackground,colframe=BookPanelBorder,boxrule=.35pt,
+    colback=BookProblemBackground,colframe=BookPanelBorder,boxrule=\BookBoxThinRuleWidth,
+    borderline={\BookBoxThinRuleWidth}{0pt}{BookProblemBorder},
     colbacktitle=BookPrimary,coltitle=white,
     fonttitle=\BookHeadingFont\fontsize{\BookExampleTitleFontSize}{\BookExampleTitleLineHeight}\selectfont,
     title={\BookExampleLabel},
@@ -701,6 +702,8 @@
     before skip=7pt,after skip=8pt,before upper={\small}}
 \else
   \newtcolorbox{ProblemBox}{BookPanel,colback=BookProblemBackground,colframe=BookPanelBorder,
+    boxrule=\BookBoxThinRuleWidth,
+    borderline={\BookBoxThinRuleWidth}{0pt}{BookProblemBorder},
     before upper={\small\noindent{\BookHeadingFont\fontsize{\BookExampleTitleFontSize}{\BookExampleTitleLineHeight}\selectfont\color{BookPrimary}\BookExampleLabel}\par\nobreak\vskip3pt{\color{BookPaleRule}\hrule height .40pt}\nobreak\vskip8pt}}
 \fi
 \newtcolorbox{MethodBox}{BookPanel,colback=BookMethodSoft,colframe=BookPanelBorder,borderline west={2.1pt}{0pt}{BookSecondary},title={\LabelMethod},fonttitle=\BookHeadingFont\bfseries\small,coltitle=BookPrimary,attach title to upper={\par\smallskip},before upper={\small}}

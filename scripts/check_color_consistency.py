@@ -142,12 +142,13 @@ def validate_callouts(root,m):
     for p in active_sources(root,m):
         if p.exists() and re.search(direct,without_comments(p.read_text(encoding='utf-8'))):
             errors.append(str(p.relative_to(root))+': direct callout definition bypasses shared construction')
-    # One renderer owns the title, accent rule and both first-piece overlays.
+    # One renderer owns the title, thin border, accent rule and icon overlays.
     compact=re.sub(r'\s+','',text)
     required=[
         'BookCalloutRender/.stylenargs={5}{BookCallout,',
         'colback=#1',
-        'borderlinewest={1.35pt}{0pt}{#2}',
+        r'borderline={\BookBoxThinRuleWidth}{0pt}{#2}',
+        r'borderlinewest={\BookCalloutAccentRuleWidth}{0pt}{#2}',
         r'beforeupper={\BookCalloutHeading{#2}{#4}{#5}}',
         r'overlayunbroken={\BookCalloutCenteredIcon{#3}}',
         r'overlayfirst={\BookCalloutCenteredIcon{#3}}',
