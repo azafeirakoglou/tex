@@ -1,0 +1,151 @@
+{
+  "status": "passed",
+  "reviewed_at": "2026-10-29T16:24:59.009109+00:00",
+  "method": "Read-only comparison of actual v1.0.8 PDF paths and words with published v1.0.7, plus embedded font spans and source font OS/2 weights.",
+  "chapter_openings": {
+    "SCREEN": {
+      "pdf_sha256": "772b1930f09a138fa76421875bb8f2d913d295e74593b9ec04f1ed28fb86d36e",
+      "reference_v107_pdf_sha256": "686e2fe8a0585b0b45a094787b0533119d9f447e2358687f73701edeb0344e70",
+      "physical_pdf_page": 3,
+      "removed_20mm_rule": true,
+      "old_rule_count": 1,
+      "new_rule_count": 0,
+      "text_unchanged": true,
+      "word_position_max_change_pdf_bp": 0,
+      "page_count": 4
+    },
+    "PRINT": {
+      "pdf_sha256": "f15db33b522227c729d9e5408e80adc4fdde78097cdcdf2a6e503eb75f0a94e3",
+      "reference_v107_pdf_sha256": "0e892d5a6d81aecc6314847940bf98056c22d55c638059c80a65402806259955",
+      "physical_pdf_page": 3,
+      "removed_20mm_rule": true,
+      "old_rule_count": 1,
+      "new_rule_count": 0,
+      "text_unchanged": true,
+      "word_position_max_change_pdf_bp": 0,
+      "page_count": 4
+    }
+  },
+  "worked_examples": {
+    "SCREEN": {
+      "pdf_sha256": "3e36d20cd28998643d7d60f4d5542b3e18d2a0928f583a2cc331c30cc27d0f20",
+      "titles": [
+        {
+          "page": 8,
+          "font": "NotoSerif-Regular",
+          "size_tex_pt": 10.4,
+          "size_pdf_bp": 10.361100196838379,
+          "weight": 400,
+          "bold": false
+        },
+        {
+          "page": 8,
+          "font": "NotoSerif-Regular",
+          "size_tex_pt": 10.4,
+          "size_pdf_bp": 10.361100196838379,
+          "weight": 400,
+          "bold": false
+        },
+        {
+          "page": 19,
+          "font": "NotoSerif-Regular",
+          "size_tex_pt": 10.4,
+          "size_pdf_bp": 10.361100196838379,
+          "weight": 400,
+          "bold": false
+        }
+      ],
+      "solution_labels": [
+        {
+          "page": 8,
+          "font": "Inter-Medium",
+          "size_tex_pt": 10.2,
+          "size_pdf_bp": 10.16189956665039,
+          "weight": 500,
+          "bold": false
+        },
+        {
+          "page": 8,
+          "font": "Inter-Medium",
+          "size_tex_pt": 10.2,
+          "size_pdf_bp": 10.16189956665039,
+          "weight": 500,
+          "bold": false
+        },
+        {
+          "page": 19,
+          "font": "Inter-Medium",
+          "size_tex_pt": 10.2,
+          "size_pdf_bp": 10.16189956665039,
+          "weight": 500,
+          "bold": false
+        }
+      ]
+    },
+    "PRINT": {
+      "pdf_sha256": "9538bd9f4837e4358be1810dc624ebbc77207adf2099a0adc0a8a3cb937ed9a6",
+      "titles": [
+        {
+          "page": 8,
+          "font": "NotoSerif-Regular",
+          "size_tex_pt": 10.4,
+          "size_pdf_bp": 10.361100196838379,
+          "weight": 400,
+          "bold": false
+        },
+        {
+          "page": 8,
+          "font": "NotoSerif-Regular",
+          "size_tex_pt": 10.4,
+          "size_pdf_bp": 10.361100196838379,
+          "weight": 400,
+          "bold": false
+        },
+        {
+          "page": 19,
+          "font": "NotoSerif-Regular",
+          "size_tex_pt": 10.4,
+          "size_pdf_bp": 10.361100196838379,
+          "weight": 400,
+          "bold": false
+        }
+      ],
+      "solution_labels": [
+        {
+          "page": 8,
+          "font": "Inter-Medium",
+          "size_tex_pt": 10.2,
+          "size_pdf_bp": 10.16189956665039,
+          "weight": 500,
+          "bold": false
+        },
+        {
+          "page": 8,
+          "font": "Inter-Medium",
+          "size_tex_pt": 10.2,
+          "size_pdf_bp": 10.16189956665039,
+          "weight": 500,
+          "bold": false
+        },
+        {
+          "page": 19,
+          "font": "Inter-Medium",
+          "size_tex_pt": 10.2,
+          "size_pdf_bp": 10.16189956665039,
+          "weight": 500,
+          "bold": false
+        }
+      ]
+    }
+  },
+  "font_file_evidence": {
+    "NotoSerif-Regular.ttf": {
+      "sha256": "c8f669ceb2c9c60ccf55198b305e08a997ffca79a38cc7eeb551e643cbe66505",
+      "os2_weight_class": 400
+    },
+    "Inter-Medium.otf": {
+      "sha256": "6c222ed2c3660524dd0c14fb745e00fee65c5361ab28f60fba6730bf4e648763",
+      "os2_weight_class": 500
+    }
+  }
+}

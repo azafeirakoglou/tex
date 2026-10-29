@@ -1,0 +1,218 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "version": "1.0.8",
+  "created_utc": "2026-10-29T16:23:52.718093+00:00",
+  "source_sha256": "2e29738f6c614087677508e9e82808a37b380c27a86346b97cdf49849858ecfc",
+  "palette_sha256": "80ee1ee933985555bdd4d8caa7ec9ba63b8301bbed2c3938db2b3ba956c07053",
+  "targets": {
+    "print2": {
+      "pdf": "build/print/Physics_A_Print_Technical.pdf",
+      "sha256": "9538bd9f4837e4358be1810dc624ebbc77207adf2099a0adc0a8a3cb937ed9a6",
+      "pages": 20
+    },
+    "starter-screen": {
+      "pdf": "build/starter-screen/Starter_Screen.pdf",
+      "sha256": "772b1930f09a138fa76421875bb8f2d913d295e74593b9ec04f1ed28fb86d36e",
+      "pages": 4
+    },
+    "starter-print2": {
+      "pdf": "build/starter-print2/Starter_Print.pdf",
+      "sha256": "f15db33b522227c729d9e5408e80adc4fdde78097cdcdf2a6e503eb75f0a94e3",
+      "pages": 4
+    },
+    "stress-screen": {
+      "pdf": "build/stress-screen/Stress_Screen.pdf",
+      "sha256": "39a01eca9efa1319d225fc567cc6612e61adce2be541a2b917e56cd083251cac",
+      "pages": 68
+    },
+    "stress-print2": {
+      "pdf": "build/stress-print2/Stress_Print.pdf",
+      "sha256": "b7f7c41b12ddca7535d459569326a0f63f810d4dddf5101fc52703f939033a6a",
+      "pages": 68
+    },
+    "screen": {
+      "pdf": "build/screen/Physics_A_Screen.pdf",
+      "sha256": "3e36d20cd28998643d7d60f4d5542b3e18d2a0928f583a2cc331c30cc27d0f20",
+      "pages": 20
+    },
+    "sample-screen": {
+      "pdf": "build/sample-screen/Sample_Collaborators_Blue.pdf",
+      "sha256": "3fe36db6c06b1783ebc66b10a655a02db60c83bd23ea7a3718b018f994916152",
+      "pages": 5
+    },
+    "sample-print2": {
+      "pdf": "build/sample-print2/Sample_Collaborators_Print_Technical.pdf",
+      "sha256": "830427a2ceaeebb96c057d641860fdb3cba00fcff3d3bea1037c30eae862be6e",
+      "pages": 5
+    },
+    "figures-screen": {
+      "pdf": "build/figures-screen/Book_Figures_Screen.pdf",
+      "sha256": "9d86fa61f0de25d9bce774665078e307defdbf9b1accf1219aa697ceeebadcf6",
+      "pages": 6
+    },
+    "figures-print2": {
+      "pdf": "build/figures-print2/Book_Figures_Print_Technical.pdf",
+      "sha256": "f97ba956a968e7a380c0497d7373233b9d97ab40a856a56f444fd1ccae261022",
+      "pages": 6
+    },
+    "assessment-screen": {
+      "pdf": "build/assessment-screen/Book_Assessment_Screen.pdf",
+      "sha256": "23ebb24372bea6674d1bedffbd64678f622a8385b08e2b5047eba3bab256f816",
+      "pages": 4
+    },
+    "assessment-print2": {
+      "pdf": "build/assessment-print2/Book_Assessment_Print_Technical.pdf",
+      "sha256": "b4efc711f2da34a919f94b0d6fbb064db4a237201b43ecf1addbc20db4ff37d1",
+      "pages": 4
+    },
+    "tables-screen": {
+      "pdf": "build/tables-screen/Book_Tables_Screen.pdf",
+      "sha256": "05521468e3005d8859ffea6665dd78fea0ae1e22207392b1639f9e8587964257",
+      "pages": 1
+    },
+    "tables-print2": {
+      "pdf": "build/tables-print2/Book_Tables_Print_Technical.pdf",
+      "sha256": "bc06c415f9b32d2b1c3e2866648d5f4fec9096f640b32d1e0faaedee46c0634b",
+      "pages": 1
+    },
+    "opening-goals-screen": {
+      "pdf": "build/opening-goals-screen/Book_Opening_Goals_Screen.pdf",
+      "sha256": "0981fa10c3ec829df19e48fb326cc489527e3881ea1299858a66abfc8c2629cd",
+      "pages": 3
+    },
+    "opening-goals-print2": {
+      "pdf": "build/opening-goals-print2/Book_Opening_Goals_Print.pdf",
+      "sha256": "ea8102fe3a04f357846c2724b50ec4f96df32a989ce2d1a5715f8a36c14dd47e",
+      "pages": 3
+    },
+    "history-statements-screen": {
+      "pdf": "build/history-statements-screen/Book_History_Statements_Screen.pdf",
+      "sha256": "ce739cce83474681319066eb16d5e1b1e73d7e6fbc5b45eb7a9febd480c9fd7c",
+      "pages": 2
+    },
+    "history-statements-print2": {
+      "pdf": "build/history-statements-print2/Book_History_Statements_Print.pdf",
+      "sha256": "92cb59091ea0966f7d9a5f867d24921afa1a5518a88fbbc91b3400ce533cd611",
+      "pages": 2
+    },
+    "callouts-screen": {
+      "pdf": "build/callouts-screen/Book_Callouts_Screen.pdf",
+      "sha256": "9fde3234062a7416bebd83b0e53e29694136dc1de9d20fc3c76fd9da46450b2f",
+      "pages": 1
+    },
+    "callouts-print2": {
+      "pdf": "build/callouts-print2/Book_Callouts_Print_Technical.pdf",
+      "sha256": "ef10dfea43c379592ee9ed7b16cfa557ff14050b90cd0d801f37b8b047bc76e5",
+      "pages": 1
+    },
+    "palette-screen": {
+      "pdf": "build/palette-screen/Book_Palette_v026_Screen.pdf",
+      "sha256": "b121bdd4d8a2ec564c4d0f94b85121f83512e4f892d734dbdabc6e484bea8e23",
+      "pages": 1
+    },
+    "palette-print2": {
+      "pdf": "build/palette-print2/Book_Palette_v026_Print.pdf",
+      "sha256": "646385fb5d46b6adbdd5849122cdb3ae02d569a2ea51edffaae8d55509a64947",
+      "pages": 1
+    }
+  },
+  "pairs": [
+    {
+      "print_target": "print2",
+      "screen_target": "screen",
+      "exit_code": 0,
+      "report": "build/release-checks/run-cj403eyz/pdf/print2.json"
+    },
+    {
+      "print_target": "sample-print2",
+      "screen_target": "sample-screen",
+      "exit_code": 0,
+      "report": "build/release-checks/run-cj403eyz/pdf/sample-print2.json"
+    },
+    {
+      "print_target": "figures-print2",
+      "screen_target": "figures-screen",
+      "exit_code": 0,
+      "report": "build/release-checks/run-cj403eyz/pdf/figures-print2.json"
+    },
+    {
+      "print_target": "assessment-print2",
+      "screen_target": "assessment-screen",
+      "exit_code": 0,
+      "report": "build/release-checks/run-cj403eyz/pdf/assessment-print2.json"
+    },
+    {
+      "print_target": "tables-print2",
+      "screen_target": "tables-screen",
+      "exit_code": 0,
+      "report": "build/release-checks/run-cj403eyz/pdf/tables-print2.json"
+    },
+    {
+      "print_target": "opening-goals-print2",
+      "screen_target": "opening-goals-screen",
+      "exit_code": 0,
+      "report": "build/release-checks/run-cj403eyz/pdf/opening-goals-print2.json"
+    },
+    {
+      "print_target": "history-statements-print2",
+      "screen_target": "history-statements-screen",
+      "exit_code": 0,
+      "report": "build/release-checks/run-cj403eyz/pdf/history-statements-print2.json"
+    },
+    {
+      "print_target": "callouts-print2",
+      "screen_target": "callouts-screen",
+      "exit_code": 0,
+      "report": "build/release-checks/run-cj403eyz/pdf/callouts-print2.json"
+    },
+    {
+      "print_target": "palette-print2",
+      "screen_target": "palette-screen",
+      "exit_code": 0,
+      "report": "build/release-checks/run-cj403eyz/pdf/palette-print2.json"
+    },
+    {
+      "print_target": "starter-print2",
+      "screen_target": "starter-screen",
+      "exit_code": 0,
+      "report": "build/release-checks/run-cj403eyz/pdf/starter-print2.json"
+    },
+    {
+      "print_target": "stress-print2",
+      "screen_target": "stress-screen",
+      "exit_code": 0,
+      "report": "build/release-checks/run-cj403eyz/pdf/stress-print2.json"
+    }
+  ],
+  "test_report": "build/release-checks/run-cj403eyz/tests.json",
+  "driver_report": "build/release-checks/run-cj403eyz/pdf-driver.json",
+  "build_summary": "build/release-checks/run-cj403eyz/build-summary.json",
+  "tool_versions": "build/release-checks/run-cj403eyz/tool-versions.json",
+  "main_report": "build/release-checks/run-cj403eyz/pdf/print2.json",
+  "reports": {
+    "build/release-checks/run-cj403eyz/tests.json": "26237eda2247b02bfeb33479c6ba4098eb9b8b2aa7673326b5b3147f44838a71",
+    "build/release-checks/run-cj403eyz/pdf-driver.json": "940694a3458fe11912fa3e322b4def636a7ef7a204529655b5cb75e71864d175",
+    "build/release-checks/run-cj403eyz/build-summary.json": "d1a6f6fd6b7bc6fdefb61c9be884e906084afacaec228374f83222397c8ad05c",
+    "build/release-checks/run-cj403eyz/tool-versions.json": "0dcd083a59bc4c811fa9a67de38700d006d4ebd27d97be6af9c80c25cd0250c1",
+    "build/release-checks/run-cj403eyz/pdf/suite.json": "2dceba4a455b1c8a5b5be2ae1c78f2ae28eacf6b9de99d46088a5dad92705022",
+    "build/release-checks/run-cj403eyz/pdf/print2.json": "4913eca5562e0bdfca4fa28b8b3d094212ef49fccde12db429a982bb2ac1a993",
+    "build/release-checks/run-cj403eyz/pdf/sample-print2.json": "c1b28fa75804a07b87792cdc8d4f86ace7517ad92b6a905b4c391f867ab1c1c6",
+    "build/release-checks/run-cj403eyz/pdf/figures-print2.json": "5b6b5a011c3bee98d02644da777feed9b97c37b87e33dabe4a0e66cb533e9951",
+    "build/release-checks/run-cj403eyz/pdf/assessment-print2.json": "43422582544692a760d9f007d28f84be0b717531818fd4c69eb7e2da9fe76ed7",
+    "build/release-checks/run-cj403eyz/pdf/tables-print2.json": "947387ebe4ac8fc6aac2c7410ff957557f634184124b9ca86c13d032ebfca62a",
+    "build/release-checks/run-cj403eyz/pdf/opening-goals-print2.json": "4e13f39ddfeac26ce27e3c1c138e44a7e03f5466a62a076c793ef8130a4a0e83",
+    "build/release-checks/run-cj403eyz/pdf/history-statements-print2.json": "c6b90386753d0e07fb1c94ea9e32688da589bf5ec689039f1baf187e2344a630",
+    "build/release-checks/run-cj403eyz/pdf/callouts-print2.json": "48939d4ac67ea33fa6844115fccf494471a3683d1e1d91b020283cf9ff978495",
+    "build/release-checks/run-cj403eyz/pdf/palette-print2.json": "f7d41dada1b579154424face925effee59048af0b69b2f41625c5b8f6711be73",
+    "build/release-checks/run-cj403eyz/pdf/starter-print2.json": "c1263384f9d38a1b9f0d92fd8faee2b4fb52353b9542959dc25ecf0b60b78224",
+    "build/release-checks/run-cj403eyz/pdf/stress-print2.json": "e73ef3d28420bbc6dbcb669473a7ccfc11545639232e0c284091fff6b0c637ea",
+    "build/release-checks/run-cj403eyz/stress.json": "449ad97b124a70154a0af275c6903bc62cdf0ba9d8110de15f9de06ef06f3d06",
+    "build/release-checks/run-cj403eyz/build.log": "9f337122672c231a2f92ef397c03b773433e520107a25d9139b9679b5aa5d9a1",
+    "build/release-checks/run-cj403eyz/preflight.log": "7c2d8f1208e323736924a02f034fae56fffaf768e1e2d0dd4166053bb722df56",
+    "build/release-checks/run-cj403eyz/setup.log": "a017cc854871ecb1446b4fafdec3ad9a4202a0728b94548c62fee5fd8e04066a",
+    "build/release-checks/run-cj403eyz/stress.log": "759c1292ecfa54875de115778e5743a2ed8f0973547bcbcbdb071d727751cf33",
+    "build/release-checks/run-cj403eyz/tests.log": "aa0aa1098e7630a35dcdac6b2671601555ebf399ac27d32ec417ab3e4fc99e5d"
+  },
+  "stress_report": "build/release-checks/run-cj403eyz/stress.json"
+}

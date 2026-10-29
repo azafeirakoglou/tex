@@ -118,7 +118,7 @@ python3 scripts/release.py --out /tmp/book-release
 
 ```sh
 python3 scripts/check_clean_install.py \
-  --zip /tmp/book-release/Universal_Book_Template_v1.0.7.zip \
+  --zip /tmp/book-release/Universal_Book_Template_v1.0.8.zip \
   --workdir /tmp/book-clean-install \
   --report /tmp/book-clean-install-report.json \
   --reference-root .

@@ -16,7 +16,7 @@
 % Το τελικό PDF παράγεται με XeLaTeX. Όχι με pdfLaTeX.
 % ===========================================================================
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{styles/universalbook}[2026/10/29 Modular Greek textbook design v1.0.7]
+\ProvidesPackage{styles/universalbook}[2026/10/29 Modular Greek textbook design v1.0.8]
 % Γραμματοσειρές OpenType/TrueType. Η αλλαγή γίνεται από τον config.
 \RequirePackage{fontspec}
 \RequirePackage{polyglossia}
@@ -518,7 +518,7 @@
     \kern15mm\copy\BookChapterHeadingBox
     \kern\BookChapterGap\copy\BookChapterGoalsBox}%
   \noindent\usebox{\BookChapterPageBox}\par
-  \vfill{\color{BookSecondary}\rule{20mm}{.4pt}}\par\vspace*{7mm}\clearpage
+  \vfill\clearpage
 }
 
 % [short running title] optional; then fulltitle, subtitle, asset, credit, goals.

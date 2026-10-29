@@ -1,4 +1,4 @@
-# Universal Book Template v1.0.7
+# Universal Book Template v1.0.8
 
 Ελληνική μακέτα XeLaTeX για επιστημονικό/εκπαιδευτικό βιβλίο 170 × 240 mm.
 Ένα περιεχόμενο παράγει δύο εκδόσεις: PRINT με μαύρο και προσωρινό κόκκινο
@@ -52,7 +52,7 @@ make release RELEASE_OUT=dist
 Η σταθερή έκδοση διανέμεται από το `make release` και συνοδεύεται από τον
 ξεχωριστό έλεγχο εγκατάστασης του ίδιου ZIP σε νέο φάκελο/περιβάλλον Python.
 
-**Πακέτο v1.0.7:** [ZIP, βιβλία, starter και οδηγοί](https://github.com/azafeirakoglou/tex/tree/main/releases/v1.0.7).
+**Πακέτο v1.0.8:** [ZIP, βιβλία, starter και οδηγοί](https://github.com/azafeirakoglou/tex/tree/main/releases/v1.0.8).
 
 ## Κεντρικές επιλογές
 
