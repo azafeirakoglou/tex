@@ -15,7 +15,7 @@
 \newcommand{\BookSubtitle}{Θεωρία · Μεθοδολογία · Παραδείγματα · Ασκήσεις}
 \newcommand{\BookPublisher}{ΕΚΔΟΤΙΚΟ ΠΡΟΤΥΠΟ}
 \newcommand{\BookAuthors}{Δοκιμαστική μακέτα — όχι τελικό βιβλίο}
-\newcommand{\BookEdition}{Καθολική μακέτα v1.0.5 · Οκτώβριος 2026}
+\newcommand{\BookEdition}{Καθολική μακέτα v1.0.6 · Οκτώβριος 2026}
 \newcommand{\BookShortName}{Φυσική Α΄ Λυκείου}
 
 % ---------------------------------------------------------------------------
@@ -222,10 +222,9 @@
 % 7. Ιεραρχία τίτλων και πλαίσια λυμένων παραδειγμάτων.
 % Κάθε τιμή *true* ανοίγει μια οπτική επιλογή· *false* την απενεργοποιεί.
 % Το ιστορικό BookExampleDarkHeader επιλέγει μόνο τη διάταξη του τίτλου.
-% true: χωριστή περιοχή τίτλου χωρίς δικό της γέμισμα, στο κοινό γκρι φόντο.
-% false: τίτλος μέσα στο σώμα, με λεπτή ουδέτερη διαχωριστική γραμμή.
-% Και στις δύο μορφές ο τίτλος είναι λευκό χαρτιού με συμπαγή βούλα.
-% Η βούλα και η «Λύση» έχουν BookExampleAccent (δεύτερο μελάνι 100%).
+% true: κανονικά διάκενα τίτλου. false: συμπαγή διάκενα τίτλου.
+% Και στις δύο μορφές η περιοχή τίτλου είναι λευκό χαρτιού.
+% Γράμματα τίτλου, βούλα και «Λύση»: BookExampleAccent (δεύτερο μελάνι 100%).
 % Με BookMajorHeadingBandtrue οι βασικές ενότητες έχουν δική τους μπλε μπάρα.
 
 % Legacy switch name retained for compatibility; neither layout has a dark fill.
@@ -255,9 +254,11 @@
 \newcommand{\BookExampleTitleFontSize}{10.4}
 \newcommand{\BookExampleTitleLineHeight}{13.5}
 \newcommand{\BookExampleBarPad}{2.0mm}
+\newcommand{\BookExampleCompactTitlePad}{1.0mm}
 % Κοινή εμφάνιση τίτλου λυμένου παραδείγματος, χωρίς πρόσθετο μελάνι.
-\newcommand{\BookExampleTitleTextColor}{white}
-\newcommand{\BookExampleTitleDotDiameter}{1.6mm}
+\newcommand{\BookExampleTitleBackground}{white}
+\newcommand{\BookExampleTitleTextColor}{BookExampleAccent}
+\newcommand{\BookExampleTitleDotDiameter}{2mm}
 \newcommand{\BookExampleTitleDotGap}{1.6mm}
 \newcommand{\BookExampleTitleAlignmentReference}{Π}
 % Κοινό μέγεθος για τίτλους ThinkBox / AttentionBox / HistoryBox.

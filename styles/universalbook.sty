@@ -16,7 +16,7 @@
 % Το τελικό PDF παράγεται με XeLaTeX. Όχι με pdfLaTeX.
 % ===========================================================================
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{styles/universalbook}[2026/10/29 Modular Greek textbook design v1.0.5]
+\ProvidesPackage{styles/universalbook}[2026/10/29 Modular Greek textbook design v1.0.6]
 % Γραμματοσειρές OpenType/TrueType. Η αλλαγή γίνεται από τον config.
 \RequirePackage{fontspec}
 \RequirePackage{polyglossia}
@@ -690,7 +690,7 @@
 % Worked-example title is set in the SAME ProblemBox to keep title and statement together.
 % Two styles are switched centrally in config/book-config.tex.
 % Κατά την έναρξη ενός workedexample αποθηκεύεται ο τίτλος του.
-% Το επόμενο ProblemBox τον εμφανίζει στο κοινό γκρι φόντο, χωρίς λωρίδα χρώματος.
+% Το επόμενο ProblemBox τον εμφανίζει με δεύτερο μελάνι σε λευκή περιοχή τίτλου.
 \newcommand{\BookCurrentExampleTitle}{}
 \newcommand{\BookExampleLabel}{\LabelExample\space\theworkedexample\enspace—\enspace\BookCurrentExampleTitle}
 % Η βούλα κεντράρεται στο πραγματικό ύψος κεφαλαίου της ενεργής γραμματοσειράς.
@@ -709,24 +709,25 @@
   \BookExampleTitleDot\nobreak\hspace{\BookExampleTitleDotGap}%
   {\color{\BookExampleTitleTextColor}\BookExampleLabel}%
 }
-\ifBookExampleDarkHeader
-  \newtcolorbox{ProblemBox}{enhanced,breakable,sharp corners,
+% Μία κοινή κατασκευή κρατά λευκό χαρτιού πίσω από τον τίτλο και στις δύο μορφές.
+\tcbset{BookProblemRender/.style={enhanced,breakable,sharp corners,
     colback=BookProblemBackground,colframe=BookProblemBackground,coltext=BookInk,
     boxrule=\BookBoxThinRuleWidth,
     borderline={\BookBoxThinRuleWidth}{0pt}{BookProblemBorder},
-    coltitle=\BookExampleTitleTextColor,title filled=false,
+    colbacktitle=\BookExampleTitleBackground,
+    coltitle=\BookExampleTitleTextColor,title filled=true,
     fonttitle=\BookHeadingFont\fontsize{\BookExampleTitleFontSize}{\BookExampleTitleLineHeight}\selectfont,
     title={\BookExampleHeading},
     toptitle=\BookExampleBarPad,bottomtitle=\BookExampleBarPad,
     lefttitle=3.4mm,righttitle=3.4mm,
     top=2.7mm,bottom=2.6mm,left=3.5mm,right=3.5mm,
-    before skip=7pt,after skip=8pt,before upper={\small}}
+    before skip=7pt,after skip=8pt,before upper={\small}}}
+\ifBookExampleDarkHeader
+  \newtcolorbox{ProblemBox}{BookProblemRender}
 \else
-  \newtcolorbox{ProblemBox}{BookPanel,colback=BookProblemBackground,
-    colframe=BookProblemBackground,coltext=BookInk,
-    boxrule=\BookBoxThinRuleWidth,
-    borderline={\BookBoxThinRuleWidth}{0pt}{BookProblemBorder},
-    before upper={\small\noindent{\BookHeadingFont\fontsize{\BookExampleTitleFontSize}{\BookExampleTitleLineHeight}\selectfont\BookExampleHeading}\par\nobreak\vskip3pt{\color{BookProblemBorder}\hrule height .40pt}\nobreak\vskip8pt}}
+  \newtcolorbox{ProblemBox}{BookProblemRender,
+    toptitle=\BookExampleCompactTitlePad,bottomtitle=\BookExampleCompactTitlePad,
+    top=2.4mm,bottom=2.4mm}
 \fi
 \newtcolorbox{MethodBox}{BookPanel,colback=BookMethodSoft,colframe=BookPanelBorder,borderline west={2.1pt}{0pt}{BookSecondary},title={\LabelMethod},fonttitle=\BookHeadingFont\bfseries\small,coltitle=BookPrimary,attach title to upper={\par\smallskip},before upper={\small}}
 \newtcolorbox{KeyFormula}{BookPanel,colback=BookSoft,colframe=BookPanelBorder,halign=center,top=3mm,bottom=3mm}

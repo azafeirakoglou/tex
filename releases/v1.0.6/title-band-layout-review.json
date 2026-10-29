@@ -1,0 +1,50 @@
+{
+  "normal-screen": {
+    "status": "passed",
+    "title_spans": 2,
+    "paper_white_title_background": true,
+    "title_and_marker": "Spot100",
+    "marker_diameter_mm": 2,
+    "cap_center_error_pdf_bp": 8.5e-05,
+    "overfull_boxes": 0,
+    "body_background": "Black10",
+    "body_text": "Black100",
+    "solution": "Spot100"
+  },
+  "normal-print": {
+    "status": "passed",
+    "title_spans": 2,
+    "paper_white_title_background": true,
+    "title_and_marker": "Spot100",
+    "marker_diameter_mm": 2,
+    "cap_center_error_pdf_bp": 8.5e-05,
+    "overfull_boxes": 0,
+    "body_background": "Black10",
+    "body_text": "Black100",
+    "solution": "Spot100"
+  },
+  "compact-screen": {
+    "status": "passed",
+    "title_spans": 2,
+    "paper_white_title_background": true,
+    "title_and_marker": "Spot100",
+    "marker_diameter_mm": 2,
+    "cap_center_error_pdf_bp": 8.5e-05,
+    "overfull_boxes": 0,
+    "body_background": "Black10",
+    "body_text": "Black100",
+    "solution": "Spot100"
+  },
+  "compact-print": {
+    "status": "passed",
+    "title_spans": 2,
+    "paper_white_title_background": true,
+    "title_and_marker": "Spot100",
+    "marker_diameter_mm": 2,
+    "cap_center_error_pdf_bp": 8.5e-05,
+    "overfull_boxes": 0,
+    "body_background": "Black10",
+    "body_text": "Black100",
+    "solution": "Spot100"
+  }
+}
