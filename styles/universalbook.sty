@@ -16,7 +16,7 @@
 % Το τελικό PDF παράγεται με XeLaTeX. Όχι με pdfLaTeX.
 % ===========================================================================
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{styles/universalbook}[2026/10/28 Modular Greek textbook design v1.0.3]
+\ProvidesPackage{styles/universalbook}[2026/10/29 Modular Greek textbook design v1.0.4]
 % Γραμματοσειρές OpenType/TrueType. Η αλλαγή γίνεται από τον config.
 \RequirePackage{fontspec}
 \RequirePackage{polyglossia}
@@ -690,14 +690,15 @@
 % Worked-example title is set in the SAME ProblemBox to keep title and statement together.
 % Two styles are switched centrally in config/book-config.tex.
 % Κατά την έναρξη ενός workedexample αποθηκεύεται ο τίτλος του.
-% Το επόμενο ProblemBox τον εμφανίζει πάνω στη σκούρα λωρίδα.
+% Το επόμενο ProblemBox τον εμφανίζει στο κοινό γκρι φόντο, χωρίς λωρίδα χρώματος.
 \newcommand{\BookCurrentExampleTitle}{}
 \newcommand{\BookExampleLabel}{\LabelExample\space\theworkedexample\enspace—\enspace\BookCurrentExampleTitle}
 \ifBookExampleDarkHeader
   \newtcolorbox{ProblemBox}{enhanced,breakable,sharp corners,
-    colback=BookProblemBackground,colframe=BookPanelBorder,boxrule=\BookBoxThinRuleWidth,
+    colback=BookProblemBackground,colframe=BookProblemBackground,coltext=BookInk,
+    boxrule=\BookBoxThinRuleWidth,
     borderline={\BookBoxThinRuleWidth}{0pt}{BookProblemBorder},
-    colbacktitle=BookPrimary,coltitle=white,
+    coltitle=BookExampleAccent,title filled=false,
     fonttitle=\BookHeadingFont\fontsize{\BookExampleTitleFontSize}{\BookExampleTitleLineHeight}\selectfont,
     title={\BookExampleLabel},
     toptitle=\BookExampleBarPad,bottomtitle=\BookExampleBarPad,
@@ -705,10 +706,11 @@
     top=2.7mm,bottom=2.6mm,left=3.5mm,right=3.5mm,
     before skip=7pt,after skip=8pt,before upper={\small}}
 \else
-  \newtcolorbox{ProblemBox}{BookPanel,colback=BookProblemBackground,colframe=BookPanelBorder,
+  \newtcolorbox{ProblemBox}{BookPanel,colback=BookProblemBackground,
+    colframe=BookProblemBackground,coltext=BookInk,
     boxrule=\BookBoxThinRuleWidth,
     borderline={\BookBoxThinRuleWidth}{0pt}{BookProblemBorder},
-    before upper={\small\noindent{\BookHeadingFont\fontsize{\BookExampleTitleFontSize}{\BookExampleTitleLineHeight}\selectfont\color{BookPrimary}\BookExampleLabel}\par\nobreak\vskip3pt{\color{BookPaleRule}\hrule height .40pt}\nobreak\vskip8pt}}
+    before upper={\small\noindent{\BookHeadingFont\fontsize{\BookExampleTitleFontSize}{\BookExampleTitleLineHeight}\selectfont\color{BookExampleAccent}\BookExampleLabel}\par\nobreak\vskip3pt{\color{BookProblemBorder}\hrule height .40pt}\nobreak\vskip8pt}}
 \fi
 \newtcolorbox{MethodBox}{BookPanel,colback=BookMethodSoft,colframe=BookPanelBorder,borderline west={2.1pt}{0pt}{BookSecondary},title={\LabelMethod},fonttitle=\BookHeadingFont\bfseries\small,coltitle=BookPrimary,attach title to upper={\par\smallskip},before upper={\small}}
 \newtcolorbox{KeyFormula}{BookPanel,colback=BookSoft,colframe=BookPanelBorder,halign=center,top=3mm,bottom=3mm}
@@ -756,7 +758,7 @@
  \def\BookCurrentExampleTitle{#1}%
  \par\medskip
  }{\par\medskip}
-\newcommand{\SolutionHeading}{\par\vspace{2pt}{\BookMediumLabelFont\fontsize{\BookSolutionLabelSize}{13}\selectfont\color{BookPrimary}\LabelSolution}\par\smallskip}
+\newcommand{\SolutionHeading}{\par\vspace{2pt}{\BookMediumLabelFont\fontsize{\BookSolutionLabelSize}{13}\selectfont\color{BookExampleAccent}\LabelSolution}\par\smallskip}
 \newcounter{exercise}[chapter]
 \renewcommand{\theexercise}{\arabic{exercise}}
 % Η ορατή αρίθμηση ξαναρχίζει ανά φύλλο, οι PDF προορισμοί μένουν μοναδικοί.

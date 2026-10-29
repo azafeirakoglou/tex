@@ -1,0 +1,218 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "version": "1.0.4",
+  "created_utc": "2026-10-29T11:46:03.087731+00:00",
+  "source_sha256": "9cf3a2d9cf314b97225a6f190d05180d131875036fc8f8ea44bf7b2b5ac62654",
+  "palette_sha256": "981279943a4f832a27537f1997dd1061cf68c5b2808c405826cd94328a779155",
+  "targets": {
+    "print2": {
+      "pdf": "build/print/Physics_A_Print_Technical.pdf",
+      "sha256": "89151430ae567d125779f28427d368bda771cdc123b6f833abbb31e2cc20744d",
+      "pages": 20
+    },
+    "starter-screen": {
+      "pdf": "build/starter-screen/Starter_Screen.pdf",
+      "sha256": "93eec99ac0e11c5c441139aa6c66b5ce2ac222519f3608778529ddc35f2feab4",
+      "pages": 4
+    },
+    "starter-print2": {
+      "pdf": "build/starter-print2/Starter_Print.pdf",
+      "sha256": "2f28725c2b32329825efc3d77f2ec2f0e420ec387215735b393155b24fb4bd74",
+      "pages": 4
+    },
+    "stress-screen": {
+      "pdf": "build/stress-screen/Stress_Screen.pdf",
+      "sha256": "e40754b7f33bab23ea45bdaee2f3311bfee4d2dcd3997f7857ecc49b9da1b27b",
+      "pages": 68
+    },
+    "stress-print2": {
+      "pdf": "build/stress-print2/Stress_Print.pdf",
+      "sha256": "73c4d0b6917bf6c8bade8875082395acff2417281293a13cc0e58ddbafb3b9cd",
+      "pages": 68
+    },
+    "screen": {
+      "pdf": "build/screen/Physics_A_Screen.pdf",
+      "sha256": "80923f94eabf96324b0c59d2709de6476227cb543d5d76111ed0ef65c86e0a9b",
+      "pages": 20
+    },
+    "sample-screen": {
+      "pdf": "build/sample-screen/Sample_Collaborators_Blue.pdf",
+      "sha256": "b378b8dec26c98b60b3a3550109d4fc365364c6cdf26e8e3aff9c7a8c3465833",
+      "pages": 5
+    },
+    "sample-print2": {
+      "pdf": "build/sample-print2/Sample_Collaborators_Print_Technical.pdf",
+      "sha256": "26f983b0fad8275fe71fc798082fdb8a49725317bd7f0d453f0b633c85deb773",
+      "pages": 5
+    },
+    "figures-screen": {
+      "pdf": "build/figures-screen/Book_Figures_Screen.pdf",
+      "sha256": "40230ff7ac70025baa8985c1c852098102cc2486938c21869f8956047dd48b4c",
+      "pages": 6
+    },
+    "figures-print2": {
+      "pdf": "build/figures-print2/Book_Figures_Print_Technical.pdf",
+      "sha256": "4745e6c2a16eebf510a87e20e133c776c4ad3a864ea7ca3eb3a179acc886fdcb",
+      "pages": 6
+    },
+    "assessment-screen": {
+      "pdf": "build/assessment-screen/Book_Assessment_Screen.pdf",
+      "sha256": "1bb4bfcd4c08ba5f5299143f8cccd2ce359c8bb9c26f362e51830ccc70436020",
+      "pages": 4
+    },
+    "assessment-print2": {
+      "pdf": "build/assessment-print2/Book_Assessment_Print_Technical.pdf",
+      "sha256": "35983b8702c06d637cec797b62f9fe6b499313a8dfb8e9ca112d47462d5fc726",
+      "pages": 4
+    },
+    "tables-screen": {
+      "pdf": "build/tables-screen/Book_Tables_Screen.pdf",
+      "sha256": "172d612ee667fae2d98c9c4b7fa227f1de2b81cfab36a79da34d190fc0c5c8e5",
+      "pages": 1
+    },
+    "tables-print2": {
+      "pdf": "build/tables-print2/Book_Tables_Print_Technical.pdf",
+      "sha256": "1751c2b22c26304538212df3f134e31928a7a65ffd9a9be3b867152c8c69bdc9",
+      "pages": 1
+    },
+    "opening-goals-screen": {
+      "pdf": "build/opening-goals-screen/Book_Opening_Goals_Screen.pdf",
+      "sha256": "0b9c160afa5251c7ff318d4f865ca21c38cceef37751a3176daa945d3b905db6",
+      "pages": 3
+    },
+    "opening-goals-print2": {
+      "pdf": "build/opening-goals-print2/Book_Opening_Goals_Print.pdf",
+      "sha256": "86b08482c86a3fea2ee70bf623395f75f7057f47845be0be41c1a699ef49230d",
+      "pages": 3
+    },
+    "history-statements-screen": {
+      "pdf": "build/history-statements-screen/Book_History_Statements_Screen.pdf",
+      "sha256": "578d6fe23459ce6218a741d264b8e1d02f014f1e4d504600384f8b862368ef9a",
+      "pages": 2
+    },
+    "history-statements-print2": {
+      "pdf": "build/history-statements-print2/Book_History_Statements_Print.pdf",
+      "sha256": "f7770ccd058f7da109f44eb2168e1d02bcf75e8e47a710297b18a100c808cc3e",
+      "pages": 2
+    },
+    "callouts-screen": {
+      "pdf": "build/callouts-screen/Book_Callouts_Screen.pdf",
+      "sha256": "7dd802c02fd460a1552d933ddda683301cb6130ef66788d25b8b05679ee673c5",
+      "pages": 1
+    },
+    "callouts-print2": {
+      "pdf": "build/callouts-print2/Book_Callouts_Print_Technical.pdf",
+      "sha256": "5c0cba217a10c0190d046b65dbf9640d64c3634fc187ecc2c4fa61ead16b76e0",
+      "pages": 1
+    },
+    "palette-screen": {
+      "pdf": "build/palette-screen/Book_Palette_v026_Screen.pdf",
+      "sha256": "ff6e2699a24d01a20cac28659392f5de0df5a1c2609d5d58c7174511e2bf3816",
+      "pages": 1
+    },
+    "palette-print2": {
+      "pdf": "build/palette-print2/Book_Palette_v026_Print.pdf",
+      "sha256": "60ab17b7176cc7a32c294613a65ffd3c0c5b4ab556c2584b7ca8bada1f221f55",
+      "pages": 1
+    }
+  },
+  "pairs": [
+    {
+      "print_target": "print2",
+      "screen_target": "screen",
+      "exit_code": 0,
+      "report": "build/release-checks/run-uy3sqrsm/pdf/print2.json"
+    },
+    {
+      "print_target": "sample-print2",
+      "screen_target": "sample-screen",
+      "exit_code": 0,
+      "report": "build/release-checks/run-uy3sqrsm/pdf/sample-print2.json"
+    },
+    {
+      "print_target": "figures-print2",
+      "screen_target": "figures-screen",
+      "exit_code": 0,
+      "report": "build/release-checks/run-uy3sqrsm/pdf/figures-print2.json"
+    },
+    {
+      "print_target": "assessment-print2",
+      "screen_target": "assessment-screen",
+      "exit_code": 0,
+      "report": "build/release-checks/run-uy3sqrsm/pdf/assessment-print2.json"
+    },
+    {
+      "print_target": "tables-print2",
+      "screen_target": "tables-screen",
+      "exit_code": 0,
+      "report": "build/release-checks/run-uy3sqrsm/pdf/tables-print2.json"
+    },
+    {
+      "print_target": "opening-goals-print2",
+      "screen_target": "opening-goals-screen",
+      "exit_code": 0,
+      "report": "build/release-checks/run-uy3sqrsm/pdf/opening-goals-print2.json"
+    },
+    {
+      "print_target": "history-statements-print2",
+      "screen_target": "history-statements-screen",
+      "exit_code": 0,
+      "report": "build/release-checks/run-uy3sqrsm/pdf/history-statements-print2.json"
+    },
+    {
+      "print_target": "callouts-print2",
+      "screen_target": "callouts-screen",
+      "exit_code": 0,
+      "report": "build/release-checks/run-uy3sqrsm/pdf/callouts-print2.json"
+    },
+    {
+      "print_target": "palette-print2",
+      "screen_target": "palette-screen",
+      "exit_code": 0,
+      "report": "build/release-checks/run-uy3sqrsm/pdf/palette-print2.json"
+    },
+    {
+      "print_target": "starter-print2",
+      "screen_target": "starter-screen",
+      "exit_code": 0,
+      "report": "build/release-checks/run-uy3sqrsm/pdf/starter-print2.json"
+    },
+    {
+      "print_target": "stress-print2",
+      "screen_target": "stress-screen",
+      "exit_code": 0,
+      "report": "build/release-checks/run-uy3sqrsm/pdf/stress-print2.json"
+    }
+  ],
+  "test_report": "build/release-checks/run-uy3sqrsm/tests.json",
+  "driver_report": "build/release-checks/run-uy3sqrsm/pdf-driver.json",
+  "build_summary": "build/release-checks/run-uy3sqrsm/build-summary.json",
+  "tool_versions": "build/release-checks/run-uy3sqrsm/tool-versions.json",
+  "main_report": "build/release-checks/run-uy3sqrsm/pdf/print2.json",
+  "reports": {
+    "build/release-checks/run-uy3sqrsm/tests.json": "9a30bfc99693f0721417eabd935526437bc1510d2cae09b331d759eae68941c4",
+    "build/release-checks/run-uy3sqrsm/pdf-driver.json": "940694a3458fe11912fa3e322b4def636a7ef7a204529655b5cb75e71864d175",
+    "build/release-checks/run-uy3sqrsm/build-summary.json": "d1a6f6fd6b7bc6fdefb61c9be884e906084afacaec228374f83222397c8ad05c",
+    "build/release-checks/run-uy3sqrsm/tool-versions.json": "0dcd083a59bc4c811fa9a67de38700d006d4ebd27d97be6af9c80c25cd0250c1",
+    "build/release-checks/run-uy3sqrsm/pdf/suite.json": "0ad6267f058ea8e8d45851711c210e5f4969b3afdab9c1f1e13e4b0152077f2f",
+    "build/release-checks/run-uy3sqrsm/pdf/print2.json": "9403737260aa13e2ece306c8388edf8ec3287108005733c25d3bada2df528363",
+    "build/release-checks/run-uy3sqrsm/pdf/sample-print2.json": "816e9cb354242c77c8ae7dcc77fa2bbdf79865242feab6c34d049f9a6dd98c27",
+    "build/release-checks/run-uy3sqrsm/pdf/figures-print2.json": "8bf89bebca4570c441f95c8f38b9454664460247c6489d91adf4f6b7d101120d",
+    "build/release-checks/run-uy3sqrsm/pdf/assessment-print2.json": "fdaa2f92f5d0f900cf37e034b2d6ed2275b3af3e5d7e6837f180cf93a80f2a8e",
+    "build/release-checks/run-uy3sqrsm/pdf/tables-print2.json": "a49333c1b1da955bca7974e7c55cbcb6cceaa6fadbd3e88dc4e9c30299514308",
+    "build/release-checks/run-uy3sqrsm/pdf/opening-goals-print2.json": "3f0e46a290d9f06d7feb8ad91494bf99269e9b6ab5d7cf2efa5f006546964439",
+    "build/release-checks/run-uy3sqrsm/pdf/history-statements-print2.json": "4300406110a8db5c4b88e8b6c761c0d8aa7e323b4bd8680c3590efdd36a20d8f",
+    "build/release-checks/run-uy3sqrsm/pdf/callouts-print2.json": "0db6cf14f85dd99f4b01c7dee69bd2c587abb83b8346f2f5384e198ceb5908e7",
+    "build/release-checks/run-uy3sqrsm/pdf/palette-print2.json": "5f5cd25818569025ae1893aa555aea3e290dd6705c26843f1cf6b9a7b149ea39",
+    "build/release-checks/run-uy3sqrsm/pdf/starter-print2.json": "2af6332930350bb92789f2df814811cad24885991ac705e238a01d1d4e6cd461",
+    "build/release-checks/run-uy3sqrsm/pdf/stress-print2.json": "f94b81368add04d3e008476c7af3c5fbe6c6c3ff184a869443d0fd9e5af8e3b2",
+    "build/release-checks/run-uy3sqrsm/stress.json": "1db7172ac990d2a5d28b8e9e690702f0acd2fd4ae43e4f03472a980c0dab9c75",
+    "build/release-checks/run-uy3sqrsm/build.log": "f8d051e71d709289e77741da6d33aff8d00d222d6b222e95af60d12ff50df8f1",
+    "build/release-checks/run-uy3sqrsm/preflight.log": "7c2d8f1208e323736924a02f034fae56fffaf768e1e2d0dd4166053bb722df56",
+    "build/release-checks/run-uy3sqrsm/setup.log": "a017cc854871ecb1446b4fafdec3ad9a4202a0728b94548c62fee5fd8e04066a",
+    "build/release-checks/run-uy3sqrsm/stress.log": "759c1292ecfa54875de115778e5743a2ed8f0973547bcbcbdb071d727751cf33",
+    "build/release-checks/run-uy3sqrsm/tests.log": "f300ad384438ef028e4be930dd3c8f6d5f6a8a93483540bf865081acf9553faf"
+  },
+  "stress_report": "build/release-checks/run-uy3sqrsm/stress.json"
+}

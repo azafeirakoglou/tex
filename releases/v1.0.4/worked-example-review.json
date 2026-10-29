@@ -1,0 +1,136 @@
+{
+  "status": "passed",
+  "background": "Black10",
+  "border": "Black55",
+  "title_and_solution": "Spot100",
+  "separate_title_fill": false,
+  "targets": {
+    "print2": {
+      "boxes": [
+        {
+          "page": 8,
+          "title": "Παράδειγμα 1 — Υπολογισμός μετατόπισης",
+          "border_pt": 0.35,
+          "neutral_background_paths": 2,
+          "title_on_common_background": true,
+          "body_black_spans": 5
+        },
+        {
+          "page": 8,
+          "title": "Παράδειγμα 2 — Σταθερή ταχύτητα",
+          "border_pt": 0.35,
+          "neutral_background_paths": 2,
+          "title_on_common_background": true,
+          "body_black_spans": 4
+        },
+        {
+          "page": 19,
+          "title": "Παράδειγμα 1 — Εφαρμογή σε συνάρτηση",
+          "border_pt": 0.35,
+          "neutral_background_paths": 2,
+          "title_on_common_background": true,
+          "body_black_spans": 4
+        }
+      ],
+      "solution_headings": 3,
+      "unchanged_layout_pages": [
+        8,
+        19
+      ]
+    },
+    "screen": {
+      "boxes": [
+        {
+          "page": 8,
+          "title": "Παράδειγμα 1 — Υπολογισμός μετατόπισης",
+          "border_pt": 0.35,
+          "neutral_background_paths": 2,
+          "title_on_common_background": true,
+          "body_black_spans": 5
+        },
+        {
+          "page": 8,
+          "title": "Παράδειγμα 2 — Σταθερή ταχύτητα",
+          "border_pt": 0.35,
+          "neutral_background_paths": 2,
+          "title_on_common_background": true,
+          "body_black_spans": 4
+        },
+        {
+          "page": 19,
+          "title": "Παράδειγμα 1 — Εφαρμογή σε συνάρτηση",
+          "border_pt": 0.35,
+          "neutral_background_paths": 2,
+          "title_on_common_background": true,
+          "body_black_spans": 4
+        }
+      ],
+      "solution_headings": 3,
+      "unchanged_layout_pages": [
+        8,
+        19
+      ]
+    },
+    "sample-screen": {
+      "boxes": [
+        {
+          "page": 3,
+          "title": "Παράδειγμα 1 — Μετατόπιση κινητού σε ευθεία",
+          "border_pt": 0.35,
+          "neutral_background_paths": 2,
+          "title_on_common_background": true,
+          "body_black_spans": 3
+        }
+      ],
+      "solution_headings": 1,
+      "unchanged_layout_pages": [
+        3
+      ]
+    },
+    "sample-print2": {
+      "boxes": [
+        {
+          "page": 3,
+          "title": "Παράδειγμα 1 — Μετατόπιση κινητού σε ευθεία",
+          "border_pt": 0.35,
+          "neutral_background_paths": 2,
+          "title_on_common_background": true,
+          "body_black_spans": 3
+        }
+      ],
+      "solution_headings": 1,
+      "unchanged_layout_pages": [
+        3
+      ]
+    },
+    "palette-screen": {
+      "boxes": [
+        {
+          "page": 1,
+          "title": "Παράδειγμα 1 — Υπολογισμός μετατόπισης",
+          "border_pt": 0.35,
+          "neutral_background_paths": 2,
+          "title_on_common_background": true,
+          "body_black_spans": 3
+        }
+      ],
+      "solution_headings": 1,
+      "unchanged_layout_pages": []
+    },
+    "palette-print2": {
+      "boxes": [
+        {
+          "page": 1,
+          "title": "Παράδειγμα 1 — Υπολογισμός μετατόπισης",
+          "border_pt": 0.35,
+          "neutral_background_paths": 2,
+          "title_on_common_background": true,
+          "body_black_spans": 3
+        }
+      ],
+      "solution_headings": 1,
+      "unchanged_layout_pages": []
+    }
+  },
+  "inline_layout_report": "inline-layout-review.json"
+}

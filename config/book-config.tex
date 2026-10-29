@@ -15,7 +15,7 @@
 \newcommand{\BookSubtitle}{Θεωρία · Μεθοδολογία · Παραδείγματα · Ασκήσεις}
 \newcommand{\BookPublisher}{ΕΚΔΟΤΙΚΟ ΠΡΟΤΥΠΟ}
 \newcommand{\BookAuthors}{Δοκιμαστική μακέτα — όχι τελικό βιβλίο}
-\newcommand{\BookEdition}{Καθολική μακέτα v1.0.3 · Οκτώβριος 2026}
+\newcommand{\BookEdition}{Καθολική μακέτα v1.0.4 · Οκτώβριος 2026}
 \newcommand{\BookShortName}{Φυσική Α΄ Λυκείου}
 
 % ---------------------------------------------------------------------------
@@ -221,10 +221,13 @@
 
 % 7. Ιεραρχία τίτλων και πλαίσια λυμένων παραδειγμάτων.
 % Κάθε τιμή *true* ανοίγει μια οπτική επιλογή· *false* την απενεργοποιεί.
-% Με BookExampleDarkHeadertrue ο τίτλος είναι λευκός σε σκούρα μπλε λωρίδα.
+% Το ιστορικό BookExampleDarkHeader επιλέγει μόνο τη διάταξη του τίτλου.
+% true: χωριστή περιοχή τίτλου χωρίς δικό της γέμισμα, στο κοινό γκρι φόντο.
+% false: τίτλος μέσα στο σώμα, με λεπτή ουδέτερη διαχωριστική γραμμή.
+% Και στις δύο μορφές τα γράμματα τίτλου/«Λύση» έχουν BookExampleAccent.
 % Με BookMajorHeadingBandtrue οι βασικές ενότητες έχουν δική τους μπλε μπάρα.
 
-% Example title in dark-blue band (true), or on pale-blue background with a hairline (false).
+% Legacy switch name retained for compatibility; neither layout has a dark fill.
 \newif\ifBookExampleDarkHeader
 \BookExampleDarkHeadertrue
 % Major sections: compact blue bar with white text (true), legacy heading + rule (false).

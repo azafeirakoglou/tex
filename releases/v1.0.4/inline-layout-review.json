@@ -1,0 +1,18 @@
+{
+  "screen": {
+    "status": "passed",
+    "pages": 1,
+    "background": "Black10",
+    "border": "Black55",
+    "accent": "Spot100",
+    "thin_rule_pt": 0.35
+  },
+  "print": {
+    "status": "passed",
+    "pages": 1,
+    "background": "Black10",
+    "border": "Black55",
+    "accent": "Spot100",
+    "thin_rule_pt": 0.35
+  }
+}
