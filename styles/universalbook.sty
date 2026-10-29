@@ -16,7 +16,7 @@
 % Το τελικό PDF παράγεται με XeLaTeX. Όχι με pdfLaTeX.
 % ===========================================================================
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{styles/universalbook}[2026/10/29 Modular Greek textbook design v1.0.8]
+\ProvidesPackage{styles/universalbook}[2026/10/29 Modular Greek textbook design v1.0.9]
 % Γραμματοσειρές OpenType/TrueType. Η αλλαγή γίνεται από τον config.
 \RequirePackage{fontspec}
 \RequirePackage{polyglossia}
@@ -224,10 +224,10 @@
       colback=BookPrimary,
       top=\BookMajorBandTopPad,bottom=\BookMajorBandBottomPad,
       left=3mm,right=3mm,before skip=0pt,after skip=8pt]
-      {\BookHeadingFont\fontsize{\BookMajorBandSize}{15}\selectfont\color{white}#1}
+      {\BookHeadingFont\bfseries\fontsize{\BookMajorBandSize}{15}\selectfont\color{white}#1}
     \end{tcolorbox}%
   \else
-    \noindent{\BookHeadingFont\fontsize{13.5}{18}\selectfont\color{BookPrimary}#1}\par\nobreak\vskip5pt%
+    \noindent{\BookHeadingFont\bfseries\fontsize{13.5}{18}\selectfont\color{BookPrimary}#1}\par\nobreak\vskip5pt%
     {\color{BookSecondary}\hrule height \BookTheoryRuleWidth}\nobreak\vskip8pt%
   \fi
 }
@@ -717,7 +717,7 @@
     titlerule=\BookBoxThinRuleWidth,
     colbacktitle=\BookExampleTitleBackground,
     coltitle=\BookExampleTitleTextColor,title filled=true,
-    fonttitle=\BookHeadingFont\fontsize{\BookExampleTitleFontSize}{\BookExampleTitleLineHeight}\selectfont,
+    fonttitle=\BookHeadingFont\bfseries\fontsize{\BookExampleTitleFontSize}{\BookExampleTitleLineHeight}\selectfont,
     title={\BookExampleHeading},
     toptitle=\BookExampleBarPad,bottomtitle=\BookExampleBarPad,
     lefttitle=3.4mm,righttitle=3.4mm,

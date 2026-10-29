@@ -128,6 +128,12 @@ HistoryBox έχουν έναν κοινό χρωματικό ρόλο, `BookCall
 
 Η κοινή `BookExampleHeading` κατασκευάζει τη βούλα και τον έγχρωμο τίτλο και
 στις δύο διατάξεις, διατηρώντας την `BookExampleLabel` ως απλό κείμενο.
+Ο τίτλος του λυμένου παραδείγματος είναι Noto Serif Medium, 10,4 pt.
+Οι θεματικοί τίτλοι της `BookSection`, όπως «Θεωρία» και «Λυμένα παραδείγματα»,
+είναι επίσης Noto Serif Medium, 11,7 pt στην ενεργή διάταξη λωρίδας.
+Το βάρος προέρχεται κεντρικά από την `HeadingBoldFontName` του config,
+μέσω `BookHeadingFont` και `bfseries`, όπως και στους αριθμημένους τίτλους.
+Η «Λύση» χρησιμοποιεί ανεξάρτητα Inter Medium, 10,2 pt.
 Οι κεντρικές παράμετροι στο `config/book-config.tex` είναι
 `BookExampleTitleBackground = white`,
 `BookExampleTitleTextColor = BookExampleAccent`,

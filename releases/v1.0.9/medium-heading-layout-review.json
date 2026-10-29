@@ -1,0 +1,252 @@
+{
+  "status": "passed",
+  "reviewed_at": "2026-10-29T16:39:39.817107+00:00",
+  "method": "Four temporary independent XeLaTeX normal/compact × SCREEN/PRINT probes, long wrapped titles plus 80-paragraph split statements. Actual PDF fonts/paths, Medium Π font metrics, continuation geometry and all body content checked.",
+  "cases": [
+    {
+      "case": "compact-print",
+      "pdf": "/tmp/tex-v1.0.9-medium-title-proof/compact-print.pdf",
+      "pdf_sha256": "55b5d565099b599520fd0a152e313f4776121dd26ddf252c6760fb6fbe9bc53a",
+      "page_count": 5,
+      "long_problem_page_count": 4,
+      "all_80_body_paragraphs_preserved": true,
+      "solution_font": "Inter-Medium",
+      "solution_size_tex_pt": 10.2,
+      "solution_label_count": 2,
+      "overfull_boxes": 0,
+      "pages": [
+        {
+          "page": 1,
+          "title_present": true,
+          "title_font": "NotoSerif-Medium",
+          "title_weight": 500,
+          "title_size_tex_pt": 10.4,
+          "title_lines": 2,
+          "paper_white_title": true,
+          "divider_tex_pt": 0.350001,
+          "dot_diameter_mm": 2.000018,
+          "dot_gap_mm": 1.599964,
+          "dot_cap_center_error_pdf_bp": 9.24e-05
+        },
+        {
+          "page": 2,
+          "title_present": true,
+          "title_font": "NotoSerif-Medium",
+          "title_weight": 500,
+          "title_size_tex_pt": 10.4,
+          "title_lines": 3,
+          "paper_white_title": true,
+          "divider_tex_pt": 0.350001,
+          "dot_diameter_mm": 2.000018,
+          "dot_gap_mm": 1.599962,
+          "dot_cap_center_error_pdf_bp": 0.0001229
+        },
+        {
+          "page": 3,
+          "title_present": false,
+          "continuation_top_gap_pdf_bp": 0,
+          "extra_top_separator": false
+        },
+        {
+          "page": 4,
+          "title_present": false,
+          "continuation_top_gap_pdf_bp": 0,
+          "extra_top_separator": false
+        },
+        {
+          "page": 5,
+          "title_present": false,
+          "continuation_top_gap_pdf_bp": 0,
+          "extra_top_separator": false
+        }
+      ]
+    },
+    {
+      "case": "compact-screen",
+      "pdf": "/tmp/tex-v1.0.9-medium-title-proof/compact-screen.pdf",
+      "pdf_sha256": "226484cf372b5a598404ee84786a026c080e6532fcd523a4ff08abdaeed84749",
+      "page_count": 5,
+      "long_problem_page_count": 4,
+      "all_80_body_paragraphs_preserved": true,
+      "solution_font": "Inter-Medium",
+      "solution_size_tex_pt": 10.2,
+      "solution_label_count": 2,
+      "overfull_boxes": 0,
+      "pages": [
+        {
+          "page": 1,
+          "title_present": true,
+          "title_font": "NotoSerif-Medium",
+          "title_weight": 500,
+          "title_size_tex_pt": 10.4,
+          "title_lines": 2,
+          "paper_white_title": true,
+          "divider_tex_pt": 0.350001,
+          "dot_diameter_mm": 2.000018,
+          "dot_gap_mm": 1.599964,
+          "dot_cap_center_error_pdf_bp": 9.24e-05
+        },
+        {
+          "page": 2,
+          "title_present": true,
+          "title_font": "NotoSerif-Medium",
+          "title_weight": 500,
+          "title_size_tex_pt": 10.4,
+          "title_lines": 3,
+          "paper_white_title": true,
+          "divider_tex_pt": 0.350001,
+          "dot_diameter_mm": 2.000018,
+          "dot_gap_mm": 1.599962,
+          "dot_cap_center_error_pdf_bp": 0.0001229
+        },
+        {
+          "page": 3,
+          "title_present": false,
+          "continuation_top_gap_pdf_bp": 0,
+          "extra_top_separator": false
+        },
+        {
+          "page": 4,
+          "title_present": false,
+          "continuation_top_gap_pdf_bp": 0,
+          "extra_top_separator": false
+        },
+        {
+          "page": 5,
+          "title_present": false,
+          "continuation_top_gap_pdf_bp": 0,
+          "extra_top_separator": false
+        }
+      ]
+    },
+    {
+      "case": "normal-print",
+      "pdf": "/tmp/tex-v1.0.9-medium-title-proof/normal-print.pdf",
+      "pdf_sha256": "2b2eee1ae409bd66144c3eb064c4a7ff91be77bc1cfacdd3d3d4b9cb828b1f57",
+      "page_count": 6,
+      "long_problem_page_count": 5,
+      "all_80_body_paragraphs_preserved": true,
+      "solution_font": "Inter-Medium",
+      "solution_size_tex_pt": 10.2,
+      "solution_label_count": 2,
+      "overfull_boxes": 0,
+      "pages": [
+        {
+          "page": 1,
+          "title_present": true,
+          "title_font": "NotoSerif-Medium",
+          "title_weight": 500,
+          "title_size_tex_pt": 10.4,
+          "title_lines": 2,
+          "paper_white_title": true,
+          "divider_tex_pt": 0.350017,
+          "dot_diameter_mm": 2.000018,
+          "dot_gap_mm": 1.599964,
+          "dot_cap_center_error_pdf_bp": 8.47e-05
+        },
+        {
+          "page": 2,
+          "title_present": true,
+          "title_font": "NotoSerif-Medium",
+          "title_weight": 500,
+          "title_size_tex_pt": 10.4,
+          "title_lines": 3,
+          "paper_white_title": true,
+          "divider_tex_pt": 0.350032,
+          "dot_diameter_mm": 2.000018,
+          "dot_gap_mm": 1.599962,
+          "dot_cap_center_error_pdf_bp": 9.24e-05
+        },
+        {
+          "page": 3,
+          "title_present": false,
+          "continuation_top_gap_pdf_bp": 0,
+          "extra_top_separator": false
+        },
+        {
+          "page": 4,
+          "title_present": false,
+          "continuation_top_gap_pdf_bp": 0,
+          "extra_top_separator": false
+        },
+        {
+          "page": 5,
+          "title_present": false,
+          "continuation_top_gap_pdf_bp": 0,
+          "extra_top_separator": false
+        },
+        {
+          "page": 6,
+          "title_present": false,
+          "continuation_top_gap_pdf_bp": 0,
+          "extra_top_separator": false
+        }
+      ]
+    },
+    {
+      "case": "normal-screen",
+      "pdf": "/tmp/tex-v1.0.9-medium-title-proof/normal-screen.pdf",
+      "pdf_sha256": "8c62e2424a13df436ce020c8375fb75836c1e0e5f9012a1fd81f4462dcf49b23",
+      "page_count": 6,
+      "long_problem_page_count": 5,
+      "all_80_body_paragraphs_preserved": true,
+      "solution_font": "Inter-Medium",
+      "solution_size_tex_pt": 10.2,
+      "solution_label_count": 2,
+      "overfull_boxes": 0,
+      "pages": [
+        {
+          "page": 1,
+          "title_present": true,
+          "title_font": "NotoSerif-Medium",
+          "title_weight": 500,
+          "title_size_tex_pt": 10.4,
+          "title_lines": 2,
+          "paper_white_title": true,
+          "divider_tex_pt": 0.350017,
+          "dot_diameter_mm": 2.000018,
+          "dot_gap_mm": 1.599964,
+          "dot_cap_center_error_pdf_bp": 8.47e-05
+        },
+        {
+          "page": 2,
+          "title_present": true,
+          "title_font": "NotoSerif-Medium",
+          "title_weight": 500,
+          "title_size_tex_pt": 10.4,
+          "title_lines": 3,
+          "paper_white_title": true,
+          "divider_tex_pt": 0.350032,
+          "dot_diameter_mm": 2.000018,
+          "dot_gap_mm": 1.599962,
+          "dot_cap_center_error_pdf_bp": 9.24e-05
+        },
+        {
+          "page": 3,
+          "title_present": false,
+          "continuation_top_gap_pdf_bp": 0,
+          "extra_top_separator": false
+        },
+        {
+          "page": 4,
+          "title_present": false,
+          "continuation_top_gap_pdf_bp": 0,
+          "extra_top_separator": false
+        },
+        {
+          "page": 5,
+          "title_present": false,
+          "continuation_top_gap_pdf_bp": 0,
+          "extra_top_separator": false
+        },
+        {
+          "page": 6,
+          "title_present": false,
+          "continuation_top_gap_pdf_bp": 0,
+          "extra_top_separator": false
+        }
+      ]
+    }
+  ],
+  "total_pages": 22
+}

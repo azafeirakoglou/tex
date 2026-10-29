@@ -1,0 +1,810 @@
+{
+  "status": "passed",
+  "reviewed_at": "2026-10-29T16:38:31.133457+00:00",
+  "method": "Independent actual-PDF spans, vector paths, paper-white header bounds, and Medium Π font metrics; all22 buildtargets. No source changes/builds.",
+  "font_file": {
+    "name": "NotoSerif-Medium.ttf",
+    "sha256": "90eeb03ad7b03e67037091c061c13b12dba7d21e63f54d19d196f181c5958f86",
+    "os2_weight_class": 500,
+    "pi_baseline_bbox_at_10000px": [
+      0,
+      -7140,
+      7900,
+      0
+    ],
+    "pi_capheight_em": 0.714
+  },
+  "sizes_tex_pt": {
+    "thematic_band": 11.7,
+    "example_title": 10.4,
+    "solution_label": 10.2
+  },
+  "source_shared_implementations": {
+    "BookMajorSection_current_and_legacy": true,
+    "BookProblemRender_normal_and_compact": true
+  },
+  "targets": {
+    "print2": {
+      "pdf_sha256": "f79d561ffbd0c13fff9f54757067e5784bf46f9fa2845fc7df9fd5bc4169d757",
+      "page_count": 20,
+      "thematic_bands": [
+        {
+          "page": 6,
+          "text": "Θεωρία",
+          "font": "NotoSerif-Medium",
+          "weight": 500,
+          "size_tex_pt": 11.7,
+          "text_color": "paper white"
+        },
+        {
+          "page": 8,
+          "text": "Λυμένα παραδείγματα",
+          "font": "NotoSerif-Medium",
+          "weight": 500,
+          "size_tex_pt": 11.7,
+          "text_color": "paper white"
+        },
+        {
+          "page": 9,
+          "text": "Ερωτήσεις θεωρίας",
+          "font": "NotoSerif-Medium",
+          "weight": 500,
+          "size_tex_pt": 11.7,
+          "text_color": "paper white"
+        },
+        {
+          "page": 9,
+          "text": "Άλυτες ασκήσεις",
+          "font": "NotoSerif-Medium",
+          "weight": 500,
+          "size_tex_pt": 11.7,
+          "text_color": "paper white"
+        },
+        {
+          "page": 18,
+          "text": "Ορισμός και βασική ιδέα",
+          "font": "NotoSerif-Medium",
+          "weight": 500,
+          "size_tex_pt": 11.7,
+          "text_color": "paper white"
+        },
+        {
+          "page": 18,
+          "text": "Απόδειξη — υπόδειγμα",
+          "font": "NotoSerif-Medium",
+          "weight": 500,
+          "size_tex_pt": 11.7,
+          "text_color": "paper white"
+        },
+        {
+          "page": 19,
+          "text": "Άσκηση",
+          "font": "NotoSerif-Medium",
+          "weight": 500,
+          "size_tex_pt": 11.7,
+          "text_color": "paper white"
+        },
+        {
+          "page": 20,
+          "text": "Λύσεις κριτηρίων αξιολόγησης",
+          "font": "NotoSerif-Medium",
+          "weight": 500,
+          "size_tex_pt": 11.7,
+          "text_color": "paper white"
+        }
+      ],
+      "worked_examples": [
+        {
+          "page": 8,
+          "text": "Παράδειγμα 1 — Υπολογισμός μετατόπισης",
+          "font": "NotoSerif-Medium",
+          "weight": 500,
+          "size_tex_pt": 10.4,
+          "paper_white_title": true,
+          "dot_diameter_mm": 2.00002,
+          "dot_gap_mm": 1.59996,
+          "dot_cap_center_error_pdf_bp": 9.24e-05,
+          "filled_dot_no_outline": true
+        },
+        {
+          "page": 8,
+          "text": "Παράδειγμα 2 — Σταθερή ταχύτητα",
+          "font": "NotoSerif-Medium",
+          "weight": 500,
+          "size_tex_pt": 10.4,
+          "paper_white_title": true,
+          "dot_diameter_mm": 2.00002,
+          "dot_gap_mm": 1.59996,
+          "dot_cap_center_error_pdf_bp": 9.24e-05,
+          "filled_dot_no_outline": true
+        },
+        {
+          "page": 19,
+          "text": "Παράδειγμα 1 — Εφαρμογή σε συνάρτηση",
+          "font": "NotoSerif-Medium",
+          "weight": 500,
+          "size_tex_pt": 10.4,
+          "paper_white_title": true,
+          "dot_diameter_mm": 2.00002,
+          "dot_gap_mm": 1.59996,
+          "dot_cap_center_error_pdf_bp": 8.47e-05,
+          "filled_dot_no_outline": true
+        }
+      ],
+      "solution_labels": [
+        {
+          "page": 8,
+          "font": "Inter-Medium",
+          "size_tex_pt": 10.2,
+          "weight": 500
+        },
+        {
+          "page": 8,
+          "font": "Inter-Medium",
+          "size_tex_pt": 10.2,
+          "weight": 500
+        },
+        {
+          "page": 19,
+          "font": "Inter-Medium",
+          "size_tex_pt": 10.2,
+          "weight": 500
+        }
+      ]
+    },
+    "starter-screen": {
+      "pdf_sha256": "baf1dd4579d378ac067d015e9b7a611ce3648e81eb3b3b07875563fe5f198c94",
+      "page_count": 4,
+      "thematic_bands": [
+        {
+          "page": 4,
+          "text": "Ερωτήσεις",
+          "font": "NotoSerif-Medium",
+          "weight": 500,
+          "size_tex_pt": 11.7,
+          "text_color": "paper white"
+        }
+      ],
+      "worked_examples": [],
+      "solution_labels": []
+    },
+    "starter-print2": {
+      "pdf_sha256": "5bd5eb5918480a7020164729b02d3a74bf6195160bd4d5631266c0f83587e050",
+      "page_count": 4,
+      "thematic_bands": [
+        {
+          "page": 4,
+          "text": "Ερωτήσεις",
+          "font": "NotoSerif-Medium",
+          "weight": 500,
+          "size_tex_pt": 11.7,
+          "text_color": "paper white"
+        }
+      ],
+      "worked_examples": [],
+      "solution_labels": []
+    },
+    "stress-screen": {
+      "pdf_sha256": "e9af717f49a4fcfd57452b98b82604ea8c5f4da44f0eab08e9f2b53d6544b07a",
+      "page_count": 68,
+      "thematic_bands": [
+        {
+          "page": 67,
+          "text": "Ενδεικτικές λύσεις",
+          "font": "NotoSerif-Medium",
+          "weight": 500,
+          "size_tex_pt": 11.7,
+          "text_color": "paper white"
+        }
+      ],
+      "worked_examples": [],
+      "solution_labels": []
+    },
+    "stress-print2": {
+      "pdf_sha256": "efa20d21bd95249ba588ad1dae1ccbf515ce9c731e9288f6b1aac67e457a35ca",
+      "page_count": 68,
+      "thematic_bands": [
+        {
+          "page": 67,
+          "text": "Ενδεικτικές λύσεις",
+          "font": "NotoSerif-Medium",
+          "weight": 500,
+          "size_tex_pt": 11.7,
+          "text_color": "paper white"
+        }
+      ],
+      "worked_examples": [],
+      "solution_labels": []
+    },
+    "screen": {
+      "pdf_sha256": "572f1cf8ade0551f8ecd50108a80e0bc4b18791b2957715fdc9685cdb42725cc",
+      "page_count": 20,
+      "thematic_bands": [
+        {
+          "page": 6,
+          "text": "Θεωρία",
+          "font": "NotoSerif-Medium",
+          "weight": 500,
+          "size_tex_pt": 11.7,
+          "text_color": "paper white"
+        },
+        {
+          "page": 8,
+          "text": "Λυμένα παραδείγματα",
+          "font": "NotoSerif-Medium",
+          "weight": 500,
+          "size_tex_pt": 11.7,
+          "text_color": "paper white"
+        },
+        {
+          "page": 9,
+          "text": "Ερωτήσεις θεωρίας",
+          "font": "NotoSerif-Medium",
+          "weight": 500,
+          "size_tex_pt": 11.7,
+          "text_color": "paper white"
+        },
+        {
+          "page": 9,
+          "text": "Άλυτες ασκήσεις",
+          "font": "NotoSerif-Medium",
+          "weight": 500,
+          "size_tex_pt": 11.7,
+          "text_color": "paper white"
+        },
+        {
+          "page": 18,
+          "text": "Ορισμός και βασική ιδέα",
+          "font": "NotoSerif-Medium",
+          "weight": 500,
+          "size_tex_pt": 11.7,
+          "text_color": "paper white"
+        },
+        {
+          "page": 18,
+          "text": "Απόδειξη — υπόδειγμα",
+          "font": "NotoSerif-Medium",
+          "weight": 500,
+          "size_tex_pt": 11.7,
+          "text_color": "paper white"
+        },
+        {
+          "page": 19,
+          "text": "Άσκηση",
+          "font": "NotoSerif-Medium",
+          "weight": 500,
+          "size_tex_pt": 11.7,
+          "text_color": "paper white"
+        },
+        {
+          "page": 20,
+          "text": "Λύσεις κριτηρίων αξιολόγησης",
+          "font": "NotoSerif-Medium",
+          "weight": 500,
+          "size_tex_pt": 11.7,
+          "text_color": "paper white"
+        }
+      ],
+      "worked_examples": [
+        {
+          "page": 8,
+          "text": "Παράδειγμα 1 — Υπολογισμός μετατόπισης",
+          "font": "NotoSerif-Medium",
+          "weight": 500,
+          "size_tex_pt": 10.4,
+          "paper_white_title": true,
+          "dot_diameter_mm": 2.00002,
+          "dot_gap_mm": 1.59996,
+          "dot_cap_center_error_pdf_bp": 9.24e-05,
+          "filled_dot_no_outline": true
+        },
+        {
+          "page": 8,
+          "text": "Παράδειγμα 2 — Σταθερή ταχύτητα",
+          "font": "NotoSerif-Medium",
+          "weight": 500,
+          "size_tex_pt": 10.4,
+          "paper_white_title": true,
+          "dot_diameter_mm": 2.00002,
+          "dot_gap_mm": 1.59996,
+          "dot_cap_center_error_pdf_bp": 9.24e-05,
+          "filled_dot_no_outline": true
+        },
+        {
+          "page": 19,
+          "text": "Παράδειγμα 1 — Εφαρμογή σε συνάρτηση",
+          "font": "NotoSerif-Medium",
+          "weight": 500,
+          "size_tex_pt": 10.4,
+          "paper_white_title": true,
+          "dot_diameter_mm": 2.00002,
+          "dot_gap_mm": 1.59996,
+          "dot_cap_center_error_pdf_bp": 8.47e-05,
+          "filled_dot_no_outline": true
+        }
+      ],
+      "solution_labels": [
+        {
+          "page": 8,
+          "font": "Inter-Medium",
+          "size_tex_pt": 10.2,
+          "weight": 500
+        },
+        {
+          "page": 8,
+          "font": "Inter-Medium",
+          "size_tex_pt": 10.2,
+          "weight": 500
+        },
+        {
+          "page": 19,
+          "font": "Inter-Medium",
+          "size_tex_pt": 10.2,
+          "weight": 500
+        }
+      ]
+    },
+    "sample-screen": {
+      "pdf_sha256": "e8ffb81ac224f4dcc33137d762f71a1a5a92de88a2cb8a8da9066644ba1a1420",
+      "page_count": 5,
+      "thematic_bands": [
+        {
+          "page": 2,
+          "text": "Θεωρία",
+          "font": "NotoSerif-Medium",
+          "weight": 500,
+          "size_tex_pt": 11.7,
+          "text_color": "paper white"
+        },
+        {
+          "page": 3,
+          "text": "Λυμένα παραδείγματα",
+          "font": "NotoSerif-Medium",
+          "weight": 500,
+          "size_tex_pt": 11.7,
+          "text_color": "paper white"
+        },
+        {
+          "page": 3,
+          "text": "Ερωτήσεις θεωρίας",
+          "font": "NotoSerif-Medium",
+          "weight": 500,
+          "size_tex_pt": 11.7,
+          "text_color": "paper white"
+        },
+        {
+          "page": 3,
+          "text": "Άλυτες ασκήσεις",
+          "font": "NotoSerif-Medium",
+          "weight": 500,
+          "size_tex_pt": 11.7,
+          "text_color": "paper white"
+        },
+        {
+          "page": 5,
+          "text": "Λύσεις ασκήσεων",
+          "font": "NotoSerif-Medium",
+          "weight": 500,
+          "size_tex_pt": 11.7,
+          "text_color": "paper white"
+        }
+      ],
+      "worked_examples": [
+        {
+          "page": 3,
+          "text": "Παράδειγμα 1 — Μετατόπιση κινητού σε ευθεία",
+          "font": "NotoSerif-Medium",
+          "weight": 500,
+          "size_tex_pt": 10.4,
+          "paper_white_title": true,
+          "dot_diameter_mm": 2.00002,
+          "dot_gap_mm": 1.59996,
+          "dot_cap_center_error_pdf_bp": 9.24e-05,
+          "filled_dot_no_outline": true
+        }
+      ],
+      "solution_labels": [
+        {
+          "page": 3,
+          "font": "Inter-Medium",
+          "size_tex_pt": 10.2,
+          "weight": 500
+        }
+      ]
+    },
+    "sample-print2": {
+      "pdf_sha256": "ac0da8fe6d64b8757437da8cfd717e11719919e9dbc42d04108b56bc50dd54b8",
+      "page_count": 5,
+      "thematic_bands": [
+        {
+          "page": 2,
+          "text": "Θεωρία",
+          "font": "NotoSerif-Medium",
+          "weight": 500,
+          "size_tex_pt": 11.7,
+          "text_color": "paper white"
+        },
+        {
+          "page": 3,
+          "text": "Λυμένα παραδείγματα",
+          "font": "NotoSerif-Medium",
+          "weight": 500,
+          "size_tex_pt": 11.7,
+          "text_color": "paper white"
+        },
+        {
+          "page": 3,
+          "text": "Ερωτήσεις θεωρίας",
+          "font": "NotoSerif-Medium",
+          "weight": 500,
+          "size_tex_pt": 11.7,
+          "text_color": "paper white"
+        },
+        {
+          "page": 3,
+          "text": "Άλυτες ασκήσεις",
+          "font": "NotoSerif-Medium",
+          "weight": 500,
+          "size_tex_pt": 11.7,
+          "text_color": "paper white"
+        },
+        {
+          "page": 5,
+          "text": "Λύσεις ασκήσεων",
+          "font": "NotoSerif-Medium",
+          "weight": 500,
+          "size_tex_pt": 11.7,
+          "text_color": "paper white"
+        }
+      ],
+      "worked_examples": [
+        {
+          "page": 3,
+          "text": "Παράδειγμα 1 — Μετατόπιση κινητού σε ευθεία",
+          "font": "NotoSerif-Medium",
+          "weight": 500,
+          "size_tex_pt": 10.4,
+          "paper_white_title": true,
+          "dot_diameter_mm": 2.00002,
+          "dot_gap_mm": 1.59996,
+          "dot_cap_center_error_pdf_bp": 9.24e-05,
+          "filled_dot_no_outline": true
+        }
+      ],
+      "solution_labels": [
+        {
+          "page": 3,
+          "font": "Inter-Medium",
+          "size_tex_pt": 10.2,
+          "weight": 500
+        }
+      ]
+    },
+    "figures-screen": {
+      "pdf_sha256": "46d328b15bc6877c5ac0e64eeab494621abbaab2253499bf8261e5a0c1f1be80",
+      "page_count": 6,
+      "thematic_bands": [
+        {
+          "page": 1,
+          "text": "Α. Κοινές αρχές",
+          "font": "NotoSerif-Medium",
+          "weight": 500,
+          "size_tex_pt": 11.7,
+          "text_color": "paper white"
+        },
+        {
+          "page": 1,
+          "text": "Β. Άξονας θέσης και μετατόπιση",
+          "font": "NotoSerif-Medium",
+          "weight": 500,
+          "size_tex_pt": 11.7,
+          "text_color": "paper white"
+        },
+        {
+          "page": 2,
+          "text": "Γ. Ελεύθερο διάγραμμα δυνάμεων",
+          "font": "NotoSerif-Medium",
+          "weight": 500,
+          "size_tex_pt": 11.7,
+          "text_color": "paper white"
+        },
+        {
+          "page": 2,
+          "text": "Δ. Οριζόντια βολή",
+          "font": "NotoSerif-Medium",
+          "weight": 500,
+          "size_tex_pt": 11.7,
+          "text_color": "paper white"
+        },
+        {
+          "page": 3,
+          "text": "Ε. Γραφικές παραστάσεις",
+          "font": "NotoSerif-Medium",
+          "weight": 500,
+          "size_tex_pt": 11.7,
+          "text_color": "paper white"
+        },
+        {
+          "page": 5,
+          "text": "ΣΤ. Σχήμα στο πλάτος στήλης",
+          "font": "NotoSerif-Medium",
+          "weight": 500,
+          "size_tex_pt": 11.7,
+          "text_color": "paper white"
+        },
+        {
+          "page": 5,
+          "text": "Ζ. Ιδανική τροχαλία",
+          "font": "NotoSerif-Medium",
+          "weight": 500,
+          "size_tex_pt": 11.7,
+          "text_color": "paper white"
+        },
+        {
+          "page": 6,
+          "text": "Η. Εντολές και έλεγχος",
+          "font": "NotoSerif-Medium",
+          "weight": 500,
+          "size_tex_pt": 11.7,
+          "text_color": "paper white"
+        }
+      ],
+      "worked_examples": [],
+      "solution_labels": []
+    },
+    "figures-print2": {
+      "pdf_sha256": "f01a9fef21509071c8346d1a705bfd06907c6d9ff0cdb6b78dcb6c589169bb67",
+      "page_count": 6,
+      "thematic_bands": [
+        {
+          "page": 1,
+          "text": "Α. Κοινές αρχές",
+          "font": "NotoSerif-Medium",
+          "weight": 500,
+          "size_tex_pt": 11.7,
+          "text_color": "paper white"
+        },
+        {
+          "page": 1,
+          "text": "Β. Άξονας θέσης και μετατόπιση",
+          "font": "NotoSerif-Medium",
+          "weight": 500,
+          "size_tex_pt": 11.7,
+          "text_color": "paper white"
+        },
+        {
+          "page": 2,
+          "text": "Γ. Ελεύθερο διάγραμμα δυνάμεων",
+          "font": "NotoSerif-Medium",
+          "weight": 500,
+          "size_tex_pt": 11.7,
+          "text_color": "paper white"
+        },
+        {
+          "page": 2,
+          "text": "Δ. Οριζόντια βολή",
+          "font": "NotoSerif-Medium",
+          "weight": 500,
+          "size_tex_pt": 11.7,
+          "text_color": "paper white"
+        },
+        {
+          "page": 3,
+          "text": "Ε. Γραφικές παραστάσεις",
+          "font": "NotoSerif-Medium",
+          "weight": 500,
+          "size_tex_pt": 11.7,
+          "text_color": "paper white"
+        },
+        {
+          "page": 5,
+          "text": "ΣΤ. Σχήμα στο πλάτος στήλης",
+          "font": "NotoSerif-Medium",
+          "weight": 500,
+          "size_tex_pt": 11.7,
+          "text_color": "paper white"
+        },
+        {
+          "page": 5,
+          "text": "Ζ. Ιδανική τροχαλία",
+          "font": "NotoSerif-Medium",
+          "weight": 500,
+          "size_tex_pt": 11.7,
+          "text_color": "paper white"
+        },
+        {
+          "page": 6,
+          "text": "Η. Εντολές και έλεγχος",
+          "font": "NotoSerif-Medium",
+          "weight": 500,
+          "size_tex_pt": 11.7,
+          "text_color": "paper white"
+        }
+      ],
+      "worked_examples": [],
+      "solution_labels": []
+    },
+    "assessment-screen": {
+      "pdf_sha256": "6f3646a1192deec3e15f64ccd943f215b37617e6baf8f7b84c0a0ad52d499e35",
+      "page_count": 4,
+      "thematic_bands": [],
+      "worked_examples": [],
+      "solution_labels": []
+    },
+    "assessment-print2": {
+      "pdf_sha256": "b9aa4da75f66eb7b1e47ca2d958a63b95dc9c5de0f5d0978f4b9d42e771a2fac",
+      "page_count": 4,
+      "thematic_bands": [],
+      "worked_examples": [],
+      "solution_labels": []
+    },
+    "tables-screen": {
+      "pdf_sha256": "46ace83e12fa9dc4aa95aefab25ca9b38c9f3de8f66aa7241b17ab1a0a7949df",
+      "page_count": 1,
+      "thematic_bands": [],
+      "worked_examples": [],
+      "solution_labels": []
+    },
+    "tables-print2": {
+      "pdf_sha256": "7509a2e0377ca3f6db81188693ffcbaeb888ba72085a6c46738ffbcb16181fd6",
+      "page_count": 1,
+      "thematic_bands": [],
+      "worked_examples": [],
+      "solution_labels": []
+    },
+    "opening-goals-screen": {
+      "pdf_sha256": "bd117b8f42fd1a232098f3d6adc18dec3aa16e3751937ee5248b23342c284a4b",
+      "page_count": 3,
+      "thematic_bands": [],
+      "worked_examples": [],
+      "solution_labels": []
+    },
+    "opening-goals-print2": {
+      "pdf_sha256": "521ae90761204000c591a0cbd2fd0876260ec7877331cca952e498804684063b",
+      "page_count": 3,
+      "thematic_bands": [],
+      "worked_examples": [],
+      "solution_labels": []
+    },
+    "history-statements-screen": {
+      "pdf_sha256": "b420bb76feefd81775b7fc7ca5f344998e0ad43a1472f09810a9f2357e98fabf",
+      "page_count": 2,
+      "thematic_bands": [
+        {
+          "page": 1,
+          "text": "Ιστορικό ένθετο και διδακτικά κουτιά",
+          "font": "NotoSerif-Medium",
+          "weight": 500,
+          "size_tex_pt": 11.7,
+          "text_color": "paper white"
+        },
+        {
+          "page": 1,
+          "text": "Μαθηματικές δηλώσεις χωρίς εικονίδια",
+          "font": "NotoSerif-Medium",
+          "weight": 500,
+          "size_tex_pt": 11.7,
+          "text_color": "paper white"
+        }
+      ],
+      "worked_examples": [],
+      "solution_labels": []
+    },
+    "history-statements-print2": {
+      "pdf_sha256": "b61e6f49c259a344454c22d5c7101b492b3e21f24cd752d38c7a4230634a27df",
+      "page_count": 2,
+      "thematic_bands": [
+        {
+          "page": 1,
+          "text": "Ιστορικό ένθετο και διδακτικά κουτιά",
+          "font": "NotoSerif-Medium",
+          "weight": 500,
+          "size_tex_pt": 11.7,
+          "text_color": "paper white"
+        },
+        {
+          "page": 1,
+          "text": "Μαθηματικές δηλώσεις χωρίς εικονίδια",
+          "font": "NotoSerif-Medium",
+          "weight": 500,
+          "size_tex_pt": 11.7,
+          "text_color": "paper white"
+        }
+      ],
+      "worked_examples": [],
+      "solution_labels": []
+    },
+    "callouts-screen": {
+      "pdf_sha256": "ea7999683a58bbb731d21ce8262b83679f51afb8b85240dfedc71fdacae9021e",
+      "page_count": 1,
+      "thematic_bands": [],
+      "worked_examples": [],
+      "solution_labels": []
+    },
+    "callouts-print2": {
+      "pdf_sha256": "423fdbe91126a2f5c4f380982264e64842eb05aa8066c6155cef00412bac4ec0",
+      "page_count": 1,
+      "thematic_bands": [],
+      "worked_examples": [],
+      "solution_labels": []
+    },
+    "palette-screen": {
+      "pdf_sha256": "741e28ebc68193a2ddadd8ff4527dcdfd4f1d17d8fdf1e692e4b4c754fa6c246",
+      "page_count": 1,
+      "thematic_bands": [
+        {
+          "page": 1,
+          "text": "Λυμένα παραδείγματα",
+          "font": "NotoSerif-Medium",
+          "weight": 500,
+          "size_tex_pt": 11.7,
+          "text_color": "paper white"
+        }
+      ],
+      "worked_examples": [
+        {
+          "page": 1,
+          "text": "Παράδειγμα 1 — Υπολογισμός μετατόπισης",
+          "font": "NotoSerif-Medium",
+          "weight": 500,
+          "size_tex_pt": 10.4,
+          "paper_white_title": true,
+          "dot_diameter_mm": 2.00002,
+          "dot_gap_mm": 1.59996,
+          "dot_cap_center_error_pdf_bp": 7.71e-05,
+          "filled_dot_no_outline": true
+        }
+      ],
+      "solution_labels": [
+        {
+          "page": 1,
+          "font": "Inter-Medium",
+          "size_tex_pt": 10.2,
+          "weight": 500
+        }
+      ]
+    },
+    "palette-print2": {
+      "pdf_sha256": "d76a21075206a8d07f50f781f8b34282f946392c36d1b0d006edb9948522d444",
+      "page_count": 1,
+      "thematic_bands": [
+        {
+          "page": 1,
+          "text": "Λυμένα παραδείγματα",
+          "font": "NotoSerif-Medium",
+          "weight": 500,
+          "size_tex_pt": 11.7,
+          "text_color": "paper white"
+        }
+      ],
+      "worked_examples": [
+        {
+          "page": 1,
+          "text": "Παράδειγμα 1 — Υπολογισμός μετατόπισης",
+          "font": "NotoSerif-Medium",
+          "weight": 500,
+          "size_tex_pt": 10.4,
+          "paper_white_title": true,
+          "dot_diameter_mm": 2.00002,
+          "dot_gap_mm": 1.59996,
+          "dot_cap_center_error_pdf_bp": 7.71e-05,
+          "filled_dot_no_outline": true
+        }
+      ],
+      "solution_labels": [
+        {
+          "page": 1,
+          "font": "Inter-Medium",
+          "size_tex_pt": 10.2,
+          "weight": 500
+        }
+      ]
+    }
+  },
+  "totals": {
+    "targets": 22,
+    "thematic_band_spans": 52,
+    "example_titles": 10,
+    "solution_labels": 10
+  }
+}
