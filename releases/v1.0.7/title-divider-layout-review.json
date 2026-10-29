@@ -1,0 +1,230 @@
+{
+  "status": "passed",
+  "reviewed_at": "2026-10-29T16:11:15.463214+00:00",
+  "method": "Independent temporary XeLaTeX normal/compact × SCREEN/PRINT, one-page and long split ProblemBoxes; PyMuPDF paths/raster and v1.0.6 first-page text-geometry comparison. No repository edits.",
+  "expected_width_tex_pt": 0.35,
+  "expected_width_pdf_bp": 0.34869240348692404,
+  "expected_border": "Black55; SCREEN #737373; PRINT DeviceGray 0.45 (K55%)",
+  "cases": [
+    {
+      "case": "compact-print",
+      "pdf": "/tmp/tex-v1.0.7-title-divider-proof/compact-print.pdf",
+      "sha256": "643f8fb179acdaad14506f52eec61b9684ff2b073a04b3e7bc945bcd87642d5d",
+      "page_count": 5,
+      "long_problem_page_count": 4,
+      "first_page_text_geometry_max_change_from_v106_pdf_bp": 0.0,
+      "wrapped_title_on_first_and_second_examples": true,
+      "overfull_boxes": 0,
+      "pages": [
+        {
+          "page": 1,
+          "title_present": true,
+          "separator_width_pdf_bp": 0.3486938,
+          "frame_matches_outer_border": true,
+          "separator_raster_rgb": [
+            114,
+            114,
+            114
+          ]
+        },
+        {
+          "page": 2,
+          "title_present": true,
+          "separator_width_pdf_bp": 0.3486938,
+          "frame_matches_outer_border": true,
+          "separator_raster_rgb": [
+            114,
+            114,
+            114
+          ]
+        },
+        {
+          "page": 3,
+          "title_present": false,
+          "continuation_top_gap_pdf_bp": 0.0,
+          "extra_top_separator": false
+        },
+        {
+          "page": 4,
+          "title_present": false,
+          "continuation_top_gap_pdf_bp": 0.0,
+          "extra_top_separator": false
+        },
+        {
+          "page": 5,
+          "title_present": false,
+          "continuation_top_gap_pdf_bp": 0.0,
+          "extra_top_separator": false
+        }
+      ]
+    },
+    {
+      "case": "compact-screen",
+      "pdf": "/tmp/tex-v1.0.7-title-divider-proof/compact-screen.pdf",
+      "sha256": "36ff9733541ba668205ddf81662ad9cce5a4effd6a233fbda2d002e064893890",
+      "page_count": 5,
+      "long_problem_page_count": 4,
+      "first_page_text_geometry_max_change_from_v106_pdf_bp": 0.0,
+      "wrapped_title_on_first_and_second_examples": true,
+      "overfull_boxes": 0,
+      "pages": [
+        {
+          "page": 1,
+          "title_present": true,
+          "separator_width_pdf_bp": 0.3486938,
+          "frame_matches_outer_border": true,
+          "separator_raster_rgb": [
+            114,
+            114,
+            114
+          ]
+        },
+        {
+          "page": 2,
+          "title_present": true,
+          "separator_width_pdf_bp": 0.3486938,
+          "frame_matches_outer_border": true,
+          "separator_raster_rgb": [
+            114,
+            114,
+            114
+          ]
+        },
+        {
+          "page": 3,
+          "title_present": false,
+          "continuation_top_gap_pdf_bp": 0.0,
+          "extra_top_separator": false
+        },
+        {
+          "page": 4,
+          "title_present": false,
+          "continuation_top_gap_pdf_bp": 0.0,
+          "extra_top_separator": false
+        },
+        {
+          "page": 5,
+          "title_present": false,
+          "continuation_top_gap_pdf_bp": 0.0,
+          "extra_top_separator": false
+        }
+      ]
+    },
+    {
+      "case": "normal-print",
+      "pdf": "/tmp/tex-v1.0.7-title-divider-proof/normal-print.pdf",
+      "sha256": "2ecd53d823e88705d123505f1aee7be873bfeb563cbe69c3aa598e85dd96be51",
+      "page_count": 6,
+      "long_problem_page_count": 5,
+      "first_page_text_geometry_max_change_from_v106_pdf_bp": 0.0,
+      "wrapped_title_on_first_and_second_examples": true,
+      "overfull_boxes": 0,
+      "pages": [
+        {
+          "page": 1,
+          "title_present": true,
+          "separator_width_pdf_bp": 0.3487091,
+          "frame_matches_outer_border": true,
+          "separator_raster_rgb": [
+            114,
+            114,
+            114
+          ]
+        },
+        {
+          "page": 2,
+          "title_present": true,
+          "separator_width_pdf_bp": 0.3487244,
+          "frame_matches_outer_border": true,
+          "separator_raster_rgb": [
+            114,
+            114,
+            114
+          ]
+        },
+        {
+          "page": 3,
+          "title_present": false,
+          "continuation_top_gap_pdf_bp": 0.0,
+          "extra_top_separator": false
+        },
+        {
+          "page": 4,
+          "title_present": false,
+          "continuation_top_gap_pdf_bp": 0.0,
+          "extra_top_separator": false
+        },
+        {
+          "page": 5,
+          "title_present": false,
+          "continuation_top_gap_pdf_bp": 0.0,
+          "extra_top_separator": false
+        },
+        {
+          "page": 6,
+          "title_present": false,
+          "continuation_top_gap_pdf_bp": 0.0,
+          "extra_top_separator": false
+        }
+      ]
+    },
+    {
+      "case": "normal-screen",
+      "pdf": "/tmp/tex-v1.0.7-title-divider-proof/normal-screen.pdf",
+      "sha256": "cadc204ae39feb05b8291e72b59f8dca05e5e246a7e35b55b3819cfee0d27cd3",
+      "page_count": 6,
+      "long_problem_page_count": 5,
+      "first_page_text_geometry_max_change_from_v106_pdf_bp": 0.0,
+      "wrapped_title_on_first_and_second_examples": true,
+      "overfull_boxes": 0,
+      "pages": [
+        {
+          "page": 1,
+          "title_present": true,
+          "separator_width_pdf_bp": 0.3487091,
+          "frame_matches_outer_border": true,
+          "separator_raster_rgb": [
+            114,
+            114,
+            114
+          ]
+        },
+        {
+          "page": 2,
+          "title_present": true,
+          "separator_width_pdf_bp": 0.3487244,
+          "frame_matches_outer_border": true,
+          "separator_raster_rgb": [
+            114,
+            114,
+            114
+          ]
+        },
+        {
+          "page": 3,
+          "title_present": false,
+          "continuation_top_gap_pdf_bp": 0.0,
+          "extra_top_separator": false
+        },
+        {
+          "page": 4,
+          "title_present": false,
+          "continuation_top_gap_pdf_bp": 0.0,
+          "extra_top_separator": false
+        },
+        {
+          "page": 5,
+          "title_present": false,
+          "continuation_top_gap_pdf_bp": 0.0,
+          "extra_top_separator": false
+        },
+        {
+          "page": 6,
+          "title_present": false,
+          "continuation_top_gap_pdf_bp": 0.0,
+          "extra_top_separator": false
+        }
+      ]
+    }
+  ]
+}

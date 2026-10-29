@@ -1,0 +1,10 @@
+Universal Book Template v1.0.7
+
+Complete release checks passed; see release-manifest.json and reports/.
+Starter_*.pdf shows the clean authoring example; source/starter.tex and source/starter-content.tex are the starting point.
+Figures_*.pdf documents the diagram conventions; Stress_*.pdf exercises page breaks.
+PRINT: black + provisional red spot; SCREEN: black + blue. Both are print proofs.
+If the chat PDF viewer fails, extract this ZIP and open the PDFs locally.
+The PNG comparison is a preview, not a print master.
+For setup and commands see source/README.md, source/SETUP.md and source/docs/.
+Printer ink, tint approval, bleed and PDF/X remain pending.

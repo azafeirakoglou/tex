@@ -1,0 +1,183 @@
+{
+  "status": "passed",
+  "divider_role": "BookProblemBorder = Black55",
+  "width_tex_pt": 0.35,
+  "targets": {
+    "print2": {
+      "pdf_sha256": "567e38e9f27ddc84f1560925d0ecefad2acbb266befe07a17ab42b8ad2b88c84",
+      "boxes": [
+        {
+          "page": 8,
+          "title": "Παράδειγμα 1 — Υπολογισμός μετατόπισης",
+          "separator_tex_pt": 0.35002,
+          "separator_matches_outer_border": true,
+          "paper_white_title": true,
+          "full_width_between_inner_border_edges": true
+        },
+        {
+          "page": 8,
+          "title": "Παράδειγμα 2 — Σταθερή ταχύτητα",
+          "separator_tex_pt": 0.35003,
+          "separator_matches_outer_border": true,
+          "paper_white_title": true,
+          "full_width_between_inner_border_edges": true
+        },
+        {
+          "page": 19,
+          "title": "Παράδειγμα 1 — Εφαρμογή σε συνάρτηση",
+          "separator_tex_pt": 0.35,
+          "separator_matches_outer_border": true,
+          "paper_white_title": true,
+          "full_width_between_inner_border_edges": true
+        }
+      ]
+    },
+    "starter-screen": {
+      "pdf_sha256": "686e2fe8a0585b0b45a094787b0533119d9f447e2358687f73701edeb0344e70",
+      "boxes": []
+    },
+    "starter-print2": {
+      "pdf_sha256": "0e892d5a6d81aecc6314847940bf98056c22d55c638059c80a65402806259955",
+      "boxes": []
+    },
+    "stress-screen": {
+      "pdf_sha256": "95208350880ac7d944e359b1eab58db976ac53629f15d96428562bfd718cbd4e",
+      "boxes": []
+    },
+    "stress-print2": {
+      "pdf_sha256": "3843898a015c5d9e0d34f4fb578ed938a17d5e911a4ae074fdb83aa68f550c14",
+      "boxes": []
+    },
+    "screen": {
+      "pdf_sha256": "6fb621ae33d79fa94583c4de11f2fe5ebfab6c6e71af9c60f7c3b5a84e75bef7",
+      "boxes": [
+        {
+          "page": 8,
+          "title": "Παράδειγμα 1 — Υπολογισμός μετατόπισης",
+          "separator_tex_pt": 0.35002,
+          "separator_matches_outer_border": true,
+          "paper_white_title": true,
+          "full_width_between_inner_border_edges": true
+        },
+        {
+          "page": 8,
+          "title": "Παράδειγμα 2 — Σταθερή ταχύτητα",
+          "separator_tex_pt": 0.35003,
+          "separator_matches_outer_border": true,
+          "paper_white_title": true,
+          "full_width_between_inner_border_edges": true
+        },
+        {
+          "page": 19,
+          "title": "Παράδειγμα 1 — Εφαρμογή σε συνάρτηση",
+          "separator_tex_pt": 0.35,
+          "separator_matches_outer_border": true,
+          "paper_white_title": true,
+          "full_width_between_inner_border_edges": true
+        }
+      ]
+    },
+    "sample-screen": {
+      "pdf_sha256": "15091720cbc5b32d00a85bb78e4963af9864b5e7ae4a9acf6f138f77e3688d42",
+      "boxes": [
+        {
+          "page": 3,
+          "title": "Παράδειγμα 1 — Μετατόπιση κινητού σε ευθεία",
+          "separator_tex_pt": 0.35002,
+          "separator_matches_outer_border": true,
+          "paper_white_title": true,
+          "full_width_between_inner_border_edges": true
+        }
+      ]
+    },
+    "sample-print2": {
+      "pdf_sha256": "bc6347185757778cd3e46da830428954a85672d9a813818c1e53795120695b65",
+      "boxes": [
+        {
+          "page": 3,
+          "title": "Παράδειγμα 1 — Μετατόπιση κινητού σε ευθεία",
+          "separator_tex_pt": 0.35002,
+          "separator_matches_outer_border": true,
+          "paper_white_title": true,
+          "full_width_between_inner_border_edges": true
+        }
+      ]
+    },
+    "figures-screen": {
+      "pdf_sha256": "8debc5e0b1d5fbbe5a379b8336442cc837066a6826d651ffdc6b2c904bd82202",
+      "boxes": []
+    },
+    "figures-print2": {
+      "pdf_sha256": "7bdc0dfcee839d03e0dab5ba284da7170dcf07c7ba9ec3e56bd80f68ecadd1ee",
+      "boxes": []
+    },
+    "assessment-screen": {
+      "pdf_sha256": "cf42d4266bed1c5c9184719f2cdaf90e0f8d2843525020facc1cc795cf322cba",
+      "boxes": []
+    },
+    "assessment-print2": {
+      "pdf_sha256": "95a535339d129f304917a296f833566faac879355a086f6f11dcd5d751702f3f",
+      "boxes": []
+    },
+    "tables-screen": {
+      "pdf_sha256": "366ad955624ecb5c6900556b112b7313ab0e1038b3f785bc4dafee95baef1765",
+      "boxes": []
+    },
+    "tables-print2": {
+      "pdf_sha256": "6ea470097029ae898a5563a4dbabefbbea1e50685aa6a090bbb7341037433b20",
+      "boxes": []
+    },
+    "opening-goals-screen": {
+      "pdf_sha256": "b72ad67b9f09dc47af3ac4b6e13905407f1d131f94c604d674d3c6334c256df3",
+      "boxes": []
+    },
+    "opening-goals-print2": {
+      "pdf_sha256": "e97bf1a596370e63e3ac39a8fc322aae386285623f2a463576455acef420d169",
+      "boxes": []
+    },
+    "history-statements-screen": {
+      "pdf_sha256": "096718e260a5ffbb009142806c6ff74a8eef9d242b92950f6fa252e84d0f6f0e",
+      "boxes": []
+    },
+    "history-statements-print2": {
+      "pdf_sha256": "24d5f6c73865a3e13c7a5e4049477dbf9b2b1bf7b53db9850cc19fbc6d544b42",
+      "boxes": []
+    },
+    "callouts-screen": {
+      "pdf_sha256": "f50491679129d52798a6fe1fb6d0d07cc5ff8001541058e0b3fa6c810241ec4c",
+      "boxes": []
+    },
+    "callouts-print2": {
+      "pdf_sha256": "ee2be38fc9d70be55a2f480a65fe45c75ea9934ba5ad4f2fed2aea38b17d6ec9",
+      "boxes": []
+    },
+    "palette-screen": {
+      "pdf_sha256": "96f3bfd48daa9b720d22e0f132a77b7635c7c9c6edf0ed08aa4186114524bb8f",
+      "boxes": [
+        {
+          "page": 1,
+          "title": "Παράδειγμα 1 — Υπολογισμός μετατόπισης",
+          "separator_tex_pt": 0.35,
+          "separator_matches_outer_border": true,
+          "paper_white_title": true,
+          "full_width_between_inner_border_edges": true
+        }
+      ]
+    },
+    "palette-print2": {
+      "pdf_sha256": "b9d313a25d7588e15dfa572a187f0f9efc4dea813ff54e9dd195eef86c2cfb4e",
+      "boxes": [
+        {
+          "page": 1,
+          "title": "Παράδειγμα 1 — Υπολογισμός μετατόπισης",
+          "separator_tex_pt": 0.35,
+          "separator_matches_outer_border": true,
+          "paper_white_title": true,
+          "full_width_between_inner_border_edges": true
+        }
+      ]
+    }
+  },
+  "total_boxes": 10,
+  "main_example_page_word_position_max_change_pdf_bp": 0
+}

@@ -16,7 +16,7 @@
 % Το τελικό PDF παράγεται με XeLaTeX. Όχι με pdfLaTeX.
 % ===========================================================================
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{styles/universalbook}[2026/10/29 Modular Greek textbook design v1.0.6]
+\ProvidesPackage{styles/universalbook}[2026/10/29 Modular Greek textbook design v1.0.7]
 % Γραμματοσειρές OpenType/TrueType. Η αλλαγή γίνεται από τον config.
 \RequirePackage{fontspec}
 \RequirePackage{polyglossia}
@@ -711,9 +711,10 @@
 }
 % Μία κοινή κατασκευή κρατά λευκό χαρτιού πίσω από τον τίτλο και στις δύο μορφές.
 \tcbset{BookProblemRender/.style={enhanced,breakable,sharp corners,
-    colback=BookProblemBackground,colframe=BookProblemBackground,coltext=BookInk,
+    colback=BookProblemBackground,colframe=BookProblemBorder,coltext=BookInk,
     boxrule=\BookBoxThinRuleWidth,
     borderline={\BookBoxThinRuleWidth}{0pt}{BookProblemBorder},
+    titlerule=\BookBoxThinRuleWidth,
     colbacktitle=\BookExampleTitleBackground,
     coltitle=\BookExampleTitleTextColor,title filled=true,
     fonttitle=\BookHeadingFont\fontsize{\BookExampleTitleFontSize}{\BookExampleTitleLineHeight}\selectfont,
