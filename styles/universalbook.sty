@@ -16,7 +16,7 @@
 % Το τελικό PDF παράγεται με XeLaTeX. Όχι με pdfLaTeX.
 % ===========================================================================
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{styles/universalbook}[2026/10/29 Modular Greek textbook design v1.0.4]
+\ProvidesPackage{styles/universalbook}[2026/10/29 Modular Greek textbook design v1.0.5]
 % Γραμματοσειρές OpenType/TrueType. Η αλλαγή γίνεται από τον config.
 \RequirePackage{fontspec}
 \RequirePackage{polyglossia}
@@ -693,14 +693,30 @@
 % Το επόμενο ProblemBox τον εμφανίζει στο κοινό γκρι φόντο, χωρίς λωρίδα χρώματος.
 \newcommand{\BookCurrentExampleTitle}{}
 \newcommand{\BookExampleLabel}{\LabelExample\space\theworkedexample\enspace—\enspace\BookCurrentExampleTitle}
+% Η βούλα κεντράρεται στο πραγματικό ύψος κεφαλαίου της ενεργής γραμματοσειράς.
+\newlength{\BookExampleTitleReferenceHeight}
+\newlength{\BookExampleTitleDotRadius}
+\newcommand{\BookExampleTitleDot}{%
+  \begingroup
+  \settoheight{\BookExampleTitleReferenceHeight}{\BookExampleTitleAlignmentReference}%
+  \setlength{\BookExampleTitleDotRadius}{\dimexpr\BookExampleTitleDotDiameter/2\relax}%
+  \tikz[baseline={([yshift=-.5\BookExampleTitleReferenceHeight]current bounding box.center)}]%
+    \fill[BookExampleAccent] (0,0) circle[radius=\BookExampleTitleDotRadius];%
+  \endgroup
+}
+% Κοινός τίτλος για τις δύο διατάξεις· το απλό label παραμένει ανεξάρτητο.
+\newcommand{\BookExampleHeading}{%
+  \BookExampleTitleDot\nobreak\hspace{\BookExampleTitleDotGap}%
+  {\color{\BookExampleTitleTextColor}\BookExampleLabel}%
+}
 \ifBookExampleDarkHeader
   \newtcolorbox{ProblemBox}{enhanced,breakable,sharp corners,
     colback=BookProblemBackground,colframe=BookProblemBackground,coltext=BookInk,
     boxrule=\BookBoxThinRuleWidth,
     borderline={\BookBoxThinRuleWidth}{0pt}{BookProblemBorder},
-    coltitle=BookExampleAccent,title filled=false,
+    coltitle=\BookExampleTitleTextColor,title filled=false,
     fonttitle=\BookHeadingFont\fontsize{\BookExampleTitleFontSize}{\BookExampleTitleLineHeight}\selectfont,
-    title={\BookExampleLabel},
+    title={\BookExampleHeading},
     toptitle=\BookExampleBarPad,bottomtitle=\BookExampleBarPad,
     lefttitle=3.4mm,righttitle=3.4mm,
     top=2.7mm,bottom=2.6mm,left=3.5mm,right=3.5mm,
@@ -710,7 +726,7 @@
     colframe=BookProblemBackground,coltext=BookInk,
     boxrule=\BookBoxThinRuleWidth,
     borderline={\BookBoxThinRuleWidth}{0pt}{BookProblemBorder},
-    before upper={\small\noindent{\BookHeadingFont\fontsize{\BookExampleTitleFontSize}{\BookExampleTitleLineHeight}\selectfont\color{BookExampleAccent}\BookExampleLabel}\par\nobreak\vskip3pt{\color{BookProblemBorder}\hrule height .40pt}\nobreak\vskip8pt}}
+    before upper={\small\noindent{\BookHeadingFont\fontsize{\BookExampleTitleFontSize}{\BookExampleTitleLineHeight}\selectfont\BookExampleHeading}\par\nobreak\vskip3pt{\color{BookProblemBorder}\hrule height .40pt}\nobreak\vskip8pt}}
 \fi
 \newtcolorbox{MethodBox}{BookPanel,colback=BookMethodSoft,colframe=BookPanelBorder,borderline west={2.1pt}{0pt}{BookSecondary},title={\LabelMethod},fonttitle=\BookHeadingFont\bfseries\small,coltitle=BookPrimary,attach title to upper={\par\smallskip},before upper={\small}}
 \newtcolorbox{KeyFormula}{BookPanel,colback=BookSoft,colframe=BookPanelBorder,halign=center,top=3mm,bottom=3mm}

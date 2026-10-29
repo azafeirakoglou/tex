@@ -1,0 +1,854 @@
+{
+  "status": "passed",
+  "checked_at_utc": "2026-10-29T12:34:42.084080+00:00",
+  "input_zip": "/workspace/exports/v1.0.5/Universal_Book_Template_v1.0.5.zip",
+  "input_zip_sha256": "d6d86f2df4a831746f56c7e367caf3451f98909f4e15bbbb68ce227d9063bc54",
+  "workdir": "/tmp/tex-v1.0.5-clean-20261029-01",
+  "commands": [
+    {
+      "name": "create-venv",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-m",
+        "venv",
+        "/tmp/tex-v1.0.5-clean-20261029-01/source/.venv"
+      ],
+      "log": "/tmp/tex-v1.0.5-clean-20261029-01/logs/01-create-venv.log",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 1.668,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "install-locked-dependencies",
+      "argv": [
+        "/tmp/tex-v1.0.5-clean-20261029-01/source/.venv/bin/python",
+        "-m",
+        "pip",
+        "install",
+        "--quiet",
+        "--disable-pip-version-check",
+        "--no-cache-dir",
+        "--timeout",
+        "60",
+        "--retries",
+        "2",
+        "-r",
+        "requirements-dev.txt"
+      ],
+      "log": "/tmp/tex-v1.0.5-clean-20261029-01/logs/02-install-locked-dependencies.log",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 12.697,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "setup",
+      "argv": [
+        "make",
+        "PYTHON=/tmp/tex-v1.0.5-clean-20261029-01/source/.venv/bin/python",
+        "setup"
+      ],
+      "log": "/tmp/tex-v1.0.5-clean-20261029-01/logs/03-setup.log",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 23.05,
+      "log_sha256": "216e6606b0bb70b8f960b57af9a8a268492ed88bd4dcbfb873903977cf6222f9"
+    },
+    {
+      "name": "build-all",
+      "argv": [
+        "make",
+        "PYTHON=/tmp/tex-v1.0.5-clean-20261029-01/source/.venv/bin/python",
+        "-j2",
+        "all"
+      ],
+      "log": "/tmp/tex-v1.0.5-clean-20261029-01/logs/04-build-all.log",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 55.577,
+      "log_sha256": "ce4b8dd6264f5688cf265df68118de8962be18b2dcd6323c2b1b1b96741d6ff1"
+    },
+    {
+      "name": "unit-and-pdf-tests",
+      "argv": [
+        "make",
+        "PYTHON=/tmp/tex-v1.0.5-clean-20261029-01/source/.venv/bin/python",
+        "test"
+      ],
+      "log": "/tmp/tex-v1.0.5-clean-20261029-01/logs/05-unit-and-pdf-tests.log",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 46.85,
+      "log_sha256": "c6d0e09a779e431b6ac6a4fac9a732ef5331c1a3cb41ab12632390c3dccab950"
+    },
+    {
+      "name": "preflight-all",
+      "argv": [
+        "make",
+        "PYTHON=/tmp/tex-v1.0.5-clean-20261029-01/source/.venv/bin/python",
+        "preflight-all"
+      ],
+      "log": "/tmp/tex-v1.0.5-clean-20261029-01/logs/06-preflight-all.log",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 27.659,
+      "log_sha256": "445b20719c2da6143c0cc6924be62a829ea5d737265da51f388769b722040ddb"
+    },
+    {
+      "name": "stress-layout",
+      "argv": [
+        "/tmp/tex-v1.0.5-clean-20261029-01/source/.venv/bin/python",
+        "scripts/check_stress.py",
+        "--print",
+        "build/stress-print2/Stress_Print.pdf",
+        "--screen",
+        "build/stress-screen/Stress_Screen.pdf",
+        "--report",
+        "/tmp/tex-v1.0.5-clean-20261029-01/source/build/validation/stress-layout.json"
+      ],
+      "log": "/tmp/tex-v1.0.5-clean-20261029-01/logs/07-stress-layout.log",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 3.673,
+      "log_sha256": "759c1292ecfa54875de115778e5743a2ed8f0973547bcbcbdb071d727751cf33"
+    },
+    {
+      "name": "inspect-and-compare-outputs",
+      "argv": [
+        "/tmp/tex-v1.0.5-clean-20261029-01/source/.venv/bin/python",
+        "/tmp/tex-v1.0.5-clean-20261029-01/source/scripts/check_clean_install.py",
+        "--inspect-root",
+        "/tmp/tex-v1.0.5-clean-20261029-01/source",
+        "--report",
+        "/tmp/tex-v1.0.5-clean-20261029-01/output-inspection.json",
+        "--reference-root",
+        "/workspace/tex"
+      ],
+      "log": "/tmp/tex-v1.0.5-clean-20261029-01/logs/08-inspect-and-compare-outputs.log",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 1.568,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "fresh_source_tree": true,
+  "fresh_python_venv": true,
+  "fresh_font_downloads": true,
+  "system_toolchain_scope": "Existing documented Linux tools; no new OS/container installation",
+  "host": {
+    "system": "Linux",
+    "release": "6.18.55",
+    "python_launcher": "3.12.14"
+  },
+  "source_archive_files": 154,
+  "source_archive_manifest_sha256": "7ca8562040d551345ae198e79a3dad426e1fe82a319e1d214dbb57893e327dcf",
+  "zip_members_match_reference": true,
+  "tests_run": 64,
+  "test_skips": 0,
+  "source_fingerprint": "4ad0a1304b226aea54ce01b5a71ee46b34a5dd2d0a713ec02d32a2fdc2549c1b",
+  "outputs": {
+    "print2": {
+      "path": "build/print/Physics_A_Print_Technical.pdf",
+      "sha256": "6d3fd46b20caffbc03efa51bad010a92b1187880c9965a1c4b931c2df613112c",
+      "pages": 20,
+      "fonts": [
+        "GBAVCK+NotoSerif-Italic",
+        "GNQUHK+STIXTwoMath-Regular",
+        "LEWTYW+Inter-SemiBold-Identity-H",
+        "MCBQDR+NotoSerif-Medium",
+        "PEVVCU+NotoSerif-Regular",
+        "POOAXR+Inter-Regular-Identity-H",
+        "VFFYHB+Inter-Medium-Identity-H",
+        "YGFGNQ+Inter-Italic-Identity-H"
+      ],
+      "fonts_embedded": true,
+      "overfull_boxes": 0,
+      "underfull_boxes": 0
+    },
+    "starter-screen": {
+      "path": "build/starter-screen/Starter_Screen.pdf",
+      "sha256": "a45c2a6b5263547b3562428a1cbbdb54cd118c5ac0fe4ff372c2410552369e2d",
+      "pages": 4,
+      "fonts": [
+        "KNPAKK+Inter-Regular-Identity-H",
+        "MGBTFH+Inter-Medium-Identity-H",
+        "MOJGQO+STIXTwoMath-Regular",
+        "NKXNEO+NotoSerif-Regular",
+        "RFYLNS+NotoSerif-Medium",
+        "TFDHWN+Inter-Italic-Identity-H",
+        "TYMZFD+Inter-SemiBold-Identity-H"
+      ],
+      "fonts_embedded": true,
+      "overfull_boxes": 0,
+      "underfull_boxes": 0
+    },
+    "starter-print2": {
+      "path": "build/starter-print2/Starter_Print.pdf",
+      "sha256": "d55cb58b50e0b3fb1c3b3cc451875496979d93234fd5a80c13bae101d8c79a17",
+      "pages": 4,
+      "fonts": [
+        "COKCDM+Inter-Italic-Identity-H",
+        "DRCQEJ+Inter-SemiBold-Identity-H",
+        "HRXCAQ+Inter-Medium-Identity-H",
+        "IWTWOE+STIXTwoMath-Regular",
+        "OKUSUJ+NotoSerif-Regular",
+        "YQVJWN+Inter-Regular-Identity-H",
+        "ZYQWDB+NotoSerif-Medium"
+      ],
+      "fonts_embedded": true,
+      "overfull_boxes": 0,
+      "underfull_boxes": 0
+    },
+    "stress-screen": {
+      "path": "build/stress-screen/Stress_Screen.pdf",
+      "sha256": "6ff2599174c693108f084bcec9ae5b11d350c7db3bd02d148dd159fe9cb8f72f",
+      "pages": 68,
+      "fonts": [
+        "LSJGJG+NotoSerif-Regular",
+        "MHHPGU+Inter-Medium-Identity-H",
+        "MSJDNP+NotoSerif-Medium",
+        "RPAAHQ+Inter-Regular-Identity-H",
+        "SDSEHE+DejaVuSansMono",
+        "SZPLCI+Inter-Italic-Identity-H",
+        "WJJTVG+STIXTwoMath-Regular",
+        "XWNUWS+Inter-SemiBold-Identity-H"
+      ],
+      "fonts_embedded": true,
+      "overfull_boxes": 0,
+      "underfull_boxes": 0
+    },
+    "stress-print2": {
+      "path": "build/stress-print2/Stress_Print.pdf",
+      "sha256": "d78a312c6ba3759f21e83a829881824074e183438578ff75b938a079fc3eaa44",
+      "pages": 68,
+      "fonts": [
+        "CXOXRF+Inter-Regular-Identity-H",
+        "KQUJRE+Inter-Medium-Identity-H",
+        "ODAXVN+STIXTwoMath-Regular",
+        "OLTNYO+Inter-Italic-Identity-H",
+        "QOJVDG+Inter-SemiBold-Identity-H",
+        "RUQEEG+NotoSerif-Medium",
+        "SISQJU+DejaVuSansMono",
+        "WMQQUB+NotoSerif-Regular"
+      ],
+      "fonts_embedded": true,
+      "overfull_boxes": 0,
+      "underfull_boxes": 0
+    },
+    "screen": {
+      "path": "build/screen/Physics_A_Screen.pdf",
+      "sha256": "cd5c9ef0133dda6505f2d20c3c5d45008a387340bf42bf341eb1a447f41d4ca6",
+      "pages": 20,
+      "fonts": [
+        "GBAVCK+NotoSerif-Italic",
+        "GNQUHK+STIXTwoMath-Regular",
+        "LEWTYW+Inter-SemiBold-Identity-H",
+        "MCBQDR+NotoSerif-Medium",
+        "PEVVCU+NotoSerif-Regular",
+        "POOAXR+Inter-Regular-Identity-H",
+        "VFFYHB+Inter-Medium-Identity-H",
+        "YGFGNQ+Inter-Italic-Identity-H"
+      ],
+      "fonts_embedded": true,
+      "overfull_boxes": 0,
+      "underfull_boxes": 0
+    },
+    "sample-screen": {
+      "path": "build/sample-screen/Sample_Collaborators_Blue.pdf",
+      "sha256": "c80ddfbffb28519d2f835688bf1881d819bd54283ab55abc270afb8ad9d94766",
+      "pages": 5,
+      "fonts": [
+        "KIQEMU+Inter-Italic-Identity-H",
+        "MKHLBS+Inter-Medium-Identity-H",
+        "PVRCHW+NotoSerif-Regular",
+        "REDLSZ+Inter-Regular-Identity-H",
+        "TADAIB+STIXTwoMath-Regular",
+        "XCKLLS+Inter-SemiBold-Identity-H",
+        "XRLBCW+NotoSerif-Italic",
+        "YJYBKM+NotoSerif-Medium"
+      ],
+      "fonts_embedded": true,
+      "overfull_boxes": 0,
+      "underfull_boxes": 0
+    },
+    "sample-print2": {
+      "path": "build/sample-print2/Sample_Collaborators_Print_Technical.pdf",
+      "sha256": "3b0636189eff7745e2755b25f754ea180096416a4b19aeed498ff1a46c6e9de1",
+      "pages": 5,
+      "fonts": [
+        "BODKZL+Inter-Regular-Identity-H",
+        "FBRMRQ+NotoSerif-Medium",
+        "GZLGWB+Inter-Medium-Identity-H",
+        "KGHWXC+NotoSerif-Regular",
+        "KQVTBV+Inter-Italic-Identity-H",
+        "QERJOA+NotoSerif-Italic",
+        "RWFLBB+STIXTwoMath-Regular",
+        "XGGLPT+Inter-SemiBold-Identity-H"
+      ],
+      "fonts_embedded": true,
+      "overfull_boxes": 0,
+      "underfull_boxes": 0
+    },
+    "figures-screen": {
+      "path": "build/figures-screen/Book_Figures_Screen.pdf",
+      "sha256": "72b1a0c90a46568cbecdaa121350563eb6b3a61052d3dbdc327968d4cf679fa2",
+      "pages": 6,
+      "fonts": [
+        "AMIQOV+Inter-Regular-Identity-H",
+        "ARWDSF+DejaVuSansMono",
+        "EKFKCX+NotoSerif-Regular",
+        "FMCIRJ+STIXTwoMath-Regular",
+        "KQARIN+Inter-SemiBold-Identity-H",
+        "LHARBU+Inter-Italic-Identity-H"
+      ],
+      "fonts_embedded": true,
+      "overfull_boxes": 0,
+      "underfull_boxes": 1
+    },
+    "figures-print2": {
+      "path": "build/figures-print2/Book_Figures_Print_Technical.pdf",
+      "sha256": "6e933d11cffff70432263a3cb349e440ab1922aeccc1ecbeb384f3136323a3d8",
+      "pages": 6,
+      "fonts": [
+        "EGYHPZ+NotoSerif-Regular",
+        "GELONW+DejaVuSansMono",
+        "JCUMQJ+STIXTwoMath-Regular",
+        "LZDGQZ+Inter-SemiBold-Identity-H",
+        "NWIYOD+Inter-Italic-Identity-H",
+        "RYFPWJ+Inter-Regular-Identity-H"
+      ],
+      "fonts_embedded": true,
+      "overfull_boxes": 0,
+      "underfull_boxes": 1
+    },
+    "assessment-screen": {
+      "path": "build/assessment-screen/Book_Assessment_Screen.pdf",
+      "sha256": "0e2b322cc21023b7a50e674b4b80f668b3dc2c045e25a1a3e63a4ff5395ab3b7",
+      "pages": 4,
+      "fonts": [
+        "JUSWFJ+NotoSerif-Regular",
+        "MFAVIO+Inter-Regular-Identity-H",
+        "SXXZIH+Inter-SemiBold-Identity-H",
+        "UEEHMD+STIXTwoMath-Regular"
+      ],
+      "fonts_embedded": true,
+      "overfull_boxes": 0,
+      "underfull_boxes": 0
+    },
+    "assessment-print2": {
+      "path": "build/assessment-print2/Book_Assessment_Print_Technical.pdf",
+      "sha256": "c2b48f25ae357657ff83e55fc81c72b71a832819400ce0a810195fbda8c5f835",
+      "pages": 4,
+      "fonts": [
+        "DPIIYP+NotoSerif-Regular",
+        "HUBTFV+Inter-SemiBold-Identity-H",
+        "ILQJRC+Inter-Regular-Identity-H",
+        "VCXZYP+STIXTwoMath-Regular"
+      ],
+      "fonts_embedded": true,
+      "overfull_boxes": 0,
+      "underfull_boxes": 0
+    },
+    "tables-screen": {
+      "path": "build/tables-screen/Book_Tables_Screen.pdf",
+      "sha256": "e0b7b82448556fcbdcb614c37e1bd8840cac5c5c015403439533fa80ba6f1bff",
+      "pages": 1,
+      "fonts": [
+        "DDJZAY+STIXTwoMath-Regular",
+        "DMMWXG+NotoSerif-Medium",
+        "EVJHSG+Inter-Italic-Identity-H",
+        "MVOMDE+Inter-Regular-Identity-H",
+        "QHWVIR+Inter-SemiBold-Identity-H"
+      ],
+      "fonts_embedded": true,
+      "overfull_boxes": 0,
+      "underfull_boxes": 1
+    },
+    "tables-print2": {
+      "path": "build/tables-print2/Book_Tables_Print_Technical.pdf",
+      "sha256": "f206d3cdce0bcd90ea7097647ecae190fbc90562f3beaccd6b444bd9c6d09b9b",
+      "pages": 1,
+      "fonts": [
+        "DDJZAY+STIXTwoMath-Regular",
+        "DMMWXG+NotoSerif-Medium",
+        "EVJHSG+Inter-Italic-Identity-H",
+        "MVOMDE+Inter-Regular-Identity-H",
+        "QHWVIR+Inter-SemiBold-Identity-H"
+      ],
+      "fonts_embedded": true,
+      "overfull_boxes": 0,
+      "underfull_boxes": 1
+    },
+    "opening-goals-screen": {
+      "path": "build/opening-goals-screen/Book_Opening_Goals_Screen.pdf",
+      "sha256": "15200b3c3ba985a76fc3a90fba2b2a2efc36be9926f8a41a51bcf545edddf0da",
+      "pages": 3,
+      "fonts": [
+        "KJNRCP+Inter-Italic-Identity-H",
+        "NFKMUS+NotoSerif-Medium",
+        "ORLHEH+Inter-SemiBold-Identity-H",
+        "RLUSIA+Inter-Regular-Identity-H",
+        "SSAAXA+NotoSerif-Regular"
+      ],
+      "fonts_embedded": true,
+      "overfull_boxes": 0,
+      "underfull_boxes": 0
+    },
+    "opening-goals-print2": {
+      "path": "build/opening-goals-print2/Book_Opening_Goals_Print.pdf",
+      "sha256": "c39b90eb0c8e71c25d6250de30f3611beb36335ae6140871fbad6d86b2a995ba",
+      "pages": 3,
+      "fonts": [
+        "MDFHCB+NotoSerif-Medium",
+        "SHKZTF+Inter-Regular-Identity-H",
+        "SJOSNL+Inter-Italic-Identity-H",
+        "VFGWFI+Inter-SemiBold-Identity-H",
+        "YMDGVY+NotoSerif-Regular"
+      ],
+      "fonts_embedded": true,
+      "overfull_boxes": 0,
+      "underfull_boxes": 0
+    },
+    "history-statements-screen": {
+      "path": "build/history-statements-screen/Book_History_Statements_Screen.pdf",
+      "sha256": "be5e0e6899e6ee7e4fc7fa7075e06f6624c5c677c88a7ec13727702a65d9f08d",
+      "pages": 2,
+      "fonts": [
+        "EIFKRB+NotoSerif-Medium",
+        "KUCRCB+Inter-Regular-Identity-H",
+        "SRLZWR+STIXTwoMath-Regular",
+        "UAEVEF+Inter-Medium-Identity-H",
+        "XKXNVM+Inter-SemiBold-Identity-H",
+        "YYLURO+NotoSerif-Regular"
+      ],
+      "fonts_embedded": true,
+      "overfull_boxes": 0,
+      "underfull_boxes": 0
+    },
+    "history-statements-print2": {
+      "path": "build/history-statements-print2/Book_History_Statements_Print.pdf",
+      "sha256": "6d85741f02379446577004dba18e48fc2fea8b154ce3b37dc563e32c5c8664c6",
+      "pages": 2,
+      "fonts": [
+        "FPNYOB+NotoSerif-Regular",
+        "OELPXL+Inter-Medium-Identity-H",
+        "OJAESL+Inter-SemiBold-Identity-H",
+        "PGUCPI+NotoSerif-Medium",
+        "RIVWRF+STIXTwoMath-Regular",
+        "WDFWRG+Inter-Regular-Identity-H"
+      ],
+      "fonts_embedded": true,
+      "overfull_boxes": 0,
+      "underfull_boxes": 0
+    },
+    "callouts-screen": {
+      "path": "build/callouts-screen/Book_Callouts_Screen.pdf",
+      "sha256": "deba425efa24bea5bcd3c85968b4c37acd9dc64c462bb31dc6b79347c2168a44",
+      "pages": 1,
+      "fonts": [
+        "LCDPLQ+NotoSerif-Medium",
+        "SKYQOP+Inter-Medium-Identity-H",
+        "VHEJWD+Inter-Regular-Identity-H"
+      ],
+      "fonts_embedded": true,
+      "overfull_boxes": 0,
+      "underfull_boxes": 0
+    },
+    "callouts-print2": {
+      "path": "build/callouts-print2/Book_Callouts_Print_Technical.pdf",
+      "sha256": "7e4a772c6e1a6917276e398d1ade6ccb8c073ae8a98df5216e7c1e4fe1605d90",
+      "pages": 1,
+      "fonts": [
+        "BOFPMI+NotoSerif-Medium",
+        "IHNWVI+Inter-Medium-Identity-H",
+        "NJIJPT+Inter-Regular-Identity-H"
+      ],
+      "fonts_embedded": true,
+      "overfull_boxes": 0,
+      "underfull_boxes": 0
+    },
+    "palette-screen": {
+      "path": "build/palette-screen/Book_Palette_v026_Screen.pdf",
+      "sha256": "b48d803272d9c41aa89454e62b409e7a4e0f0ee575ff7f7cbf5a5a61379cd80c",
+      "pages": 1,
+      "fonts": [
+        "IPBFXW+NotoSerif-Medium",
+        "KEMRDF+Inter-Medium-Identity-H",
+        "MQXIHN+STIXTwoMath-Regular",
+        "QQBUAL+NotoSerif-Regular",
+        "SSWMSY+Inter-Regular-Identity-H"
+      ],
+      "fonts_embedded": true,
+      "overfull_boxes": 0,
+      "underfull_boxes": 0
+    },
+    "palette-print2": {
+      "path": "build/palette-print2/Book_Palette_v026_Print.pdf",
+      "sha256": "8cf69f4f460ab3b83f75fcbef8ae16655da308e550d17683f9ed0def793ec53e",
+      "pages": 1,
+      "fonts": [
+        "DJVZYF+NotoSerif-Medium",
+        "EGMULA+Inter-Regular-Identity-H",
+        "JSMXPI+Inter-Medium-Identity-H",
+        "LYTBEL+NotoSerif-Regular",
+        "QHXGXH+STIXTwoMath-Regular"
+      ],
+      "fonts_embedded": true,
+      "overfull_boxes": 0,
+      "underfull_boxes": 0
+    }
+  },
+  "layout_comparison": {
+    "status": "passed",
+    "position_tolerance_pdf_bp": 0.02,
+    "targets": [
+      {
+        "target": "print2",
+        "pages": 20,
+        "words": 1952,
+        "text_and_positions_match": true
+      },
+      {
+        "target": "starter-screen",
+        "pages": 4,
+        "words": 213,
+        "text_and_positions_match": true
+      },
+      {
+        "target": "starter-print2",
+        "pages": 4,
+        "words": 213,
+        "text_and_positions_match": true
+      },
+      {
+        "target": "stress-screen",
+        "pages": 68,
+        "words": 13511,
+        "text_and_positions_match": true
+      },
+      {
+        "target": "stress-print2",
+        "pages": 68,
+        "words": 13511,
+        "text_and_positions_match": true
+      },
+      {
+        "target": "screen",
+        "pages": 20,
+        "words": 1952,
+        "text_and_positions_match": true
+      },
+      {
+        "target": "sample-screen",
+        "pages": 5,
+        "words": 519,
+        "text_and_positions_match": true
+      },
+      {
+        "target": "sample-print2",
+        "pages": 5,
+        "words": 519,
+        "text_and_positions_match": true
+      },
+      {
+        "target": "figures-screen",
+        "pages": 6,
+        "words": 542,
+        "text_and_positions_match": true
+      },
+      {
+        "target": "figures-print2",
+        "pages": 6,
+        "words": 542,
+        "text_and_positions_match": true
+      },
+      {
+        "target": "assessment-screen",
+        "pages": 4,
+        "words": 379,
+        "text_and_positions_match": true
+      },
+      {
+        "target": "assessment-print2",
+        "pages": 4,
+        "words": 379,
+        "text_and_positions_match": true
+      },
+      {
+        "target": "tables-screen",
+        "pages": 1,
+        "words": 98,
+        "text_and_positions_match": true
+      },
+      {
+        "target": "tables-print2",
+        "pages": 1,
+        "words": 98,
+        "text_and_positions_match": true
+      },
+      {
+        "target": "opening-goals-screen",
+        "pages": 3,
+        "words": 75,
+        "text_and_positions_match": true
+      },
+      {
+        "target": "opening-goals-print2",
+        "pages": 3,
+        "words": 75,
+        "text_and_positions_match": true
+      },
+      {
+        "target": "history-statements-screen",
+        "pages": 2,
+        "words": 158,
+        "text_and_positions_match": true
+      },
+      {
+        "target": "history-statements-print2",
+        "pages": 2,
+        "words": 158,
+        "text_and_positions_match": true
+      },
+      {
+        "target": "callouts-screen",
+        "pages": 1,
+        "words": 135,
+        "text_and_positions_match": true
+      },
+      {
+        "target": "callouts-print2",
+        "pages": 1,
+        "words": 135,
+        "text_and_positions_match": true
+      },
+      {
+        "target": "palette-screen",
+        "pages": 1,
+        "words": 167,
+        "text_and_positions_match": true
+      },
+      {
+        "target": "palette-print2",
+        "pages": 1,
+        "words": 167,
+        "text_and_positions_match": true
+      }
+    ]
+  },
+  "reference_source_fingerprint": "4ad0a1304b226aea54ce01b5a71ee46b34a5dd2d0a713ec02d32a2fdc2549c1b",
+  "total_output_pages": 230,
+  "pdf_pairs_passed": 11,
+  "stress_layout": {
+    "status": "passed",
+    "input_sha256": {
+      "print": "d78a312c6ba3759f21e83a829881824074e183438578ff75b938a079fc3eaa44",
+      "screen": "6ff2599174c693108f084bcec9ae5b11d350c7db3bd02d148dd159fe9cb8f72f"
+    },
+    "editions": {
+      "print": {
+        "pages": 68,
+        "callouts": {
+          "history": {
+            "pages": [
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            "paragraphs": 28,
+            "icon_paths_by_fragment": [
+              6,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "think": {
+            "pages": [
+              20,
+              21,
+              22,
+              23,
+              24
+            ],
+            "paragraphs": 28,
+            "icon_paths_by_fragment": [
+              9,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "attention": {
+            "pages": [
+              25,
+              26,
+              27,
+              28,
+              29
+            ],
+            "paragraphs": 28,
+            "icon_paths_by_fragment": [
+              3,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        "long_table": {
+          "pages": [
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38
+          ],
+          "rows": 150,
+          "header_repeated": true,
+          "reference": "1.1"
+        },
+        "body_proof_pages": 21,
+        "chapter_routes": 3,
+        "custom_opening_pages": [
+          45,
+          57
+        ],
+        "white_text_backgrounds_verified": true,
+        "columns": 3,
+        "resolved_references": true,
+        "temporary_marks_preserve_chapter": true,
+        "solutions_reset_running_header": true,
+        "outline_entries": 19
+      },
+      "screen": {
+        "pages": 68,
+        "callouts": {
+          "history": {
+            "pages": [
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            "paragraphs": 28,
+            "icon_paths_by_fragment": [
+              6,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "think": {
+            "pages": [
+              20,
+              21,
+              22,
+              23,
+              24
+            ],
+            "paragraphs": 28,
+            "icon_paths_by_fragment": [
+              9,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "attention": {
+            "pages": [
+              25,
+              26,
+              27,
+              28,
+              29
+            ],
+            "paragraphs": 28,
+            "icon_paths_by_fragment": [
+              3,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        "long_table": {
+          "pages": [
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38
+          ],
+          "rows": 150,
+          "header_repeated": true,
+          "reference": "1.1"
+        },
+        "body_proof_pages": 21,
+        "chapter_routes": 3,
+        "custom_opening_pages": [
+          45,
+          57
+        ],
+        "white_text_backgrounds_verified": true,
+        "columns": 3,
+        "resolved_references": true,
+        "temporary_marks_preserve_chapter": true,
+        "solutions_reset_running_header": true,
+        "outline_entries": 19
+      }
+    }
+  },
+  "fresh_setup_artifacts_verified": [
+    "Inter-4.1.zip",
+    "NotoSerif-Regular.ttf",
+    "NotoSerif-Italic.ttf",
+    "NotoSerif-Medium.ttf",
+    "NotoSerif-MediumItalic.ttf",
+    "NotoSerif-OFL.txt",
+    "STIXTwoMath-Regular.ttf",
+    "STIXTwoMath-OFL.txt",
+    "loadhyph-el-monoton.tex",
+    "hyph-el-monoton.tex"
+  ],
+  "tools": {
+    "python": [
+      "Python 3.12.14"
+    ],
+    "xelatex": [
+      "XeTeX 3.141592653-2.6-0.999996 (TeX Live 2025/dev/Debian)",
+      "kpathsea version 6.4.0/dev",
+      "Copyright 2024 SIL International, Jonathan Kew and Khaled Hosny."
+    ],
+    "latexmk": [
+      "Latexmk, John Collins, 11 Dec. 2024. Version 4.86"
+    ],
+    "ghostscript": [
+      "10.05.1"
+    ]
+  },
+  "installed_python_packages": [
+    "pillow==12.3.0",
+    "PyMuPDF==1.26.6",
+    "pypdf==6.10.0"
+  ],
+  "finished_at_utc": "2026-10-29T12:37:35.196836+00:00"
+}

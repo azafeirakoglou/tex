@@ -1,0 +1,144 @@
+{
+  "status": "passed",
+  "title_text": "paper white",
+  "marker": "Spot100",
+  "marker_diameter_mm": 1.6,
+  "marker_gap_mm": 1.6,
+  "alignment_reference": "Π",
+  "reference_cap_height_em": 0.714,
+  "targets": {
+    "print2": {
+      "boxes": [
+        {
+          "page": 8,
+          "title": "Παράδειγμα 1 — Υπολογισμός μετατόπισης",
+          "white_title": true,
+          "filled_vector_circle": true,
+          "diameter_mm": 1.60002,
+          "gap_mm": 1.59993,
+          "cap_center_error_pdf_bp": 9.2e-05,
+          "body_black_spans": 5
+        },
+        {
+          "page": 8,
+          "title": "Παράδειγμα 2 — Σταθερή ταχύτητα",
+          "white_title": true,
+          "filled_vector_circle": true,
+          "diameter_mm": 1.60002,
+          "gap_mm": 1.59993,
+          "cap_center_error_pdf_bp": 0.000915,
+          "body_black_spans": 4
+        },
+        {
+          "page": 19,
+          "title": "Παράδειγμα 1 — Εφαρμογή σε συνάρτηση",
+          "white_title": true,
+          "filled_vector_circle": true,
+          "diameter_mm": 1.60003,
+          "gap_mm": 1.59993,
+          "cap_center_error_pdf_bp": 8.5e-05,
+          "body_black_spans": 4
+        }
+      ],
+      "solution_headings_at_100_percent": 3
+    },
+    "screen": {
+      "boxes": [
+        {
+          "page": 8,
+          "title": "Παράδειγμα 1 — Υπολογισμός μετατόπισης",
+          "white_title": true,
+          "filled_vector_circle": true,
+          "diameter_mm": 1.60002,
+          "gap_mm": 1.59993,
+          "cap_center_error_pdf_bp": 9.2e-05,
+          "body_black_spans": 5
+        },
+        {
+          "page": 8,
+          "title": "Παράδειγμα 2 — Σταθερή ταχύτητα",
+          "white_title": true,
+          "filled_vector_circle": true,
+          "diameter_mm": 1.60002,
+          "gap_mm": 1.59993,
+          "cap_center_error_pdf_bp": 0.000915,
+          "body_black_spans": 4
+        },
+        {
+          "page": 19,
+          "title": "Παράδειγμα 1 — Εφαρμογή σε συνάρτηση",
+          "white_title": true,
+          "filled_vector_circle": true,
+          "diameter_mm": 1.60003,
+          "gap_mm": 1.59993,
+          "cap_center_error_pdf_bp": 8.5e-05,
+          "body_black_spans": 4
+        }
+      ],
+      "solution_headings_at_100_percent": 3
+    },
+    "sample-screen": {
+      "boxes": [
+        {
+          "page": 3,
+          "title": "Παράδειγμα 1 — Μετατόπιση κινητού σε ευθεία",
+          "white_title": true,
+          "filled_vector_circle": true,
+          "diameter_mm": 1.60003,
+          "gap_mm": 1.59993,
+          "cap_center_error_pdf_bp": 7.7e-05,
+          "body_black_spans": 3
+        }
+      ],
+      "solution_headings_at_100_percent": 1
+    },
+    "sample-print2": {
+      "boxes": [
+        {
+          "page": 3,
+          "title": "Παράδειγμα 1 — Μετατόπιση κινητού σε ευθεία",
+          "white_title": true,
+          "filled_vector_circle": true,
+          "diameter_mm": 1.60003,
+          "gap_mm": 1.59993,
+          "cap_center_error_pdf_bp": 7.7e-05,
+          "body_black_spans": 3
+        }
+      ],
+      "solution_headings_at_100_percent": 1
+    },
+    "palette-screen": {
+      "boxes": [
+        {
+          "page": 1,
+          "title": "Παράδειγμα 1 — Υπολογισμός μετατόπισης",
+          "white_title": true,
+          "filled_vector_circle": true,
+          "diameter_mm": 1.60003,
+          "gap_mm": 1.59993,
+          "cap_center_error_pdf_bp": 9.2e-05,
+          "body_black_spans": 3
+        }
+      ],
+      "solution_headings_at_100_percent": 1
+    },
+    "palette-print2": {
+      "boxes": [
+        {
+          "page": 1,
+          "title": "Παράδειγμα 1 — Υπολογισμός μετατόπισης",
+          "white_title": true,
+          "filled_vector_circle": true,
+          "diameter_mm": 1.60003,
+          "gap_mm": 1.59993,
+          "cap_center_error_pdf_bp": 9.2e-05,
+          "body_black_spans": 3
+        }
+      ],
+      "solution_headings_at_100_percent": 1
+    }
+  },
+  "print_overprint_enabled": false,
+  "print_graphics_states_checked": 16,
+  "long_title_layout_report": "title-dot-layout-review.json"
+}
