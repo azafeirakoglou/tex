@@ -109,16 +109,39 @@ class WholeSourceTests(unittest.TestCase):
     def test_callout_role_drift_is_rejected(self):
         p=self.root/'styles/book-callouts.tex'
         p.write_text(p.read_text().replace(
-            r'\BookDeclareCallout{ThinkBox}{BookThinkBackground}',
+            r'\BookDeclareCallout{ThinkBox}{white}',
             r'\BookDeclareCallout{ThinkBox}{BookAlertBackground}'))
         self.assertTrue(any('ThinkBox: must use the shared factory' in e for e in validate(self.root)))
 
     def test_factory_must_actually_delegate_to_shared_renderer(self):
         p=self.root/'styles/book-callouts.tex'
-        p.write_text(p.read_text().replace(
-            r'\newtcolorbox{#1}{BookCalloutRender=',
-            r'\newtcolorbox{#1}{BookPanel='))
-        self.assertTrue(any('must delegate to the common renderer' in e for e in validate(self.root)))
+        original=p.read_text()
+        for old,new,message in [
+            (r'\newtcolorbox{#1}{BookCalloutRender=',
+             r'\newtcolorbox{#1}{BookPanel=', 'must delegate to the common renderer'),
+            (',BookCalloutDecoration/#1', '', 'must apply its registered decoration'),
+        ]:
+            with self.subTest(removed=old):
+                self.assertIn(old,original)
+                p.write_text(original.replace(old,new))
+                self.assertTrue(any(message in e for e in validate(self.root)))
+
+    def test_bracket_surface_and_page_continuation_contract_is_enforced(self):
+        p=self.root/'styles/book-callouts.tex'
+        original=p.read_text()
+        for old,new,message in [
+            ('no borderline,', '', 'must suppress the inherited frame and fill'),
+            ('interior hidden,', '', 'must suppress the inherited frame and fill'),
+            (r'underlay middle={\BookCalloutBrackets{BookCalloutAccent}{0pt}{0pt}}',
+             'underlay middle={}', 'must preserve the middle page-fragment contract'),
+            ('BookCalloutDecoration/AttentionBox/.style={}',
+             'BookCalloutDecoration/AttentionBox/.style={interior hidden}',
+             'AttentionBox: framed decoration must retain'),
+        ]:
+            with self.subTest(changed=old):
+                self.assertIn(old,original)
+                p.write_text(original.replace(old,new))
+                self.assertTrue(any(message in e for e in validate(self.root)))
 
     def test_callout_break_overlay_cannot_be_removed_for_one_box(self):
         p=self.root/'styles/book-callouts.tex'

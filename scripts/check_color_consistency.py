@@ -108,6 +108,16 @@ def command_arguments(text, command, arity):
     return matches
 
 
+def braced_key_value(text, key):
+    """Read a literal braced pgf key value, including nested TeX arguments."""
+    text=re.sub(r'\s+','',text)
+    match=re.search(re.escape(re.sub(r'\s+','',key))+'=',text)
+    if not match:
+        return None
+    values=command_arguments('\\ReadValue'+text[match.end():],'ReadValue',1)
+    return values[0][0] if values else None
+
+
 def validate_callouts(root,m):
     """Check delegation and role declarations, rather than duplicated box bodies."""
     path=root/'styles/book-callouts.tex'
@@ -167,10 +177,42 @@ def validate_callouts(root,m):
         body=wrappers.get(command,'')
         if 'BookCalloutRender=' not in body:
             errors.append('Callouts: factory '+command+' must delegate to the common renderer')
+        dispatch='BookCalloutDecoration/#1'
+        if dispatch not in body or body.find(dispatch)<body.find('BookCalloutRender='):
+            errors.append('Callouts: factory '+command+' must apply its registered decoration after the common renderer')
     if r'\newtcolorbox{#1}{' not in wrappers.get('BookDeclareCallout',''):
         errors.append('Callouts: plain environments must retain their no-argument signature')
     if r'\newtcolorbox{#1}[1][]' not in wrappers.get('BookDeclareTitledCallout',''):
         errors.append('Callouts: HistoryBox must retain its optional-title signature')
+    # A decoration can suppress the inherited frame/fill without replacing the
+    # shared title and first-piece-only icon pipeline. Check its selected variant,
+    # not incidental drawing dimensions, which remain configurable in TeX.
+    for env in expected:
+        rule=m['visual_rules'][env]
+        decoration=braced_key_value(text,'BookCalloutDecoration/'+env+'/.style')
+        if decoration is None:
+            errors.append(env+': missing registered callout decoration')
+            continue
+        if rule.get('decoration','frame')=='frame':
+            if decoration:
+                errors.append(env+': framed decoration must retain the common frame/fill pipeline')
+            continue
+        if rule.get('decoration')!='brackets':
+            errors.append(env+': unsupported callout decoration')
+            continue
+        if (rule.get('surface')!='none' or rule['background']!=m.get('white','white')
+                or not {'noborderline','interiorhidden'}.issubset(set(decoration.split(',')))):
+            errors.append(env+': bracket decoration must suppress the inherited frame and fill')
+        inset=r'\BookThinkBracketInset'
+        fragments={'unbroken':(inset,inset),'first':(inset,'0pt'),
+                   'middle':('0pt','0pt'),'last':('0pt',inset)}
+        for fragment,(top,bottom) in fragments.items():
+            underlay=braced_key_value(decoration,'underlay '+fragment)
+            wanted=r'\BookCalloutBrackets{%s}{%s}{%s}' % (rule['accent'],top,bottom)
+            if underlay!=wanted:
+                errors.append(env+': bracket decoration must preserve the '+fragment+' page-fragment contract')
+        if 'overlay' in decoration:
+            errors.append(env+': decoration must retain the shared first-piece-only icon overlays')
     return errors
 
 

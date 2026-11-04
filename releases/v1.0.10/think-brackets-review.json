@@ -1,0 +1,267 @@
+{
+  "status": "passed",
+  "stroke_tex_pt": 1.08,
+  "arm_mm": 3,
+  "surface": "no painted fill, actual page remains visible",
+  "icon": "existing bulb",
+  "main": {
+    "SCREEN": {
+      "pdf_sha256": "ca50b83968b93b65b25b3c16ab32b4155bb4e12960082efe5f9f0e1059aff390",
+      "think_boxes": [
+        {
+          "page": 8,
+          "heading": "Πώς σκέφτομαι",
+          "two_open_brackets": true,
+          "no_fill": true,
+          "no_rectangular_frame": true,
+          "body_black100": true,
+          "icon_inside_brackets": true,
+          "accent_vector_rgb": [
+            0.1254899948835373,
+            0.2313700020313263,
+            0.3882400095462799
+          ]
+        },
+        {
+          "page": 8,
+          "heading": "Πώς σκέφτομαι",
+          "two_open_brackets": true,
+          "no_fill": true,
+          "no_rectangular_frame": true,
+          "body_black100": true,
+          "icon_inside_brackets": true,
+          "accent_vector_rgb": [
+            0.1254899948835373,
+            0.2313700020313263,
+            0.3882400095462799
+          ]
+        },
+        {
+          "page": 19,
+          "heading": "Πώς σκέφτομαι",
+          "two_open_brackets": true,
+          "no_fill": true,
+          "no_rectangular_frame": true,
+          "body_black100": true,
+          "icon_inside_brackets": true,
+          "accent_vector_rgb": [
+            0.1254899948835373,
+            0.2313700020313263,
+            0.3882400095462799
+          ]
+        }
+      ],
+      "unchanged_other_callouts": [
+        {
+          "page": 6,
+          "heading": "ΠΡΟΣΟΧΗ",
+          "same_text_positions_and_vector_paint_as_v109": true
+        },
+        {
+          "page": 7,
+          "heading": "Ιστορίες από τη Φυσική — Η γέννηση της μέτρησης",
+          "same_text_positions_and_vector_paint_as_v109": true
+        },
+        {
+          "page": 18,
+          "heading": "ΠΡΟΣΟΧΗ",
+          "same_text_positions_and_vector_paint_as_v109": true
+        }
+      ]
+    },
+    "PRINT": {
+      "pdf_sha256": "6fd2239482d6699bf8b1b700db9193d6920bdc67b6a416ba4ab5a47eb1d49f76",
+      "think_boxes": [
+        {
+          "page": 8,
+          "heading": "Πώς σκέφτομαι",
+          "two_open_brackets": true,
+          "no_fill": true,
+          "no_rectangular_frame": true,
+          "body_black100": true,
+          "icon_inside_brackets": true,
+          "accent_vector_rgb": [
+            0.930418848991394,
+            0.1109025701880455,
+            0.1414511352777481
+          ]
+        },
+        {
+          "page": 8,
+          "heading": "Πώς σκέφτομαι",
+          "two_open_brackets": true,
+          "no_fill": true,
+          "no_rectangular_frame": true,
+          "body_black100": true,
+          "icon_inside_brackets": true,
+          "accent_vector_rgb": [
+            0.930418848991394,
+            0.1109025701880455,
+            0.1414511352777481
+          ]
+        },
+        {
+          "page": 19,
+          "heading": "Πώς σκέφτομαι",
+          "two_open_brackets": true,
+          "no_fill": true,
+          "no_rectangular_frame": true,
+          "body_black100": true,
+          "icon_inside_brackets": true,
+          "accent_vector_rgb": [
+            0.930418848991394,
+            0.1109025701880455,
+            0.1414511352777481
+          ]
+        }
+      ],
+      "unchanged_other_callouts": [
+        {
+          "page": 6,
+          "heading": "ΠΡΟΣΟΧΗ",
+          "same_text_positions_and_vector_paint_as_v109": true
+        },
+        {
+          "page": 7,
+          "heading": "Ιστορίες από τη Φυσική — Η γέννηση της μέτρησης",
+          "same_text_positions_and_vector_paint_as_v109": true
+        },
+        {
+          "page": 18,
+          "heading": "ΠΡΟΣΟΧΗ",
+          "same_text_positions_and_vector_paint_as_v109": true
+        }
+      ]
+    }
+  },
+  "probes": {
+    "screen": {
+      "pdf_sha256": "0356ceb38a5770588fc4401bd7fe84a397230402a8c873c7ad5add43ffbb2eb2",
+      "page_count": 7,
+      "long_think_fragments": 6,
+      "paragraphs_preserved": 80,
+      "overfull_boxes": 0,
+      "pages": [
+        {
+          "page": 1,
+          "kind": "unbroken_on_Black10_page",
+          "caps_per_side": 2,
+          "only_fill_is_full_page_Black10": true,
+          "background_pixels_inside_outside_identical": true,
+          "pixel_rgb": [
+            230,
+            230,
+            230
+          ],
+          "bulb_present": true
+        },
+        {
+          "page": 2,
+          "kind": "first",
+          "caps_per_side": 1,
+          "no_fill": true,
+          "bulb_present": true
+        },
+        {
+          "page": 3,
+          "kind": "middle",
+          "caps_per_side": 0,
+          "no_fill": true,
+          "bulb_present": false
+        },
+        {
+          "page": 4,
+          "kind": "middle",
+          "caps_per_side": 0,
+          "no_fill": true,
+          "bulb_present": false
+        },
+        {
+          "page": 5,
+          "kind": "middle",
+          "caps_per_side": 0,
+          "no_fill": true,
+          "bulb_present": false
+        },
+        {
+          "page": 6,
+          "kind": "middle",
+          "caps_per_side": 0,
+          "no_fill": true,
+          "bulb_present": false
+        },
+        {
+          "page": 7,
+          "kind": "last",
+          "caps_per_side": 1,
+          "no_fill": true,
+          "bulb_present": false
+        }
+      ]
+    },
+    "print": {
+      "pdf_sha256": "d60b69aab614a85d8255cc88426e5b1b7d8c749a95f9da29ae4cd58333da1c94",
+      "page_count": 7,
+      "long_think_fragments": 6,
+      "paragraphs_preserved": 80,
+      "overfull_boxes": 0,
+      "pages": [
+        {
+          "page": 1,
+          "kind": "unbroken_on_Black10_page",
+          "caps_per_side": 2,
+          "only_fill_is_full_page_Black10": true,
+          "background_pixels_inside_outside_identical": true,
+          "pixel_rgb": [
+            229,
+            229,
+            229
+          ],
+          "bulb_present": true
+        },
+        {
+          "page": 2,
+          "kind": "first",
+          "caps_per_side": 1,
+          "no_fill": true,
+          "bulb_present": true
+        },
+        {
+          "page": 3,
+          "kind": "middle",
+          "caps_per_side": 0,
+          "no_fill": true,
+          "bulb_present": false
+        },
+        {
+          "page": 4,
+          "kind": "middle",
+          "caps_per_side": 0,
+          "no_fill": true,
+          "bulb_present": false
+        },
+        {
+          "page": 5,
+          "kind": "middle",
+          "caps_per_side": 0,
+          "no_fill": true,
+          "bulb_present": false
+        },
+        {
+          "page": 6,
+          "kind": "middle",
+          "caps_per_side": 0,
+          "no_fill": true,
+          "bulb_present": false
+        },
+        {
+          "page": 7,
+          "kind": "last",
+          "caps_per_side": 1,
+          "no_fill": true,
+          "bulb_present": false
+        }
+      ]
+    }
+  }
+}
