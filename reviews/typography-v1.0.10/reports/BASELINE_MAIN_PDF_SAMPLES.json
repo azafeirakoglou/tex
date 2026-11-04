@@ -1,0 +1,1150 @@
+{
+  "inspection_only": true,
+  "recorded_at_utc": "2026-11-04T16:56:58.773691+00:00",
+  "documents": {
+    "Book_v1.0.10_SCREEN.pdf": {
+      "sha256": "ca50b83968b93b65b25b3c16ab32b4155bb4e12960082efe5f9f0e1059aff390",
+      "page_count": 20,
+      "font_size_character_counts": [
+        {
+          "font": "Inter-Italic",
+          "size_tex_pt": 7.4,
+          "character_count": 120
+        },
+        {
+          "font": "Inter-Italic",
+          "size_tex_pt": 8.2,
+          "character_count": 70
+        },
+        {
+          "font": "Inter-Italic",
+          "size_tex_pt": 9.0,
+          "character_count": 49
+        },
+        {
+          "font": "Inter-Italic",
+          "size_tex_pt": 9.1,
+          "character_count": 170
+        },
+        {
+          "font": "Inter-Italic",
+          "size_tex_pt": 10.95,
+          "character_count": 9
+        },
+        {
+          "font": "Inter-Medium",
+          "size_tex_pt": 9.2,
+          "character_count": 100
+        },
+        {
+          "font": "Inter-Medium",
+          "size_tex_pt": 10.2,
+          "character_count": 12
+        },
+        {
+          "font": "Inter-Regular",
+          "size_tex_pt": 7.3,
+          "character_count": 40
+        },
+        {
+          "font": "Inter-Regular",
+          "size_tex_pt": 7.665,
+          "character_count": 7
+        },
+        {
+          "font": "Inter-Regular",
+          "size_tex_pt": 8.0,
+          "character_count": 574
+        },
+        {
+          "font": "Inter-Regular",
+          "size_tex_pt": 8.2,
+          "character_count": 6
+        },
+        {
+          "font": "Inter-Regular",
+          "size_tex_pt": 8.5,
+          "character_count": 18
+        },
+        {
+          "font": "Inter-Regular",
+          "size_tex_pt": 8.6,
+          "character_count": 44
+        },
+        {
+          "font": "Inter-Regular",
+          "size_tex_pt": 8.7,
+          "character_count": 147
+        },
+        {
+          "font": "Inter-Regular",
+          "size_tex_pt": 9.0,
+          "character_count": 110
+        },
+        {
+          "font": "Inter-Regular",
+          "size_tex_pt": 9.7,
+          "character_count": 99
+        },
+        {
+          "font": "Inter-Regular",
+          "size_tex_pt": 10.0,
+          "character_count": 1782
+        },
+        {
+          "font": "Inter-Regular",
+          "size_tex_pt": 10.2,
+          "character_count": 400
+        },
+        {
+          "font": "Inter-Regular",
+          "size_tex_pt": 10.95,
+          "character_count": 4783
+        },
+        {
+          "font": "Inter-SemiBold",
+          "size_tex_pt": 9.0,
+          "character_count": 30
+        },
+        {
+          "font": "Inter-SemiBold",
+          "size_tex_pt": 9.1,
+          "character_count": 34
+        },
+        {
+          "font": "Inter-SemiBold",
+          "size_tex_pt": 9.5,
+          "character_count": 18
+        },
+        {
+          "font": "Inter-SemiBold",
+          "size_tex_pt": 10.0,
+          "character_count": 125
+        },
+        {
+          "font": "Inter-SemiBold",
+          "size_tex_pt": 10.4,
+          "character_count": 36
+        },
+        {
+          "font": "Inter-SemiBold",
+          "size_tex_pt": 10.95,
+          "character_count": 231
+        },
+        {
+          "font": "Inter-SemiBold",
+          "size_tex_pt": 11.4,
+          "character_count": 10
+        },
+        {
+          "font": "Inter-SemiBold",
+          "size_tex_pt": 14.4,
+          "character_count": 1
+        },
+        {
+          "font": "Inter-SemiBold",
+          "size_tex_pt": 24.88,
+          "character_count": 11
+        },
+        {
+          "font": "NotoSerif-Italic",
+          "size_tex_pt": 11.4,
+          "character_count": 67
+        },
+        {
+          "font": "NotoSerif-Medium",
+          "size_tex_pt": 10.0,
+          "character_count": 74
+        },
+        {
+          "font": "NotoSerif-Medium",
+          "size_tex_pt": 10.4,
+          "character_count": 105
+        },
+        {
+          "font": "NotoSerif-Medium",
+          "size_tex_pt": 11.0,
+          "character_count": 72
+        },
+        {
+          "font": "NotoSerif-Medium",
+          "size_tex_pt": 11.7,
+          "character_count": 134
+        },
+        {
+          "font": "NotoSerif-Medium",
+          "size_tex_pt": 12.0,
+          "character_count": 14
+        },
+        {
+          "font": "NotoSerif-Medium",
+          "size_tex_pt": 12.5,
+          "character_count": 120
+        },
+        {
+          "font": "NotoSerif-Medium",
+          "size_tex_pt": 17.0,
+          "character_count": 18
+        },
+        {
+          "font": "NotoSerif-Medium",
+          "size_tex_pt": 23.0,
+          "character_count": 10
+        },
+        {
+          "font": "NotoSerif-Medium",
+          "size_tex_pt": 34.0,
+          "character_count": 6
+        },
+        {
+          "font": "NotoSerif-Regular",
+          "size_tex_pt": 10.1,
+          "character_count": 87
+        },
+        {
+          "font": "NotoSerif-Regular",
+          "size_tex_pt": 14.0,
+          "character_count": 26
+        },
+        {
+          "font": "NotoSerif-Regular",
+          "size_tex_pt": 16.0,
+          "character_count": 46
+        },
+        {
+          "font": "NotoSerif-Regular",
+          "size_tex_pt": 22.0,
+          "character_count": 1
+        },
+        {
+          "font": "NotoSerif-Regular",
+          "size_tex_pt": 23.0,
+          "character_count": 47
+        },
+        {
+          "font": "STIXTwoMath-Regular",
+          "size_tex_pt": 7.0,
+          "character_count": 4
+        },
+        {
+          "font": "STIXTwoMath-Regular",
+          "size_tex_pt": 7.665,
+          "character_count": 24
+        },
+        {
+          "font": "STIXTwoMath-Regular",
+          "size_tex_pt": 8.0,
+          "character_count": 20
+        },
+        {
+          "font": "STIXTwoMath-Regular",
+          "size_tex_pt": 8.2,
+          "character_count": 29
+        },
+        {
+          "font": "STIXTwoMath-Regular",
+          "size_tex_pt": 9.0,
+          "character_count": 22
+        },
+        {
+          "font": "STIXTwoMath-Regular",
+          "size_tex_pt": 10.0,
+          "character_count": 83
+        },
+        {
+          "font": "STIXTwoMath-Regular",
+          "size_tex_pt": 10.95,
+          "character_count": 342
+        },
+        {
+          "font": "STIXTwoMath-Regular",
+          "size_tex_pt": 11.364,
+          "character_count": 6
+        }
+      ],
+      "embedded_fonts": [
+        {
+          "basefont": "MRMUZM+Inter-SemiBold-Identity-H",
+          "resource_kind": "Type0",
+          "embedded_bytes": 8175
+        },
+        {
+          "basefont": "HRBOIG+NotoSerif-Medium",
+          "resource_kind": "Type0",
+          "embedded_bytes": 18157
+        },
+        {
+          "basefont": "AUQXYU+Inter-Regular-Identity-H",
+          "resource_kind": "Type0",
+          "embedded_bytes": 10645
+        },
+        {
+          "basefont": "FDTBTW+NotoSerif-Regular",
+          "resource_kind": "Type0",
+          "embedded_bytes": 16865
+        },
+        {
+          "basefont": "EDQWXC+Inter-Italic-Identity-H",
+          "resource_kind": "Type0",
+          "embedded_bytes": 6023
+        },
+        {
+          "basefont": "GJMKBY+STIXTwoMath-Regular",
+          "resource_kind": "Type0",
+          "embedded_bytes": 50390
+        },
+        {
+          "basefont": "LBDRYQ+Inter-Medium-Identity-H",
+          "resource_kind": "Type0",
+          "embedded_bytes": 4302
+        },
+        {
+          "basefont": "AYBEON+NotoSerif-Italic",
+          "resource_kind": "Type0",
+          "embedded_bytes": 13229
+        }
+      ],
+      "selected_heading_spans": [
+        {
+          "page": 1,
+          "text": "Θεωρία · Μεθοδολογία · Παραδείγματα · Ασκήσεις",
+          "font": "Inter-Regular",
+          "tex_pt": 10.0
+        },
+        {
+          "page": 3,
+          "text": "Περιγραφή της κίνησης",
+          "font": "Inter-Regular",
+          "tex_pt": 10.95
+        },
+        {
+          "page": 6,
+          "text": "Περιγραφή της κίνησης",
+          "font": "Inter-Regular",
+          "tex_pt": 8.0
+        },
+        {
+          "page": 6,
+          "text": "Θεωρία",
+          "font": "NotoSerif-Medium",
+          "tex_pt": 11.7
+        },
+        {
+          "page": 6,
+          "text": "1.1 Περιγραφή της κίνησης",
+          "font": "NotoSerif-Medium",
+          "tex_pt": 12.5
+        },
+        {
+          "page": 6,
+          "text": "ΠΡΟΣΟΧΗ",
+          "font": "Inter-Medium",
+          "tex_pt": 9.2
+        },
+        {
+          "page": 7,
+          "text": "Ιστορίες από τη Φυσική — Η γέννηση της μέτρησης",
+          "font": "Inter-Medium",
+          "tex_pt": 9.2
+        },
+        {
+          "page": 8,
+          "text": "Παράδειγμα 1 — Υπολογισμός μετατόπισης",
+          "font": "NotoSerif-Medium",
+          "tex_pt": 10.4
+        },
+        {
+          "page": 8,
+          "text": "Πώς σκέφτομαι",
+          "font": "Inter-Medium",
+          "tex_pt": 9.2
+        },
+        {
+          "page": 8,
+          "text": "Λύση",
+          "font": "Inter-Medium",
+          "tex_pt": 10.2
+        },
+        {
+          "page": 8,
+          "text": "Πώς σκέφτομαι",
+          "font": "Inter-Medium",
+          "tex_pt": 9.2
+        },
+        {
+          "page": 8,
+          "text": "Λύση",
+          "font": "Inter-Medium",
+          "tex_pt": 10.2
+        },
+        {
+          "page": 18,
+          "text": "ΠΡΟΣΟΧΗ",
+          "font": "Inter-Medium",
+          "tex_pt": 9.2
+        },
+        {
+          "page": 19,
+          "text": "Παράδειγμα 1 — Εφαρμογή σε συνάρτηση",
+          "font": "NotoSerif-Medium",
+          "tex_pt": 10.4
+        },
+        {
+          "page": 19,
+          "text": "Πώς σκέφτομαι",
+          "font": "Inter-Medium",
+          "tex_pt": 9.2
+        },
+        {
+          "page": 19,
+          "text": "Λύση",
+          "font": "Inter-Medium",
+          "tex_pt": 10.2
+        }
+      ]
+    },
+    "Book_v1.0.10_PRINT.pdf": {
+      "sha256": "6fd2239482d6699bf8b1b700db9193d6920bdc67b6a416ba4ab5a47eb1d49f76",
+      "page_count": 20,
+      "font_size_character_counts": [
+        {
+          "font": "Inter-Italic",
+          "size_tex_pt": 7.4,
+          "character_count": 120
+        },
+        {
+          "font": "Inter-Italic",
+          "size_tex_pt": 8.2,
+          "character_count": 70
+        },
+        {
+          "font": "Inter-Italic",
+          "size_tex_pt": 9.0,
+          "character_count": 49
+        },
+        {
+          "font": "Inter-Italic",
+          "size_tex_pt": 9.1,
+          "character_count": 170
+        },
+        {
+          "font": "Inter-Italic",
+          "size_tex_pt": 10.95,
+          "character_count": 9
+        },
+        {
+          "font": "Inter-Medium",
+          "size_tex_pt": 9.2,
+          "character_count": 100
+        },
+        {
+          "font": "Inter-Medium",
+          "size_tex_pt": 10.2,
+          "character_count": 12
+        },
+        {
+          "font": "Inter-Regular",
+          "size_tex_pt": 7.3,
+          "character_count": 40
+        },
+        {
+          "font": "Inter-Regular",
+          "size_tex_pt": 7.665,
+          "character_count": 7
+        },
+        {
+          "font": "Inter-Regular",
+          "size_tex_pt": 8.0,
+          "character_count": 574
+        },
+        {
+          "font": "Inter-Regular",
+          "size_tex_pt": 8.2,
+          "character_count": 6
+        },
+        {
+          "font": "Inter-Regular",
+          "size_tex_pt": 8.5,
+          "character_count": 18
+        },
+        {
+          "font": "Inter-Regular",
+          "size_tex_pt": 8.6,
+          "character_count": 44
+        },
+        {
+          "font": "Inter-Regular",
+          "size_tex_pt": 8.7,
+          "character_count": 147
+        },
+        {
+          "font": "Inter-Regular",
+          "size_tex_pt": 9.0,
+          "character_count": 110
+        },
+        {
+          "font": "Inter-Regular",
+          "size_tex_pt": 9.7,
+          "character_count": 99
+        },
+        {
+          "font": "Inter-Regular",
+          "size_tex_pt": 10.0,
+          "character_count": 1782
+        },
+        {
+          "font": "Inter-Regular",
+          "size_tex_pt": 10.2,
+          "character_count": 400
+        },
+        {
+          "font": "Inter-Regular",
+          "size_tex_pt": 10.95,
+          "character_count": 4783
+        },
+        {
+          "font": "Inter-SemiBold",
+          "size_tex_pt": 9.0,
+          "character_count": 30
+        },
+        {
+          "font": "Inter-SemiBold",
+          "size_tex_pt": 9.1,
+          "character_count": 34
+        },
+        {
+          "font": "Inter-SemiBold",
+          "size_tex_pt": 9.5,
+          "character_count": 18
+        },
+        {
+          "font": "Inter-SemiBold",
+          "size_tex_pt": 10.0,
+          "character_count": 125
+        },
+        {
+          "font": "Inter-SemiBold",
+          "size_tex_pt": 10.4,
+          "character_count": 36
+        },
+        {
+          "font": "Inter-SemiBold",
+          "size_tex_pt": 10.95,
+          "character_count": 231
+        },
+        {
+          "font": "Inter-SemiBold",
+          "size_tex_pt": 11.4,
+          "character_count": 10
+        },
+        {
+          "font": "Inter-SemiBold",
+          "size_tex_pt": 14.4,
+          "character_count": 1
+        },
+        {
+          "font": "Inter-SemiBold",
+          "size_tex_pt": 24.88,
+          "character_count": 11
+        },
+        {
+          "font": "NotoSerif-Italic",
+          "size_tex_pt": 11.4,
+          "character_count": 67
+        },
+        {
+          "font": "NotoSerif-Medium",
+          "size_tex_pt": 10.0,
+          "character_count": 74
+        },
+        {
+          "font": "NotoSerif-Medium",
+          "size_tex_pt": 10.4,
+          "character_count": 105
+        },
+        {
+          "font": "NotoSerif-Medium",
+          "size_tex_pt": 11.0,
+          "character_count": 72
+        },
+        {
+          "font": "NotoSerif-Medium",
+          "size_tex_pt": 11.7,
+          "character_count": 134
+        },
+        {
+          "font": "NotoSerif-Medium",
+          "size_tex_pt": 12.0,
+          "character_count": 14
+        },
+        {
+          "font": "NotoSerif-Medium",
+          "size_tex_pt": 12.5,
+          "character_count": 120
+        },
+        {
+          "font": "NotoSerif-Medium",
+          "size_tex_pt": 17.0,
+          "character_count": 18
+        },
+        {
+          "font": "NotoSerif-Medium",
+          "size_tex_pt": 23.0,
+          "character_count": 10
+        },
+        {
+          "font": "NotoSerif-Medium",
+          "size_tex_pt": 34.0,
+          "character_count": 6
+        },
+        {
+          "font": "NotoSerif-Regular",
+          "size_tex_pt": 10.1,
+          "character_count": 87
+        },
+        {
+          "font": "NotoSerif-Regular",
+          "size_tex_pt": 14.0,
+          "character_count": 26
+        },
+        {
+          "font": "NotoSerif-Regular",
+          "size_tex_pt": 16.0,
+          "character_count": 46
+        },
+        {
+          "font": "NotoSerif-Regular",
+          "size_tex_pt": 22.0,
+          "character_count": 1
+        },
+        {
+          "font": "NotoSerif-Regular",
+          "size_tex_pt": 23.0,
+          "character_count": 47
+        },
+        {
+          "font": "STIXTwoMath-Regular",
+          "size_tex_pt": 7.0,
+          "character_count": 4
+        },
+        {
+          "font": "STIXTwoMath-Regular",
+          "size_tex_pt": 7.665,
+          "character_count": 24
+        },
+        {
+          "font": "STIXTwoMath-Regular",
+          "size_tex_pt": 8.0,
+          "character_count": 20
+        },
+        {
+          "font": "STIXTwoMath-Regular",
+          "size_tex_pt": 8.2,
+          "character_count": 29
+        },
+        {
+          "font": "STIXTwoMath-Regular",
+          "size_tex_pt": 9.0,
+          "character_count": 22
+        },
+        {
+          "font": "STIXTwoMath-Regular",
+          "size_tex_pt": 10.0,
+          "character_count": 83
+        },
+        {
+          "font": "STIXTwoMath-Regular",
+          "size_tex_pt": 10.95,
+          "character_count": 342
+        },
+        {
+          "font": "STIXTwoMath-Regular",
+          "size_tex_pt": 11.364,
+          "character_count": 6
+        }
+      ],
+      "embedded_fonts": [
+        {
+          "basefont": "MRMUZM+Inter-SemiBold-Identity-H",
+          "resource_kind": "Type0",
+          "embedded_bytes": 8175
+        },
+        {
+          "basefont": "HRBOIG+NotoSerif-Medium",
+          "resource_kind": "Type0",
+          "embedded_bytes": 18157
+        },
+        {
+          "basefont": "AUQXYU+Inter-Regular-Identity-H",
+          "resource_kind": "Type0",
+          "embedded_bytes": 10645
+        },
+        {
+          "basefont": "FDTBTW+NotoSerif-Regular",
+          "resource_kind": "Type0",
+          "embedded_bytes": 16865
+        },
+        {
+          "basefont": "EDQWXC+Inter-Italic-Identity-H",
+          "resource_kind": "Type0",
+          "embedded_bytes": 6023
+        },
+        {
+          "basefont": "GJMKBY+STIXTwoMath-Regular",
+          "resource_kind": "Type0",
+          "embedded_bytes": 50390
+        },
+        {
+          "basefont": "LBDRYQ+Inter-Medium-Identity-H",
+          "resource_kind": "Type0",
+          "embedded_bytes": 4302
+        },
+        {
+          "basefont": "AYBEON+NotoSerif-Italic",
+          "resource_kind": "Type0",
+          "embedded_bytes": 13229
+        }
+      ],
+      "selected_heading_spans": [
+        {
+          "page": 1,
+          "text": "Θεωρία · Μεθοδολογία · Παραδείγματα · Ασκήσεις",
+          "font": "Inter-Regular",
+          "tex_pt": 10.0
+        },
+        {
+          "page": 3,
+          "text": "Περιγραφή της κίνησης",
+          "font": "Inter-Regular",
+          "tex_pt": 10.95
+        },
+        {
+          "page": 6,
+          "text": "Περιγραφή της κίνησης",
+          "font": "Inter-Regular",
+          "tex_pt": 8.0
+        },
+        {
+          "page": 6,
+          "text": "Θεωρία",
+          "font": "NotoSerif-Medium",
+          "tex_pt": 11.7
+        },
+        {
+          "page": 6,
+          "text": "1.1 Περιγραφή της κίνησης",
+          "font": "NotoSerif-Medium",
+          "tex_pt": 12.5
+        },
+        {
+          "page": 6,
+          "text": "ΠΡΟΣΟΧΗ",
+          "font": "Inter-Medium",
+          "tex_pt": 9.2
+        },
+        {
+          "page": 7,
+          "text": "Ιστορίες από τη Φυσική — Η γέννηση της μέτρησης",
+          "font": "Inter-Medium",
+          "tex_pt": 9.2
+        },
+        {
+          "page": 8,
+          "text": "Παράδειγμα 1 — Υπολογισμός μετατόπισης",
+          "font": "NotoSerif-Medium",
+          "tex_pt": 10.4
+        },
+        {
+          "page": 8,
+          "text": "Πώς σκέφτομαι",
+          "font": "Inter-Medium",
+          "tex_pt": 9.2
+        },
+        {
+          "page": 8,
+          "text": "Λύση",
+          "font": "Inter-Medium",
+          "tex_pt": 10.2
+        },
+        {
+          "page": 8,
+          "text": "Πώς σκέφτομαι",
+          "font": "Inter-Medium",
+          "tex_pt": 9.2
+        },
+        {
+          "page": 8,
+          "text": "Λύση",
+          "font": "Inter-Medium",
+          "tex_pt": 10.2
+        },
+        {
+          "page": 18,
+          "text": "ΠΡΟΣΟΧΗ",
+          "font": "Inter-Medium",
+          "tex_pt": 9.2
+        },
+        {
+          "page": 19,
+          "text": "Παράδειγμα 1 — Εφαρμογή σε συνάρτηση",
+          "font": "NotoSerif-Medium",
+          "tex_pt": 10.4
+        },
+        {
+          "page": 19,
+          "text": "Πώς σκέφτομαι",
+          "font": "Inter-Medium",
+          "tex_pt": 9.2
+        },
+        {
+          "page": 19,
+          "text": "Λύση",
+          "font": "Inter-Medium",
+          "tex_pt": 10.2
+        }
+      ]
+    },
+    "Starter_v1.0.10_SCREEN.pdf": {
+      "sha256": "df8073cb667f916b3a566f02e78bb6cef41c4e395103e7429819a44614bd62f2",
+      "page_count": 4,
+      "font_size_character_counts": [
+        {
+          "font": "Inter-Italic",
+          "size_tex_pt": 8.2,
+          "character_count": 13
+        },
+        {
+          "font": "Inter-Italic",
+          "size_tex_pt": 9.1,
+          "character_count": 76
+        },
+        {
+          "font": "Inter-Medium",
+          "size_tex_pt": 9.2,
+          "character_count": 13
+        },
+        {
+          "font": "Inter-Regular",
+          "size_tex_pt": 8.0,
+          "character_count": 43
+        },
+        {
+          "font": "Inter-Regular",
+          "size_tex_pt": 9.0,
+          "character_count": 1
+        },
+        {
+          "font": "Inter-Regular",
+          "size_tex_pt": 10.0,
+          "character_count": 191
+        },
+        {
+          "font": "Inter-Regular",
+          "size_tex_pt": 10.2,
+          "character_count": 183
+        },
+        {
+          "font": "Inter-Regular",
+          "size_tex_pt": 10.95,
+          "character_count": 290
+        },
+        {
+          "font": "Inter-SemiBold",
+          "size_tex_pt": 9.1,
+          "character_count": 22
+        },
+        {
+          "font": "Inter-SemiBold",
+          "size_tex_pt": 9.5,
+          "character_count": 9
+        },
+        {
+          "font": "Inter-SemiBold",
+          "size_tex_pt": 10.0,
+          "character_count": 11
+        },
+        {
+          "font": "Inter-SemiBold",
+          "size_tex_pt": 10.95,
+          "character_count": 38
+        },
+        {
+          "font": "Inter-SemiBold",
+          "size_tex_pt": 11.4,
+          "character_count": 1
+        },
+        {
+          "font": "Inter-SemiBold",
+          "size_tex_pt": 24.88,
+          "character_count": 11
+        },
+        {
+          "font": "NotoSerif-Medium",
+          "size_tex_pt": 11.7,
+          "character_count": 9
+        },
+        {
+          "font": "NotoSerif-Medium",
+          "size_tex_pt": 12.5,
+          "character_count": 23
+        },
+        {
+          "font": "NotoSerif-Medium",
+          "size_tex_pt": 24.0,
+          "character_count": 22
+        },
+        {
+          "font": "NotoSerif-Regular",
+          "size_tex_pt": 14.0,
+          "character_count": 13
+        },
+        {
+          "font": "STIXTwoMath-Regular",
+          "size_tex_pt": 7.0,
+          "character_count": 2
+        },
+        {
+          "font": "STIXTwoMath-Regular",
+          "size_tex_pt": 7.665,
+          "character_count": 4
+        },
+        {
+          "font": "STIXTwoMath-Regular",
+          "size_tex_pt": 8.0,
+          "character_count": 4
+        },
+        {
+          "font": "STIXTwoMath-Regular",
+          "size_tex_pt": 9.0,
+          "character_count": 7
+        },
+        {
+          "font": "STIXTwoMath-Regular",
+          "size_tex_pt": 10.0,
+          "character_count": 11
+        },
+        {
+          "font": "STIXTwoMath-Regular",
+          "size_tex_pt": 10.95,
+          "character_count": 28
+        }
+      ],
+      "embedded_fonts": [
+        {
+          "basefont": "ZPHXBC+Inter-SemiBold-Identity-H",
+          "resource_kind": "Type0",
+          "embedded_bytes": 4897
+        },
+        {
+          "basefont": "GCBTKU+Inter-Regular-Identity-H",
+          "resource_kind": "Type0",
+          "embedded_bytes": 6683
+        },
+        {
+          "basefont": "ZVCMMC+NotoSerif-Medium",
+          "resource_kind": "Type0",
+          "embedded_bytes": 13033
+        },
+        {
+          "basefont": "ZOLQVH+NotoSerif-Regular",
+          "resource_kind": "Type0",
+          "embedded_bytes": 10333
+        },
+        {
+          "basefont": "YTFVDY+STIXTwoMath-Regular",
+          "resource_kind": "Type0",
+          "embedded_bytes": 36202
+        },
+        {
+          "basefont": "CSYLHN+Inter-Medium-Identity-H",
+          "resource_kind": "Type0",
+          "embedded_bytes": 2225
+        },
+        {
+          "basefont": "VKLZIP+Inter-Italic-Identity-H",
+          "resource_kind": "Type0",
+          "embedded_bytes": 3971
+        }
+      ],
+      "selected_heading_spans": [
+        {
+          "page": 4,
+          "text": "Πώς σκέφτομαι",
+          "font": "Inter-Medium",
+          "tex_pt": 9.2
+        }
+      ]
+    },
+    "Starter_v1.0.10_PRINT.pdf": {
+      "sha256": "7368d6edbeee8a36770055a47ffc9254aa747911265ab4534225dce445c67f24",
+      "page_count": 4,
+      "font_size_character_counts": [
+        {
+          "font": "Inter-Italic",
+          "size_tex_pt": 8.2,
+          "character_count": 13
+        },
+        {
+          "font": "Inter-Italic",
+          "size_tex_pt": 9.1,
+          "character_count": 76
+        },
+        {
+          "font": "Inter-Medium",
+          "size_tex_pt": 9.2,
+          "character_count": 13
+        },
+        {
+          "font": "Inter-Regular",
+          "size_tex_pt": 8.0,
+          "character_count": 43
+        },
+        {
+          "font": "Inter-Regular",
+          "size_tex_pt": 9.0,
+          "character_count": 1
+        },
+        {
+          "font": "Inter-Regular",
+          "size_tex_pt": 10.0,
+          "character_count": 191
+        },
+        {
+          "font": "Inter-Regular",
+          "size_tex_pt": 10.2,
+          "character_count": 183
+        },
+        {
+          "font": "Inter-Regular",
+          "size_tex_pt": 10.95,
+          "character_count": 290
+        },
+        {
+          "font": "Inter-SemiBold",
+          "size_tex_pt": 9.1,
+          "character_count": 22
+        },
+        {
+          "font": "Inter-SemiBold",
+          "size_tex_pt": 9.5,
+          "character_count": 9
+        },
+        {
+          "font": "Inter-SemiBold",
+          "size_tex_pt": 10.0,
+          "character_count": 11
+        },
+        {
+          "font": "Inter-SemiBold",
+          "size_tex_pt": 10.95,
+          "character_count": 38
+        },
+        {
+          "font": "Inter-SemiBold",
+          "size_tex_pt": 11.4,
+          "character_count": 1
+        },
+        {
+          "font": "Inter-SemiBold",
+          "size_tex_pt": 24.88,
+          "character_count": 11
+        },
+        {
+          "font": "NotoSerif-Medium",
+          "size_tex_pt": 11.7,
+          "character_count": 9
+        },
+        {
+          "font": "NotoSerif-Medium",
+          "size_tex_pt": 12.5,
+          "character_count": 23
+        },
+        {
+          "font": "NotoSerif-Medium",
+          "size_tex_pt": 24.0,
+          "character_count": 22
+        },
+        {
+          "font": "NotoSerif-Regular",
+          "size_tex_pt": 14.0,
+          "character_count": 13
+        },
+        {
+          "font": "STIXTwoMath-Regular",
+          "size_tex_pt": 7.0,
+          "character_count": 2
+        },
+        {
+          "font": "STIXTwoMath-Regular",
+          "size_tex_pt": 7.665,
+          "character_count": 4
+        },
+        {
+          "font": "STIXTwoMath-Regular",
+          "size_tex_pt": 8.0,
+          "character_count": 4
+        },
+        {
+          "font": "STIXTwoMath-Regular",
+          "size_tex_pt": 9.0,
+          "character_count": 7
+        },
+        {
+          "font": "STIXTwoMath-Regular",
+          "size_tex_pt": 10.0,
+          "character_count": 11
+        },
+        {
+          "font": "STIXTwoMath-Regular",
+          "size_tex_pt": 10.95,
+          "character_count": 28
+        }
+      ],
+      "embedded_fonts": [
+        {
+          "basefont": "ZPHXBC+Inter-SemiBold-Identity-H",
+          "resource_kind": "Type0",
+          "embedded_bytes": 4897
+        },
+        {
+          "basefont": "GCBTKU+Inter-Regular-Identity-H",
+          "resource_kind": "Type0",
+          "embedded_bytes": 6683
+        },
+        {
+          "basefont": "ZVCMMC+NotoSerif-Medium",
+          "resource_kind": "Type0",
+          "embedded_bytes": 13033
+        },
+        {
+          "basefont": "ZOLQVH+NotoSerif-Regular",
+          "resource_kind": "Type0",
+          "embedded_bytes": 10333
+        },
+        {
+          "basefont": "YTFVDY+STIXTwoMath-Regular",
+          "resource_kind": "Type0",
+          "embedded_bytes": 36202
+        },
+        {
+          "basefont": "CSYLHN+Inter-Medium-Identity-H",
+          "resource_kind": "Type0",
+          "embedded_bytes": 2225
+        },
+        {
+          "basefont": "VKLZIP+Inter-Italic-Identity-H",
+          "resource_kind": "Type0",
+          "embedded_bytes": 3971
+        }
+      ],
+      "selected_heading_spans": [
+        {
+          "page": 4,
+          "text": "Πώς σκέφτομαι",
+          "font": "Inter-Medium",
+          "tex_pt": 9.2
+        }
+      ]
+    }
+  }
+}

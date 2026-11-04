@@ -1,0 +1,50 @@
+{
+  "D_STIX_FAMILY": [
+    {
+      "type": "insert",
+      "A": "",
+      "variant": "Δ",
+      "A_context": "cxyzABFNΕλληνικάαβγδθλμνπρστφφχψωΓΔΘΣΩοκιμήχημικήςγραφήςH2OH2SO4NaSO24και103",
+      "variant_context": "cxyzABFNΕλληνικάαβγδθλμνπρστφφχψωΓΔΘΣΩΔοκιμήχημικήςγραφήςH2OH2SO4NaSO24και103",
+      "A_codepoints": [],
+      "variant_codepoints": [
+        "U+0394"
+      ]
+    },
+    {
+      "type": "insert",
+      "A": "",
+      "variant": "Δ",
+      "A_context": "τικόμέγεθοςενώτοδιάστημαείναιμονόμετροενταυτίζονταισεκάθεκίνησηΠώςσκέφτομαιΣ",
+      "variant_context": "τικόμέγεθοςενώτοδιάστημαείναιμονόμετροΔενταυτίζονταισεκάθεκίνησηΠώςσκέφτομαιΣ",
+      "A_codepoints": [],
+      "variant_codepoints": [
+        "U+0394"
+      ]
+    }
+  ],
+  "E_LIBERTINUS": [
+    {
+      "type": "insert",
+      "A": "",
+      "variant": "Δ",
+      "A_context": "cxyzABFNΕλληνικάαβγδθλμνπρστφφχψωΓΔΘΣΩοκιμήχημικήςγραφήςH2OH2SO4NaSO24και103",
+      "variant_context": "cxyzABFNΕλληνικάαβγδθλμνπρστφφχψωΓΔΘΣΩΔοκιμήχημικήςγραφήςH2OH2SO4NaSO24και103",
+      "A_codepoints": [],
+      "variant_codepoints": [
+        "U+0394"
+      ]
+    },
+    {
+      "type": "insert",
+      "A": "",
+      "variant": "Δ",
+      "A_context": "τικόμέγεθοςενώτοδιάστημαείναιμονόμετροενταυτίζονταισεκάθεκίνησηΠώςσκέφτομαιΣ",
+      "variant_context": "τικόμέγεθοςενώτοδιάστημαείναιμονόμετροΔενταυτίζονταισεκάθεκίνησηΠώςσκέφτομαιΣ",
+      "A_codepoints": [],
+      "variant_codepoints": [
+        "U+0394"
+      ]
+    }
+  ]
+}

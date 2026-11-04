@@ -1,0 +1,184 @@
+[
+  {
+    "source": "chapters/demo-physics.tex",
+    "lines": [
+      19,
+      19
+    ],
+    "source_excerpt_sha256": "15952d3b2f96bc26d69fa00958ee719870f11ee3a895aa865a67b4475eb9600e",
+    "transformation": "Comment-only lines omitted; visible text and math retained."
+  },
+  {
+    "source": "chapters/starter-chapter.tex",
+    "lines": [
+      12,
+      17
+    ],
+    "source_excerpt_sha256": "4eceaebc48c806f3fd7a9be7a262bced18d6b4dbcc5f3303242998ca1df89b3f",
+    "transformation": "Comment-only lines omitted; visible text and math retained."
+  },
+  {
+    "source": "chapters/demo-assessment.tex",
+    "lines": [
+      25,
+      27
+    ],
+    "source_excerpt_sha256": "4394e39a83b6a68c5cda1ccfcba6de32834b241f11937cf743964b438b6d5acb",
+    "transformation": "Comment-only lines omitted; visible text and math retained."
+  },
+  {
+    "source": "chapters/demo-physics.tex",
+    "lines": [
+      24,
+      26
+    ],
+    "source_excerpt_sha256": "28e198f474246ead597f3717368428e920ac3255b83f8c5f3e1370501335ed49",
+    "transformation": "Comment-only lines omitted; visible text and math retained."
+  },
+  {
+    "source": "chapters/demo-physics.tex",
+    "lines": [
+      42,
+      42
+    ],
+    "source_excerpt_sha256": "873979d094a26b115d8b73a4eaf39c5d19ff2f5cb3f9ab0ee35823d5dbc5269f",
+    "transformation": "Comment-only lines omitted; visible text and math retained."
+  },
+  {
+    "source": "stress-content.tex",
+    "lines": [
+      5,
+      9
+    ],
+    "source_excerpt_sha256": "b9714251a1a72417427bd21e951eecb11ae7933b89b906c1a363d10b1b3f3902",
+    "transformation": "Comment-only lines omitted; macro-closing brace outside the selected paragraph removed. Visible text and math retained."
+  },
+  {
+    "source": "stress-content.tex",
+    "lines": [
+      13,
+      14
+    ],
+    "source_excerpt_sha256": "d1c1525f2b55024d56a42623a362182e6a69a120f4313f1c58d8b235ceac6b2b",
+    "transformation": "Comment-only lines omitted; visible text and math retained."
+  },
+  {
+    "source": "chapters/demo-physics.tex",
+    "lines": [
+      115,
+      143
+    ],
+    "source_excerpt_sha256": "8b06b8cd7cddb84b39b57e32433e286aa87b46e3063a20cee79d96505683b524",
+    "transformation": "Comment-only lines omitted; visible text and math retained."
+  },
+  {
+    "source": "chapters/demo-math.tex",
+    "lines": [
+      16,
+      16
+    ],
+    "source_excerpt_sha256": "599d5050384d60e461ae37c750098711733ce285630c94f28b1ce6552294e688",
+    "transformation": "Comment-only lines omitted; visible text and math retained."
+  },
+  {
+    "source": "stress-content.tex",
+    "lines": [
+      379,
+      386
+    ],
+    "source_excerpt_sha256": "e172369d2941fe1a100032cf4e5bb13bdfaa6504fe405cd789db8405a2bd1fc6",
+    "transformation": "Comment-only lines omitted; visible text and math retained."
+  },
+  {
+    "source": "chapters/demo-math.tex",
+    "lines": [
+      18,
+      20
+    ],
+    "source_excerpt_sha256": "64b6083393b0633bd7cfae4c36f310476f34f92d70c404d5b6f72ce53bceec4c",
+    "transformation": "Comment-only lines omitted; visible text and math retained."
+  },
+  {
+    "source": "stress-content.tex",
+    "lines": [
+      5,
+      9
+    ],
+    "source_excerpt_sha256": "b9714251a1a72417427bd21e951eecb11ae7933b89b906c1a363d10b1b3f3902",
+    "transformation": "Comment-only lines omitted; macro-closing brace outside the selected paragraph removed. Visible text and math retained."
+  },
+  {
+    "source": "chapters/demo-physics.tex",
+    "lines": [
+      38,
+      40
+    ],
+    "source_excerpt_sha256": "71ca499b6123cbb7ec204f820795c8e0ea0f72fb891a01abe153059f3a2b6e09",
+    "transformation": "Comment-only lines omitted; visible text and math retained."
+  },
+  {
+    "source": "chapters/demo-physics.tex",
+    "lines": [
+      138,
+      140
+    ],
+    "source_excerpt_sha256": "24d2b6cabfc30acd2d51dbf4b69bd672a0172b4dd08f5780a4e341127c62afa0",
+    "transformation": "Comment-only lines omitted; visible text and math retained."
+  },
+  {
+    "source": "chapters/demo-math.tex",
+    "lines": [
+      57,
+      59
+    ],
+    "source_excerpt_sha256": "15dd7e5fd74d1f2653cac4963d9fa99ae6d5c9b1b56dba5a2424e1490903c1ff",
+    "transformation": "Comment-only lines omitted; visible text and math retained."
+  },
+  {
+    "source": "chapters/starter-chapter.tex",
+    "lines": [
+      27,
+      40
+    ],
+    "source_excerpt_sha256": "e53690849973a56f611c028e00605fe98e1a8b13008c6f296d92153997eb2665",
+    "transformation": "Comment-only lines omitted; visible text and math retained."
+  },
+  {
+    "source": "chapters/demo-physics.tex",
+    "lines": [
+      42,
+      42
+    ],
+    "source_excerpt_sha256": "873979d094a26b115d8b73a4eaf39c5d19ff2f5cb3f9ab0ee35823d5dbc5269f",
+    "transformation": "Comment-only lines omitted; visible text and math retained."
+  },
+  {
+    "source": "chapters/demo-physics.tex",
+    "lines": [
+      43,
+      53
+    ],
+    "source_excerpt_sha256": "baf071f839e07d392f91d99aa0742a0ec2de5523d8062225b7212a7d79aa4ef2",
+    "transformation": "Comment-only lines omitted; visible text and math retained."
+  },
+  {
+    "editorial_additions": [
+      "Five topic headings and page breaks; counter/header initialization; no style/geometry/color redefinitions.",
+      "Supplementary page3 root/sum/nested-index/vector/Greek/Latin/chemical diagnostic formulas, explicitly labelled in visible Greek text. Roots and sums were not found in original demo/stress content. Integral, limits, fractions, kinematics, worked examples and diagrams reuse existing source.",
+      "Supplementary final ThinkBox on page4 explicitly labelled as typography diagnostic; probes inline roots, fractions, sums and mixed Greek/Latin at the actual small callout size.",
+      "Diagram captions use existing text and mathematical relations from source; labels assigned locally to avoid unrelated references."
+    ]
+  },
+  {
+    "common_body_sha256": "0ce6fd1851e19954a74ea770809d1c72dea640a9d5a2d7667a142f8ead3ce88e",
+    "topic_order": [
+      "Physics theory with inline math and equation tag",
+      "Two existing worked examples with display solutions",
+      "Actual dense math plus explicitly labelled supplementary operator/Greek/Latin/chemistry diagnostics",
+      "Unmodified callout structures with actual content plus labelled dense-inline diagnostic",
+      "Two actual stable diagrams with original geometry/math labels"
+    ],
+    "explicit_topic_page_breaks": 4,
+    "typography_diagnostic_wrapping": "Legal \\allowbreak points after commas in Greek/Latin variable lists; no variables removed and no math sizes changed."
+  }
+]

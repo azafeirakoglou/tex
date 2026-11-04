@@ -1,0 +1,42 @@
+% ===========================================================================
+% v0.23 — ΑΥΤΟΣ Ο ΚΩΔΙΚΑΣ ΕΙΝΑΙ ΚΟΙΝΟΣ ΣΤΙΣ ΔΥΟ ΕΚΔΟΣΕΙΣ
+% SCREEN και PRINT διαφέρουν μόνο ως προς την παλέτα του βιβλίου.
+% ===========================================================================
+\thispagestyle{plain}
+\begin{center}
+  {\BookHeadingFont\Large\bfseries\color{BookPrimary}Δύο τύποι πινάκων}\\[3pt]
+  {\small Ίδια τυπογραφία, διαστάσεις και κεφαλίδα — διαφορετικό φόντο γραμμών}
+\end{center}
+\vspace{6mm}
+\BookMinorHeading{Α — Πίνακας με εναλλάξ χρωματισμό}
+% Μόνο η λέξη BookStripedTable αλλάζει σε σχέση με τον τύπο Β.
+\begin{BookStripedTable}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X>{\centering\arraybackslash}p{25mm}>{\centering\arraybackslash}p{33mm}@{}}
+\BookTableHeaderRow
+\BookTableHead{Μέγεθος} & \BookTableHead{Σύμβολο} & \BookTableHead{Μονάδα S.I.}\\
+Μήκος & $\ell$ & $\mathrm{m}$\\
+Μάζα & $m$ & $\mathrm{kg}$\\
+Χρόνος & $t$ & $\mathrm{s}$\\
+Ταχύτητα & $\upsilon$ & $\mathrm{m/s}$\\
+Επιτάχυνση & $a$ & $\mathrm{m/s^2}$\\
+Δύναμη & $F$ & $\mathrm{N}$\\
+\end{tabularx}
+\end{BookStripedTable}
+\vspace{9mm}
+\BookMinorHeading{Β — Πίνακας με λευκές γραμμές}
+% Τα ίδια δεδομένα, το ίδιο tabularx, η ίδια κεφαλίδα.
+% Μόνο το BookPlainTable αντί BookStripedTable.
+\begin{BookPlainTable}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X>{\centering\arraybackslash}p{25mm}>{\centering\arraybackslash}p{33mm}@{}}
+\BookTableHeaderRow
+\BookTableHead{Μέγεθος} & \BookTableHead{Σύμβολο} & \BookTableHead{Μονάδα S.I.}\\
+Μήκος & $\ell$ & $\mathrm{m}$\\
+Μάζα & $m$ & $\mathrm{kg}$\\
+Χρόνος & $t$ & $\mathrm{s}$\\
+Ταχύτητα & $\upsilon$ & $\mathrm{m/s}$\\
+Επιτάχυνση & $a$ & $\mathrm{m/s^2}$\\
+Δύναμη & $F$ & $\mathrm{N}$\\
+\end{tabularx}
+\end{BookPlainTable}
+\par\medskip\noindent
+{\small\itshape\color{BookInk}Οι δύο πίνακες χρησιμοποιούν την ίδια κεφαλίδα και το ίδιο μέγεθος κειμένου. Δεν έχουν κάθετες γραμμές. Στο δίχρωμο PDF το αχνό φόντο του Α αποτελεί τονικότητα του δεύτερου μελανιού.}

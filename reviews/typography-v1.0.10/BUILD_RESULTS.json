@@ -1,0 +1,82 @@
+[
+  {
+    "variant": "A_CURRENT",
+    "profile": "SCREEN",
+    "status": "passed",
+    "log": "/workspace/typography-review/build/A_CURRENT_SCREEN/driver.log",
+    "pdf": "/workspace/typography-review/pdf/A_CURRENT_SCREEN.pdf",
+    "sha256": "a5dbfe5339c8962e2326d14f8e14a81904b202692142a7483a7377770e9f35ac"
+  },
+  {
+    "variant": "A_CURRENT",
+    "profile": "PRINT",
+    "status": "passed",
+    "log": "/workspace/typography-review/build/A_CURRENT_PRINT/driver.log",
+    "pdf": "/workspace/typography-review/pdf/A_CURRENT_PRINT.pdf",
+    "sha256": "e115e6baa883dd1cbc2f9ade39d6c814a75ec9dab350487e40a1ac6c3e428fc8"
+  },
+  {
+    "variant": "B_STIX105",
+    "profile": "SCREEN",
+    "status": "passed",
+    "log": "/workspace/typography-review/build/B_STIX105_SCREEN/driver.log",
+    "pdf": "/workspace/typography-review/pdf/B_STIX105_SCREEN.pdf",
+    "sha256": "55d72e0367d310e259b1ce5047168fbb5127cfec9c1b8dd6469614d7fc5d5f54"
+  },
+  {
+    "variant": "B_STIX105",
+    "profile": "PRINT",
+    "status": "passed",
+    "log": "/workspace/typography-review/build/B_STIX105_PRINT/driver.log",
+    "pdf": "/workspace/typography-review/pdf/B_STIX105_PRINT.pdf",
+    "sha256": "90fbd258e5c76b25459649fe841ded25dfa7841793a69a123211c305fbfc308f"
+  },
+  {
+    "variant": "C_STIX108",
+    "profile": "SCREEN",
+    "status": "passed",
+    "log": "/workspace/typography-review/build/C_STIX108_SCREEN/driver.log",
+    "pdf": "/workspace/typography-review/pdf/C_STIX108_SCREEN.pdf",
+    "sha256": "55a698db18ea5a79c1172073e7ae7985631d249d55b89171b90368c9767b9e69"
+  },
+  {
+    "variant": "C_STIX108",
+    "profile": "PRINT",
+    "status": "passed",
+    "log": "/workspace/typography-review/build/C_STIX108_PRINT/driver.log",
+    "pdf": "/workspace/typography-review/pdf/C_STIX108_PRINT.pdf",
+    "sha256": "59a2e2cd346aac6f1e94e379b4136d6ebe95b9465dfb1b953c091ca2fcebd7dd"
+  },
+  {
+    "variant": "D_STIX_FAMILY",
+    "profile": "SCREEN",
+    "status": "passed",
+    "log": "/workspace/typography-review/build/D_STIX_FAMILY_SCREEN/driver.log",
+    "pdf": "/workspace/typography-review/pdf/D_STIX_FAMILY_SCREEN.pdf",
+    "sha256": "328f8fdcc5a81d9e8064084a8bccc6449c3c33585484f0e5749dd77408e5d20c"
+  },
+  {
+    "variant": "D_STIX_FAMILY",
+    "profile": "PRINT",
+    "status": "passed",
+    "log": "/workspace/typography-review/build/D_STIX_FAMILY_PRINT/driver.log",
+    "pdf": "/workspace/typography-review/pdf/D_STIX_FAMILY_PRINT.pdf",
+    "sha256": "07d8cd00495fd40011ed3fe101b0128cb6042d52cf95cbb486d1ecff42f93324"
+  },
+  {
+    "variant": "E_LIBERTINUS",
+    "profile": "SCREEN",
+    "status": "passed",
+    "log": "/workspace/typography-review/build/E_LIBERTINUS_SCREEN/driver.log",
+    "pdf": "/workspace/typography-review/pdf/E_LIBERTINUS_SCREEN.pdf",
+    "sha256": "9bd5cfe3476602ef5393fc0873817346df569201199132f510bd6d64a78367ff"
+  },
+  {
+    "variant": "E_LIBERTINUS",
+    "profile": "PRINT",
+    "status": "passed",
+    "log": "/workspace/typography-review/build/E_LIBERTINUS_PRINT/driver.log",
+    "pdf": "/workspace/typography-review/pdf/E_LIBERTINUS_PRINT.pdf",
+    "sha256": "9168663270b597c1cf01a021988d9b4291c6362a201bdcc4a6f033b42be3c825"
+  }
+]

@@ -1,0 +1,211 @@
+% Identical five-page content for all typography variants, v1.0.10 review.
+% Reuses stable authoring commands; no geometry, color or style redefinitions.
+\setcounter{chapter}{1}
+\setcounter{section}{0}
+\setcounter{equation}{0}
+\setcounter{figure}{0}
+\setcounter{workedexample}{0}
+\setcounter{page}{1}
+\BookRememberRunningChapter{Κίνηση σε μία διάσταση}
+\markboth{Κίνηση σε μία διάσταση}{Κίνηση σε μία διάσταση}
+
+% PAGE 1 — Physics theory and inline math.
+\BookSection{Θεωρία}
+\section{Περιγραφή της κίνησης}
+
+% Source: chapters/demo-physics.tex:19-19
+Για την περιγραφή της ευθύγραμμης κίνησης ορίζουμε έναν άξονα αναφοράς και θετική φορά. Η θέση ενός σώματος προσδιορίζεται από την αλγεβρική τιμή της συντεταγμένης του.
+
+% Source: chapters/starter-chapter.tex:12-17
+Η θέση ενός σώματος σε έναν άξονα δίνεται από τη συντεταγμένη του.
+Για κίνηση από τη θέση $x_A$ στη θέση $x_B$, η μετατόπιση είναι
+\begin{equation}\label{eq:starter-displacement}
+  \Delta x=x_B-x_A.
+\end{equation}
+
+
+% Source: chapters/demo-assessment.tex:25-27
+Το μέτρο της μέσης διανυσματικής ταχύτητας ενός σώματος
+υπολογίζεται από τη σχέση $|\bar{\upsilon}|=\frac{|\Delta x|}{\Delta t}$.
+Να αναφέρετε τις μονάδες SI των μεγεθών $\Delta x$ και $\Delta t$.
+
+% Source: chapters/demo-physics.tex:24-26
+\begin{KeyFormula}
+\(\Delta x=x_{\mathrm{τελ}}-x_{\mathrm{αρχ}}\qquad\text{και}\qquad \upsilon=\dfrac{\Delta x}{\Delta t}\)
+\end{KeyFormula}
+
+\BookMinorHeading{Από το διάγραμμα στη φυσική ερμηνεία}
+
+% Source: chapters/demo-physics.tex:42-42
+Η μορφή της γραφικής παράστασης παρέχει πληροφορίες για την κινητική κατάσταση. Στο ακόλουθο δοκιμαστικό διάγραμμα η θέση αυξάνεται γραμμικά με τον χρόνο.
+
+% Source: stress-content.tex:5-9
+Η περιγραφή ενός φαινομένου αρχίζει με τον ορισμό των μεγεθών και των μονάδων
+τους. Καταγράφουμε τα δεδομένα, επιλέγουμε σύστημα αναφοράς και διατυπώνουμε
+τις παραδοχές. Στη συνέχεια ελέγχουμε τη μαθηματική σχέση, το πρόσημο και τη
+φυσική σημασία του αποτελέσματος. Η τελική απάντηση περιλαμβάνει κατάλληλη
+μονάδα και σύντομη αιτιολόγηση.\par
+
+% Source: stress-content.tex:13-14
+\[x(t)=x_0+\upsilon_0t+\frac12at^2,\qquad
+  \upsilon(t)=\upsilon_0+at.\]
+
+
+\clearpage
+% PAGE 2 — Both worked examples, including their original callouts.
+\BookSection{Λυμένα παραδείγματα}
+
+% Source: chapters/demo-physics.tex:115-143
+\begin{workedexample}{Υπολογισμός μετατόπισης}
+\begin{ProblemBox}
+Ένα σώμα κινείται πάνω σε ευθεία από τη θέση \(x_1=-3\,\mathrm{m}\) στη θέση \(x_2=5\,\mathrm{m}\).\par
+\begin{enumerate}[label=\BookGreek*),leftmargin=7mm,topsep=1pt,itemsep=0pt]
+\item Να υπολογιστεί η μετατόπιση.
+\item Να προσδιοριστεί η φορά της.
+\end{enumerate}
+\end{ProblemBox}
+\begin{ThinkBox}
+Ξεκινώ από τον ορισμό της μετατόπισης και εξετάζω το πρόσημο του αποτελέσματος. Το θετικό πρόσημο δηλώνει κατεύθυνση προς τη θετική φορά του άξονα.
+\end{ThinkBox}
+\SolutionHeading
+\BookListLabel{α)} Από τον ορισμό της μετατόπισης:
+\[\Delta x=x_2-x_1=5-(-3)=8\,\mathrm{m}.\]
+\BookListLabel{β)} Η μετατόπιση έχει θετική αλγεβρική τιμή, επομένως κατευθύνεται προς τη θετική φορά του άξονα.
+\end{workedexample}
+\begin{workedexample}{Σταθερή ταχύτητα}
+\begin{ProblemBox}
+Ένα κινητό διανύει μετατόπιση \(\Delta x=60\,\mathrm{m}\) σε χρονικό διάστημα \(\Delta t=12\,\mathrm{s}\). Να υπολογιστεί η αλγεβρική τιμή της σταθερής ταχύτητας.
+\end{ProblemBox}
+\begin{ThinkBox}
+Στην ευθύγραμμη ομαλή κίνηση χρησιμοποιώ τον λόγο \(\Delta x/\Delta t\) και ελέγχω τις μονάδες του αποτελέσματος.
+\end{ThinkBox}
+\SolutionHeading
+\[\upsilon=\frac{\Delta x}{\Delta t}=\frac{60\,\mathrm{m}}{12\,\mathrm{s}}=5\,\mathrm{m/s}.\]
+\end{workedexample}
+
+
+\clearpage
+% PAGE 3 — Dense math plus explicitly marked missing-operator diagnostics.
+\BookSection{Μαθηματικοί συμβολισμοί}
+\section{Η συνάρτηση πρώτου βαθμού}
+
+% Source: chapters/demo-math.tex:16-16
+Ο τύπος \(f(x)=\alpha x+\beta\), με \(\alpha\neq0\), περιγράφει μια συνάρτηση πρώτου βαθμού. Η γραφική της παράσταση είναι ευθεία.
+
+% Source: stress-content.tex:379-386
+\begin{align}
+ f(x)&=\alpha x+\beta,\label{eq:stress-function}\\
+ f(x+h)-f(x)&=\alpha h,\\
+ \lim_{h\to0}\frac{f(x+h)-f(x)}{h}&=\alpha,\\
+ \int_a^b(\alpha x+\beta)\,\mathrm dx
+ &=\frac{\alpha}{2}(b^2-a^2)+\beta(b-a).
+\end{align}
+Η σχέση~\eqref{eq:stress-function} συνδέει τα παραδείγματα του κεφαλαίου.
+
+% Source: chapters/demo-math.tex:18-20
+\begin{definitionbox}[Συνάρτηση πρώτου βαθμού]
+\(f(x)=\alpha x+\beta\), όπου \(\alpha\neq0\) και \(\alpha,\beta\in\mathbb R\).
+\end{definitionbox}
+
+
+\BookMinorHeading{Συμπληρωματική τυπογραφική δοκιμή}
+Οι επόμενες σχέσεις προστίθενται μόνο για τον έλεγχο ριζών, αθροισμάτων,
+διαδοχικών δεικτών και ελληνικών χαρακτήρων.
+\begin{align*}
+ \sqrt{x^2+y^2}&=\sqrt{\frac{a^2+b^2}{1+t^2}}, &
+ S_n&=\sum_{k=1}^{n}\frac{1}{k^2},\\
+ x_{i_j}^{\,2}&=\frac{a_{i+1}-a_i}{\Delta t}, &
+ \vec F&=m\vec a.
+\end{align*}
+Λατινικά: $a,\allowbreak b,\allowbreak c,\allowbreak x,\allowbreak y,\allowbreak z,\allowbreak A,\allowbreak B,\allowbreak F,\allowbreak N$.
+Ελληνικά: $\alpha,\allowbreak \beta,\allowbreak \gamma,\allowbreak \delta,\allowbreak \theta,\allowbreak \lambda,\allowbreak \mu,\allowbreak \nu,\allowbreak \pi,\allowbreak \rho,\allowbreak \sigma,\allowbreak 
+\tau,\allowbreak \phi,\allowbreak \varphi,\allowbreak \chi,\allowbreak \psi,\allowbreak \omega,\allowbreak \Gamma,\allowbreak \Delta,\allowbreak \Theta,\allowbreak \Sigma,\allowbreak \Omega$.
+
+Δοκιμή χημικής γραφής: $\mathrm{H_2O}$, $\mathrm{H_2SO_4}$,
+$\mathrm{Na^+}$, $\mathrm{SO_4^{2-}}$ και $10^{-3}\,\mathrm{mol\,L^{-1}}$.
+Ζεύγη σύγκρισης: $\nu/v$, $\rho/p$, $\mu/u$ και $\alpha/a$.
+
+\clearpage
+% PAGE 4 — Standard callouts, including dense inline math in a small context.
+\BookSection{Διδακτικά κουτιά}
+\section{Επιλογή σχέσης και έλεγχος}
+
+% Source: stress-content.tex:5-9
+Η περιγραφή ενός φαινομένου αρχίζει με τον ορισμό των μεγεθών και των μονάδων
+τους. Καταγράφουμε τα δεδομένα, επιλέγουμε σύστημα αναφοράς και διατυπώνουμε
+τις παραδοχές. Στη συνέχεια ελέγχουμε τη μαθηματική σχέση, το πρόσημο και τη
+φυσική σημασία του αποτελέσματος. Η τελική απάντηση περιλαμβάνει κατάλληλη
+μονάδα και σύντομη αιτιολόγηση.\par
+
+% Source: chapters/demo-physics.tex:38-40
+\begin{AttentionBox}
+Η μετατόπιση είναι διανυσματικό μέγεθος, ενώ το διάστημα είναι μονόμετρο. Δεν ταυτίζονται σε κάθε κίνηση.
+\end{AttentionBox}
+
+% Source: chapters/demo-physics.tex:138-140
+\begin{ThinkBox}
+Στην ευθύγραμμη ομαλή κίνηση χρησιμοποιώ τον λόγο \(\Delta x/\Delta t\) και ελέγχω τις μονάδες του αποτελέσματος.
+\end{ThinkBox}
+
+% Source: chapters/demo-math.tex:57-59
+\begin{ThinkBox}
+Αντικαθιστώ στη μεταβλητή \(x\) την τιμή που μου ζητείται, χωρίς να αλλάζω τον τύπο της συνάρτησης.
+\end{ThinkBox}
+
+
+\begin{ThinkBox}
+Συμπληρωματική τυπογραφική δοκιμή μέσα στο κουτί:
+για $r=\sqrt{x^2+y^2}$, $q=\frac{a_{i+1}-a_i}{\Delta t}$ και
+$S_n=\sum_{k=1}^{n}\frac{1}{k^2}$, εξετάζουμε τους δείκτες, τα κλάσματα
+και την απόσταση των διαδοχικών γραμμών. Οι $\alpha$, $\beta$ και $\upsilon$
+παραμένουν ευδιάκριτες από τα λατινικά $a$, $b$ και $v$.
+\end{ThinkBox}
+
+\clearpage
+% PAGE 5 — Actual stable TikZ geometry and math labels.
+\BookSection{Διαγράμματα και σύμβολα}
+\section{Θέση, μετατόπιση και χρόνος}
+
+\begin{center}
+
+% Source: chapters/starter-chapter.tex:27-40
+  \begin{tikzpicture}[x=.8cm,y=.8cm]
+    \draw[book/axis] (-3.2,0)--(3.5,0)
+      node[book/physlabel,right] {$x\,(\mathrm{m})$};
+    \foreach \x in {-2,0,2}{%
+      \draw[book/tick] (\x,.08)--(\x,-.08);
+      \node[book/ticklabel,below=2pt] at (\x,-.08) {$\x$};
+    }
+    \node[book/endpoint] at (-2,0) {};
+    \node[book/endpoint] at (2,0) {};
+    \node[book/physlabel,above] at (-2,0) {$A$};
+    \node[book/physlabel,above] at (2,0) {$B$};
+    \draw[book/mainvector] (-2,.65)--(2,.65)
+      node[book/physlabel,midway,above] {$\Delta x$};
+  \end{tikzpicture}
+
+\end{center}
+
+\captionof{figure}{Μετατόπιση κινητού από την αρχική θέση Α στην τελική θέση Β.}
+\label{fig:displacement}\label{fig:starter-displacement}
+
+% Source: chapters/demo-physics.tex:42-42
+Η μορφή της γραφικής παράστασης παρέχει πληροφορίες για την κινητική κατάσταση. Στο ακόλουθο δοκιμαστικό διάγραμμα η θέση αυξάνεται γραμμικά με τον χρόνο.
+
+% Source: chapters/demo-physics.tex:43-53
+\begin{center}
+\begin{tikzpicture}[x=.65cm,y=.40cm]
+\draw[book/axis] (0,0)--(8.0,0) node[book/physlabel,right] {$t\,(\mathrm{s})$};
+\draw[book/axis] (0,0)--(0,7.0) node[book/physlabel,above] {$x\,(\mathrm{m})$};
+\foreach \x in {2,4,6}{\draw[book/tick] (\x,.10)--(\x,-.10) node[book/ticklabel,below]{$\x$};}
+\foreach \y in {2,4,6}{\draw[book/tick] (.10,\y)--(-.10,\y) node[book/ticklabel,left]{$\y$};}
+\draw[book/maincurve] (0,1)--(7.2,6.4);
+\draw[book/guide] (4,0)--(4,4);
+\node[book/pointMain] at (4,4) {};
+\end{tikzpicture}
+\end{center}
+
+\captionof{figure}{Η θέση αυξάνεται γραμμικά με τον χρόνο.}
+
+Όπως φαίνεται στο Σχήμα~\ref{fig:displacement}, η μετατόπιση παριστάνεται με
+διάνυσμα από την αρχική προς την τελική θέση.

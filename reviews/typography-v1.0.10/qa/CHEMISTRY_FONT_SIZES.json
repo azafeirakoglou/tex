@@ -1,0 +1,1496 @@
+{
+  "status": "measured",
+  "finding": "Scaling STIX affects math-font glyphs, not upright text alphabets. Inter molecular digits remain 7.665pt in A/B/C; STIX charge signs scale. Libertinus uses 80% scripts.",
+  "variants": {
+    "A_CURRENT": {
+      "SCREEN": {
+        "pdf_sha256": "a5dbfe5339c8962e2326d14f8e14a81904b202692142a7483a7377770e9f35ac",
+        "chemical_line_spans": [
+          {
+            "text": "∆οκιμή χημικής γραφής: H",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "2",
+            "font": "Inter-Regular",
+            "size_tex_pt": 7.66504
+          },
+          {
+            "text": "O, H",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "2",
+            "font": "Inter-Regular",
+            "size_tex_pt": 7.66504
+          },
+          {
+            "text": "SO",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "4",
+            "font": "Inter-Regular",
+            "size_tex_pt": 7.66504
+          },
+          {
+            "text": ", Na",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "+",
+            "font": "STIXTwoMath-Regular",
+            "size_tex_pt": 7.66504
+          },
+          {
+            "text": ", SO",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "2",
+            "font": "Inter-Regular",
+            "size_tex_pt": 7.66504
+          },
+          {
+            "text": "−",
+            "font": "STIXTwoMath-Regular",
+            "size_tex_pt": 7.66504
+          },
+          {
+            "text": "4",
+            "font": "Inter-Regular",
+            "size_tex_pt": 7.66504
+          },
+          {
+            "text": "και",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": " 10",
+            "font": "STIXTwoMath-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "−3",
+            "font": "STIXTwoMath-Regular",
+            "size_tex_pt": 7.66504
+          },
+          {
+            "text": " ",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "mol L",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "−",
+            "font": "STIXTwoMath-Regular",
+            "size_tex_pt": 7.66504
+          },
+          {
+            "text": "1",
+            "font": "Inter-Regular",
+            "size_tex_pt": 7.66504
+          },
+          {
+            "text": ". Ζεύγη",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "σύγκρισης:",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": " 𝜈/𝑣",
+            "font": "STIXTwoMath-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": ",",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": " 𝜌/𝑝",
+            "font": "STIXTwoMath-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": ",",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": " 𝜇/𝑢",
+            "font": "STIXTwoMath-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "και",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": " 𝛼/𝑎",
+            "font": "STIXTwoMath-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": ".",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          }
+        ]
+      },
+      "PRINT": {
+        "pdf_sha256": "e115e6baa883dd1cbc2f9ade39d6c814a75ec9dab350487e40a1ac6c3e428fc8",
+        "chemical_line_spans": [
+          {
+            "text": "∆οκιμή χημικής γραφής: H",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "2",
+            "font": "Inter-Regular",
+            "size_tex_pt": 7.66504
+          },
+          {
+            "text": "O, H",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "2",
+            "font": "Inter-Regular",
+            "size_tex_pt": 7.66504
+          },
+          {
+            "text": "SO",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "4",
+            "font": "Inter-Regular",
+            "size_tex_pt": 7.66504
+          },
+          {
+            "text": ", Na",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "+",
+            "font": "STIXTwoMath-Regular",
+            "size_tex_pt": 7.66504
+          },
+          {
+            "text": ", SO",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "2",
+            "font": "Inter-Regular",
+            "size_tex_pt": 7.66504
+          },
+          {
+            "text": "−",
+            "font": "STIXTwoMath-Regular",
+            "size_tex_pt": 7.66504
+          },
+          {
+            "text": "4",
+            "font": "Inter-Regular",
+            "size_tex_pt": 7.66504
+          },
+          {
+            "text": "και",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": " 10",
+            "font": "STIXTwoMath-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "−3",
+            "font": "STIXTwoMath-Regular",
+            "size_tex_pt": 7.66504
+          },
+          {
+            "text": " ",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "mol L",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "−",
+            "font": "STIXTwoMath-Regular",
+            "size_tex_pt": 7.66504
+          },
+          {
+            "text": "1",
+            "font": "Inter-Regular",
+            "size_tex_pt": 7.66504
+          },
+          {
+            "text": ". Ζεύγη",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "σύγκρισης:",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": " 𝜈/𝑣",
+            "font": "STIXTwoMath-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": ",",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": " 𝜌/𝑝",
+            "font": "STIXTwoMath-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": ",",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": " 𝜇/𝑢",
+            "font": "STIXTwoMath-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "και",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": " 𝛼/𝑎",
+            "font": "STIXTwoMath-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": ".",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          }
+        ]
+      }
+    },
+    "B_STIX105": {
+      "SCREEN": {
+        "pdf_sha256": "55d72e0367d310e259b1ce5047168fbb5127cfec9c1b8dd6469614d7fc5d5f54",
+        "chemical_line_spans": [
+          {
+            "text": "∆οκιμή χημικής γραφής: H",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "2",
+            "font": "Inter-Regular",
+            "size_tex_pt": 7.66504
+          },
+          {
+            "text": "O, H",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "2",
+            "font": "Inter-Regular",
+            "size_tex_pt": 7.66504
+          },
+          {
+            "text": "SO",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "4",
+            "font": "Inter-Regular",
+            "size_tex_pt": 7.66504
+          },
+          {
+            "text": ", Na",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "+",
+            "font": "STIXTwoMath-Regular",
+            "size_tex_pt": 8.04827
+          },
+          {
+            "text": ", SO",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "2",
+            "font": "Inter-Regular",
+            "size_tex_pt": 7.66504
+          },
+          {
+            "text": "−",
+            "font": "STIXTwoMath-Regular",
+            "size_tex_pt": 8.04827
+          },
+          {
+            "text": "4",
+            "font": "Inter-Regular",
+            "size_tex_pt": 7.66504
+          },
+          {
+            "text": "και",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": " 10",
+            "font": "STIXTwoMath-Regular",
+            "size_tex_pt": 11.49756
+          },
+          {
+            "text": "−3",
+            "font": "STIXTwoMath-Regular",
+            "size_tex_pt": 8.04827
+          },
+          {
+            "text": " ",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "mol L",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "−",
+            "font": "STIXTwoMath-Regular",
+            "size_tex_pt": 8.04827
+          },
+          {
+            "text": "1",
+            "font": "Inter-Regular",
+            "size_tex_pt": 7.66504
+          },
+          {
+            "text": ". Ζεύγη",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "σύγκρισης:",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": " 𝜈/𝑣",
+            "font": "STIXTwoMath-Regular",
+            "size_tex_pt": 11.49756
+          },
+          {
+            "text": ",",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": " 𝜌/𝑝",
+            "font": "STIXTwoMath-Regular",
+            "size_tex_pt": 11.49756
+          },
+          {
+            "text": ",",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": " 𝜇/𝑢",
+            "font": "STIXTwoMath-Regular",
+            "size_tex_pt": 11.49756
+          },
+          {
+            "text": "και",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": " 𝛼/𝑎",
+            "font": "STIXTwoMath-Regular",
+            "size_tex_pt": 11.49756
+          },
+          {
+            "text": ".",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          }
+        ]
+      },
+      "PRINT": {
+        "pdf_sha256": "90fbd258e5c76b25459649fe841ded25dfa7841793a69a123211c305fbfc308f",
+        "chemical_line_spans": [
+          {
+            "text": "∆οκιμή χημικής γραφής: H",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "2",
+            "font": "Inter-Regular",
+            "size_tex_pt": 7.66504
+          },
+          {
+            "text": "O, H",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "2",
+            "font": "Inter-Regular",
+            "size_tex_pt": 7.66504
+          },
+          {
+            "text": "SO",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "4",
+            "font": "Inter-Regular",
+            "size_tex_pt": 7.66504
+          },
+          {
+            "text": ", Na",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "+",
+            "font": "STIXTwoMath-Regular",
+            "size_tex_pt": 8.04827
+          },
+          {
+            "text": ", SO",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "2",
+            "font": "Inter-Regular",
+            "size_tex_pt": 7.66504
+          },
+          {
+            "text": "−",
+            "font": "STIXTwoMath-Regular",
+            "size_tex_pt": 8.04827
+          },
+          {
+            "text": "4",
+            "font": "Inter-Regular",
+            "size_tex_pt": 7.66504
+          },
+          {
+            "text": "και",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": " 10",
+            "font": "STIXTwoMath-Regular",
+            "size_tex_pt": 11.49756
+          },
+          {
+            "text": "−3",
+            "font": "STIXTwoMath-Regular",
+            "size_tex_pt": 8.04827
+          },
+          {
+            "text": " ",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "mol L",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "−",
+            "font": "STIXTwoMath-Regular",
+            "size_tex_pt": 8.04827
+          },
+          {
+            "text": "1",
+            "font": "Inter-Regular",
+            "size_tex_pt": 7.66504
+          },
+          {
+            "text": ". Ζεύγη",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "σύγκρισης:",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": " 𝜈/𝑣",
+            "font": "STIXTwoMath-Regular",
+            "size_tex_pt": 11.49756
+          },
+          {
+            "text": ",",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": " 𝜌/𝑝",
+            "font": "STIXTwoMath-Regular",
+            "size_tex_pt": 11.49756
+          },
+          {
+            "text": ",",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": " 𝜇/𝑢",
+            "font": "STIXTwoMath-Regular",
+            "size_tex_pt": 11.49756
+          },
+          {
+            "text": "και",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": " 𝛼/𝑎",
+            "font": "STIXTwoMath-Regular",
+            "size_tex_pt": 11.49756
+          },
+          {
+            "text": ".",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          }
+        ]
+      }
+    },
+    "C_STIX108": {
+      "SCREEN": {
+        "pdf_sha256": "55a698db18ea5a79c1172073e7ae7985631d249d55b89171b90368c9767b9e69",
+        "chemical_line_spans": [
+          {
+            "text": "∆οκιμή χημικής γραφής: H",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "2",
+            "font": "Inter-Regular",
+            "size_tex_pt": 7.66504
+          },
+          {
+            "text": "O, H",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "2",
+            "font": "Inter-Regular",
+            "size_tex_pt": 7.66504
+          },
+          {
+            "text": "SO",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "4",
+            "font": "Inter-Regular",
+            "size_tex_pt": 7.66504
+          },
+          {
+            "text": ", Na",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "+",
+            "font": "STIXTwoMath-Regular",
+            "size_tex_pt": 8.27823
+          },
+          {
+            "text": ", SO",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "2",
+            "font": "Inter-Regular",
+            "size_tex_pt": 7.66504
+          },
+          {
+            "text": "−",
+            "font": "STIXTwoMath-Regular",
+            "size_tex_pt": 8.27823
+          },
+          {
+            "text": "4",
+            "font": "Inter-Regular",
+            "size_tex_pt": 7.66504
+          },
+          {
+            "text": "και",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": " 10",
+            "font": "STIXTwoMath-Regular",
+            "size_tex_pt": 11.82598
+          },
+          {
+            "text": "−3",
+            "font": "STIXTwoMath-Regular",
+            "size_tex_pt": 8.27823
+          },
+          {
+            "text": " ",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "mol L",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "−",
+            "font": "STIXTwoMath-Regular",
+            "size_tex_pt": 8.27823
+          },
+          {
+            "text": "1",
+            "font": "Inter-Regular",
+            "size_tex_pt": 7.66504
+          },
+          {
+            "text": ". Ζεύγη",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "σύγκρισης:",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": " 𝜈/𝑣",
+            "font": "STIXTwoMath-Regular",
+            "size_tex_pt": 11.82598
+          },
+          {
+            "text": ",",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": " 𝜌/𝑝",
+            "font": "STIXTwoMath-Regular",
+            "size_tex_pt": 11.82598
+          },
+          {
+            "text": ",",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": " 𝜇/𝑢",
+            "font": "STIXTwoMath-Regular",
+            "size_tex_pt": 11.82598
+          },
+          {
+            "text": "και",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": " 𝛼/𝑎",
+            "font": "STIXTwoMath-Regular",
+            "size_tex_pt": 11.82598
+          },
+          {
+            "text": ".",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          }
+        ]
+      },
+      "PRINT": {
+        "pdf_sha256": "59a2e2cd346aac6f1e94e379b4136d6ebe95b9465dfb1b953c091ca2fcebd7dd",
+        "chemical_line_spans": [
+          {
+            "text": "∆οκιμή χημικής γραφής: H",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "2",
+            "font": "Inter-Regular",
+            "size_tex_pt": 7.66504
+          },
+          {
+            "text": "O, H",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "2",
+            "font": "Inter-Regular",
+            "size_tex_pt": 7.66504
+          },
+          {
+            "text": "SO",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "4",
+            "font": "Inter-Regular",
+            "size_tex_pt": 7.66504
+          },
+          {
+            "text": ", Na",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "+",
+            "font": "STIXTwoMath-Regular",
+            "size_tex_pt": 8.27823
+          },
+          {
+            "text": ", SO",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "2",
+            "font": "Inter-Regular",
+            "size_tex_pt": 7.66504
+          },
+          {
+            "text": "−",
+            "font": "STIXTwoMath-Regular",
+            "size_tex_pt": 8.27823
+          },
+          {
+            "text": "4",
+            "font": "Inter-Regular",
+            "size_tex_pt": 7.66504
+          },
+          {
+            "text": "και",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": " 10",
+            "font": "STIXTwoMath-Regular",
+            "size_tex_pt": 11.82598
+          },
+          {
+            "text": "−3",
+            "font": "STIXTwoMath-Regular",
+            "size_tex_pt": 8.27823
+          },
+          {
+            "text": " ",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "mol L",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "−",
+            "font": "STIXTwoMath-Regular",
+            "size_tex_pt": 8.27823
+          },
+          {
+            "text": "1",
+            "font": "Inter-Regular",
+            "size_tex_pt": 7.66504
+          },
+          {
+            "text": ". Ζεύγη",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "σύγκρισης:",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": " 𝜈/𝑣",
+            "font": "STIXTwoMath-Regular",
+            "size_tex_pt": 11.82598
+          },
+          {
+            "text": ",",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": " 𝜌/𝑝",
+            "font": "STIXTwoMath-Regular",
+            "size_tex_pt": 11.82598
+          },
+          {
+            "text": ",",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": " 𝜇/𝑢",
+            "font": "STIXTwoMath-Regular",
+            "size_tex_pt": 11.82598
+          },
+          {
+            "text": "και",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": " 𝛼/𝑎",
+            "font": "STIXTwoMath-Regular",
+            "size_tex_pt": 11.82598
+          },
+          {
+            "text": ".",
+            "font": "Inter-Regular",
+            "size_tex_pt": 10.95001
+          }
+        ]
+      }
+    },
+    "D_STIX_FAMILY": {
+      "SCREEN": {
+        "pdf_sha256": "328f8fdcc5a81d9e8064084a8bccc6449c3c33585484f0e5749dd77408e5d20c",
+        "chemical_line_spans": [
+          {
+            "text": "Δοκιμή χημικής γραφής: H",
+            "font": "STIXTwoText-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "2",
+            "font": "STIXTwoText-Regular",
+            "size_tex_pt": 7.66504
+          },
+          {
+            "text": "O, H",
+            "font": "STIXTwoText-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "2",
+            "font": "STIXTwoText-Regular",
+            "size_tex_pt": 7.66504
+          },
+          {
+            "text": "SO",
+            "font": "STIXTwoText-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "4",
+            "font": "STIXTwoText-Regular",
+            "size_tex_pt": 7.66504
+          },
+          {
+            "text": ", Na",
+            "font": "STIXTwoText-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "+",
+            "font": "STIXTwoMath-Regular",
+            "size_tex_pt": 7.66504
+          },
+          {
+            "text": ", SO",
+            "font": "STIXTwoText-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "2",
+            "font": "STIXTwoText-Regular",
+            "size_tex_pt": 7.66504
+          },
+          {
+            "text": "−",
+            "font": "STIXTwoMath-Regular",
+            "size_tex_pt": 7.66504
+          },
+          {
+            "text": "4",
+            "font": "STIXTwoText-Regular",
+            "size_tex_pt": 7.66504
+          },
+          {
+            "text": " ",
+            "font": "STIXTwoText-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "και",
+            "font": "STIXTwoText-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": " 10",
+            "font": "STIXTwoMath-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "−3",
+            "font": "STIXTwoMath-Regular",
+            "size_tex_pt": 7.66504
+          },
+          {
+            "text": " mol L",
+            "font": "STIXTwoText-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "−",
+            "font": "STIXTwoMath-Regular",
+            "size_tex_pt": 7.66504
+          },
+          {
+            "text": "1",
+            "font": "STIXTwoText-Regular",
+            "size_tex_pt": 7.66504
+          },
+          {
+            "text": ". Ζεύγη σύγκρισης:",
+            "font": "STIXTwoText-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "𝜈/𝑣",
+            "font": "STIXTwoMath-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": ",",
+            "font": "STIXTwoText-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": " 𝜌/𝑝",
+            "font": "STIXTwoMath-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": ",",
+            "font": "STIXTwoText-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": " 𝜇/𝑢",
+            "font": "STIXTwoMath-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "και",
+            "font": "STIXTwoText-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": " 𝛼/𝑎",
+            "font": "STIXTwoMath-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": ".",
+            "font": "STIXTwoText-Regular",
+            "size_tex_pt": 10.95001
+          }
+        ]
+      },
+      "PRINT": {
+        "pdf_sha256": "07d8cd00495fd40011ed3fe101b0128cb6042d52cf95cbb486d1ecff42f93324",
+        "chemical_line_spans": [
+          {
+            "text": "Δοκιμή χημικής γραφής: H",
+            "font": "STIXTwoText-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "2",
+            "font": "STIXTwoText-Regular",
+            "size_tex_pt": 7.66504
+          },
+          {
+            "text": "O, H",
+            "font": "STIXTwoText-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "2",
+            "font": "STIXTwoText-Regular",
+            "size_tex_pt": 7.66504
+          },
+          {
+            "text": "SO",
+            "font": "STIXTwoText-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "4",
+            "font": "STIXTwoText-Regular",
+            "size_tex_pt": 7.66504
+          },
+          {
+            "text": ", Na",
+            "font": "STIXTwoText-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "+",
+            "font": "STIXTwoMath-Regular",
+            "size_tex_pt": 7.66504
+          },
+          {
+            "text": ", SO",
+            "font": "STIXTwoText-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "2",
+            "font": "STIXTwoText-Regular",
+            "size_tex_pt": 7.66504
+          },
+          {
+            "text": "−",
+            "font": "STIXTwoMath-Regular",
+            "size_tex_pt": 7.66504
+          },
+          {
+            "text": "4",
+            "font": "STIXTwoText-Regular",
+            "size_tex_pt": 7.66504
+          },
+          {
+            "text": " ",
+            "font": "STIXTwoText-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "και",
+            "font": "STIXTwoText-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": " 10",
+            "font": "STIXTwoMath-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "−3",
+            "font": "STIXTwoMath-Regular",
+            "size_tex_pt": 7.66504
+          },
+          {
+            "text": " mol L",
+            "font": "STIXTwoText-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "−",
+            "font": "STIXTwoMath-Regular",
+            "size_tex_pt": 7.66504
+          },
+          {
+            "text": "1",
+            "font": "STIXTwoText-Regular",
+            "size_tex_pt": 7.66504
+          },
+          {
+            "text": ". Ζεύγη σύγκρισης:",
+            "font": "STIXTwoText-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "𝜈/𝑣",
+            "font": "STIXTwoMath-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": ",",
+            "font": "STIXTwoText-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": " 𝜌/𝑝",
+            "font": "STIXTwoMath-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": ",",
+            "font": "STIXTwoText-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": " 𝜇/𝑢",
+            "font": "STIXTwoMath-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "και",
+            "font": "STIXTwoText-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": " 𝛼/𝑎",
+            "font": "STIXTwoMath-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": ".",
+            "font": "STIXTwoText-Regular",
+            "size_tex_pt": 10.95001
+          }
+        ]
+      }
+    },
+    "E_LIBERTINUS": {
+      "SCREEN": {
+        "pdf_sha256": "9bd5cfe3476602ef5393fc0873817346df569201199132f510bd6d64a78367ff",
+        "chemical_line_spans": [
+          {
+            "text": "Δοκιμή χημικής γραφής: H",
+            "font": "LibertinusSerif-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "2",
+            "font": "LibertinusSerif-Regular",
+            "size_tex_pt": 8.76003
+          },
+          {
+            "text": "O, H",
+            "font": "LibertinusSerif-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "2",
+            "font": "LibertinusSerif-Regular",
+            "size_tex_pt": 8.76003
+          },
+          {
+            "text": "SO",
+            "font": "LibertinusSerif-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "4",
+            "font": "LibertinusSerif-Regular",
+            "size_tex_pt": 8.76003
+          },
+          {
+            "text": ", Na",
+            "font": "LibertinusSerif-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "+",
+            "font": "LibertinusMath-Regular",
+            "size_tex_pt": 8.76003
+          },
+          {
+            "text": ", SO",
+            "font": "LibertinusSerif-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "2",
+            "font": "LibertinusSerif-Regular",
+            "size_tex_pt": 8.76003
+          },
+          {
+            "text": "−",
+            "font": "LibertinusMath-Regular",
+            "size_tex_pt": 8.76003
+          },
+          {
+            "text": "4",
+            "font": "LibertinusSerif-Regular",
+            "size_tex_pt": 8.76003
+          },
+          {
+            "text": " ",
+            "font": "LibertinusSerif-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "και",
+            "font": "LibertinusSerif-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": " 10",
+            "font": "LibertinusMath-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "−3",
+            "font": "LibertinusMath-Regular",
+            "size_tex_pt": 8.76003
+          },
+          {
+            "text": " mol L",
+            "font": "LibertinusSerif-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "−",
+            "font": "LibertinusMath-Regular",
+            "size_tex_pt": 8.76003
+          },
+          {
+            "text": "1",
+            "font": "LibertinusSerif-Regular",
+            "size_tex_pt": 8.76003
+          },
+          {
+            "text": ". Ζεύγη σύγκρισης:",
+            "font": "LibertinusSerif-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "𝜈/𝑣",
+            "font": "LibertinusMath-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": ",",
+            "font": "LibertinusSerif-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": " 𝜌/𝑝",
+            "font": "LibertinusMath-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": ",",
+            "font": "LibertinusSerif-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": " 𝜇/𝑢",
+            "font": "LibertinusMath-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "και",
+            "font": "LibertinusSerif-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": " 𝛼/𝑎",
+            "font": "LibertinusMath-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": ".",
+            "font": "LibertinusSerif-Regular",
+            "size_tex_pt": 10.95001
+          }
+        ]
+      },
+      "PRINT": {
+        "pdf_sha256": "9168663270b597c1cf01a021988d9b4291c6362a201bdcc4a6f033b42be3c825",
+        "chemical_line_spans": [
+          {
+            "text": "Δοκιμή χημικής γραφής: H",
+            "font": "LibertinusSerif-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "2",
+            "font": "LibertinusSerif-Regular",
+            "size_tex_pt": 8.76003
+          },
+          {
+            "text": "O, H",
+            "font": "LibertinusSerif-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "2",
+            "font": "LibertinusSerif-Regular",
+            "size_tex_pt": 8.76003
+          },
+          {
+            "text": "SO",
+            "font": "LibertinusSerif-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "4",
+            "font": "LibertinusSerif-Regular",
+            "size_tex_pt": 8.76003
+          },
+          {
+            "text": ", Na",
+            "font": "LibertinusSerif-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "+",
+            "font": "LibertinusMath-Regular",
+            "size_tex_pt": 8.76003
+          },
+          {
+            "text": ", SO",
+            "font": "LibertinusSerif-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "2",
+            "font": "LibertinusSerif-Regular",
+            "size_tex_pt": 8.76003
+          },
+          {
+            "text": "−",
+            "font": "LibertinusMath-Regular",
+            "size_tex_pt": 8.76003
+          },
+          {
+            "text": "4",
+            "font": "LibertinusSerif-Regular",
+            "size_tex_pt": 8.76003
+          },
+          {
+            "text": " ",
+            "font": "LibertinusSerif-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "και",
+            "font": "LibertinusSerif-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": " 10",
+            "font": "LibertinusMath-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "−3",
+            "font": "LibertinusMath-Regular",
+            "size_tex_pt": 8.76003
+          },
+          {
+            "text": " mol L",
+            "font": "LibertinusSerif-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "−",
+            "font": "LibertinusMath-Regular",
+            "size_tex_pt": 8.76003
+          },
+          {
+            "text": "1",
+            "font": "LibertinusSerif-Regular",
+            "size_tex_pt": 8.76003
+          },
+          {
+            "text": ". Ζεύγη σύγκρισης:",
+            "font": "LibertinusSerif-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "𝜈/𝑣",
+            "font": "LibertinusMath-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": ",",
+            "font": "LibertinusSerif-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": " 𝜌/𝑝",
+            "font": "LibertinusMath-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": ",",
+            "font": "LibertinusSerif-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": " 𝜇/𝑢",
+            "font": "LibertinusMath-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": "και",
+            "font": "LibertinusSerif-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": " 𝛼/𝑎",
+            "font": "LibertinusMath-Regular",
+            "size_tex_pt": 10.95001
+          },
+          {
+            "text": ".",
+            "font": "LibertinusSerif-Regular",
+            "size_tex_pt": 10.95001
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+\documentclass[11pt,twoside,openright]{book}
+\input{config/book-config.tex}
+\newcommand{\BookMathScale}{1.05}
+\newif\ifBookTwoInkProof\BookTwoInkProoffalse
+\newif\ifPrintThreeInk\PrintThreeInkfalse
+\usepackage{styles/universalbook}
+\setmathfont[Scale=\BookMathScale]{\MathFontName}
+\begin{document}
+\pagestyle{empty}
+Κείμενο ελέγχου $x_A=2\,\mathrm{m}$.
+\begin{equation}\Delta x=x_B-x_A.\end{equation}
+\end{document}

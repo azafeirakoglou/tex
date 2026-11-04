@@ -1,0 +1,57 @@
+{
+  "stable_version": "1.0.10",
+  "page_mm": [
+    170,
+    240
+  ],
+  "variants": {
+    "A_CURRENT": {
+      "label": "A — CURRENT",
+      "math_scale": 1.0,
+      "family": "current",
+      "nominal_text_pt": 10.95,
+      "applied_text_scale": 1.0,
+      "content_sha256": "0ce6fd1851e19954a74ea770809d1c72dea640a9d5a2d7667a142f8ead3ce88e",
+      "override_file": "/workspace/typography-review/variants/A_CURRENT/typography-overrides.tex"
+    },
+    "B_STIX105": {
+      "label": "B — STIX 105%",
+      "math_scale": 1.05,
+      "family": "current",
+      "nominal_text_pt": 10.95,
+      "applied_text_scale": 1.0,
+      "content_sha256": "0ce6fd1851e19954a74ea770809d1c72dea640a9d5a2d7667a142f8ead3ce88e",
+      "override_file": "/workspace/typography-review/variants/B_STIX105/typography-overrides.tex"
+    },
+    "C_STIX108": {
+      "label": "C — STIX 108%",
+      "math_scale": 1.08,
+      "family": "current",
+      "nominal_text_pt": 10.95,
+      "applied_text_scale": 1.0,
+      "content_sha256": "0ce6fd1851e19954a74ea770809d1c72dea640a9d5a2d7667a142f8ead3ce88e",
+      "override_file": "/workspace/typography-review/variants/C_STIX108/typography-overrides.tex"
+    },
+    "D_STIX_FAMILY": {
+      "label": "D — COMPLETE STIX FAMILY",
+      "math_scale": 1.0,
+      "family": "D",
+      "nominal_text_pt": 10.95,
+      "applied_text_scale": 1.0,
+      "content_sha256": "0ce6fd1851e19954a74ea770809d1c72dea640a9d5a2d7667a142f8ead3ce88e",
+      "override_file": "/workspace/typography-review/variants/D_STIX_FAMILY/typography-overrides.tex"
+    },
+    "E_LIBERTINUS": {
+      "label": "E — LIBERTINUS FAMILY",
+      "math_scale": 1.0,
+      "family": "E",
+      "nominal_text_pt": 10.95,
+      "applied_text_scale": 1.0,
+      "content_sha256": "0ce6fd1851e19954a74ea770809d1c72dea640a9d5a2d7667a142f8ead3ce88e",
+      "override_file": "/workspace/typography-review/variants/E_LIBERTINUS/typography-overrides.tex"
+    }
+  },
+  "source_content": "/workspace/typography-review/content/common-body.tex",
+  "content_sha256": "0ce6fd1851e19954a74ea770809d1c72dea640a9d5a2d7667a142f8ead3ce88e",
+  "D_E_optical_adjustment": "none; same nominal sizes; x-height difference recorded separately"
+}

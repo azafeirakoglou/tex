@@ -1,0 +1,1944 @@
+{
+  "purpose": "Independent typography review only; no stable changes approved or applied",
+  "core_pdf_count": 11,
+  "variant_pdf_count": 10,
+  "comparison_pages": 25,
+  "files": [
+    {
+      "path": "BASELINE_GIT_AND_FILES.json",
+      "bytes": 66926,
+      "sha256": "8c9d5b655e16aebca2921d9330327f83e10c42445c76d823a830d9d33ea3cf0d"
+    },
+    {
+      "path": "BUILD_DRIVER.log",
+      "bytes": 309,
+      "sha256": "b6963dc9a8242b67dddc384e518595f0f176857ec4daad4666933f7e09dc7135"
+    },
+    {
+      "path": "BUILD_RESULTS.json",
+      "bytes": 3150,
+      "sha256": "f6471a21436d637600a87a4caee23be4f12918eb19e308bcba8ae152cefc8787"
+    },
+    {
+      "path": "README.md",
+      "bytes": 6742,
+      "sha256": "a6fd77e056d66b25eea8d1329a5914bb21c4d1ec5e5889982e180c41ff87bc4f"
+    },
+    {
+      "path": "REQUEST.md",
+      "bytes": 12242,
+      "sha256": "1cc9d268f7705105b0ba1266eff9fec57ae14136ab83cc32c7d24da8d4df4883"
+    },
+    {
+      "path": "STABLE_INTEGRITY.json",
+      "bytes": 410,
+      "sha256": "8dfee5e0270cef80486906b2627e9dccf3237fe5dbbca42c153b70fb482496e9"
+    },
+    {
+      "path": "TYPOGRAPHY_COMPARISON.pdf",
+      "bytes": 1187879,
+      "sha256": "0fb8d1e17e1a76acc4688c36b7a7d74a0b2b52e822381e697947d5f64736c097"
+    },
+    {
+      "path": "TYPOGRAPHY_IMPLEMENTATION.md",
+      "bytes": 9066,
+      "sha256": "8c5bfeca92b2bd231f5e45e943bacb714504e34d7e3f0bfecbe6bed8073f6a9e"
+    },
+    {
+      "path": "TYPOGRAPHY_REVIEW.md",
+      "bytes": 32373,
+      "sha256": "7106981a1559fa59642243ebe314767c8a0281985ae1a04755f2f667a39746ce"
+    },
+    {
+      "path": "VARIANT_MANIFEST.json",
+      "bytes": 2207,
+      "sha256": "069bd94ca6add8255c6d89348d68065b288fdfbfe2530e629cd847376f30e50c"
+    },
+    {
+      "path": "content/CONTENT_PROVENANCE.json",
+      "bytes": 6533,
+      "sha256": "d7ed20bf5b4f9aab3a449438ed662c61d12c81b893985bd47c39ddc9a143965b"
+    },
+    {
+      "path": "content/common-body.tex",
+      "bytes": 11737,
+      "sha256": "0ce6fd1851e19954a74ea770809d1c72dea640a9d5a2d7667a142f8ead3ce88e"
+    },
+    {
+      "path": "content/prepare_content.py",
+      "bytes": 7850,
+      "sha256": "bb091576e96623bd6e49657d079d14988a85a4fd47d1256100cbf7dceba098fd"
+    },
+    {
+      "path": "fonts/FONT_MANIFEST.json",
+      "bytes": 73837,
+      "sha256": "dbb4e2cc589c89093aac22ccf221577e5f298753c0ab4a539f79deccac809257"
+    },
+    {
+      "path": "fonts/FONT_NOTES.md",
+      "bytes": 4255,
+      "sha256": "e8de09415fc33ec491edf4302cd7c11614002d2899ca0d47bbd73e71e4635353"
+    },
+    {
+      "path": "fonts/install_review_fonts.py",
+      "bytes": 7040,
+      "sha256": "21ed12068754ab7f9c68d602d1c3588b37bf0eaf8af2fdc92747a500ccfd2fea"
+    },
+    {
+      "path": "fonts/installed/LibertinusMath-Regular.otf",
+      "bytes": 588848,
+      "sha256": "ded714b0d3808af527438ed7a85f16933133f66a12104c4a83db4cc248888011"
+    },
+    {
+      "path": "fonts/installed/LibertinusSerif-Bold.otf",
+      "bytes": 293908,
+      "sha256": "0264914210ed51b3231ebc92ce529e9f2e166ba9eebf0cd4a579558690a27b64"
+    },
+    {
+      "path": "fonts/installed/LibertinusSerif-BoldItalic.otf",
+      "bytes": 259176,
+      "sha256": "47a665259f09f554f5d133d7718cdad43ff462c6a6b2328f38023465e62d57ce"
+    },
+    {
+      "path": "fonts/installed/LibertinusSerif-Italic.otf",
+      "bytes": 332312,
+      "sha256": "9a393d63d6e05f620d3dc0190dfd35a8ede58c0808cf0fc9de7fcb9c723e4c24"
+    },
+    {
+      "path": "fonts/installed/LibertinusSerif-Regular.otf",
+      "bytes": 337132,
+      "sha256": "fcf06307a77367394fcb0ccb241e59eea70dba3d732be309647611224679c733"
+    },
+    {
+      "path": "fonts/installed/LibertinusSerif-Semibold.otf",
+      "bytes": 291640,
+      "sha256": "a4b3f28e85881db34695c1f005e4c79233a6caf3a2bd286c9b418c025fb99308"
+    },
+    {
+      "path": "fonts/installed/LibertinusSerif-SemiboldItalic.otf",
+      "bytes": 343148,
+      "sha256": "397f0d7aba35ae6a988948ae046c14c6b1e0d270fcc6e292b8bc29fd625c6101"
+    },
+    {
+      "path": "fonts/installed/STIXTwoText-Bold.otf",
+      "bytes": 295708,
+      "sha256": "7ef76c666a6704f76ed3fa27bcdda55b36e558b5c2c93b49b03d854db96bdeb5"
+    },
+    {
+      "path": "fonts/installed/STIXTwoText-BoldItalic.otf",
+      "bytes": 316136,
+      "sha256": "90e88f2ac79d6c00a5ce2d8446bfdf9457aed6afc1159cde33262979d82c8586"
+    },
+    {
+      "path": "fonts/installed/STIXTwoText-Italic.otf",
+      "bytes": 308096,
+      "sha256": "cd64481fd10b69469074a3a8172fb5a22cb4116941d8aceafb8c77756b563df8"
+    },
+    {
+      "path": "fonts/installed/STIXTwoText-Medium.otf",
+      "bytes": 304420,
+      "sha256": "9cc9f870852a46d708907b96ed024b8d0067a05276d939bfe0b7e89752afc8d9"
+    },
+    {
+      "path": "fonts/installed/STIXTwoText-MediumItalic.otf",
+      "bytes": 326008,
+      "sha256": "cc6e00147828e7b1f1aeaae928cabdbf14f5bffefb4e19b0ba2c46ce56292f4e"
+    },
+    {
+      "path": "fonts/installed/STIXTwoText-Regular.otf",
+      "bytes": 292140,
+      "sha256": "c4864ca6ec071c2d31d0d8309001faa1ee3517fffb53a31a405a697b71f52ca1"
+    },
+    {
+      "path": "fonts/installed/STIXTwoText-SemiBold.otf",
+      "bytes": 304860,
+      "sha256": "896d80fbfd67e86ead7e2d593d631eab9bb142ee96dcd8e7aa8dff95ddda0f2a"
+    },
+    {
+      "path": "fonts/installed/STIXTwoText-SemiBoldItalic.otf",
+      "bytes": 325200,
+      "sha256": "93d337715289b8e3ba8757cff89d29ff95630a1d08581dd46123d4c1ad1a7e2c"
+    },
+    {
+      "path": "fonts/licenses/Inter-LICENSE.txt",
+      "bytes": 4380,
+      "sha256": "262481e844521b326f5ecd053e59b98c8b2da78c8ee1bdbb6e8174305e54935a"
+    },
+    {
+      "path": "fonts/licenses/Libertinus-OFL.txt",
+      "bytes": 4426,
+      "sha256": "9aeecc8107c489ec1ec0068b0313e531a760edf3493705b32ab8ab8215a8794e"
+    },
+    {
+      "path": "fonts/licenses/NotoSerif-OFL.txt",
+      "bytes": 4377,
+      "sha256": "0dab92d0544f7b233403f14b84a663bdbfa746982eda629e7f4f9ffe1b036feb"
+    },
+    {
+      "path": "fonts/licenses/STIXTwoMath-OFL.txt",
+      "bytes": 4519,
+      "sha256": "0c8825913b60d858aacdb33c4ca6660a7d64b0d6464702efbb19313f5765861a"
+    },
+    {
+      "path": "fonts/licenses/STIXTwoText-OFL.txt",
+      "bytes": 4519,
+      "sha256": "0c8825913b60d858aacdb33c4ca6660a7d64b0d6464702efbb19313f5765861a"
+    },
+    {
+      "path": "fonts/probes/D_STIX.build.log",
+      "bytes": 2601,
+      "sha256": "c21e5eb7e24f788e24b8bcfc672993fe04ccb3375380ea898817f8cde54e259a"
+    },
+    {
+      "path": "fonts/probes/D_STIX.log",
+      "bytes": 12960,
+      "sha256": "0a49d50b0f8f888cf97683f9b5eccdcba354e8c90d6f242fa26ef976b7fae864"
+    },
+    {
+      "path": "fonts/probes/D_STIX.pdf",
+      "bytes": 5341,
+      "sha256": "8561a96dd327b0599416628d54b0c3012b0e55bdac4c962cab9050c3f6a44ba6"
+    },
+    {
+      "path": "fonts/probes/D_STIX.png",
+      "bytes": 22338,
+      "sha256": "3cf37a0aa6206fa1621b85a41c07d6f325f39a4c81b3d4cef97a7709cde4c062"
+    },
+    {
+      "path": "fonts/probes/D_STIX.tex",
+      "bytes": 717,
+      "sha256": "239a3f5fcb0c7d12153932ad68142cb3a073f844647ad3354811a0dc67be9cd7"
+    },
+    {
+      "path": "fonts/probes/E_LIBERTINUS.build.log",
+      "bytes": 1858,
+      "sha256": "463154129ea63151221b41ca82994b5c9bb45361c4d3f8cdbd62a8bb469fec99"
+    },
+    {
+      "path": "fonts/probes/E_LIBERTINUS.log",
+      "bytes": 12290,
+      "sha256": "2f93ac320ffad4bec902f74c59943ff249b2f7ec01a3114341bb4063892be21c"
+    },
+    {
+      "path": "fonts/probes/E_LIBERTINUS.pdf",
+      "bytes": 5594,
+      "sha256": "f46508a1a237b5270c3c644d1c0aad22962204f455902791a83c71d3a4a78bd7"
+    },
+    {
+      "path": "fonts/probes/E_LIBERTINUS.png",
+      "bytes": 20807,
+      "sha256": "bff7283bcdcf6e9dd839d8c0b7366a96f258dd85ebf40d3a596a69fecc79e613"
+    },
+    {
+      "path": "fonts/probes/E_LIBERTINUS.tex",
+      "bytes": 725,
+      "sha256": "a81732e57233a56d98702dd273647351442b5a15e364121d69ad9c9bd07acf59"
+    },
+    {
+      "path": "fonts/probes/POLYTONIC_PROBE.json",
+      "bytes": 9699,
+      "sha256": "b23035595c3baa104f9641d45ddd9575dbe26aadd6a50136818cdb875956d073"
+    },
+    {
+      "path": "fonts/probes/check_polytonic.py",
+      "bytes": 3376,
+      "sha256": "c5919e289c7b2906d3dc572ba395cd5556e21c8caedebbe547b73bcc4fd15178"
+    },
+    {
+      "path": "logs/A_CURRENT_PRINT.log",
+      "bytes": 69349,
+      "sha256": "c47c9cb28271609cda7588fc81334646078d56264a8ceb00b05fa2f49f95c70a"
+    },
+    {
+      "path": "logs/A_CURRENT_PRINT_driver.log",
+      "bytes": 319,
+      "sha256": "7bd0560f77e97c17f52999b1e8ed096884459e74a7385144ebcf45055d505c7f"
+    },
+    {
+      "path": "logs/A_CURRENT_SCREEN.log",
+      "bytes": 69050,
+      "sha256": "e57893acf4493a9566b4db834dbc19f7109e77032b05755986f9e79c488d5249"
+    },
+    {
+      "path": "logs/A_CURRENT_SCREEN_driver.log",
+      "bytes": 324,
+      "sha256": "69700b8b56f79716e5de7a1f7418e056d87d8dd9788bb6499fdfdc0d5f3d92f3"
+    },
+    {
+      "path": "logs/B_STIX105_PRINT.log",
+      "bytes": 78242,
+      "sha256": "612fe3d5d97758f6808d31ddc52b1895da0d45e1b2db55183f75426901757b9c"
+    },
+    {
+      "path": "logs/B_STIX105_PRINT_driver.log",
+      "bytes": 44584,
+      "sha256": "6cb7ba78589d768d9887afb02147321618e0238ba691d0ebd7c5a7a55b10b345"
+    },
+    {
+      "path": "logs/B_STIX105_SCREEN.log",
+      "bytes": 77943,
+      "sha256": "c1b8e20c1ff0645bfd95b3c0e1ad551600896ee10434496e9abfa661d5ff23f3"
+    },
+    {
+      "path": "logs/B_STIX105_SCREEN_driver.log",
+      "bytes": 44212,
+      "sha256": "e022ab707c002290a06e0f2008b94ff08e07512628bf9a1ce18b5332d778cf80"
+    },
+    {
+      "path": "logs/C_STIX108_PRINT.log",
+      "bytes": 78239,
+      "sha256": "024b07781499cc101acba3be121a4c324148b3b91972c209217c0930e8e9cf14"
+    },
+    {
+      "path": "logs/C_STIX108_PRINT_driver.log",
+      "bytes": 44584,
+      "sha256": "239c5ac90347943425f90dec113cc1052bebcab72124abc8b6abee6f3769be9b"
+    },
+    {
+      "path": "logs/C_STIX108_SCREEN.log",
+      "bytes": 77940,
+      "sha256": "0dffb5789c254a1247a420b65a0f12747fca0efac284594a136ecbffd9d2254b"
+    },
+    {
+      "path": "logs/C_STIX108_SCREEN_driver.log",
+      "bytes": 44212,
+      "sha256": "1f1f0b2f57353dbd3294eb5c874498eab22e9383d75f441dad6b8a8dac733a19"
+    },
+    {
+      "path": "logs/D_STIX_FAMILY_PRINT.log",
+      "bytes": 71466,
+      "sha256": "b078e0593bda148fd7fb6f39e45e25992084fb8e71393f6a3fc4f0341986d143"
+    },
+    {
+      "path": "logs/D_STIX_FAMILY_PRINT_driver.log",
+      "bytes": 44856,
+      "sha256": "d8b562cc57e10b3d944524cb18cbc3e2e8125a8cff400b60eaf1398bd6271cbd"
+    },
+    {
+      "path": "logs/D_STIX_FAMILY_SCREEN.log",
+      "bytes": 71167,
+      "sha256": "886529972bd2a5633130fdff49b8ec41fdeae7c9cbc6960bd0e35690260158f3"
+    },
+    {
+      "path": "logs/D_STIX_FAMILY_SCREEN_driver.log",
+      "bytes": 44481,
+      "sha256": "01fa358297c36f49f22f5f06be1c434519fd1d7963235cf0da176d000116fb07"
+    },
+    {
+      "path": "logs/E_LIBERTINUS_PRINT.log",
+      "bytes": 69955,
+      "sha256": "d534240cc825ef8c6beee4f3e0acec12e955a86c3bb4e3e1a4e0b48eb5ed4437"
+    },
+    {
+      "path": "logs/E_LIBERTINUS_PRINT_driver.log",
+      "bytes": 44792,
+      "sha256": "8c8f8559a0dbc4c65995c59b6c822dc51b9612f8303266259d122aec17b83ba4"
+    },
+    {
+      "path": "logs/E_LIBERTINUS_SCREEN.log",
+      "bytes": 69660,
+      "sha256": "e813035da26dff99ada92e1bd309cc89cecc08f7ae3059f9c933e257fa9f82d8"
+    },
+    {
+      "path": "logs/E_LIBERTINUS_SCREEN_driver.log",
+      "bytes": 44422,
+      "sha256": "86a8ec4f9422b310a8d094d3b89042117761020592110e89203f3843e70e772f"
+    },
+    {
+      "path": "make_comparison.py",
+      "bytes": 3064,
+      "sha256": "4803da04688598b6534be83e422823238ed27e4214eb981c772de2a5fe842d11"
+    },
+    {
+      "path": "package_review.py",
+      "bytes": 3338,
+      "sha256": "c5d552665351959c85c4513ad1fa95a369dc83cce83dbd7bf597f3af1212975e"
+    },
+    {
+      "path": "pdf/A_CURRENT_PRINT.pdf",
+      "bytes": 198457,
+      "sha256": "e115e6baa883dd1cbc2f9ade39d6c814a75ec9dab350487e40a1ac6c3e428fc8"
+    },
+    {
+      "path": "pdf/A_CURRENT_SCREEN.pdf",
+      "bytes": 198680,
+      "sha256": "a5dbfe5339c8962e2326d14f8e14a81904b202692142a7483a7377770e9f35ac"
+    },
+    {
+      "path": "pdf/B_STIX105_PRINT.pdf",
+      "bytes": 198532,
+      "sha256": "90fbd258e5c76b25459649fe841ded25dfa7841793a69a123211c305fbfc308f"
+    },
+    {
+      "path": "pdf/B_STIX105_SCREEN.pdf",
+      "bytes": 198749,
+      "sha256": "55d72e0367d310e259b1ce5047168fbb5127cfec9c1b8dd6469614d7fc5d5f54"
+    },
+    {
+      "path": "pdf/C_STIX108_PRINT.pdf",
+      "bytes": 198503,
+      "sha256": "59a2e2cd346aac6f1e94e379b4136d6ebe95b9465dfb1b953c091ca2fcebd7dd"
+    },
+    {
+      "path": "pdf/C_STIX108_SCREEN.pdf",
+      "bytes": 198708,
+      "sha256": "55a698db18ea5a79c1172073e7ae7985631d249d55b89171b90368c9767b9e69"
+    },
+    {
+      "path": "pdf/D_STIX_FAMILY_PRINT.pdf",
+      "bytes": 192240,
+      "sha256": "07d8cd00495fd40011ed3fe101b0128cb6042d52cf95cbb486d1ecff42f93324"
+    },
+    {
+      "path": "pdf/D_STIX_FAMILY_SCREEN.pdf",
+      "bytes": 192457,
+      "sha256": "328f8fdcc5a81d9e8064084a8bccc6449c3c33585484f0e5749dd77408e5d20c"
+    },
+    {
+      "path": "pdf/E_LIBERTINUS_PRINT.pdf",
+      "bytes": 182922,
+      "sha256": "9168663270b597c1cf01a021988d9b4291c6362a201bdcc4a6f033b42be3c825"
+    },
+    {
+      "path": "pdf/E_LIBERTINUS_SCREEN.pdf",
+      "bytes": 183112,
+      "sha256": "9bd5cfe3476602ef5393fc0873817346df569201199132f510bd6d64a78367ff"
+    },
+    {
+      "path": "prepare_runtime.py",
+      "bytes": 702,
+      "sha256": "270a0ac486770f2ba15d850b6906b9f507f3c7c17f7def40c4eb0f06e3bd884c"
+    },
+    {
+      "path": "previews/A_CURRENT_p1.png",
+      "bytes": 90542,
+      "sha256": "6c0fcefb231cfc40c5eabd5b1b6578d936463dc0cc541095d574aee67d6b7b0d"
+    },
+    {
+      "path": "previews/A_CURRENT_p2.png",
+      "bytes": 75830,
+      "sha256": "72efa4f598ab25d8f87a8feaa61a8215016ba47607e6a27451c9dbb498738056"
+    },
+    {
+      "path": "previews/A_CURRENT_p3.png",
+      "bytes": 78327,
+      "sha256": "b6ed8ca9f9a08c24edfcd74a4292787c2086e8fcd2e0eac62fded38bc74a6b61"
+    },
+    {
+      "path": "previews/A_CURRENT_p4.png",
+      "bytes": 87537,
+      "sha256": "77b7613785b58ad8f86cd199078440248f838cfb11dbd71a288fc0835d9e0800"
+    },
+    {
+      "path": "previews/A_CURRENT_p5.png",
+      "bytes": 49125,
+      "sha256": "445059b33e0fca1460bd1f2544f7cb974b08acbcc5c16c9a686d90bdf6accc82"
+    },
+    {
+      "path": "previews/B_STIX105_p1.png",
+      "bytes": 91124,
+      "sha256": "196d2df42b8a9d099080b5b437167355de68a03be4ce15b5d921725d035387e8"
+    },
+    {
+      "path": "previews/B_STIX105_p2.png",
+      "bytes": 76250,
+      "sha256": "86fa8cec93fd22a8ca5f5ec2ac23d182aafc463227826426a6efe7f8ba42f4a6"
+    },
+    {
+      "path": "previews/B_STIX105_p3.png",
+      "bytes": 80647,
+      "sha256": "fc7ed35a835f97c9d05a05d1054f5544d619c81e0b660184f6df552232274a35"
+    },
+    {
+      "path": "previews/B_STIX105_p4.png",
+      "bytes": 87431,
+      "sha256": "499ce6ccd862d4b16bcb95a191ff45c6ed847056c58b7898da415a37e4786161"
+    },
+    {
+      "path": "previews/B_STIX105_p5.png",
+      "bytes": 49072,
+      "sha256": "0222c44ad6f6379fc1139672d61795594b5a54d21f4a45ff1a85d3769cc82a4c"
+    },
+    {
+      "path": "previews/COMPARISON_topic1.png",
+      "bytes": 433990,
+      "sha256": "03d1af235cd0ca4fc17274ab89c329526728f93cbdb708fa560c86e4726db6c4"
+    },
+    {
+      "path": "previews/COMPARISON_topic2.png",
+      "bytes": 340527,
+      "sha256": "7f8ec834aafb978eb277e0dacc81f9a6ecf63a52c41645a601866cfb1330fecf"
+    },
+    {
+      "path": "previews/COMPARISON_topic3.png",
+      "bytes": 431915,
+      "sha256": "7852ae0d7cf043c027cf107b5ed9348f26ab870b3d9033a95ec4c3273ea4f85f"
+    },
+    {
+      "path": "previews/COMPARISON_topic4.png",
+      "bytes": 387366,
+      "sha256": "0c84ae588d34d8d56f34e888b3ed0c0a1da1bb7c267039808760f6ff9470a8e5"
+    },
+    {
+      "path": "previews/COMPARISON_topic5.png",
+      "bytes": 235944,
+      "sha256": "0780f922d6d60a3a27846bf2081dc2fea8f31ab343c087a5b003437fa347de33"
+    },
+    {
+      "path": "previews/C_STIX108_p1.png",
+      "bytes": 91629,
+      "sha256": "c685ba5397652626844782b6c437a8b276bcdb2ab685c996245b146c5fcc7a73"
+    },
+    {
+      "path": "previews/C_STIX108_p2.png",
+      "bytes": 76552,
+      "sha256": "5c0849640495523082fbd449071b352c531b4f7999281f3963c1f16a619efc18"
+    },
+    {
+      "path": "previews/C_STIX108_p3.png",
+      "bytes": 81226,
+      "sha256": "9bb6693a1e5629b5cf431e4d9f049c164d97928a59784dd403ffa9bdf5b15bd8"
+    },
+    {
+      "path": "previews/C_STIX108_p4.png",
+      "bytes": 87447,
+      "sha256": "08adaeabeae95032fdb1ac90e3707ed8f03f9b117a6b269299f8d13105879dd2"
+    },
+    {
+      "path": "previews/C_STIX108_p5.png",
+      "bytes": 49951,
+      "sha256": "031a6001ace8c41052d0dffa8adfd50a7541d34a95597f2ba09d22f6b7a6eb9d"
+    },
+    {
+      "path": "previews/D_STIX_FAMILY_p1.png",
+      "bytes": 84551,
+      "sha256": "24355ba43ec6941f57a6619d275ea61c2cdd7b63b7f40371bf6a9445410e4a0c"
+    },
+    {
+      "path": "previews/D_STIX_FAMILY_p2.png",
+      "bytes": 73051,
+      "sha256": "66e9f14a4a371a2929166fda14f5a8c75f9274c8b95b2e84161e722d8d5d87f4"
+    },
+    {
+      "path": "previews/D_STIX_FAMILY_p3.png",
+      "bytes": 76495,
+      "sha256": "23f33b92dffb99d436b3cdc55e51d7a68ffbd3c4ec4123dd8dc807459d24e98f"
+    },
+    {
+      "path": "previews/D_STIX_FAMILY_p4.png",
+      "bytes": 83181,
+      "sha256": "be7f70d266b84a27e29bae7909478846e7f34673aa8e4fd1191d7673fd2991c4"
+    },
+    {
+      "path": "previews/D_STIX_FAMILY_p5.png",
+      "bytes": 46140,
+      "sha256": "cb23768b2b22b16f1f9ff31b38ae5c90ea49f2434a2d5b6dc96cd9613358b6c3"
+    },
+    {
+      "path": "previews/E_LIBERTINUS_p1.png",
+      "bytes": 82816,
+      "sha256": "90ffeeb806267e061e91308facaccd93bca01e3a76da204ac8b33e482af003c6"
+    },
+    {
+      "path": "previews/E_LIBERTINUS_p2.png",
+      "bytes": 69719,
+      "sha256": "b77a174fb11f5201fbc6c3bac176ed0988e17282fd395fa166ddae1cb84a9668"
+    },
+    {
+      "path": "previews/E_LIBERTINUS_p3.png",
+      "bytes": 73113,
+      "sha256": "4c1e2f179ffa936267a3d8d4e5376a302338087415845d4531547546d17c241e"
+    },
+    {
+      "path": "previews/E_LIBERTINUS_p4.png",
+      "bytes": 78054,
+      "sha256": "95ce5887d4121234e56edf9a38057d2634b9cb3690474a9b4e720838c6acfc75"
+    },
+    {
+      "path": "previews/E_LIBERTINUS_p5.png",
+      "bytes": 43767,
+      "sha256": "6dcaa4b33dbddbfcd94d96a0bbdf8085265f4a68ec74d846b70e5d3ae79ab16e"
+    },
+    {
+      "path": "qa/AUDIT_DRIVER.log",
+      "bytes": 218,
+      "sha256": "38743802a97d6f53f84e38d53cf157212a7958a1beb2b2cdeb4b68c929396e45"
+    },
+    {
+      "path": "qa/A_CURRENT/pair-preflight.json",
+      "bytes": 4460,
+      "sha256": "9f429ef0c5b8f15db4751e5651f5cdbd0ae6537f20d6510a8bfb72a420b76ef3"
+    },
+    {
+      "path": "qa/B_STIX105/pair-preflight.json",
+      "bytes": 4460,
+      "sha256": "ce27aabeb638837e03605835537fb223d667eb3997789123184df47fc01af4d4"
+    },
+    {
+      "path": "qa/CHEMISTRY_FONT_SIZES.json",
+      "bytes": 39643,
+      "sha256": "f5c9d9f303925643f7f02ba88b81ebf34521fade79701ee2f8674741fbdfa967"
+    },
+    {
+      "path": "qa/COMPARISON_AND_PROTRUSION.json",
+      "bytes": 18543,
+      "sha256": "064b1264e82b2054314d74e2824a709129a215464efecbe41cb0a1a81d02b685"
+    },
+    {
+      "path": "qa/C_STIX108/pair-preflight.json",
+      "bytes": 4460,
+      "sha256": "1805051fdd5f0fc31ee4189875663ae2d0b013c5f6c4ef4832741fd836ae4dd6"
+    },
+    {
+      "path": "qa/D_STIX_FAMILY/pair-preflight.json",
+      "bytes": 4468,
+      "sha256": "6fb6f87812fd860d20e7fd6559e1b257fbede9560a8eb575b9b4568e18e9c1a1"
+    },
+    {
+      "path": "qa/EXTRACTION_DIFFERENCES.json",
+      "bytes": 2008,
+      "sha256": "22485a6af4b440c202a6609c0d68420b4a06699d06fe084a10c29ddc9d447d9c"
+    },
+    {
+      "path": "qa/E_LIBERTINUS/pair-preflight.json",
+      "bytes": 4466,
+      "sha256": "f9886666c32bf9932dbe657b0b7695570a494939f18809af5d80a7f91857b170"
+    },
+    {
+      "path": "qa/INK_METHOD_BASELINE_CHECK.json",
+      "bytes": 5037,
+      "sha256": "ee8b76e064151e4efd18661d76b02fe53b0316548b052346f736f2bfe794731a"
+    },
+    {
+      "path": "qa/QA_KEY_MEASUREMENTS.json",
+      "bytes": 2783,
+      "sha256": "39626108a06ada34406255951fd67dff6eca86a1b7bf687991c3c7897d9c356c"
+    },
+    {
+      "path": "qa/QA_SUMMARY.json",
+      "bytes": 234597,
+      "sha256": "06ce9e76476334ef56e25944031631d2dc635f17560dac515a2b891d72c4e9fa"
+    },
+    {
+      "path": "qa/QA_SUMMARY.md",
+      "bytes": 8293,
+      "sha256": "cce679031184fd9cf77917d973f3337cf4e7f95867a736b306641ad7593a8d5e"
+    },
+    {
+      "path": "qa/audit_typography.py",
+      "bytes": 15967,
+      "sha256": "c0c4c49d94cd2107cbff816e260386cbf71923419d651227d2d36e4ef034da91"
+    },
+    {
+      "path": "qa/check_comparison_and_protrusion.py",
+      "bytes": 4472,
+      "sha256": "1d97ae680ec385bd705409d2890616749fe22d043a194f19cbe8d893c866432a"
+    },
+    {
+      "path": "qa/implementation-probe/PROBE_RESULT.json",
+      "bytes": 1269,
+      "sha256": "39ce4bf4448ad51bead107afa00da1810ba9220fee332e3b69b0a785bfc6a495"
+    },
+    {
+      "path": "qa/implementation-probe/central-macro.log",
+      "bytes": 74094,
+      "sha256": "aaaf2cfcc4e3027aa4cf8187fd1d93e662e8cfdcd484bb3e1642434c47856aaf"
+    },
+    {
+      "path": "qa/implementation-probe/central-macro.pdf",
+      "bytes": 15313,
+      "sha256": "7199298f3eb0f39b56dafbdc402305beb31b8e3609f65c59d1c9b9899c5e64fe"
+    },
+    {
+      "path": "qa/implementation-probe/central-macro.tex",
+      "bytes": 431,
+      "sha256": "a2a56d11e9127bd5f60594f608ddbba990de8778981f569f00b30e2ce26d5c4e"
+    },
+    {
+      "path": "qa/implementation-probe/driver.log",
+      "bytes": 41232,
+      "sha256": "410f85fd7f53326c5d7de8ab57fbc94feecae12d97484193bc1aad9be837472d"
+    },
+    {
+      "path": "qa/ink_collision.py",
+      "bytes": 15814,
+      "sha256": "48257e80b302d3df3bfc99bbdfcfc8b5372e362d43c4a8dc6d3e29a590e34ef9"
+    },
+    {
+      "path": "reports/BASELINE_MAIN_PDF_SAMPLES.json",
+      "bytes": 29056,
+      "sha256": "af2948296cd47de0345ddaefff3496f487af9a7b0aae33ab1d21e79b5325f11b"
+    },
+    {
+      "path": "reports/BASELINE_TYPOGRAPHY.json",
+      "bytes": 22291,
+      "sha256": "e56fa0f335a01eeb6470303b248a08b23eaed78761e52c26c0c95a3b4ab562fe"
+    },
+    {
+      "path": "reports/BASELINE_TYPOGRAPHY.md",
+      "bytes": 6594,
+      "sha256": "def6a4f744fd153df34ad43e86d0f826a4fff2f55ed9a9252a7e11363d0635d9"
+    },
+    {
+      "path": "reports/COMPARISON_MANIFEST.json",
+      "bytes": 5385,
+      "sha256": "886f9555770a07201095b42a8707c1fd7e3e4a8758999def6d646e06f07566f3"
+    },
+    {
+      "path": "reports/DELIVERABLES_CHECK.json",
+      "bytes": 4217,
+      "sha256": "2ccc28e5af4ef22438091acc805cbc973fb1124acfd05a2b06a444b771408ca5"
+    },
+    {
+      "path": "reports/TOOLCHAIN.json",
+      "bytes": 412,
+      "sha256": "8c9e46a8f1a5043024f277190658857e0232db8af3fa189441fadab7a0ba7f53"
+    },
+    {
+      "path": "reports/VISUAL_REVIEW_DRAFT.md",
+      "bytes": 19546,
+      "sha256": "5cca9a579f0238396a5d6a022ecd7235efc32b6c6b03a032b3a2d6046724b974"
+    },
+    {
+      "path": "reports/record_baseline.py",
+      "bytes": 8441,
+      "sha256": "61319225ba85184d07ae24f2579454c220becbf5798e4a4d046a2529ef14c327"
+    },
+    {
+      "path": "requirements-review.txt",
+      "bytes": 63,
+      "sha256": "77e9944edce903b2f939fead3bac39681bc0419ad5b332c704df51997e34490f"
+    },
+    {
+      "path": "run_review.py",
+      "bytes": 6417,
+      "sha256": "07bd75fa37e72967189c60ebf8613fcd925aa31a399f9a37d9a13bf2e8409c4f"
+    },
+    {
+      "path": "runtime/fonts/Inter-Italic.otf",
+      "bytes": 589784,
+      "sha256": "3bdf49f72ad2f2959a2619ceef700784504f6d17f502e2e2bc6edce5d43ca631"
+    },
+    {
+      "path": "runtime/fonts/Inter-Medium.otf",
+      "bytes": 627988,
+      "sha256": "6c222ed2c3660524dd0c14fb745e00fee65c5361ab28f60fba6730bf4e648763"
+    },
+    {
+      "path": "runtime/fonts/Inter-Regular.otf",
+      "bytes": 609600,
+      "sha256": "d4f2b9e148059a15f014cb0f0b8fea8cd11bfa447dd483bedf1b0adc0e2ba799"
+    },
+    {
+      "path": "runtime/fonts/Inter-SemiBold.otf",
+      "bytes": 629912,
+      "sha256": "0a4d30778fa2dc239368d90fd854b88b27e7ede737450da72686a90eca66f02c"
+    },
+    {
+      "path": "runtime/fonts/Inter-SemiBoldItalic.otf",
+      "bytes": 608028,
+      "sha256": "a350102650a86612efa66e0291315dba24be43e1f3716359c17d365376bea11e"
+    },
+    {
+      "path": "runtime/fonts/NotoSerif-Italic.ttf",
+      "bytes": 657092,
+      "sha256": "0ea81d6b54fc8aa5dff0fd6ebe7cfa431e9e6cf747a8d4aa33581fa0aaccffea"
+    },
+    {
+      "path": "runtime/fonts/NotoSerif-Medium.ttf",
+      "bytes": 640104,
+      "sha256": "90eeb03ad7b03e67037091c061c13b12dba7d21e63f54d19d196f181c5958f86"
+    },
+    {
+      "path": "runtime/fonts/NotoSerif-MediumItalic.ttf",
+      "bytes": 678428,
+      "sha256": "a45b7e6cfa740f00694bd4ec6da14470a742e8c3843c663ad1282900be63a647"
+    },
+    {
+      "path": "runtime/fonts/NotoSerif-Regular.ttf",
+      "bytes": 616196,
+      "sha256": "c8f669ceb2c9c60ccf55198b305e08a997ffca79a38cc7eeb551e643cbe66505"
+    },
+    {
+      "path": "runtime/fonts/STIXTwoMath-Regular.ttf",
+      "bytes": 1517976,
+      "sha256": "562551b15b836e6e01d1b7350909baf3c8c8d83260c1190fbf4544333e6936de"
+    },
+    {
+      "path": "runtime/texmf/tex/generic/config/language.dat",
+      "bytes": 2857,
+      "sha256": "1644e81089355dd8d5d39c3d845e0b89ea299e81e0b65a041fb7edfbc0124546"
+    },
+    {
+      "path": "runtime/texmf/tex/generic/hyph-utf8/hyph-el-monoton.tex",
+      "bytes": 8490,
+      "sha256": "a3aa9ecba9c00dd958a2b1d1d3b3aa851701f6d0027ef9cc9d7365e432c5acb0"
+    },
+    {
+      "path": "runtime/texmf/tex/generic/hyph-utf8/loadhyph-el-monoton.tex",
+      "bytes": 1479,
+      "sha256": "b82464512dbbc228218ef23a7a8aede965976ee39c26d043eb5e009d87a0e7e4"
+    },
+    {
+      "path": "source/.gitignore",
+      "bytes": 224,
+      "sha256": "9cafc309a3cae4abbc5ee8b92d87f0067743e9352893bfd5f221f88aa479675c"
+    },
+    {
+      "path": "source/CHANGELOG.md",
+      "bytes": 9167,
+      "sha256": "50a33173f5643ccd80543ca0286e893016b789f1f543f8f60188554d170aa78b"
+    },
+    {
+      "path": "source/COLOR_SYSTEM_v0.32.md",
+      "bytes": 3522,
+      "sha256": "63656d0456cafe21fe89c92777b96e6db15ce036db7baacd913a02f040e95ed4"
+    },
+    {
+      "path": "source/Makefile",
+      "bytes": 2179,
+      "sha256": "d0503c30ee6ed4393e14c14fe162632b15edf2f930f0ba8c3831e410621dca3c"
+    },
+    {
+      "path": "source/QA_ΤΕΛΙΚΟΣ_ΕΛΕΓΧΟΣ_v0.12.md",
+      "bytes": 2016,
+      "sha256": "60026a2d12b092f23ab4c0f212036ea94bba272eb223f9b1130f135d44d9fc6e"
+    },
+    {
+      "path": "source/README.md",
+      "bytes": 9582,
+      "sha256": "cdf2d87a994a9e8e80666ee2875f7d770501ec2ce8d034d36db6f3a54c1f5c79"
+    },
+    {
+      "path": "source/SETUP.md",
+      "bytes": 10175,
+      "sha256": "290f92e9683f6bd7402f6adb9f83872fa52294b9af54fadca20847406467fc59"
+    },
+    {
+      "path": "source/archive/legacy-docs/COLOR_SYSTEM_v0.27.md",
+      "bytes": 6750,
+      "sha256": "d9e82c7c9cd67dde53f880b124dd8ff75c743582e214e875e9d96b4f314d9f8b"
+    },
+    {
+      "path": "source/archive/legacy-docs/COLOR_SYSTEM_v0.31.md",
+      "bytes": 4143,
+      "sha256": "b172d673c62e8248f6c22a3ba27b2aed59e98cfb5f3132260ea5d97b1dda7a68"
+    },
+    {
+      "path": "source/archive/legacy-docs/QA_COLOR_PAIRING_v0.27.md",
+      "bytes": 1963,
+      "sha256": "cc8463c4a41d2dd5f844ce91a9e02fe2c98cb5ca0c2e5aa00edda09447c4256f"
+    },
+    {
+      "path": "source/archive/legacy-docs/README_v0.13_ΕΝΘΕΤΑ_ΚΑΙ_ΡΗΣΕΙΣ.md",
+      "bytes": 2412,
+      "sha256": "ef08e19d68217b8b02f1e916b6f881b09fb216f86f37cc4a2e7c001d716b8062"
+    },
+    {
+      "path": "source/archive/legacy-docs/README_v0.18_ΠΕΡΙΕΧΟΜΕΝΑ.md",
+      "bytes": 1995,
+      "sha256": "8c4c7e4b09d407b3d40920c7a8e7657b15f7a09b082e6fc341a031ffc2ec4900"
+    },
+    {
+      "path": "source/archive/legacy-docs/README_v0.32.md",
+      "bytes": 17004,
+      "sha256": "ba576ab0501f36be4793a86bf19140580413aed0d8491ad3f973d7ecd5ee9277"
+    },
+    {
+      "path": "source/archive/legacy-docs/changelogs/CHANGES_v0.33.md",
+      "bytes": 2038,
+      "sha256": "e79e3a0effb93dd3b54b8bf34303f4d461383dd9cddc872ca50d672f8bd10ba9"
+    },
+    {
+      "path": "source/archive/legacy-docs/changelogs/CHANGES_v0.34.md",
+      "bytes": 1035,
+      "sha256": "cba7347191e95746f3c2bef5c91eb29f0aa64af95f478375a69dc0c7beeef3f4"
+    },
+    {
+      "path": "source/archive/legacy-docs/changelogs/CHANGES_v0.35.md",
+      "bytes": 2027,
+      "sha256": "1915942a00250e134685047f81985f530e5e3229e25ceee0b59fcb8057ad7592"
+    },
+    {
+      "path": "source/archive/legacy-docs/changelogs/CHANGES_v0.36.md",
+      "bytes": 1574,
+      "sha256": "46d90928031ea3df67257b92198ad7673046fa73f7165559e0bfc4b25240af0f"
+    },
+    {
+      "path": "source/archive/legacy-docs/changelogs/CHANGES_v0.37.md",
+      "bytes": 1545,
+      "sha256": "6d7b8fd4e9e6a429b4330c8a7bf5430186fdcf7d5f49b08458d48d08dff81808"
+    },
+    {
+      "path": "source/archive/legacy-docs/changelogs/CHANGES_v0.38.md",
+      "bytes": 2115,
+      "sha256": "cb2a39bb6125ecfe710b8b51c9f9598c40c04fac7fdd4721092611a5e6bb9559"
+    },
+    {
+      "path": "source/archive/legacy-docs/changelogs/CHANGES_v0.39.md",
+      "bytes": 1719,
+      "sha256": "3e45e9d03aa1269f3ada352ef90af735b6cc9c3f25eddf9128b81dd5b5976693"
+    },
+    {
+      "path": "source/archive/legacy-docs/changelogs/CHANGES_v0.40.md",
+      "bytes": 2124,
+      "sha256": "9382ab49e3c770dc5267b8664d874badaa06f0b181738441c0ba98152406ca1f"
+    },
+    {
+      "path": "source/archive/legacy-docs/changelogs/CHANGES_v0.41.md",
+      "bytes": 1662,
+      "sha256": "36dfa31e4c9de4fee976b991b8d7c53dda69f1f6b0cacdfdc227cd7391a45605"
+    },
+    {
+      "path": "source/archive/legacy-docs/changelogs/CHANGES_v0.42.md",
+      "bytes": 1916,
+      "sha256": "b18f0bea6f988abd781fe75cdb94b6d1ad07a56521e1a8640485456aeb7762c1"
+    },
+    {
+      "path": "source/archive/legacy-docs/changelogs/CHANGES_v0.43.md",
+      "bytes": 1271,
+      "sha256": "847846c162a3698d92014f51dc61369b4ba1af2508e36a5fb3e1da8ba7ccfc54"
+    },
+    {
+      "path": "source/archive/legacy-docs/changelogs/CHANGES_v0.44.md",
+      "bytes": 1300,
+      "sha256": "22087d4915ec4a58570e89cf617458e6eebf2872b732fefbf44c8b5106aabadb"
+    },
+    {
+      "path": "source/archive/legacy-docs/changelogs/CHANGES_v0.45.md",
+      "bytes": 1496,
+      "sha256": "427ff5358bc23e64e278d6e2a5ef2a3d9a8e828234cbeca80a0ae394e0bf759b"
+    },
+    {
+      "path": "source/archive/legacy-docs/changelogs/CHANGES_v0.46.md",
+      "bytes": 2065,
+      "sha256": "98dd6847dd1a31463a47744c6087021b19b937b8a09a199e566fd2616e2b670c"
+    },
+    {
+      "path": "source/archive/legacy-docs/changelogs/ΑΛΛΑΓΕΣ_v0.14.md",
+      "bytes": 2833,
+      "sha256": "27b0801a6006193cb5222fabe005910a1d6e70275c3fff888bcb7e961995a616"
+    },
+    {
+      "path": "source/archive/legacy-docs/changelogs/ΑΛΛΑΓΕΣ_v0.16.md",
+      "bytes": 991,
+      "sha256": "1c6408034375df555bec6fa504f51992a0a98e1949831490d153b05a9d744270"
+    },
+    {
+      "path": "source/archive/legacy-docs/changelogs/ΑΛΛΑΓΕΣ_v0.17.md",
+      "bytes": 1126,
+      "sha256": "e2105576a57d21a5fa38b1096b0043bb2bee860edac3565fa60600101f159f2f"
+    },
+    {
+      "path": "source/archive/legacy-docs/changelogs/ΑΛΛΑΓΕΣ_v0.18.md",
+      "bytes": 845,
+      "sha256": "2cf416f17c9e882411f56f394c5de5fe975d248a9ddda408efb92532315dd07e"
+    },
+    {
+      "path": "source/archive/legacy-docs/changelogs/ΑΛΛΑΓΕΣ_v0.19.md",
+      "bytes": 1711,
+      "sha256": "59d50b9c211badab92d842437e7e6a1f9b81e5e0504c54395e20b567552dfe0a"
+    },
+    {
+      "path": "source/archive/legacy-docs/changelogs/ΑΛΛΑΓΕΣ_v0.20.md",
+      "bytes": 750,
+      "sha256": "9e93198962f32b12307f4ef1ff6e8d45cce217ce9828ab3f218b98ab61d89f67"
+    },
+    {
+      "path": "source/archive/legacy-docs/changelogs/ΑΛΛΑΓΕΣ_v0.21.md",
+      "bytes": 671,
+      "sha256": "99cd8950b45733df01dae6fde7a3dd0434723c00da0c11a7bd01f06e6cf369c3"
+    },
+    {
+      "path": "source/archive/legacy-docs/changelogs/ΑΛΛΑΓΕΣ_v0.22.md",
+      "bytes": 1243,
+      "sha256": "8a2583fca479a95445291afd083e08c803cc9cfdbb9e17313c17a6a911efa74d"
+    },
+    {
+      "path": "source/archive/legacy-docs/changelogs/ΑΛΛΑΓΕΣ_v0.23.md",
+      "bytes": 853,
+      "sha256": "4a1cbc97d6810210f92c38298b4042365a27e88cc8f77195966f67734ef1be14"
+    },
+    {
+      "path": "source/archive/legacy-docs/changelogs/ΑΛΛΑΓΕΣ_v0.24.md",
+      "bytes": 1300,
+      "sha256": "e54458654435364dc76ae259b5b3e57a839edbc3ef16a1ea553d311e6163213a"
+    },
+    {
+      "path": "source/archive/legacy-docs/changelogs/ΑΛΛΑΓΕΣ_v0.25.md",
+      "bytes": 2428,
+      "sha256": "a95d05913825a16cf77c732113f38186a6f30f334f799457fdde750228bc6206"
+    },
+    {
+      "path": "source/archive/legacy-docs/changelogs/ΑΛΛΑΓΕΣ_v0.26.md",
+      "bytes": 2602,
+      "sha256": "394144c036ac25ccec0eb23b4c5f809f2502dbe0132f256fde37bd53a49b3e50"
+    },
+    {
+      "path": "source/archive/legacy-docs/changelogs/ΑΛΛΑΓΕΣ_v0.27.md",
+      "bytes": 1446,
+      "sha256": "a7876d8010d0f5e25679708afc6662001fb51a44237ea7fe12afe72566d17922"
+    },
+    {
+      "path": "source/archive/legacy-docs/changelogs/ΑΛΛΑΓΕΣ_v0.28.md",
+      "bytes": 1832,
+      "sha256": "3e45c6a1014c565f6d75721ed179ce98e643a4cb540133c1a86177992e99a758"
+    },
+    {
+      "path": "source/archive/legacy-docs/changelogs/ΑΛΛΑΓΕΣ_v0.29.md",
+      "bytes": 2404,
+      "sha256": "0e6508cb6d179c1def516420e06919aff1621ca3b159173853fc4c5564a2d7ef"
+    },
+    {
+      "path": "source/archive/legacy-docs/changelogs/ΑΛΛΑΓΕΣ_v0.30.md",
+      "bytes": 1429,
+      "sha256": "6b8434a04f3cc03b6a4b1272fc20cf98d6490d36297f8ae83bc2d98a0eeb3038"
+    },
+    {
+      "path": "source/archive/legacy-docs/changelogs/ΑΛΛΑΓΕΣ_v0.31.md",
+      "bytes": 1462,
+      "sha256": "edfd09fec2c5f2da1ffd924062ee9eacbeeb75e65d91379adb859b1a7e6d2506"
+    },
+    {
+      "path": "source/archive/legacy-docs/changelogs/ΑΛΛΑΓΕΣ_v0.32.md",
+      "bytes": 1465,
+      "sha256": "e3b06509e95cf050c146eee0ec6faf3eb06f2a634c5368db0facbbf90a285c91"
+    },
+    {
+      "path": "source/archive/legacy-docs/ΕΓΧΕΙΡΙΔΙΟ_ΣΧΗΜΑΤΩΝ.md",
+      "bytes": 2339,
+      "sha256": "164bcf4e1c7f70a4b66b27e6b60dc66b136d20c4d812cf9dd1658db0e9eb1388"
+    },
+    {
+      "path": "source/archive/legacy-docs/ΟΔΗΓΟΣ_ΚΕΦΑΛΙΔΩΝ_v0.21.md",
+      "bytes": 3588,
+      "sha256": "80f996642dfb9f3b960f9ecec74c83facfbc6aefba1aeba23595502688ef4eb3"
+    },
+    {
+      "path": "source/archive/legacy-docs/ΟΔΗΓΟΣ_ΚΟΥΤΙΩΝ_v0.30.md",
+      "bytes": 3818,
+      "sha256": "285d3d3c76cc5f67d416b3cab700486a84ac33564848106fed87f19e588d17b2"
+    },
+    {
+      "path": "source/archive/legacy-docs/ΟΔΗΓΟΣ_ΚΡΙΤΗΡΙΩΝ_v0.15.md",
+      "bytes": 5824,
+      "sha256": "89b542df82d94e573f2808af17d81728b2d38df8f9a3bcf311f63006b108a6fc"
+    },
+    {
+      "path": "source/archive/legacy-docs/ΟΔΗΓΟΣ_ΠΕΡΙΕΧΟΜΕΝΩΝ_v0.17.md",
+      "bytes": 2001,
+      "sha256": "9baadde19a2fa5d8ddcaceb7b81dd91272d76cfba7ec2649334377e68be58568"
+    },
+    {
+      "path": "source/archive/legacy-docs/ΟΔΗΓΟΣ_ΠΕΡΙΕΧΟΜΕΝΩΝ_v0.18.md",
+      "bytes": 2863,
+      "sha256": "1a9871fad255c6bda0db4f022ea1e27ecc4781a165ab1952bff4068193b835d6"
+    },
+    {
+      "path": "source/archive/legacy-docs/ΟΔΗΓΟΣ_ΠΙΝΑΚΩΝ_v0.23.md",
+      "bytes": 2412,
+      "sha256": "48347f470f235316b2cbab2016769dec641aaa2d00faaacd9154c51dbe8da467"
+    },
+    {
+      "path": "source/archive/legacy-docs/ΟΔΗΓΟΣ_ΥΠΟΣΕΛΙΔΟΥ_v0.20.md",
+      "bytes": 3045,
+      "sha256": "1bdd462f527638ed4794201579303c38fe0f85caa8281025faa46e322c3387eb"
+    },
+    {
+      "path": "source/archive/legacy-sources/chapter-photo-original.png",
+      "bytes": 460588,
+      "sha256": "4a875f2e603e857bd6d52d863eb617d6f765d0d52c5e061a9f554305799015b8"
+    },
+    {
+      "path": "source/archive/legacy-sources/chapter-photo-print3.png",
+      "bytes": 235542,
+      "sha256": "0302dcb8002836fd3870d3b3d5c307932e9743db2c13e0643a4eddd470d09336"
+    },
+    {
+      "path": "source/archive/legacy-sources/chapter-photo-sample.png",
+      "bytes": 347022,
+      "sha256": "e9159f2f13f07ff4c70bc1c4e72cac028e25c8292f87c048ecb6549b48f5b49b"
+    },
+    {
+      "path": "source/archive/legacy-sources/header-icon-black.png",
+      "bytes": 1112,
+      "sha256": "5e006390a7ab7366ee249f3ca0c061ff6ecd8d942c03a25cfe24ef99ee107b91"
+    },
+    {
+      "path": "source/archive/legacy-sources/header-icon-clean.png",
+      "bytes": 26519,
+      "sha256": "585afc40c761cb60fdc53dfc2d878aea3e7bc5c83423faf53fb3104537ade2e2"
+    },
+    {
+      "path": "source/archive/legacy-sources/header-icon-original-hires.png",
+      "bytes": 53798,
+      "sha256": "d031f856abc51b1983a6c088b4ddee81331c8a95fdaae402cbbfcd12fa179941"
+    },
+    {
+      "path": "source/archive/legacy-sources/header-icon.png",
+      "bytes": 27054,
+      "sha256": "f0e682b918bd179cde294cbdaeeff2ec2c106490da55f7f9338a102da5ef914c"
+    },
+    {
+      "path": "source/archive/legacy-sources/math-chapter-art.tex",
+      "bytes": 1386,
+      "sha256": "0b72c03943419beafc593cf52d65e8f5e0d9e4cc3a2bcccded53805c317f7144"
+    },
+    {
+      "path": "source/assessment-demo-print2.tex",
+      "bytes": 759,
+      "sha256": "cce36b0ade600b176539bfbb5c027765e543a3983ea6f62052e4c2c35535913e"
+    },
+    {
+      "path": "source/assessment-demo-screen.tex",
+      "bytes": 1456,
+      "sha256": "2649075e2851db47082b325a8b79e2d34cf66c99259a295ca960931fc08b486e"
+    },
+    {
+      "path": "source/assets/header-icon-geometry.json",
+      "bytes": 747,
+      "sha256": "cb52d9c986fc7d4eea77cf7c1852b121cdbc37d61b0275237cee61d3ed045d8e"
+    },
+    {
+      "path": "source/assets/header-icon.svg",
+      "bytes": 264157,
+      "sha256": "d6ffadc87113ba17241cabe302c078ccf67f77f2f759030584c262abacfc9898"
+    },
+    {
+      "path": "source/assets/header-icon.tex",
+      "bytes": 302728,
+      "sha256": "13add83ef3c8d36c3a9d695c801c65f12075afa8c93a41d11b5d8b11a6c637fc"
+    },
+    {
+      "path": "source/assets/math-chapter-art-print2.png",
+      "bytes": 2570,
+      "sha256": "188340b9305cc0f3e5a02d52b086a827ce49c5695236519ec2bdc6b2a8bef346"
+    },
+    {
+      "path": "source/assets/math-chapter-art.tex",
+      "bytes": 975,
+      "sha256": "b2ace603a9c9e8a22dabd1b6997f8e94a716f7468829ed45f631deb7f3b64047"
+    },
+    {
+      "path": "source/assets/photo-K-3tones.png",
+      "bytes": 22743,
+      "sha256": "c48cf7183f573d4007f8ec4c72607804b313c534d3eca1feb75c88d0f2e81305"
+    },
+    {
+      "path": "source/book-content.tex",
+      "bytes": 1862,
+      "sha256": "5b81ff17ddc953da2e53b4498ac57af580df16fbb229e054ae2c594fade9184f"
+    },
+    {
+      "path": "source/callouts-v025-content.tex",
+      "bytes": 1898,
+      "sha256": "5d2f514b32fb531fbc3e2562e5266c804dd02fedc7785a9e62c9e1f9c80f9465"
+    },
+    {
+      "path": "source/callouts-v025-print2.tex",
+      "bytes": 290,
+      "sha256": "0527e55f6b0ae3f65bb94858c3d92b351ee7be6d505882a27498e387a017f13d"
+    },
+    {
+      "path": "source/callouts-v025-screen.tex",
+      "bytes": 291,
+      "sha256": "0572aa03954b5241f395f3564404b43b95f071ac78a321e92c3923c77f1c912b"
+    },
+    {
+      "path": "source/chapters/askisi-dokimis.tex",
+      "bytes": 3362,
+      "sha256": "8da99928ef776ab19c508f86d7dd723dee95be6d1b8ace401eb046f5adff228c"
+    },
+    {
+      "path": "source/chapters/collab-content.tex",
+      "bytes": 6875,
+      "sha256": "7b7e3c97c4082bc999d290cd6b729f7adb549198ab3fb91ac033bb684335e5ef"
+    },
+    {
+      "path": "source/chapters/demo-assessment.tex",
+      "bytes": 6025,
+      "sha256": "3ee561bbefdface7a68ac643e9bd85e9ec08f49cc24ff998be46552ba08520e1"
+    },
+    {
+      "path": "source/chapters/demo-math.tex",
+      "bytes": 4521,
+      "sha256": "1de87c6a1e8591eb8e0330139c7c9cbd4edcca7c7a8c351b31f7855b297e1deb"
+    },
+    {
+      "path": "source/chapters/demo-physics.tex",
+      "bytes": 16367,
+      "sha256": "8985db832ce679e1ce68c6787b8a3cda465607aa2bd1991949a5ca9d1b8ec4ae"
+    },
+    {
+      "path": "source/chapters/demo-worksheet.tex",
+      "bytes": 2719,
+      "sha256": "c906e79d4dee0e135ac9f3617896cf045c464d80ec8b2e7cef56edd4cf555fe3"
+    },
+    {
+      "path": "source/chapters/starter-chapter.tex",
+      "bytes": 3368,
+      "sha256": "f9e91af789d4d1df10abb9784b15462c7e2aabdbd51c3d8945b5b41ddfef7a77"
+    },
+    {
+      "path": "source/collab-print2.tex",
+      "bytes": 628,
+      "sha256": "485ff6de91900d719b005c392eca453100d57109a807e41b90da311eee23b0a6"
+    },
+    {
+      "path": "source/collab-screen.tex",
+      "bytes": 629,
+      "sha256": "8a0cc3861f9965df057c5c14fc853c2ce53cffc98e6814bef17bf6cbb5bfb70e"
+    },
+    {
+      "path": "source/config/book-config.tex",
+      "bytes": 21031,
+      "sha256": "cb61253dceb2311501f346f3d881403e2b9a0b4020889f15653f122e089d00e8"
+    },
+    {
+      "path": "source/config/color-map.json",
+      "bytes": 4305,
+      "sha256": "e4fa552b9fa173cd43bfc4b11c06335e3f8223dd0dc42148ac2925fa99ae4fc4"
+    },
+    {
+      "path": "source/config/color-roles.tex",
+      "bytes": 1745,
+      "sha256": "a08e0eaea4f6524267352a61337606fe9e5f6954509d046fd85c8297e0499938"
+    },
+    {
+      "path": "source/config/generated-assets.tex",
+      "bytes": 490,
+      "sha256": "f383bed5faf6c3c188a598e0b42ad6883d8fb3c472332238191ab9339b9d821c"
+    },
+    {
+      "path": "source/config/palette-print2-spot.tex",
+      "bytes": 627,
+      "sha256": "9afef79c76758b6d9d6f11464d274c48e0307c8e297db108e47f65e0d21e1545"
+    },
+    {
+      "path": "source/config/palette-screen.tex",
+      "bytes": 440,
+      "sha256": "ad82193a2da26a0accc3f27ee55eca1d4c10bf2ef891986135d98426dc72de69"
+    },
+    {
+      "path": "source/docs/AUTHORING.md",
+      "bytes": 24915,
+      "sha256": "96e42cfe3ffd7729de65966b7dcb53a6441c559691c1025976640c055ca62b0f"
+    },
+    {
+      "path": "source/docs/CALLOUT_ICONS.md",
+      "bytes": 4727,
+      "sha256": "33148d51cd8da3508574a14a2321a9963fecb2d5dd1bdc14206ed55d227e94ff"
+    },
+    {
+      "path": "source/docs/FIGURES.md",
+      "bytes": 4553,
+      "sha256": "56dc02e74a438075c87771258f9f45e588f8763fbcd1cd6472c65b6749a40f67"
+    },
+    {
+      "path": "source/docs/FIGURES_PENDING.md",
+      "bytes": 755,
+      "sha256": "9182147b9e4708f74987c9514187ae55f3262979b147bfa24a9462e12555d85e"
+    },
+    {
+      "path": "source/docs/HEADERS.md",
+      "bytes": 4363,
+      "sha256": "4f5fd982c5b24ce403bf5a470763433af40dc59cbd06a94f57cd2b92571d7919"
+    },
+    {
+      "path": "source/docs/PRESS_PENDING.md",
+      "bytes": 2986,
+      "sha256": "dc653fcb26f773b7e1f049ba4b683626e5d78f15eb8821a67d7a10aa06f0e7fa"
+    },
+    {
+      "path": "source/docs/STABILITY.md",
+      "bytes": 3516,
+      "sha256": "08164fa1920fa6ae275a9edc0f6eaba99b66057b54ee9163c14dc0b7b95ae772"
+    },
+    {
+      "path": "source/docs/TOC.md",
+      "bytes": 2407,
+      "sha256": "23e8efe9526baf82473a17e3d0f152b6db2a7a0610f4410f97fb85a36621a651"
+    },
+    {
+      "path": "source/docs/legacy_drafts/ΠΑΛΑΙΟ_ΠΡΟΣΧΕΔΙΟ_ΣΧΗΜΑΤΩΝ_v0.30.md",
+      "bytes": 9179,
+      "sha256": "a9b24fb8720e0328f66e425233b6356f5c8a5df540151f622ebbe78cae53710f"
+    },
+    {
+      "path": "source/figures-guide-content.tex",
+      "bytes": 10873,
+      "sha256": "826d732e44462c73618bd48f04089180df75bb26d46bb2ce8cdeb878f6e0a97e"
+    },
+    {
+      "path": "source/figures-guide-print2.tex",
+      "bytes": 426,
+      "sha256": "1a58cb0949a4fea91e52263f36b2b57307c30e6ec54df23eeb27cd4536a6789b"
+    },
+    {
+      "path": "source/figures-guide-screen.tex",
+      "bytes": 395,
+      "sha256": "10937f1b3d79b9b4fb543c7075f728e1124cad91fa93cd5ac53fb44dc5f664df"
+    },
+    {
+      "path": "source/history-statements-content.tex",
+      "bytes": 2105,
+      "sha256": "627d4b3a431fdd49885004b6a392ebd8506e0dfc624d6abf381c821e63630439"
+    },
+    {
+      "path": "source/history-statements-print2.tex",
+      "bytes": 270,
+      "sha256": "43e068eda935d480253a8806cf539a1df0b40be3a098d923a96c85daaa6b7cc6"
+    },
+    {
+      "path": "source/history-statements-screen.tex",
+      "bytes": 271,
+      "sha256": "201ba3bfd0554f1e7c49f6c4ec068da427d2a65c1f41e127f6055224c2dc7cf7"
+    },
+    {
+      "path": "source/main-print2.tex",
+      "bytes": 775,
+      "sha256": "58575096dbb592ef3bfb8f130411077966421e271d98f3cf85a02ade6c4aa086"
+    },
+    {
+      "path": "source/main.tex",
+      "bytes": 1484,
+      "sha256": "c2c85a6eac8ff068772499e1bb8e9bb1b89964d437539fd3c7edc9599af782d0"
+    },
+    {
+      "path": "source/math-proof.tex",
+      "bytes": 871,
+      "sha256": "1456b335abaa54a7d9f4438edc6e200df1074920f0145345a260ce42f9e63079"
+    },
+    {
+      "path": "source/opening-goals-test-content.tex",
+      "bytes": 939,
+      "sha256": "3c08cac24b967c1467099cd2a78fc2e058ae5fb4ec321971722697c41a001107"
+    },
+    {
+      "path": "source/opening-goals-test-print2.tex",
+      "bytes": 282,
+      "sha256": "8cc6b45959ab82f5b4d384a1acd49b4b8886ea6099f4f4f7daad2e63859f61c8"
+    },
+    {
+      "path": "source/opening-goals-test-screen.tex",
+      "bytes": 283,
+      "sha256": "a391468ddc61d2f275b3d244250c188dd30e3e36dc1a9b52a32c9878aa1f2ec1"
+    },
+    {
+      "path": "source/palette-v026-demo.tex",
+      "bytes": 2878,
+      "sha256": "6b6712168a4365d2325168fcd1e81e97a437b81746b3668e4d8f6f6740638729"
+    },
+    {
+      "path": "source/palette-v026-print2.tex",
+      "bytes": 76,
+      "sha256": "3ebec4656f4e70186d65b631e730474642d764df5d4fc210fdb60b43f03bc60c"
+    },
+    {
+      "path": "source/palette-v026-screen.tex",
+      "bytes": 57,
+      "sha256": "4a254e7934d30deecfb523587da1ecf5c8c370b11f3ec388e21b6eae71e6413c"
+    },
+    {
+      "path": "source/requirements-dev.txt",
+      "bytes": 130,
+      "sha256": "bbdd1a4de72f2fd7aae51956fe62251216b3c5123df42735ff4ea094d0ba97a5"
+    },
+    {
+      "path": "source/scripts/build.py",
+      "bytes": 3458,
+      "sha256": "529c036df9c728954c83b687ec926b33ef74294681d10917d2a2e888890d0e34"
+    },
+    {
+      "path": "source/scripts/check_clean_install.py",
+      "bytes": 16815,
+      "sha256": "0e80033e612a9da87a167371114ef715bd4fe5ac958afb2444b8871c84fe2d29"
+    },
+    {
+      "path": "source/scripts/check_color_consistency.py",
+      "bytes": 15111,
+      "sha256": "2c858605e32fda4de583b443fe5730ace5cc1e8bd34eb0422a9bc870681d3e73"
+    },
+    {
+      "path": "source/scripts/check_stress.py",
+      "bytes": 9631,
+      "sha256": "4e1e2325bd1402e1f6e8e6cd812badb8053e21d4a9cb663943c0f7fb1d59b12b"
+    },
+    {
+      "path": "source/scripts/dependency-manifest.json",
+      "bytes": 2837,
+      "sha256": "3b4f6e9c3301a20ba40de231ff16874fc0e821207accb52ece1ad3fdbb3acc42"
+    },
+    {
+      "path": "source/scripts/export_review.py",
+      "bytes": 8675,
+      "sha256": "3c90258bab16c102ab40c4bed6f51c7c54b5f907d52cc5ca93d32a60e4ae9040"
+    },
+    {
+      "path": "source/scripts/generate_colors.py",
+      "bytes": 6524,
+      "sha256": "68ba9b998158204f8a4f24b0c2d5029f4e0c2356ead6bd48f3a90486e80ca386"
+    },
+    {
+      "path": "source/scripts/generate_header_icon.py",
+      "bytes": 5829,
+      "sha256": "e5d84b26c2369fb9c6b91d1c1e8ffc5b5ac5f50b764af631d260e07ce8671b98"
+    },
+    {
+      "path": "source/scripts/release.py",
+      "bytes": 17292,
+      "sha256": "d87475be2d5d472fb5e6c5bf3f33e064ebb23dea0ac0836f306aa5f19d84cb3b"
+    },
+    {
+      "path": "source/scripts/setup_environment.py",
+      "bytes": 7579,
+      "sha256": "2b575f15c1617c653fb2869ce36284d2a13cc035929fa1f9348f1980820da3e3"
+    },
+    {
+      "path": "source/scripts/validate_pdf.py",
+      "bytes": 16446,
+      "sha256": "033473093a8a8903b3d77d2cf50c27ea3e135c4d187e390e5ab368a0277b124f"
+    },
+    {
+      "path": "source/scripts/validate_suite.py",
+      "bytes": 2405,
+      "sha256": "ae74e882c8fa0c7b3a2ac95a3d888fede06a6790f440e02cadf06671164d86b9"
+    },
+    {
+      "path": "source/solutions/demo-assessment-solutions.tex",
+      "bytes": 1608,
+      "sha256": "ee6464ed4da67ab335f778b27d8e21936ed150daacb59a1a8f9c5343fdc8c738"
+    },
+    {
+      "path": "source/starter-content.tex",
+      "bytes": 626,
+      "sha256": "0fd7d6a9eee3ad7cf9e510c8cdbd592287825485c964c0864aadea2773822596"
+    },
+    {
+      "path": "source/starter-print2.tex",
+      "bytes": 525,
+      "sha256": "bc0c14b6cb77d466e5ff06d376445cfe13f77c0dc6000b11f6abc426d77891e6"
+    },
+    {
+      "path": "source/starter.tex",
+      "bytes": 478,
+      "sha256": "bf629c2a84fc4c24bef4ae2be2d389e02c74aff4f431ff518e00e3d5f3259e83"
+    },
+    {
+      "path": "source/stress-content.tex",
+      "bytes": 34290,
+      "sha256": "5e148676cc6cd8ec092f6bf558d06e2b161bc93f1f996929d65fb57d79f81e6e"
+    },
+    {
+      "path": "source/stress-print2.tex",
+      "bytes": 363,
+      "sha256": "82ff29b706f97537f3d41d5f8f31453a14ff87ecde080051ce49cd1d33a428d2"
+    },
+    {
+      "path": "source/stress-screen.tex",
+      "bytes": 371,
+      "sha256": "78908ac618e9fd3a369d26627181c3dc766e2552bd389afc6e2b7f4bdfd039ad"
+    },
+    {
+      "path": "source/styles/book-assets.tex",
+      "bytes": 2753,
+      "sha256": "059a6ab43aa4391d34c219249ec442838656e01e21e9e7289af5acd4de481260"
+    },
+    {
+      "path": "source/styles/book-callouts.tex",
+      "bytes": 5609,
+      "sha256": "02f2ecd3d5cfc797b58c66b11eeff5c41946ab911d330ce0b112cfaa23185676"
+    },
+    {
+      "path": "source/styles/book-figures.tex",
+      "bytes": 4268,
+      "sha256": "0c9065ebc93db4601a283f021462b73722d25c09ac0795d8b9103cbf28e503e6"
+    },
+    {
+      "path": "source/styles/book-history-icon.tex",
+      "bytes": 2055,
+      "sha256": "e81624518f89081471dc21d096eff6e59b8d2bfedd302db9b060d1e356b21858"
+    },
+    {
+      "path": "source/styles/book-longtables.tex",
+      "bytes": 1575,
+      "sha256": "ec8425d8e77f3a30a9fc419ed6223c3b15ce72e6c2f0d6153200153ca36c2534"
+    },
+    {
+      "path": "source/styles/book-toc.tex",
+      "bytes": 1626,
+      "sha256": "ca46c386677ade5c0fe4b765c91471402ddd439a7f3900f2a47e74f779f52c79"
+    },
+    {
+      "path": "source/styles/universalbook.sty",
+      "bytes": 67705,
+      "sha256": "562aa04b5fa98b22ed835bf1d04d7350a913e2c5138e9197b7049be257b40a0e"
+    },
+    {
+      "path": "source/tables-demo-content.tex",
+      "bytes": 2573,
+      "sha256": "1d6eb0cde5f5dbf384ccba717683451f58ffac82fbb36045a6b046f840ce689a"
+    },
+    {
+      "path": "source/tables-demo-print2.tex",
+      "bytes": 399,
+      "sha256": "e62d8c2dc26cec759b7990e4a240f671ad9f9d8bd7ae83bce57b4d3213a94ccf"
+    },
+    {
+      "path": "source/tables-demo-screen.tex",
+      "bytes": 390,
+      "sha256": "49738b47b6ed4b4cbd135c575fe7c47b74c3a3f7856a2fc215f5e788ebefee65"
+    },
+    {
+      "path": "source/tests/fixtures/checkboxes.tex",
+      "bytes": 1195,
+      "sha256": "5b819cef4d0ed7d0e534a93b0899ad325c4b64777998596bdf8bee495500ca5b"
+    },
+    {
+      "path": "source/tests/fixtures/figures.tex",
+      "bytes": 2441,
+      "sha256": "93ec081dd60b4ac928ffdafb58ea013b5a7daf994cb9577b21fd96c0e3c18952"
+    },
+    {
+      "path": "source/tests/fixtures/page-styles.tex",
+      "bytes": 4803,
+      "sha256": "bc9a350c67f99225ac922752b8a4c75d0dc58683346c101fbef54dc6414f79df"
+    },
+    {
+      "path": "source/tests/fixtures/toc.tex",
+      "bytes": 999,
+      "sha256": "cbdedcb6e9a3a193df30a3596acdd346aa8953bf091188ec87bbbc8cb7a2bf77"
+    },
+    {
+      "path": "source/tests/test_checkboxes.py",
+      "bytes": 6483,
+      "sha256": "d1fad433a1c3802af215dcc0c2718bdbd5c4451449d8030146d926813fac4830"
+    },
+    {
+      "path": "source/tests/test_colors.py",
+      "bytes": 8413,
+      "sha256": "3f71512f9f22d19ca88b2ae028d6234167592e5f70a5c8de96bb020fae11097b"
+    },
+    {
+      "path": "source/tests/test_exercise_links.py",
+      "bytes": 3401,
+      "sha256": "ac43cd9a015593ca3c10eb68a60f456a9f61f9e917565a10d3b23a8ae95d310d"
+    },
+    {
+      "path": "source/tests/test_figures.py",
+      "bytes": 11421,
+      "sha256": "384d68ddcb38420564683610826cf69da6484743f00ee43a18d0e0544519dcf2"
+    },
+    {
+      "path": "source/tests/test_page_styles.py",
+      "bytes": 29404,
+      "sha256": "1c7f90dd4e5cfe674aec59b4734658fe97627ed35ec637c9bab6028a35a967e2"
+    },
+    {
+      "path": "source/tests/test_release.py",
+      "bytes": 12319,
+      "sha256": "b12931eb1779005ab4bdf919368f06f2ecc6460adff75bdf1c6e62e064676fd5"
+    },
+    {
+      "path": "source/tests/test_toc.py",
+      "bytes": 6330,
+      "sha256": "7231bf58381c3200e0dd0e05b3717f9991e2479954ac05951714c6be20485459"
+    },
+    {
+      "path": "source/tests/test_validate_pdf.py",
+      "bytes": 6019,
+      "sha256": "b42d236374caa966240b69a7f4c0d08590100c27d7fd6eebe6e7031db4674206"
+    },
+    {
+      "path": "variants/A_CURRENT/config/book-config.tex",
+      "bytes": 21031,
+      "sha256": "cb61253dceb2311501f346f3d881403e2b9a0b4020889f15653f122e089d00e8"
+    },
+    {
+      "path": "variants/A_CURRENT/print.tex",
+      "bytes": 286,
+      "sha256": "6975b7c84c98924b87b8e50e2f87d144189873e8968c39e68fdada603802f1fc"
+    },
+    {
+      "path": "variants/A_CURRENT/screen.tex",
+      "bytes": 287,
+      "sha256": "7b0a0794c301e72a4d7891c382d18f7d90801c09d6b8ac5c488792f195fddead"
+    },
+    {
+      "path": "variants/A_CURRENT/typography-overrides.tex",
+      "bytes": 56,
+      "sha256": "596265d77c6f6240f8b25114c059f252a9de097c51d7fdf45ca25226cc59980a"
+    },
+    {
+      "path": "variants/B_STIX105/config/book-config.tex",
+      "bytes": 21031,
+      "sha256": "cb61253dceb2311501f346f3d881403e2b9a0b4020889f15653f122e089d00e8"
+    },
+    {
+      "path": "variants/B_STIX105/print.tex",
+      "bytes": 336,
+      "sha256": "b8a57416cfa41b7ad04935e97d2b18d6997e26d66e8006db345681500a355b31"
+    },
+    {
+      "path": "variants/B_STIX105/screen.tex",
+      "bytes": 337,
+      "sha256": "54617067628d465b9bc15f5a68c84451f378a3dea10c35f3891f77924462db05"
+    },
+    {
+      "path": "variants/B_STIX105/typography-overrides.tex",
+      "bytes": 56,
+      "sha256": "596265d77c6f6240f8b25114c059f252a9de097c51d7fdf45ca25226cc59980a"
+    },
+    {
+      "path": "variants/C_STIX108/config/book-config.tex",
+      "bytes": 21031,
+      "sha256": "cb61253dceb2311501f346f3d881403e2b9a0b4020889f15653f122e089d00e8"
+    },
+    {
+      "path": "variants/C_STIX108/print.tex",
+      "bytes": 336,
+      "sha256": "72ddb50fce468abfe0aa05f36bb23190a9ffa4fca238950bb792e513276f9bce"
+    },
+    {
+      "path": "variants/C_STIX108/screen.tex",
+      "bytes": 337,
+      "sha256": "0e09936f1e83cff9b1d439b0d84b062012c4194ba0b0917f7d385ca55b6d6e2c"
+    },
+    {
+      "path": "variants/C_STIX108/typography-overrides.tex",
+      "bytes": 56,
+      "sha256": "596265d77c6f6240f8b25114c059f252a9de097c51d7fdf45ca25226cc59980a"
+    },
+    {
+      "path": "variants/D_STIX_FAMILY/config/book-config.tex",
+      "bytes": 21031,
+      "sha256": "cb61253dceb2311501f346f3d881403e2b9a0b4020889f15653f122e089d00e8"
+    },
+    {
+      "path": "variants/D_STIX_FAMILY/print.tex",
+      "bytes": 286,
+      "sha256": "6975b7c84c98924b87b8e50e2f87d144189873e8968c39e68fdada603802f1fc"
+    },
+    {
+      "path": "variants/D_STIX_FAMILY/screen.tex",
+      "bytes": 287,
+      "sha256": "7b0a0794c301e72a4d7891c382d18f7d90801c09d6b8ac5c488792f195fddead"
+    },
+    {
+      "path": "variants/D_STIX_FAMILY/typography-overrides.tex",
+      "bytes": 663,
+      "sha256": "b71952e63c9911acbd540ffd128130108828b5c53f0d896faf8a2772e73af067"
+    },
+    {
+      "path": "variants/E_LIBERTINUS/config/book-config.tex",
+      "bytes": 21031,
+      "sha256": "cb61253dceb2311501f346f3d881403e2b9a0b4020889f15653f122e089d00e8"
+    },
+    {
+      "path": "variants/E_LIBERTINUS/print.tex",
+      "bytes": 286,
+      "sha256": "6975b7c84c98924b87b8e50e2f87d144189873e8968c39e68fdada603802f1fc"
+    },
+    {
+      "path": "variants/E_LIBERTINUS/screen.tex",
+      "bytes": 287,
+      "sha256": "7b0a0794c301e72a4d7891c382d18f7d90801c09d6b8ac5c488792f195fddead"
+    },
+    {
+      "path": "variants/E_LIBERTINUS/typography-overrides.tex",
+      "bytes": 708,
+      "sha256": "f24a7ebbdadc52241649e7e7afd59f79ae722874b02073ca4a5f1f20a173b50c"
+    },
+    {
+      "path": "visual-audit/A_CURRENT_boxes.png",
+      "bytes": 126360,
+      "sha256": "3086e81d8ec8b4c0423e79059fd14445e451332105f175f50ce64192ce730717"
+    },
+    {
+      "path": "visual-audit/A_CURRENT_examples_top.png",
+      "bytes": 54013,
+      "sha256": "92db6af646fa3eb05c2a2b4db6225684dd6859acf62cdec175426470552fc077"
+    },
+    {
+      "path": "visual-audit/A_CURRENT_figures.png",
+      "bytes": 67622,
+      "sha256": "23bba00cb3c43a0d6b920acc6b7ced2c9bba036455221c6b764e84e37ec12caf"
+    },
+    {
+      "path": "visual-audit/A_CURRENT_math_dense.png",
+      "bytes": 64118,
+      "sha256": "1930125d86225b0ff5487023712432b9d126ff9a528129aef1883c86283a43fb"
+    },
+    {
+      "path": "visual-audit/A_CURRENT_math_greek_chem.png",
+      "bytes": 61651,
+      "sha256": "3776b052b9760d11d547dc9d9694ec502534bb20c92b20b061d1a9a70d675271"
+    },
+    {
+      "path": "visual-audit/A_CURRENT_page1.png",
+      "bytes": 124241,
+      "sha256": "bcb49ca9d824d32d0ce84cf2c6e56f8116f3e49f199b1078b58ae3185924ac88"
+    },
+    {
+      "path": "visual-audit/A_CURRENT_theory_top.png",
+      "bytes": 45089,
+      "sha256": "e5383d64045d7c09d41d73d13d56456c18094afebe54396d4ae90db72b3fc137"
+    },
+    {
+      "path": "visual-audit/B_STIX105_PRINT_page4.png",
+      "bytes": 120276,
+      "sha256": "f1b7a0eda97278cee6fb68bf72f6b5702ac8d5bc882563f2c501c439ad8063af"
+    },
+    {
+      "path": "visual-audit/B_STIX105_boxes.png",
+      "bytes": 126820,
+      "sha256": "0caa78805feb6d0644b2aaa35a434bcc8e171bc2eb4f262a0f80ffca20cb200a"
+    },
+    {
+      "path": "visual-audit/B_STIX105_examples_top.png",
+      "bytes": 53855,
+      "sha256": "623979dca6c9f9c706ad4077732c669c0940b6f3b4d519484ffa24669cbd840c"
+    },
+    {
+      "path": "visual-audit/B_STIX105_figures.png",
+      "bytes": 67719,
+      "sha256": "bd6ccb405b022bfa5582f2c48625f7826654bfdb07d5f5cb088749adf3c4277f"
+    },
+    {
+      "path": "visual-audit/B_STIX105_math_dense.png",
+      "bytes": 63306,
+      "sha256": "af7149f92efa49629424c9b5ab106f5a87323d0c0e8cbaf18111e8d93742ae74"
+    },
+    {
+      "path": "visual-audit/B_STIX105_math_greek_chem.png",
+      "bytes": 62257,
+      "sha256": "f3cb3ef93561aa0f0c0884558bab3ea9bd545ce53ba5c86092276c8b75e336bc"
+    },
+    {
+      "path": "visual-audit/B_STIX105_page1.png",
+      "bytes": 124481,
+      "sha256": "00cd796f635407a159fe9b9b82c0ef0035a6a48ee2349125b101808be36f191a"
+    },
+    {
+      "path": "visual-audit/B_STIX105_theory_top.png",
+      "bytes": 45513,
+      "sha256": "79bce0ad52d2d60bb5b53e25acb10ed2fff1315065c9378379e0d707abb50e41"
+    },
+    {
+      "path": "visual-audit/COMPARISON_ABC_boxes.png",
+      "bytes": 484540,
+      "sha256": "88b05b76b1a51a1f1c4449263be4e56e226297473873c862f3ca63d24a96cbb3"
+    },
+    {
+      "path": "visual-audit/COMPARISON_ABC_examples_top.png",
+      "bytes": 215541,
+      "sha256": "d66e431b47f163a178f81138c6639910bd6d77a2ca7557b7832362606b859acd"
+    },
+    {
+      "path": "visual-audit/COMPARISON_ABC_figures.png",
+      "bytes": 259627,
+      "sha256": "c2ee8464b0229f8134e4f2e0c0e7f80c1db6571929609e17cfdd546e3d196f7b"
+    },
+    {
+      "path": "visual-audit/COMPARISON_ABC_math_dense.png",
+      "bytes": 244221,
+      "sha256": "afc086a2b44efac1623eedb2bd7ec3edb03cac05adff70ae143571c259b570c6"
+    },
+    {
+      "path": "visual-audit/COMPARISON_ABC_math_greek_chem.png",
+      "bytes": 236201,
+      "sha256": "17d49fca5f7a3b67f20d270126e299e7e1095d957a7b58ce0e7e329ef80a3e03"
+    },
+    {
+      "path": "visual-audit/COMPARISON_ABC_theory_top.png",
+      "bytes": 169556,
+      "sha256": "989773aaeb97380d9446e4e1b808f2e8f5fd18339b19f6f87c22e424ccba585b"
+    },
+    {
+      "path": "visual-audit/COMPARISON_ALL_boxes.png",
+      "bytes": 803298,
+      "sha256": "ad785b4e6fd8f470c8cb5a799568e4103633a900cf1aa65d68701c1d38077409"
+    },
+    {
+      "path": "visual-audit/COMPARISON_ALL_examples_top.png",
+      "bytes": 358081,
+      "sha256": "071db33a63325d485a4efb12a416d901aa2c18258b64c0752066bbad2a258a48"
+    },
+    {
+      "path": "visual-audit/COMPARISON_ALL_figures.png",
+      "bytes": 428114,
+      "sha256": "e50d1d2b277b0db7eb4acbbb5103582d6ee1d70cf2d9d005e682a0691bc25b6e"
+    },
+    {
+      "path": "visual-audit/COMPARISON_ALL_math_dense.png",
+      "bytes": 402047,
+      "sha256": "c1e6cd7a3af9292d89b60be06afc58317e090b44d0158f9ff9a92c5c64a466a2"
+    },
+    {
+      "path": "visual-audit/COMPARISON_ALL_math_greek_chem.png",
+      "bytes": 391517,
+      "sha256": "b9503486d87861ebf5d0a51149569ab366c2ac3c1594e3f9c74d031a49726cf2"
+    },
+    {
+      "path": "visual-audit/COMPARISON_ALL_theory_top.png",
+      "bytes": 279292,
+      "sha256": "3b7ec3a1620dd717b834839f89ea1fd0e2f074b0d13c2ee51ad4937074be727f"
+    },
+    {
+      "path": "visual-audit/COMPARISON_DE_boxes.png",
+      "bytes": 318880,
+      "sha256": "2551acecdd61b47d9f5fdd2a20bb95106eb0d05d449243fcd90e1a757ee58807"
+    },
+    {
+      "path": "visual-audit/COMPARISON_DE_examples_top.png",
+      "bytes": 142622,
+      "sha256": "93e8e82948563a698d26b9419b7af96fa4d0d6a61f20974bd46c23b3a227eb66"
+    },
+    {
+      "path": "visual-audit/COMPARISON_DE_figures.png",
+      "bytes": 168619,
+      "sha256": "1c1d26968ed70ef6d5bda0a0685951a68f4b7b92d7b01a31f735f4313f23a814"
+    },
+    {
+      "path": "visual-audit/COMPARISON_DE_math_dense.png",
+      "bytes": 157932,
+      "sha256": "e24f3138cb3d22cbf991c724a938c9c70479f6f985fee03ecbc6bc1ba15e21b9"
+    },
+    {
+      "path": "visual-audit/COMPARISON_DE_math_greek_chem.png",
+      "bytes": 155379,
+      "sha256": "e2b91cd651f53511d7111543c02605e33e63365389249ee7f14341e919f8336d"
+    },
+    {
+      "path": "visual-audit/COMPARISON_DE_theory_top.png",
+      "bytes": 109826,
+      "sha256": "55485419f23e40bf163b4f845c2382d9e768a9b963818c4e5fcbba69196278ad"
+    },
+    {
+      "path": "visual-audit/C_STIX108_boxes.png",
+      "bytes": 127027,
+      "sha256": "4d5449d91c79220bd5bde1d9c9a03603daae6d7816120797f8a35b50199f5c7c"
+    },
+    {
+      "path": "visual-audit/C_STIX108_examples_top.png",
+      "bytes": 54262,
+      "sha256": "2cba2d69f99ca66afb9caa76cc752222c63f71f3e1f6f947338bfebf0ef7a36c"
+    },
+    {
+      "path": "visual-audit/C_STIX108_figures.png",
+      "bytes": 67732,
+      "sha256": "580635f015461f3f44b351e407e60487c3efbd0d88d6d3637149f7158f0396f2"
+    },
+    {
+      "path": "visual-audit/C_STIX108_math_dense.png",
+      "bytes": 64764,
+      "sha256": "4d5393e25212e9d9a11e50eec2eaba3d8d380061105cae59eac3784320090fab"
+    },
+    {
+      "path": "visual-audit/C_STIX108_math_greek_chem.png",
+      "bytes": 63839,
+      "sha256": "b76e3b0aebf8bff71cb40c28d40ce2e603078d5a8b7d42abd1170f12a2541e21"
+    },
+    {
+      "path": "visual-audit/C_STIX108_page1.png",
+      "bytes": 125587,
+      "sha256": "5621fc5a5964567b4213c11bd1b11ea4b5e4608087d7d84cc8d4107e873bbb69"
+    },
+    {
+      "path": "visual-audit/C_STIX108_theory_top.png",
+      "bytes": 44923,
+      "sha256": "b544405d9651bc18c9d4d6c7cde95194f8d86ff2453af5b1232356fdc09c599e"
+    },
+    {
+      "path": "visual-audit/D_STIX_FAMILY_PRINT_page1.png",
+      "bytes": 117900,
+      "sha256": "241dceab810df0bd57a5070cf6ff674a443c018ad6b87c51acef43fc2f202829"
+    },
+    {
+      "path": "visual-audit/D_STIX_FAMILY_boxes.png",
+      "bytes": 128240,
+      "sha256": "0cc5ff6ed04cc7097c3bbc3fb874ec7fa65043342bfe89b139baf295897e51ac"
+    },
+    {
+      "path": "visual-audit/D_STIX_FAMILY_examples_top.png",
+      "bytes": 55220,
+      "sha256": "61df6d0aa5768b6a7a2ed7354bd31ced642d23dc438f059f532c6cfbad387bcb"
+    },
+    {
+      "path": "visual-audit/D_STIX_FAMILY_figures.png",
+      "bytes": 67127,
+      "sha256": "e8cf9007894d714a59e6643839646774781083bf8697a00d64c9b199ed24531c"
+    },
+    {
+      "path": "visual-audit/D_STIX_FAMILY_math_dense.png",
+      "bytes": 63467,
+      "sha256": "9cb222e2224648118fa64bc7b247670b0b4bfd50585e1a5f7738c556c4c5a6e7"
+    },
+    {
+      "path": "visual-audit/D_STIX_FAMILY_math_greek_chem.png",
+      "bytes": 61450,
+      "sha256": "3ed3aba07b21ed77bda398568b279ba1a1b5ab4713897eb722e57e57a9db568f"
+    },
+    {
+      "path": "visual-audit/D_STIX_FAMILY_page1.png",
+      "bytes": 117780,
+      "sha256": "fc96d92faf12a939584b1170c4c5dc3947645d7c5583ec55103eb518fde62e87"
+    },
+    {
+      "path": "visual-audit/D_STIX_FAMILY_theory_top.png",
+      "bytes": 42631,
+      "sha256": "b5fd010ffb12822e77e0036fd2c0bb00c6f24ef726afd4f2b6c7b9235549de8d"
+    },
+    {
+      "path": "visual-audit/E_LIBERTINUS_PRINT_page3.png",
+      "bytes": 100820,
+      "sha256": "494c0a3c72a1b6ccd3e936af9f07ab1129e33575da4b15bebfda7637bedc244e"
+    },
+    {
+      "path": "visual-audit/E_LIBERTINUS_boxes.png",
+      "bytes": 119042,
+      "sha256": "0f026982eff2dd0b9982015804c9f17b1f0ae29866d4d8dcc7746612228bcb51"
+    },
+    {
+      "path": "visual-audit/E_LIBERTINUS_examples_top.png",
+      "bytes": 51193,
+      "sha256": "3ca39ee5e25bad422057ec43b8ca912b583629608f8406e57ff038fe0086323e"
+    },
+    {
+      "path": "visual-audit/E_LIBERTINUS_figures.png",
+      "bytes": 62550,
+      "sha256": "e2573b9de406d0fd4c994fb7712c677a6a915f98a3795c836a20b86d079654e3"
+    },
+    {
+      "path": "visual-audit/E_LIBERTINUS_math_dense.png",
+      "bytes": 58768,
+      "sha256": "d154e174688728d1d3a2a6ba48be30e43c1563edd936e9fe730ce23b5994f415"
+    },
+    {
+      "path": "visual-audit/E_LIBERTINUS_math_greek_chem.png",
+      "bytes": 59265,
+      "sha256": "8a5edea366884b7c6f3466bc07e58bd0f6fd8fcfc3ab4c59e2f1d15eb97fa521"
+    },
+    {
+      "path": "visual-audit/E_LIBERTINUS_page1.png",
+      "bytes": 112825,
+      "sha256": "15936ad54bf25627de1aa6b983a2a925c55dc98746f7a19b91f3628ae8f4af71"
+    },
+    {
+      "path": "visual-audit/E_LIBERTINUS_theory_top.png",
+      "bytes": 42595,
+      "sha256": "49a424e2cf58729db2d7dcf2d5392838dd63970ae7ad17dd462867f6a491057b"
+    },
+    {
+      "path": "visual-audit/VISUAL_EVIDENCE.json",
+      "bytes": 1707,
+      "sha256": "43e807351a44f40b80dc6d935e4dda93eea32bd646a1583ee75351427872f2fa"
+    },
+    {
+      "path": "visual-audit/render_visual.py",
+      "bytes": 1741,
+      "sha256": "130e3ea7f91a2c0ccdc79355063c651e411cd2ebc2d070373d8c879dcf9539ac"
+    }
+  ],
+  "excluded": "Research font-download caches; compilation intermediates; binary TeX formats; runtime caches; original Git repository."
+}

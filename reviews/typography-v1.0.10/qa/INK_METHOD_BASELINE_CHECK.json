@@ -1,0 +1,169 @@
+{
+  "method": "PDF character origins plus actual embedded-font glyph outline bounds (TTF or CID CFF)",
+  "units": "PDF bp; TeX pt conversion 72.27/72 also reported for line gaps",
+  "scope": "Adjacent paragraph lines, including inline math in those text objects",
+  "limitations": [
+    "Bounding-box overlap is only a potential collision, not proof of outline intersection.",
+    "Isolated display equations and intended within-formula overlaps are excluded.",
+    "Inline math line association uses the nearest ordinary-text baseline in the same PDF text object."
+  ],
+  "pages": [
+    {
+      "page": 1,
+      "paragraph_lines": 1,
+      "lines_containing_inline_math": 0,
+      "adjacent_line_baseline_gap_pdf_bp": {
+        "count": 0,
+        "min": null,
+        "median": null,
+        "max": null
+      },
+      "same_text_object_baseline_gap_tex_pt_histogram": {},
+      "adjacent_line_ink_bbox_clearance_pdf_bp": {
+        "count": 0,
+        "min": null,
+        "median": null,
+        "max": null
+      }
+    },
+    {
+      "page": 2,
+      "paragraph_lines": 0,
+      "lines_containing_inline_math": 0,
+      "adjacent_line_baseline_gap_pdf_bp": {
+        "count": 0,
+        "min": null,
+        "median": null,
+        "max": null
+      },
+      "same_text_object_baseline_gap_tex_pt_histogram": {},
+      "adjacent_line_ink_bbox_clearance_pdf_bp": {
+        "count": 0,
+        "min": null,
+        "median": null,
+        "max": null
+      }
+    },
+    {
+      "page": 3,
+      "paragraph_lines": 6,
+      "lines_containing_inline_math": 0,
+      "adjacent_line_baseline_gap_pdf_bp": {
+        "count": 4,
+        "min": 21.56,
+        "median": 21.865,
+        "max": 21.87
+      },
+      "same_text_object_baseline_gap_tex_pt_histogram": {},
+      "adjacent_line_ink_bbox_clearance_pdf_bp": {
+        "count": 4,
+        "min": 12.06336,
+        "median": 12.06339,
+        "max": 12.59573
+      }
+    },
+    {
+      "page": 4,
+      "paragraph_lines": 10,
+      "lines_containing_inline_math": 4,
+      "adjacent_line_baseline_gap_pdf_bp": {
+        "count": 4,
+        "min": 13.15,
+        "median": 16.195,
+        "max": 17.49
+      },
+      "same_text_object_baseline_gap_tex_pt_histogram": {
+        "14.96": 1,
+        "13.2": 1
+      },
+      "adjacent_line_ink_bbox_clearance_pdf_bp": {
+        "count": 4,
+        "min": 3.53867,
+        "median": 6.47695,
+        "max": 7.87867
+      }
+    }
+  ],
+  "potential_collisions": [],
+  "adjacent_line_baseline_gap_pdf_bp": {
+    "count": 8,
+    "min": 13.15,
+    "median": 19.525,
+    "max": 21.87
+  },
+  "adjacent_line_ink_bbox_clearance_pdf_bp": {
+    "count": 8,
+    "min": 3.53867,
+    "median": 9.97102,
+    "max": 12.59573
+  },
+  "inline_math_adjacent_line_clearance_pdf_bp": {
+    "count": 3,
+    "min": 5.07625,
+    "median": 7.87766,
+    "max": 7.87867
+  },
+  "unknown_font_sources": [],
+  "font_glyph_id_checks": {
+    "inter-semibold": {
+      "unicode_gid_comparisons": 84,
+      "unicode_gid_matches": 82,
+      "glyphs_with_outline_bounds": 84,
+      "glyphs_missing_outline_bounds": 0,
+      "bounds_source": "embedded PDF font xref 54 (CID CFF)",
+      "unicode_gid_match_ratio": 0.97619
+    },
+    "inter-regular": {
+      "unicode_gid_comparisons": 587,
+      "unicode_gid_matches": 586,
+      "glyphs_with_outline_bounds": 587,
+      "glyphs_missing_outline_bounds": 0,
+      "bounds_source": "embedded PDF font xref 58 (CID CFF)",
+      "unicode_gid_match_ratio": 0.9983
+    },
+    "notoserif-medium": {
+      "unicode_gid_comparisons": 48,
+      "unicode_gid_matches": 48,
+      "glyphs_with_outline_bounds": 48,
+      "glyphs_missing_outline_bounds": 0,
+      "bounds_source": "embedded PDF font xref 69 (ttf)",
+      "unicode_gid_match_ratio": 1.0
+    },
+    "notoserif-regular": {
+      "unicode_gid_comparisons": 11,
+      "unicode_gid_matches": 11,
+      "glyphs_with_outline_bounds": 11,
+      "glyphs_missing_outline_bounds": 0,
+      "bounds_source": "embedded PDF font xref 71 (ttf)",
+      "unicode_gid_match_ratio": 1.0
+    },
+    "stixtwomath-regular": {
+      "unicode_gid_comparisons": 45,
+      "unicode_gid_matches": 28,
+      "glyphs_with_outline_bounds": 45,
+      "glyphs_missing_outline_bounds": 0,
+      "bounds_source": "embedded PDF font xref 76 (ttf)",
+      "unicode_gid_match_ratio": 0.62222
+    },
+    "inter-medium": {
+      "unicode_gid_comparisons": 12,
+      "unicode_gid_matches": 12,
+      "glyphs_with_outline_bounds": 12,
+      "glyphs_missing_outline_bounds": 0,
+      "bounds_source": "embedded PDF font xref 78 (CID CFF)",
+      "unicode_gid_match_ratio": 1.0
+    },
+    "inter-italic": {
+      "unicode_gid_comparisons": 77,
+      "unicode_gid_matches": 76,
+      "glyphs_with_outline_bounds": 77,
+      "glyphs_missing_outline_bounds": 0,
+      "bounds_source": "embedded PDF font xref 80 (CID CFF)",
+      "unicode_gid_match_ratio": 0.98701
+    }
+  },
+  "glyph_mapping_method_verified": true,
+  "font_mapping_requiring_manual_review": [],
+  "potential_collision_count": 0,
+  "status": "measured"
+}

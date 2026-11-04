@@ -1,0 +1,18 @@
+\documentclass[11pt]{article}
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\setdefaultlanguage{greek}
+\setmainfont{LibertinusSerif-Regular.otf}[Path=/workspace/typography-review/fonts/installed/,Script=Default]
+\newfontfamily\greekfont{LibertinusSerif-Regular.otf}[Path=/workspace/typography-review/fonts/installed/,Script=Default]
+\usepackage[paperwidth=170mm,paperheight=120mm,margin=15mm]{geometry}
+\tracinglostchars=2
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{10pt}
+\begin{document}
+Monotonic: άνθρωπος, επιστήμη, ων, αρχή
+
+NFC: ἄνθρωπος, ἐπιστήμη, ὧν, ἀρχή
+
+NFD: ἄνθρωπος, ἐπιστήμη, ὧν, ἀρχή
+\end{document}

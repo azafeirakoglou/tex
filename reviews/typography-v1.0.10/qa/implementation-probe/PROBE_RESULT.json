@@ -1,0 +1,62 @@
+{
+  "status": "passed",
+  "setter": "\\setmathfont[Scale=\\BookMathScale]{\\MathFontName}",
+  "scale": 1.05,
+  "spans": [
+    {
+      "text": "Κείμενο ελέγχου",
+      "font": "Inter-Regular",
+      "pt": 10.950008702278136
+    },
+    {
+      "text": " 𝑥",
+      "font": "STIXTwoMath-Regular",
+      "pt": 11.497555085420608
+    },
+    {
+      "text": "𝐴",
+      "font": "STIXTwoMath-Regular",
+      "pt": 8.04826817035675
+    },
+    {
+      "text": "= 2",
+      "font": "STIXTwoMath-Regular",
+      "pt": 11.497555085420608
+    },
+    {
+      "text": " m.",
+      "font": "Inter-Regular",
+      "pt": 10.950008702278136
+    },
+    {
+      "text": "Δ𝑥= 𝑥",
+      "font": "STIXTwoMath-Regular",
+      "pt": 11.497555085420608
+    },
+    {
+      "text": "𝐵",
+      "font": "STIXTwoMath-Regular",
+      "pt": 8.04826817035675
+    },
+    {
+      "text": "−𝑥",
+      "font": "STIXTwoMath-Regular",
+      "pt": 11.497555085420608
+    },
+    {
+      "text": "𝐴",
+      "font": "STIXTwoMath-Regular",
+      "pt": 8.04826817035675
+    },
+    {
+      "text": ".",
+      "font": "STIXTwoMath-Regular",
+      "pt": 11.497555085420608
+    },
+    {
+      "text": "1)",
+      "font": "Inter-Regular",
+      "pt": 10.950008702278136
+    }
+  ]
+}

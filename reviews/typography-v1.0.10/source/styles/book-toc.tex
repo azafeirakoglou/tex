@@ -1,0 +1,27 @@
+% Πίνακας περιεχομένων: ίδια ιεραρχία σε PRINT και SCREEN, μόνο μαύρο.
+% Οι άτιτλες ως προς την αρίθμηση ομάδες/εγγραφές έχουν δικούς τους τύπους:
+% η επόμενη γραμμή τους ευθυγραμμίζεται με την πρώτη, χωρίς κενή θέση αριθμού.
+\makeatletter
+\newcommand*{\toclevel@bookcollection}{1}
+\newcommand*{\toclevel@bookitem}{2}
+\newcommand*{\l@bookcollection}[2]{%
+  \ifnum\c@tocdepth>0\relax
+    % Μένει μαζί με τουλάχιστον την αρχή της πρώτης καταχώρισης.
+    \Needspace{3\baselineskip}%
+    \@dottedtocline{1}{1.5em}{0em}{#1}{#2}%
+    \nobreak
+  \fi
+}
+\newcommand*{\l@bookitem}{\@dottedtocline{2}{3.8em}{0em}}
+% Χώρος για τριψήφιους αριθμούς και σαφές διάστημα από μακρύ τίτλο.
+\renewcommand{\@pnumwidth}{2em}
+\renewcommand{\@tocrmarg}{3em}
+% Ο σελιδοδείκτης δημιουργείται ΜΕΣΑ στον ήδη υπάρχοντα τίτλο:
+% δείχνει στην κορυφή του τίτλου και δεν προκαλεί νέα/κενή σελίδα.
+\patchcmd{\tableofcontents}
+  {\contentsname}
+  {\pdfbookmark[0]{\contentsname}{book.contents}\contentsname}
+  {}{\PackageError{universalbook}{Cannot attach Contents bookmark}{The book-class tableofcontents definition changed.}}
+\makeatother
+% Ενεργός σύνδεσμος τόσο στον τίτλο όσο και στον αριθμό σελίδας.
+\hypersetup{linktoc=all}

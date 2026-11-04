@@ -1,0 +1,37 @@
+% Real PDF alignment fixture: one shared square used beside Greek capitals
+% and mathematical units, at the ordinary body size and at small size.
+\documentclass[11pt,twoside,openright]{book}
+\input{config/book-config.tex}
+\newif\ifBookTwoInkProof
+\ifdefined\CheckboxesPrint
+  \BookTwoInkProoftrue
+\else
+  \BookTwoInkProoffalse
+\fi
+\newif\ifPrintThreeInk
+\PrintThreeInkfalse
+\usepackage{styles/universalbook}
+\pagestyle{empty}
+\newcommand{\CheckboxFixtureRow}[3]{%
+  \begingroup
+  #2\relax
+  % Independent typographic reference. Compare this measured capital height
+  % with the resulting vectors and text origins in the generated PDF.
+  \setbox0=\hbox{Σ}%
+  \typeout{CHECKCAP:#1:\the\ht0}%
+  \noindent #1\quad #3\par
+  \vspace{10mm}%
+  \endgroup
+}
+\begin{document}
+\CheckboxFixtureRow{NORMALTF}{\normalsize}{\TrueFalseChoices}
+\CheckboxFixtureRow{NORMALMC}{\normalsize}{%
+  \CheckSquare\ $\mathrm{m}$\qquad
+  \CheckSquare\ $\mathrm{m/s}$\qquad
+  \CheckSquare\ $\mathrm{m/s^2}$}
+\CheckboxFixtureRow{SMALLTF}{\small}{\TrueFalseChoices}
+\CheckboxFixtureRow{SMALLMC}{\small}{%
+  \CheckSquare\ $\mathrm{m}$\qquad
+  \CheckSquare\ $\mathrm{m/s}$\qquad
+  \CheckSquare\ $\mathrm{m/s^2}$}
+\end{document}

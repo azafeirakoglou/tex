@@ -1,0 +1,291 @@
+{
+  "scope": "Actual XeLaTeX shaping with explicit font filenames and Script=Default, matching review Greek family; only font-probe files created. NFC/NFD forms of same polytonic words plus monotonic control.",
+  "results": {
+    "D_STIX": {
+      "font_file": "/workspace/typography-review/fonts/installed/STIXTwoText-Regular.otf",
+      "font_sha256": "c4864ca6ec071c2d31d0d8309001faa1ee3517fffb53a31a405a697b71f52ca1",
+      "xelatex_exit_code": 0,
+      "missing_character_warnings": [
+        "Missing character: There is no ἄ (U+1F04) in font [/workspace/typography-review",
+        "Missing character: There is no ἐ (U+1F10) in font [/workspace/typography-review",
+        "Missing character: There is no ὧ (U+1F67) in font [/workspace/typography-review",
+        "Missing character: There is no ἀ (U+1F00) in font [/workspace/typography-review",
+        "Missing character: There is no ͂ (U+0342) in font [/workspace/typography-review"
+      ],
+      "pdf": "/workspace/typography-review/fonts/probes/D_STIX.pdf",
+      "source": "/workspace/typography-review/fonts/probes/D_STIX.tex",
+      "NFC_source": "ἄνθρωπος, ἐπιστήμη, ὧν, ἀρχή",
+      "NFD_source_codepoints": [
+        "U+03B1",
+        "U+0313",
+        "U+0301",
+        "U+03BD",
+        "U+03B8",
+        "U+03C1",
+        "U+03C9",
+        "U+03C0",
+        "U+03BF",
+        "U+03C2",
+        "U+002C",
+        "U+0020",
+        "U+03B5",
+        "U+0313",
+        "U+03C0",
+        "U+03B9",
+        "U+03C3",
+        "U+03C4",
+        "U+03B7",
+        "U+0301",
+        "U+03BC",
+        "U+03B7",
+        "U+002C",
+        "U+0020",
+        "U+03C9",
+        "U+0314",
+        "U+0342",
+        "U+03BD",
+        "U+002C",
+        "U+0020",
+        "U+03B1",
+        "U+0313",
+        "U+03C1",
+        "U+03C7",
+        "U+03B7",
+        "U+0301"
+      ],
+      "nfc_precomposed_missing_from_cmap": [
+        "U+1F04",
+        "U+1F10",
+        "U+1F67",
+        "U+1F00"
+      ],
+      "nfd_missing_from_cmap": [
+        "U+0342"
+      ],
+      "extracted_text": "Monotonic: άνθρωπος, επιστήμη, ων, αρχή\nNFC: ἄνθρωπος, ἐπιστήμη, ￿ν, ἀρχή\nNFD: ἄνθρωπος, ἐπιστήμη, ὡ￿ν, ἀρχή\n",
+      "pdf_sha256": "8561a96dd327b0599416628d54b0c3012b0e55bdac4c962cab9050c3f6a44ba6",
+      "fonts_used": [
+        {
+          "xref": 4,
+          "basefont": "JCLPSM+STIXTwoText-Regular-Identity-H",
+          "resource": "F1"
+        }
+      ],
+      "replacement_characters_in_extracted_text": 0,
+      "font_spans": [
+        {
+          "text": "Monotonic: άνθρωπος, επιστήμη, ων, αρχή",
+          "font": "STIXTwoText-Regular",
+          "size_pdf_bp": 10.909099578857422
+        },
+        {
+          "text": "NFC: ἀ",
+          "font": "STIXTwoText-Regular",
+          "size_pdf_bp": 10.909099578857422
+        },
+        {
+          "text": "́",
+          "font": "STIXTwoText-Regular",
+          "size_pdf_bp": 10.909099578857422
+        },
+        {
+          "text": "νθρωπος, ἐπιστήμη, ￿ν, ἀρχή",
+          "font": "STIXTwoText-Regular",
+          "size_pdf_bp": 10.909099578857422
+        },
+        {
+          "text": "NFD: ἀ",
+          "font": "STIXTwoText-Regular",
+          "size_pdf_bp": 10.909099578857422
+        },
+        {
+          "text": "́",
+          "font": "STIXTwoText-Regular",
+          "size_pdf_bp": 10.909099578857422
+        },
+        {
+          "text": "νθρωπος, ἐπιστήμη, ὡ￿ν, ἀρχή",
+          "font": "STIXTwoText-Regular",
+          "size_pdf_bp": 10.909099578857422
+        }
+      ],
+      "missing_glyph_marker_count": 2,
+      "encoding_checks": {
+        "NFC": [
+          {
+            "expected_NFC": "ἄνθρωπος",
+            "extracted_NFC": "ἄνθρωπος",
+            "equivalent": true
+          },
+          {
+            "expected_NFC": "ἐπιστήμη",
+            "extracted_NFC": "ἐπιστήμη",
+            "equivalent": true
+          },
+          {
+            "expected_NFC": "ὧν",
+            "extracted_NFC": "￿ν",
+            "equivalent": false
+          },
+          {
+            "expected_NFC": "ἀρχή",
+            "extracted_NFC": "ἀρχή",
+            "equivalent": true
+          }
+        ],
+        "NFD": [
+          {
+            "expected_NFC": "ἄνθρωπος",
+            "extracted_NFC": "ἄνθρωπος",
+            "equivalent": true
+          },
+          {
+            "expected_NFC": "ἐπιστήμη",
+            "extracted_NFC": "ἐπιστήμη",
+            "equivalent": true
+          },
+          {
+            "expected_NFC": "ὧν",
+            "extracted_NFC": "ὡ￿ν",
+            "equivalent": false
+          },
+          {
+            "expected_NFC": "ἀρχή",
+            "extracted_NFC": "ἀρχή",
+            "equivalent": true
+          }
+        ]
+      },
+      "all_tested_polytonic_words_correct": false,
+      "visual_inspection": "PNG viewed at readable size; STIX has visible missing-glyph box in ὧν in NFC and NFD; Libertinus renders all tested forms."
+    },
+    "E_LIBERTINUS": {
+      "font_file": "/workspace/typography-review/fonts/installed/LibertinusSerif-Regular.otf",
+      "font_sha256": "fcf06307a77367394fcb0ccb241e59eea70dba3d732be309647611224679c733",
+      "xelatex_exit_code": 0,
+      "missing_character_warnings": [],
+      "pdf": "/workspace/typography-review/fonts/probes/E_LIBERTINUS.pdf",
+      "source": "/workspace/typography-review/fonts/probes/E_LIBERTINUS.tex",
+      "NFC_source": "ἄνθρωπος, ἐπιστήμη, ὧν, ἀρχή",
+      "NFD_source_codepoints": [
+        "U+03B1",
+        "U+0313",
+        "U+0301",
+        "U+03BD",
+        "U+03B8",
+        "U+03C1",
+        "U+03C9",
+        "U+03C0",
+        "U+03BF",
+        "U+03C2",
+        "U+002C",
+        "U+0020",
+        "U+03B5",
+        "U+0313",
+        "U+03C0",
+        "U+03B9",
+        "U+03C3",
+        "U+03C4",
+        "U+03B7",
+        "U+0301",
+        "U+03BC",
+        "U+03B7",
+        "U+002C",
+        "U+0020",
+        "U+03C9",
+        "U+0314",
+        "U+0342",
+        "U+03BD",
+        "U+002C",
+        "U+0020",
+        "U+03B1",
+        "U+0313",
+        "U+03C1",
+        "U+03C7",
+        "U+03B7",
+        "U+0301"
+      ],
+      "nfc_precomposed_missing_from_cmap": [],
+      "nfd_missing_from_cmap": [],
+      "extracted_text": "Monotonic: άνθρωπος, επιστήμη, ων, αρχή\nNFC: ἄνθρωπος, ἐπιστήμη, ὧν, ἀρχή\nNFD: ἄνθρωπος, ἐπιστήμη, ὧν, ἀρχή\n",
+      "pdf_sha256": "f46508a1a237b5270c3c644d1c0aad22962204f455902791a83c71d3a4a78bd7",
+      "fonts_used": [
+        {
+          "xref": 4,
+          "basefont": "EHEWOS+LibertinusSerif-Regular-Identity-H",
+          "resource": "F1"
+        }
+      ],
+      "replacement_characters_in_extracted_text": 0,
+      "font_spans": [
+        {
+          "text": "Monotonic: άνθρωπος, επιστήμη, ων, αρχή",
+          "font": "LibertinusSerif-Regular",
+          "size_pdf_bp": 10.909099578857422
+        },
+        {
+          "text": "NFC: ἄνθρωπος, ἐπιστήμη, ὧν, ἀρχή",
+          "font": "LibertinusSerif-Regular",
+          "size_pdf_bp": 10.909099578857422
+        },
+        {
+          "text": "NFD: ἄνθρωπος, ἐπιστήμη, ὧν, ἀρχή",
+          "font": "LibertinusSerif-Regular",
+          "size_pdf_bp": 10.909099578857422
+        }
+      ],
+      "missing_glyph_marker_count": 0,
+      "encoding_checks": {
+        "NFC": [
+          {
+            "expected_NFC": "ἄνθρωπος",
+            "extracted_NFC": "ἄνθρωπος",
+            "equivalent": true
+          },
+          {
+            "expected_NFC": "ἐπιστήμη",
+            "extracted_NFC": "ἐπιστήμη",
+            "equivalent": true
+          },
+          {
+            "expected_NFC": "ὧν",
+            "extracted_NFC": "ὧν",
+            "equivalent": true
+          },
+          {
+            "expected_NFC": "ἀρχή",
+            "extracted_NFC": "ἀρχή",
+            "equivalent": true
+          }
+        ],
+        "NFD": [
+          {
+            "expected_NFC": "ἄνθρωπος",
+            "extracted_NFC": "ἄνθρωπος",
+            "equivalent": true
+          },
+          {
+            "expected_NFC": "ἐπιστήμη",
+            "extracted_NFC": "ἐπιστήμη",
+            "equivalent": true
+          },
+          {
+            "expected_NFC": "ὧν",
+            "extracted_NFC": "ὧν",
+            "equivalent": true
+          },
+          {
+            "expected_NFC": "ἀρχή",
+            "extracted_NFC": "ἀρχή",
+            "equivalent": true
+          }
+        ]
+      },
+      "all_tested_polytonic_words_correct": true,
+      "visual_inspection": "PNG viewed at readable size; STIX has visible missing-glyph box in ὧν in NFC and NFD; Libertinus renders all tested forms."
+    }
+  },
+  "status": "completed",
+  "conclusion": "Cmap absence alone overstates the limitation: STIX Two Text composes several tested polytonic letters from combining glyphs, but lacks full polytonic support; ὧν fails in NFC/NFD because the font cannot render the required perispomeni. Libertinus passes all tested forms without warnings.",
+  "setup_note": "An initial exploratory absolute-font-argument input failed NFSS parsing; corrected with explicit Path and basename before producing these two final PDFs. This was input syntax, not font fallback or a missing font installation."
+}

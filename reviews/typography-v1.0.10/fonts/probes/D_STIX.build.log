@@ -1,0 +1,43 @@
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2025/dev/Debian) (preloaded format=xelatex)
+ restricted \write18 enabled.
+entering extended mode
+(/workspace/typography-review/fonts/probes/D_STIX.tex
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-01-18>
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2024/06/29 v1.4n Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size11.clo))
+(/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-xetex.def)))
+(/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
+(/usr/share/texlive/texmf-dist/tex/latex/polyglossia/polyglossia.sty
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/polyglossia/gloss-latex.ldf))
+(/usr/share/texlive/texmf-dist/tex/latex/polyglossia/gloss-greek.ldf
+(/usr/share/texlive/texmf-dist/tex/latex/polyglossia/xgreek-fixes.def))
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty))
+No file D_STIX.aux.
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+Missing character: There is no ἄ (U+1F04) in font [/workspace/typography-review
+/fonts/installed/STIXTwoText-Regular.otf]/OT:script=DFLT;language=dflt;!
+Missing character: There is no ἐ (U+1F10) in font [/workspace/typography-review
+/fonts/installed/STIXTwoText-Regular.otf]/OT:script=DFLT;language=dflt;!
+Missing character: There is no ὧ (U+1F67) in font [/workspace/typography-review
+/fonts/installed/STIXTwoText-Regular.otf]/OT:script=DFLT;language=dflt;!
+Missing character: There is no ἀ (U+1F00) in font [/workspace/typography-review
+/fonts/installed/STIXTwoText-Regular.otf]/OT:script=DFLT;language=dflt;!
+Missing character: There is no ͂ (U+0342) in font [/workspace/typography-review
+/fonts/installed/STIXTwoText-Regular.otf]/OT:script=DFLT;language=dflt;!
+
+[1] (/workspace/typography-review/fonts/probes/D_STIX.aux) )
+Output written on /workspace/typography-review/fonts/probes/D_STIX.pdf (1 page)
+.
+Transcript written on /workspace/typography-review/fonts/probes/D_STIX.log.

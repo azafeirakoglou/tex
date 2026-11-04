@@ -1,0 +1,187 @@
+{
+  "pages": 25,
+  "page_mm": [
+    170,
+    240
+  ],
+  "profile": "SCREEN",
+  "all_source_pages_unscaled": true,
+  "organization": "Five topic groups; variants A–E within each group",
+  "pages_map": [
+    {
+      "comparison_page": 1,
+      "variant": "A_CURRENT",
+      "source_page": 1,
+      "scale": 1.0,
+      "source_sha256": "a5dbfe5339c8962e2326d14f8e14a81904b202692142a7483a7377770e9f35ac"
+    },
+    {
+      "comparison_page": 2,
+      "variant": "B_STIX105",
+      "source_page": 1,
+      "scale": 1.0,
+      "source_sha256": "55d72e0367d310e259b1ce5047168fbb5127cfec9c1b8dd6469614d7fc5d5f54"
+    },
+    {
+      "comparison_page": 3,
+      "variant": "C_STIX108",
+      "source_page": 1,
+      "scale": 1.0,
+      "source_sha256": "55a698db18ea5a79c1172073e7ae7985631d249d55b89171b90368c9767b9e69"
+    },
+    {
+      "comparison_page": 4,
+      "variant": "D_STIX_FAMILY",
+      "source_page": 1,
+      "scale": 1.0,
+      "source_sha256": "328f8fdcc5a81d9e8064084a8bccc6449c3c33585484f0e5749dd77408e5d20c"
+    },
+    {
+      "comparison_page": 5,
+      "variant": "E_LIBERTINUS",
+      "source_page": 1,
+      "scale": 1.0,
+      "source_sha256": "9bd5cfe3476602ef5393fc0873817346df569201199132f510bd6d64a78367ff"
+    },
+    {
+      "comparison_page": 6,
+      "variant": "A_CURRENT",
+      "source_page": 2,
+      "scale": 1.0,
+      "source_sha256": "a5dbfe5339c8962e2326d14f8e14a81904b202692142a7483a7377770e9f35ac"
+    },
+    {
+      "comparison_page": 7,
+      "variant": "B_STIX105",
+      "source_page": 2,
+      "scale": 1.0,
+      "source_sha256": "55d72e0367d310e259b1ce5047168fbb5127cfec9c1b8dd6469614d7fc5d5f54"
+    },
+    {
+      "comparison_page": 8,
+      "variant": "C_STIX108",
+      "source_page": 2,
+      "scale": 1.0,
+      "source_sha256": "55a698db18ea5a79c1172073e7ae7985631d249d55b89171b90368c9767b9e69"
+    },
+    {
+      "comparison_page": 9,
+      "variant": "D_STIX_FAMILY",
+      "source_page": 2,
+      "scale": 1.0,
+      "source_sha256": "328f8fdcc5a81d9e8064084a8bccc6449c3c33585484f0e5749dd77408e5d20c"
+    },
+    {
+      "comparison_page": 10,
+      "variant": "E_LIBERTINUS",
+      "source_page": 2,
+      "scale": 1.0,
+      "source_sha256": "9bd5cfe3476602ef5393fc0873817346df569201199132f510bd6d64a78367ff"
+    },
+    {
+      "comparison_page": 11,
+      "variant": "A_CURRENT",
+      "source_page": 3,
+      "scale": 1.0,
+      "source_sha256": "a5dbfe5339c8962e2326d14f8e14a81904b202692142a7483a7377770e9f35ac"
+    },
+    {
+      "comparison_page": 12,
+      "variant": "B_STIX105",
+      "source_page": 3,
+      "scale": 1.0,
+      "source_sha256": "55d72e0367d310e259b1ce5047168fbb5127cfec9c1b8dd6469614d7fc5d5f54"
+    },
+    {
+      "comparison_page": 13,
+      "variant": "C_STIX108",
+      "source_page": 3,
+      "scale": 1.0,
+      "source_sha256": "55a698db18ea5a79c1172073e7ae7985631d249d55b89171b90368c9767b9e69"
+    },
+    {
+      "comparison_page": 14,
+      "variant": "D_STIX_FAMILY",
+      "source_page": 3,
+      "scale": 1.0,
+      "source_sha256": "328f8fdcc5a81d9e8064084a8bccc6449c3c33585484f0e5749dd77408e5d20c"
+    },
+    {
+      "comparison_page": 15,
+      "variant": "E_LIBERTINUS",
+      "source_page": 3,
+      "scale": 1.0,
+      "source_sha256": "9bd5cfe3476602ef5393fc0873817346df569201199132f510bd6d64a78367ff"
+    },
+    {
+      "comparison_page": 16,
+      "variant": "A_CURRENT",
+      "source_page": 4,
+      "scale": 1.0,
+      "source_sha256": "a5dbfe5339c8962e2326d14f8e14a81904b202692142a7483a7377770e9f35ac"
+    },
+    {
+      "comparison_page": 17,
+      "variant": "B_STIX105",
+      "source_page": 4,
+      "scale": 1.0,
+      "source_sha256": "55d72e0367d310e259b1ce5047168fbb5127cfec9c1b8dd6469614d7fc5d5f54"
+    },
+    {
+      "comparison_page": 18,
+      "variant": "C_STIX108",
+      "source_page": 4,
+      "scale": 1.0,
+      "source_sha256": "55a698db18ea5a79c1172073e7ae7985631d249d55b89171b90368c9767b9e69"
+    },
+    {
+      "comparison_page": 19,
+      "variant": "D_STIX_FAMILY",
+      "source_page": 4,
+      "scale": 1.0,
+      "source_sha256": "328f8fdcc5a81d9e8064084a8bccc6449c3c33585484f0e5749dd77408e5d20c"
+    },
+    {
+      "comparison_page": 20,
+      "variant": "E_LIBERTINUS",
+      "source_page": 4,
+      "scale": 1.0,
+      "source_sha256": "9bd5cfe3476602ef5393fc0873817346df569201199132f510bd6d64a78367ff"
+    },
+    {
+      "comparison_page": 21,
+      "variant": "A_CURRENT",
+      "source_page": 5,
+      "scale": 1.0,
+      "source_sha256": "a5dbfe5339c8962e2326d14f8e14a81904b202692142a7483a7377770e9f35ac"
+    },
+    {
+      "comparison_page": 22,
+      "variant": "B_STIX105",
+      "source_page": 5,
+      "scale": 1.0,
+      "source_sha256": "55d72e0367d310e259b1ce5047168fbb5127cfec9c1b8dd6469614d7fc5d5f54"
+    },
+    {
+      "comparison_page": 23,
+      "variant": "C_STIX108",
+      "source_page": 5,
+      "scale": 1.0,
+      "source_sha256": "55a698db18ea5a79c1172073e7ae7985631d249d55b89171b90368c9767b9e69"
+    },
+    {
+      "comparison_page": 24,
+      "variant": "D_STIX_FAMILY",
+      "source_page": 5,
+      "scale": 1.0,
+      "source_sha256": "328f8fdcc5a81d9e8064084a8bccc6449c3c33585484f0e5749dd77408e5d20c"
+    },
+    {
+      "comparison_page": 25,
+      "variant": "E_LIBERTINUS",
+      "source_page": 5,
+      "scale": 1.0,
+      "source_sha256": "9bd5cfe3476602ef5393fc0873817346df569201199132f510bd6d64a78367ff"
+    }
+  ]
+}

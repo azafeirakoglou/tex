@@ -1,0 +1,37 @@
+{
+  "reviewed_at_utc": "2026-11-04T22:11:13.733154+00:00",
+  "method": "Same PDF coordinates and 2x raster scale for all five SCREEN variants; full-page supplementary PRINT views; actual polytonic probes; no physical paper proof or student reader study.",
+  "pdf_sha256": {
+    "A_CURRENT_PRINT.pdf": "e115e6baa883dd1cbc2f9ade39d6c814a75ec9dab350487e40a1ac6c3e428fc8",
+    "A_CURRENT_SCREEN.pdf": "a5dbfe5339c8962e2326d14f8e14a81904b202692142a7483a7377770e9f35ac",
+    "B_STIX105_PRINT.pdf": "90fbd258e5c76b25459649fe841ded25dfa7841793a69a123211c305fbfc308f",
+    "B_STIX105_SCREEN.pdf": "55d72e0367d310e259b1ce5047168fbb5127cfec9c1b8dd6469614d7fc5d5f54",
+    "C_STIX108_PRINT.pdf": "59a2e2cd346aac6f1e94e379b4136d6ebe95b9465dfb1b953c091ca2fcebd7dd",
+    "C_STIX108_SCREEN.pdf": "55a698db18ea5a79c1172073e7ae7985631d249d55b89171b90368c9767b9e69",
+    "D_STIX_FAMILY_PRINT.pdf": "07d8cd00495fd40011ed3fe101b0128cb6042d52cf95cbb486d1ecff42f93324",
+    "D_STIX_FAMILY_SCREEN.pdf": "328f8fdcc5a81d9e8064084a8bccc6449c3c33585484f0e5749dd77408e5d20c",
+    "E_LIBERTINUS_PRINT.pdf": "9168663270b597c1cf01a021988d9b4291c6362a201bdcc4a6f033b42be3c825",
+    "E_LIBERTINUS_SCREEN.pdf": "9bd5cfe3476602ef5393fc0873817346df569201199132f510bd6d64a78367ff"
+  },
+  "screen_topics_viewed": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "print_pages_viewed": {
+    "B_STIX105": [
+      4
+    ],
+    "D_STIX_FAMILY": [
+      1
+    ],
+    "E_LIBERTINUS": [
+      3
+    ]
+  },
+  "recommended_variant": "B_STIX105",
+  "alternative_valid_variant": "C_STIX108",
+  "recommendation_basis": "Adequate observed gain in math-to-Inter balance with smallest requested intervention; C visually usable, not dismissed as technically failed."
+}

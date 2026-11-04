@@ -1,0 +1,100 @@
+{
+  "A_CURRENT": {
+    "main_math_tex_pt": 10.95001,
+    "first_level_scripts_tex_pt": [
+      7.66504
+    ],
+    "equation_number_font": "Inter-Regular",
+    "equation_number_tex_pt": 10.95001,
+    "body_normal_median_baselines_tex_pt": [
+      14.95988,
+      14.95988,
+      14.96086,
+      14.9599,
+      14.9599
+    ],
+    "potential_adjacent_ink_collision_count": 0,
+    "smallest_measured_inline_adjacent_ink_bbox_clearance_pdf_bp": 1.32716,
+    "page_count": 5,
+    "paired_preflight": "passed",
+    "inline_fraction_local_previous_to_current_baseline_tex_pt": 14.95989
+  },
+  "B_STIX105": {
+    "main_math_tex_pt": 11.49756,
+    "first_level_scripts_tex_pt": [
+      8.04827
+    ],
+    "equation_number_font": "Inter-Regular",
+    "equation_number_tex_pt": 10.95001,
+    "body_normal_median_baselines_tex_pt": [
+      14.95988,
+      14.95988,
+      14.96086,
+      14.9599,
+      14.9599
+    ],
+    "potential_adjacent_ink_collision_count": 0,
+    "smallest_measured_inline_adjacent_ink_bbox_clearance_pdf_bp": 1.32766,
+    "page_count": 5,
+    "paired_preflight": "passed",
+    "inline_fraction_local_previous_to_current_baseline_tex_pt": 16.20655
+  },
+  "C_STIX108": {
+    "main_math_tex_pt": 11.82598,
+    "first_level_scripts_tex_pt": [
+      8.27823
+    ],
+    "equation_number_font": "Inter-Regular",
+    "equation_number_tex_pt": 10.95001,
+    "body_normal_median_baselines_tex_pt": [
+      14.95989,
+      14.95988,
+      14.95988,
+      14.9599,
+      14.96089
+    ],
+    "potential_adjacent_ink_collision_count": 0,
+    "smallest_measured_inline_adjacent_ink_bbox_clearance_pdf_bp": 1.46194,
+    "page_count": 5,
+    "paired_preflight": "passed",
+    "inline_fraction_local_previous_to_current_baseline_tex_pt": 16.57793
+  },
+  "D_STIX_FAMILY": {
+    "main_math_tex_pt": 10.95001,
+    "first_level_scripts_tex_pt": [
+      7.66504
+    ],
+    "equation_number_font": "STIXTwoText-Regular",
+    "equation_number_tex_pt": 10.95001,
+    "body_normal_median_baselines_tex_pt": [
+      14.95988,
+      14.95988,
+      14.96039,
+      14.9599,
+      14.96039
+    ],
+    "potential_adjacent_ink_collision_count": 0,
+    "smallest_measured_inline_adjacent_ink_bbox_clearance_pdf_bp": 2.43932,
+    "page_count": 5,
+    "paired_preflight": "passed"
+  },
+  "E_LIBERTINUS": {
+    "main_math_tex_pt": 10.95001,
+    "first_level_scripts_tex_pt": [
+      8.76003
+    ],
+    "equation_number_font": "LibertinusSerif-Regular",
+    "equation_number_tex_pt": 10.95001,
+    "body_normal_median_baselines_tex_pt": [
+      14.95988,
+      14.95988,
+      14.95989,
+      14.9599,
+      14.9599
+    ],
+    "potential_adjacent_ink_collision_count": 0,
+    "smallest_measured_inline_adjacent_ink_bbox_clearance_pdf_bp": 1.48386,
+    "page_count": 5,
+    "paired_preflight": "passed"
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "status": "passed",
+  "checked_at_utc": "2026-11-04T22:22:24.387085+00:00",
+  "role": "Independent final request/deliverables consistency check; no source or PDF changes",
+  "checks": {
+    "request_file_read": true,
+    "baseline_recorded_before_experiments": true,
+    "all_experiments_isolated": true,
+    "ten_requested_variant_profile_pdfs": true,
+    "five_required_content_topics_per_variant": true,
+    "same_common_tex_and_canonical_content": true,
+    "unchanged_color_roles_geometry_and_margins": true,
+    "actual_scale_105_and_108_verified": true,
+    "real_font_files_sources_licenses_and_no_undocumented_fallback": true,
+    "greek_coverage_and_polytonic_limitation_disclosed": true,
+    "qa_and_visual_evidence_available": true,
+    "comparison_unscaled_original_page_size": true,
+    "actual_settings_table_and_five_variant_tradeoffs": true,
+    "seven_editorial_criteria_addressed": true,
+    "recommendation_not_applied_to_stable": true,
+    "future_exact_implementation_documented_and_probe_verified": true,
+    "local_inline_fraction_leading_increase_disclosed": true,
+    "chemistry_upright_indices_not_globally_enlarged_disclosed": true,
+    "shared_caption_and_driver_warnings_disclosed": true,
+    "optical_margin_protrusion_disclosed": true,
+    "md_relative_links_resolve": true,
+    "stable_files_git_head_branch_status_unchanged": true
+  },
+  "main_pdfs": [
+    {
+      "file": "pdf/A_CURRENT_SCREEN.pdf",
+      "pages": 5,
+      "sha256": "a5dbfe5339c8962e2326d14f8e14a81904b202692142a7483a7377770e9f35ac",
+      "qa_sha256_matches": true
+    },
+    {
+      "file": "pdf/A_CURRENT_PRINT.pdf",
+      "pages": 5,
+      "sha256": "e115e6baa883dd1cbc2f9ade39d6c814a75ec9dab350487e40a1ac6c3e428fc8",
+      "qa_sha256_matches": true
+    },
+    {
+      "file": "pdf/B_STIX105_SCREEN.pdf",
+      "pages": 5,
+      "sha256": "55d72e0367d310e259b1ce5047168fbb5127cfec9c1b8dd6469614d7fc5d5f54",
+      "qa_sha256_matches": true
+    },
+    {
+      "file": "pdf/B_STIX105_PRINT.pdf",
+      "pages": 5,
+      "sha256": "90fbd258e5c76b25459649fe841ded25dfa7841793a69a123211c305fbfc308f",
+      "qa_sha256_matches": true
+    },
+    {
+      "file": "pdf/C_STIX108_SCREEN.pdf",
+      "pages": 5,
+      "sha256": "55a698db18ea5a79c1172073e7ae7985631d249d55b89171b90368c9767b9e69",
+      "qa_sha256_matches": true
+    },
+    {
+      "file": "pdf/C_STIX108_PRINT.pdf",
+      "pages": 5,
+      "sha256": "59a2e2cd346aac6f1e94e379b4136d6ebe95b9465dfb1b953c091ca2fcebd7dd",
+      "qa_sha256_matches": true
+    },
+    {
+      "file": "pdf/D_STIX_FAMILY_SCREEN.pdf",
+      "pages": 5,
+      "sha256": "328f8fdcc5a81d9e8064084a8bccc6449c3c33585484f0e5749dd77408e5d20c",
+      "qa_sha256_matches": true
+    },
+    {
+      "file": "pdf/D_STIX_FAMILY_PRINT.pdf",
+      "pages": 5,
+      "sha256": "07d8cd00495fd40011ed3fe101b0128cb6042d52cf95cbb486d1ecff42f93324",
+      "qa_sha256_matches": true
+    },
+    {
+      "file": "pdf/E_LIBERTINUS_SCREEN.pdf",
+      "pages": 5,
+      "sha256": "9bd5cfe3476602ef5393fc0873817346df569201199132f510bd6d64a78367ff",
+      "qa_sha256_matches": true
+    },
+    {
+      "file": "pdf/E_LIBERTINUS_PRINT.pdf",
+      "pages": 5,
+      "sha256": "9168663270b597c1cf01a021988d9b4291c6362a201bdcc4a6f033b42be3c825",
+      "qa_sha256_matches": true
+    }
+  ],
+  "comparison": {
+    "file": "TYPOGRAPHY_COMPARISON.pdf",
+    "pages": 25,
+    "page_mm": [
+      170,
+      240
+    ],
+    "sha256": "0fb8d1e17e1a76acc4688c36b7a7d74a0b2b52e822381e697947d5f64736c097"
+  },
+  "protected_files_checked": 589,
+  "protected_files_changed": [],
+  "git_head": "5063f4797c266e174c8ea81f2827fe27268b1a86",
+  "git_branch": "work",
+  "git_status_unchanged": true,
+  "missing_document_links": [],
+  "material_contradictions_or_omissions": [],
+  "disclosed_limits": [
+    "Physical paper print and controlled student-reader testing were not performed; report explicitly limits visual findings to true-size PDFs and equal-scale rendered pages.",
+    "Five topic pages use common forced page breaks, so equality at five pages is not proof of full-book pagination invariance.",
+    "D/E were not optically size-matched to Inter; same nominal size and different x-height are explicitly documented."
+  ]
+}

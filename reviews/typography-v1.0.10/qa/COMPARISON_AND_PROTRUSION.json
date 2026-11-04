@@ -1,0 +1,527 @@
+{
+  "status": "passed",
+  "comparison": {
+    "status": "passed",
+    "errors": [],
+    "pages": 25,
+    "page_sizes_mm": [
+      [
+        170.00009,
+        239.99825
+      ],
+      [
+        170.00009,
+        239.99825
+      ],
+      [
+        170.00009,
+        239.99825
+      ],
+      [
+        170.00009,
+        239.99825
+      ],
+      [
+        170.00009,
+        239.99825
+      ],
+      [
+        170.00009,
+        239.99825
+      ],
+      [
+        170.00009,
+        239.99825
+      ],
+      [
+        170.00009,
+        239.99825
+      ],
+      [
+        170.00009,
+        239.99825
+      ],
+      [
+        170.00009,
+        239.99825
+      ],
+      [
+        170.00009,
+        239.99825
+      ],
+      [
+        170.00009,
+        239.99825
+      ],
+      [
+        170.00009,
+        239.99825
+      ],
+      [
+        170.00009,
+        239.99825
+      ],
+      [
+        170.00009,
+        239.99825
+      ],
+      [
+        170.00009,
+        239.99825
+      ],
+      [
+        170.00009,
+        239.99825
+      ],
+      [
+        170.00009,
+        239.99825
+      ],
+      [
+        170.00009,
+        239.99825
+      ],
+      [
+        170.00009,
+        239.99825
+      ],
+      [
+        170.00009,
+        239.99825
+      ],
+      [
+        170.00009,
+        239.99825
+      ],
+      [
+        170.00009,
+        239.99825
+      ],
+      [
+        170.00009,
+        239.99825
+      ],
+      [
+        170.00009,
+        239.99825
+      ]
+    ],
+    "unembedded_fonts": [],
+    "sha256": "0fb8d1e17e1a76acc4688c36b7a7d74a0b2b52e822381e697947d5f64736c097"
+  },
+  "margin_analysis": {
+    "A_CURRENT": {
+      "candidate_count": 9,
+      "candidates": [
+        {
+          "page": 1,
+          "text": "Για την περιγραφή της ευθύγραμμης κίνησης ορίζουμε έναν άξονα ανα-",
+          "nominal_right_pdf_bp": 433.7007874015748,
+          "font_span_right_pdf_bp": 436.1661682128906,
+          "font_span_protrusion_pdf_bp": 2.4653808113158107,
+          "terminal_glyph_ink": [
+            {
+              "character": "-",
+              "origin_x_pdf_bp": 431.1479797363281,
+              "ink_right_pdf_bp": 435.398682459935,
+              "protrusion_pdf_bp": 1.6978950583601886
+            }
+          ]
+        },
+        {
+          "page": 1,
+          "text": "Η θέση ενός σώματος σε έναν άξονα δίνεται από τη συντεταγμένη του.",
+          "nominal_right_pdf_bp": 433.7007874015748,
+          "font_span_right_pdf_bp": 435.9042053222656,
+          "font_span_protrusion_pdf_bp": 2.2034179206908107,
+          "terminal_glyph_ink": [
+            {
+              "character": ".",
+              "origin_x_pdf_bp": 432.76239013671875,
+              "ink_right_pdf_bp": 435.0528690479355,
+              "protrusion_pdf_bp": 1.3520816463606593
+            }
+          ]
+        },
+        {
+          "page": 1,
+          "text": "Το μέτρο της μέσης διανυσματικής ταχύτητας ενός σώματος υπολογίζε-",
+          "nominal_right_pdf_bp": 433.7007874015748,
+          "font_span_right_pdf_bp": 436.1987609863281,
+          "font_span_protrusion_pdf_bp": 2.4979735847533107,
+          "terminal_glyph_ink": [
+            {
+              "character": "-",
+              "origin_x_pdf_bp": 431.1805725097656,
+              "ink_right_pdf_bp": 435.4312752333725,
+              "protrusion_pdf_bp": 1.7304878317976886
+            }
+          ]
+        },
+        {
+          "page": 1,
+          "text": "Η μορφή της γραφικής παράστασης παρέχει πληροφορίες για την κινη-",
+          "nominal_right_pdf_bp": 433.7007874015748,
+          "font_span_right_pdf_bp": 436.1442565917969,
+          "font_span_protrusion_pdf_bp": 2.4434691902220607,
+          "terminal_glyph_ink": [
+            {
+              "character": "-",
+              "origin_x_pdf_bp": 431.1260681152344,
+              "ink_right_pdf_bp": 435.37677083884125,
+              "protrusion_pdf_bp": 1.6759834372664386
+            }
+          ]
+        },
+        {
+          "page": 1,
+          "text": "μαθηματική σχέση, το πρόσημο και τη φυσική σημασία του αποτελέσμα-",
+          "nominal_right_pdf_bp": 433.7007874015748,
+          "font_span_right_pdf_bp": 436.18792724609375,
+          "font_span_protrusion_pdf_bp": 2.4871398445189357,
+          "terminal_glyph_ink": [
+            {
+              "character": "-",
+              "origin_x_pdf_bp": 431.16973876953125,
+              "ink_right_pdf_bp": 435.4204414931381,
+              "protrusion_pdf_bp": 1.7196540915633136
+            }
+          ]
+        },
+        {
+          "page": 3,
+          "text": ", περιγράφει μια συνάρτηση πρώτου βαθ-",
+          "nominal_right_pdf_bp": 433.7007874015748,
+          "font_span_right_pdf_bp": 436.17681884765625,
+          "font_span_protrusion_pdf_bp": 2.4760314460814357,
+          "terminal_glyph_ink": [
+            {
+              "character": "-",
+              "origin_x_pdf_bp": 431.15863037109375,
+              "ink_right_pdf_bp": 435.4093330947006,
+              "protrusion_pdf_bp": 1.7085456931258136
+            }
+          ]
+        },
+        {
+          "page": 3,
+          "text": "Οι επόμενες σχέσεις προστίθενται μόνο για τον έλεγχο ριζών, αθροισμά-",
+          "nominal_right_pdf_bp": 433.7007874015748,
+          "font_span_right_pdf_bp": 436.2096862792969,
+          "font_span_protrusion_pdf_bp": 2.5088988777220607,
+          "terminal_glyph_ink": [
+            {
+              "character": "-",
+              "origin_x_pdf_bp": 431.1914978027344,
+              "ink_right_pdf_bp": 435.44220052634125,
+              "protrusion_pdf_bp": 1.7414131247664386
+            }
+          ]
+        },
+        {
+          "page": 4,
+          "text": "μαθηματική σχέση, το πρόσημο και τη φυσική σημασία του αποτελέσμα-",
+          "nominal_right_pdf_bp": 425.1968503937008,
+          "font_span_right_pdf_bp": 427.6839294433594,
+          "font_span_protrusion_pdf_bp": 2.4870790496585755,
+          "terminal_glyph_ink": [
+            {
+              "character": "-",
+              "origin_x_pdf_bp": 422.6657409667969,
+              "ink_right_pdf_bp": 426.91644369040375,
+              "protrusion_pdf_bp": 1.7195932967029535
+            }
+          ]
+        },
+        {
+          "page": 5,
+          "text": "Η μορφή της γραφικής παράστασης παρέχει πληροφορίες για την κινη-",
+          "nominal_right_pdf_bp": 433.7007874015748,
+          "font_span_right_pdf_bp": 436.1442565917969,
+          "font_span_protrusion_pdf_bp": 2.4434691902220607,
+          "terminal_glyph_ink": [
+            {
+              "character": "-",
+              "origin_x_pdf_bp": 431.1260681152344,
+              "ink_right_pdf_bp": 435.37677083884125,
+              "protrusion_pdf_bp": 1.6759834372664386
+            }
+          ]
+        }
+      ]
+    },
+    "B_STIX105": {
+      "candidate_count": 8,
+      "candidates": [
+        {
+          "page": 1,
+          "text": "Για την περιγραφή της ευθύγραμμης κίνησης ορίζουμε έναν άξονα ανα-",
+          "nominal_right_pdf_bp": 433.7007874015748,
+          "font_span_right_pdf_bp": 436.1661682128906,
+          "font_span_protrusion_pdf_bp": 2.4653808113158107,
+          "terminal_glyph_ink": [
+            {
+              "character": "-",
+              "origin_x_pdf_bp": 431.1479797363281,
+              "ink_right_pdf_bp": 435.398682459935,
+              "protrusion_pdf_bp": 1.6978950583601886
+            }
+          ]
+        },
+        {
+          "page": 1,
+          "text": "Η θέση ενός σώματος σε έναν άξονα δίνεται από τη συντεταγμένη του.",
+          "nominal_right_pdf_bp": 433.7007874015748,
+          "font_span_right_pdf_bp": 435.9042053222656,
+          "font_span_protrusion_pdf_bp": 2.2034179206908107,
+          "terminal_glyph_ink": [
+            {
+              "character": ".",
+              "origin_x_pdf_bp": 432.76239013671875,
+              "ink_right_pdf_bp": 435.0528690479355,
+              "protrusion_pdf_bp": 1.3520816463606593
+            }
+          ]
+        },
+        {
+          "page": 1,
+          "text": "Το μέτρο της μέσης διανυσματικής ταχύτητας ενός σώματος υπολογίζε-",
+          "nominal_right_pdf_bp": 433.7007874015748,
+          "font_span_right_pdf_bp": 436.1987609863281,
+          "font_span_protrusion_pdf_bp": 2.4979735847533107,
+          "terminal_glyph_ink": [
+            {
+              "character": "-",
+              "origin_x_pdf_bp": 431.1805725097656,
+              "ink_right_pdf_bp": 435.4312752333725,
+              "protrusion_pdf_bp": 1.7304878317976886
+            }
+          ]
+        },
+        {
+          "page": 1,
+          "text": "Η μορφή της γραφικής παράστασης παρέχει πληροφορίες για την κινη-",
+          "nominal_right_pdf_bp": 433.7007874015748,
+          "font_span_right_pdf_bp": 436.1442565917969,
+          "font_span_protrusion_pdf_bp": 2.4434691902220607,
+          "terminal_glyph_ink": [
+            {
+              "character": "-",
+              "origin_x_pdf_bp": 431.1260681152344,
+              "ink_right_pdf_bp": 435.37677083884125,
+              "protrusion_pdf_bp": 1.6759834372664386
+            }
+          ]
+        },
+        {
+          "page": 1,
+          "text": "μαθηματική σχέση, το πρόσημο και τη φυσική σημασία του αποτελέσμα-",
+          "nominal_right_pdf_bp": 433.7007874015748,
+          "font_span_right_pdf_bp": 436.18792724609375,
+          "font_span_protrusion_pdf_bp": 2.4871398445189357,
+          "terminal_glyph_ink": [
+            {
+              "character": "-",
+              "origin_x_pdf_bp": 431.16973876953125,
+              "ink_right_pdf_bp": 435.4204414931381,
+              "protrusion_pdf_bp": 1.7196540915633136
+            }
+          ]
+        },
+        {
+          "page": 3,
+          "text": "Οι επόμενες σχέσεις προστίθενται μόνο για τον έλεγχο ριζών, αθροισμά-",
+          "nominal_right_pdf_bp": 433.7007874015748,
+          "font_span_right_pdf_bp": 436.2096862792969,
+          "font_span_protrusion_pdf_bp": 2.5088988777220607,
+          "terminal_glyph_ink": [
+            {
+              "character": "-",
+              "origin_x_pdf_bp": 431.1914978027344,
+              "ink_right_pdf_bp": 435.44220052634125,
+              "protrusion_pdf_bp": 1.7414131247664386
+            }
+          ]
+        },
+        {
+          "page": 4,
+          "text": "μαθηματική σχέση, το πρόσημο και τη φυσική σημασία του αποτελέσμα-",
+          "nominal_right_pdf_bp": 425.1968503937008,
+          "font_span_right_pdf_bp": 427.6839294433594,
+          "font_span_protrusion_pdf_bp": 2.4870790496585755,
+          "terminal_glyph_ink": [
+            {
+              "character": "-",
+              "origin_x_pdf_bp": 422.6657409667969,
+              "ink_right_pdf_bp": 426.91644369040375,
+              "protrusion_pdf_bp": 1.7195932967029535
+            }
+          ]
+        },
+        {
+          "page": 5,
+          "text": "Η μορφή της γραφικής παράστασης παρέχει πληροφορίες για την κινη-",
+          "nominal_right_pdf_bp": 433.7007874015748,
+          "font_span_right_pdf_bp": 436.1442565917969,
+          "font_span_protrusion_pdf_bp": 2.4434691902220607,
+          "terminal_glyph_ink": [
+            {
+              "character": "-",
+              "origin_x_pdf_bp": 431.1260681152344,
+              "ink_right_pdf_bp": 435.37677083884125,
+              "protrusion_pdf_bp": 1.6759834372664386
+            }
+          ]
+        }
+      ]
+    },
+    "C_STIX108": {
+      "candidate_count": 8,
+      "candidates": [
+        {
+          "page": 1,
+          "text": "Για την περιγραφή της ευθύγραμμης κίνησης ορίζουμε έναν άξονα ανα-",
+          "nominal_right_pdf_bp": 433.7007874015748,
+          "font_span_right_pdf_bp": 436.1661682128906,
+          "font_span_protrusion_pdf_bp": 2.4653808113158107,
+          "terminal_glyph_ink": [
+            {
+              "character": "-",
+              "origin_x_pdf_bp": 431.1479797363281,
+              "ink_right_pdf_bp": 435.398682459935,
+              "protrusion_pdf_bp": 1.6978950583601886
+            }
+          ]
+        },
+        {
+          "page": 1,
+          "text": "Η θέση ενός σώματος σε έναν άξονα δίνεται από τη συντεταγμένη του.",
+          "nominal_right_pdf_bp": 433.7007874015748,
+          "font_span_right_pdf_bp": 435.9042053222656,
+          "font_span_protrusion_pdf_bp": 2.2034179206908107,
+          "terminal_glyph_ink": [
+            {
+              "character": ".",
+              "origin_x_pdf_bp": 432.76239013671875,
+              "ink_right_pdf_bp": 435.0528690479355,
+              "protrusion_pdf_bp": 1.3520816463606593
+            }
+          ]
+        },
+        {
+          "page": 1,
+          "text": "Το μέτρο της μέσης διανυσματικής ταχύτητας ενός σώματος υπολογίζε-",
+          "nominal_right_pdf_bp": 433.7007874015748,
+          "font_span_right_pdf_bp": 436.1987609863281,
+          "font_span_protrusion_pdf_bp": 2.4979735847533107,
+          "terminal_glyph_ink": [
+            {
+              "character": "-",
+              "origin_x_pdf_bp": 431.1805725097656,
+              "ink_right_pdf_bp": 435.4312752333725,
+              "protrusion_pdf_bp": 1.7304878317976886
+            }
+          ]
+        },
+        {
+          "page": 1,
+          "text": "Η μορφή της γραφικής παράστασης παρέχει πληροφορίες για την κινη-",
+          "nominal_right_pdf_bp": 433.7007874015748,
+          "font_span_right_pdf_bp": 436.1442565917969,
+          "font_span_protrusion_pdf_bp": 2.4434691902220607,
+          "terminal_glyph_ink": [
+            {
+              "character": "-",
+              "origin_x_pdf_bp": 431.1260681152344,
+              "ink_right_pdf_bp": 435.37677083884125,
+              "protrusion_pdf_bp": 1.6759834372664386
+            }
+          ]
+        },
+        {
+          "page": 1,
+          "text": "μαθηματική σχέση, το πρόσημο και τη φυσική σημασία του αποτελέσμα-",
+          "nominal_right_pdf_bp": 433.7007874015748,
+          "font_span_right_pdf_bp": 436.18792724609375,
+          "font_span_protrusion_pdf_bp": 2.4871398445189357,
+          "terminal_glyph_ink": [
+            {
+              "character": "-",
+              "origin_x_pdf_bp": 431.16973876953125,
+              "ink_right_pdf_bp": 435.4204414931381,
+              "protrusion_pdf_bp": 1.7196540915633136
+            }
+          ]
+        },
+        {
+          "page": 3,
+          "text": "Οι επόμενες σχέσεις προστίθενται μόνο για τον έλεγχο ριζών, αθροισμά-",
+          "nominal_right_pdf_bp": 433.7007874015748,
+          "font_span_right_pdf_bp": 436.2096862792969,
+          "font_span_protrusion_pdf_bp": 2.5088988777220607,
+          "terminal_glyph_ink": [
+            {
+              "character": "-",
+              "origin_x_pdf_bp": 431.1914978027344,
+              "ink_right_pdf_bp": 435.44220052634125,
+              "protrusion_pdf_bp": 1.7414131247664386
+            }
+          ]
+        },
+        {
+          "page": 4,
+          "text": "μαθηματική σχέση, το πρόσημο και τη φυσική σημασία του αποτελέσμα-",
+          "nominal_right_pdf_bp": 425.1968503937008,
+          "font_span_right_pdf_bp": 427.6839294433594,
+          "font_span_protrusion_pdf_bp": 2.4870790496585755,
+          "terminal_glyph_ink": [
+            {
+              "character": "-",
+              "origin_x_pdf_bp": 422.6657409667969,
+              "ink_right_pdf_bp": 426.91644369040375,
+              "protrusion_pdf_bp": 1.7195932967029535
+            }
+          ]
+        },
+        {
+          "page": 5,
+          "text": "Η μορφή της γραφικής παράστασης παρέχει πληροφορίες για την κινη-",
+          "nominal_right_pdf_bp": 433.7007874015748,
+          "font_span_right_pdf_bp": 436.1442565917969,
+          "font_span_protrusion_pdf_bp": 2.4434691902220607,
+          "terminal_glyph_ink": [
+            {
+              "character": "-",
+              "origin_x_pdf_bp": 431.1260681152344,
+              "ink_right_pdf_bp": 435.37677083884125,
+              "protrusion_pdf_bp": 1.6759834372664386
+            }
+          ]
+        }
+      ]
+    },
+    "D_STIX_FAMILY": {
+      "candidate_count": 0,
+      "candidates": []
+    },
+    "E_LIBERTINUS": {
+      "candidate_count": 0,
+      "candidates": []
+    }
+  },
+  "stable_paragraph_comparison": [
+    {
+      "text": "Για την περιγραφή της ευθύγραμμης κίνησης ορίζουμε έναν άξονα ανα-",
+      "review_span_width_pdf_bp": 379.4731674194336,
+      "stable_span_width_pdf_bp": 379.473201751709,
+      "width_difference_pdf_bp": -3.4332275390625e-05
+    },
+    {
+      "text": "Η θέση ενός σώματος σε έναν άξονα δίνεται από τη συντεταγμένη του.",
+      "review_span_width_pdf_bp": 379.2112045288086,
+      "stable_span_width_pdf_bp": 379.21120834350586,
+      "width_difference_pdf_bp": -3.814697265625e-06
+    }
+  ],
+  "interpretation": "The nominal geometry is unchanged. Existing Inter right-margin candidates are terminal hyphen/full-stop optical protrusion and font advance boxes, reproduced in the stable PDFs; they are not new overfull boxes or page clipping. Actual ink extends slightly beyond the nominal text edge as recorded, so no claim of all ink strictly inside the text rectangle is made."
+}
