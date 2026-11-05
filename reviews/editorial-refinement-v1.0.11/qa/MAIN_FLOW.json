@@ -1,0 +1,94 @@
+{
+  "status": "passed",
+  "scope": "Actual-PDF regression: the thematic proof heading shares a page with the following theorem title.",
+  "pdfs": [
+    {
+      "pdf": "pdf/v1.0.11_REFINED_PRINT.pdf",
+      "input_sha256": "8321e7090f9d0dbd6e34d225a0dd8370808d2f32b89e513348e48bd66ff98372",
+      "status": "passed",
+      "pages": 20,
+      "thematic_heading_page": 19,
+      "theorem_page": 19,
+      "heading_size_tex_pt": 11.7,
+      "heading_bbox": [
+        68.03199768066406,
+        57.518409729003906,
+        193.68692016601562,
+        73.39429473876953
+      ],
+      "theorem_bbox": [
+        69.7979965209961,
+        94.83497619628906,
+        275.03753662109375,
+        108.40403747558594
+      ],
+      "vertical_gap_bp": 21.4407
+    },
+    {
+      "pdf": "pdf/v1.0.11_REFINED_SCREEN.pdf",
+      "input_sha256": "30cc3677e7d59e50ab5f9f8f7180c2f48e55aa1a1171b41264a3686cef2a10bc",
+      "status": "passed",
+      "pages": 20,
+      "thematic_heading_page": 19,
+      "theorem_page": 19,
+      "heading_size_tex_pt": 11.7,
+      "heading_bbox": [
+        68.03199768066406,
+        57.518409729003906,
+        193.68692016601562,
+        73.39429473876953
+      ],
+      "theorem_bbox": [
+        69.7979965209961,
+        94.83497619628906,
+        275.03753662109375,
+        108.40403747558594
+      ],
+      "vertical_gap_bp": 21.4407
+    },
+    {
+      "pdf": "pdf/v1.0.11_MINIMAL_PRINT.pdf",
+      "input_sha256": "05f1a8efc31b1fb35943229af9dab8ca9871a8546e062ae77801b60da7268527",
+      "status": "passed",
+      "pages": 20,
+      "thematic_heading_page": 19,
+      "theorem_page": 19,
+      "heading_size_tex_pt": 11.7,
+      "heading_bbox": [
+        56.69300079345703,
+        52.351409912109375,
+        182.34793090820312,
+        68.227294921875
+      ],
+      "theorem_bbox": [
+        69.7979965209961,
+        92.22098541259766,
+        275.03753662109375,
+        105.79004669189453
+      ],
+      "vertical_gap_bp": 23.9937
+    },
+    {
+      "pdf": "pdf/v1.0.11_MINIMAL_SCREEN.pdf",
+      "input_sha256": "2319522a736de1adcba136a19e992cb05000480a514867d93d90a88b36ba7c88",
+      "status": "passed",
+      "pages": 20,
+      "thematic_heading_page": 19,
+      "theorem_page": 19,
+      "heading_size_tex_pt": 11.7,
+      "heading_bbox": [
+        56.69300079345703,
+        52.351409912109375,
+        182.34793090820312,
+        68.227294921875
+      ],
+      "theorem_bbox": [
+        69.7979965209961,
+        92.22098541259766,
+        275.03753662109375,
+        105.79004669189453
+      ],
+      "vertical_gap_bp": 23.9937
+    }
+  ]
+}

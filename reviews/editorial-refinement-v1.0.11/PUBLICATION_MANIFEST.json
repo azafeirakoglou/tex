@@ -1,0 +1,30 @@
+{
+  "status": "user_authorized_review_publication_not_release",
+  "repository": "azafeirakoglou/tex",
+  "branch": "editorial-refinement-v1.0.11-review",
+  "base_main": "5063f4797c266e174c8ea81f2827fe27268b1a86",
+  "scope": "Prepared ZIP, PDFs and review documentation only; main unchanged; no merge/tag/release/stable adoption.",
+  "files_sha256": {
+    "ADOPTION_GUIDE.md": "5a23e7ea29b8762038b2b9d4fdbaf05596c6afc2e8434b66c45970342ca6f84a",
+    "CHANGELOG_v1.0.11.md": "e705b004e372cad8de040737c0e2473ff4aca381ac4eaf4adaad0ddc435dfca7",
+    "EDITORIAL_REFINEMENT_COMPARISON.pdf": "5137f04b3249e5278b0040228db612b8c2511c34ed43f835c7739a5427c36e2a",
+    "EDITORIAL_REFINEMENT_REPORT.md": "e5b34ae52bd73541da25cccdd515087e93c64ba232aabaa6757b71c6becc36b4",
+    "README.md": "e079aa7b8cdd8eb6ce81c9c5a52ed74291e86b911617e6bd953e50883bec96ba",
+    "REPRODUCTION.md": "69b7db98f4a836b93316de00024f0536115118596494488525af65781c73f6d0",
+    "TECHNICAL_REPORT.md": "ae3e5cf9ae488fedda1507731ff0695ebbdf4c88adc42ed3fd421b1277852fbc",
+    "Universal_Book_Template_v1.0.11_REVIEW_PACKAGE.zip": "9e98c99e73c0de265dbacb08b43b87dc79bfddf24f18447d8d72b37ffc92f282",
+    "qa/COLOR_INVARIANCE.json": "a866eca62b8e913eef4fa8cb21d3d3d8b28663330f09284368f96a705db8e0ea",
+    "qa/MAIN_FLOW.json": "c5ca045e8e428db995d4037bb1125ab037ac743277e16d1fcd82b56c4a72b2fe",
+    "qa/QA_SUMMARY.json": "4de82fd7b3859cda0a5e04a35530f61429f5154464d8842af42af6d10b15d016",
+    "qa/QA_SUMMARY.md": "fc292e0275f9bafb1e5352a214845f3b16a65d3133276957cba089c2c90c6974",
+    "reports/COMPARISON_INTEGRITY.json": "c3a230bcc0a2e45f5cf6c1a8d461bb1d4a4f0c873964790cfbe19969cfbf7f20",
+    "reports/PACKAGE_INTEGRITY.json": "e7d8a8a17e5e27a71d0d28c19c69d1a7f8725d119a66018d6d46e29dc8f63813",
+    "reports/REPRODUCTION_SMOKE.json": "a843464539a97d06fdb93bbac8093698f4e8301858de0a7a6e34bfb19752eedf",
+    "reports/STABLE_INTEGRITY.json": "f062f91e2c83b8fafa32c82de57b001aee4487ebdfbb23aa072332db65923625",
+    "reports/VISUAL_REVIEW.md": "a58edf0ea0f70678f716f5bfceae7cadfaad44a305301a6dea7e21abd6d69143",
+    "v1.0.11_MINIMAL_PRINT.pdf": "05f1a8efc31b1fb35943229af9dab8ca9871a8546e062ae77801b60da7268527",
+    "v1.0.11_MINIMAL_SCREEN.pdf": "2319522a736de1adcba136a19e992cb05000480a514867d93d90a88b36ba7c88",
+    "v1.0.11_REFINED_PRINT.pdf": "8321e7090f9d0dbd6e34d225a0dd8370808d2f32b89e513348e48bd66ff98372",
+    "v1.0.11_REFINED_SCREEN.pdf": "30cc3677e7d59e50ab5f9f8f7180c2f48e55aa1a1171b41264a3686cef2a10bc"
+  }
+}

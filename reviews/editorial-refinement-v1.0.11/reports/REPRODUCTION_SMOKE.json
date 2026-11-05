@@ -1,0 +1,28 @@
+{
+  "status": "passed",
+  "scope": "Fresh extracted runtime + both complete independent sources; regenerated Greek XeLaTeX format and one MINIMAL SCREEN main book. This is a reproduction smoke check, not a release workflow. The later helper-only relative-link change was separately checked by moving that prepared extraction and regenerating its format successfully.",
+  "archive_sha256": "b20876148b7454b4e4cd99bdda3c84ebbf126c5198a12e1cd36e702c1cf61a12",
+  "archive_file_count": 335,
+  "started_without_local_build_format_or_caches": true,
+  "setup_exit_code": 0,
+  "build_exit_code": 0,
+  "pages": 20,
+  "all_text_words_and_positions_match_within_bp": 0.02,
+  "all_20_rendered_pages_pixel_identical_at_72dpi": true,
+  "fresh_pdf_sha256": "57c50fd462d1428ea9eefb3745aee2990ea5e5bc553beaee69a37f4587f1b7c0",
+  "reference_pdf_sha256": "2319522a736de1adcba136a19e992cb05000480a514867d93d90a88b36ba7c88",
+  "elapsed_seconds": 21.55,
+  "binary_pdf_identity_required": false,
+  "network_used": false,
+  "relocation_setup_exit_code": 0,
+  "relocated_runtime_links_are_relative_and_resolve_inside_extracted_package": true,
+  "relative_runtime_links": {
+    "REFINED/source/.local/fonts": "../../../runtime/fonts",
+    "REFINED/source/.local/texmf": "../../../runtime/texmf",
+    "REFINED/source/.local/texmf-var": "../../../runtime/texmf-var",
+    "MINIMAL/source/.local/fonts": "../../../runtime/fonts",
+    "MINIMAL/source/.local/texmf": "../../../runtime/texmf",
+    "MINIMAL/source/.local/texmf-var": "../../../runtime/texmf-var"
+  },
+  "prepare_runtime_py_sha256": "9d2cf1dcd643e937f1d9ea0961f3adefdaf896a65da7509431aefa1cd9360072"
+}

@@ -1,0 +1,375 @@
+{
+  "status": "passed",
+  "created_utc": "2026-11-05T13:19:23.577989+00:00",
+  "checks": {
+    "approved_palette_identical": true,
+    "both_full_unit_suites_passed": true,
+    "both_unit_suites_retain_66_tests": true,
+    "40_author_compatibility_builds_passed": true,
+    "20_author_compatibility_pair_preflights_passed": true,
+    "both_original_stress_structural_checks_passed": true,
+    "all_8_editorial_fixture_measurements_passed": true,
+    "all_8_editorial_fixture_logs_clean": true,
+    "all_4_editorial_fixture_pair_preflights_passed": true,
+    "all_24_secondary_pair_reports_match_current_pdf_hashes": true,
+    "all_8_editorial_measurements_match_current_pdf_hashes": true,
+    "all_4_main_thematic_headings_share_their_following_theorem_page": true,
+    "all_4_main_flow_reports_match_current_20_page_pdf_hashes": true,
+    "main_4_pdf_logs_have_no_overfull_underfull_missing_or_warning": true,
+    "all_44_build_logs_have_no_overfull_or_missing_characters": true
+  },
+  "unit_test_counts": {
+    "REFINED": 66,
+    "MINIMAL": 66
+  },
+  "main_pdf_diagnostics": [
+    {
+      "design": "REFINED",
+      "target": "print2",
+      "log": "REFINED/source/build/print/Physics_A_Print_Technical.log",
+      "pdf": "REFINED/source/build/print/Physics_A_Print_Technical.pdf",
+      "pages": 20,
+      "overfull": 0,
+      "underfull": 0,
+      "missing_characters": 0,
+      "warnings": [],
+      "sha256": "8321e7090f9d0dbd6e34d225a0dd8370808d2f32b89e513348e48bd66ff98372",
+      "log_sha256": "82c626ce0ad2e29762eadafab5bc5ffff3f23231baadc220e0fa92a3fae056e4"
+    },
+    {
+      "design": "REFINED",
+      "target": "screen",
+      "log": "REFINED/source/build/screen/Physics_A_Screen.log",
+      "pdf": "REFINED/source/build/screen/Physics_A_Screen.pdf",
+      "pages": 20,
+      "overfull": 0,
+      "underfull": 0,
+      "missing_characters": 0,
+      "warnings": [],
+      "sha256": "30cc3677e7d59e50ab5f9f8f7180c2f48e55aa1a1171b41264a3686cef2a10bc",
+      "log_sha256": "f680db011d009951f0771c9f7ad61f2c5eefe7c737398f7b34c6eb9a59ec6756"
+    },
+    {
+      "design": "MINIMAL",
+      "target": "print2",
+      "log": "MINIMAL/source/build/print/Physics_A_Print_Technical.log",
+      "pdf": "MINIMAL/source/build/print/Physics_A_Print_Technical.pdf",
+      "pages": 20,
+      "overfull": 0,
+      "underfull": 0,
+      "missing_characters": 0,
+      "warnings": [],
+      "sha256": "05f1a8efc31b1fb35943229af9dab8ca9871a8546e062ae77801b60da7268527",
+      "log_sha256": "90228d478fd28533f4a5d80ade3b4a64f857f3d15d94882cbc32cb7a71ab01e6"
+    },
+    {
+      "design": "MINIMAL",
+      "target": "screen",
+      "log": "MINIMAL/source/build/screen/Physics_A_Screen.log",
+      "pdf": "MINIMAL/source/build/screen/Physics_A_Screen.pdf",
+      "pages": 20,
+      "overfull": 0,
+      "underfull": 0,
+      "missing_characters": 0,
+      "warnings": [],
+      "sha256": "2319522a736de1adcba136a19e992cb05000480a514867d93d90a88b36ba7c88",
+      "log_sha256": "c82a3b95bbc21b3a3841e1b1579d62004af8c407552ed388bca4ca06a34ea65e"
+    }
+  ],
+  "main_flow_regression": {
+    "status": "passed",
+    "scope": "Actual-PDF regression: the thematic proof heading shares a page with the following theorem title.",
+    "pdfs": [
+      {
+        "pdf": "pdf/v1.0.11_REFINED_PRINT.pdf",
+        "input_sha256": "8321e7090f9d0dbd6e34d225a0dd8370808d2f32b89e513348e48bd66ff98372",
+        "status": "passed",
+        "pages": 20,
+        "thematic_heading_page": 19,
+        "theorem_page": 19,
+        "heading_size_tex_pt": 11.7,
+        "heading_bbox": [
+          68.03199768066406,
+          57.518409729003906,
+          193.68692016601562,
+          73.39429473876953
+        ],
+        "theorem_bbox": [
+          69.7979965209961,
+          94.83497619628906,
+          275.03753662109375,
+          108.40403747558594
+        ],
+        "vertical_gap_bp": 21.4407
+      },
+      {
+        "pdf": "pdf/v1.0.11_REFINED_SCREEN.pdf",
+        "input_sha256": "30cc3677e7d59e50ab5f9f8f7180c2f48e55aa1a1171b41264a3686cef2a10bc",
+        "status": "passed",
+        "pages": 20,
+        "thematic_heading_page": 19,
+        "theorem_page": 19,
+        "heading_size_tex_pt": 11.7,
+        "heading_bbox": [
+          68.03199768066406,
+          57.518409729003906,
+          193.68692016601562,
+          73.39429473876953
+        ],
+        "theorem_bbox": [
+          69.7979965209961,
+          94.83497619628906,
+          275.03753662109375,
+          108.40403747558594
+        ],
+        "vertical_gap_bp": 21.4407
+      },
+      {
+        "pdf": "pdf/v1.0.11_MINIMAL_PRINT.pdf",
+        "input_sha256": "05f1a8efc31b1fb35943229af9dab8ca9871a8546e062ae77801b60da7268527",
+        "status": "passed",
+        "pages": 20,
+        "thematic_heading_page": 19,
+        "theorem_page": 19,
+        "heading_size_tex_pt": 11.7,
+        "heading_bbox": [
+          56.69300079345703,
+          52.351409912109375,
+          182.34793090820312,
+          68.227294921875
+        ],
+        "theorem_bbox": [
+          69.7979965209961,
+          92.22098541259766,
+          275.03753662109375,
+          105.79004669189453
+        ],
+        "vertical_gap_bp": 23.9937
+      },
+      {
+        "pdf": "pdf/v1.0.11_MINIMAL_SCREEN.pdf",
+        "input_sha256": "2319522a736de1adcba136a19e992cb05000480a514867d93d90a88b36ba7c88",
+        "status": "passed",
+        "pages": 20,
+        "thematic_heading_page": 19,
+        "theorem_page": 19,
+        "heading_size_tex_pt": 11.7,
+        "heading_bbox": [
+          56.69300079345703,
+          52.351409912109375,
+          182.34793090820312,
+          68.227294921875
+        ],
+        "theorem_bbox": [
+          69.7979965209961,
+          92.22098541259766,
+          275.03753662109375,
+          105.79004669189453
+        ],
+        "vertical_gap_bp": 23.9937
+      }
+    ]
+  },
+  "build_diagnostic_totals": {
+    "REFINED": {
+      "targets": 22,
+      "overfull": 0,
+      "underfull": 4,
+      "missing_characters": 0
+    },
+    "MINIMAL": {
+      "targets": 22,
+      "overfull": 0,
+      "underfull": 4,
+      "missing_characters": 0
+    }
+  },
+  "editorial_probe_builds": [
+    {
+      "design": "REFINED",
+      "edition": "screen",
+      "kind": "metrics",
+      "status": "passed",
+      "build_log": "/workspace/editorial-refinement-v1.0.11/qa/probes/results/REFINED_screen_metrics_build.log",
+      "output": "/workspace/editorial-refinement-v1.0.11/runtime/tmp/editorial-probes/REFINED/screen/metrics",
+      "pdf": "/workspace/editorial-refinement-v1.0.11/qa/probes/pdf/REFINED_screen_metrics.pdf",
+      "xelatex_log": "/workspace/editorial-refinement-v1.0.11/qa/probes/results/REFINED_screen_metrics_xelatex.log",
+      "diagnostics": {
+        "overfull": 0,
+        "underfull": 0,
+        "missing_characters": 0,
+        "warnings": 0
+      },
+      "report": "/workspace/editorial-refinement-v1.0.11/qa/probes/results/REFINED_screen_metrics.json"
+    },
+    {
+      "design": "REFINED",
+      "edition": "screen",
+      "kind": "edges",
+      "status": "passed",
+      "build_log": "/workspace/editorial-refinement-v1.0.11/qa/probes/results/REFINED_screen_edges_build.log",
+      "output": "/workspace/editorial-refinement-v1.0.11/runtime/tmp/editorial-probes/REFINED/screen/edges",
+      "pdf": "/workspace/editorial-refinement-v1.0.11/qa/probes/pdf/REFINED_screen_edges.pdf",
+      "xelatex_log": "/workspace/editorial-refinement-v1.0.11/qa/probes/results/REFINED_screen_edges_xelatex.log",
+      "diagnostics": {
+        "overfull": 0,
+        "underfull": 0,
+        "missing_characters": 0,
+        "warnings": 0
+      },
+      "report": "/workspace/editorial-refinement-v1.0.11/qa/probes/results/REFINED_screen_edges.json"
+    },
+    {
+      "design": "REFINED",
+      "edition": "print",
+      "kind": "metrics",
+      "status": "passed",
+      "build_log": "/workspace/editorial-refinement-v1.0.11/qa/probes/results/REFINED_print_metrics_build.log",
+      "output": "/workspace/editorial-refinement-v1.0.11/runtime/tmp/editorial-probes/REFINED/print/metrics",
+      "pdf": "/workspace/editorial-refinement-v1.0.11/qa/probes/pdf/REFINED_print_metrics.pdf",
+      "xelatex_log": "/workspace/editorial-refinement-v1.0.11/qa/probes/results/REFINED_print_metrics_xelatex.log",
+      "diagnostics": {
+        "overfull": 0,
+        "underfull": 0,
+        "missing_characters": 0,
+        "warnings": 0
+      },
+      "report": "/workspace/editorial-refinement-v1.0.11/qa/probes/results/REFINED_print_metrics.json"
+    },
+    {
+      "design": "REFINED",
+      "edition": "print",
+      "kind": "edges",
+      "status": "passed",
+      "build_log": "/workspace/editorial-refinement-v1.0.11/qa/probes/results/REFINED_print_edges_build.log",
+      "output": "/workspace/editorial-refinement-v1.0.11/runtime/tmp/editorial-probes/REFINED/print/edges",
+      "pdf": "/workspace/editorial-refinement-v1.0.11/qa/probes/pdf/REFINED_print_edges.pdf",
+      "xelatex_log": "/workspace/editorial-refinement-v1.0.11/qa/probes/results/REFINED_print_edges_xelatex.log",
+      "diagnostics": {
+        "overfull": 0,
+        "underfull": 0,
+        "missing_characters": 0,
+        "warnings": 0
+      },
+      "report": "/workspace/editorial-refinement-v1.0.11/qa/probes/results/REFINED_print_edges.json"
+    },
+    {
+      "design": "MINIMAL",
+      "edition": "screen",
+      "kind": "metrics",
+      "status": "passed",
+      "build_log": "/workspace/editorial-refinement-v1.0.11/qa/probes/results/MINIMAL_screen_metrics_build.log",
+      "output": "/workspace/editorial-refinement-v1.0.11/runtime/tmp/editorial-probes/MINIMAL/screen/metrics",
+      "pdf": "/workspace/editorial-refinement-v1.0.11/qa/probes/pdf/MINIMAL_screen_metrics.pdf",
+      "xelatex_log": "/workspace/editorial-refinement-v1.0.11/qa/probes/results/MINIMAL_screen_metrics_xelatex.log",
+      "diagnostics": {
+        "overfull": 0,
+        "underfull": 0,
+        "missing_characters": 0,
+        "warnings": 0
+      },
+      "report": "/workspace/editorial-refinement-v1.0.11/qa/probes/results/MINIMAL_screen_metrics.json"
+    },
+    {
+      "design": "MINIMAL",
+      "edition": "screen",
+      "kind": "edges",
+      "status": "passed",
+      "build_log": "/workspace/editorial-refinement-v1.0.11/qa/probes/results/MINIMAL_screen_edges_build.log",
+      "output": "/workspace/editorial-refinement-v1.0.11/runtime/tmp/editorial-probes/MINIMAL/screen/edges",
+      "pdf": "/workspace/editorial-refinement-v1.0.11/qa/probes/pdf/MINIMAL_screen_edges.pdf",
+      "xelatex_log": "/workspace/editorial-refinement-v1.0.11/qa/probes/results/MINIMAL_screen_edges_xelatex.log",
+      "diagnostics": {
+        "overfull": 0,
+        "underfull": 0,
+        "missing_characters": 0,
+        "warnings": 0
+      },
+      "report": "/workspace/editorial-refinement-v1.0.11/qa/probes/results/MINIMAL_screen_edges.json"
+    },
+    {
+      "design": "MINIMAL",
+      "edition": "print",
+      "kind": "metrics",
+      "status": "passed",
+      "build_log": "/workspace/editorial-refinement-v1.0.11/qa/probes/results/MINIMAL_print_metrics_build.log",
+      "output": "/workspace/editorial-refinement-v1.0.11/runtime/tmp/editorial-probes/MINIMAL/print/metrics",
+      "pdf": "/workspace/editorial-refinement-v1.0.11/qa/probes/pdf/MINIMAL_print_metrics.pdf",
+      "xelatex_log": "/workspace/editorial-refinement-v1.0.11/qa/probes/results/MINIMAL_print_metrics_xelatex.log",
+      "diagnostics": {
+        "overfull": 0,
+        "underfull": 0,
+        "missing_characters": 0,
+        "warnings": 0
+      },
+      "report": "/workspace/editorial-refinement-v1.0.11/qa/probes/results/MINIMAL_print_metrics.json"
+    },
+    {
+      "design": "MINIMAL",
+      "edition": "print",
+      "kind": "edges",
+      "status": "passed",
+      "build_log": "/workspace/editorial-refinement-v1.0.11/qa/probes/results/MINIMAL_print_edges_build.log",
+      "output": "/workspace/editorial-refinement-v1.0.11/runtime/tmp/editorial-probes/MINIMAL/print/edges",
+      "pdf": "/workspace/editorial-refinement-v1.0.11/qa/probes/pdf/MINIMAL_print_edges.pdf",
+      "xelatex_log": "/workspace/editorial-refinement-v1.0.11/qa/probes/results/MINIMAL_print_edges_xelatex.log",
+      "diagnostics": {
+        "overfull": 0,
+        "underfull": 0,
+        "missing_characters": 0,
+        "warnings": 0
+      },
+      "report": "/workspace/editorial-refinement-v1.0.11/qa/probes/results/MINIMAL_print_edges.json"
+    }
+  ],
+  "source_sha256_at_summary": {
+    "REFINED": {
+      "config/book-config.tex": "e048236af483377d5c813a5b1e887d9951d059473006689afffd7a1f2da22dba",
+      "config/color-map.json": "72617c7dacce21a4c99be5c0bdf43b2791b4009617efe042af147d6c49031594",
+      "config/color-roles.tex": "a08e0eaea4f6524267352a61337606fe9e5f6954509d046fd85c8297e0499938",
+      "config/editorial-config.tex": "76dbab43668279a7965f1f30c9fd1183468cc6dafa1db847ca42175aa4a42ce5",
+      "config/editorial-design.tex": "5f9df79e4cdd785c954983f99c63a0965724ade55cb6c8312e7d473c86d2dcc5",
+      "config/generated-assets.tex": "f383bed5faf6c3c188a598e0b42ad6883d8fb3c472332238191ab9339b9d821c",
+      "config/palette-print2-spot.tex": "9afef79c76758b6d9d6f11464d274c48e0307c8e297db108e47f65e0d21e1545",
+      "config/palette-screen.tex": "ad82193a2da26a0accc3f27ee55eca1d4c10bf2ef891986135d98426dc72de69",
+      "styles/book-assets.tex": "059a6ab43aa4391d34c219249ec442838656e01e21e9e7289af5acd4de481260",
+      "styles/book-callouts.tex": "96a5ca99c4e09a089aac94d93013c1ff0e5f9d572b3dcf15448c0477136995f0",
+      "styles/book-editorial-flow.tex": "a10a35d02a52a5cf72cf925a04cc495967fe563f4824cd1a233fd6ceffb4e5e1",
+      "styles/book-editorial-openings.tex": "d42a60c89940c57836664319ee573a85d87b534c9fe5f5aa839030fec5e3b0b4",
+      "styles/book-figures.tex": "0c9065ebc93db4601a283f021462b73722d25c09ac0795d8b9103cbf28e503e6",
+      "styles/book-history-icon.tex": "e81624518f89081471dc21d096eff6e59b8d2bfedd302db9b060d1e356b21858",
+      "styles/book-longtables.tex": "f847a6053f3cec9e59d7ca4a50fe9917e6f9556d9461134c1b091d6133fd736c",
+      "styles/book-toc.tex": "ca46c386677ade5c0fe4b765c91471402ddd439a7f3900f2a47e74f779f52c79",
+      "styles/universalbook.sty": "b9ff2e6a34e90da0fdc70e2617a4045a6d48a206c1d19944a6894f91510810a3"
+    },
+    "MINIMAL": {
+      "config/book-config.tex": "e048236af483377d5c813a5b1e887d9951d059473006689afffd7a1f2da22dba",
+      "config/color-map.json": "72617c7dacce21a4c99be5c0bdf43b2791b4009617efe042af147d6c49031594",
+      "config/color-roles.tex": "a08e0eaea4f6524267352a61337606fe9e5f6954509d046fd85c8297e0499938",
+      "config/editorial-config.tex": "76dbab43668279a7965f1f30c9fd1183468cc6dafa1db847ca42175aa4a42ce5",
+      "config/editorial-design.tex": "f6cb30c291ef23be6f6fbce2aae955d311f7a877b0f2957feffde4e2a7a861d1",
+      "config/generated-assets.tex": "f383bed5faf6c3c188a598e0b42ad6883d8fb3c472332238191ab9339b9d821c",
+      "config/palette-print2-spot.tex": "9afef79c76758b6d9d6f11464d274c48e0307c8e297db108e47f65e0d21e1545",
+      "config/palette-screen.tex": "ad82193a2da26a0accc3f27ee55eca1d4c10bf2ef891986135d98426dc72de69",
+      "styles/book-assets.tex": "059a6ab43aa4391d34c219249ec442838656e01e21e9e7289af5acd4de481260",
+      "styles/book-callouts.tex": "96a5ca99c4e09a089aac94d93013c1ff0e5f9d572b3dcf15448c0477136995f0",
+      "styles/book-editorial-flow.tex": "a10a35d02a52a5cf72cf925a04cc495967fe563f4824cd1a233fd6ceffb4e5e1",
+      "styles/book-editorial-openings.tex": "d42a60c89940c57836664319ee573a85d87b534c9fe5f5aa839030fec5e3b0b4",
+      "styles/book-figures.tex": "0c9065ebc93db4601a283f021462b73722d25c09ac0795d8b9103cbf28e503e6",
+      "styles/book-history-icon.tex": "e81624518f89081471dc21d096eff6e59b8d2bfedd302db9b060d1e356b21858",
+      "styles/book-longtables.tex": "f847a6053f3cec9e59d7ca4a50fe9917e6f9556d9461134c1b091d6133fd736c",
+      "styles/book-toc.tex": "ca46c386677ade5c0fe4b765c91471402ddd439a7f3900f2a47e74f779f52c79",
+      "styles/universalbook.sty": "b9ff2e6a34e90da0fdc70e2617a4045a6d48a206c1d19944a6894f91510810a3"
+    }
+  },
+  "evidence": [
+    "qa/COLOR_INVARIANCE.json",
+    "qa/MAIN_FLOW.json",
+    "qa/suites/RESULTS.json",
+    "qa/compat/BUILD_RESULTS.json",
+    "qa/compat/PREFLIGHT_RESULTS.json",
+    "qa/probes/BUILD_RESULTS.json",
+    "qa/probes/PREFLIGHT_RESULTS.json"
+  ],
+  "scope": "Both candidate sources, copied tests and validators, shipped author fixtures, actual-PDF editorial measurements. Main-pair and visual-review evidence are maintained separately by the review-package driver."
+}

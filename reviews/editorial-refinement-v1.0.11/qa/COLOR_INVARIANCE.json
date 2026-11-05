@@ -1,0 +1,72 @@
+{
+  "status": "passed",
+  "baseline": "Frozen config bytes captured from approved v1.0.10, authenticated by SOURCE_BASELINE.json",
+  "candidates": [
+    {
+      "design": "REFINED",
+      "status": "passed",
+      "checks": {
+        "frozen_color_map_matches_initial_v1_0_10_sha256": true,
+        "candidate_version_is_1_0_11": true,
+        "new_attention_metadata_describes_only_geometry": true,
+        "color_map_changes_only_version_and_attention_geometry": true,
+        "semantic_roles_identical": true,
+        "ink_definitions_and_tints_identical": true,
+        "spot_name_identical": true,
+        "spot_alternate_cmyk_identical": true,
+        "approved_tints_identical": true,
+        "screen_base_identical": true
+      },
+      "files": {
+        "color-roles.tex": {
+          "sha256": "a08e0eaea4f6524267352a61337606fe9e5f6954509d046fd85c8297e0499938",
+          "baseline_sha256": "a08e0eaea4f6524267352a61337606fe9e5f6954509d046fd85c8297e0499938",
+          "identical_to_captured_approved_v1_0_10": true
+        },
+        "palette-screen.tex": {
+          "sha256": "ad82193a2da26a0accc3f27ee55eca1d4c10bf2ef891986135d98426dc72de69",
+          "baseline_sha256": "ad82193a2da26a0accc3f27ee55eca1d4c10bf2ef891986135d98426dc72de69",
+          "identical_to_captured_approved_v1_0_10": true
+        },
+        "palette-print2-spot.tex": {
+          "sha256": "9afef79c76758b6d9d6f11464d274c48e0307c8e297db108e47f65e0d21e1545",
+          "baseline_sha256": "9afef79c76758b6d9d6f11464d274c48e0307c8e297db108e47f65e0d21e1545",
+          "identical_to_captured_approved_v1_0_10": true
+        }
+      }
+    },
+    {
+      "design": "MINIMAL",
+      "status": "passed",
+      "checks": {
+        "frozen_color_map_matches_initial_v1_0_10_sha256": true,
+        "candidate_version_is_1_0_11": true,
+        "new_attention_metadata_describes_only_geometry": true,
+        "color_map_changes_only_version_and_attention_geometry": true,
+        "semantic_roles_identical": true,
+        "ink_definitions_and_tints_identical": true,
+        "spot_name_identical": true,
+        "spot_alternate_cmyk_identical": true,
+        "approved_tints_identical": true,
+        "screen_base_identical": true
+      },
+      "files": {
+        "color-roles.tex": {
+          "sha256": "a08e0eaea4f6524267352a61337606fe9e5f6954509d046fd85c8297e0499938",
+          "baseline_sha256": "a08e0eaea4f6524267352a61337606fe9e5f6954509d046fd85c8297e0499938",
+          "identical_to_captured_approved_v1_0_10": true
+        },
+        "palette-screen.tex": {
+          "sha256": "ad82193a2da26a0accc3f27ee55eca1d4c10bf2ef891986135d98426dc72de69",
+          "baseline_sha256": "ad82193a2da26a0accc3f27ee55eca1d4c10bf2ef891986135d98426dc72de69",
+          "identical_to_captured_approved_v1_0_10": true
+        },
+        "palette-print2-spot.tex": {
+          "sha256": "9afef79c76758b6d9d6f11464d274c48e0307c8e297db108e47f65e0d21e1545",
+          "baseline_sha256": "9afef79c76758b6d9d6f11464d274c48e0307c8e297db108e47f65e0d21e1545",
+          "identical_to_captured_approved_v1_0_10": true
+        }
+      }
+    }
+  ]
+}

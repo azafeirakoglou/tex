@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "zip": "/workspace/editorial-refinement-v1.0.11/Universal_Book_Template_v1.0.11_REVIEW_PACKAGE.zip",
+  "sha256": "9e98c99e73c0de265dbacb08b43b87dc79bfddf24f18447d8d72b37ffc92f282",
+  "bytes": 54506392,
+  "archived_files": 942,
+  "crc_verified": true,
+  "all_archived_file_sha256_verified": true,
+  "excluded": [
+    "stable repository",
+    "working-base staging source",
+    ".local",
+    "build",
+    "compiled TeX formats",
+    "runtime caches and temp trees",
+    "old render/trial evidence"
+  ],
+  "internal_hash_manifest": "Universal_Book_Template_v1.0.11_REVIEW_PACKAGE/PACKAGE_CONTENTS.json"
+}

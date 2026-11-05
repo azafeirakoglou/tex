@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "checked_at_utc": "2026-11-05T13:27:18.903496+00:00",
+  "protected_file_count": 747,
+  "checks": {
+    "head_unchanged": true,
+    "branch_unchanged": true,
+    "git_status_unchanged": true,
+    "all_protected_files_unchanged": true
+  },
+  "git": {
+    "head": "5063f4797c266e174c8ea81f2827fe27268b1a86",
+    "branch": "work",
+    "git_status": ""
+  },
+  "differences": [],
+  "scope": "Original stable tracked files and pre-existing stable/review PDFs and review ZIP; no repository writes."
+}
