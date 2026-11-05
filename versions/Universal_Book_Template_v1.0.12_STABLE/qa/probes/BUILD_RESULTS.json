@@ -1,0 +1,138 @@
+[
+  {
+    "design": "A",
+    "edition": "screen",
+    "kind": "metrics",
+    "status": "passed",
+    "build_log": "/workspace/template-v1.0.12-work/qa/probes/results/A_screen_metrics_build.log",
+    "output": "/workspace/template-v1.0.12-work/runtime/tmp/editorial-probes/A/screen/metrics",
+    "pdf": "/workspace/template-v1.0.12-work/qa/probes/pdf/A_screen_metrics.pdf",
+    "xelatex_log": "/workspace/template-v1.0.12-work/qa/probes/results/A_screen_metrics_xelatex.log",
+    "diagnostics": {
+      "overfull": 0,
+      "underfull": 0,
+      "missing_characters": 0,
+      "warnings": 0
+    },
+    "report": "/workspace/template-v1.0.12-work/qa/probes/results/A_screen_metrics.json"
+  },
+  {
+    "design": "A",
+    "edition": "screen",
+    "kind": "edges",
+    "status": "passed",
+    "build_log": "/workspace/template-v1.0.12-work/qa/probes/results/A_screen_edges_build.log",
+    "output": "/workspace/template-v1.0.12-work/runtime/tmp/editorial-probes/A/screen/edges",
+    "pdf": "/workspace/template-v1.0.12-work/qa/probes/pdf/A_screen_edges.pdf",
+    "xelatex_log": "/workspace/template-v1.0.12-work/qa/probes/results/A_screen_edges_xelatex.log",
+    "diagnostics": {
+      "overfull": 0,
+      "underfull": 0,
+      "missing_characters": 0,
+      "warnings": 0
+    },
+    "report": "/workspace/template-v1.0.12-work/qa/probes/results/A_screen_edges.json"
+  },
+  {
+    "design": "A",
+    "edition": "print",
+    "kind": "metrics",
+    "status": "passed",
+    "build_log": "/workspace/template-v1.0.12-work/qa/probes/results/A_print_metrics_build.log",
+    "output": "/workspace/template-v1.0.12-work/runtime/tmp/editorial-probes/A/print/metrics",
+    "pdf": "/workspace/template-v1.0.12-work/qa/probes/pdf/A_print_metrics.pdf",
+    "xelatex_log": "/workspace/template-v1.0.12-work/qa/probes/results/A_print_metrics_xelatex.log",
+    "diagnostics": {
+      "overfull": 0,
+      "underfull": 0,
+      "missing_characters": 0,
+      "warnings": 0
+    },
+    "report": "/workspace/template-v1.0.12-work/qa/probes/results/A_print_metrics.json"
+  },
+  {
+    "design": "A",
+    "edition": "print",
+    "kind": "edges",
+    "status": "passed",
+    "build_log": "/workspace/template-v1.0.12-work/qa/probes/results/A_print_edges_build.log",
+    "output": "/workspace/template-v1.0.12-work/runtime/tmp/editorial-probes/A/print/edges",
+    "pdf": "/workspace/template-v1.0.12-work/qa/probes/pdf/A_print_edges.pdf",
+    "xelatex_log": "/workspace/template-v1.0.12-work/qa/probes/results/A_print_edges_xelatex.log",
+    "diagnostics": {
+      "overfull": 0,
+      "underfull": 0,
+      "missing_characters": 0,
+      "warnings": 0
+    },
+    "report": "/workspace/template-v1.0.12-work/qa/probes/results/A_print_edges.json"
+  },
+  {
+    "design": "B",
+    "edition": "screen",
+    "kind": "metrics",
+    "status": "passed",
+    "build_log": "/workspace/template-v1.0.12-work/qa/probes/results/B_screen_metrics_build.log",
+    "output": "/workspace/template-v1.0.12-work/runtime/tmp/editorial-probes/B/screen/metrics",
+    "pdf": "/workspace/template-v1.0.12-work/qa/probes/pdf/B_screen_metrics.pdf",
+    "xelatex_log": "/workspace/template-v1.0.12-work/qa/probes/results/B_screen_metrics_xelatex.log",
+    "diagnostics": {
+      "overfull": 0,
+      "underfull": 0,
+      "missing_characters": 0,
+      "warnings": 0
+    },
+    "report": "/workspace/template-v1.0.12-work/qa/probes/results/B_screen_metrics.json"
+  },
+  {
+    "design": "B",
+    "edition": "screen",
+    "kind": "edges",
+    "status": "passed",
+    "build_log": "/workspace/template-v1.0.12-work/qa/probes/results/B_screen_edges_build.log",
+    "output": "/workspace/template-v1.0.12-work/runtime/tmp/editorial-probes/B/screen/edges",
+    "pdf": "/workspace/template-v1.0.12-work/qa/probes/pdf/B_screen_edges.pdf",
+    "xelatex_log": "/workspace/template-v1.0.12-work/qa/probes/results/B_screen_edges_xelatex.log",
+    "diagnostics": {
+      "overfull": 0,
+      "underfull": 0,
+      "missing_characters": 0,
+      "warnings": 0
+    },
+    "report": "/workspace/template-v1.0.12-work/qa/probes/results/B_screen_edges.json"
+  },
+  {
+    "design": "B",
+    "edition": "print",
+    "kind": "metrics",
+    "status": "passed",
+    "build_log": "/workspace/template-v1.0.12-work/qa/probes/results/B_print_metrics_build.log",
+    "output": "/workspace/template-v1.0.12-work/runtime/tmp/editorial-probes/B/print/metrics",
+    "pdf": "/workspace/template-v1.0.12-work/qa/probes/pdf/B_print_metrics.pdf",
+    "xelatex_log": "/workspace/template-v1.0.12-work/qa/probes/results/B_print_metrics_xelatex.log",
+    "diagnostics": {
+      "overfull": 0,
+      "underfull": 0,
+      "missing_characters": 0,
+      "warnings": 0
+    },
+    "report": "/workspace/template-v1.0.12-work/qa/probes/results/B_print_metrics.json"
+  },
+  {
+    "design": "B",
+    "edition": "print",
+    "kind": "edges",
+    "status": "passed",
+    "build_log": "/workspace/template-v1.0.12-work/qa/probes/results/B_print_edges_build.log",
+    "output": "/workspace/template-v1.0.12-work/runtime/tmp/editorial-probes/B/print/edges",
+    "pdf": "/workspace/template-v1.0.12-work/qa/probes/pdf/B_print_edges.pdf",
+    "xelatex_log": "/workspace/template-v1.0.12-work/qa/probes/results/B_print_edges_xelatex.log",
+    "diagnostics": {
+      "overfull": 0,
+      "underfull": 0,
+      "missing_characters": 0,
+      "warnings": 0
+    },
+    "report": "/workspace/template-v1.0.12-work/qa/probes/results/B_print_edges.json"
+  }
+]

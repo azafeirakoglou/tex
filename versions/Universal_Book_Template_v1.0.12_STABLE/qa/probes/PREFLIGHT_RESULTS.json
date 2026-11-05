@@ -1,0 +1,82 @@
+[
+  {
+    "design": "A",
+    "kind": "metrics",
+    "status": "passed",
+    "report": "/workspace/template-v1.0.12-work/qa/probes/results/A_metrics_pair.json",
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+      "/workspace/template-v1.0.12-work/qa/work/A/source/scripts/validate_pdf.py",
+      "--print",
+      "/workspace/template-v1.0.12-work/qa/probes/pdf/A_print_metrics.pdf",
+      "--screen",
+      "/workspace/template-v1.0.12-work/qa/probes/pdf/A_screen_metrics.pdf",
+      "--map",
+      "/workspace/template-v1.0.12-work/qa/work/A/source/config/color-map.json",
+      "--dpi",
+      "72",
+      "--report",
+      "/workspace/template-v1.0.12-work/qa/probes/results/A_metrics_pair.json"
+    ]
+  },
+  {
+    "design": "A",
+    "kind": "edges",
+    "status": "passed",
+    "report": "/workspace/template-v1.0.12-work/qa/probes/results/A_edges_pair.json",
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+      "/workspace/template-v1.0.12-work/qa/work/A/source/scripts/validate_pdf.py",
+      "--print",
+      "/workspace/template-v1.0.12-work/qa/probes/pdf/A_print_edges.pdf",
+      "--screen",
+      "/workspace/template-v1.0.12-work/qa/probes/pdf/A_screen_edges.pdf",
+      "--map",
+      "/workspace/template-v1.0.12-work/qa/work/A/source/config/color-map.json",
+      "--dpi",
+      "72",
+      "--report",
+      "/workspace/template-v1.0.12-work/qa/probes/results/A_edges_pair.json"
+    ]
+  },
+  {
+    "design": "B",
+    "kind": "metrics",
+    "status": "passed",
+    "report": "/workspace/template-v1.0.12-work/qa/probes/results/B_metrics_pair.json",
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+      "/workspace/template-v1.0.12-work/qa/work/B/source/scripts/validate_pdf.py",
+      "--print",
+      "/workspace/template-v1.0.12-work/qa/probes/pdf/B_print_metrics.pdf",
+      "--screen",
+      "/workspace/template-v1.0.12-work/qa/probes/pdf/B_screen_metrics.pdf",
+      "--map",
+      "/workspace/template-v1.0.12-work/qa/work/B/source/config/color-map.json",
+      "--dpi",
+      "72",
+      "--report",
+      "/workspace/template-v1.0.12-work/qa/probes/results/B_metrics_pair.json"
+    ]
+  },
+  {
+    "design": "B",
+    "kind": "edges",
+    "status": "passed",
+    "report": "/workspace/template-v1.0.12-work/qa/probes/results/B_edges_pair.json",
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+      "/workspace/template-v1.0.12-work/qa/work/B/source/scripts/validate_pdf.py",
+      "--print",
+      "/workspace/template-v1.0.12-work/qa/probes/pdf/B_print_edges.pdf",
+      "--screen",
+      "/workspace/template-v1.0.12-work/qa/probes/pdf/B_screen_edges.pdf",
+      "--map",
+      "/workspace/template-v1.0.12-work/qa/work/B/source/config/color-map.json",
+      "--dpi",
+      "72",
+      "--report",
+      "/workspace/template-v1.0.12-work/qa/probes/results/B_edges_pair.json"
+    ]
+  }
+]

@@ -1,0 +1,31 @@
+{
+  "status": "passed",
+  "checks": {
+    "frozen_json_matches_captured_MINIMAL_sha256": true,
+    "map_changes_only_approved_version_and_component_usage": true,
+    "semantic_roles_identical": true,
+    "ink_definitions_and_tints_identical": true,
+    "spot_ink_name_identical": true,
+    "spot_alternate_cmyk_identical": true,
+    "screen_palette_identical": true,
+    "three_approved_tints_identical": true,
+    "color-roles.tex_byte_identical": true,
+    "palette-screen.tex_byte_identical": true,
+    "palette-print2-spot.tex_byte_identical": true
+  },
+  "files": {
+    "color-roles.tex": {
+      "sha256": "a08e0eaea4f6524267352a61337606fe9e5f6954509d046fd85c8297e0499938",
+      "approved_sha256": "a08e0eaea4f6524267352a61337606fe9e5f6954509d046fd85c8297e0499938"
+    },
+    "palette-screen.tex": {
+      "sha256": "ad82193a2da26a0accc3f27ee55eca1d4c10bf2ef891986135d98426dc72de69",
+      "approved_sha256": "ad82193a2da26a0accc3f27ee55eca1d4c10bf2ef891986135d98426dc72de69"
+    },
+    "palette-print2-spot.tex": {
+      "sha256": "9afef79c76758b6d9d6f11464d274c48e0307c8e297db108e47f65e0d21e1545",
+      "approved_sha256": "9afef79c76758b6d9d6f11464d274c48e0307c8e297db108e47f65e0d21e1545"
+    }
+  },
+  "component_usage": "Existing roles are not redefined. Only explicitly requested component surfaces change."
+}

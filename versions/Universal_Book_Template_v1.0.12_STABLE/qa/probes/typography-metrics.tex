@@ -1,0 +1,52 @@
+% Controlled real-PDF font measurements. Compile from the candidate source root.
+\documentclass[11pt,twoside,openright]{book}
+\input{config/book-config.tex}
+\newif\ifBookTwoInkProof
+\ifdefined\MetricsPrint\BookTwoInkProoftrue\else\BookTwoInkProoffalse\fi
+\newif\ifPrintThreeInk\PrintThreeInkfalse
+\usepackage{styles/universalbook}
+\begin{document}
+\mainmatter
+\BookChapter[Μετρικά]{BODYTITLEMETRIC}{Πραγματικές διαστάσεις τυπογραφικών ρόλων}
+ {\item Έλεγχος γραμματοσειρών.\item Έλεγχος κλίμακας μαθηματικών.}
+\BookSection{THEMATICMETRIC}
+\section{SECTIONMETRIC}
+\subsection{SUBSECTIONMETRIC}
+\noindent BODYMETRIC\quad $x+\alpha+\beta=\gamma$.\par
+\begin{AttentionBox}
+ATTENTIONBODYMETRIC\quad $y+\alpha=\beta$.\par
+\end{AttentionBox}
+\begin{ThinkBox}
+THINKBODYMETRIC\quad $z+\alpha=\beta$.\par
+\end{ThinkBox}
+\begin{HistoryBox}[HISTORYTITLEMETRIC]
+HISTORYBODYMETRIC\quad $q+\alpha=\beta$.\par
+\end{HistoryBox}
+\begin{workedexample}{EXAMPLETITLEMETRIC}
+\begin{ProblemBox}
+EXAMPLEBODYMETRIC\quad $v+\alpha=\beta$.\par
+\end{ProblemBox}
+\SolutionHeading SOLUTIONMETRIC
+\end{workedexample}
+\clearpage
+\noindent DISPLAYMETRIC
+\[ x+\alpha+\beta=\gamma,\qquad \int_0^1x^2\,\mathrm dx=\frac13. \]
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}
+\node[book/physlabel] at (0,0) {DIAGRAMLABELMETRIC $x+\alpha$};
+\node[book/ticklabel] at (0,-1) {TICKMETRIC $2$};
+\end{tikzpicture}
+\caption{CAPTIONMETRIC Description of the vector diagram.}\label{fig:metrics}
+\end{figure}
+\begin{table}[htbp]
+\centering
+\begin{BookPlainTable}
+\begin{tabular}{lc}
+\BookTableHeaderRow\BookTableHead{Quantity} & \BookTableHead{Value}\\
+Position & $2\,\mathrm{m}$\\
+\end{tabular}
+\end{BookPlainTable}
+\caption{TABLECAPMETRIC Description of the measured table.}
+\end{table}
+\end{document}

@@ -1,0 +1,640 @@
+{
+  "status": "passed",
+  "certification": "Not PDF/X or press certification",
+  "print_file": "/workspace/template-v1.0.12-work/pdf/Universal_Book_Template_v1.0.12_PRINT.pdf",
+  "screen_file": "/workspace/template-v1.0.12-work/pdf/Universal_Book_Template_v1.0.12_SCREEN.pdf",
+  "errors": [],
+  "input_sha256": {
+    "print": "95fd0a5e626fb19a1aa52fc16b9cabb4d5bd4d329f38fcdf5985dd194a20e287",
+    "screen": "2849fa08a7d02e3d9b024e03bf669098505646d0e413b3c328631bf4c2427963",
+    "palette": "5d694d0ab080b8926f979ac484510b48657bd8f43cab6d1bcd1c3a5ce2175a11"
+  },
+  "print": {
+    "pages": 20,
+    "unembedded_fonts": [],
+    "rgb_images": [],
+    "page_boxes": [
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      }
+    ],
+    "output_intent_present": false
+  },
+  "screen": {
+    "pages": 20,
+    "unembedded_fonts": [],
+    "rgb_images": [],
+    "page_boxes": [
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      }
+    ],
+    "output_intent_present": false
+  },
+  "pair": {
+    "same_page_count": true,
+    "text_and_positions_match": true,
+    "geometry_matches": true
+  },
+  "rendered": {
+    "dpi": 72,
+    "antialiasing": false,
+    "plates": {
+      "Black": {
+        "marked_pixels": 281469,
+        "nonempty_pages": [
+          1,
+          3,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          17,
+          18,
+          19,
+          20
+        ],
+        "levels": {
+          "255": 6273731,
+          "0": 111204,
+          "115": 31648,
+          "230": 138617
+        }
+      },
+      "Yellow": {
+        "marked_pixels": 0,
+        "nonempty_pages": [],
+        "levels": {
+          "255": 6555200
+        }
+      },
+      "Magenta": {
+        "marked_pixels": 0,
+        "nonempty_pages": [],
+        "levels": {
+          "255": 6555200
+        }
+      },
+      "Cyan": {
+        "marked_pixels": 0,
+        "nonempty_pages": [],
+        "levels": {
+          "255": 6555200
+        }
+      },
+      "SecondInkRedProof": {
+        "marked_pixels": 512266,
+        "nonempty_pages": [
+          1,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          17,
+          18,
+          19,
+          20
+        ],
+        "levels": {
+          "0": 340916,
+          "255": 5059654,
+          "115": 16320,
+          "230": 155030
+        }
+      }
+    },
+    "pairing_mismatched_pixels": 0,
+    "overlap_pixels": 0,
+    "pages": [
+      {
+        "page": 1,
+        "pairing_mismatched_pixels": 0,
+        "overlap_pixels": 0,
+        "bad_samples": []
+      },
+      {
+        "page": 2,
+        "pairing_mismatched_pixels": 0,
+        "overlap_pixels": 0,
+        "bad_samples": []
+      },
+      {
+        "page": 3,
+        "pairing_mismatched_pixels": 0,
+        "overlap_pixels": 0,
+        "bad_samples": []
+      },
+      {
+        "page": 4,
+        "pairing_mismatched_pixels": 0,
+        "overlap_pixels": 0,
+        "bad_samples": []
+      },
+      {
+        "page": 5,
+        "pairing_mismatched_pixels": 0,
+        "overlap_pixels": 0,
+        "bad_samples": []
+      },
+      {
+        "page": 6,
+        "pairing_mismatched_pixels": 0,
+        "overlap_pixels": 0,
+        "bad_samples": []
+      },
+      {
+        "page": 7,
+        "pairing_mismatched_pixels": 0,
+        "overlap_pixels": 0,
+        "bad_samples": []
+      },
+      {
+        "page": 8,
+        "pairing_mismatched_pixels": 0,
+        "overlap_pixels": 0,
+        "bad_samples": []
+      },
+      {
+        "page": 9,
+        "pairing_mismatched_pixels": 0,
+        "overlap_pixels": 0,
+        "bad_samples": []
+      },
+      {
+        "page": 10,
+        "pairing_mismatched_pixels": 0,
+        "overlap_pixels": 0,
+        "bad_samples": []
+      },
+      {
+        "page": 11,
+        "pairing_mismatched_pixels": 0,
+        "overlap_pixels": 0,
+        "bad_samples": []
+      },
+      {
+        "page": 12,
+        "pairing_mismatched_pixels": 0,
+        "overlap_pixels": 0,
+        "bad_samples": []
+      },
+      {
+        "page": 13,
+        "pairing_mismatched_pixels": 0,
+        "overlap_pixels": 0,
+        "bad_samples": []
+      },
+      {
+        "page": 14,
+        "pairing_mismatched_pixels": 0,
+        "overlap_pixels": 0,
+        "bad_samples": []
+      },
+      {
+        "page": 15,
+        "pairing_mismatched_pixels": 0,
+        "overlap_pixels": 0,
+        "bad_samples": []
+      },
+      {
+        "page": 16,
+        "pairing_mismatched_pixels": 0,
+        "overlap_pixels": 0,
+        "bad_samples": []
+      },
+      {
+        "page": 17,
+        "pairing_mismatched_pixels": 0,
+        "overlap_pixels": 0,
+        "bad_samples": []
+      },
+      {
+        "page": 18,
+        "pairing_mismatched_pixels": 0,
+        "overlap_pixels": 0,
+        "bad_samples": []
+      },
+      {
+        "page": 19,
+        "pairing_mismatched_pixels": 0,
+        "overlap_pixels": 0,
+        "bad_samples": []
+      },
+      {
+        "page": 20,
+        "pairing_mismatched_pixels": 0,
+        "overlap_pixels": 0,
+        "bad_samples": []
+      }
+    ],
+    "scope": "all pages; raster separations and paired RGB rendering"
+  }
+}

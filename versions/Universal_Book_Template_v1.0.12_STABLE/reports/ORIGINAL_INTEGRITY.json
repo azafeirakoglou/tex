@@ -1,0 +1,46 @@
+{
+  "status": "passed",
+  "checked_at_utc": "2026-11-05T23:32:26.189538+00:00",
+  "protected_file_count": 911,
+  "checks": {
+    "protected_original_files_unchanged": true,
+    "all_scientific_content_and_assets_unchanged": true,
+    "palette_and_existing_roles_byte_identical": true,
+    "original_git_head_unchanged": true,
+    "original_git_branch_unchanged": true,
+    "original_tracked_git_files_unchanged": true
+  },
+  "git": {
+    "head": "5063f4797c266e174c8ea81f2827fe27268b1a86",
+    "branch": "work",
+    "tracked_status": "",
+    "full_status": "?? versions/"
+  },
+  "palette_files": {
+    "palette-print2-spot.tex": true,
+    "palette-screen.tex": true,
+    "color-roles.tex": true
+  },
+  "changed_original_files": [],
+  "changed_content_files": [],
+  "checked_content_files": [
+    "assets/header-icon-geometry.json",
+    "assets/header-icon.svg",
+    "assets/header-icon.tex",
+    "assets/math-chapter-art-print2.png",
+    "assets/math-chapter-art.tex",
+    "assets/photo-K-3tones.png",
+    "book-content.tex",
+    "chapters/askisi-dokimis.tex",
+    "chapters/collab-content.tex",
+    "chapters/demo-assessment.tex",
+    "chapters/demo-math.tex",
+    "chapters/demo-physics.tex",
+    "chapters/demo-worksheet.tex",
+    "chapters/starter-chapter.tex",
+    "main-print2.tex",
+    "main.tex",
+    "solutions/demo-assessment-solutions.tex"
+  ],
+  "scope": "Original versions remain read-only; only the new v1.0.12 version directory may be untracked."
+}

@@ -1,0 +1,61 @@
+% QA-only same-content proof. No production chapter is edited to fit.
+\newcommand{\StableProofParagraph}{Η λύση τεκμηριώνεται με σαφή αναφορά
+  στα δεδομένα, στις μονάδες και στο σύστημα αναφοράς. Ελέγχουμε το πρόσημο
+  και τη διαστατική συνέπεια της σχέσης πριν διατυπώσουμε το συμπέρασμα.\par}
+\mainmatter\setcounter{chapter}{1}
+\BookSection{Τρία διαδοχικά λυμένα παραδείγματα}
+\begin{workedexample}{STABLESHORTONE}
+\begin{ProblemBox}
+SHORTPROBLEMONE Ένα σώμα μετακινείται από τη θέση $x_1=-2\,\mathrm m$
+στη θέση $x_2=5\,\mathrm m$. Να υπολογιστεί η μετατόπιση.
+\end{ProblemBox}
+\begin{ThinkBox}
+SHORTTHINKONE Αφαιρώ την αρχική θέση από την τελική και ελέγχω τη μονάδα.
+\end{ThinkBox}
+\SolutionHeading
+SHORTSOLUTIONONE Η μετατόπιση είναι $\Delta x=5-(-2)=7\,\mathrm m$.
+\end{workedexample}
+\begin{workedexample}{STABLESHORTTWO}
+\begin{ProblemBox}
+SHORTPROBLEMTWO Μετατόπιση $24\,\mathrm m$ πραγματοποιείται σε
+$6\,\mathrm s$. Να υπολογιστεί η μέση ταχύτητα.
+\end{ProblemBox}
+\SolutionHeading
+SHORTSOLUTIONTWO Χρησιμοποιώ τον ορισμό
+$\bar\upsilon=\Delta x/\Delta t=4\,\mathrm{m/s}$.
+\end{workedexample}
+\begin{workedexample}{STABLESHORTTHREE}
+\begin{ProblemBox}
+SHORTPROBLEMTHREE Για $f(x)=2x+1$, να υπολογιστούν τα $f(0)$ και $f(3)$.
+\end{ProblemBox}
+\begin{ThinkBox}
+SHORTTHINKTHREE Αντικαθιστώ τη μεταβλητή με την τιμή που ζητείται.
+\end{ThinkBox}
+\SolutionHeading
+SHORTSOLUTIONTHREE Υπολογίζω $f(0)=1$ και $f(3)=7$.
+\end{workedexample}
+\clearpage
+\BookSection{Μεγάλο λυμένο παράδειγμα με συνέχεια}
+\begin{workedexample}{STABLELONGTITLE}
+\begin{ProblemBox}
+LONGPROBLEMBEGIN\par
+\input{long-problem-rows.tex}
+LONGPROBLEMEND
+\end{ProblemBox}
+\begin{ThinkBox}
+LONGTHINKBEGIN\par
+Η γενική σχέση $x_i=x_0+\upsilon_0t_i+\tfrac12at_i^2$ χρησιμοποιεί
+πλάγιες μεταβλητές και όρθιες μονάδες $\mathrm m$, $\mathrm s$.
+\[
+\sigma=\sqrt{\frac{\sum_{i=1}^{n}(x_i-\bar x)^2}{n-1}},\qquad
+\lim_{h\to0}\frac{f(t+h)-f(t)}h=f'(t).
+\]
+\StableProofParagraph
+LONGTHINKEND
+\end{ThinkBox}
+\SolutionHeading
+LONGSOLUTIONBEGIN\par
+\input{long-solution-rows.tex}
+LONGSOLUTIONEND
+\end{workedexample}
+\end{document}

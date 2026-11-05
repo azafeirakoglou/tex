@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "pdf": "qa/work/A/source/build/stress-screen/Stress_Screen.pdf",
+  "input_sha256": "bf2ca19d9574ec9d7758c1f5ee83853b16f1ec043b46c46c042db00dab402de4",
+  "views": [
+    {
+      "kind": "WORKSHEET",
+      "page": 41,
+      "png": "qa/compat/stress-title-views/WORKSHEET.png",
+      "sha256": "8e483ddf1358e36859c72f505d4ca97686cc31344a7bfa886775d730372dc1c7"
+    },
+    {
+      "kind": "ASSESSMENT",
+      "page": 43,
+      "png": "qa/compat/stress-title-views/ASSESSMENT.png",
+      "sha256": "1f0957821bc413e1536ceb7c5f72d292e18393604b55e336f9d00d513a162c66"
+    }
+  ],
+  "actual_visual_views": [
+    41,
+    43
+  ],
+  "observed_overlap_count": 0,
+  "observed_clipping_count": 0,
+  "verdict": "Long worksheet and assessment titles wrap naturally with normal spacing, no hyphenated word fragments, no clipping; required 16/20 typography retained."
+}

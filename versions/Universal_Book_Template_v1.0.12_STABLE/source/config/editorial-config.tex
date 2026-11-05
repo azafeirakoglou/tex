@@ -1,0 +1,50 @@
+% Typography and MINIMAL geometry inherited unchanged from v1.0.11 B.
+\newif\ifBookEditorialMinimal
+\input{config/editorial-design.tex}
+\newcommand{\BookMathScale}{1.05}
+\newcommand{\BookSectionFontSize}{13}
+\newcommand{\BookSectionLeading}{16.5}
+\newcommand{\BookSubsectionFontSize}{11}
+\newcommand{\BookSubsectionLeading}{14}
+\renewcommand{\BookExampleTitleFontSize}{10.7}
+\renewcommand{\BookExampleTitleLineHeight}{14}
+\newcommand{\BookAttentionLabelSize}{9.5}
+\renewcommand{\BookThinkLabelSize}{9.5}
+\newcommand{\BookEditorialCalloutLabelLeading}{12}
+% History retains its v1.0.10 title size 9.2 / declared leading 11.5.
+\renewcommand{\BookCaptionSize}{9.5}
+\renewcommand{\BookCaptionLineHeight}{12.5}
+\BookItalicCaptionsfalse
+\renewcommand{\BookFigLabelFont}{\sffamily\fontsize{9.5}{11.5}\selectfont}
+\renewcommand{\BookFigTickFont}{\sffamily\fontsize{8.5}{10.2}\selectfont}
+% A further 10% reduction relative to the v1.0.10 bulb scale 0.90.
+\renewcommand{\BookBulbScale}{0.81}
+\newcommand{\BookBodyChapterLabel}{ΚΕΦΑΛΑΙΟ}
+\newcommand{\BookBodyChapterLabelSize}{9.5}
+\newcommand{\BookBodyChapterTitleSize}{17.5}
+\newcommand{\BookBodyChapterTitleLeading}{22}
+\newcommand{\BookOpeningTitleRuleWidth}{1.1pt}
+\newcommand{\BookOpeningTitleInset}{4mm}
+\newcommand{\BookOpeningTopStripHeight}{8mm}
+\ifBookEditorialMinimal
+  \newcommand{\BookEditorialDesignName}{MINIMAL}
+  \BookMajorHeadingBandfalse
+  \renewcommand{\BookThinkBracketRuleWidth}{.85pt}
+  \newcommand{\BookAttentionRuleWidth}{1pt}
+  \newcommand{\BookThinkVerticalPadding}{3.6mm}
+  \newcommand{\BookThinkLeftPadding}{18.5mm}
+  \newcommand{\BookThinkRightPadding}{4.5mm}
+  \newcommand{\BookThinkIconOffset}{9mm}
+  \renewcommand{\BookOpeningGoalsRuleWidth}{.4pt}
+\else
+  \newcommand{\BookEditorialDesignName}{REFINED}
+  \BookMajorHeadingBandtrue
+  \renewcommand{\BookThinkBracketRuleWidth}{.95pt}
+  \newcommand{\BookAttentionRuleWidth}{1.25pt}
+  \newcommand{\BookThinkVerticalPadding}{3.2mm}
+  \newcommand{\BookThinkLeftPadding}{18mm}
+  \newcommand{\BookThinkRightPadding}{4.2mm}
+  \newcommand{\BookThinkIconOffset}{9mm}
+  \renewcommand{\BookOpeningGoalsRuleWidth}{.75pt}
+\fi
+% Edition identity is defined in stable-config.tex.

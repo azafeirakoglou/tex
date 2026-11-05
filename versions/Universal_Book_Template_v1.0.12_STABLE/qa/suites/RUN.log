@@ -1,0 +1,8 @@
+{
+  "variant": "A",
+  "exit_code": 0,
+  "elapsed_seconds": 183.93,
+  "log": "qa/suites/A.unittest.log",
+  "tests_run": 66,
+  "skipped": 0
+}

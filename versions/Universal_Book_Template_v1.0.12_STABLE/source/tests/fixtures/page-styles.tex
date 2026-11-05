@@ -1,0 +1,131 @@
+% Real PDF fixture: two distinct running marks survive sequential assessments.
+% Both parities, plain pages, automatic blanks and chapter openers are covered.
+\documentclass[11pt,twoside,openright]{book}
+\input{config/book-config.tex}
+\newif\ifBookTwoInkProof
+\ifdefined\PageStylesPrint
+  \BookTwoInkProoftrue
+\else
+  \BookTwoInkProoffalse
+\fi
+\newif\ifPrintThreeInk
+\PrintThreeInkfalse
+\usepackage{styles/universalbook}
+% Observe both transient marks at shipout, without changing the production
+% header or depending on marks from the previously shipped page.
+\newif\ifFixtureProbeMarks
+\FixtureProbeMarkstrue
+\newsavebox{\FixtureBackHeaderBox}
+\newsavebox{\FixtureDepthHeaderBox}
+\AddToHook{shipout/foreground}{%
+  \ifFixtureProbeMarks
+    \put(20mm,-220mm){\makebox[0pt][l]{\BookHeaderTitleFont\color{BookInk}%
+      LMPROBE\space\leftmark\space RMPROBE\space\rightmark}}%
+  \fi
+}
+% Zero-size overlay: exposes both actual text-block edges in the PDF without
+% affecting paragraph width, vertical spacing or the fixture's page count.
+\newcommand{\FixtureBodyFrame}{%
+  \noindent\begin{tikzpicture}[overlay]
+    \draw[BookInk,line width=.2pt]
+      (0,-1mm)--(0,1mm)
+      (0,0)--(\linewidth,0)
+      (\linewidth,-1mm)--(\linewidth,1mm);
+  \end{tikzpicture}%
+}
+\begin{document}
+% Logical cassette dimensions include the transparent margin around the ink.
+% The vector ink itself therefore need not occupy the full 6.4 mm height.
+\begingroup
+\BookHeaderTitleFont
+\setbox0=\hbox{\BookHeaderIcon}%
+\typeout{HEADERICONMETRICS:\the\wd0:\the\ht0:\the\dp0}%
+\endgroup
+% Positive chapter counters must not add numbers to the running header.
+\setcounter{chapter}{1}
+% Exercise the standard chaptermark route, then give the transient marks
+% deliberately different values from the stored running chapter title. Set
+% both the first and last page marks so leftmark/rightmark have known values.
+\markboth{ORIGINALLEFT}{ORIGINALRIGHT}
+% Exercise the book flags for unnumbered chapters without adding pages.
+% Cache the public rendered label before restoring the ordinary chapter.
+\makeatletter
+\begingroup
+\@mainmatterfalse
+\chaptermark{BACKCHAPTER}
+\global\setbox\FixtureBackHeaderBox=\hbox{\BookHeaderTitleFont\BookHeaderUnitLabel}%
+\endgroup
+\begingroup
+\c@secnumdepth=-1\relax
+\chaptermark{DEPTHCHAPTER}
+\global\setbox\FixtureDepthHeaderBox=\hbox{\BookHeaderTitleFont\BookHeaderUnitLabel}%
+\endgroup
+\makeatother
+\chaptermark{INITIALCHAPTER}
+% The first section shares a page with the chapter reset. Its short title,
+% without the displayed number, is the running section label.
+\section[FIRSTSECTION]{First long section title}
+\markboth{ORIGINALLEFT}{ORIGINALRIGHT}
+\FixtureBodyFrame
+BODYNORMALONE
+\clearpage
+% Seed the first legacy mark before sectionmark changes its right component;
+% the independent booksection class must still select SECONDSECTION here.
+\markboth{ORIGINALLEFT}{ORIGINALRIGHT}
+\section[SECONDSECTION]{Second long section title}
+\markboth{ORIGINALLEFT}{ORIGINALRIGHT}
+\FixtureBodyFrame
+BODYNORMALTWO
+% A later section on this same page must not replace its first section in
+% the running header. It must take effect on the following assessment pages.
+\par\vspace{100mm}
+\section[THIRDSECTION]{Third long section title}
+\markboth{ORIGINALLEFT}{ORIGINALRIGHT}
+\begin{Assessment}{ASSESSMENTONE}
+BODYFIRSTONE
+\newpage
+BODYFIRSTTWO
+\end{Assessment}
+BODYAFTERFIRST
+\clearpage
+\begin{Assessment}{ASSESSMENTTWO}
+BODYSECONDONE
+\newpage
+BODYSECONDTWO
+\end{Assessment}
+BODYAFTERSECOND
+\clearpage
+% A subsequent ordinary markright must retain the original left component.
+\markright{NEXTRIGHT}
+BODYAFTERMARKRIGHT
+\clearpage
+BODYMARKRIGHTEVEN
+\clearpage
+\FixtureProbeMarksfalse
+\thispagestyle{plain}
+BODYPLAIN
+\clearpage
+% At this point the next page is even: cleardoublepage must insert an empty
+% verso rather than accidentally retaining a running header or a page number.
+\cleardoublepage
+\BookChapter{CHAPTEROPENER}{BODYCHAPTER}{\item A short fixture goal.}
+\FixtureProbeMarkstrue
+\WorksheetOpening{Fixture}{Worksheet title}
+BODYAFTERCHAPTER
+\clearpage
+\FixtureProbeMarksfalse
+\thispagestyle{empty}
+BODYEXPLICITEMPTY
+% A reference at the same nominal size lets PDF tests compare ink bounds
+% independently of the running-header placement, without adding a page.
+\par\vspace{8mm}
+\noindent{\BookHeaderTitleFont\BookHeaderIcon}
+\par\noindent{\BookHeaderTitleFont BACKPROBE\space\usebox{\FixtureBackHeaderBox}}
+\par\noindent{\BookHeaderTitleFont DEPTHPROBE\space\usebox{\FixtureDepthHeaderBox}}
+% The photo route starts on a recto and must refresh the stored chapter label.
+\BookChapterPhoto{PHOTOCHAPTER}{BODYPHOTOCHAPTER}{chapter_photo}{Fixture credit}{\item A short photo fixture goal.}
+\FixtureProbeMarkstrue
+\begin{Assessment}{ASSESSMENTFINAL}
+BODYFINALASSESSMENT
+\end{Assessment}
+\end{document}

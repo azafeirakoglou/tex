@@ -1,0 +1,9 @@
+{
+  "file": "source/tables-demo-content.tex",
+  "authorization": "Root explicitly authorized correcting inaccurate explanatory wording only; no fit/content changes.",
+  "before_text": "Στο δίχρωμο PDF το αχνό φόντο του Α αποτελεί τονικότητα του δεύτερου μελανιού.",
+  "after_text": "Η αχνή κεφαλίδα και οι εναλλασσόμενες γραμμές του Α χρησιμοποιούν 10\\% μαύρου και στις δύο εκδόσεις. Η λεπτή επάνω γραμμή χρησιμοποιεί το δεύτερο μελάνι.",
+  "before_sha256": "1d6eb0cde5f5dbf384ccba717683451f58ffac82fbb36045a6b046f840ce689a",
+  "after_sha256": "94d9927d8476b3246b1a0653abaab45ea31d362e60b30096f8d6b0f436650919",
+  "preserved": "All scientific rows, units, formulas, column specifications, labels and references are unchanged."
+}

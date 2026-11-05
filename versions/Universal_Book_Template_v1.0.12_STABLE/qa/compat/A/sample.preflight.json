@@ -1,0 +1,227 @@
+{
+  "status": "passed",
+  "certification": "Not PDF/X or press certification",
+  "print_file": "/workspace/template-v1.0.12-work/qa/work/A/source/build/sample-print2/Sample_Collaborators_Print_Technical.pdf",
+  "screen_file": "/workspace/template-v1.0.12-work/qa/work/A/source/build/sample-screen/Sample_Collaborators_Blue.pdf",
+  "errors": [],
+  "input_sha256": {
+    "print": "6e9bec89a65bfdf85f382c83c0ee7c14b7dd6bc6c3fd5841be9fb15b8ae3767f",
+    "screen": "df5fd77d2f33a4cfe625db8c06b036da20ae42807599b03147dd036b5f682d8b",
+    "palette": "5d694d0ab080b8926f979ac484510b48657bd8f43cab6d1bcd1c3a5ce2175a11"
+  },
+  "print": {
+    "pages": 5,
+    "unembedded_fonts": [],
+    "rgb_images": [],
+    "page_boxes": [
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      }
+    ],
+    "output_intent_present": false
+  },
+  "screen": {
+    "pages": 5,
+    "unembedded_fonts": [],
+    "rgb_images": [],
+    "page_boxes": [
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      }
+    ],
+    "output_intent_present": false
+  },
+  "pair": {
+    "same_page_count": true,
+    "text_and_positions_match": true,
+    "geometry_matches": true
+  },
+  "rendered": {
+    "dpi": 72,
+    "antialiasing": false,
+    "plates": {
+      "Black": {
+        "marked_pixels": 116895,
+        "nonempty_pages": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "levels": {
+          "255": 1521905,
+          "0": 40189,
+          "115": 29639,
+          "230": 47067
+        }
+      },
+      "Yellow": {
+        "marked_pixels": 0,
+        "nonempty_pages": [],
+        "levels": {
+          "255": 1638800
+        }
+      },
+      "Magenta": {
+        "marked_pixels": 0,
+        "nonempty_pages": [],
+        "levels": {
+          "255": 1638800
+        }
+      },
+      "Cyan": {
+        "marked_pixels": 0,
+        "nonempty_pages": [],
+        "levels": {
+          "255": 1638800
+        }
+      },
+      "SecondInkRedProof": {
+        "marked_pixels": 63765,
+        "nonempty_pages": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "levels": {
+          "255": 1575035,
+          "0": 17993,
+          "115": 3924,
+          "230": 41848
+        }
+      }
+    },
+    "pairing_mismatched_pixels": 0,
+    "overlap_pixels": 0,
+    "pages": [
+      {
+        "page": 1,
+        "pairing_mismatched_pixels": 0,
+        "overlap_pixels": 0,
+        "bad_samples": []
+      },
+      {
+        "page": 2,
+        "pairing_mismatched_pixels": 0,
+        "overlap_pixels": 0,
+        "bad_samples": []
+      },
+      {
+        "page": 3,
+        "pairing_mismatched_pixels": 0,
+        "overlap_pixels": 0,
+        "bad_samples": []
+      },
+      {
+        "page": 4,
+        "pairing_mismatched_pixels": 0,
+        "overlap_pixels": 0,
+        "bad_samples": []
+      },
+      {
+        "page": 5,
+        "pairing_mismatched_pixels": 0,
+        "overlap_pixels": 0,
+        "bad_samples": []
+      }
+    ],
+    "scope": "all pages; raster separations and paired RGB rendering"
+  }
+}

@@ -1,0 +1,46 @@
+% v1.0.12: shared typography/geometry for worksheets and assessments.
+% Public entry points and all counters/TOC/marks retain their signatures.
+\newcommand{\BookMaterialHeading}[3]{%
+  \par\noindent
+  \begin{tcolorbox}[enhanced,sharp corners,frame hidden,boxrule=0pt,
+    colback=BookPrimary,
+    left=\BookMaterialHeadingHorizontalPadding,right=\BookMaterialHeadingHorizontalPadding,
+    top=\BookMaterialHeadingVerticalPadding,bottom=\BookMaterialHeadingVerticalPadding,
+    before skip=0pt,after skip=7pt]
+    {\sffamily\mdseries\fontsize{\BookMaterialHeadingLabelSize}{\BookMaterialHeadingLabelLeading}%
+      \selectfont\color{white}#1\ifstrempty{#3}{}{\space #3}}\par\vspace{1.4mm}%
+    {\BookHeadingFont\bfseries\fontsize{\BookMaterialHeadingTitleSize}{\BookMaterialHeadingTitleLeading}%
+      \selectfont\color{white}\raggedright #2\par}%
+  \end{tcolorbox}%
+}
+\newcommand{\BookMaterialSection}[1]{%
+  \par\Needspace{5\baselineskip}\addvspace{8pt}%
+  \noindent\begin{tcolorbox}[enhanced,sharp corners,frame hidden,boxrule=0pt,
+    colback=\BookMaterialSectionBackground,
+    left=\BookMaterialSectionHorizontalPadding,right=\BookMaterialSectionHorizontalPadding,
+    top=\BookMaterialSectionVerticalPadding,bottom=\BookMaterialSectionVerticalPadding,
+    before skip=0pt,after skip=7pt]
+    {\sffamily\bfseries\fontsize{\BookMaterialSectionSize}{\BookMaterialSectionLeading}%
+      \selectfont\color{white}#1}%
+  \end{tcolorbox}%
+}
+\renewcommand{\WorksheetOpening}[2]{%
+  \clearpage\BookEditorialMaybeFirstBodyTitle
+  \setcounter{exercise}{0}\refstepcounter{worksheet}%
+  \BookTOCOpenCollection{worksheet}{Φύλλα εργασίας}%
+  \phantomsection\addcontentsline{toc}{bookitem}{Φύλλο εργασίας\space\theworksheet\space—\space #2}%
+  \markboth{Φύλλα εργασίας}{Φύλλα εργασίας}%
+  \BookMaterialHeading{\LabelWorksheet}{#2}{\theworksheet}%
+  {\sffamily\fontsize{8.6}{11}\selectfont\color{BookInk}\BookShortName\enspace·\enspace #1\par}%
+  \medskip
+}
+\renewcommand{\WorksheetSection}[1]{\BookMaterialSection{#1}}
+\RenewDocumentCommand{\AssessmentTopic}{m}{%
+  \stepcounter{assessmenttopic}%
+  \gdef\BookAssessmentTopicLetter{#1}%
+  \setcounter{assessmentquestion}{0}%
+  \BookMaterialSection{\LabelAssessmentTopic\space #1}%
+}
+% The original Assessment environment calls BookMaterialHeading as well.
+% Its options, date/student/duration fields, counters, marks, TOC and closing
+% clearpage remain in the original environment definition.

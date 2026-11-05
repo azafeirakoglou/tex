@@ -1,0 +1,166 @@
+[
+  {
+    "profile": "SCREEN",
+    "pdf": "qa/callouts/SCREEN/callout-proof-screen.pdf",
+    "sha256": "a1b587f5b7f712d36038c782d2d17e7aa2f8d6fefb8d6452370b2c8838515cf7",
+    "status": "passed",
+    "checks": {
+      "pages_are_13": true,
+      "THINK_36_markers_once_ordered": true,
+      "THINK_four_fragments": true,
+      "THINK_one_west_rule_each_fragment": true,
+      "THINK_icon_only_first_fragment": true,
+      "ATTENTION_36_markers_once_ordered": true,
+      "ATTENTION_four_fragments": true,
+      "ATTENTION_one_west_rule_each_fragment": true,
+      "ATTENTION_icon_only_first_fragment": true,
+      "HISTORY_36_markers_once_ordered": true,
+      "HISTORY_four_fragments": true,
+      "HISTORY_one_west_rule_each_fragment": true,
+      "HISTORY_icon_only_first_fragment": true,
+      "Πώς σκέφτομαι_font": true,
+      "ΠΡΟΣΟΧΗ_font": true,
+      "Ιστορίες από τη Φυσική_font": true
+    },
+    "fragments": {
+      "THINK": {
+        "pages": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "accent_drawing_counts": [
+          10,
+          1,
+          1,
+          1
+        ]
+      },
+      "ATTENTION": {
+        "pages": [
+          6,
+          7,
+          8,
+          9
+        ],
+        "accent_drawing_counts": [
+          3,
+          1,
+          1,
+          1
+        ]
+      },
+      "HISTORY": {
+        "pages": [
+          10,
+          11,
+          12,
+          13
+        ],
+        "accent_drawing_counts": [
+          3,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "title_metrics": {
+      "Πώς σκέφτομαι": {
+        "font": "Inter-Medium",
+        "size_tex_pt": 9.499992303848266
+      },
+      "ΠΡΟΣΟΧΗ": {
+        "font": "Inter-Medium",
+        "size_tex_pt": 9.499992303848266
+      },
+      "Ιστορίες από τη Φυσική": {
+        "font": "Inter-Medium",
+        "size_tex_pt": 9.499992303848266
+      }
+    }
+  },
+  {
+    "profile": "PRINT",
+    "pdf": "qa/callouts/PRINT/callout-proof-print.pdf",
+    "sha256": "4ef9cc3301a30e97222bc2cf45638c8931365cbb24545359d1ac86507ec2e6cf",
+    "status": "passed",
+    "checks": {
+      "pages_are_13": true,
+      "THINK_36_markers_once_ordered": true,
+      "THINK_four_fragments": true,
+      "THINK_one_west_rule_each_fragment": true,
+      "THINK_icon_only_first_fragment": true,
+      "ATTENTION_36_markers_once_ordered": true,
+      "ATTENTION_four_fragments": true,
+      "ATTENTION_one_west_rule_each_fragment": true,
+      "ATTENTION_icon_only_first_fragment": true,
+      "HISTORY_36_markers_once_ordered": true,
+      "HISTORY_four_fragments": true,
+      "HISTORY_one_west_rule_each_fragment": true,
+      "HISTORY_icon_only_first_fragment": true,
+      "Πώς σκέφτομαι_font": true,
+      "ΠΡΟΣΟΧΗ_font": true,
+      "Ιστορίες από τη Φυσική_font": true
+    },
+    "fragments": {
+      "THINK": {
+        "pages": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "accent_drawing_counts": [
+          10,
+          1,
+          1,
+          1
+        ]
+      },
+      "ATTENTION": {
+        "pages": [
+          6,
+          7,
+          8,
+          9
+        ],
+        "accent_drawing_counts": [
+          3,
+          1,
+          1,
+          1
+        ]
+      },
+      "HISTORY": {
+        "pages": [
+          10,
+          11,
+          12,
+          13
+        ],
+        "accent_drawing_counts": [
+          3,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "title_metrics": {
+      "Πώς σκέφτομαι": {
+        "font": "Inter-Medium",
+        "size_tex_pt": 9.499992303848266
+      },
+      "ΠΡΟΣΟΧΗ": {
+        "font": "Inter-Medium",
+        "size_tex_pt": 9.499992303848266
+      },
+      "Ιστορίες από τη Φυσική": {
+        "font": "Inter-Medium",
+        "size_tex_pt": 9.499992303848266
+      }
+    }
+  }
+]

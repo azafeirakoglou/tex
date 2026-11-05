@@ -1,0 +1,26 @@
+[
+  {
+    "target": "screen",
+    "log": "source/build/screen/Physics_A_Screen.log",
+    "pdf": "source/build/screen/Physics_A_Screen.pdf",
+    "pages": 20,
+    "overfull": 0,
+    "underfull": 0,
+    "missing_characters": 0,
+    "warnings": [],
+    "sha256": "2849fa08a7d02e3d9b024e03bf669098505646d0e413b3c328631bf4c2427963",
+    "log_sha256": "2e9d2fa8494f7980d986e475b2cb2d4b8ba164c8ff8af86d516cb81f185fc11b"
+  },
+  {
+    "target": "print2",
+    "log": "source/build/print/Physics_A_Print_Technical.log",
+    "pdf": "source/build/print/Physics_A_Print_Technical.pdf",
+    "pages": 20,
+    "overfull": 0,
+    "underfull": 0,
+    "missing_characters": 0,
+    "warnings": [],
+    "sha256": "95fd0a5e626fb19a1aa52fc16b9cabb4d5bd4d329f38fcdf5985dd194a20e287",
+    "log_sha256": "18f89f0f37488b24acd4a222705253158bf40e5d0003e516ec38f273be46e0ab"
+  }
+]

@@ -1,0 +1,5 @@
+# Verification tools used by the QA/reproduction workflow.
+# XeLaTeX compilation uses the Python standard library only.
+Pillow==12.3.0
+pypdf==6.10.0
+PyMuPDF==1.26.6

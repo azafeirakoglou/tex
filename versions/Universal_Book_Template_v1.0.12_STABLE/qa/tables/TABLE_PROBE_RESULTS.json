@@ -1,0 +1,256 @@
+{
+  "status": "passed",
+  "profiles": [
+    {
+      "profile": "SCREEN",
+      "pdf": "qa/tables/SCREEN/table-caption-probe.pdf",
+      "sha256": "1d40df0f6d37bad87249d4167941235f0169bf0a530c16557473c8e979a082d2",
+      "pages": 6,
+      "checks": {
+        "all_120_data_rows_once_in_order": true,
+        "caption_numbers_and_references_resolve": true,
+        "native_170x240_page_geometry": true,
+        "no_raster_images_in_controlled_vector_fixture": true,
+        "longtable_spans_at_least_three_pages": true,
+        "every_data_page_repeats_its_header": true,
+        "caption_is_not_repeated_with_continuation_header": true,
+        "all_header_text_Inter_SemiBold_10_black": true,
+        "all_table_body_text_Inter_Regular_10_black": true,
+        "normal_body_font_and_black_restored_after_tables": true,
+        "figure_table_longtable_captions_share_correct_hanging_fonts_and_roles": true,
+        "headers_have_only_Black10_fill_and_point35_accent_top_rule": true,
+        "no_overfull_underfull_missing_or_warning": true
+      },
+      "measurements": {
+        "caption_blocks": [
+          {
+            "marker": "CAPTIONFIG",
+            "page": 1,
+            "lines": 4,
+            "label_font": "Inter-SemiBold",
+            "label_rgb_hex": "8493A9",
+            "description_rgb_hex": "000000",
+            "size_tex_pt": 9.5,
+            "hanging_x_bp": 101.867,
+            "continuation_x_bp": [
+              101.86700439453125,
+              101.86700439453125,
+              101.86700439453125
+            ],
+            "passed": true
+          },
+          {
+            "marker": "CAPTIONTABLE",
+            "page": 1,
+            "lines": 4,
+            "label_font": "Inter-SemiBold",
+            "label_rgb_hex": "8493A9",
+            "description_rgb_hex": "000000",
+            "size_tex_pt": 9.5,
+            "hanging_x_bp": 110.887,
+            "continuation_x_bp": [
+              110.88700103759766,
+              110.88700103759766,
+              110.88700103759766
+            ],
+            "passed": true
+          },
+          {
+            "marker": "CAPTIONLONG",
+            "page": 2,
+            "lines": 4,
+            "label_font": "Inter-SemiBold",
+            "label_rgb_hex": "8493A9",
+            "description_rgb_hex": "000000",
+            "size_tex_pt": 9.5,
+            "hanging_x_bp": 105.119,
+            "continuation_x_bp": [
+              105.11900329589844,
+              105.11900329589844,
+              105.11900329589844
+            ],
+            "passed": true
+          }
+        ],
+        "table_pages": [
+          {
+            "page": 1,
+            "header_y_bp": 329.00323486328125,
+            "neutral_gray_header": true,
+            "thin_accent_top_rules": 1
+          },
+          {
+            "page": 1,
+            "header_y_bp": 517.6762084960938,
+            "neutral_gray_header": true,
+            "thin_accent_top_rules": 1
+          },
+          {
+            "page": 2,
+            "header_y_bp": 130.62123107910156,
+            "neutral_gray_header": true,
+            "thin_accent_top_rules": 1
+          },
+          {
+            "page": 3,
+            "header_y_bp": 69.03523254394531,
+            "neutral_gray_header": true,
+            "thin_accent_top_rules": 1
+          },
+          {
+            "page": 4,
+            "header_y_bp": 69.03523254394531,
+            "neutral_gray_header": true,
+            "thin_accent_top_rules": 1
+          },
+          {
+            "page": 5,
+            "header_y_bp": 69.03523254394531,
+            "neutral_gray_header": true,
+            "thin_accent_top_rules": 1
+          }
+        ]
+      },
+      "status": "passed"
+    },
+    {
+      "profile": "PRINT",
+      "pdf": "qa/tables/PRINT/table-caption-probe.pdf",
+      "sha256": "3f8e5cf0fe450e0371a0382e9aad5b43418b73561c6d7df4ceffd8c8dd670c55",
+      "pages": 6,
+      "checks": {
+        "all_120_data_rows_once_in_order": true,
+        "caption_numbers_and_references_resolve": true,
+        "native_170x240_page_geometry": true,
+        "no_raster_images_in_controlled_vector_fixture": true,
+        "longtable_spans_at_least_three_pages": true,
+        "every_data_page_repeats_its_header": true,
+        "caption_is_not_repeated_with_continuation_header": true,
+        "all_header_text_Inter_SemiBold_10_black": true,
+        "all_table_body_text_Inter_Regular_10_black": true,
+        "normal_body_font_and_black_restored_after_tables": true,
+        "figure_table_longtable_captions_share_correct_hanging_fonts_and_roles": true,
+        "headers_have_only_Black10_fill_and_point35_accent_top_rule": true,
+        "no_overfull_underfull_missing_or_warning": true
+      },
+      "measurements": {
+        "caption_blocks": [
+          {
+            "marker": "CAPTIONFIG",
+            "page": 1,
+            "lines": 4,
+            "label_font": "Inter-SemiBold",
+            "label_rgb_hex": "F68D6F",
+            "description_rgb_hex": "000000",
+            "size_tex_pt": 9.5,
+            "hanging_x_bp": 101.867,
+            "continuation_x_bp": [
+              101.86700439453125,
+              101.86700439453125,
+              101.86700439453125
+            ],
+            "passed": true
+          },
+          {
+            "marker": "CAPTIONTABLE",
+            "page": 1,
+            "lines": 4,
+            "label_font": "Inter-SemiBold",
+            "label_rgb_hex": "F68D6F",
+            "description_rgb_hex": "000000",
+            "size_tex_pt": 9.5,
+            "hanging_x_bp": 110.887,
+            "continuation_x_bp": [
+              110.88700103759766,
+              110.88700103759766,
+              110.88700103759766
+            ],
+            "passed": true
+          },
+          {
+            "marker": "CAPTIONLONG",
+            "page": 2,
+            "lines": 4,
+            "label_font": "Inter-SemiBold",
+            "label_rgb_hex": "F68D6F",
+            "description_rgb_hex": "000000",
+            "size_tex_pt": 9.5,
+            "hanging_x_bp": 105.119,
+            "continuation_x_bp": [
+              105.11900329589844,
+              105.11900329589844,
+              105.11900329589844
+            ],
+            "passed": true
+          }
+        ],
+        "table_pages": [
+          {
+            "page": 1,
+            "header_y_bp": 329.00323486328125,
+            "neutral_gray_header": true,
+            "thin_accent_top_rules": 1
+          },
+          {
+            "page": 1,
+            "header_y_bp": 517.6762084960938,
+            "neutral_gray_header": true,
+            "thin_accent_top_rules": 1
+          },
+          {
+            "page": 2,
+            "header_y_bp": 130.62123107910156,
+            "neutral_gray_header": true,
+            "thin_accent_top_rules": 1
+          },
+          {
+            "page": 3,
+            "header_y_bp": 69.03523254394531,
+            "neutral_gray_header": true,
+            "thin_accent_top_rules": 1
+          },
+          {
+            "page": 4,
+            "header_y_bp": 69.03523254394531,
+            "neutral_gray_header": true,
+            "thin_accent_top_rules": 1
+          },
+          {
+            "page": 5,
+            "header_y_bp": 69.03523254394531,
+            "neutral_gray_header": true,
+            "thin_accent_top_rules": 1
+          }
+        ]
+      },
+      "status": "passed"
+    }
+  ],
+  "source_sha256": {
+    "config/book-config.tex": "489957d006a6fc1b144832d721ea42e1faebf1c2729adf81a12587ee28ac2a24",
+    "config/color-map.json": "e32acbb0d057c1a6ba5c92e7ab91e8c337cee3a2d0a111a3452908d78a8512f0",
+    "config/color-roles.tex": "a08e0eaea4f6524267352a61337606fe9e5f6954509d046fd85c8297e0499938",
+    "config/editorial-config.tex": "9afbcb0867d544c13c6c9be770505d9b24c35e701fccdf03426ba829d3302a40",
+    "config/editorial-design.tex": "01b7fd576dbe84677b799b9187937e4205fb9075c746b8731c2a0750ace0fddd",
+    "config/generated-assets.tex": "f383bed5faf6c3c188a598e0b42ad6883d8fb3c472332238191ab9339b9d821c",
+    "config/palette-print2-spot.tex": "9afef79c76758b6d9d6f11464d274c48e0307c8e297db108e47f65e0d21e1545",
+    "config/palette-screen.tex": "ad82193a2da26a0accc3f27ee55eca1d4c10bf2ef891986135d98426dc72de69",
+    "config/stable-callouts.tex": "e6416b1ce80ffbad4b0aa27de20798b6d58ffe4cfff42f22ea48dcc7a59acb21",
+    "config/stable-config.tex": "14f1c59de657355fd4dee86e4ebc24cc490deb669d97d24f8c864f4f602d8ad4",
+    "config/stable-tables.tex": "c5e847b5f458f90e66a6571abbe58ea746a8337a9364e6011877e63427d70f73",
+    "styles/book-assets.tex": "059a6ab43aa4391d34c219249ec442838656e01e21e9e7289af5acd4de481260",
+    "styles/book-callouts.tex": "213e1b399faaa9efb6dc8698603ccfb005034339d7f4b3ec3ff3b4fb5ce32714",
+    "styles/book-editorial-flow.tex": "a10a35d02a52a5cf72cf925a04cc495967fe563f4824cd1a233fd6ceffb4e5e1",
+    "styles/book-editorial-openings.tex": "d9ec4de456e2719e83ba69c8965b8eb9a02539a63ee4b3aab049ef8cd2b0c1a4",
+    "styles/book-figures.tex": "0c9065ebc93db4601a283f021462b73722d25c09ac0795d8b9103cbf28e503e6",
+    "styles/book-history-icon.tex": "e81624518f89081471dc21d096eff6e59b8d2bfedd302db9b060d1e356b21858",
+    "styles/book-longtables.tex": "0b3090a11c9e335a4ea3f61f63f4d6f92cfcd36f977cccbfa07aab337eebed2c",
+    "styles/book-stable-captions.tex": "ab019a114719174a1087039aa9c254fd4e08d002cf78b4fdb614bc5e2f105a59",
+    "styles/book-stable-examples.tex": "5b715e50756dc4a3254dc30135e8b10b6f6d9593704cafb41df06d8e3aee2c85",
+    "styles/book-stable-icons.tex": "76f769522fe34552f0d3f8a2f413e89cd4fd9a6855696a99fb937d1871402c1b",
+    "styles/book-stable-material.tex": "d51f5cfd6fd1e65c218e6543a01c28d8d85129f0e93c2af1b5b98735211dfc8c",
+    "styles/book-stable-tables.tex": "87122eda0e2fb23efce38ac31ea1b56a71d506bb405289a033f792b4df1c2c26",
+    "styles/book-toc.tex": "ca46c386677ade5c0fe4b765c91471402ddd439a7f3900f2a47e74f779f52c79",
+    "styles/universalbook.sty": "285db5c5563bbf3da1470492c4b1131ba83f25cd92d88ebe654bb96af85bd0db"
+  }
+}

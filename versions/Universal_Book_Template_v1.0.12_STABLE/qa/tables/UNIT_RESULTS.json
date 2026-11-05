@@ -1,0 +1,12 @@
+[
+  {
+    "pattern": "test_figures.py",
+    "exit_code": 0,
+    "log": "qa/tables/test_figures.py.unittest.log"
+  },
+  {
+    "pattern": "test_validate_pdf.py",
+    "exit_code": 0,
+    "log": "qa/tables/test_validate_pdf.py.unittest.log"
+  }
+]

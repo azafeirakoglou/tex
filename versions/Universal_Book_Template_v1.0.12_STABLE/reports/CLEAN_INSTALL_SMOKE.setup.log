@@ -1,0 +1,2 @@
+Verified bundled fonts, licenses and Greek hyphenation; local runtime ready.
+Next: python3 build_stable.py --jobs 2

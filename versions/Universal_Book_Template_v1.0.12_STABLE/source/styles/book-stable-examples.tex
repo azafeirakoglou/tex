@@ -1,0 +1,25 @@
+% v1.0.12: no dot in either title variant. Keep the old dot helper available
+% for compatibility, but never invoke it in the worked-example heading.
+\renewcommand{\BookExampleHeading}{\BookExampleLabel}
+\tcbset{
+  BookStableExampleHeader/.code={%
+    \ifdefstring{\BookExampleHeaderVariant}{A}{%
+      \pgfkeysalso{colbacktitle=BookExampleAccent,coltitle=white}%
+    }{%
+      \ifdefstring{\BookExampleHeaderVariant}{B}{%
+        \pgfkeysalso{colbacktitle=white,coltitle=BookExampleAccent}%
+      }{%
+        \PackageError{universalbook}{Unknown example header variant
+          '\BookExampleHeaderVariant'}{Choose A or B in config/stable-config.tex.}%
+      }%
+    }%
+  },
+  BookProblemRender/.append style={%
+    no borderline,
+    colback=BookProblemBackground,colframe=BookProblemBorder,coltext=BookInk,
+    boxrule=\BookExampleStableRuleWidth,titlerule=\BookExampleStableRuleWidth,
+    toptitle=\BookExampleStableTitlePad,bottomtitle=\BookExampleStableTitlePad,
+    lefttitle=3.5mm,righttitle=3.5mm,
+    BookStableExampleHeader
+  }
+}

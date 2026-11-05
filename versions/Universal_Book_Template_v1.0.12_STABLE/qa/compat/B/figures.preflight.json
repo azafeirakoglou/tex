@@ -1,0 +1,253 @@
+{
+  "status": "passed",
+  "certification": "Not PDF/X or press certification",
+  "print_file": "/workspace/template-v1.0.12-work/qa/work/B/source/build/figures-print2/Book_Figures_Print_Technical.pdf",
+  "screen_file": "/workspace/template-v1.0.12-work/qa/work/B/source/build/figures-screen/Book_Figures_Screen.pdf",
+  "errors": [],
+  "input_sha256": {
+    "print": "3630ccb34c0e0aac6d5dc7963fcdd296600ab0dd1b9fb34f8be5528b8c2219e6",
+    "screen": "e6f7376d995c478b29bdbea40602d33199ce9a161be8b6180e338eea8f9375d2",
+    "palette": "5d694d0ab080b8926f979ac484510b48657bd8f43cab6d1bcd1c3a5ce2175a11"
+  },
+  "print": {
+    "pages": 6,
+    "unembedded_fonts": [],
+    "rgb_images": [],
+    "page_boxes": [
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      }
+    ],
+    "output_intent_present": false
+  },
+  "screen": {
+    "pages": 6,
+    "unembedded_fonts": [],
+    "rgb_images": [],
+    "page_boxes": [
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      }
+    ],
+    "output_intent_present": false
+  },
+  "pair": {
+    "same_page_count": true,
+    "text_and_positions_match": true,
+    "geometry_matches": true
+  },
+  "rendered": {
+    "dpi": 72,
+    "antialiasing": false,
+    "plates": {
+      "Black": {
+        "marked_pixels": 40839,
+        "nonempty_pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "levels": {
+          "255": 1925721,
+          "0": 36493,
+          "115": 4346
+        }
+      },
+      "Yellow": {
+        "marked_pixels": 0,
+        "nonempty_pages": [],
+        "levels": {
+          "255": 1966560
+        }
+      },
+      "Magenta": {
+        "marked_pixels": 0,
+        "nonempty_pages": [],
+        "levels": {
+          "255": 1966560
+        }
+      },
+      "Cyan": {
+        "marked_pixels": 0,
+        "nonempty_pages": [],
+        "levels": {
+          "255": 1966560
+        }
+      },
+      "SecondInkRedProof": {
+        "marked_pixels": 14113,
+        "nonempty_pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "levels": {
+          "255": 1952447,
+          "0": 8439,
+          "115": 5674
+        }
+      }
+    },
+    "pairing_mismatched_pixels": 0,
+    "overlap_pixels": 0,
+    "pages": [
+      {
+        "page": 1,
+        "pairing_mismatched_pixels": 0,
+        "overlap_pixels": 0,
+        "bad_samples": []
+      },
+      {
+        "page": 2,
+        "pairing_mismatched_pixels": 0,
+        "overlap_pixels": 0,
+        "bad_samples": []
+      },
+      {
+        "page": 3,
+        "pairing_mismatched_pixels": 0,
+        "overlap_pixels": 0,
+        "bad_samples": []
+      },
+      {
+        "page": 4,
+        "pairing_mismatched_pixels": 0,
+        "overlap_pixels": 0,
+        "bad_samples": []
+      },
+      {
+        "page": 5,
+        "pairing_mismatched_pixels": 0,
+        "overlap_pixels": 0,
+        "bad_samples": []
+      },
+      {
+        "page": 6,
+        "pairing_mismatched_pixels": 0,
+        "overlap_pixels": 0,
+        "bad_samples": []
+      }
+    ],
+    "scope": "all pages; raster separations and paired RGB rendering"
+  }
+}

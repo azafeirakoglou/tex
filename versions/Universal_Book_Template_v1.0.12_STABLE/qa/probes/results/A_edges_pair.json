@@ -1,0 +1,1286 @@
+{
+  "status": "passed",
+  "certification": "Not PDF/X or press certification",
+  "print_file": "/workspace/template-v1.0.12-work/qa/probes/pdf/A_print_edges.pdf",
+  "screen_file": "/workspace/template-v1.0.12-work/qa/probes/pdf/A_screen_edges.pdf",
+  "errors": [],
+  "input_sha256": {
+    "print": "3465a8b0b42b3c1be28edc93a68633fd6e89f867ab218ba2ac24dcf747446e93",
+    "screen": "3632a33090e7965d99dcfa79aa553f8336cdf5942798c1d718c9d0594c98859e",
+    "palette": "5d694d0ab080b8926f979ac484510b48657bd8f43cab6d1bcd1c3a5ce2175a11"
+  },
+  "print": {
+    "pages": 43,
+    "unembedded_fonts": [],
+    "rgb_images": [],
+    "page_boxes": [
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      }
+    ],
+    "output_intent_present": false
+  },
+  "screen": {
+    "pages": 43,
+    "unembedded_fonts": [],
+    "rgb_images": [],
+    "page_boxes": [
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      },
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      }
+    ],
+    "output_intent_present": false
+  },
+  "pair": {
+    "same_page_count": true,
+    "text_and_positions_match": true,
+    "geometry_matches": true
+  },
+  "rendered": {
+    "dpi": 72,
+    "antialiasing": false,
+    "plates": {
+      "Black": {
+        "marked_pixels": 2589739,
+        "nonempty_pages": [
+          1,
+          3,
+          4,
+          5,
+          6,
+          7,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43
+        ],
+        "levels": {
+          "255": 11503941,
+          "0": 682224,
+          "115": 26460,
+          "230": 1881055
+        }
+      },
+      "Yellow": {
+        "marked_pixels": 0,
+        "nonempty_pages": [],
+        "levels": {
+          "255": 14093680
+        }
+      },
+      "Magenta": {
+        "marked_pixels": 0,
+        "nonempty_pages": [],
+        "levels": {
+          "255": 14093680
+        }
+      },
+      "Cyan": {
+        "marked_pixels": 0,
+        "nonempty_pages": [],
+        "levels": {
+          "255": 14093680
+        }
+      },
+      "SecondInkRedProof": {
+        "marked_pixels": 1250669,
+        "nonempty_pages": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43
+        ],
+        "levels": {
+          "255": 12187491,
+          "0": 63010,
+          "115": 15274,
+          "230": 1172385
+        }
+      }
+    },
+    "pairing_mismatched_pixels": 0,
+    "overlap_pixels": 0,
+    "pages": [
+      {
+        "page": 1,
+        "pairing_mismatched_pixels": 0,
+        "overlap_pixels": 0,
+        "bad_samples": []
+      },
+      {
+        "page": 2,
+        "pairing_mismatched_pixels": 0,
+        "overlap_pixels": 0,
+        "bad_samples": []
+      },
+      {
+        "page": 3,
+        "pairing_mismatched_pixels": 0,
+        "overlap_pixels": 0,
+        "bad_samples": []
+      },
+      {
+        "page": 4,
+        "pairing_mismatched_pixels": 0,
+        "overlap_pixels": 0,
+        "bad_samples": []
+      },
+      {
+        "page": 5,
+        "pairing_mismatched_pixels": 0,
+        "overlap_pixels": 0,
+        "bad_samples": []
+      },
+      {
+        "page": 6,
+        "pairing_mismatched_pixels": 0,
+        "overlap_pixels": 0,
+        "bad_samples": []
+      },
+      {
+        "page": 7,
+        "pairing_mismatched_pixels": 0,
+        "overlap_pixels": 0,
+        "bad_samples": []
+      },
+      {
+        "page": 8,
+        "pairing_mismatched_pixels": 0,
+        "overlap_pixels": 0,
+        "bad_samples": []
+      },
+      {
+        "page": 9,
+        "pairing_mismatched_pixels": 0,
+        "overlap_pixels": 0,
+        "bad_samples": []
+      },
+      {
+        "page": 10,
+        "pairing_mismatched_pixels": 0,
+        "overlap_pixels": 0,
+        "bad_samples": []
+      },
+      {
+        "page": 11,
+        "pairing_mismatched_pixels": 0,
+        "overlap_pixels": 0,
+        "bad_samples": []
+      },
+      {
+        "page": 12,
+        "pairing_mismatched_pixels": 0,
+        "overlap_pixels": 0,
+        "bad_samples": []
+      },
+      {
+        "page": 13,
+        "pairing_mismatched_pixels": 0,
+        "overlap_pixels": 0,
+        "bad_samples": []
+      },
+      {
+        "page": 14,
+        "pairing_mismatched_pixels": 0,
+        "overlap_pixels": 0,
+        "bad_samples": []
+      },
+      {
+        "page": 15,
+        "pairing_mismatched_pixels": 0,
+        "overlap_pixels": 0,
+        "bad_samples": []
+      },
+      {
+        "page": 16,
+        "pairing_mismatched_pixels": 0,
+        "overlap_pixels": 0,
+        "bad_samples": []
+      },
+      {
+        "page": 17,
+        "pairing_mismatched_pixels": 0,
+        "overlap_pixels": 0,
+        "bad_samples": []
+      },
+      {
+        "page": 18,
+        "pairing_mismatched_pixels": 0,
+        "overlap_pixels": 0,
+        "bad_samples": []
+      },
+      {
+        "page": 19,
+        "pairing_mismatched_pixels": 0,
+        "overlap_pixels": 0,
+        "bad_samples": []
+      },
+      {
+        "page": 20,
+        "pairing_mismatched_pixels": 0,
+        "overlap_pixels": 0,
+        "bad_samples": []
+      },
+      {
+        "page": 21,
+        "pairing_mismatched_pixels": 0,
+        "overlap_pixels": 0,
+        "bad_samples": []
+      },
+      {
+        "page": 22,
+        "pairing_mismatched_pixels": 0,
+        "overlap_pixels": 0,
+        "bad_samples": []
+      },
+      {
+        "page": 23,
+        "pairing_mismatched_pixels": 0,
+        "overlap_pixels": 0,
+        "bad_samples": []
+      },
+      {
+        "page": 24,
+        "pairing_mismatched_pixels": 0,
+        "overlap_pixels": 0,
+        "bad_samples": []
+      },
+      {
+        "page": 25,
+        "pairing_mismatched_pixels": 0,
+        "overlap_pixels": 0,
+        "bad_samples": []
+      },
+      {
+        "page": 26,
+        "pairing_mismatched_pixels": 0,
+        "overlap_pixels": 0,
+        "bad_samples": []
+      },
+      {
+        "page": 27,
+        "pairing_mismatched_pixels": 0,
+        "overlap_pixels": 0,
+        "bad_samples": []
+      },
+      {
+        "page": 28,
+        "pairing_mismatched_pixels": 0,
+        "overlap_pixels": 0,
+        "bad_samples": []
+      },
+      {
+        "page": 29,
+        "pairing_mismatched_pixels": 0,
+        "overlap_pixels": 0,
+        "bad_samples": []
+      },
+      {
+        "page": 30,
+        "pairing_mismatched_pixels": 0,
+        "overlap_pixels": 0,
+        "bad_samples": []
+      },
+      {
+        "page": 31,
+        "pairing_mismatched_pixels": 0,
+        "overlap_pixels": 0,
+        "bad_samples": []
+      },
+      {
+        "page": 32,
+        "pairing_mismatched_pixels": 0,
+        "overlap_pixels": 0,
+        "bad_samples": []
+      },
+      {
+        "page": 33,
+        "pairing_mismatched_pixels": 0,
+        "overlap_pixels": 0,
+        "bad_samples": []
+      },
+      {
+        "page": 34,
+        "pairing_mismatched_pixels": 0,
+        "overlap_pixels": 0,
+        "bad_samples": []
+      },
+      {
+        "page": 35,
+        "pairing_mismatched_pixels": 0,
+        "overlap_pixels": 0,
+        "bad_samples": []
+      },
+      {
+        "page": 36,
+        "pairing_mismatched_pixels": 0,
+        "overlap_pixels": 0,
+        "bad_samples": []
+      },
+      {
+        "page": 37,
+        "pairing_mismatched_pixels": 0,
+        "overlap_pixels": 0,
+        "bad_samples": []
+      },
+      {
+        "page": 38,
+        "pairing_mismatched_pixels": 0,
+        "overlap_pixels": 0,
+        "bad_samples": []
+      },
+      {
+        "page": 39,
+        "pairing_mismatched_pixels": 0,
+        "overlap_pixels": 0,
+        "bad_samples": []
+      },
+      {
+        "page": 40,
+        "pairing_mismatched_pixels": 0,
+        "overlap_pixels": 0,
+        "bad_samples": []
+      },
+      {
+        "page": 41,
+        "pairing_mismatched_pixels": 0,
+        "overlap_pixels": 0,
+        "bad_samples": []
+      },
+      {
+        "page": 42,
+        "pairing_mismatched_pixels": 0,
+        "overlap_pixels": 0,
+        "bad_samples": []
+      },
+      {
+        "page": 43,
+        "pairing_mismatched_pixels": 0,
+        "overlap_pixels": 0,
+        "bad_samples": []
+      }
+    ],
+    "scope": "all pages; raster separations and paired RGB rendering"
+  }
+}

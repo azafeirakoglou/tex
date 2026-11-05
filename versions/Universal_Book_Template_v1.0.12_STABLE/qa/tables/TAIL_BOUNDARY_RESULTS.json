@@ -1,0 +1,417 @@
+{
+  "status": "passed",
+  "source_file": "source/styles/book-longtables.tex",
+  "source_sha256": "0b3090a11c9e335a4ea3f61f63f4d6f92cfcd36f977cccbfa07aab337eebed2c",
+  "cases": [
+    {
+      "case": "striped-118",
+      "status": "passed",
+      "row_count": 118,
+      "plain": false,
+      "negative_control": false,
+      "all_rows_once_in_order": true,
+      "all_data_pages_repeat_header": true,
+      "pages": 6,
+      "data_pages": [
+        {
+          "page": 2,
+          "row_count": 27,
+          "header_count": 1
+        },
+        {
+          "page": 3,
+          "row_count": 31,
+          "header_count": 1
+        },
+        {
+          "page": 4,
+          "row_count": 31,
+          "header_count": 1
+        },
+        {
+          "page": 5,
+          "row_count": 29,
+          "header_count": 1
+        }
+      ],
+      "pdf_sha256": "b6ae380a08d076da46b8ecc9a35c7094ed6325386c7445b1d31acceaad088573",
+      "scope": "Synthetic row-count boundary sweep; no author content or dimensions modified."
+    },
+    {
+      "case": "striped-119",
+      "status": "passed",
+      "row_count": 119,
+      "plain": false,
+      "negative_control": false,
+      "all_rows_once_in_order": true,
+      "all_data_pages_repeat_header": true,
+      "pages": 6,
+      "data_pages": [
+        {
+          "page": 2,
+          "row_count": 27,
+          "header_count": 1
+        },
+        {
+          "page": 3,
+          "row_count": 31,
+          "header_count": 1
+        },
+        {
+          "page": 4,
+          "row_count": 31,
+          "header_count": 1
+        },
+        {
+          "page": 5,
+          "row_count": 30,
+          "header_count": 1
+        }
+      ],
+      "pdf_sha256": "43fec26564881278007e3d78a24635bd2445d0c740aa7101c447cd9f683f8e67",
+      "scope": "Synthetic row-count boundary sweep; no author content or dimensions modified."
+    },
+    {
+      "case": "striped-120",
+      "status": "passed",
+      "row_count": 120,
+      "plain": false,
+      "negative_control": false,
+      "all_rows_once_in_order": true,
+      "all_data_pages_repeat_header": true,
+      "pages": 6,
+      "data_pages": [
+        {
+          "page": 2,
+          "row_count": 27,
+          "header_count": 1
+        },
+        {
+          "page": 3,
+          "row_count": 31,
+          "header_count": 1
+        },
+        {
+          "page": 4,
+          "row_count": 31,
+          "header_count": 1
+        },
+        {
+          "page": 5,
+          "row_count": 31,
+          "header_count": 1
+        }
+      ],
+      "pdf_sha256": "e9abeb2e0942aa6b7936627a8c9ae0310d48f24e0c14764c3f61f6661366a23e",
+      "scope": "Synthetic row-count boundary sweep; no author content or dimensions modified."
+    },
+    {
+      "case": "striped-121",
+      "status": "passed",
+      "row_count": 121,
+      "plain": false,
+      "negative_control": false,
+      "all_rows_once_in_order": true,
+      "all_data_pages_repeat_header": true,
+      "pages": 6,
+      "data_pages": [
+        {
+          "page": 2,
+          "row_count": 27,
+          "header_count": 1
+        },
+        {
+          "page": 3,
+          "row_count": 31,
+          "header_count": 1
+        },
+        {
+          "page": 4,
+          "row_count": 31,
+          "header_count": 1
+        },
+        {
+          "page": 5,
+          "row_count": 31,
+          "header_count": 1
+        },
+        {
+          "page": 6,
+          "row_count": 1,
+          "header_count": 1
+        }
+      ],
+      "pdf_sha256": "0d845e2854d892bf70f888e9239ceb723609e52b585c4105844ce7d9d0959ad6",
+      "scope": "Synthetic row-count boundary sweep; no author content or dimensions modified."
+    },
+    {
+      "case": "striped-122",
+      "status": "passed",
+      "row_count": 122,
+      "plain": false,
+      "negative_control": false,
+      "all_rows_once_in_order": true,
+      "all_data_pages_repeat_header": true,
+      "pages": 6,
+      "data_pages": [
+        {
+          "page": 2,
+          "row_count": 27,
+          "header_count": 1
+        },
+        {
+          "page": 3,
+          "row_count": 31,
+          "header_count": 1
+        },
+        {
+          "page": 4,
+          "row_count": 31,
+          "header_count": 1
+        },
+        {
+          "page": 5,
+          "row_count": 31,
+          "header_count": 1
+        },
+        {
+          "page": 6,
+          "row_count": 2,
+          "header_count": 1
+        }
+      ],
+      "pdf_sha256": "32bf3a32bfc975e45bd0d62a34b08672a749ed32252c599ec75111edc613294f",
+      "scope": "Synthetic row-count boundary sweep; no author content or dimensions modified."
+    },
+    {
+      "case": "striped-149",
+      "status": "passed",
+      "row_count": 149,
+      "plain": false,
+      "negative_control": false,
+      "all_rows_once_in_order": true,
+      "all_data_pages_repeat_header": true,
+      "pages": 7,
+      "data_pages": [
+        {
+          "page": 2,
+          "row_count": 27,
+          "header_count": 1
+        },
+        {
+          "page": 3,
+          "row_count": 31,
+          "header_count": 1
+        },
+        {
+          "page": 4,
+          "row_count": 31,
+          "header_count": 1
+        },
+        {
+          "page": 5,
+          "row_count": 31,
+          "header_count": 1
+        },
+        {
+          "page": 6,
+          "row_count": 29,
+          "header_count": 1
+        }
+      ],
+      "pdf_sha256": "b8d3e724c846fde044e1873ff2a6bd759a5e6f37e2ead7d9f03caa49fe916c25",
+      "scope": "Synthetic row-count boundary sweep; no author content or dimensions modified."
+    },
+    {
+      "case": "striped-150",
+      "status": "passed",
+      "row_count": 150,
+      "plain": false,
+      "negative_control": false,
+      "all_rows_once_in_order": true,
+      "all_data_pages_repeat_header": true,
+      "pages": 7,
+      "data_pages": [
+        {
+          "page": 2,
+          "row_count": 27,
+          "header_count": 1
+        },
+        {
+          "page": 3,
+          "row_count": 31,
+          "header_count": 1
+        },
+        {
+          "page": 4,
+          "row_count": 31,
+          "header_count": 1
+        },
+        {
+          "page": 5,
+          "row_count": 31,
+          "header_count": 1
+        },
+        {
+          "page": 6,
+          "row_count": 30,
+          "header_count": 1
+        }
+      ],
+      "pdf_sha256": "e3b50c6fa3b3a0a2fb71fc6811774d52d81e5efd5cd481b0d31b70aef565817b",
+      "scope": "Synthetic row-count boundary sweep; no author content or dimensions modified."
+    },
+    {
+      "case": "striped-151",
+      "status": "passed",
+      "row_count": 151,
+      "plain": false,
+      "negative_control": false,
+      "all_rows_once_in_order": true,
+      "all_data_pages_repeat_header": true,
+      "pages": 7,
+      "data_pages": [
+        {
+          "page": 2,
+          "row_count": 27,
+          "header_count": 1
+        },
+        {
+          "page": 3,
+          "row_count": 31,
+          "header_count": 1
+        },
+        {
+          "page": 4,
+          "row_count": 31,
+          "header_count": 1
+        },
+        {
+          "page": 5,
+          "row_count": 31,
+          "header_count": 1
+        },
+        {
+          "page": 6,
+          "row_count": 31,
+          "header_count": 1
+        }
+      ],
+      "pdf_sha256": "6972926fecaae90a26b5238c21e3b6c333316fbabe35afedcfa573a9a3d4e733",
+      "scope": "Synthetic row-count boundary sweep; no author content or dimensions modified."
+    },
+    {
+      "case": "plain-120",
+      "status": "passed",
+      "row_count": 120,
+      "plain": true,
+      "negative_control": false,
+      "all_rows_once_in_order": true,
+      "all_data_pages_repeat_header": true,
+      "pages": 6,
+      "data_pages": [
+        {
+          "page": 2,
+          "row_count": 27,
+          "header_count": 1
+        },
+        {
+          "page": 3,
+          "row_count": 31,
+          "header_count": 1
+        },
+        {
+          "page": 4,
+          "row_count": 31,
+          "header_count": 1
+        },
+        {
+          "page": 5,
+          "row_count": 31,
+          "header_count": 1
+        }
+      ],
+      "pdf_sha256": "0ddffb3080e5a04295f4e330b1a162040d48330bb44366c2a723e2359adb17f9",
+      "scope": "Synthetic row-count boundary sweep; no author content or dimensions modified."
+    },
+    {
+      "case": "plain-121",
+      "status": "passed",
+      "row_count": 121,
+      "plain": true,
+      "negative_control": false,
+      "all_rows_once_in_order": true,
+      "all_data_pages_repeat_header": true,
+      "pages": 6,
+      "data_pages": [
+        {
+          "page": 2,
+          "row_count": 27,
+          "header_count": 1
+        },
+        {
+          "page": 3,
+          "row_count": 31,
+          "header_count": 1
+        },
+        {
+          "page": 4,
+          "row_count": 31,
+          "header_count": 1
+        },
+        {
+          "page": 5,
+          "row_count": 31,
+          "header_count": 1
+        },
+        {
+          "page": 6,
+          "row_count": 1,
+          "header_count": 1
+        }
+      ],
+      "pdf_sha256": "f472eac7d1d5fddfd9572e5bbef00b00a6d26bb627b8ccef608d9b89f59e22ca",
+      "scope": "Synthetic row-count boundary sweep; no author content or dimensions modified."
+    },
+    {
+      "case": "striped-120-negative-old-feet",
+      "status": "passed",
+      "row_count": 120,
+      "plain": false,
+      "negative_control": true,
+      "all_rows_once_in_order": true,
+      "all_data_pages_repeat_header": false,
+      "pages": 6,
+      "data_pages": [
+        {
+          "page": 2,
+          "row_count": 27,
+          "header_count": 1
+        },
+        {
+          "page": 3,
+          "row_count": 31,
+          "header_count": 1
+        },
+        {
+          "page": 4,
+          "row_count": 31,
+          "header_count": 1
+        },
+        {
+          "page": 5,
+          "row_count": 30,
+          "header_count": 1
+        },
+        {
+          "page": 6,
+          "row_count": 1,
+          "header_count": 0
+        }
+      ],
+      "pdf_sha256": "0e58f02dd07556cfbc68efd6150386ac3ce7dfe3d25026234f360c2b37ef60f4",
+      "scope": "Synthetic row-count boundary sweep; no author content or dimensions modified."
+    }
+  ],
+  "method": "Default page geometry/fonts; striped/plain boundaries plus mutation restoring the old empty foot blocks."
+}

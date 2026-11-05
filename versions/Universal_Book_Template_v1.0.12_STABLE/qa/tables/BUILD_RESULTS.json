@@ -1,0 +1,12 @@
+[
+  {
+    "profile": "SCREEN",
+    "status": "passed",
+    "pdf": "qa/tables/SCREEN/table-caption-probe.pdf"
+  },
+  {
+    "profile": "PRINT",
+    "status": "passed",
+    "pdf": "qa/tables/PRINT/table-caption-probe.pdf"
+  }
+]

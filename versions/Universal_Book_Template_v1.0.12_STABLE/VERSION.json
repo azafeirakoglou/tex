@@ -1,0 +1,32 @@
+{
+  "version": "1.0.12",
+  "status": "stable",
+  "base": "v1.0.11 B — MINIMAL",
+  "example_header_default": "A",
+  "example_header_optional": "B",
+  "page_mm": [
+    170,
+    240
+  ],
+  "margins_mm": {
+    "inner": 20,
+    "outer": 17,
+    "top": 19,
+    "bottom": 20
+  },
+  "math_font": "STIX Two Math",
+  "math_scale": 1.05,
+  "remote_operations_authorized": false,
+  "stable_requires": "All required technical and visual checks passed",
+  "palette_identity": {
+    "palette-print2-spot.tex": "identical",
+    "palette-screen.tex": "identical",
+    "color-roles.tex": "identical",
+    "all_ink_palette_semantic_roles_assets": "identical"
+  },
+  "name": "Universal_Book_Template_v1.0.12_STABLE",
+  "stable_date": "2026-11-06",
+  "qa_report": "QA_REPORT.md",
+  "technical_evidence": "qa/QA_SUMMARY.json",
+  "physical_print_or_pdfx_certified": false
+}

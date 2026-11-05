@@ -1,0 +1,162 @@
+\documentclass[11pt,twoside,openright]{book}
+\input{config/book-config.tex}
+\newif\ifBookTwoInkProof
+\ifdefined\ProbePrint\BookTwoInkProoftrue\else\BookTwoInkProoffalse\fi
+\newif\ifPrintThreeInk\PrintThreeInkfalse
+\usepackage{styles/universalbook}
+\pagestyle{plain}
+\begin{document}
+\chapter{TABLE PROBE}
+\begin{figure}[h]
+\centering\begin{tikzpicture}\draw[BookInk,line width=.5pt] (0,0)--(3,0);\end{tikzpicture}
+\caption{CAPTIONFIG This is a deliberately long caption which wraps over several lines so its black regular description can be measured separately from the coloured semibold prefix and number. It also tests hanging alignment with identical print and screen geometry.}
+\label{fig:probe}
+\end{figure}
+\begin{table}[h]
+\begin{BookStripedTable}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X>{\centering\arraybackslash}p{25mm}>{\centering\arraybackslash}p{33mm}@{}}
+\BookTableHeaderRow
+\BookTableHead{HEADERONE} & \BookTableHead{SYMBOL} & \BookTableHead{UNIT}\\
+BODYONE & $x$ & $\mathrm{m/s}$\\
+BODYTWO & $a$ & $\mathrm{m/s^2}$\\
+BODYTHREE & $t$ & $\mathrm{s}$\\
+\end{tabularx}
+\end{BookStripedTable}
+\caption{CAPTIONTABLE This deliberately long caption also wraps over several lines and uses the same type, size, number emphasis and hanging alignment as the preceding figure caption, without an accent tint in the descriptive text.}
+\label{tab:short}
+\end{table}
+AFTERSHORT Body text returns to the normal black role after a caption and table.
+\par\medskip
+\begin{BookPlainTable}
+\begin{tabularx}{\linewidth}{@{}X>{\centering\arraybackslash}p{33mm}@{}}
+\BookTableHeaderRow
+\BookTableHead{PLAINHEADER} & \BookTableHead{PLAINUNIT}\\
+PLAINA & $\mathrm{m}$\\
+PLAINB & $\mathrm{s}$\\
+\end{tabularx}
+\end{BookPlainTable}
+\clearpage
+\begin{BookLongTable}[CAPTIONLONG A long table caption deliberately wraps over several lines to verify that the first repeated header begins below the whole caption. All later headers repeat with their neutral background, thin accent top rule and stable fonts.\label{tab:long}]{@{}p{53mm}>{\centering\arraybackslash}p{28mm}>{\centering\arraybackslash}p{28mm}@{}}{\BookTableHead{LONGHEADER} & \BookTableHead{VARIABLE} & \BookTableHead{SIUNIT}}
+ROW001 & $x_{1}$ & $\mathrm{m/s}$ \\
+ROW002 & $x_{2}$ & $\mathrm{m/s}$ \\
+ROW003 & $x_{3}$ & $\mathrm{m/s}$ \\
+ROW004 & $x_{4}$ & $\mathrm{m/s}$ \\
+ROW005 & $x_{5}$ & $\mathrm{m/s}$ \\
+ROW006 & $x_{6}$ & $\mathrm{m/s}$ \\
+ROW007 & $x_{7}$ & $\mathrm{m/s}$ \\
+ROW008 & $x_{8}$ & $\mathrm{m/s}$ \\
+ROW009 & $x_{9}$ & $\mathrm{m/s}$ \\
+ROW010 & $x_{10}$ & $\mathrm{m/s}$ \\
+ROW011 & $x_{11}$ & $\mathrm{m/s}$ \\
+ROW012 & $x_{12}$ & $\mathrm{m/s}$ \\
+ROW013 & $x_{13}$ & $\mathrm{m/s}$ \\
+ROW014 & $x_{14}$ & $\mathrm{m/s}$ \\
+ROW015 & $x_{15}$ & $\mathrm{m/s}$ \\
+ROW016 & $x_{16}$ & $\mathrm{m/s}$ \\
+ROW017 & $x_{17}$ & $\mathrm{m/s}$ \\
+ROW018 & $x_{18}$ & $\mathrm{m/s}$ \\
+ROW019 & $x_{19}$ & $\mathrm{m/s}$ \\
+ROW020 & $x_{20}$ & $\mathrm{m/s}$ \\
+ROW021 & $x_{21}$ & $\mathrm{m/s}$ \\
+ROW022 & $x_{22}$ & $\mathrm{m/s}$ \\
+ROW023 & $x_{23}$ & $\mathrm{m/s}$ \\
+ROW024 & $x_{24}$ & $\mathrm{m/s}$ \\
+ROW025 & $x_{25}$ & $\mathrm{m/s}$ \\
+ROW026 & $x_{26}$ & $\mathrm{m/s}$ \\
+ROW027 & $x_{27}$ & $\mathrm{m/s}$ \\
+ROW028 & $x_{28}$ & $\mathrm{m/s}$ \\
+ROW029 & $x_{29}$ & $\mathrm{m/s}$ \\
+ROW030 & $x_{30}$ & $\mathrm{m/s}$ \\
+ROW031 & $x_{31}$ & $\mathrm{m/s}$ \\
+ROW032 & $x_{32}$ & $\mathrm{m/s}$ \\
+ROW033 & $x_{33}$ & $\mathrm{m/s}$ \\
+ROW034 & $x_{34}$ & $\mathrm{m/s}$ \\
+ROW035 & $x_{35}$ & $\mathrm{m/s}$ \\
+ROW036 & $x_{36}$ & $\mathrm{m/s}$ \\
+ROW037 & $x_{37}$ & $\mathrm{m/s}$ \\
+ROW038 & $x_{38}$ & $\mathrm{m/s}$ \\
+ROW039 & $x_{39}$ & $\mathrm{m/s}$ \\
+ROW040 & $x_{40}$ & $\mathrm{m/s}$ \\
+ROW041 & $x_{41}$ & $\mathrm{m/s}$ \\
+ROW042 & $x_{42}$ & $\mathrm{m/s}$ \\
+ROW043 & $x_{43}$ & $\mathrm{m/s}$ \\
+ROW044 & $x_{44}$ & $\mathrm{m/s}$ \\
+ROW045 & $x_{45}$ & $\mathrm{m/s}$ \\
+ROW046 & $x_{46}$ & $\mathrm{m/s}$ \\
+ROW047 & $x_{47}$ & $\mathrm{m/s}$ \\
+ROW048 & $x_{48}$ & $\mathrm{m/s}$ \\
+ROW049 & $x_{49}$ & $\mathrm{m/s}$ \\
+ROW050 & $x_{50}$ & $\mathrm{m/s}$ \\
+ROW051 & $x_{51}$ & $\mathrm{m/s}$ \\
+ROW052 & $x_{52}$ & $\mathrm{m/s}$ \\
+ROW053 & $x_{53}$ & $\mathrm{m/s}$ \\
+ROW054 & $x_{54}$ & $\mathrm{m/s}$ \\
+ROW055 & $x_{55}$ & $\mathrm{m/s}$ \\
+ROW056 & $x_{56}$ & $\mathrm{m/s}$ \\
+ROW057 & $x_{57}$ & $\mathrm{m/s}$ \\
+ROW058 & $x_{58}$ & $\mathrm{m/s}$ \\
+ROW059 & $x_{59}$ & $\mathrm{m/s}$ \\
+ROW060 & $x_{60}$ & $\mathrm{m/s}$ \\
+ROW061 & $x_{61}$ & $\mathrm{m/s}$ \\
+ROW062 & $x_{62}$ & $\mathrm{m/s}$ \\
+ROW063 & $x_{63}$ & $\mathrm{m/s}$ \\
+ROW064 & $x_{64}$ & $\mathrm{m/s}$ \\
+ROW065 & $x_{65}$ & $\mathrm{m/s}$ \\
+ROW066 & $x_{66}$ & $\mathrm{m/s}$ \\
+ROW067 & $x_{67}$ & $\mathrm{m/s}$ \\
+ROW068 & $x_{68}$ & $\mathrm{m/s}$ \\
+ROW069 & $x_{69}$ & $\mathrm{m/s}$ \\
+ROW070 & $x_{70}$ & $\mathrm{m/s}$ \\
+ROW071 & $x_{71}$ & $\mathrm{m/s}$ \\
+ROW072 & $x_{72}$ & $\mathrm{m/s}$ \\
+ROW073 & $x_{73}$ & $\mathrm{m/s}$ \\
+ROW074 & $x_{74}$ & $\mathrm{m/s}$ \\
+ROW075 & $x_{75}$ & $\mathrm{m/s}$ \\
+ROW076 & $x_{76}$ & $\mathrm{m/s}$ \\
+ROW077 & $x_{77}$ & $\mathrm{m/s}$ \\
+ROW078 & $x_{78}$ & $\mathrm{m/s}$ \\
+ROW079 & $x_{79}$ & $\mathrm{m/s}$ \\
+ROW080 & $x_{80}$ & $\mathrm{m/s}$ \\
+ROW081 & $x_{81}$ & $\mathrm{m/s}$ \\
+ROW082 & $x_{82}$ & $\mathrm{m/s}$ \\
+ROW083 & $x_{83}$ & $\mathrm{m/s}$ \\
+ROW084 & $x_{84}$ & $\mathrm{m/s}$ \\
+ROW085 & $x_{85}$ & $\mathrm{m/s}$ \\
+ROW086 & $x_{86}$ & $\mathrm{m/s}$ \\
+ROW087 & $x_{87}$ & $\mathrm{m/s}$ \\
+ROW088 & $x_{88}$ & $\mathrm{m/s}$ \\
+ROW089 & $x_{89}$ & $\mathrm{m/s}$ \\
+ROW090 & $x_{90}$ & $\mathrm{m/s}$ \\
+ROW091 & $x_{91}$ & $\mathrm{m/s}$ \\
+ROW092 & $x_{92}$ & $\mathrm{m/s}$ \\
+ROW093 & $x_{93}$ & $\mathrm{m/s}$ \\
+ROW094 & $x_{94}$ & $\mathrm{m/s}$ \\
+ROW095 & $x_{95}$ & $\mathrm{m/s}$ \\
+ROW096 & $x_{96}$ & $\mathrm{m/s}$ \\
+ROW097 & $x_{97}$ & $\mathrm{m/s}$ \\
+ROW098 & $x_{98}$ & $\mathrm{m/s}$ \\
+ROW099 & $x_{99}$ & $\mathrm{m/s}$ \\
+ROW100 & $x_{100}$ & $\mathrm{m/s}$ \\
+ROW101 & $x_{101}$ & $\mathrm{m/s}$ \\
+ROW102 & $x_{102}$ & $\mathrm{m/s}$ \\
+ROW103 & $x_{103}$ & $\mathrm{m/s}$ \\
+ROW104 & $x_{104}$ & $\mathrm{m/s}$ \\
+ROW105 & $x_{105}$ & $\mathrm{m/s}$ \\
+ROW106 & $x_{106}$ & $\mathrm{m/s}$ \\
+ROW107 & $x_{107}$ & $\mathrm{m/s}$ \\
+ROW108 & $x_{108}$ & $\mathrm{m/s}$ \\
+ROW109 & $x_{109}$ & $\mathrm{m/s}$ \\
+ROW110 & $x_{110}$ & $\mathrm{m/s}$ \\
+ROW111 & $x_{111}$ & $\mathrm{m/s}$ \\
+ROW112 & $x_{112}$ & $\mathrm{m/s}$ \\
+ROW113 & $x_{113}$ & $\mathrm{m/s}$ \\
+ROW114 & $x_{114}$ & $\mathrm{m/s}$ \\
+ROW115 & $x_{115}$ & $\mathrm{m/s}$ \\
+ROW116 & $x_{116}$ & $\mathrm{m/s}$ \\
+ROW117 & $x_{117}$ & $\mathrm{m/s}$ \\
+ROW118 & $x_{118}$ & $\mathrm{m/s}$ \\
+ROW119 & $x_{119}$ & $\mathrm{m/s}$ \\
+ROW120 & $x_{120}$ & $\mathrm{m/s}$ \\
+\end{BookLongTable}
+AFTERLONG Normal black body after the multipage table. Figure~\ref{fig:probe}, table~\ref{tab:short}, long table~\ref{tab:long}.
+\end{document}

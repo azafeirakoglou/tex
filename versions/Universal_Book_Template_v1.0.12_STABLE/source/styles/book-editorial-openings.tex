@@ -1,0 +1,216 @@
+% v1.0.11 review candidates: chapter openings and the first body-page title.
+% Public authoring signatures, counters, TOC entries and running marks are kept.
+% Geometry changes use only the existing colour roles; no palette is defined here.
+
+% MINIMAL retains the goals typography and list API, without the decorative rule.
+\ifBookEditorialMinimal
+  \renewtcolorbox{BookOpeningGoalsPanel}{%
+    enhanced,sharp corners,boxrule=0pt,frame hidden,colback=white,
+    top=1.1mm,bottom=1.1mm,left=0pt,right=1mm,
+    before skip=0pt,after skip=0pt
+  }
+\fi
+
+\newsavebox{\BookEditorialHeadingTextBox}
+\newlength{\BookEditorialOpeningTopGap}
+\newlength{\BookEditorialOpeningImageGap}
+\newlength{\BookEditorialOpeningGoalsGap}
+
+% The legacy helper keeps its two arguments for internal compatibility.
+% REFINED replaces the old 75--84 mm solid band with one 8 mm strip.
+% MINIMAL leaves the top of the sheet entirely white.
+\newcommand{\BookChapterBand}[2]{%
+  \ifBookEditorialMinimal\else
+    \par\nointerlineskip
+    \vbox to0pt{\hbox{\begin{tikzpicture}[remember picture,overlay]
+      \fill[BookPrimary] (current page.north west) rectangle
+        ([yshift=-\BookOpeningTopStripHeight]current page.north east);
+    \end{tikzpicture}}\vss}%
+    \nointerlineskip
+  \fi
+}
+
+% Measure the full, unabridged heading, then size its vertical accent to match.
+% The third argument preserves the two original title sizes/weights.
+\newcommand{\BookEditorialOpeningHeading}[3]{%
+  \setbox\BookEditorialHeadingTextBox=\vbox{%
+    \hsize=\dimexpr\linewidth-\BookOpeningTitleRuleWidth-\BookOpeningTitleInset\relax
+    \parindent=0pt\parskip=0pt
+    {\color{BookInk}\sffamily\bfseries\fontsize{9.5}{12}\selectfont
+      ΕΝΟΤΗΤΑ \thechapter\par}%
+    \vskip7mm
+    {\BookHeadingFont\color{BookPrimary}#3\RaggedRight #1\par}%
+    \vskip4mm
+    {\color{BookInk}\BookEditorialOpeningSubtitleFont\RaggedRight #2\par}%
+  }%
+  \setbox\BookChapterHeadingBox=\vbox{\hsize=\linewidth
+    \hbox{%
+      {\color{BookPrimary}\vrule width\BookOpeningTitleRuleWidth
+        height\ht\BookEditorialHeadingTextBox depth\dp\BookEditorialHeadingTextBox}%
+      \hskip\BookOpeningTitleInset\copy\BookEditorialHeadingTextBox}%
+  }%
+}
+
+% The title is queued after the opening, then emitted at the first real content
+% boundary. In particular, worksheet/assessment openings must finish their own
+% leading clearpage before calling BookEditorialMaybeFirstBodyTitle.
+\newif\ifBookEditorialBodyTitlePending
+\newif\ifBookEditorialOuterParagraph
+\newcommand{\BookEditorialPendingBodyTitle}{}
+\newcommand{\BookEditorialQueueFirstBodyTitle}[1]{%
+  \gdef\BookEditorialPendingBodyTitle{#1}%
+  \global\BookEditorialBodyTitlePendingtrue
+}
+\newcommand{\BookEditorialMaybeFirstBodyTitle}{%
+  \ifBookEditorialBodyTitlePending
+    \ifinner\else
+      \ifhmode
+        \ifBookEditorialOuterParagraph\BookEditorialEmitPendingBodyTitle\fi
+      \else
+        \BookEditorialEmitPendingBodyTitle
+      \fi
+    \fi
+  \fi
+}
+\newcommand{\BookEditorialEmitPendingBodyTitle}{%
+  % Consume globally before any paragraphs/boxes in the title are typeset.
+  \global\BookEditorialBodyTitlePendingfalse
+  \BookEditorialFirstBodyTitle{\BookEditorialPendingBodyTitle}%
+  % A first-content float must not overtake the chapter title at page top.
+  \suppressfloats[t]%
+}
+\newcommand{\BookEditorialFirstBodyTitle}[1]{%
+  \par\noindent
+  \vbox{\hsize=\linewidth\parindent=0pt\parskip=0pt
+    {\BookMediumLabelFont\color{BookPrimary}%
+      \fontsize{\BookBodyChapterLabelSize}{12}\selectfont
+      \BookBodyChapterLabel\space\thechapter\par}%
+    \vskip2.5mm
+    {\BookHeadingFont\bfseries\color{BookPrimary}%
+      \fontsize{\BookBodyChapterTitleSize}{\BookBodyChapterTitleLeading}\selectfont
+      \raggedright #1\par}%
+  }\par\nobreak\vskip6mm
+  \csname @afterheading\endcsname
+}
+
+% Install after the package has defined all public content environments. The
+% environment hooks run before their inner boxes are opened. The paragraph
+% fallback handles ordinary prose, but cannot fire in header/footer measurement,
+% minipages or other restricted inner modes. No shipout hook inserts content.
+\AtBeginDocument{%
+  \pretocmd{\BookMajorSection}{\BookEditorialMaybeFirstBodyTitle}{}{}%
+  \pretocmd{\BookTheorySection}{\BookEditorialMaybeFirstBodyTitle}{}{}%
+  \pretocmd{\BookMinorHeading}{\BookEditorialMaybeFirstBodyTitle}{}{}%
+  \pretocmd{\BookQuestionHeading}{\BookEditorialMaybeFirstBodyTitle}{}{}%
+  \pretocmd{\section}{\BookEditorialMaybeFirstBodyTitle}{}{}%
+  \pretocmd{\subsection}{\BookEditorialMaybeFirstBodyTitle}{}{}%
+  \pretocmd{\subsubsection}{\BookEditorialMaybeFirstBodyTitle}{}{}%
+  \pretocmd{\paragraph}{\BookEditorialMaybeFirstBodyTitle}{}{}%
+  \pretocmd{\subparagraph}{\BookEditorialMaybeFirstBodyTitle}{}{}%
+  \pretocmd{\chapter}{\global\BookEditorialBodyTitlePendingfalse}{}{}%
+  % Record the enclosing vertical mode before TeX starts the paragraph. Once
+  % it enters ordinary hmode, ifinner alone cannot distinguish a paragraph in
+  % a measured parbox from a paragraph on the main page.
+  \AddToHook{para/before}[book-editorial-first-body]{%
+    \ifinner\BookEditorialOuterParagraphfalse
+    \else\BookEditorialOuterParagraphtrue\fi}%
+  \AddToHook{para/begin}[book-editorial-first-body]{%
+    \ifBookEditorialBodyTitlePending
+      \ifBookEditorialOuterParagraph
+        \BookEditorialMaybeFirstBodyTitle\noindent
+      \fi
+    \fi}%
+  \forcsvlist{\BookEditorialHookFirstBodyEnvironment}{%
+    tcolorbox,AttentionBox,ThinkBox,HistoryBox,LearningGoals,ProblemBox,
+    MethodBox,KeyFormula,definitionbox,theorembox,workedexample,exercise,
+    booksolution,AssessmentQuestion,AssessmentSolution,
+    BookStripedTable,BookPlainTable,BookColorTable,tabular,tabular*,longtable,
+    figure,figure*,table,table*,itemize,enumerate,description,greeklist,
+    equation,equation*,align,align*,gather,gather*,multline,multline*,
+    displaymath,minipage,multicols}%
+}
+\newcommand{\BookEditorialHookFirstBodyEnvironment}[1]{%
+  \AddToHook{env/#1/before}[book-editorial-first-body]{%
+    \BookEditorialMaybeFirstBodyTitle}%
+}
+
+% Shared chapter bookkeeping is identical to v1.0.10, including short headers.
+\newcommand{\BookEditorialStartChapter}[2]{%
+  \global\BookEditorialBodyTitlePendingfalse
+  \cleardoublepage
+  \refstepcounter{chapter}\setcounter{section}{0}\setcounter{subsection}{0}%
+  \gdef\BookTOCActiveCollection{}%
+  \ifstrempty{#1}{\BookRememberRunningChapter{#2}}{\BookRememberRunningChapter{#1}}%
+  \addcontentsline{toc}{chapter}{\protect\numberline{\thechapter}#2}%
+  \markboth{#2}{#2}\thispagestyle{empty}%
+  \ifBookEditorialMinimal
+    \setlength{\BookEditorialOpeningTopGap}{12mm}%
+    \setlength{\BookEditorialOpeningImageGap}{13mm}%
+    \setlength{\BookEditorialOpeningGoalsGap}{10mm}%
+  \else
+    \setlength{\BookEditorialOpeningTopGap}{9mm}%
+    \setlength{\BookEditorialOpeningImageGap}{10mm}%
+    \setlength{\BookEditorialOpeningGoalsGap}{8mm}%
+  \fi
+}
+
+% [short running title], full title, subtitle, all learning-goal items.
+\NewDocumentCommand{\BookChapter}{O{} m m +m}{%
+  \BookEditorialStartChapter{#1}{#2}%
+  \def\BookEditorialOpeningSubtitleFont{\fontsize{10}{14}\selectfont}%
+  \BookEditorialOpeningHeading{#2}{#3}{\bfseries\fontsize{24}{29}\selectfont}%
+  \setbox\BookChapterGoalsBox=\vbox{\hsize=\linewidth\BookOpeningGoals[6pt]{#4}}%
+  \BookChapterBand{15mm}{84mm}%
+  \setlength{\BookChapterGap}{\dimexpr\textheight-\BookEditorialOpeningTopGap
+    -\ht\BookChapterHeadingBox-\dp\BookChapterHeadingBox
+    -\ht\BookChapterGoalsBox-\dp\BookChapterGoalsBox-12mm\relax}%
+  \ifBookEditorialMinimal
+    \ifdim\BookChapterGap>44mm\setlength{\BookChapterGap}{44mm}\fi
+  \else
+    \ifdim\BookChapterGap>38mm\setlength{\BookChapterGap}{38mm}\fi
+  \fi
+  \ifdim\BookChapterGap<9mm
+    \PackageError{universalbook}{Chapter title/goals exceed the opening page}%
+      {Shorten the full title or the learning goals.}%
+    \setlength{\BookChapterGap}{9mm}%
+  \fi
+  \setbox\BookChapterPageBox=\vbox{\hsize=\linewidth\offinterlineskip
+    \kern\BookEditorialOpeningTopGap\copy\BookChapterHeadingBox
+    \kern\BookChapterGap\copy\BookChapterGoalsBox}%
+  \noindent\usebox{\BookChapterPageBox}\par\vfill\clearpage
+  \BookEditorialQueueFirstBodyTitle{#2}%
+}
+
+% [short running title], full title, subtitle, existing asset, credit, goals.
+% Heading and goals are measured first: long titles reduce the artwork height,
+% retaining the original asset's aspect ratio and the configurable 60 mm maximum.
+\NewDocumentCommand{\BookChapterPhoto}{O{} m m m m +m}{%
+  \BookEditorialStartChapter{#1}{#2}%
+  \def\BookEditorialOpeningSubtitleFont{\fontsize{9.7}{13}\selectfont}%
+  \BookEditorialOpeningHeading{#2}{#3}{\mdseries\fontsize{23}{28}\selectfont}%
+  \setbox\BookChapterGoalsBox=\vbox{\hsize=\linewidth\BookOpeningGoals{#6}}%
+  \setbox\BookChapterCreditBox=\vbox{\hsize=\linewidth\parskip=0pt
+    {\raggedleft\sffamily\mdseries\upshape\fontsize{\BookImageCreditSize}{\BookImageCreditLeading}\selectfont\color{\BookImageCreditColor} #5\par}}%
+  \setlength{\BookChapterImageMaxHeight}{\dimexpr\textheight
+    -\BookEditorialOpeningTopGap-\ht\BookChapterHeadingBox-\dp\BookChapterHeadingBox
+    -\BookEditorialOpeningImageGap-\BookImageCreditGap-\ht\BookChapterCreditBox-\dp\BookChapterCreditBox
+    -\BookEditorialOpeningGoalsGap-\ht\BookChapterGoalsBox-\dp\BookChapterGoalsBox-12mm\relax}%
+  \ifdim\BookChapterImageMaxHeight>\BookChapterPhotoHeight\relax
+    \setlength{\BookChapterImageMaxHeight}{\BookChapterPhotoHeight}%
+  \fi
+  \ifdim\BookChapterImageMaxHeight<25mm
+    \PackageError{universalbook}{Chapter title/goals leave no room for artwork}%
+      {Shorten the full title/goals or use BookChapter without artwork.}%
+    \setlength{\BookChapterImageMaxHeight}{25mm}%
+  \fi
+  \BookChapterBand{13mm}{75mm}%
+  \setbox\BookChapterPageBox=\vbox{\hsize=\linewidth\offinterlineskip
+    \kern\BookEditorialOpeningTopGap\copy\BookChapterHeadingBox
+    \kern\BookEditorialOpeningImageGap
+    \hbox to\linewidth{\hfil
+      \BookUseAsset[width=\linewidth,height=\BookChapterImageMaxHeight,keepaspectratio]{#4}\hfil}%
+    \kern\BookImageCreditGap\copy\BookChapterCreditBox
+    \kern\BookEditorialOpeningGoalsGap\copy\BookChapterGoalsBox}%
+  \noindent\usebox{\BookChapterPageBox}\par\vfill\clearpage
+  \BookEditorialQueueFirstBodyTitle{#2}%
+}

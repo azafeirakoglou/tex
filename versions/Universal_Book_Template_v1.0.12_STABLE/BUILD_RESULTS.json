@@ -1,0 +1,16 @@
+[
+  {
+    "target": "screen",
+    "exit_code": 0,
+    "log": "logs/screen.log",
+    "pdf": "pdf/Universal_Book_Template_v1.0.12_SCREEN.pdf",
+    "sha256": "2849fa08a7d02e3d9b024e03bf669098505646d0e413b3c328631bf4c2427963"
+  },
+  {
+    "target": "print2",
+    "exit_code": 0,
+    "log": "logs/print2.log",
+    "pdf": "pdf/Universal_Book_Template_v1.0.12_PRINT.pdf",
+    "sha256": "95fd0a5e626fb19a1aa52fc16b9cabb4d5bd4d329f38fcdf5985dd194a20e287"
+  }
+]

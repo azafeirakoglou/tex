@@ -1,0 +1,115 @@
+% Κοινή κατασκευή AttentionBox / ThinkBox / HistoryBox.
+% Οι δηλώσεις στο τέλος αλλάζουν φόντο, εικονίδιο και ετικέτα.
+% Ο κοινός BookCalloutAccent χρωματίζει τίτλους, εικονίδια και διακόσμηση.
+% Και τα τρία χρησιμοποιούν μόνο λεπτή αριστερή γραμμή. Το ThinkBox δεν
+% έχει γέμισμα, το AttentionBox έχει το ίδιο αχνό δεύτερο μελάνι, ενώ το
+% HistoryBox διατηρεί το ήπιο γκρι φόντο χωρίς περιμετρικό πλαίσιο.
+% Γεωμετρία, τίτλος, διακόσμηση και συμπεριφορά
+% αλλαγής σελίδας υλοποιούνται μία φορά για όλα τα κουτιά.
+% Προαπαιτούμενα: BookCallout, BookCalloutCenteredIcon, BookMediumLabelFont
+% και οι τρεις σχεδιαστικές εντολές εικονιδίων του universalbook.sty.
+
+\providecommand{\BookCalloutLabelSize}{9.5}
+\providecommand{\BookCalloutLabelLeading}{12}
+
+% Ο τίτλος είναι σώμα του κουτιού (όχι δεύτερο ανεξάρτητο title box).
+% Το προαιρετικό θέμα διατηρεί τη σύνταξη HistoryBox[Θέμα].
+\newcommand{\BookCalloutHeading}[3]{%
+  \noindent{\BookMediumLabelFont
+    \fontsize{\BookCalloutLabelSize}{\BookCalloutLabelLeading}\selectfont
+    \color{#1}#2\ifstrempty{#3}{}{ — #3}}\par\smallskip\small
+}
+
+% Πέντε παράμετροι: φόντο / έμφαση / εικονίδιο / τίτλος / θέμα.
+% Το ίδιο overlay χρησιμοποιείται σε ενιαίο και πρώτο σπασμένο τμήμα.
+% Τα επόμενα τμήματα κρατούν τη γεωμετρία χωρίς να επαναλαμβάνουν icon.
+% Οι αποστάσεις μένουν στο κοινό θεμέλιο, ώστε οι τεκμηριωμένες τοπικές
+% αποστάσεις workedexample να μπορούν να εφαρμοστούν χωρίς δεύτερη ρύθμιση.
+\tcbset{BookCallout/.append style={%
+  before skip=\BookStableCalloutBeforeSkip,after skip=\BookStableCalloutAfterSkip}}
+\tcbset{BookCalloutRender/.style n args={5}{%
+  BookCallout,
+  colback=#1,
+  no borderline,
+  top=\BookStableCalloutVerticalPadding,bottom=\BookStableCalloutVerticalPadding,
+  before upper={\BookCalloutHeading{#2}{#4}{#5}},
+  overlay unbroken={\BookCalloutCenteredIcon{#3}},
+  overlay first={\BookCalloutCenteredIcon{#3}}
+}}
+
+% Παλιά συμβατή βοηθητική εντολή, αν τη χρησιμοποιεί υπάρχον κεφάλαιο.
+% Δεν αποτελεί την ενεργή διακόσμηση ThinkBox στη v1.0.12.
+% Δύο διανυσματικές αγκύλες περιέχουν και τη ζώνη εικονιδίου και το κείμενο.
+% Παράμετροι: χρώμα / επάνω εσοχή / κάτω εσοχή. Μηδενική εσοχή σημαίνει
+% ανοιχτή συνέχεια στην αλλαγή σελίδας, χωρίς οριζόντιο άκρο αγκύλης.
+\newcommand{\BookCalloutBrackets}[3]{%
+  \coordinate (BookBracketNW) at
+    ([xshift=\BookThinkBracketInset,yshift=-#2]frame.north west);
+  \coordinate (BookBracketNE) at
+    ([xshift=-\BookThinkBracketInset,yshift=-#2]frame.north east);
+  \coordinate (BookBracketSW) at
+    ([xshift=\BookThinkBracketInset,yshift=#3]frame.south west);
+  \coordinate (BookBracketSE) at
+    ([xshift=-\BookThinkBracketInset,yshift=#3]frame.south east);
+  \coordinate (BookBracketLeftTopTip) at (BookBracketNW);
+  \coordinate (BookBracketRightTopTip) at (BookBracketNE);
+  \coordinate (BookBracketLeftBottomTip) at (BookBracketSW);
+  \coordinate (BookBracketRightBottomTip) at (BookBracketSE);
+  \ifdim#2>0pt\relax
+    \coordinate (BookBracketLeftTopTip) at
+      ([xshift=\BookThinkBracketArmLength]BookBracketNW);
+    \coordinate (BookBracketRightTopTip) at
+      ([xshift=-\BookThinkBracketArmLength]BookBracketNE);
+  \fi
+  \ifdim#3>0pt\relax
+    \coordinate (BookBracketLeftBottomTip) at
+      ([xshift=\BookThinkBracketArmLength]BookBracketSW);
+    \coordinate (BookBracketRightBottomTip) at
+      ([xshift=-\BookThinkBracketArmLength]BookBracketSE);
+  \fi
+  \draw[draw=#1,line width=\BookThinkBracketRuleWidth,line cap=butt,line join=miter]
+    (BookBracketLeftTopTip)--(BookBracketNW)--(BookBracketSW)--(BookBracketLeftBottomTip);
+  \draw[draw=#1,line width=\BookThinkBracketRuleWidth,line cap=butt,line join=miter]
+    (BookBracketRightTopTip)--(BookBracketNE)--(BookBracketSE)--(BookBracketRightBottomTip);
+}
+
+% Η διακόσμηση επιλέγεται μετά τον κοινό renderer. Το interior hidden αφήνει
+% να φαίνεται το πραγματικό χαρτί, ακόμη και σε μη λευκό φόντο σελίδας.
+% Τα overlays του renderer κρατούν το εικονίδιο μόνο στο πρώτο τμήμα.
+\tcbset{
+  % Η μετατόπιση ορίζεται στο τοπικό scope του περιβάλλοντος, ώστε να
+  % είναι διαθέσιμη και στα overlays μετά τη στοιχειοθεσία του κειμένου.
+  BookCalloutIconOffset/.code={\def\BookCalloutIconOffset{#1}},
+  BookCalloutIconTopPadding/.code={\def\BookCalloutIconTopPadding{#1}},
+  BookCalloutDecoration/AttentionBox/.style={%
+    no borderline,
+    borderline west={\BookAttentionRuleWidth}{0pt}{BookCalloutAccent},
+    BookCalloutIconTopPadding={\dimexpr\BookStableCalloutVerticalPadding+1mm\relax}
+  },
+  BookCalloutDecoration/HistoryBox/.style={%
+    no borderline,
+    borderline west={\BookStableCalloutRuleWidth}{0pt}{BookCalloutAccent},
+    BookCalloutIconTopPadding={\dimexpr\BookStableCalloutVerticalPadding+1mm\relax}
+  },
+  BookCalloutDecoration/ThinkBox/.style={%
+    no borderline,interior hidden,
+    borderline west={\BookStableCalloutRuleWidth}{0pt}{BookCalloutAccent},
+    top=\BookStableThinkVerticalPadding,bottom=\BookStableThinkVerticalPadding,
+    left=\BookThinkLeftPadding,right=\BookThinkRightPadding,
+    BookCalloutIconOffset=\BookThinkIconOffset,
+    BookCalloutIconTopPadding={\dimexpr\BookStableThinkVerticalPadding+1mm\relax}
+  }
+}
+
+% Λεπτά περιβλήματα με την παλιά ακριβώς δημόσια σύνταξη.
+% Η μόνη διαφορά του δεύτερου είναι το προαιρετικό θέμα.
+\newcommand{\BookDeclareCallout}[5]{%
+  \newtcolorbox{#1}{BookCalloutRender={#2}{#3}{#4}{#5}{},BookCalloutDecoration/#1}%
+}
+\newcommand{\BookDeclareTitledCallout}[5]{%
+  \newtcolorbox{#1}[1][]{BookCalloutRender={#2}{#3}{#4}{#5}{##1},BookCalloutDecoration/#1}%
+}
+
+\BookDeclareCallout{AttentionBox}{BookAlertBackground}{BookCalloutAccent}{\BookCalloutWarning}{\LabelAlert}
+\BookDeclareCallout{ThinkBox}{white}{BookCalloutAccent}{\BookCalloutBulb}{\LabelThink}
+\BookDeclareTitledCallout{HistoryBox}{BookHistorySoft}{BookCalloutAccent}{\BookCalloutHourglass}{\LabelHistory}

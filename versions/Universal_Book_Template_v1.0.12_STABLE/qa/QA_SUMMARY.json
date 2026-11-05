@@ -1,0 +1,119 @@
+{
+  "status": "passed",
+  "created_utc": "2026-11-05T23:31:40.213460+00:00",
+  "checks": {
+    "approved_palette_and_all_existing_roles_unchanged": true,
+    "canonical_66_tests_passed_without_skips": true,
+    "all_40_author_compatibility_builds_passed": true,
+    "all_20_author_compatibility_pairs_passed": true,
+    "both_150_row_stress_structure_checks_passed": true,
+    "all_8_editorial_measurements_passed_with_clean_logs": true,
+    "all_8_editorial_measurements_match_current_pdf_hashes": true,
+    "all_4_editorial_pairs_passed": true,
+    "all_4_example_proofs_built_without_bad_boxes_or_missing_characters": true,
+    "three_consecutive_and_large_examples_A_B_measurements_passed": true,
+    "all_4_example_measurements_match_current_pdf_hashes": true,
+    "both_example_pair_preflights_passed": true,
+    "all_29_pair_preflights_match_current_pdf_hashes": true,
+    "all_42_build_logs_have_no_overfull_underfull_or_missing_characters": true,
+    "both_main_books_are_20_pages_with_no_warnings": true,
+    "both_isolated_variants_match_final_canonical_style_and_config": true,
+    "callout_geometry_content_font_and_ink_proofs_passed": true,
+    "callout_measurements_match_current_pdfs": true,
+    "reviewed_callout_renders_match_rebuilt_final_proofs": true,
+    "longtable_final_row_header_bug_closed_and_boundary_regression_passed": true,
+    "longtable_proof_matches_current_implementation": true,
+    "long_material_titles_visually_verified_after_spacing_fix": true,
+    "all_main_and_example_pages_visually_reviewed": true,
+    "visual_review_matches_current_main_and_example_pdf_hashes": true
+  },
+  "version": "1.0.12",
+  "base": "v1.0.11 B — MINIMAL",
+  "example_header_default": "A",
+  "example_header_optional": "B",
+  "unit_test_count": 66,
+  "compatibility_builds": 40,
+  "paired_preflights": 29,
+  "canonical_source_config_style_sha256": {
+    "config/book-config.tex": "489957d006a6fc1b144832d721ea42e1faebf1c2729adf81a12587ee28ac2a24",
+    "config/color-map.json": "e32acbb0d057c1a6ba5c92e7ab91e8c337cee3a2d0a111a3452908d78a8512f0",
+    "config/color-roles.tex": "a08e0eaea4f6524267352a61337606fe9e5f6954509d046fd85c8297e0499938",
+    "config/editorial-config.tex": "9afbcb0867d544c13c6c9be770505d9b24c35e701fccdf03426ba829d3302a40",
+    "config/editorial-design.tex": "01b7fd576dbe84677b799b9187937e4205fb9075c746b8731c2a0750ace0fddd",
+    "config/generated-assets.tex": "f383bed5faf6c3c188a598e0b42ad6883d8fb3c472332238191ab9339b9d821c",
+    "config/palette-print2-spot.tex": "9afef79c76758b6d9d6f11464d274c48e0307c8e297db108e47f65e0d21e1545",
+    "config/palette-screen.tex": "ad82193a2da26a0accc3f27ee55eca1d4c10bf2ef891986135d98426dc72de69",
+    "config/stable-callouts.tex": "e6416b1ce80ffbad4b0aa27de20798b6d58ffe4cfff42f22ea48dcc7a59acb21",
+    "config/stable-config.tex": "14f1c59de657355fd4dee86e4ebc24cc490deb669d97d24f8c864f4f602d8ad4",
+    "config/stable-tables.tex": "c5e847b5f458f90e66a6571abbe58ea746a8337a9364e6011877e63427d70f73",
+    "styles/book-assets.tex": "059a6ab43aa4391d34c219249ec442838656e01e21e9e7289af5acd4de481260",
+    "styles/book-callouts.tex": "213e1b399faaa9efb6dc8698603ccfb005034339d7f4b3ec3ff3b4fb5ce32714",
+    "styles/book-editorial-flow.tex": "a10a35d02a52a5cf72cf925a04cc495967fe563f4824cd1a233fd6ceffb4e5e1",
+    "styles/book-editorial-openings.tex": "d9ec4de456e2719e83ba69c8965b8eb9a02539a63ee4b3aab049ef8cd2b0c1a4",
+    "styles/book-figures.tex": "0c9065ebc93db4601a283f021462b73722d25c09ac0795d8b9103cbf28e503e6",
+    "styles/book-history-icon.tex": "e81624518f89081471dc21d096eff6e59b8d2bfedd302db9b060d1e356b21858",
+    "styles/book-longtables.tex": "0b3090a11c9e335a4ea3f61f63f4d6f92cfcd36f977cccbfa07aab337eebed2c",
+    "styles/book-stable-captions.tex": "ab019a114719174a1087039aa9c254fd4e08d002cf78b4fdb614bc5e2f105a59",
+    "styles/book-stable-examples.tex": "5b715e50756dc4a3254dc30135e8b10b6f6d9593704cafb41df06d8e3aee2c85",
+    "styles/book-stable-icons.tex": "76f769522fe34552f0d3f8a2f413e89cd4fd9a6855696a99fb937d1871402c1b",
+    "styles/book-stable-material.tex": "544f4fb7354ce159a8c651aca3e637d1438f47f00d4ee9048b8f74f42ce456a9",
+    "styles/book-stable-tables.tex": "87122eda0e2fb23efce38ac31ea1b56a71d506bb405289a033f792b4df1c2c26",
+    "styles/book-toc.tex": "ca46c386677ade5c0fe4b765c91471402ddd439a7f3900f2a47e74f779f52c79",
+    "styles/universalbook.sty": "285db5c5563bbf3da1470492c4b1131ba83f25cd92d88ebe654bb96af85bd0db"
+  },
+  "snapshot_differences_after_expected_variant_flag": {
+    "A": [],
+    "B": []
+  },
+  "main_diagnostics": [
+    {
+      "target": "screen",
+      "log": "source/build/screen/Physics_A_Screen.log",
+      "pdf": "source/build/screen/Physics_A_Screen.pdf",
+      "pages": 20,
+      "overfull": 0,
+      "underfull": 0,
+      "missing_characters": 0,
+      "warnings": [],
+      "sha256": "2849fa08a7d02e3d9b024e03bf669098505646d0e413b3c328631bf4c2427963",
+      "log_sha256": "2e9d2fa8494f7980d986e475b2cb2d4b8ba164c8ff8af86d516cb81f185fc11b"
+    },
+    {
+      "target": "print2",
+      "log": "source/build/print/Physics_A_Print_Technical.log",
+      "pdf": "source/build/print/Physics_A_Print_Technical.pdf",
+      "pages": 20,
+      "overfull": 0,
+      "underfull": 0,
+      "missing_characters": 0,
+      "warnings": [],
+      "sha256": "95fd0a5e626fb19a1aa52fc16b9cabb4d5bd4d329f38fcdf5985dd194a20e287",
+      "log_sha256": "18f89f0f37488b24acd4a222705253158bf40e5d0003e516ec38f273be46e0ab"
+    }
+  ],
+  "secondary_diagnostic_totals": {
+    "A": {
+      "overfull": 0,
+      "underfull": 0,
+      "missing_characters": 0
+    },
+    "B": {
+      "overfull": 0,
+      "underfull": 0,
+      "missing_characters": 0
+    }
+  },
+  "probe_pages": {
+    "A_screen_metrics": 3,
+    "A_screen_edges": 43,
+    "A_print_metrics": 3,
+    "A_print_edges": 43,
+    "B_screen_metrics": 3,
+    "B_screen_edges": 43,
+    "B_print_metrics": 3,
+    "B_print_edges": 43
+  },
+  "disclosed_notices": "Fixtures without figures/tables retain unused-caption notices; non-floating guide examples retain hypcap notices. These are preserved in full per-target log audits. No bad boxes or missing glyphs are accepted.",
+  "printing_scope": "170 × 240 mm XeLaTeX MediaBox; same approved inks/tints. No physical print or PDF/X certification claimed.",
+  "scope": "Technical and recorded rendered visual acceptance of a local template; no remote publication or stable promotion is performed by this script."
+}

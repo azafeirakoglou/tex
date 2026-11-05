@@ -1,0 +1,47 @@
+% v0.26 — ολοκληρωμένο δοκίμιο λυμένου παραδείγματος + callouts
+% Οι παλέτες έρχονται από το template· δεν υπερκαλύπτουμε τους ορισμούς.
+\documentclass[11pt,twoside,openright]{book}
+\input{config/book-config.tex}
+\newif\ifBookTwoInkProof
+\ifdefined\VPrintMode\BookTwoInkProoftrue\else\BookTwoInkProoffalse\fi
+\newif\ifPrintThreeInk\PrintThreeInkfalse
+\usepackage{styles/universalbook}
+\newcommand{\DemoVariant}[3]{%
+  \clearpage
+  \thispagestyle{empty}
+  \begingroup
+  \setcounter{workedexample}{0}%
+  {\BookHeadingFont\fontsize{14}{17}\selectfont\color{BookPrimary}\textbf{Δοκίμιο διδακτικών κουτιών — #2}\par}
+  \vspace{1mm}
+  {\footnotesize\color{BookInk}#3\par}
+  {\footnotesize\color{BookHistory}Κοινό δοκίμιο PRINT / SCREEN: ίδια τυπογραφία, γεωμετρία και τονικότητες.}\par
+  \vspace{3mm}
+  \BookSection{Λυμένα παραδείγματα}
+  \begin{workedexample}{Υπολογισμός μετατόπισης}
+  \begin{ProblemBox}
+  Ένα κινητό μετακινείται πάνω σε ευθεία από τη θέση \(x_1=-3\,\mathrm{m}\) στη θέση \(x_2=5\,\mathrm{m}\).
+  Να υπολογιστούν η μετατόπιση και η φορά της.
+  \end{ProblemBox}
+  \begin{ThinkBox}
+  Ξεκινώ από τον ορισμό της μετατόπισης. Υπολογίζω την αλγεβρική τιμή και ερμηνεύω το πρόσημο με βάση τη θετική φορά του άξονα.
+  \end{ThinkBox}
+  \SolutionHeading
+  Από τον ορισμό της μετατόπισης προκύπτει:
+  \[
+    \Delta x = x_2-x_1=5-(-3)=8\,\mathrm{m}.
+  \]
+  Η τιμή είναι θετική, επομένως η μετατόπιση έχει τη θετική φορά του άξονα.
+  \end{workedexample}
+  \vspace{2mm}
+  \begin{AttentionBox}
+  Η μετατόπιση και το διάστημα δεν είναι το ίδιο μέγεθος. Για τη μετατόπιση λαμβάνουμε υπόψη και τη φορά της κίνησης.
+  \end{AttentionBox}
+  \vspace{4mm}
+  {\BookHeadingFont\bfseries\color{BookPrimary}Τι αξιολογούμε σε αυτή τη δοκιμή}\par
+  {\small Η σκούρα λωρίδα αναγνωρίζει αμέσως τη λυμένη άσκηση. Το φόντο της εκφώνησης πρέπει να ξεχωρίζει από τη λευκή λύση, χωρίς να ανταγωνίζεται τα κουτιά «Πώς σκέφτομαι» και «ΠΡΟΣΟΧΗ».}\par
+  \endgroup
+}
+\begin{document}
+\pagestyle{empty}
+\DemoVariant{2}{v0.33 · κοινή παλέτα}{10\% στην PRINT · ενισχυμένο περίγραμμα λάμπας}
+\end{document}

@@ -1,0 +1,126 @@
+{
+  "base_method_count": 66,
+  "current_method_count": 66,
+  "removed_or_renamed_methods": [
+    [
+      "test_colors.py",
+      "WholeSourceTests.test_bracket_surface_and_page_continuation_contract_is_enforced"
+    ]
+  ],
+  "added_or_renamed_methods": [
+    [
+      "test_colors.py",
+      "WholeSourceTests.test_west_rule_surface_and_page_continuation_contract_is_enforced"
+    ]
+  ],
+  "explanation": "The bracket geometry contract is replaced by the v1.0.12 single-west-rule contract, including mutations that remove/falsify the west rule, reintroduce other sides, remove the white/gray surface, or alter first-fragment-only icon delegation. No methods are skipped or deleted to obtain a pass.",
+  "current_tests": {
+    "test_checkboxes.py": {
+      "sha256": "d1fad433a1c3802af215dcc0c2718bdbd5c4451449d8030146d926813fac4830",
+      "methods": [
+        "CheckboxTests.test_square_centers_align_with_capital_midline_at_body_and_small_sizes",
+        "CheckboxTests.test_true_false_and_multiple_choice_share_size_stroke_and_ink",
+        "CheckboxTests.test_paired_fixture_preserves_only_approved_inks_tints_and_color_roles"
+      ]
+    },
+    "test_colors.py": {
+      "sha256": "057cb3b9913c2377871417498e11ccdc197f34e0822f8bbf1ff3e24a3fe5722c",
+      "methods": [
+        "PaletteTests.test_screen_tints_follow_one_blue_and_same_black",
+        "PaletteTests.test_independent_screen_override_is_rejected",
+        "PaletteTests.test_extra_swatch_and_wrong_ink_are_rejected",
+        "PaletteTests.test_spot_identity_is_used_by_generator",
+        "PaletteTests.test_approval_metadata_can_be_updated_without_breaking_checks",
+        "PaletteTests.test_duplicate_or_unsafe_asset_alias_is_rejected",
+        "SourceScanTests.test_semantic_drawing_and_documented_literal_are_allowed",
+        "SourceScanTests.test_literal_late_tikz_option_and_color_key_are_rejected",
+        "SourceScanTests.test_explicit_color_model_and_ad_hoc_mix_are_rejected",
+        "SourceScanTests.test_transparency_and_shading_are_rejected",
+        "SourceScanTests.test_direct_images_bypass_manifest",
+        "WholeSourceTests.test_current_sources_pass_and_entrypoint_escape_fails",
+        "WholeSourceTests.test_private_callout_redefinition_is_rejected",
+        "WholeSourceTests.test_callout_role_drift_is_rejected",
+        "WholeSourceTests.test_factory_must_actually_delegate_to_shared_renderer",
+        "WholeSourceTests.test_west_rule_surface_and_page_continuation_contract_is_enforced",
+        "WholeSourceTests.test_attention_rule_preserves_fill_and_shared_first_fragment_icon",
+        "WholeSourceTests.test_callout_break_overlay_cannot_be_removed_for_one_box",
+        "WholeSourceTests.test_history_optional_title_signature_is_preserved",
+        "WholeSourceTests.test_generated_file_drift_fails",
+        "WholeSourceTests.test_new_unregistered_asset_fails",
+        "WholeSourceTests.test_neutral_rgb_raster_still_requires_native_gray"
+      ]
+    },
+    "test_exercise_links.py": {
+      "sha256": "ac43cd9a015593ca3c10eb68a60f456a9f61f9e917565a10d3b23a8ae95d310d",
+      "methods": [
+        "ExerciseLinkTests.test_driver_has_no_duplicate_destination_warning",
+        "ExerciseLinkTests.test_each_reference_targets_its_own_restarted_exercise"
+      ]
+    },
+    "test_figures.py": {
+      "sha256": "cec09d9bcb2bf16ee7d3627918ab3742450b630d1932ca0c0e0f875094eba391",
+      "methods": [
+        "FigureTests.test_tikz_strokes_keep_physical_widths_and_scaled_geometry_does_not_scale_ink",
+        "FigureTests.test_emphasis_and_secondary_share_the_second_ink_with_distinct_line_patterns",
+        "FigureTests.test_labels_use_nine_point_five_and_ticks_eight_point_five_in_full_and_column_figures",
+        "FigureTests.test_pgf_curves_use_same_physical_weight_and_patterns_at_both_sizes",
+        "FigureTests.test_full_and_column_widths_include_labels_and_never_overflow_their_gutters",
+        "FigureTests.test_pair_uses_only_the_approved_inks_tints_and_identical_color_roles"
+      ]
+    },
+    "test_page_styles.py": {
+      "sha256": "204c6122bd08f15b413d6f16f4034a052c3315173fe60643c049d553da291c7c",
+      "methods": [
+        "PageStyleTests.test_both_original_marks_return_after_each_sequential_assessment",
+        "PageStyleTests.test_chapter_label_survives_assessment_worksheet_and_all_chapter_routes",
+        "PageStyleTests.test_section_short_titles_follow_page_marks_and_reset_at_both_chapter_openers",
+        "PageStyleTests.test_unnumbered_chapter_labels_do_not_reuse_the_previous_chapter_number",
+        "PageStyleTests.test_header_bird_height_vertical_position_and_horizontal_mirror_match",
+        "PageStyleTests.test_header_bird_is_vector_and_uses_the_label_ink_at_full_tint",
+        "PageStyleTests.test_vector_bird_matches_the_uploaded_alpha_shape_on_its_native_grid",
+        "PageStyleTests.test_running_and_plain_pages_share_header_rules_fonts_and_footer_alignment",
+        "PageStyleTests.test_mirrored_body_margins_and_outer_footer_anchors_match_in_both_editions",
+        "PageStyleTests.test_plain_empty_automatic_blank_and_chapter_opener_policies",
+        "PageStyleTests.test_assessment_at_document_end_does_not_add_a_phantom_page"
+      ]
+    },
+    "test_release.py": {
+      "sha256": "b12931eb1779005ab4bdf919368f06f2ecc6460adff75bdf1c6e62e064676fd5",
+      "methods": [
+        "ReleaseEvidenceTests.test_current_complete_evidence_passes_but_edited_source_fails",
+        "ReleaseEvidenceTests.test_changed_pdf_and_changed_report_are_rejected",
+        "ReleaseEvidenceTests.test_failed_preflight_is_rejected_even_when_its_hash_is_current",
+        "ReleaseEvidenceTests.test_missing_pair_and_failed_or_skipped_tests_are_rejected",
+        "ReleaseEvidenceTests.test_incomplete_or_overflowing_build_summary_is_rejected",
+        "ReleaseEvidenceTests.test_duplicate_destinations_and_unexpected_driver_warnings_are_rejected",
+        "ReleaseEvidenceTests.test_changed_report_bytes_are_rejected_before_semantics",
+        "SourceArchiveTests.test_archive_and_fingerprint_ignore_generated_and_private_files",
+        "SourceArchiveTests.test_proof_export_does_not_copy_stale_optional_reports",
+        "SourceArchiveTests.test_output_cannot_become_its_own_source"
+      ]
+    },
+    "test_toc.py": {
+      "sha256": "1e127adb87325575308cec8a2e212b0df11b000045467fd032333516f7bdb621",
+      "methods": [
+        "TOCTests.test_wrapped_unnumbered_item_keeps_first_line_indent",
+        "TOCTests.test_three_digit_pages_are_aligned_and_separated_from_titles",
+        "TOCTests.test_title_and_page_links_share_correct_destinations_and_hierarchy",
+        "TOCTests.test_toc_stays_black_and_has_identical_paired_layout"
+      ]
+    },
+    "test_validate_pdf.py": {
+      "sha256": "b42d236374caa966240b69a7f4c0d08590100c27d7fd6eebe6e7031db4674206",
+      "methods": [
+        "PreflightTests.test_six_swatches_and_same_text_pass",
+        "PreflightTests.test_extra_process_ink_fails",
+        "PreflightTests.test_unapproved_tint_fails",
+        "PreflightTests.test_wrong_screen_role_fails_even_when_text_matches",
+        "PreflightTests.test_changed_text_fails",
+        "PreflightTests.test_unused_gray_does_not_create_false_ink_failure",
+        "PreflightTests.test_unembedded_font_fails",
+        "PreflightTests.test_missing_press_boxes_fail_only_when_requested"
+      ]
+    }
+  },
+  "checker_sha256": "e22b010f0544e9be10f944fa8f90f810bfb5ea510f069dc8fc60e0989b6c83f6"
+}

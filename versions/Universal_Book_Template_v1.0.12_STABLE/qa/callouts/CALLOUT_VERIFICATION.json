@@ -1,0 +1,144 @@
+{
+  "status": "passed",
+  "source_sha256": {
+    "source/config/stable-callouts.tex": "e6416b1ce80ffbad4b0aa27de20798b6d58ffe4cfff42f22ea48dcc7a59acb21",
+    "source/styles/book-callouts.tex": "213e1b399faaa9efb6dc8698603ccfb005034339d7f4b3ec3ff3b4fb5ce32714",
+    "source/styles/book-stable-icons.tex": "76f769522fe34552f0d3f8a2f413e89cd4fd9a6855696a99fb937d1871402c1b",
+    "source/styles/universalbook.sty": "285db5c5563bbf3da1470492c4b1131ba83f25cd92d88ebe654bb96af85bd0db",
+    "source/config/book-config.tex": "489957d006a6fc1b144832d721ea42e1faebf1c2729adf81a12587ee28ac2a24"
+  },
+  "actual_visual_views": {
+    "SCREEN": [
+      1,
+      2,
+      3,
+      5,
+      6,
+      7,
+      9,
+      10,
+      11,
+      13
+    ],
+    "PRINT": [
+      1,
+      6,
+      10
+    ]
+  },
+  "matrix": 1.5,
+  "dpi": 108,
+  "physical_print_test": false,
+  "png_sha256": {
+    "qa/callouts/SCREEN/p01.png": "0afed0e5a53118037221a1d87418e50bcf7d2bb072f2bcc1d86bd886f3ba83cc",
+    "qa/callouts/SCREEN/p02.png": "a49a310fefe433bb4c1f1d5f2281d723cc4c0009bddea03a2dcb5c13063097fa",
+    "qa/callouts/SCREEN/p03.png": "5ccef5f575ab22c61526a4cf0d58453cc1e4cc681de8e92e315e89af58c3679e",
+    "qa/callouts/SCREEN/p05.png": "dc997a2c9dcad86d5e47f559b2eec73de72ced6dab6e0a48f7a9b5e3c7d4602a",
+    "qa/callouts/SCREEN/p06.png": "36b7f746226f69511fd422988b5334d3278854bb5ba3c72ebefce818ee463c68",
+    "qa/callouts/SCREEN/p07.png": "bed37738a601521f220984585cbaaa512f1133afb7d0f39aeaac40261e635828",
+    "qa/callouts/SCREEN/p09.png": "c61d1697648cd8ffd464da76edc788bf8d7c0d0f0e82441a9aae468d88a489a6",
+    "qa/callouts/SCREEN/p10.png": "c0fdab7c22fb986cfe95185d178504b6b6f1f1e825dfcb7ae854b8252078c403",
+    "qa/callouts/SCREEN/p11.png": "457886493e9b261755971b2cbb00175315d6e099befa2bec8ec4f29bf062cb3b",
+    "qa/callouts/SCREEN/p13.png": "3f6b33ec41a06c732a2fbefd8f85ea03c4d560eb52dea315bc32c2ea2c88532a",
+    "qa/callouts/PRINT/p01.png": "903c5194e2da3b9638c8535eb39ddcf69ab5462c7f026399e20069e546011ec6",
+    "qa/callouts/PRINT/p06.png": "fa6d0f831769f72548d12bafb30dd6bccfbcedbb81fc21366ea7ea9a3e681027",
+    "qa/callouts/PRINT/p10.png": "ef92e86913fc379dcd25ca96226bd6b849f94f11fc12fc0a6d123f27fe495961"
+  },
+  "pdf_sha256": {
+    "SCREEN": "a1b587f5b7f712d36038c782d2d17e7aa2f8d6fefb8d6452370b2c8838515cf7",
+    "PRINT": "4ef9cc3301a30e97222bc2cf45638c8931365cbb24545359d1ac86507ec2e6cf"
+  },
+  "observed_overlaps": 0,
+  "observed_clipping": 0,
+  "evidence": [
+    "qa/callouts/BUILD_RESULTS.json",
+    "qa/callouts/MEASUREMENTS.json",
+    "qa/callouts/PREFLIGHT.json"
+  ],
+  "canonical_config_style_sha256": {
+    "config/book-config.tex": "489957d006a6fc1b144832d721ea42e1faebf1c2729adf81a12587ee28ac2a24",
+    "config/color-map.json": "e32acbb0d057c1a6ba5c92e7ab91e8c337cee3a2d0a111a3452908d78a8512f0",
+    "config/color-roles.tex": "a08e0eaea4f6524267352a61337606fe9e5f6954509d046fd85c8297e0499938",
+    "config/editorial-config.tex": "9afbcb0867d544c13c6c9be770505d9b24c35e701fccdf03426ba829d3302a40",
+    "config/editorial-design.tex": "01b7fd576dbe84677b799b9187937e4205fb9075c746b8731c2a0750ace0fddd",
+    "config/generated-assets.tex": "f383bed5faf6c3c188a598e0b42ad6883d8fb3c472332238191ab9339b9d821c",
+    "config/palette-print2-spot.tex": "9afef79c76758b6d9d6f11464d274c48e0307c8e297db108e47f65e0d21e1545",
+    "config/palette-screen.tex": "ad82193a2da26a0accc3f27ee55eca1d4c10bf2ef891986135d98426dc72de69",
+    "config/stable-callouts.tex": "e6416b1ce80ffbad4b0aa27de20798b6d58ffe4cfff42f22ea48dcc7a59acb21",
+    "config/stable-config.tex": "14f1c59de657355fd4dee86e4ebc24cc490deb669d97d24f8c864f4f602d8ad4",
+    "config/stable-tables.tex": "c5e847b5f458f90e66a6571abbe58ea746a8337a9364e6011877e63427d70f73",
+    "styles/book-assets.tex": "059a6ab43aa4391d34c219249ec442838656e01e21e9e7289af5acd4de481260",
+    "styles/book-callouts.tex": "213e1b399faaa9efb6dc8698603ccfb005034339d7f4b3ec3ff3b4fb5ce32714",
+    "styles/book-editorial-flow.tex": "a10a35d02a52a5cf72cf925a04cc495967fe563f4824cd1a233fd6ceffb4e5e1",
+    "styles/book-editorial-openings.tex": "d9ec4de456e2719e83ba69c8965b8eb9a02539a63ee4b3aab049ef8cd2b0c1a4",
+    "styles/book-figures.tex": "0c9065ebc93db4601a283f021462b73722d25c09ac0795d8b9103cbf28e503e6",
+    "styles/book-history-icon.tex": "e81624518f89081471dc21d096eff6e59b8d2bfedd302db9b060d1e356b21858",
+    "styles/book-longtables.tex": "0b3090a11c9e335a4ea3f61f63f4d6f92cfcd36f977cccbfa07aab337eebed2c",
+    "styles/book-stable-captions.tex": "ab019a114719174a1087039aa9c254fd4e08d002cf78b4fdb614bc5e2f105a59",
+    "styles/book-stable-examples.tex": "5b715e50756dc4a3254dc30135e8b10b6f6d9593704cafb41df06d8e3aee2c85",
+    "styles/book-stable-icons.tex": "76f769522fe34552f0d3f8a2f413e89cd4fd9a6855696a99fb937d1871402c1b",
+    "styles/book-stable-material.tex": "544f4fb7354ce159a8c651aca3e637d1438f47f00d4ee9048b8f74f42ce456a9",
+    "styles/book-stable-tables.tex": "87122eda0e2fb23efce38ac31ea1b56a71d506bb405289a033f792b4df1c2c26",
+    "styles/book-toc.tex": "ca46c386677ade5c0fe4b765c91471402ddd439a7f3900f2a47e74f779f52c79",
+    "styles/universalbook.sty": "285db5c5563bbf3da1470492c4b1131ba83f25cd92d88ebe654bb96af85bd0db"
+  },
+  "final_rebuild_pixel_identity": {
+    "status": "passed",
+    "checked_utc": "2026-11-05T23:30:29.587875+00:00",
+    "pages": [
+      {
+        "profile": "SCREEN",
+        "page": 1
+      },
+      {
+        "profile": "SCREEN",
+        "page": 2
+      },
+      {
+        "profile": "SCREEN",
+        "page": 3
+      },
+      {
+        "profile": "SCREEN",
+        "page": 5
+      },
+      {
+        "profile": "SCREEN",
+        "page": 6
+      },
+      {
+        "profile": "SCREEN",
+        "page": 7
+      },
+      {
+        "profile": "SCREEN",
+        "page": 9
+      },
+      {
+        "profile": "SCREEN",
+        "page": 10
+      },
+      {
+        "profile": "SCREEN",
+        "page": 11
+      },
+      {
+        "profile": "SCREEN",
+        "page": 13
+      },
+      {
+        "profile": "PRINT",
+        "page": 1
+      },
+      {
+        "profile": "PRINT",
+        "page": 6
+      },
+      {
+        "profile": "PRINT",
+        "page": 10
+      }
+    ],
+    "meaning": "Previously actually viewed PNGs are pixel-identical to the rebuilt final PDFs."
+  }
+}

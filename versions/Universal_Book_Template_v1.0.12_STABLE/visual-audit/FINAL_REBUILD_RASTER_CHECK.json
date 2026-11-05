@@ -1,0 +1,75 @@
+{
+  "status": "passed",
+  "changed_pages": [
+    {
+      "pdf": "pdf/Universal_Book_Template_v1.0.12_PRINT.pdf",
+      "page": 11,
+      "path": "visual-audit/Universal_Book_Template_v1.0.12_PRINT/p011.png",
+      "previous_png_sha256": "e5e3c947d73ff0914017f30ad7876d6eaeeae437622f4a34a7788b4abb76453a",
+      "current_png_sha256": "f8b36d6c08e94cb37cbc054e8bb9af0dadb75e356ef064afe2f06da2d78f3786"
+    },
+    {
+      "pdf": "pdf/Universal_Book_Template_v1.0.12_PRINT.pdf",
+      "page": 12,
+      "path": "visual-audit/Universal_Book_Template_v1.0.12_PRINT/p012.png",
+      "previous_png_sha256": "ff84af9feb1b42353339a287824862e10e657a4a23fb34ffc39e84dfc0a15035",
+      "current_png_sha256": "8b2b6ec91a38286d96af57c6546c886cff4e158476b21555cf1207a43319db5d"
+    },
+    {
+      "pdf": "pdf/Universal_Book_Template_v1.0.12_PRINT.pdf",
+      "page": 15,
+      "path": "visual-audit/Universal_Book_Template_v1.0.12_PRINT/p015.png",
+      "previous_png_sha256": "1139b351a83aa967e21605d9556412555efc6409d757dcbaa3aea0e20a4da024",
+      "current_png_sha256": "df2e436c1e32e2bf4d33b95e20476e47eeb8d5dc71f50f91099d091f1b9b71f4"
+    },
+    {
+      "pdf": "pdf/Universal_Book_Template_v1.0.12_SCREEN.pdf",
+      "page": 11,
+      "path": "visual-audit/Universal_Book_Template_v1.0.12_SCREEN/p011.png",
+      "previous_png_sha256": "f110e09a201b77d3e60cce826591a1a533b5749a3e291822518c2203bcde1fac",
+      "current_png_sha256": "bbac5c933ea5904f4eec081bcf079d500782bf8c1a59873a9f6f86e7b83ed2c3"
+    },
+    {
+      "pdf": "pdf/Universal_Book_Template_v1.0.12_SCREEN.pdf",
+      "page": 12,
+      "path": "visual-audit/Universal_Book_Template_v1.0.12_SCREEN/p012.png",
+      "previous_png_sha256": "17351dc45ea3d2ce542f8953b65405f5e72cf7fdf35ae00c34bda07f2b33e269",
+      "current_png_sha256": "645d1a798e1cd9e25f580050bd8054c2f06e191503bad9947e14d79070e662ff"
+    },
+    {
+      "pdf": "pdf/Universal_Book_Template_v1.0.12_SCREEN.pdf",
+      "page": 15,
+      "path": "visual-audit/Universal_Book_Template_v1.0.12_SCREEN/p015.png",
+      "previous_png_sha256": "70cb8db8f60b3d6c5993b5e7351ee0513e259e065f500e98206aa508df5dd0b4",
+      "current_png_sha256": "9da6863ada475fd384cbbc1be044502197a3e5fad9d48256839e95c14028ca26"
+    }
+  ],
+  "all_40_main_pages_pixel_identical": false,
+  "all_changed_pages_actually_rechecked": true,
+  "actually_viewed_changed_pages": [
+    {
+      "pdf": "pdf/Universal_Book_Template_v1.0.12_PRINT.pdf",
+      "page": 11
+    },
+    {
+      "pdf": "pdf/Universal_Book_Template_v1.0.12_PRINT.pdf",
+      "page": 12
+    },
+    {
+      "pdf": "pdf/Universal_Book_Template_v1.0.12_PRINT.pdf",
+      "page": 15
+    },
+    {
+      "pdf": "pdf/Universal_Book_Template_v1.0.12_SCREEN.pdf",
+      "page": 11
+    },
+    {
+      "pdf": "pdf/Universal_Book_Template_v1.0.12_SCREEN.pdf",
+      "page": 12
+    },
+    {
+      "pdf": "pdf/Universal_Book_Template_v1.0.12_SCREEN.pdf",
+      "page": 15
+    }
+  ]
+}

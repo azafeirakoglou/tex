@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "zip": "/workspace/tex/versions/Universal_Book_Template_v1.0.12_STABLE.zip",
+  "sha256": "6c23e640aff517f5774da101603d67de8b9b87492cfb3f37a0af66c40c7e8c71",
+  "bytes": 20831205,
+  "archived_files": 546,
+  "crc_verified": true,
+  "all_archived_file_sha256_verified": true,
+  "excluded": [
+    "previous versions",
+    ".local/build/caches/compiled formats",
+    "qa/work snapshots",
+    "table diagnostic trials",
+    "preliminary smoke views",
+    "duplicate paired PNGs"
+  ],
+  "internal_hash_manifest": "Universal_Book_Template_v1.0.12_STABLE/PACKAGE_CONTENTS.json"
+}

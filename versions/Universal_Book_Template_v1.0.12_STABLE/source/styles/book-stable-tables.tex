@@ -1,0 +1,41 @@
+% v1.0.12: neutral MINIMAL tables, applied through the existing public API.
+% Both fills select the already approved Black10 roles. No new ink, tint,
+% palette colour or semantic-role definition is introduced here.
+\newcommand{\BookTableBodyFont}{%
+  \sffamily\mdseries\upshape
+  \fontsize{\BookTableFontSize}{\BookTableLineHeight}\selectfont
+  \color{BookInk}%
+}
+\renewenvironment{BookStripedTable}{%
+  \begingroup\BookTableBodyFont
+  \renewcommand{\arraystretch}{\BookTableRowStretch}%
+  \rowcolors{2}{\BookTableStripeFill}{white}%
+}{\endgroup}
+\renewenvironment{BookPlainTable}{%
+  \begingroup\BookTableBodyFont
+  \renewcommand{\arraystretch}{\BookTableRowStretch}%
+  \rowcolors{2}{white}{white}%
+}{\endgroup}
+
+% A running-width horizontal rule in noalign belongs to the header itself.
+% It also repeats with every longtable head, without requiring an extra \\
+% or changing the column/header arguments in already authored tables.
+\renewcommand{\BookTableHeaderRow}{%
+  \noalign{\begingroup\color{\BookTableHeaderRuleColor}%
+    \hrule height\BookTableHeaderRuleWidth\endgroup}%
+  \rowcolor{\BookTableHeaderFill}%
+}
+\renewcommand{\BookTableHead}[1]{{%
+  \sffamily\bfseries\upshape
+  \fontsize{\BookTableFontSize}{\BookTableLineHeight}\selectfont
+  \color{\BookTableHeaderTextColor}#1}}
+
+% Legacy public aliases retain their arguments and delegate to the same styles.
+\renewcommand{\BookPlainTableHead}[1]{\BookTableHead{#1}}
+% Longtable's shared starter already uses BookTableHeaderRow, BookTableHead,
+% and BookTableStripeFill. Add only the explicit body font to its local group.
+\patchcmd{\BookLongTableStart}
+  {\begingroup\small\color{BookInk}}
+  {\begingroup\BookTableBodyFont}{}{
+  \PackageError{universalbook}{Cannot install shared longtable typography}{}
+}

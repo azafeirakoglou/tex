@@ -1,0 +1,149 @@
+{
+  "status": "passed",
+  "pdf": "/workspace/template-v1.0.12-work/qa/probes/pdf/A_screen_metrics.pdf",
+  "kind": "metrics",
+  "input_sha256": "fcc4d0e7174fbcbb9e07572fcedac9f7046408496d3c70d7556066557b05c360",
+  "expected_caption_role": "BookSecondary",
+  "expected_caption_rgb_hex": "8493A9",
+  "pages": 3,
+  "measurements": {
+    "font_roles": {
+      "BODYTITLEMETRIC": {
+        "page": 2,
+        "font": "NotoSerif-Medium",
+        "size_tex_pt": 17.5,
+        "rendered_rgb_hex": "203B63"
+      },
+      "ΚΕΦΑΛΑΙΟ 1": {
+        "page": 2,
+        "font": "Inter-Medium",
+        "size_tex_pt": 9.5,
+        "rendered_rgb_hex": "203B63"
+      },
+      "SECTIONMETRIC": {
+        "page": 2,
+        "font": "NotoSerif-Medium",
+        "size_tex_pt": 13.0,
+        "rendered_rgb_hex": "203B63"
+      },
+      "SUBSECTIONMETRIC": {
+        "page": 2,
+        "font": "NotoSerif-Medium",
+        "size_tex_pt": 11.0,
+        "rendered_rgb_hex": "203B63"
+      },
+      "THEMATICMETRIC": {
+        "page": 2,
+        "font": "NotoSerif-Medium",
+        "size_tex_pt": 11.7,
+        "rendered_rgb_hex": "203B63"
+      },
+      "BODYMETRIC": {
+        "page": 2,
+        "font": "Inter-Regular",
+        "size_tex_pt": 10.95,
+        "rendered_rgb_hex": "000000"
+      },
+      "ATTENTIONBODYMETRIC": {
+        "page": 2,
+        "font": "Inter-Regular",
+        "size_tex_pt": 10.0,
+        "rendered_rgb_hex": "000000"
+      },
+      "THINKBODYMETRIC": {
+        "page": 2,
+        "font": "Inter-Regular",
+        "size_tex_pt": 10.0,
+        "rendered_rgb_hex": "000000"
+      },
+      "HISTORYBODYMETRIC": {
+        "page": 2,
+        "font": "Inter-Regular",
+        "size_tex_pt": 10.0,
+        "rendered_rgb_hex": "000000"
+      },
+      "EXAMPLETITLEMETRIC": {
+        "page": 2,
+        "font": "NotoSerif-Medium",
+        "size_tex_pt": 10.7,
+        "rendered_rgb_hex": "FFFFFF"
+      },
+      "CAPTIONMETRIC": {
+        "page": 3,
+        "font": "Inter-Regular",
+        "size_tex_pt": 9.5,
+        "rendered_rgb_hex": "000000"
+      },
+      "TABLECAPMETRIC": {
+        "page": 3,
+        "font": "Inter-Regular",
+        "size_tex_pt": 9.5,
+        "rendered_rgb_hex": "000000"
+      },
+      "DIAGRAMLABELMETRIC": {
+        "page": 3,
+        "font": "Inter-Regular",
+        "size_tex_pt": 9.5,
+        "rendered_rgb_hex": "000000"
+      },
+      "TICKMETRIC": {
+        "page": 3,
+        "font": "Inter-Regular",
+        "size_tex_pt": 8.5,
+        "rendered_rgb_hex": "000000"
+      },
+      "Quantity": {
+        "page": 3,
+        "font": "Inter-SemiBold",
+        "size_tex_pt": 10.0,
+        "rendered_rgb_hex": "000000"
+      },
+      "Value": {
+        "page": 3,
+        "font": "Inter-SemiBold",
+        "size_tex_pt": 10.0,
+        "rendered_rgb_hex": "000000"
+      },
+      "Position": {
+        "page": 3,
+        "font": "Inter-Regular",
+        "size_tex_pt": 10.0,
+        "rendered_rgb_hex": "000000"
+      },
+      "ΠΡΟΣΟΧΗ": {
+        "page": 2,
+        "font": "Inter-Medium",
+        "size_tex_pt": 9.5,
+        "rendered_rgb_hex": "203B63"
+      },
+      "Πώς σκέφτομαι": {
+        "page": 2,
+        "font": "Inter-Medium",
+        "size_tex_pt": 9.5,
+        "rendered_rgb_hex": "203B63"
+      },
+      "HISTORYTITLEMETRIC": {
+        "page": 2,
+        "font": "Inter-Medium",
+        "size_tex_pt": 9.5,
+        "rendered_rgb_hex": "203B63"
+      },
+      "Λύση": {
+        "page": 2,
+        "font": "Inter-Medium",
+        "size_tex_pt": 10.2,
+        "rendered_rgb_hex": "203B63"
+      }
+    },
+    "math_base_sizes_tex_pt": {
+      "BODYMETRIC": 11.4976,
+      "ATTENTIONBODYMETRIC": 10.5,
+      "THINKBODYMETRIC": 10.5,
+      "HISTORYBODYMETRIC": 10.5,
+      "DIAGRAMLABELMETRIC": 9.9751,
+      "TICKMETRIC": 8.925
+    },
+    "running_header_and_footer_tex_pt": 8,
+    "display_uses_same_base_math_size": true
+  }
+}

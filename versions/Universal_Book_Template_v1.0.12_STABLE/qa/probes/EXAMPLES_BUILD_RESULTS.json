@@ -1,0 +1,58 @@
+[
+  {
+    "variant": "A",
+    "profile": "SCREEN",
+    "exit_code": 0,
+    "log": "qa/probes/examples-results/A_SCREEN.build.log",
+    "pdf": "qa/probes/pdf/EXAMPLES_A_SCREEN.pdf",
+    "xelatex_log": "qa/probes/examples-results/A_SCREEN.xelatex.log",
+    "diagnostics": {
+      "overfull": 0,
+      "underfull": 0,
+      "missing_characters": 0,
+      "warnings": 2
+    }
+  },
+  {
+    "variant": "A",
+    "profile": "PRINT",
+    "exit_code": 0,
+    "log": "qa/probes/examples-results/A_PRINT.build.log",
+    "pdf": "qa/probes/pdf/EXAMPLES_A_PRINT.pdf",
+    "xelatex_log": "qa/probes/examples-results/A_PRINT.xelatex.log",
+    "diagnostics": {
+      "overfull": 0,
+      "underfull": 0,
+      "missing_characters": 0,
+      "warnings": 2
+    }
+  },
+  {
+    "variant": "B",
+    "profile": "SCREEN",
+    "exit_code": 0,
+    "log": "qa/probes/examples-results/B_SCREEN.build.log",
+    "pdf": "qa/probes/pdf/EXAMPLES_B_SCREEN.pdf",
+    "xelatex_log": "qa/probes/examples-results/B_SCREEN.xelatex.log",
+    "diagnostics": {
+      "overfull": 0,
+      "underfull": 0,
+      "missing_characters": 0,
+      "warnings": 2
+    }
+  },
+  {
+    "variant": "B",
+    "profile": "PRINT",
+    "exit_code": 0,
+    "log": "qa/probes/examples-results/B_PRINT.build.log",
+    "pdf": "qa/probes/pdf/EXAMPLES_B_PRINT.pdf",
+    "xelatex_log": "qa/probes/examples-results/B_PRINT.xelatex.log",
+    "diagnostics": {
+      "overfull": 0,
+      "underfull": 0,
+      "missing_characters": 0,
+      "warnings": 2
+    }
+  }
+]

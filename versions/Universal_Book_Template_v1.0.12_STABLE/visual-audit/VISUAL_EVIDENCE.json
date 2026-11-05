@@ -1,0 +1,585 @@
+{
+  "status": "passed",
+  "physical_print_test": false,
+  "matrix": 1.5,
+  "dpi": 108,
+  "native_size_mm": [
+    170,
+    240
+  ],
+  "fit_to_content": false,
+  "main_pdf_reviews": [
+    {
+      "pdf": "pdf/Universal_Book_Template_v1.0.12_PRINT.pdf",
+      "sha256": "95fd0a5e626fb19a1aa52fc16b9cabb4d5bd4d329f38fcdf5985dd194a20e287",
+      "pages": 20,
+      "page_mm": [
+        170.0001,
+        239.9982
+      ],
+      "renders": [
+        {
+          "page": 1,
+          "path": "visual-audit/Universal_Book_Template_v1.0.12_PRINT/p001.png",
+          "sha256": "6350b860b73153507ddfe5060f780ae754ae7898b7c97436bda25a40279652e0"
+        },
+        {
+          "page": 2,
+          "path": "visual-audit/Universal_Book_Template_v1.0.12_PRINT/p002.png",
+          "sha256": "9fce3a57fdab2b7252f8dac249dd6e5b08e01c0b3522c5c21a8dc2bc35f74560"
+        },
+        {
+          "page": 3,
+          "path": "visual-audit/Universal_Book_Template_v1.0.12_PRINT/p003.png",
+          "sha256": "6ef915efeb49b7fa4397117f51258678f4a619b7a2571d41ad31a6eb499e49fc"
+        },
+        {
+          "page": 4,
+          "path": "visual-audit/Universal_Book_Template_v1.0.12_PRINT/p004.png",
+          "sha256": "9fce3a57fdab2b7252f8dac249dd6e5b08e01c0b3522c5c21a8dc2bc35f74560"
+        },
+        {
+          "page": 5,
+          "path": "visual-audit/Universal_Book_Template_v1.0.12_PRINT/p005.png",
+          "sha256": "d56707ec45cedcbfeccda68765cf6ba4dd078dfee3b59c6a32a86a1d1f6039c2"
+        },
+        {
+          "page": 6,
+          "path": "visual-audit/Universal_Book_Template_v1.0.12_PRINT/p006.png",
+          "sha256": "73b9ba5162728033ce8663b846673a7f594f9b42c08a633784181eb3a0703601"
+        },
+        {
+          "page": 7,
+          "path": "visual-audit/Universal_Book_Template_v1.0.12_PRINT/p007.png",
+          "sha256": "1c8c16fe85d078d22d1c9d5030b276c6f52f8fbb00d103b381e455b34291a20b"
+        },
+        {
+          "page": 8,
+          "path": "visual-audit/Universal_Book_Template_v1.0.12_PRINT/p008.png",
+          "sha256": "a603ae7dd1744937ce7b9d6f1600630cc5f5f5186c0ca9aadbad28f577068e7f"
+        },
+        {
+          "page": 9,
+          "path": "visual-audit/Universal_Book_Template_v1.0.12_PRINT/p009.png",
+          "sha256": "4080b8c86ec598078b3dee3430903a24d91b1b0aedb38e69115223d631c0b8f9"
+        },
+        {
+          "page": 10,
+          "path": "visual-audit/Universal_Book_Template_v1.0.12_PRINT/p010.png",
+          "sha256": "27519b7858dc13cf1f55dd7867505bec5ab1241481ec0e10c0ee8c01ad838b8c"
+        },
+        {
+          "page": 11,
+          "path": "visual-audit/Universal_Book_Template_v1.0.12_PRINT/p011.png",
+          "sha256": "f8b36d6c08e94cb37cbc054e8bb9af0dadb75e356ef064afe2f06da2d78f3786"
+        },
+        {
+          "page": 12,
+          "path": "visual-audit/Universal_Book_Template_v1.0.12_PRINT/p012.png",
+          "sha256": "8b2b6ec91a38286d96af57c6546c886cff4e158476b21555cf1207a43319db5d"
+        },
+        {
+          "page": 13,
+          "path": "visual-audit/Universal_Book_Template_v1.0.12_PRINT/p013.png",
+          "sha256": "1243725103341885e40d318a5358dce2f8e3183891f16ff5694bafeb197d0416"
+        },
+        {
+          "page": 14,
+          "path": "visual-audit/Universal_Book_Template_v1.0.12_PRINT/p014.png",
+          "sha256": "39a095d48467e639ea65ccc508b8fe91bb70d02b81cb9caa4f71c93a3bf785bf"
+        },
+        {
+          "page": 15,
+          "path": "visual-audit/Universal_Book_Template_v1.0.12_PRINT/p015.png",
+          "sha256": "df2e436c1e32e2bf4d33b95e20476e47eeb8d5dc71f50f91099d091f1b9b71f4"
+        },
+        {
+          "page": 16,
+          "path": "visual-audit/Universal_Book_Template_v1.0.12_PRINT/p016.png",
+          "sha256": "9fce3a57fdab2b7252f8dac249dd6e5b08e01c0b3522c5c21a8dc2bc35f74560"
+        },
+        {
+          "page": 17,
+          "path": "visual-audit/Universal_Book_Template_v1.0.12_PRINT/p017.png",
+          "sha256": "f43dff5e7181d837c67c29fa08c3de8d6f64b36b65ef1c4a5f8b82f4a89b82ea"
+        },
+        {
+          "page": 18,
+          "path": "visual-audit/Universal_Book_Template_v1.0.12_PRINT/p018.png",
+          "sha256": "8258b606fce241e4c2d4d57d29b431cc98178cde8da2bdbb2c7f5fdf1f54c65e"
+        },
+        {
+          "page": 19,
+          "path": "visual-audit/Universal_Book_Template_v1.0.12_PRINT/p019.png",
+          "sha256": "d48becb3413d268fe1a1ed6eb3cd03c7b31f7f651aa6c86d89b24e5e0d53269e"
+        },
+        {
+          "page": 20,
+          "path": "visual-audit/Universal_Book_Template_v1.0.12_PRINT/p020.png",
+          "sha256": "62c2be62789756c23ca7480f9627ff5b5484872380793c36299b90d1b18bd1c8"
+        }
+      ],
+      "visually_viewed_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "observed_overlaps": 0,
+      "observed_clipping": 0,
+      "reviewer": "independent main-page visual reviewer",
+      "previous_reviewed_pdf_sha256": "7bdbe10937936fb212d567fc84018b3e2e9d6f067512fca9e9fce9155adb34a3"
+    },
+    {
+      "pdf": "pdf/Universal_Book_Template_v1.0.12_SCREEN.pdf",
+      "sha256": "2849fa08a7d02e3d9b024e03bf669098505646d0e413b3c328631bf4c2427963",
+      "pages": 20,
+      "page_mm": [
+        170.0001,
+        239.9982
+      ],
+      "renders": [
+        {
+          "page": 1,
+          "path": "visual-audit/Universal_Book_Template_v1.0.12_SCREEN/p001.png",
+          "sha256": "ceb3b91266fb24193d3a87ed4472859bbccf5eb001e3a42114deb23794275332"
+        },
+        {
+          "page": 2,
+          "path": "visual-audit/Universal_Book_Template_v1.0.12_SCREEN/p002.png",
+          "sha256": "9fce3a57fdab2b7252f8dac249dd6e5b08e01c0b3522c5c21a8dc2bc35f74560"
+        },
+        {
+          "page": 3,
+          "path": "visual-audit/Universal_Book_Template_v1.0.12_SCREEN/p003.png",
+          "sha256": "6ef915efeb49b7fa4397117f51258678f4a619b7a2571d41ad31a6eb499e49fc"
+        },
+        {
+          "page": 4,
+          "path": "visual-audit/Universal_Book_Template_v1.0.12_SCREEN/p004.png",
+          "sha256": "9fce3a57fdab2b7252f8dac249dd6e5b08e01c0b3522c5c21a8dc2bc35f74560"
+        },
+        {
+          "page": 5,
+          "path": "visual-audit/Universal_Book_Template_v1.0.12_SCREEN/p005.png",
+          "sha256": "3de4738a349dc44beeea4e856a2775c101fc11a99fba07aa220ee319e6a2388c"
+        },
+        {
+          "page": 6,
+          "path": "visual-audit/Universal_Book_Template_v1.0.12_SCREEN/p006.png",
+          "sha256": "5317668eb4bf468606c0738ec3f558994df13925ab326c5688b7d617e95b08b7"
+        },
+        {
+          "page": 7,
+          "path": "visual-audit/Universal_Book_Template_v1.0.12_SCREEN/p007.png",
+          "sha256": "c7ca3aa8bfc8ab305a8673ed1a388c54620cf75f62796a4a06ff768043a76491"
+        },
+        {
+          "page": 8,
+          "path": "visual-audit/Universal_Book_Template_v1.0.12_SCREEN/p008.png",
+          "sha256": "ae0826513f60724870ad4c75be8aa00f118e6e7519a253eaaab8d78d2f292852"
+        },
+        {
+          "page": 9,
+          "path": "visual-audit/Universal_Book_Template_v1.0.12_SCREEN/p009.png",
+          "sha256": "96f91235b36774dbed3023ee7cde8698449947946a79cc8d19d02b8a3288fed6"
+        },
+        {
+          "page": 10,
+          "path": "visual-audit/Universal_Book_Template_v1.0.12_SCREEN/p010.png",
+          "sha256": "f7d676279eb406741663ad064e5d4a622f2efa4956c728ebc0b9a4b989a66bd8"
+        },
+        {
+          "page": 11,
+          "path": "visual-audit/Universal_Book_Template_v1.0.12_SCREEN/p011.png",
+          "sha256": "bbac5c933ea5904f4eec081bcf079d500782bf8c1a59873a9f6f86e7b83ed2c3"
+        },
+        {
+          "page": 12,
+          "path": "visual-audit/Universal_Book_Template_v1.0.12_SCREEN/p012.png",
+          "sha256": "645d1a798e1cd9e25f580050bd8054c2f06e191503bad9947e14d79070e662ff"
+        },
+        {
+          "page": 13,
+          "path": "visual-audit/Universal_Book_Template_v1.0.12_SCREEN/p013.png",
+          "sha256": "663b529c2a480d19178c9f30c345a0ef302413cbaf680ab3120c49e3c6b4ab8a"
+        },
+        {
+          "page": 14,
+          "path": "visual-audit/Universal_Book_Template_v1.0.12_SCREEN/p014.png",
+          "sha256": "32bb6f9aefc7f0c2f45fd911efa3375ad1b37c177eda81b7e04c9f8d0d02f61a"
+        },
+        {
+          "page": 15,
+          "path": "visual-audit/Universal_Book_Template_v1.0.12_SCREEN/p015.png",
+          "sha256": "9da6863ada475fd384cbbc1be044502197a3e5fad9d48256839e95c14028ca26"
+        },
+        {
+          "page": 16,
+          "path": "visual-audit/Universal_Book_Template_v1.0.12_SCREEN/p016.png",
+          "sha256": "9fce3a57fdab2b7252f8dac249dd6e5b08e01c0b3522c5c21a8dc2bc35f74560"
+        },
+        {
+          "page": 17,
+          "path": "visual-audit/Universal_Book_Template_v1.0.12_SCREEN/p017.png",
+          "sha256": "666111747250e5b40ae6f03ec4e59ed39fa9bcf573d57b651b9e3a28f7691deb"
+        },
+        {
+          "page": 18,
+          "path": "visual-audit/Universal_Book_Template_v1.0.12_SCREEN/p018.png",
+          "sha256": "a2cb27ef210e45366016be638bb68d90f58171860b26fa7d5c9d85586fbf84be"
+        },
+        {
+          "page": 19,
+          "path": "visual-audit/Universal_Book_Template_v1.0.12_SCREEN/p019.png",
+          "sha256": "2bc883bf05abf89192f17b9e175ce55df3d3bc85a1006de9cd1753b56bcdba7d"
+        },
+        {
+          "page": 20,
+          "path": "visual-audit/Universal_Book_Template_v1.0.12_SCREEN/p020.png",
+          "sha256": "f7712fe8df93ef3aaf91edd56885100c42257150eb0f84a8f76840506b2a7067"
+        }
+      ],
+      "page_map": [
+        {
+          "page": 1,
+          "text": "ΕΚ∆ΟΤΙΚΟ ΠΡΟΤΥΠΟ | Φυσική | Α΄ Λυκείου | Θεωρία · Μεθοδολογία · Παραδείγματα · Ασκήσεις | Σχεδιαστικό δείγμα | Ενιαία μακέτα βιβλίων — Φυσική · Μαθηματικά · άλλες επιστήμες | ∆οκιμαστική μακέτα — όχι τελικό βιβλίο | Καθολική μακέτα v1.0.12 · MINIMAL · Νοέμβριος 20"
+        },
+        {
+          "page": 2,
+          "text": ""
+        },
+        {
+          "page": 3,
+          "text": "Περιεχόμενα | 1 | Κίνηση σε μία διάσταση | 1 | 1.1 | Περιγραφή της κίνησης . . . . . . . . . . . . . . . . . . . . . | 2 | 1.2 | Από το διάγραμμα στη φυσική ερμηνεία . . . . . . . . . . . . | 2 | 1.3 | Εφαρμογές και εξάσκηση . . . . . . . . . . . . . . . . . . . . | 4 | Φύλλα"
+        },
+        {
+          "page": 4,
+          "text": ""
+        },
+        {
+          "page": 5,
+          "text": "ΕΝΟΤΗΤΑ 1 | Κίνηση σε μία διάσταση | Φυσική — δείγμα μακέτας, όχι κείμενο προς δημοσίευση | Ενδεικτική εικόνα από το προηγούμενο βιβλίο· προσωρινή για τη μακέτα | Τι θα μάθουμε | • Να διακρίνεις τη θέση, τη μετατόπιση και το διάστημα. | • Να επιλέγεις τη θετική "
+        },
+        {
+          "page": 6,
+          "text": "Περιγραφή της κίνησης | Κίνηση σε μία διάσταση | ΚΕΦΑΛΑΙΟ 1 | Κίνηση σε μία διάσταση | Θεωρία | 1.1 Περιγραφή της κίνησης | Για την περιγραφή της ευθύγραμμης κίνησης ορίζουμε έναν άξονα ανα- | φοράς και θετική φορά. Η θέση ενός σώματος προσδιορίζεται από την | αλγεβ"
+        },
+        {
+          "page": 7,
+          "text": "Κίνηση σε μία διάσταση | Από το διάγραμμα στη φυσική ερμηνεία | Βήμα 1. ∆ιαβάζουμε τις μονάδες των αξόνων. | Βήμα 2. Επιλέγουμε δύο σημεία της γραφικής παράστασης. | Βήμα 3. Υπολογίζουμε τον λόγο μεταβολής θέσης προς χρόνο. | Βήμα 4. Ελέγχουμε το πρόσημο και τ"
+        },
+        {
+          "page": 8,
+          "text": "Εφαρμογές και εξάσκηση | Κίνηση σε μία διάσταση | 1.3 Εφαρμογές και εξάσκηση | Λυμένα παραδείγματα | Παράδειγμα 1 — Υπολογισμός μετατόπισης | Ένα σώμα κινείται πάνω σε ευθεία από τη θέση 𝑥1 = −3 m στη θέση 𝑥2 = | 5 m. | α) Να υπολογιστεί η μετατόπιση. | β) Να προσδι"
+        },
+        {
+          "page": 9,
+          "text": "Κίνηση σε μία διάσταση | Εφαρμογές και εξάσκηση | Ερωτήσεις θεωρίας | Σωστό / Λάθος | 1. Το διάστημα είναι διανυσματικό | μέγεθος. Σ | Λ | 2. Η μετατόπιση εξαρτάται από | την αρχική και την τελική | θέση. Σ | Λ | 3. Η ταχύτητα στην ΕΟΚ είναι στα- | θερή. Σ | Λ | Πολλαπλής επιλο"
+        },
+        {
+          "page": 10,
+          "text": "Εφαρμογές και εξάσκηση | Κίνηση σε μία διάσταση | 3 | Ένα κινητό κινείται σε ευθεία με σταθερή θετική ταχύτητα. Να σχε- | διάσετε τα διαγράμματα 𝑥−𝑡και 𝜐−𝑡και να εξηγήσετε τη σημασία της | κλίσης τους. | 4 | Ένα σώμα κινείται από τη θέση 𝑥𝐴= 0 στη θέση 𝑥𝐵= 6 m και"
+        },
+        {
+          "page": 11,
+          "text": "Κίνηση σε μία διάσταση | Εφαρμογές και εξάσκηση | ΦΥΛΛΟ ΕΡΓΑΣΙΑΣ 1 | Θέση, μετατόπιση και ερμηνεία διαγραμμάτων | Φυσική Α΄ Λυκείου · ΚΙΝΗΜΑΤΙΚΗ | 1. Να υπολογίζουν μετατόπιση από δύο θέσεις. | 2. Να επιλέγουν σωστή μονάδα φυσικού μεγέθους. | 3. Να αιτιολογούν σύν"
+        },
+        {
+          "page": 12,
+          "text": "Εφαρμογές και εξάσκηση | Κίνηση σε μία διάσταση | ΚΡΙΤΗΡΙΟ ΑΞΙΟΛΟΓΗΣΗΣ 1 | Ευθύγραμμη κίνηση | Ονοματεπώνυμο: | Ημερομηνία: | ∆ιάρκεια: 90 λεπτά | ΘΕΜΑ Α | Α1. Η ταχύτητα ενός σώματος παραμένει σταθερή κατά μέτρο και κατεύ- | θυνση. Η επιτάχυνσή του είναι: | α. θετική. | "
+        },
+        {
+          "page": 13,
+          "text": "Κίνηση σε μία διάσταση | Εφαρμογές και εξάσκηση | ΘΕΜΑ Β | Β1. ∆ύο κινητά Α και Β κινούνται στον ίδιο άξονα. Τα διαγράμματα | θέσης–χρόνου φαίνονται παρακάτω. | 𝑡(s) | 𝑥(m) | A | B | Ποιο κινητό έχει θετική και ποιο αρνητική αλγεβρική ταχύτητα; Να αιτιο- | λογήσετε την "
+        },
+        {
+          "page": 14,
+          "text": "Εφαρμογές και εξάσκηση | Κίνηση σε μία διάσταση | ∆2. Να υπολογίσετε τη μετατόπισή του στα πρώτα 5 s. | Μονάδες 8 | ∆3. Να σχεδιάσετε ποιοτικά το διάγραμμα ταχύτητας–χρόνου για 0 ≤ | 𝑡≤5 s. | Μονάδες 8 | 10 | "
+        },
+        {
+          "page": 15,
+          "text": "Κίνηση σε μία διάσταση | Εφαρμογές και εξάσκηση | ΚΡΙΤΗΡΙΟ ΑΞΙΟΛΟΓΗΣΗΣ 2 | Σύντομη επανάληψη: μετατόπιση | ΘΕΜΑ Α | Α1. Ποια είναι η διαφορά ανάμεσα στη μετατόπιση και στο διάστημα; | Α2. ∆ίνεται 𝑥𝐴= 4 m και 𝑥𝐵= −1 m. Να βρείτε τη μετατόπιση από το Α | στο Β. | Μον"
+        },
+        {
+          "page": 16,
+          "text": ""
+        },
+        {
+          "page": 17,
+          "text": "ΕΝΟΤΗΤΑ 2 | Συναρτήσεις και γραφήματα | Μαθηματικά — δοκιμή της ίδιας εκδοτικής μακέτας | 𝑥 | 𝑦 | 𝑓(𝑥) | ∆ιανυσματική εικονογράφηση, ενσωματωμένη στο XeLaTeX | Τι θα μάθουμε | • Να αναγνωρίζεις συναρτήσεις πρώτου βαθμού. | • Να ερμηνεύεις τους συντελεστές τους. | • Να σ"
+        },
+        {
+          "page": 18,
+          "text": "Η συνάρτηση πρώτου βαθμού | Συναρτήσεις και γραφήματα | ΚΕΦΑΛΑΙΟ 2 | Συναρτήσεις και γραφήματα | Ορισμός και βασική ιδέα | 2.1 Η συνάρτηση πρώτου βαθμού | Ο τύπος 𝑓(𝑥) = 𝛼𝑥+ 𝛽, με 𝛼≠0, περιγράφει μια συνάρτηση πρώτου | βαθμού. Η γραφική της παράσταση είναι ευθεία."
+        },
+        {
+          "page": 19,
+          "text": "Συναρτήσεις και γραφήματα | Η συνάρτηση πρώτου βαθμού | Απόδειξη — υπόδειγμα | Θεώρημα 2.1 — Πρόσθεση ίσων ποσοτήτων | Αν 𝑎= 𝑏, τότε 𝑎+ 𝑐= 𝑏+ 𝑐για κάθε πραγματικό αριθμό 𝑐. | Απόδειξη. Προσθέτοντας τον ίδιο αριθμό στα δύο μέλη της ισότητας, δια- | τηρούμε την ισ"
+        },
+        {
+          "page": 20,
+          "text": "Λύσεις κριτηρίων αξιολόγησης | Κριτήριο 1 — Ευθύγραμμη κίνηση | Α1 | Σωστή επιλογή: γ. Για σταθερή διανυσματική ταχύτητα, η επιτά- | χυνση είναι μηδενική. | Γ1 | Για ευθύγραμμη ομαλή κίνηση η εξίσωση θέσης είναι | 𝑥= 𝑥0 + 𝜐𝑡= 2 + 3𝑡 | (SI). | 16 | "
+        }
+      ],
+      "visually_viewed_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "observed_overlaps": 0,
+      "observed_clipping": 0,
+      "reviewer": "independent main-page visual reviewer",
+      "previous_reviewed_pdf_sha256": "e70eabde6917a2219b0b9fe1b99f69ff2305f27d465ff61457d7cb5ba12e5544"
+    }
+  ],
+  "findings": [],
+  "notes": [
+    "All 40 main pages were actually viewed in PRINT/SCREEN pairs.",
+    "All 24 same-content A/B proof pages were actually viewed at the same rendering scale.",
+    "Three consecutive examples, a three-page ProblemBox and a white unframed solution spanning pages pass visual inspection.",
+    "A filled example headers remain compact and legible in both approved profiles; no active bullet remains."
+  ],
+  "example_pdf_reviews": [
+    {
+      "pdf": "qa/probes/pdf/EXAMPLES_A_PRINT.pdf",
+      "sha256": "42764bb4667eebdc1bb44836efa4014a78511e3a444b482619c0e03506f206c2",
+      "pages": 6,
+      "renders": [
+        {
+          "page": 1,
+          "path": "visual-audit/examples/EXAMPLES_A_PRINT/p001.png",
+          "sha256": "355868d1b5f96dba187741d25018a2aa21bfbcf9d333626df4f7ca7f78916789"
+        },
+        {
+          "page": 2,
+          "path": "visual-audit/examples/EXAMPLES_A_PRINT/p002.png",
+          "sha256": "0863010efe0da042d57cbcc04d53e0900534adb2e116e640cb64b0c115787c08"
+        },
+        {
+          "page": 3,
+          "path": "visual-audit/examples/EXAMPLES_A_PRINT/p003.png",
+          "sha256": "538331f7f78e629dd8ec452612aa215bd60da2d36e4d6b4574f7bef9af563abb"
+        },
+        {
+          "page": 4,
+          "path": "visual-audit/examples/EXAMPLES_A_PRINT/p004.png",
+          "sha256": "f92509e86bcafcedb3e323b4bcab2a6db8f83fd7722f6208f4f7551fcf87668f"
+        },
+        {
+          "page": 5,
+          "path": "visual-audit/examples/EXAMPLES_A_PRINT/p005.png",
+          "sha256": "8d3828a1de320a6de68b71e248075780ca3357abd875745cdeb0a67cf25a426e"
+        },
+        {
+          "page": 6,
+          "path": "visual-audit/examples/EXAMPLES_A_PRINT/p006.png",
+          "sha256": "9f72a4651d6678d3411d8bbf9a1f80802de9ee546bdf672bcefdedbade8c709e"
+        }
+      ],
+      "visually_viewed_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "observed_overlaps": 0,
+      "observed_clipping": 0,
+      "reviewer": "independent same-content A/B visual reviewer",
+      "previous_reviewed_pdf_sha256": "02d08ef3f746e846f46bd69143a6882bf75ea4a882926f3fad5a7c3cf5ec29e3"
+    },
+    {
+      "pdf": "qa/probes/pdf/EXAMPLES_A_SCREEN.pdf",
+      "sha256": "7f00b2dde5dc49a880a5d9e4159f0da3f2bacc253c8d3be86c91eb9c991419dd",
+      "pages": 6,
+      "renders": [
+        {
+          "page": 1,
+          "path": "visual-audit/examples/EXAMPLES_A_SCREEN/p001.png",
+          "sha256": "18d56ad1e2268419f9f8211d6176e5286a89ae94e8fe697a2d7c90993ac685ab"
+        },
+        {
+          "page": 2,
+          "path": "visual-audit/examples/EXAMPLES_A_SCREEN/p002.png",
+          "sha256": "1dacc162375ec1ca8d6b67345b1a2cab06ec5a7cb4929148d0b26ef44fbfcc52"
+        },
+        {
+          "page": 3,
+          "path": "visual-audit/examples/EXAMPLES_A_SCREEN/p003.png",
+          "sha256": "2c3bdcd99fc6da84ba2ddbae860589819595a38cfae9a31bc2a45c81194bf59b"
+        },
+        {
+          "page": 4,
+          "path": "visual-audit/examples/EXAMPLES_A_SCREEN/p004.png",
+          "sha256": "22876cbcdd8b0fa6927ef574f9d5e90cf8f8769593862a9497221247cdbe13d3"
+        },
+        {
+          "page": 5,
+          "path": "visual-audit/examples/EXAMPLES_A_SCREEN/p005.png",
+          "sha256": "3aea5ca5f462b08f0ff7a0b57c7b74cb8813db5acc4b95c7d0a1494a6c680327"
+        },
+        {
+          "page": 6,
+          "path": "visual-audit/examples/EXAMPLES_A_SCREEN/p006.png",
+          "sha256": "3de1cecba6e595c314f04939a4eef5430fc053bbc1b078982c9ff4efbe0fc1c5"
+        }
+      ],
+      "visually_viewed_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "observed_overlaps": 0,
+      "observed_clipping": 0,
+      "reviewer": "independent same-content A/B visual reviewer",
+      "previous_reviewed_pdf_sha256": "7499fc01a17be8079503a118ea62be192443a29e3ea255adb47d93bca2211490"
+    },
+    {
+      "pdf": "qa/probes/pdf/EXAMPLES_B_PRINT.pdf",
+      "sha256": "af43b76b57e77e7a172c3faeacc09b2395e9f849998cd465ec950b7b99962d8a",
+      "pages": 6,
+      "renders": [
+        {
+          "page": 1,
+          "path": "visual-audit/examples/EXAMPLES_B_PRINT/p001.png",
+          "sha256": "c20af97a13bf051b7156f730a053e1c7ded7e2ccd99041c95221a6ff0f978bf6"
+        },
+        {
+          "page": 2,
+          "path": "visual-audit/examples/EXAMPLES_B_PRINT/p002.png",
+          "sha256": "709228f1f0162ae528889eb828041724555b1e2a4f70db43c5ff762ccea4242c"
+        },
+        {
+          "page": 3,
+          "path": "visual-audit/examples/EXAMPLES_B_PRINT/p003.png",
+          "sha256": "538331f7f78e629dd8ec452612aa215bd60da2d36e4d6b4574f7bef9af563abb"
+        },
+        {
+          "page": 4,
+          "path": "visual-audit/examples/EXAMPLES_B_PRINT/p004.png",
+          "sha256": "f92509e86bcafcedb3e323b4bcab2a6db8f83fd7722f6208f4f7551fcf87668f"
+        },
+        {
+          "page": 5,
+          "path": "visual-audit/examples/EXAMPLES_B_PRINT/p005.png",
+          "sha256": "8d3828a1de320a6de68b71e248075780ca3357abd875745cdeb0a67cf25a426e"
+        },
+        {
+          "page": 6,
+          "path": "visual-audit/examples/EXAMPLES_B_PRINT/p006.png",
+          "sha256": "9f72a4651d6678d3411d8bbf9a1f80802de9ee546bdf672bcefdedbade8c709e"
+        }
+      ],
+      "visually_viewed_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "observed_overlaps": 0,
+      "observed_clipping": 0,
+      "reviewer": "independent same-content A/B visual reviewer",
+      "previous_reviewed_pdf_sha256": "8448580967104faadb9298bf68df2b0716d4b933bb90c4f2ed4c18e3712fb55d"
+    },
+    {
+      "pdf": "qa/probes/pdf/EXAMPLES_B_SCREEN.pdf",
+      "sha256": "9a9b745e4637ba1d27b01d987b5a233f31cccb7e035924d76a68786404564fbe",
+      "pages": 6,
+      "renders": [
+        {
+          "page": 1,
+          "path": "visual-audit/examples/EXAMPLES_B_SCREEN/p001.png",
+          "sha256": "c05f7c5c853516d6acee8eda4eb48df811eed3ffdc0c3d81c323b1780c55897c"
+        },
+        {
+          "page": 2,
+          "path": "visual-audit/examples/EXAMPLES_B_SCREEN/p002.png",
+          "sha256": "3ebdd9dba41474644b4543504add4a9196d3fcd77aec6bb20b89406e637a70c8"
+        },
+        {
+          "page": 3,
+          "path": "visual-audit/examples/EXAMPLES_B_SCREEN/p003.png",
+          "sha256": "2c3bdcd99fc6da84ba2ddbae860589819595a38cfae9a31bc2a45c81194bf59b"
+        },
+        {
+          "page": 4,
+          "path": "visual-audit/examples/EXAMPLES_B_SCREEN/p004.png",
+          "sha256": "22876cbcdd8b0fa6927ef574f9d5e90cf8f8769593862a9497221247cdbe13d3"
+        },
+        {
+          "page": 5,
+          "path": "visual-audit/examples/EXAMPLES_B_SCREEN/p005.png",
+          "sha256": "3aea5ca5f462b08f0ff7a0b57c7b74cb8813db5acc4b95c7d0a1494a6c680327"
+        },
+        {
+          "page": 6,
+          "path": "visual-audit/examples/EXAMPLES_B_SCREEN/p006.png",
+          "sha256": "3de1cecba6e595c314f04939a4eef5430fc053bbc1b078982c9ff4efbe0fc1c5"
+        }
+      ],
+      "visually_viewed_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "observed_overlaps": 0,
+      "observed_clipping": 0,
+      "reviewer": "independent same-content A/B visual reviewer",
+      "previous_reviewed_pdf_sha256": "f282bde388932ce7dde369b23e7a9db8917bdad76e9e7487975ba56dd0bc9032"
+    }
+  ],
+  "example_header_verdict": {
+    "recommended_default": "A",
+    "optional_alternative": "B",
+    "three_consecutive_examples_pass": true,
+    "long_example_visual_pass": true,
+    "scope": "Rendered proof inspection only; technical and plate QA recorded separately."
+  },
+  "scope": "Visual inspection of the explicitly listed PDF inputs and pages; no physical print test or PDF/X certification.",
+  "main_final_rebuild_verification": "visual-audit/FINAL_REBUILD_RASTER_CHECK.json",
+  "main_final_rebuild_result": "All40pages rendered;34pixel-identical;6changedmaterialtitlepagesactuallyviewedandpassed.",
+  "example_final_rebuild_result": "All24examplepagespixel-identicalafterfinalsourcefixes;prioractualviewjudgmentretained."
+}

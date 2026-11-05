@@ -1,0 +1,155 @@
+{
+  "matrix": 1.5,
+  "dpi": 108,
+  "fit_to_content": false,
+  "pdfs": [
+    {
+      "pdf": "qa/probes/pdf/EXAMPLES_A_PRINT.pdf",
+      "sha256": "42764bb4667eebdc1bb44836efa4014a78511e3a444b482619c0e03506f206c2",
+      "pages": 6,
+      "renders": [
+        {
+          "page": 1,
+          "path": "visual-audit/examples/EXAMPLES_A_PRINT/p001.png",
+          "sha256": "355868d1b5f96dba187741d25018a2aa21bfbcf9d333626df4f7ca7f78916789"
+        },
+        {
+          "page": 2,
+          "path": "visual-audit/examples/EXAMPLES_A_PRINT/p002.png",
+          "sha256": "0863010efe0da042d57cbcc04d53e0900534adb2e116e640cb64b0c115787c08"
+        },
+        {
+          "page": 3,
+          "path": "visual-audit/examples/EXAMPLES_A_PRINT/p003.png",
+          "sha256": "538331f7f78e629dd8ec452612aa215bd60da2d36e4d6b4574f7bef9af563abb"
+        },
+        {
+          "page": 4,
+          "path": "visual-audit/examples/EXAMPLES_A_PRINT/p004.png",
+          "sha256": "f92509e86bcafcedb3e323b4bcab2a6db8f83fd7722f6208f4f7551fcf87668f"
+        },
+        {
+          "page": 5,
+          "path": "visual-audit/examples/EXAMPLES_A_PRINT/p005.png",
+          "sha256": "8d3828a1de320a6de68b71e248075780ca3357abd875745cdeb0a67cf25a426e"
+        },
+        {
+          "page": 6,
+          "path": "visual-audit/examples/EXAMPLES_A_PRINT/p006.png",
+          "sha256": "9f72a4651d6678d3411d8bbf9a1f80802de9ee546bdf672bcefdedbade8c709e"
+        }
+      ]
+    },
+    {
+      "pdf": "qa/probes/pdf/EXAMPLES_A_SCREEN.pdf",
+      "sha256": "7f00b2dde5dc49a880a5d9e4159f0da3f2bacc253c8d3be86c91eb9c991419dd",
+      "pages": 6,
+      "renders": [
+        {
+          "page": 1,
+          "path": "visual-audit/examples/EXAMPLES_A_SCREEN/p001.png",
+          "sha256": "18d56ad1e2268419f9f8211d6176e5286a89ae94e8fe697a2d7c90993ac685ab"
+        },
+        {
+          "page": 2,
+          "path": "visual-audit/examples/EXAMPLES_A_SCREEN/p002.png",
+          "sha256": "1dacc162375ec1ca8d6b67345b1a2cab06ec5a7cb4929148d0b26ef44fbfcc52"
+        },
+        {
+          "page": 3,
+          "path": "visual-audit/examples/EXAMPLES_A_SCREEN/p003.png",
+          "sha256": "2c3bdcd99fc6da84ba2ddbae860589819595a38cfae9a31bc2a45c81194bf59b"
+        },
+        {
+          "page": 4,
+          "path": "visual-audit/examples/EXAMPLES_A_SCREEN/p004.png",
+          "sha256": "22876cbcdd8b0fa6927ef574f9d5e90cf8f8769593862a9497221247cdbe13d3"
+        },
+        {
+          "page": 5,
+          "path": "visual-audit/examples/EXAMPLES_A_SCREEN/p005.png",
+          "sha256": "3aea5ca5f462b08f0ff7a0b57c7b74cb8813db5acc4b95c7d0a1494a6c680327"
+        },
+        {
+          "page": 6,
+          "path": "visual-audit/examples/EXAMPLES_A_SCREEN/p006.png",
+          "sha256": "3de1cecba6e595c314f04939a4eef5430fc053bbc1b078982c9ff4efbe0fc1c5"
+        }
+      ]
+    },
+    {
+      "pdf": "qa/probes/pdf/EXAMPLES_B_PRINT.pdf",
+      "sha256": "af43b76b57e77e7a172c3faeacc09b2395e9f849998cd465ec950b7b99962d8a",
+      "pages": 6,
+      "renders": [
+        {
+          "page": 1,
+          "path": "visual-audit/examples/EXAMPLES_B_PRINT/p001.png",
+          "sha256": "c20af97a13bf051b7156f730a053e1c7ded7e2ccd99041c95221a6ff0f978bf6"
+        },
+        {
+          "page": 2,
+          "path": "visual-audit/examples/EXAMPLES_B_PRINT/p002.png",
+          "sha256": "709228f1f0162ae528889eb828041724555b1e2a4f70db43c5ff762ccea4242c"
+        },
+        {
+          "page": 3,
+          "path": "visual-audit/examples/EXAMPLES_B_PRINT/p003.png",
+          "sha256": "538331f7f78e629dd8ec452612aa215bd60da2d36e4d6b4574f7bef9af563abb"
+        },
+        {
+          "page": 4,
+          "path": "visual-audit/examples/EXAMPLES_B_PRINT/p004.png",
+          "sha256": "f92509e86bcafcedb3e323b4bcab2a6db8f83fd7722f6208f4f7551fcf87668f"
+        },
+        {
+          "page": 5,
+          "path": "visual-audit/examples/EXAMPLES_B_PRINT/p005.png",
+          "sha256": "8d3828a1de320a6de68b71e248075780ca3357abd875745cdeb0a67cf25a426e"
+        },
+        {
+          "page": 6,
+          "path": "visual-audit/examples/EXAMPLES_B_PRINT/p006.png",
+          "sha256": "9f72a4651d6678d3411d8bbf9a1f80802de9ee546bdf672bcefdedbade8c709e"
+        }
+      ]
+    },
+    {
+      "pdf": "qa/probes/pdf/EXAMPLES_B_SCREEN.pdf",
+      "sha256": "9a9b745e4637ba1d27b01d987b5a233f31cccb7e035924d76a68786404564fbe",
+      "pages": 6,
+      "renders": [
+        {
+          "page": 1,
+          "path": "visual-audit/examples/EXAMPLES_B_SCREEN/p001.png",
+          "sha256": "c05f7c5c853516d6acee8eda4eb48df811eed3ffdc0c3d81c323b1780c55897c"
+        },
+        {
+          "page": 2,
+          "path": "visual-audit/examples/EXAMPLES_B_SCREEN/p002.png",
+          "sha256": "3ebdd9dba41474644b4543504add4a9196d3fcd77aec6bb20b89406e637a70c8"
+        },
+        {
+          "page": 3,
+          "path": "visual-audit/examples/EXAMPLES_B_SCREEN/p003.png",
+          "sha256": "2c3bdcd99fc6da84ba2ddbae860589819595a38cfae9a31bc2a45c81194bf59b"
+        },
+        {
+          "page": 4,
+          "path": "visual-audit/examples/EXAMPLES_B_SCREEN/p004.png",
+          "sha256": "22876cbcdd8b0fa6927ef574f9d5e90cf8f8769593862a9497221247cdbe13d3"
+        },
+        {
+          "page": 5,
+          "path": "visual-audit/examples/EXAMPLES_B_SCREEN/p005.png",
+          "sha256": "3aea5ca5f462b08f0ff7a0b57c7b74cb8813db5acc4b95c7d0a1494a6c680327"
+        },
+        {
+          "page": 6,
+          "path": "visual-audit/examples/EXAMPLES_B_SCREEN/p006.png",
+          "sha256": "3de1cecba6e595c314f04939a4eef5430fc053bbc1b078982c9ff4efbe0fc1c5"
+        }
+      ]
+    }
+  ]
+}

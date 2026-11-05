@@ -1,0 +1,53 @@
+{
+  "status": "passed",
+  "fix": "Removed unused empty endfoot/endlastfoot blocks from BookLongTableStart; footer boxes now retain the longtable default void state.",
+  "cause": "Explicit empty footer blocks are non-void alignment boxes. In this longtable version LT@start then applies maxdepth=0; restoring the normal output routine at the table end can strand its final row without a continuation header.",
+  "changed_source_files": [
+    "source/styles/book-longtables.tex"
+  ],
+  "source_sha256": "0b3090a11c9e335a4ea3f61f63f4d6f92cfcd36f977cccbfa07aab337eebed2c",
+  "controlled_pair": "qa/tables/TABLE_PROBE_RESULTS.json",
+  "paired_preflight": "qa/tables/PREFLIGHT.json",
+  "boundary_regression": "qa/tables/TAIL_BOUNDARY_RESULTS.json",
+  "controlled_pages_per_profile": 6,
+  "controlled_table_data_pages": [
+    2,
+    3,
+    4,
+    5
+  ],
+  "controlled_all_120_rows_once_and_in_order": true,
+  "last_row_on_page": 5,
+  "post_table_text_on_page": 6,
+  "boundary_positive_cases": 10,
+  "negative_control_reproduces_old_missing_header": true,
+  "visual_review": {
+    "actual_views": [
+      "qa/tables/SCREEN/page1.png",
+      "qa/tables/SCREEN/page5.png",
+      "qa/tables/PRINT/page2.png",
+      "qa/tables/SCREEN/tail121-final.png"
+    ],
+    "png_sha256": {
+      "qa/tables/SCREEN/page1.png": "56c429e0da15ba8cdda10a892e634c599669a404f62afebf5742ca99a47fcadc",
+      "qa/tables/SCREEN/page5.png": "8977ae6baefc7fadf9a15a15991e781ddaa0edc7a3e8578b903b1d094cebffc3",
+      "qa/tables/PRINT/page2.png": "ce73af1bd5d9e30a40f6b2acf28c8a523ece0ceafde472e5ab9a3f2ca2eec0fb",
+      "qa/tables/SCREEN/tail121-final.png": "b3f72990dc6cdef08125197ee7723d422bdf2a4f44d7c683263b5fdf043473bd"
+    },
+    "observed_overlap_count": 0,
+    "observed_clipping_count": 0
+  },
+  "preserved": [
+    "public command signatures",
+    "table body and scientific content",
+    "fonts and sizes",
+    "page geometry",
+    "palette and tint roles",
+    "captions, numbering and references"
+  ],
+  "reproduction": [
+    "python3 qa/tables/run_table_probe.py",
+    "python3 qa/tables/check_tail_boundary.py",
+    "python3 source/scripts/validate_pdf.py --print qa/tables/PRINT/table-caption-probe.pdf --screen qa/tables/SCREEN/table-caption-probe.pdf --map source/config/color-map.json --report qa/tables/PREFLIGHT.json"
+  ]
+}

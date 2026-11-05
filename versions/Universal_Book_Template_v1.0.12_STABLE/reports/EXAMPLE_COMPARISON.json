@@ -1,0 +1,213 @@
+{
+  "status": "passed",
+  "output": "pdf/EXAMPLE_HEADER_COMPARISON.pdf",
+  "sha256": "cef4aab20d42f4a9ef828eeaa4f966307cb9687f652fb586a5a1120d2111e775",
+  "pages": 24,
+  "page_mm": [
+    170,
+    240
+  ],
+  "scale": 1,
+  "source_sha256": {
+    "qa/probes/pdf/EXAMPLES_A_SCREEN.pdf": "7f00b2dde5dc49a880a5d9e4159f0da3f2bacc253c8d3be86c91eb9c991419dd",
+    "qa/probes/pdf/EXAMPLES_B_SCREEN.pdf": "9a9b745e4637ba1d27b01d987b5a233f31cccb7e035924d76a68786404564fbe",
+    "qa/probes/pdf/EXAMPLES_A_PRINT.pdf": "42764bb4667eebdc1bb44836efa4014a78511e3a444b482619c0e03506f206c2",
+    "qa/probes/pdf/EXAMPLES_B_PRINT.pdf": "af43b76b57e77e7a172c3faeacc09b2395e9f849998cd465ec950b7b99962d8a"
+  },
+  "page_map": [
+    {
+      "comparison_page": 1,
+      "profile": "SCREEN",
+      "variant": "A",
+      "source_page": 1,
+      "scale": 1,
+      "overlays": false
+    },
+    {
+      "comparison_page": 2,
+      "profile": "SCREEN",
+      "variant": "B",
+      "source_page": 1,
+      "scale": 1,
+      "overlays": false
+    },
+    {
+      "comparison_page": 3,
+      "profile": "SCREEN",
+      "variant": "A",
+      "source_page": 2,
+      "scale": 1,
+      "overlays": false
+    },
+    {
+      "comparison_page": 4,
+      "profile": "SCREEN",
+      "variant": "B",
+      "source_page": 2,
+      "scale": 1,
+      "overlays": false
+    },
+    {
+      "comparison_page": 5,
+      "profile": "SCREEN",
+      "variant": "A",
+      "source_page": 3,
+      "scale": 1,
+      "overlays": false
+    },
+    {
+      "comparison_page": 6,
+      "profile": "SCREEN",
+      "variant": "B",
+      "source_page": 3,
+      "scale": 1,
+      "overlays": false
+    },
+    {
+      "comparison_page": 7,
+      "profile": "SCREEN",
+      "variant": "A",
+      "source_page": 4,
+      "scale": 1,
+      "overlays": false
+    },
+    {
+      "comparison_page": 8,
+      "profile": "SCREEN",
+      "variant": "B",
+      "source_page": 4,
+      "scale": 1,
+      "overlays": false
+    },
+    {
+      "comparison_page": 9,
+      "profile": "SCREEN",
+      "variant": "A",
+      "source_page": 5,
+      "scale": 1,
+      "overlays": false
+    },
+    {
+      "comparison_page": 10,
+      "profile": "SCREEN",
+      "variant": "B",
+      "source_page": 5,
+      "scale": 1,
+      "overlays": false
+    },
+    {
+      "comparison_page": 11,
+      "profile": "SCREEN",
+      "variant": "A",
+      "source_page": 6,
+      "scale": 1,
+      "overlays": false
+    },
+    {
+      "comparison_page": 12,
+      "profile": "SCREEN",
+      "variant": "B",
+      "source_page": 6,
+      "scale": 1,
+      "overlays": false
+    },
+    {
+      "comparison_page": 13,
+      "profile": "PRINT",
+      "variant": "A",
+      "source_page": 1,
+      "scale": 1,
+      "overlays": false
+    },
+    {
+      "comparison_page": 14,
+      "profile": "PRINT",
+      "variant": "B",
+      "source_page": 1,
+      "scale": 1,
+      "overlays": false
+    },
+    {
+      "comparison_page": 15,
+      "profile": "PRINT",
+      "variant": "A",
+      "source_page": 2,
+      "scale": 1,
+      "overlays": false
+    },
+    {
+      "comparison_page": 16,
+      "profile": "PRINT",
+      "variant": "B",
+      "source_page": 2,
+      "scale": 1,
+      "overlays": false
+    },
+    {
+      "comparison_page": 17,
+      "profile": "PRINT",
+      "variant": "A",
+      "source_page": 3,
+      "scale": 1,
+      "overlays": false
+    },
+    {
+      "comparison_page": 18,
+      "profile": "PRINT",
+      "variant": "B",
+      "source_page": 3,
+      "scale": 1,
+      "overlays": false
+    },
+    {
+      "comparison_page": 19,
+      "profile": "PRINT",
+      "variant": "A",
+      "source_page": 4,
+      "scale": 1,
+      "overlays": false
+    },
+    {
+      "comparison_page": 20,
+      "profile": "PRINT",
+      "variant": "B",
+      "source_page": 4,
+      "scale": 1,
+      "overlays": false
+    },
+    {
+      "comparison_page": 21,
+      "profile": "PRINT",
+      "variant": "A",
+      "source_page": 5,
+      "scale": 1,
+      "overlays": false
+    },
+    {
+      "comparison_page": 22,
+      "profile": "PRINT",
+      "variant": "B",
+      "source_page": 5,
+      "scale": 1,
+      "overlays": false
+    },
+    {
+      "comparison_page": 23,
+      "profile": "PRINT",
+      "variant": "A",
+      "source_page": 6,
+      "scale": 1,
+      "overlays": false
+    },
+    {
+      "comparison_page": 24,
+      "profile": "PRINT",
+      "variant": "B",
+      "source_page": 6,
+      "scale": 1,
+      "overlays": false
+    }
+  ],
+  "all_pages_pixel_identical_to_sources_at_72dpi": true,
+  "method": "Direct page insertion without overlays; bookmarks and page labels identify A/B."
+}

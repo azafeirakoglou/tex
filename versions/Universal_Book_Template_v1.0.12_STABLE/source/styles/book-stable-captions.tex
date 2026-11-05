@@ -1,0 +1,13 @@
+% v1.0.12: one caption policy for figure, table and longtable.
+% The coloured prefix/number keeps the existing BookSecondary (55%) role;
+% its descriptive text is the existing BookInk (100% neutral) role.
+\DeclareCaptionFont{BookCaptionInk}{\color{\BookCaptionTextColor}}
+\DeclareCaptionFont{BookCaptionAccentLabel}{%
+  \sffamily\bfseries\upshape\color{\BookCaptionLabelColor}}
+\captionsetup{%
+  format=hang,labelsep=space,
+  font={BookCaptionSize,BookCaptionRegular,BookCaptionInk},
+  labelfont={BookCaptionAccentLabel},
+  textfont={BookCaptionRegular,BookCaptionInk},
+  justification=raggedright,singlelinecheck=true,skip=5pt
+}
