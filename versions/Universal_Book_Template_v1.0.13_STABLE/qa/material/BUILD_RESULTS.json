@@ -1,0 +1,12 @@
+[
+  {
+    "profile": "SCREEN",
+    "status": "passed",
+    "pdf": "qa/material/SCREEN/material-proof.pdf"
+  },
+  {
+    "profile": "PRINT",
+    "status": "passed",
+    "pdf": "qa/material/PRINT/material-proof.pdf"
+  }
+]

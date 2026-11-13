@@ -1,0 +1,245 @@
+{
+  "status": "passed",
+  "proofs": [
+    {
+      "variant": "A",
+      "profile": "SCREEN",
+      "pdf": "qa/probes/pdf/EXAMPLES_A_SCREEN.pdf",
+      "input_sha256": "fa63ba2e244abf8bce0d454d3ac71817e9d0db6331896433356e712b1bae5659",
+      "status": "passed",
+      "measurements": {
+        "pages": 6,
+        "titles": {
+          "STABLESHORTONE": {
+            "page": 1,
+            "font": "NotoSerif-Medium",
+            "size_tex_pt": 10.699974846839904,
+            "title_rgb": "FFFFFF",
+            "header_height_bp": 23.687026977539062,
+            "dot_paths": 0
+          },
+          "STABLESHORTTWO": {
+            "page": 1,
+            "font": "NotoSerif-Medium",
+            "size_tex_pt": 10.699974846839904,
+            "title_rgb": "FFFFFF",
+            "header_height_bp": 23.68701171875,
+            "dot_paths": 0
+          },
+          "STABLESHORTTHREE": {
+            "page": 1,
+            "font": "NotoSerif-Medium",
+            "size_tex_pt": 10.699974846839904,
+            "title_rgb": "FFFFFF",
+            "header_height_bp": 23.686981201171875,
+            "dot_paths": 0
+          },
+          "STABLELONGTITLE": {
+            "page": 2,
+            "font": "NotoSerif-Medium",
+            "size_tex_pt": 10.699974846839904,
+            "title_rgb": "FFFFFF",
+            "header_height_bp": 23.68701171875,
+            "dot_paths": 0
+          }
+        },
+        "consecutive_examples_same_page": true,
+        "long_statement_pages": [
+          2,
+          4
+        ],
+        "long_solution_pages": [
+          4,
+          6
+        ],
+        "statement_rows": 24,
+        "solution_rows": 18,
+        "solution_on_white": true,
+        "solution_labels_kept_with_first_paragraph": true
+      }
+    },
+    {
+      "variant": "A",
+      "profile": "PRINT",
+      "pdf": "qa/probes/pdf/EXAMPLES_A_PRINT.pdf",
+      "input_sha256": "68c56e77936b512e69ee2d60939905e4baab9bb97a58f1b9622daa10ed20aa99",
+      "status": "passed",
+      "measurements": {
+        "pages": 6,
+        "titles": {
+          "STABLESHORTONE": {
+            "page": 1,
+            "font": "NotoSerif-Medium",
+            "size_tex_pt": 10.699974846839904,
+            "title_rgb": "FFFFFF",
+            "header_height_bp": 23.687026977539062,
+            "dot_paths": 0
+          },
+          "STABLESHORTTWO": {
+            "page": 1,
+            "font": "NotoSerif-Medium",
+            "size_tex_pt": 10.699974846839904,
+            "title_rgb": "FFFFFF",
+            "header_height_bp": 23.68701171875,
+            "dot_paths": 0
+          },
+          "STABLESHORTTHREE": {
+            "page": 1,
+            "font": "NotoSerif-Medium",
+            "size_tex_pt": 10.699974846839904,
+            "title_rgb": "FFFFFF",
+            "header_height_bp": 23.686981201171875,
+            "dot_paths": 0
+          },
+          "STABLELONGTITLE": {
+            "page": 2,
+            "font": "NotoSerif-Medium",
+            "size_tex_pt": 10.699974846839904,
+            "title_rgb": "FFFFFF",
+            "header_height_bp": 23.68701171875,
+            "dot_paths": 0
+          }
+        },
+        "consecutive_examples_same_page": true,
+        "long_statement_pages": [
+          2,
+          4
+        ],
+        "long_solution_pages": [
+          4,
+          6
+        ],
+        "statement_rows": 24,
+        "solution_rows": 18,
+        "solution_on_white": true,
+        "solution_labels_kept_with_first_paragraph": true
+      }
+    },
+    {
+      "variant": "B",
+      "profile": "SCREEN",
+      "pdf": "qa/probes/pdf/EXAMPLES_B_SCREEN.pdf",
+      "input_sha256": "ad528ed6e3addb7b2e6edc9dfaf1d959b3c2b38cdc2c4ee0ccfa53e637df9fc7",
+      "status": "passed",
+      "measurements": {
+        "pages": 6,
+        "titles": {
+          "STABLESHORTONE": {
+            "page": 1,
+            "font": "NotoSerif-Medium",
+            "size_tex_pt": 10.699974846839904,
+            "title_rgb": "203B63",
+            "header_height_bp": 23.687026977539062,
+            "dot_paths": 0
+          },
+          "STABLESHORTTWO": {
+            "page": 1,
+            "font": "NotoSerif-Medium",
+            "size_tex_pt": 10.699974846839904,
+            "title_rgb": "203B63",
+            "header_height_bp": 23.68701171875,
+            "dot_paths": 0
+          },
+          "STABLESHORTTHREE": {
+            "page": 1,
+            "font": "NotoSerif-Medium",
+            "size_tex_pt": 10.699974846839904,
+            "title_rgb": "203B63",
+            "header_height_bp": 23.686981201171875,
+            "dot_paths": 0
+          },
+          "STABLELONGTITLE": {
+            "page": 2,
+            "font": "NotoSerif-Medium",
+            "size_tex_pt": 10.699974846839904,
+            "title_rgb": "203B63",
+            "header_height_bp": 23.68701171875,
+            "dot_paths": 0
+          }
+        },
+        "consecutive_examples_same_page": true,
+        "long_statement_pages": [
+          2,
+          4
+        ],
+        "long_solution_pages": [
+          4,
+          6
+        ],
+        "statement_rows": 24,
+        "solution_rows": 18,
+        "solution_on_white": true,
+        "solution_labels_kept_with_first_paragraph": true
+      }
+    },
+    {
+      "variant": "B",
+      "profile": "PRINT",
+      "pdf": "qa/probes/pdf/EXAMPLES_B_PRINT.pdf",
+      "input_sha256": "2b8761c9050545f8d65c1b63a5c9ae845dd74619502b6f3f2d2cb64673c79509",
+      "status": "passed",
+      "measurements": {
+        "pages": 6,
+        "titles": {
+          "STABLESHORTONE": {
+            "page": 1,
+            "font": "NotoSerif-Medium",
+            "size_tex_pt": 10.699974846839904,
+            "title_rgb": "ED1C24",
+            "header_height_bp": 23.687026977539062,
+            "dot_paths": 0
+          },
+          "STABLESHORTTWO": {
+            "page": 1,
+            "font": "NotoSerif-Medium",
+            "size_tex_pt": 10.699974846839904,
+            "title_rgb": "ED1C24",
+            "header_height_bp": 23.68701171875,
+            "dot_paths": 0
+          },
+          "STABLESHORTTHREE": {
+            "page": 1,
+            "font": "NotoSerif-Medium",
+            "size_tex_pt": 10.699974846839904,
+            "title_rgb": "ED1C24",
+            "header_height_bp": 23.686981201171875,
+            "dot_paths": 0
+          },
+          "STABLELONGTITLE": {
+            "page": 2,
+            "font": "NotoSerif-Medium",
+            "size_tex_pt": 10.699974846839904,
+            "title_rgb": "ED1C24",
+            "header_height_bp": 23.68701171875,
+            "dot_paths": 0
+          }
+        },
+        "consecutive_examples_same_page": true,
+        "long_statement_pages": [
+          2,
+          4
+        ],
+        "long_solution_pages": [
+          4,
+          6
+        ],
+        "statement_rows": 24,
+        "solution_rows": 18,
+        "solution_on_white": true,
+        "solution_labels_kept_with_first_paragraph": true
+      }
+    }
+  ],
+  "ab_geometry": [
+    {
+      "profile": "SCREEN",
+      "same_words_and_positions": true,
+      "tolerance_bp": 0.02
+    },
+    {
+      "profile": "PRINT",
+      "same_words_and_positions": true,
+      "tolerance_bp": 0.02
+    }
+  ]
+}

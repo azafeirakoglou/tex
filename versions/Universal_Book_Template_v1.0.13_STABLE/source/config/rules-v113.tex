@@ -1,0 +1,15 @@
+% v1.0.13: central decorative-rule hierarchy, separate from scientific lines.
+% Existing thin rules (0.35--0.55 pt), exercise separators (0.75 pt),
+% scientific diagrams and the fixed 1.08 pt icon outlines are untouched.
+\newcommand{\BookTeachingRuleWidth}{1pt}
+\newcommand{\BookStatementRuleWidth}{1.5pt}
+
+% Active callout styles and the legacy shared renderer use the same teaching
+% category. MethodBox and LearningGoals refer directly to this category.
+\renewcommand{\BookAttentionRuleWidth}{\BookTeachingRuleWidth}
+\renewcommand{\BookStableCalloutRuleWidth}{\BookTeachingRuleWidth}
+\renewcommand{\BookCalloutAccentRuleWidth}{\BookTeachingRuleWidth}
+
+% The chapter-opening accent and numbered mathematical statements share the
+% second category; this does not change any figure/axis/vector setting.
+\renewcommand{\BookOpeningTitleRuleWidth}{\BookStatementRuleWidth}

@@ -1,0 +1,24 @@
+\documentclass[11pt,twoside,openright]{book}
+\input{config/book-config.tex}
+\newif\ifBookTwoInkProof
+\ifdefined\ProbePrint\BookTwoInkProoftrue\else\BookTwoInkProoffalse\fi
+\newif\ifPrintThreeInk\PrintThreeInkfalse
+\usepackage{styles/universalbook}
+\pagestyle{plain}
+\newcommand{\IconSlot}[2]{\begin{minipage}[t]{.30\linewidth}\centering
+  \vbox to15mm{\vfil\hbox to\linewidth{\hfil#2\hfil}\vfil}
+  {\small\color{BookInk}#1}\par\end{minipage}}
+\newcommand{\IconRow}[3]{\par\medskip{\bfseries\color{BookInk}#1}\par
+\begingroup\renewcommand{\BookWarningIconScale}{#2}\renewcommand{\BookHistoryIconScale}{#3}
+\IconSlot{Λάμπα — αναφορά}{\BookCalloutBulb}\hfill
+\IconSlot{Προσοχή}{\BookCalloutWarning}\hfill
+\IconSlot{Ιστορία}{\BookCalloutHourglass}\par\endgroup}
+\begin{document}
+\section*{Δοκίμιο αντιληπτού μεγέθους}
+\IconRow{Αρχική v1.0.12: τρίγωνο 0.94, κλεψύδρα 0.81}{.94}{.81}
+\IconRow{Υποψήφια A: τρίγωνο 0.90, κλεψύδρα 0.73}{.90}{.73}
+\IconRow{Υποψήφια B: τρίγωνο 0.88, κλεψύδρα 0.76}{.88}{.76}
+\par\bigskip
+Η λάμπα παραμένει στην κλίμακα 0.81. Τα περιγράμματα είναι 1.08 pt,
+χωρίς αλλαγή στη γεωμετρία των κουτιών ή στις χρωματικές τιμές.
+\end{document}

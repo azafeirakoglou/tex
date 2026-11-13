@@ -1,0 +1,290 @@
+{
+  "status": "passed",
+  "profiles": [
+    {
+      "profile": "SCREEN",
+      "status": "passed",
+      "pdf": "qa/material/SCREEN/material-proof.pdf",
+      "sha256": "869968d0477c147181ec75808e5b2ad7b592f7984bb3c37f0dbf7c4a04bada7f",
+      "checks": {
+        "short_header_height_not_increased_for_icon": true,
+        "six_expected_pages": true,
+        "native_170x240_page_size": true,
+        "all_graphics_are_vector": true,
+        "subtitle_absent_by_default_and_present_only_when_enabled": true,
+        "icons_vertically_centered_on_whole_header": true,
+        "icons_have_4_to_5_mm_right_inset": true,
+        "all_header_text_has_at_least_5mm_icon_clearance": true,
+        "icon_ink_extent_is_10_to_12mm": true,
+        "clipboard_and_pencil_remain_distinct": true,
+        "short_header_height_is_stable_with_subtitle_toggle": true,
+        "hidden_subtitle_leaves_no_extra_gap": true,
+        "enabled_subtitle_adds_only_its_real_content": true,
+        "header_titles_keep_NotoSerif_Medium_16": true,
+        "running_header_text_does_not_overlap_logo": true,
+        "body_returns_to_black_Inter_10_95": true,
+        "no_bad_boxes_missing_glyphs_or_unresolved_references": true
+      },
+      "measured_box_heights_tex_pt": {
+        "CURRENT": "58.46246",
+        "NOICONBASELINE": "58.46246"
+      },
+      "measurements": [
+        {
+          "page": 1,
+          "frame": [
+            56.69300079345703,
+            53.85300064086914,
+            433.7057189941406,
+            109.08200073242188
+          ],
+          "icon": [
+            390.7033996582031,
+            66.50027465820312,
+            420.3257141113281,
+            96.12261962890625
+          ],
+          "icon_center_delta_mm": 0.055052222145928274,
+          "right_inset_mm": 4.720168389214409,
+          "text_to_icon_gap_mm": 56.30562324523925,
+          "icon_extent_mm": 10.45010503133138,
+          "white_vector_paths": 4
+        },
+        {
+          "page": 2,
+          "frame": [
+            48.18899917602539,
+            53.85206604003906,
+            425.20172119140625,
+            178.5019989013672
+          ],
+          "icon": [
+            382.19940185546875,
+            101.21028137207031,
+            411.82171630859375,
+            130.83262634277344
+          ],
+          "icon_center_delta_mm": 0.054884677463107635,
+          "right_inset_mm": 4.720168389214409,
+          "text_to_icon_gap_mm": 15.586968485514323,
+          "icon_extent_mm": 10.45010503133138,
+          "white_vector_paths": 4
+        },
+        {
+          "page": 3,
+          "frame": [
+            56.69300079345703,
+            53.85300064086914,
+            433.7057189941406,
+            109.08200073242188
+          ],
+          "icon": [
+            390.7033996582031,
+            66.50027465820312,
+            420.3257141113281,
+            96.12261962890625
+          ],
+          "icon_center_delta_mm": 0.055052222145928274,
+          "right_inset_mm": 4.720168389214409,
+          "text_to_icon_gap_mm": 56.30562324523925,
+          "icon_extent_mm": 10.45010503133138,
+          "white_vector_paths": 4
+        },
+        {
+          "page": 4,
+          "frame": [
+            48.18899917602539,
+            53.85224914550781,
+            425.20172119140625,
+            108.89299011230469
+          ],
+          "icon": [
+            386.8764343261719,
+            66.7169189453125,
+            411.5101013183594,
+            96.02761840820312
+          ],
+          "icon_center_delta_mm": 0.00012380811903211803,
+          "right_inset_mm": 4.830099232991536,
+          "text_to_icon_gap_mm": 57.21329824659559,
+          "icon_extent_mm": 10.340163421630859,
+          "white_vector_paths": 3
+        },
+        {
+          "page": 5,
+          "frame": [
+            56.69300079345703,
+            53.851104736328125,
+            433.7057189941406,
+            200.23098754882812
+          ],
+          "icon": [
+            395.38043212890625,
+            112.38591003417969,
+            420.01409912109375,
+            141.6966094970703
+          ],
+          "icon_center_delta_mm": 7.536146375868055e-05,
+          "right_inset_mm": 4.830099232991536,
+          "text_to_icon_gap_mm": 14.891963534884983,
+          "icon_extent_mm": 10.340163421630859,
+          "white_vector_paths": 3
+        }
+      ],
+      "diagnostics": {
+        "overfull": 0,
+        "underfull": 0,
+        "missing": 0,
+        "warnings": [
+          "Package caption Warning: Unused \\captionsetup[figure] on input line 156.",
+          "Package caption Warning: Unused \\captionsetup[table] on input line 157."
+        ]
+      }
+    },
+    {
+      "profile": "PRINT",
+      "status": "passed",
+      "pdf": "qa/material/PRINT/material-proof.pdf",
+      "sha256": "5a1d0265acdeb3ef64665497b076a0ed68f693044e51ea27337e4de45dc64277",
+      "checks": {
+        "short_header_height_not_increased_for_icon": true,
+        "six_expected_pages": true,
+        "native_170x240_page_size": true,
+        "all_graphics_are_vector": true,
+        "subtitle_absent_by_default_and_present_only_when_enabled": true,
+        "icons_vertically_centered_on_whole_header": true,
+        "icons_have_4_to_5_mm_right_inset": true,
+        "all_header_text_has_at_least_5mm_icon_clearance": true,
+        "icon_ink_extent_is_10_to_12mm": true,
+        "clipboard_and_pencil_remain_distinct": true,
+        "short_header_height_is_stable_with_subtitle_toggle": true,
+        "hidden_subtitle_leaves_no_extra_gap": true,
+        "enabled_subtitle_adds_only_its_real_content": true,
+        "header_titles_keep_NotoSerif_Medium_16": true,
+        "running_header_text_does_not_overlap_logo": true,
+        "body_returns_to_black_Inter_10_95": true,
+        "no_bad_boxes_missing_glyphs_or_unresolved_references": true
+      },
+      "measured_box_heights_tex_pt": {
+        "CURRENT": "58.46246",
+        "NOICONBASELINE": "58.46246"
+      },
+      "measurements": [
+        {
+          "page": 1,
+          "frame": [
+            56.69300079345703,
+            53.85300064086914,
+            433.7057189941406,
+            109.08200073242188
+          ],
+          "icon": [
+            390.7033996582031,
+            66.50027465820312,
+            420.3257141113281,
+            96.12261962890625
+          ],
+          "icon_center_delta_mm": 0.055052222145928274,
+          "right_inset_mm": 4.720168389214409,
+          "text_to_icon_gap_mm": 56.30562324523925,
+          "icon_extent_mm": 10.45010503133138,
+          "white_vector_paths": 4
+        },
+        {
+          "page": 2,
+          "frame": [
+            48.18899917602539,
+            53.85206604003906,
+            425.20172119140625,
+            178.5019989013672
+          ],
+          "icon": [
+            382.19940185546875,
+            101.21028137207031,
+            411.82171630859375,
+            130.83262634277344
+          ],
+          "icon_center_delta_mm": 0.054884677463107635,
+          "right_inset_mm": 4.720168389214409,
+          "text_to_icon_gap_mm": 15.586968485514323,
+          "icon_extent_mm": 10.45010503133138,
+          "white_vector_paths": 4
+        },
+        {
+          "page": 3,
+          "frame": [
+            56.69300079345703,
+            53.85300064086914,
+            433.7057189941406,
+            109.08200073242188
+          ],
+          "icon": [
+            390.7033996582031,
+            66.50027465820312,
+            420.3257141113281,
+            96.12261962890625
+          ],
+          "icon_center_delta_mm": 0.055052222145928274,
+          "right_inset_mm": 4.720168389214409,
+          "text_to_icon_gap_mm": 56.30562324523925,
+          "icon_extent_mm": 10.45010503133138,
+          "white_vector_paths": 4
+        },
+        {
+          "page": 4,
+          "frame": [
+            48.18899917602539,
+            53.85224914550781,
+            425.20172119140625,
+            108.89299011230469
+          ],
+          "icon": [
+            386.8764343261719,
+            66.7169189453125,
+            411.5101013183594,
+            96.02761840820312
+          ],
+          "icon_center_delta_mm": 0.00012380811903211803,
+          "right_inset_mm": 4.830099232991536,
+          "text_to_icon_gap_mm": 57.21329824659559,
+          "icon_extent_mm": 10.340163421630859,
+          "white_vector_paths": 3
+        },
+        {
+          "page": 5,
+          "frame": [
+            56.69300079345703,
+            53.851104736328125,
+            433.7057189941406,
+            200.23098754882812
+          ],
+          "icon": [
+            395.38043212890625,
+            112.38591003417969,
+            420.01409912109375,
+            141.6966094970703
+          ],
+          "icon_center_delta_mm": 7.536146375868055e-05,
+          "right_inset_mm": 4.830099232991536,
+          "text_to_icon_gap_mm": 14.891963534884983,
+          "icon_extent_mm": 10.340163421630859,
+          "white_vector_paths": 3
+        }
+      ],
+      "diagnostics": {
+        "overfull": 0,
+        "underfull": 0,
+        "missing": 0,
+        "warnings": [
+          "Package caption Warning: Unused \\captionsetup[figure] on input line 156.",
+          "Package caption Warning: Unused \\captionsetup[table] on input line 157."
+        ]
+      }
+    }
+  ],
+  "owned_source_sha256": {
+    "config/material-v113.tex": "c9ffc0d0dfde39a1275c9afe3ce7c4d7d427865ebb4f0e79ed1d4d93dda99afe",
+    "styles/book-material-icons.tex": "f2f989045590a5d277d5908d740dd04bb1f9b4fdf70bf4f68cf22be41e07898c",
+    "styles/book-stable-material.tex": "d881894d8b7c9482bd9a25ecf6fd159dcf09a129167461016a0f775498e271c0"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "purpose": "Bundled pinned original v1.0.10 fonts, licenses and Greek hyphenation. No network needed after unpacking.",
+  "sha256": {
+    "runtime/fonts/Inter-Italic.otf": "3bdf49f72ad2f2959a2619ceef700784504f6d17f502e2e2bc6edce5d43ca631",
+    "runtime/fonts/Inter-Medium.otf": "6c222ed2c3660524dd0c14fb745e00fee65c5361ab28f60fba6730bf4e648763",
+    "runtime/fonts/Inter-Regular.otf": "d4f2b9e148059a15f014cb0f0b8fea8cd11bfa447dd483bedf1b0adc0e2ba799",
+    "runtime/fonts/Inter-SemiBold.otf": "0a4d30778fa2dc239368d90fd854b88b27e7ede737450da72686a90eca66f02c",
+    "runtime/fonts/Inter-SemiBoldItalic.otf": "a350102650a86612efa66e0291315dba24be43e1f3716359c17d365376bea11e",
+    "runtime/fonts/NotoSerif-Italic.ttf": "0ea81d6b54fc8aa5dff0fd6ebe7cfa431e9e6cf747a8d4aa33581fa0aaccffea",
+    "runtime/fonts/NotoSerif-Medium.ttf": "90eeb03ad7b03e67037091c061c13b12dba7d21e63f54d19d196f181c5958f86",
+    "runtime/fonts/NotoSerif-MediumItalic.ttf": "a45b7e6cfa740f00694bd4ec6da14470a742e8c3843c663ad1282900be63a647",
+    "runtime/fonts/NotoSerif-Regular.ttf": "c8f669ceb2c9c60ccf55198b305e08a997ffca79a38cc7eeb551e643cbe66505",
+    "runtime/fonts/STIXTwoMath-Regular.ttf": "562551b15b836e6e01d1b7350909baf3c8c8d83260c1190fbf4544333e6936de",
+    "runtime/licenses/Inter-LICENSE.txt": "262481e844521b326f5ecd053e59b98c8b2da78c8ee1bdbb6e8174305e54935a",
+    "runtime/licenses/NotoSerif-OFL.txt": "0dab92d0544f7b233403f14b84a663bdbfa746982eda629e7f4f9ffe1b036feb",
+    "runtime/licenses/STIXTwoMath-OFL.txt": "0c8825913b60d858aacdb33c4ca6660a7d64b0d6464702efbb19313f5765861a",
+    "runtime/texmf/tex/generic/config/language.dat": "1644e81089355dd8d5d39c3d845e0b89ea299e81e0b65a041fb7edfbc0124546",
+    "runtime/texmf/tex/generic/hyph-utf8/hyph-el-monoton.tex": "a3aa9ecba9c00dd958a2b1d1d3b3aa851701f6d0027ef9cc9d7365e432c5acb0",
+    "runtime/texmf/tex/generic/hyph-utf8/loadhyph-el-monoton.tex": "b82464512dbbc228218ef23a7a8aede965976ee39c26d043eb5e009d87a0e7e4"
+  }
+}

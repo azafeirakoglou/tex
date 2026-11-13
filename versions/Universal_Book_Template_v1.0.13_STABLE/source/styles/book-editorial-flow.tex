@@ -1,0 +1,61 @@
+% v1.0.11 candidate: explicit, central page-flow adjustments.
+% No font, page geometry, internal box padding, or author content changes.
+\providecommand{\BookEditorialInTextSep}{5pt plus 2pt minus 2pt}
+\providecommand{\BookEditorialTextFloatSep}{12pt plus 2pt minus 3pt}
+\providecommand{\BookEditorialFloatSep}{8pt plus 2pt minus 2pt}
+\providecommand{\BookEditorialQuoteBeforeSkip}{6pt}
+\providecommand{\BookEditorialQuoteAfterSkip}{6pt}
+\providecommand{\BookEditorialExampleBeforeSkip}{3pt}
+\providecommand{\BookEditorialExampleAfterSkip}{3pt}
+\providecommand{\BookEditorialExampleBoxBeforeSkip}{4pt}
+\providecommand{\BookEditorialExampleBoxAfterSkip}{5pt}
+\providecommand{\BookEditorialExampleDisplaySkip}{7pt plus 2pt minus 2pt}
+\providecommand{\BookEditorialExampleShortDisplayAfterSkip}{5pt plus 2pt minus 2pt}
+\setlength{\intextsep}{\BookEditorialInTextSep}
+\setlength{\textfloatsep}{\BookEditorialTextFloatSep}
+\setlength{\floatsep}{\BookEditorialFloatSep}
+
+% Reserve the actual complete quote, rather than five body baselines.
+% The stored minipage keeps the quote, attribution, and source indivisible.
+\newsavebox{\BookEditorialQuoteBox}
+\RenewDocumentCommand{\BookQuote}{m m o}{%
+  \par
+  \sbox{\BookEditorialQuoteBox}{%
+    \begin{minipage}{\dimexpr\linewidth-7mm\relax}%
+      \raggedright
+      {\BookHeadingFont\color{BookSecondary}\fontsize{22}{23}\selectfont “\kern2mm}%
+      {\BookHeadingFont\itshape\color{BookInk}\fontsize{11.4}{16.4}\selectfont #1}\par\vspace{4pt}%
+      {\raggedleft\sffamily\fontsize{8.5}{11}\selectfont\color{BookInk}— #2\par}%
+      \IfNoValueF{#3}{\vspace{1pt}{\raggedleft\sffamily\fontsize{7.3}{10}\selectfont
+        \color{BookHistory}#3\par}}%
+    \end{minipage}%
+  }%
+  \Needspace{\dimexpr\ht\BookEditorialQuoteBox+\dp\BookEditorialQuoteBox+\BookEditorialQuoteBeforeSkip\relax}%
+  \addvspace{\BookEditorialQuoteBeforeSkip}%
+  \noindent\hspace*{3mm}\usebox{\BookEditorialQuoteBox}%
+  \par\addvspace{\BookEditorialQuoteAfterSkip}%
+}
+
+% Compact the spaces outside boxes and displays within an example only.
+% Required internal padding and all title/body sizes remain unchanged.
+\RenewDocumentEnvironment{workedexample}{m}{%
+  \par\Needspace{7\baselineskip}\refstepcounter{workedexample}%
+  \def\BookCurrentExampleTitle{#1}%
+  \tcbset{%
+    BookCallout/.append style={before skip=\BookEditorialExampleBoxBeforeSkip,
+      after skip=\BookEditorialExampleBoxAfterSkip},%
+    BookProblemRender/.append style={before skip=\BookEditorialExampleBoxBeforeSkip,
+      after skip=\BookEditorialExampleBoxAfterSkip}}%
+  \setlength{\abovedisplayskip}{\BookEditorialExampleDisplaySkip}%
+  \setlength{\belowdisplayskip}{\BookEditorialExampleDisplaySkip}%
+  \setlength{\abovedisplayshortskip}{0pt plus 2pt}%
+  \setlength{\belowdisplayshortskip}{\BookEditorialExampleShortDisplayAfterSkip}%
+  \addvspace{\BookEditorialExampleBeforeSkip}%
+}{\par\addvspace{\BookEditorialExampleAfterSkip}}
+
+% A solution label belongs with the first solution paragraph or display.
+\renewcommand{\SolutionHeading}{%
+  \par\Needspace{4\baselineskip}\vspace{2pt}%
+  {\BookMediumLabelFont\fontsize{\BookSolutionLabelSize}{13}\selectfont
+    \color{BookExampleAccent}\LabelSolution}\par\nobreak\smallskip\nobreak
+}

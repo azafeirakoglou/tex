@@ -1,0 +1,346 @@
+{
+  "status": "passed",
+  "physical_print_test": false,
+  "matrix": 1.5,
+  "reviewer": "component_visual agent using tools.view_image on all 18 full paired PNGs",
+  "reviewed_at_utc": "2026-11-13T12:53:14.906587+00:00",
+  "visually_viewed_pair_count": 18,
+  "visually_viewed_pdf_page_count": 36,
+  "observed_clipping_count": 0,
+  "observed_overlap_count": 0,
+  "component_pdf_reviews": [
+    {
+      "pdf": "qa/material/PRINT/material-proof.pdf",
+      "sha256": "5a1d0265acdeb3ef64665497b076a0ed68f693044e51ea27337e4de45dc64277",
+      "visually_viewed_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "renders": [
+        {
+          "page": 1,
+          "path": "visual-audit/renders/material/PRINT/page-01.png",
+          "sha256": "9011934cce92639c0a4d23c8922658dc0f56774f425ff016d080590ad3c2a112"
+        },
+        {
+          "page": 2,
+          "path": "visual-audit/renders/material/PRINT/page-02.png",
+          "sha256": "3a297a56f5d0dac0a95d16888f141335ce7d92128dfbf005d7b1d25dda7cf4e3"
+        },
+        {
+          "page": 3,
+          "path": "visual-audit/renders/material/PRINT/page-03.png",
+          "sha256": "fc704b36fef4d39b4027659b6ee7386bbcfb50002ac5736757397046b7ef08f9"
+        },
+        {
+          "page": 4,
+          "path": "visual-audit/renders/material/PRINT/page-04.png",
+          "sha256": "1f71da7b5069e1a0651beb572848f59cd2d14b847b784a96387fc5be0633132d"
+        },
+        {
+          "page": 5,
+          "path": "visual-audit/renders/material/PRINT/page-05.png",
+          "sha256": "cd31906e0cbff7f9a468a2d2ee9de316f3341c6c156b53b730978e2362847c96"
+        },
+        {
+          "page": 6,
+          "path": "visual-audit/renders/material/PRINT/page-06.png",
+          "sha256": "bbededb50bf38d9f5e5271ed216bf75f022f576412821f05c6242d6c50f1334c"
+        }
+      ]
+    },
+    {
+      "pdf": "qa/material/SCREEN/material-proof.pdf",
+      "sha256": "869968d0477c147181ec75808e5b2ad7b592f7984bb3c37f0dbf7c4a04bada7f",
+      "visually_viewed_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "renders": [
+        {
+          "page": 1,
+          "path": "visual-audit/renders/material/SCREEN/page-01.png",
+          "sha256": "0e74f2284f75b9cd1a36eb89123d3651c5a94b527a71436a8c0b81cf0681949a"
+        },
+        {
+          "page": 2,
+          "path": "visual-audit/renders/material/SCREEN/page-02.png",
+          "sha256": "a76c156de812940b368797407d20f6156fd6de06155dd35bc62265e36248aaf2"
+        },
+        {
+          "page": 3,
+          "path": "visual-audit/renders/material/SCREEN/page-03.png",
+          "sha256": "ba4a98c0632d5dfdf55c7b367e85572395d0b94f17212f7d478b1fe722275c0b"
+        },
+        {
+          "page": 4,
+          "path": "visual-audit/renders/material/SCREEN/page-04.png",
+          "sha256": "a6d4c3cbc9945f3609d9127c1f69e712cbc16671ebf73259c44c422c4ce32af5"
+        },
+        {
+          "page": 5,
+          "path": "visual-audit/renders/material/SCREEN/page-05.png",
+          "sha256": "f1d58cea3dc358aa73657e8dbf2f80ec0c3b8a8e09a29fa15037fef7f1bd1016"
+        },
+        {
+          "page": 6,
+          "path": "visual-audit/renders/material/SCREEN/page-06.png",
+          "sha256": "cf4a7343524847c7ecc041c0a6a24f42cfac4e4f25512689920d1210a15577ca"
+        }
+      ]
+    },
+    {
+      "pdf": "qa/icons/PRINT/icon-context.pdf",
+      "sha256": "3801f40fb8b650ee8fcb70878c7d74e65515fddc9b3088bb4248b230756cc2de",
+      "visually_viewed_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "renders": [
+        {
+          "page": 1,
+          "path": "visual-audit/renders/icons/PRINT/page-01.png",
+          "sha256": "9df4adc24a05e3bcaf9827113b8ff78c74b157d189b265601aa727a5a7c339d6"
+        },
+        {
+          "page": 2,
+          "path": "visual-audit/renders/icons/PRINT/page-02.png",
+          "sha256": "f0d6aaf01745ca53ec6b67cefd4dbb5464baa5a7c00cb4e21fb74fafde2d5b53"
+        },
+        {
+          "page": 3,
+          "path": "visual-audit/renders/icons/PRINT/page-03.png",
+          "sha256": "5dc34573eda6c8d34b7850d6942d92cc4e05abd0af8cb8637d9d39f245d5923e"
+        },
+        {
+          "page": 4,
+          "path": "visual-audit/renders/icons/PRINT/page-04.png",
+          "sha256": "44f2819ed1cb397c3ca92646ac9d4049357139e9b67cc319985b195cd37df027"
+        },
+        {
+          "page": 5,
+          "path": "visual-audit/renders/icons/PRINT/page-05.png",
+          "sha256": "2ba5497c637db4c7cbd8e17824942e729d6cc153675011d59963bbf3eca4f29f"
+        },
+        {
+          "page": 6,
+          "path": "visual-audit/renders/icons/PRINT/page-06.png",
+          "sha256": "93c630e38902f7c38e770492c2e8601f6a250b58e3954d8a5b520df223f01ee8"
+        },
+        {
+          "page": 7,
+          "path": "visual-audit/renders/icons/PRINT/page-07.png",
+          "sha256": "5d1be4045fbfcf356a433a608acca41d921f9c3c625f12c1086b8d53ce50e8b3"
+        }
+      ]
+    },
+    {
+      "pdf": "qa/icons/SCREEN/icon-context.pdf",
+      "sha256": "a565d9f87abbcdb9387152312fae1ddc0a9cc26533feb35ae6d4896214508fee",
+      "visually_viewed_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "renders": [
+        {
+          "page": 1,
+          "path": "visual-audit/renders/icons/SCREEN/page-01.png",
+          "sha256": "3ef5b4e27f19fc46ab3c6058e18221daee70cc61cf609d5e40aabb2b51d41a66"
+        },
+        {
+          "page": 2,
+          "path": "visual-audit/renders/icons/SCREEN/page-02.png",
+          "sha256": "08aff2ee408092e13d51f3f5752ec746912f4f5a27b73f8f3971205f7f088443"
+        },
+        {
+          "page": 3,
+          "path": "visual-audit/renders/icons/SCREEN/page-03.png",
+          "sha256": "d558a3aedf860f9aa998d4b4e672b3eb1d6a8f69977723d28f7f03c4c9a07ff3"
+        },
+        {
+          "page": 4,
+          "path": "visual-audit/renders/icons/SCREEN/page-04.png",
+          "sha256": "54a7aafb4ddfb012a3f26458ba79e1c55d543af127d4a5801712f88e45bffad3"
+        },
+        {
+          "page": 5,
+          "path": "visual-audit/renders/icons/SCREEN/page-05.png",
+          "sha256": "15b23ffe29494fc53889e244b474250dd8cf6a965f12c363ac5cc97c6f0c92eb"
+        },
+        {
+          "page": 6,
+          "path": "visual-audit/renders/icons/SCREEN/page-06.png",
+          "sha256": "f3c11231a9ae1b9df24e9369f0185a9e650347f48d6b9eef9cd63ce59b54d0cd"
+        },
+        {
+          "page": 7,
+          "path": "visual-audit/renders/icons/SCREEN/page-07.png",
+          "sha256": "60fcf6993a54b9048363c202c14c7f3c7d2a34264540d8a0f5c8d4c7be92bb1d"
+        }
+      ]
+    },
+    {
+      "pdf": "qa/refinement/pdf/REFINEMENT_PRINT.pdf",
+      "sha256": "0591738a321a9dc85e00c6ef9056ce5cadd939d32a60889e0f7f681536abc8f9",
+      "visually_viewed_pages": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "renders": [
+        {
+          "page": 1,
+          "path": "visual-audit/renders/refinement/PRINT/page-01.png",
+          "sha256": "0074e715690e5821326c201875c7662a6095a586159f6800a65424453b7c6512"
+        },
+        {
+          "page": 2,
+          "path": "visual-audit/renders/refinement/PRINT/page-02.png",
+          "sha256": "31d315670a4048fd6a3b924069cba79d760fe2a30c0fe2a7611e8f72d9cf4c8c"
+        },
+        {
+          "page": 3,
+          "path": "visual-audit/renders/refinement/PRINT/page-03.png",
+          "sha256": "a50d99fd7bf9a06c0a0c392475b56553e8158fdff0f7fd9403c117b19b49eb6f"
+        },
+        {
+          "page": 4,
+          "path": "visual-audit/renders/refinement/PRINT/page-04.png",
+          "sha256": "e71e45ebabf332bfaa623500aaebb869b3f884b2140fdb383f5a1fe9ba0b6f11"
+        },
+        {
+          "page": 5,
+          "path": "visual-audit/renders/refinement/PRINT/page-05.png",
+          "sha256": "2d4f050fc15fee5e4072e4290e347370e4e8b9872607ebb0376e58aa5c3739a9"
+        }
+      ]
+    },
+    {
+      "pdf": "qa/refinement/pdf/REFINEMENT_SCREEN.pdf",
+      "sha256": "594e2d85f4467e1826e12027d631c9093889d26556843d58983ec176bd853e3a",
+      "visually_viewed_pages": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "renders": [
+        {
+          "page": 1,
+          "path": "visual-audit/renders/refinement/SCREEN/page-01.png",
+          "sha256": "5fdc25ba62846c7d962e342328ca15d02d60e111e4cce558bbcf43cbb2b00a1f"
+        },
+        {
+          "page": 2,
+          "path": "visual-audit/renders/refinement/SCREEN/page-02.png",
+          "sha256": "b95543bc3d2ea1f342209149ff9b3299fa27909a06e03c23305927371c148304"
+        },
+        {
+          "page": 3,
+          "path": "visual-audit/renders/refinement/SCREEN/page-03.png",
+          "sha256": "f7306463914f68e72b62cbb7a028c091988f732874102a53ff7b61872832c75e"
+        },
+        {
+          "page": 4,
+          "path": "visual-audit/renders/refinement/SCREEN/page-04.png",
+          "sha256": "c64d509fcf8a9216e0c54b46463ef790217a445c15aab4f6bd53a7102ce5b1a4"
+        },
+        {
+          "page": 5,
+          "path": "visual-audit/renders/refinement/SCREEN/page-05.png",
+          "sha256": "07f4f4997a4951d32e0e956f6119e585df2bedc81a60e18a1eed41cc72527ea8"
+        }
+      ]
+    }
+  ],
+  "viewed_pairs": [
+    {
+      "group": "material",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "paths": [
+        "visual-audit/pairs/material/page-01.png",
+        "visual-audit/pairs/material/page-02.png",
+        "visual-audit/pairs/material/page-03.png",
+        "visual-audit/pairs/material/page-04.png",
+        "visual-audit/pairs/material/page-05.png",
+        "visual-audit/pairs/material/page-06.png"
+      ]
+    },
+    {
+      "group": "icons",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "paths": [
+        "visual-audit/pairs/icons/page-01.png",
+        "visual-audit/pairs/icons/page-02.png",
+        "visual-audit/pairs/icons/page-03.png",
+        "visual-audit/pairs/icons/page-04.png",
+        "visual-audit/pairs/icons/page-05.png",
+        "visual-audit/pairs/icons/page-06.png",
+        "visual-audit/pairs/icons/page-07.png"
+      ]
+    },
+    {
+      "group": "refinement",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "paths": [
+        "visual-audit/pairs/refinement/page-01.png",
+        "visual-audit/pairs/refinement/page-02.png",
+        "visual-audit/pairs/refinement/page-03.png",
+        "visual-audit/pairs/refinement/page-04.png",
+        "visual-audit/pairs/refinement/page-05.png"
+      ]
+    }
+  ],
+  "notes": [
+    "All material PRINT/SCREEN pages 1–6 were actually viewed as fixed 1.5× native-page pairs. Short and long worksheet titles clear the white pencil, and short and long assessment titles clear the distinct white clipboard/check icon. Both icons sit at the right and are vertically centered in their individual colored header.",
+    "Material page 3 alone visibly includes the optional book/unit subtitle. Pages 1, 2, 4, 5 and 6 show no leaked subtitle or reserved subtitle gap. Page 6 icon-free control has the same short-header height as page 1.",
+    "Material page 5 keeps the full multiline assessment title in the colored header. Its running label is the generic assessment counter and clears the bird mark; no collision or clipping was observed.",
+    "All icon PRINT/SCREEN pages 1–7 were actually viewed. Bulb, warning triangle and hourglass are distinct, appear balanced in weight, and leave clear text padding. The long Think, Attention and History examples continue onto the following page with only the left rule and with no repeated icon. Equations and text remain fully visible.",
+    "All refinement PRINT/SCREEN pages 1–5 were actually viewed. Opening goals show full accent title and bullets with black body copy. The chapter indicator visibly has the requested stronger hierarchy. Attention, Think, History and Method retain clear left rules; statements have stronger left rules; numbered goals have only the left rule and keep black body text.",
+    "Refinement page 4 shows a lighter answer prefix and black italic answer content/math. The following paragraph visibly returns to normal black body typography. Exercise, solution and assessment separators remain clear and do not cross their text.",
+    "Refinement page 5 shows all four narrow-column true/false statements completely. Every Sigma/Lambda pair and both boxes per pair use the accent ink, with no collision with the long unbreakable expression, the other column, or the following paragraph.",
+    "Controlled technical marker words and ragged-right fixture wording are visible as fixture text; the review did not treat them as clipping or mask them. Numerical dimensions, exact font identities, scale values and ink percentages require the separate machine measurements; this report describes visual inspection."
+  ]
+}

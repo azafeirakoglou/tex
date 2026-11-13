@@ -1,0 +1,12 @@
+[
+  {
+    "variant": "A",
+    "exit_code": 0,
+    "report": "qa/probes/examples-results/A.preflight.json"
+  },
+  {
+    "variant": "B",
+    "exit_code": 0,
+    "report": "qa/probes/examples-results/B.preflight.json"
+  }
+]

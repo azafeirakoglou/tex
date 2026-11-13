@@ -1,0 +1,112 @@
+{
+  "status": "passed",
+  "certification": "Not PDF/X or press certification",
+  "print_file": "/workspace/template-v1.0.13-work/qa/work/B/source/build/callouts-print2/Book_Callouts_Print_Technical.pdf",
+  "screen_file": "/workspace/template-v1.0.13-work/qa/work/B/source/build/callouts-screen/Book_Callouts_Screen.pdf",
+  "errors": [],
+  "input_sha256": {
+    "print": "5974a7983e1b49a060b7f48c4b13b9bff1af1333d51d84be66da1c8e1a3292f3",
+    "screen": "56df1fec8e8ffa813d034a6b5bb01dc79949f63deebed191013ce19de94a4d59",
+    "palette": "25638620a6860f65f14cf3172732e2715266061744ba30d85de4fd33f807b6b4"
+  },
+  "print": {
+    "pages": 1,
+    "unembedded_fonts": [],
+    "rgb_images": [],
+    "page_boxes": [
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      }
+    ],
+    "output_intent_present": false
+  },
+  "screen": {
+    "pages": 1,
+    "unembedded_fonts": [],
+    "rgb_images": [],
+    "page_boxes": [
+      {
+        "MediaBox": [
+          0.0,
+          0.0,
+          481.89,
+          680.31
+        ],
+        "TrimBox": null,
+        "BleedBox": null
+      }
+    ],
+    "output_intent_present": false
+  },
+  "pair": {
+    "same_page_count": true,
+    "text_and_positions_match": true,
+    "geometry_matches": true
+  },
+  "rendered": {
+    "dpi": 72,
+    "antialiasing": false,
+    "plates": {
+      "Black": {
+        "marked_pixels": 8196,
+        "nonempty_pages": [
+          1
+        ],
+        "levels": {
+          "255": 319564,
+          "0": 8196
+        }
+      },
+      "Yellow": {
+        "marked_pixels": 0,
+        "nonempty_pages": [],
+        "levels": {
+          "255": 327760
+        }
+      },
+      "Magenta": {
+        "marked_pixels": 0,
+        "nonempty_pages": [],
+        "levels": {
+          "255": 327760
+        }
+      },
+      "Cyan": {
+        "marked_pixels": 0,
+        "nonempty_pages": [],
+        "levels": {
+          "255": 327760
+        }
+      },
+      "SecondInkRedProof": {
+        "marked_pixels": 41220,
+        "nonempty_pages": [
+          1
+        ],
+        "levels": {
+          "255": 286540,
+          "0": 2432,
+          "230": 38788
+        }
+      }
+    },
+    "pairing_mismatched_pixels": 0,
+    "overlap_pixels": 0,
+    "pages": [
+      {
+        "page": 1,
+        "pairing_mismatched_pixels": 0,
+        "overlap_pixels": 0,
+        "bad_samples": []
+      }
+    ],
+    "scope": "all pages; raster separations and paired RGB rendering"
+  }
+}

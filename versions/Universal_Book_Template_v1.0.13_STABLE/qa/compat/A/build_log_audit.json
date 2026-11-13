@@ -1,0 +1,306 @@
+[
+  {
+    "target": "assessment-print2",
+    "log": "qa/work/A/source/build/assessment-print2/Book_Assessment_Print_Technical.log",
+    "pdf": "qa/work/A/source/build/assessment-print2/Book_Assessment_Print_Technical.pdf",
+    "pages": 4,
+    "overfull": 0,
+    "underfull": 0,
+    "missing_characters": 0,
+    "warnings": [
+      "Package caption Warning: Unused \\captionsetup[figure] on input line 156.",
+      "Package caption Warning: Unused \\captionsetup[table] on input line 157."
+    ],
+    "sha256": "21bb85f9d2920bf4aeb8b80d3d3245a6b1bf031f8fdc82932c4ac70b32896924",
+    "log_sha256": "37b4c2fd4fccd0d1e9da914d091c481065436708550d39a0bd757138364f6905"
+  },
+  {
+    "target": "assessment-screen",
+    "log": "qa/work/A/source/build/assessment-screen/Book_Assessment_Screen.log",
+    "pdf": "qa/work/A/source/build/assessment-screen/Book_Assessment_Screen.pdf",
+    "pages": 4,
+    "overfull": 0,
+    "underfull": 0,
+    "missing_characters": 0,
+    "warnings": [
+      "Package caption Warning: Unused \\captionsetup[figure] on input line 156.",
+      "Package caption Warning: Unused \\captionsetup[table] on input line 157."
+    ],
+    "sha256": "51507382c2866791e94870bb9741a7fc333eda546dec71108386fcb6468347bc",
+    "log_sha256": "59968f8c49baf97e789c5b434a8f6cf97ae2faaec0be2982a9cd4dbaed35cfa5"
+  },
+  {
+    "target": "callouts-print2",
+    "log": "qa/work/A/source/build/callouts-print2/Book_Callouts_Print_Technical.log",
+    "pdf": "qa/work/A/source/build/callouts-print2/Book_Callouts_Print_Technical.pdf",
+    "pages": 1,
+    "overfull": 0,
+    "underfull": 0,
+    "missing_characters": 0,
+    "warnings": [
+      "Package caption Warning: Unused \\captionsetup[figure] on input line 156.",
+      "Package caption Warning: Unused \\captionsetup[table] on input line 157."
+    ],
+    "sha256": "c16d8c7e852fa6251be0c56901e95c810f59071650bf769cd7dba91a72ea4b75",
+    "log_sha256": "34d6b5288c6c057ea9eb4a6c2b2e57119f1c9d7ad600fd93bbb8cf7f5cfe752c"
+  },
+  {
+    "target": "callouts-screen",
+    "log": "qa/work/A/source/build/callouts-screen/Book_Callouts_Screen.log",
+    "pdf": "qa/work/A/source/build/callouts-screen/Book_Callouts_Screen.pdf",
+    "pages": 1,
+    "overfull": 0,
+    "underfull": 0,
+    "missing_characters": 0,
+    "warnings": [
+      "Package caption Warning: Unused \\captionsetup[figure] on input line 156.",
+      "Package caption Warning: Unused \\captionsetup[table] on input line 157."
+    ],
+    "sha256": "276f088d42fb82bb1569d95224736a0bdee29cb51591b7993dddcecd4c678903",
+    "log_sha256": "774b6863c21a69ff8e70470a9a881d5bb2bcb12bfce84ea58544796689b44c59"
+  },
+  {
+    "target": "figures-print2",
+    "log": "qa/work/A/source/build/figures-print2/Book_Figures_Print_Technical.log",
+    "pdf": "qa/work/A/source/build/figures-print2/Book_Figures_Print_Technical.pdf",
+    "pages": 6,
+    "overfull": 0,
+    "underfull": 0,
+    "missing_characters": 0,
+    "warnings": [
+      "Package caption Warning: The option `hypcap=true' will be ignored for this",
+      "Package caption Warning: The option `hypcap=true' will be ignored for this",
+      "Package caption Warning: The option `hypcap=true' will be ignored for this",
+      "Package caption Warning: The option `hypcap=true' will be ignored for this",
+      "Package caption Warning: The option `hypcap=true' will be ignored for this",
+      "Package caption Warning: The option `hypcap=true' will be ignored for this",
+      "Package caption Warning: The option `hypcap=true' will be ignored for this",
+      "Package caption Warning: Unused \\captionsetup[table] on input line 157."
+    ],
+    "sha256": "c041c2238cc666d67bc4b54badfb8f9ba020705e30a93ad35c82a257f7430d36",
+    "log_sha256": "c1b0967874096c18a5a29b0b4fee59be5fedcec5d7d5313d909a409b7e35dd25"
+  },
+  {
+    "target": "figures-screen",
+    "log": "qa/work/A/source/build/figures-screen/Book_Figures_Screen.log",
+    "pdf": "qa/work/A/source/build/figures-screen/Book_Figures_Screen.pdf",
+    "pages": 6,
+    "overfull": 0,
+    "underfull": 0,
+    "missing_characters": 0,
+    "warnings": [
+      "Package caption Warning: The option `hypcap=true' will be ignored for this",
+      "Package caption Warning: The option `hypcap=true' will be ignored for this",
+      "Package caption Warning: The option `hypcap=true' will be ignored for this",
+      "Package caption Warning: The option `hypcap=true' will be ignored for this",
+      "Package caption Warning: The option `hypcap=true' will be ignored for this",
+      "Package caption Warning: The option `hypcap=true' will be ignored for this",
+      "Package caption Warning: The option `hypcap=true' will be ignored for this",
+      "Package caption Warning: Unused \\captionsetup[table] on input line 157."
+    ],
+    "sha256": "d31b89bb457250be96bcc48c9381c87c669291f8cfa5edabb848e4fff69afb07",
+    "log_sha256": "a245d73bc2110f8e19ee1899c31b1f8236cd4a80a427c528aa2e8f227a3ac63f"
+  },
+  {
+    "target": "history-statements-print2",
+    "log": "qa/work/A/source/build/history-statements-print2/Book_History_Statements_Print.log",
+    "pdf": "qa/work/A/source/build/history-statements-print2/Book_History_Statements_Print.pdf",
+    "pages": 2,
+    "overfull": 0,
+    "underfull": 0,
+    "missing_characters": 0,
+    "warnings": [
+      "Package caption Warning: Unused \\captionsetup[figure] on input line 156.",
+      "Package caption Warning: Unused \\captionsetup[table] on input line 157."
+    ],
+    "sha256": "ff6939a436b7a6fbb465a9e7a303b2df65066a723a1c6406f002805c06581c22",
+    "log_sha256": "c29e25d32ddbf9a776fb7162c0fd27d6549e24a2956d3bd32cd2f772ced12516"
+  },
+  {
+    "target": "history-statements-screen",
+    "log": "qa/work/A/source/build/history-statements-screen/Book_History_Statements_Screen.log",
+    "pdf": "qa/work/A/source/build/history-statements-screen/Book_History_Statements_Screen.pdf",
+    "pages": 2,
+    "overfull": 0,
+    "underfull": 0,
+    "missing_characters": 0,
+    "warnings": [
+      "Package caption Warning: Unused \\captionsetup[figure] on input line 156.",
+      "Package caption Warning: Unused \\captionsetup[table] on input line 157."
+    ],
+    "sha256": "a7b7fe7352b0fca7af6b36909ef05430a3cbc9046dc6d0f1b47045cc9751e458",
+    "log_sha256": "8bc261533fae3f9972f83d372256eed981d60e4c4d66c6df7c9a43e77d638d95"
+  },
+  {
+    "target": "opening-goals-print2",
+    "log": "qa/work/A/source/build/opening-goals-print2/Book_Opening_Goals_Print.log",
+    "pdf": "qa/work/A/source/build/opening-goals-print2/Book_Opening_Goals_Print.pdf",
+    "pages": 3,
+    "overfull": 0,
+    "underfull": 0,
+    "missing_characters": 0,
+    "warnings": [
+      "Package caption Warning: Unused \\captionsetup[figure] on input line 156.",
+      "Package caption Warning: Unused \\captionsetup[table] on input line 157."
+    ],
+    "sha256": "4820953aade6296658eebe04ef82512de4230413a1bc50069e3592bf18bdf3e6",
+    "log_sha256": "db0560dbde6a21b5db54647f55fb83d44a5dfb85d9a87564c62c16a416ff504a"
+  },
+  {
+    "target": "opening-goals-screen",
+    "log": "qa/work/A/source/build/opening-goals-screen/Book_Opening_Goals_Screen.log",
+    "pdf": "qa/work/A/source/build/opening-goals-screen/Book_Opening_Goals_Screen.pdf",
+    "pages": 3,
+    "overfull": 0,
+    "underfull": 0,
+    "missing_characters": 0,
+    "warnings": [
+      "Package caption Warning: Unused \\captionsetup[figure] on input line 156.",
+      "Package caption Warning: Unused \\captionsetup[table] on input line 157."
+    ],
+    "sha256": "1ac1659de05ab27f397387835018d0abe5d7a8e479ced444d3f2a8e42c96066a",
+    "log_sha256": "1561c536c7d2a3a197244b398df4f154b0bcdc62ddca29fb61c4818304bd81f1"
+  },
+  {
+    "target": "palette-print2",
+    "log": "qa/work/A/source/build/palette-print2/Book_Palette_v026_Print.log",
+    "pdf": "qa/work/A/source/build/palette-print2/Book_Palette_v026_Print.pdf",
+    "pages": 1,
+    "overfull": 0,
+    "underfull": 0,
+    "missing_characters": 0,
+    "warnings": [
+      "Package caption Warning: Unused \\captionsetup[figure] on input line 156.",
+      "Package caption Warning: Unused \\captionsetup[table] on input line 157."
+    ],
+    "sha256": "e102cc8564fdfafd77000833910391635ffd313c331b34562d02d1af36e045b2",
+    "log_sha256": "b8e3f800760bfff5b73ad94b7f6c2f03cf0f533de4ad1f836cc5d3df3e14ece8"
+  },
+  {
+    "target": "palette-screen",
+    "log": "qa/work/A/source/build/palette-screen/Book_Palette_v026_Screen.log",
+    "pdf": "qa/work/A/source/build/palette-screen/Book_Palette_v026_Screen.pdf",
+    "pages": 1,
+    "overfull": 0,
+    "underfull": 0,
+    "missing_characters": 0,
+    "warnings": [
+      "Package caption Warning: Unused \\captionsetup[figure] on input line 156.",
+      "Package caption Warning: Unused \\captionsetup[table] on input line 157."
+    ],
+    "sha256": "23ffdde0ee8df7bdf14f36b4dbf26f6fd9ca958db355382735de29a6f12d60db",
+    "log_sha256": "c8d4244567c7661c9b85dd6bc2ba58e0d6d299517cfe3dc7b6dbb171df37a22a"
+  },
+  {
+    "target": "sample-print2",
+    "log": "qa/work/A/source/build/sample-print2/Sample_Collaborators_Print_Technical.log",
+    "pdf": "qa/work/A/source/build/sample-print2/Sample_Collaborators_Print_Technical.pdf",
+    "pages": 5,
+    "overfull": 0,
+    "underfull": 0,
+    "missing_characters": 0,
+    "warnings": [
+      "Package caption Warning: Unused \\captionsetup[figure] on input line 156.",
+      "Package caption Warning: Unused \\captionsetup[table] on input line 157."
+    ],
+    "sha256": "d704672e3220d1daf3c0caaa8739b12fe75c6f9602830984a3d5d6c211cad4b9",
+    "log_sha256": "54057826cec8f735bf2d0647cad1ca85c79393c54bbe2c59aba345a18336d23f"
+  },
+  {
+    "target": "sample-screen",
+    "log": "qa/work/A/source/build/sample-screen/Sample_Collaborators_Blue.log",
+    "pdf": "qa/work/A/source/build/sample-screen/Sample_Collaborators_Blue.pdf",
+    "pages": 5,
+    "overfull": 0,
+    "underfull": 0,
+    "missing_characters": 0,
+    "warnings": [
+      "Package caption Warning: Unused \\captionsetup[figure] on input line 156.",
+      "Package caption Warning: Unused \\captionsetup[table] on input line 157."
+    ],
+    "sha256": "e773e4b0714dc8c136f2516abae7e0b9b17397fa9e0f44ba9d4502bc47f3ee41",
+    "log_sha256": "24faf67cf2c3bbd981a7cc7b8a135b8d127d3c5cd2c92aa5557e85082486d219"
+  },
+  {
+    "target": "starter-print2",
+    "log": "qa/work/A/source/build/starter-print2/Starter_Print.log",
+    "pdf": "qa/work/A/source/build/starter-print2/Starter_Print.pdf",
+    "pages": 4,
+    "overfull": 0,
+    "underfull": 0,
+    "missing_characters": 0,
+    "warnings": [],
+    "sha256": "17596213bba741213e0249707a251011bf08adb5b779a5ff9cdada28336bc774",
+    "log_sha256": "6480436cb29a9e254938af9fa3ee80cb921e7d3aa332acc77f513826b2918702"
+  },
+  {
+    "target": "starter-screen",
+    "log": "qa/work/A/source/build/starter-screen/Starter_Screen.log",
+    "pdf": "qa/work/A/source/build/starter-screen/Starter_Screen.pdf",
+    "pages": 4,
+    "overfull": 0,
+    "underfull": 0,
+    "missing_characters": 0,
+    "warnings": [],
+    "sha256": "ea69247e06346b924e4ce7241020ec9b1499a30edf77d1a7ff4da7bb422fa1e1",
+    "log_sha256": "723a261bdb40265fe1a64c35d2882c9a1b094caf244ed1f03044a3e097be051a"
+  },
+  {
+    "target": "stress-print2",
+    "log": "qa/work/A/source/build/stress-print2/Stress_Print.log",
+    "pdf": "qa/work/A/source/build/stress-print2/Stress_Print.pdf",
+    "pages": 68,
+    "overfull": 0,
+    "underfull": 0,
+    "missing_characters": 0,
+    "warnings": [
+      "Package caption Warning: Unused \\captionsetup[figure] on input line 156."
+    ],
+    "sha256": "5a72aede77b7a0f42da84b9242094891629f0dca1f8edde7fe0cfcd911c8a59c",
+    "log_sha256": "2cab191b295129ca1cbef259c43f924af6e7bcf7db42a7812a313e33dd005e81"
+  },
+  {
+    "target": "stress-screen",
+    "log": "qa/work/A/source/build/stress-screen/Stress_Screen.log",
+    "pdf": "qa/work/A/source/build/stress-screen/Stress_Screen.pdf",
+    "pages": 68,
+    "overfull": 0,
+    "underfull": 0,
+    "missing_characters": 0,
+    "warnings": [
+      "Package caption Warning: Unused \\captionsetup[figure] on input line 156."
+    ],
+    "sha256": "f5b679c44d9d34678afe77cec6d619223a1f7bbde1b6a2f8e579c4910fba1016",
+    "log_sha256": "d90a41c5ec2b6b6d689765ed4a3e833892e7ced76026744202d84052cbbc0fe1"
+  },
+  {
+    "target": "tables-print2",
+    "log": "qa/work/A/source/build/tables-print2/Book_Tables_Print_Technical.log",
+    "pdf": "qa/work/A/source/build/tables-print2/Book_Tables_Print_Technical.pdf",
+    "pages": 1,
+    "overfull": 0,
+    "underfull": 0,
+    "missing_characters": 0,
+    "warnings": [
+      "Package caption Warning: Unused \\captionsetup[figure] on input line 156.",
+      "Package caption Warning: Unused \\captionsetup[table] on input line 157."
+    ],
+    "sha256": "f41f82d2fe6a61c59c4ebeee709bf57f40ffff6fd6da1877ea8b00e644f4cc34",
+    "log_sha256": "6ea3e27dcb4a0dbe756dd78b4ed765926b504615b5b334d6ccfadffc772d982d"
+  },
+  {
+    "target": "tables-screen",
+    "log": "qa/work/A/source/build/tables-screen/Book_Tables_Screen.log",
+    "pdf": "qa/work/A/source/build/tables-screen/Book_Tables_Screen.pdf",
+    "pages": 1,
+    "overfull": 0,
+    "underfull": 0,
+    "missing_characters": 0,
+    "warnings": [
+      "Package caption Warning: Unused \\captionsetup[figure] on input line 156.",
+      "Package caption Warning: Unused \\captionsetup[table] on input line 157."
+    ],
+    "sha256": "d6cf34c1f98022ee7f6e21a260efa95d1ea7443ec5ce33f49c8dbf898e432abb",
+    "log_sha256": "c4bc26a89f831d38214dbd7f6bc56667abce91fe4bd967320779141d7a359c83"
+  }
+]

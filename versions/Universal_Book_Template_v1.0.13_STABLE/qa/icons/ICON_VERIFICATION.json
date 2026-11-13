@@ -1,0 +1,310 @@
+{
+  "status": "passed",
+  "profiles": [
+    {
+      "profile": "SCREEN",
+      "status": "passed",
+      "pdf": "qa/icons/SCREEN/icon-context.pdf",
+      "sha256": "a565d9f87abbcdb9387152312fae1ddc0a9cc26533feb35ae6d4896214508fee",
+      "checks": {
+        "seven_pages": true,
+        "all_42_marked_paragraphs_once_in_order": true,
+        "all_vector": true,
+        "native_170x240_geometry": true,
+        "three_short_boxes_and_six_long_fragments": true,
+        "every_west_rule_is_1pt": true,
+        "three_short_icons_present_with_fixed_1_08pt_outlines": true,
+        "icons_only_in_first_long_fragment": true,
+        "no_top_bottom_or_right_callout_border": true,
+        "no_overfull_underfull_or_missing_characters": true
+      },
+      "short_boxes": [
+        {
+          "kind": "bulb",
+          "box_height_bp": 65.75559997558594,
+          "ink_bounds_bp": [
+            72.26537322998047,
+            95.37663269042969,
+            92.14461517333984,
+            110.41352081298828
+          ],
+          "width_mm": 7.012954796685112,
+          "height_mm": 5.304679976569282,
+          "paths": 9,
+          "outline_1_08pt_present": true
+        },
+        {
+          "kind": "warning",
+          "box_height_bp": 46.69499206542969,
+          "ink_bounds_bp": [
+            70.31096649169922,
+            163.1458282470703,
+            92.39904022216797,
+            182.9684600830078
+          ],
+          "width_mm": 7.792181566026476,
+          "height_mm": 6.992984008789062,
+          "paths": 3,
+          "outline_1_08pt_present": true
+        },
+        {
+          "kind": "hourglass",
+          "box_height_bp": 75.88034057617188,
+          "ink_bounds_bp": [
+            72.62679290771484,
+            217.27291870117188,
+            90.08319854736328,
+            239.32308959960938
+          ],
+          "width_mm": 6.158231989542643,
+          "height_mm": 7.778810289171007,
+          "paths": 6,
+          "outline_1_08pt_present": true
+        }
+      ],
+      "fragments": [
+        {
+          "page": 2,
+          "icon_paths": 9,
+          "west_rule_tex_pt": 1.0000160645693539,
+          "first_fragment": true
+        },
+        {
+          "page": 3,
+          "icon_paths": 0,
+          "west_rule_tex_pt": 1.0000160645693539,
+          "first_fragment": false
+        },
+        {
+          "page": 4,
+          "icon_paths": 3,
+          "west_rule_tex_pt": 1.0000160645693539,
+          "first_fragment": true
+        },
+        {
+          "page": 5,
+          "icon_paths": 0,
+          "west_rule_tex_pt": 1.0000160645693539,
+          "first_fragment": false
+        },
+        {
+          "page": 6,
+          "icon_paths": 6,
+          "west_rule_tex_pt": 1.0000160645693539,
+          "first_fragment": true
+        },
+        {
+          "page": 7,
+          "icon_paths": 0,
+          "west_rule_tex_pt": 1.0000160645693539,
+          "first_fragment": false
+        }
+      ],
+      "renders": [
+        {
+          "page": 1,
+          "path": "qa/icons/SCREEN/p01.png",
+          "sha256": "3ef5b4e27f19fc46ab3c6058e18221daee70cc61cf609d5e40aabb2b51d41a66"
+        },
+        {
+          "page": 2,
+          "path": "qa/icons/SCREEN/p02.png",
+          "sha256": "08aff2ee408092e13d51f3f5752ec746912f4f5a27b73f8f3971205f7f088443"
+        },
+        {
+          "page": 3,
+          "path": "qa/icons/SCREEN/p03.png",
+          "sha256": "d558a3aedf860f9aa998d4b4e672b3eb1d6a8f69977723d28f7f03c4c9a07ff3"
+        },
+        {
+          "page": 4,
+          "path": "qa/icons/SCREEN/p04.png",
+          "sha256": "54a7aafb4ddfb012a3f26458ba79e1c55d543af127d4a5801712f88e45bffad3"
+        },
+        {
+          "page": 5,
+          "path": "qa/icons/SCREEN/p05.png",
+          "sha256": "15b23ffe29494fc53889e244b474250dd8cf6a965f12c363ac5cc97c6f0c92eb"
+        },
+        {
+          "page": 6,
+          "path": "qa/icons/SCREEN/p06.png",
+          "sha256": "f3c11231a9ae1b9df24e9369f0185a9e650347f48d6b9eef9cd63ce59b54d0cd"
+        },
+        {
+          "page": 7,
+          "path": "qa/icons/SCREEN/p07.png",
+          "sha256": "60fcf6993a54b9048363c202c14c7f3c7d2a34264540d8a0f5c8d4c7be92bb1d"
+        }
+      ],
+      "warnings": [
+        "Package caption Warning: Unused \\captionsetup[figure] on input line 156.",
+        "Package caption Warning: Unused \\captionsetup[table] on input line 157."
+      ]
+    },
+    {
+      "profile": "PRINT",
+      "status": "passed",
+      "pdf": "qa/icons/PRINT/icon-context.pdf",
+      "sha256": "3801f40fb8b650ee8fcb70878c7d74e65515fddc9b3088bb4248b230756cc2de",
+      "checks": {
+        "seven_pages": true,
+        "all_42_marked_paragraphs_once_in_order": true,
+        "all_vector": true,
+        "native_170x240_geometry": true,
+        "three_short_boxes_and_six_long_fragments": true,
+        "every_west_rule_is_1pt": true,
+        "three_short_icons_present_with_fixed_1_08pt_outlines": true,
+        "icons_only_in_first_long_fragment": true,
+        "no_top_bottom_or_right_callout_border": true,
+        "no_overfull_underfull_or_missing_characters": true
+      },
+      "short_boxes": [
+        {
+          "kind": "bulb",
+          "box_height_bp": 65.75559997558594,
+          "ink_bounds_bp": [
+            72.26537322998047,
+            95.37663269042969,
+            92.14461517333984,
+            110.41352081298828
+          ],
+          "width_mm": 7.012954796685112,
+          "height_mm": 5.304679976569282,
+          "paths": 9,
+          "outline_1_08pt_present": true
+        },
+        {
+          "kind": "warning",
+          "box_height_bp": 46.69499206542969,
+          "ink_bounds_bp": [
+            70.31096649169922,
+            163.1458282470703,
+            92.39904022216797,
+            182.9684600830078
+          ],
+          "width_mm": 7.792181566026476,
+          "height_mm": 6.992984008789062,
+          "paths": 3,
+          "outline_1_08pt_present": true
+        },
+        {
+          "kind": "hourglass",
+          "box_height_bp": 75.88034057617188,
+          "ink_bounds_bp": [
+            72.62679290771484,
+            217.27291870117188,
+            90.08319854736328,
+            239.32308959960938
+          ],
+          "width_mm": 6.158231989542643,
+          "height_mm": 7.778810289171007,
+          "paths": 6,
+          "outline_1_08pt_present": true
+        }
+      ],
+      "fragments": [
+        {
+          "page": 2,
+          "icon_paths": 9,
+          "west_rule_tex_pt": 1.0000160645693539,
+          "first_fragment": true
+        },
+        {
+          "page": 3,
+          "icon_paths": 0,
+          "west_rule_tex_pt": 1.0000160645693539,
+          "first_fragment": false
+        },
+        {
+          "page": 4,
+          "icon_paths": 3,
+          "west_rule_tex_pt": 1.0000160645693539,
+          "first_fragment": true
+        },
+        {
+          "page": 5,
+          "icon_paths": 0,
+          "west_rule_tex_pt": 1.0000160645693539,
+          "first_fragment": false
+        },
+        {
+          "page": 6,
+          "icon_paths": 6,
+          "west_rule_tex_pt": 1.0000160645693539,
+          "first_fragment": true
+        },
+        {
+          "page": 7,
+          "icon_paths": 0,
+          "west_rule_tex_pt": 1.0000160645693539,
+          "first_fragment": false
+        }
+      ],
+      "renders": [
+        {
+          "page": 1,
+          "path": "qa/icons/PRINT/p01.png",
+          "sha256": "9df4adc24a05e3bcaf9827113b8ff78c74b157d189b265601aa727a5a7c339d6"
+        },
+        {
+          "page": 2,
+          "path": "qa/icons/PRINT/p02.png",
+          "sha256": "f0d6aaf01745ca53ec6b67cefd4dbb5464baa5a7c00cb4e21fb74fafde2d5b53"
+        },
+        {
+          "page": 3,
+          "path": "qa/icons/PRINT/p03.png",
+          "sha256": "5dc34573eda6c8d34b7850d6942d92cc4e05abd0af8cb8637d9d39f245d5923e"
+        },
+        {
+          "page": 4,
+          "path": "qa/icons/PRINT/p04.png",
+          "sha256": "44f2819ed1cb397c3ca92646ac9d4049357139e9b67cc319985b195cd37df027"
+        },
+        {
+          "page": 5,
+          "path": "qa/icons/PRINT/p05.png",
+          "sha256": "2ba5497c637db4c7cbd8e17824942e729d6cc153675011d59963bbf3eca4f29f"
+        },
+        {
+          "page": 6,
+          "path": "qa/icons/PRINT/p06.png",
+          "sha256": "93c630e38902f7c38e770492c2e8601f6a250b58e3954d8a5b520df223f01ee8"
+        },
+        {
+          "page": 7,
+          "path": "qa/icons/PRINT/p07.png",
+          "sha256": "5d1be4045fbfcf356a433a608acca41d921f9c3c625f12c1086b8d53ce50e8b3"
+        }
+      ],
+      "warnings": [
+        "Package caption Warning: Unused \\captionsetup[figure] on input line 156.",
+        "Package caption Warning: Unused \\captionsetup[table] on input line 157."
+      ]
+    }
+  ],
+  "short_box_heights_unchanged_from_v112": true,
+  "baseline_pdf": "qa/icons/BASELINE_SCREEN/icon-context.pdf",
+  "baseline_sha256": "c348d31bf3b2d2b14c42844a1885b3913cfb54fa058e1ec4ffdd3d46e9e38b27",
+  "baseline_short_box_heights_bp": [
+    65.75559997558594,
+    46.69499206542969,
+    75.88034057617188
+  ],
+  "settings": {
+    "bulb_scale_unchanged": 0.81,
+    "warning_scale": 0.9,
+    "hourglass_scale": 0.73,
+    "outline_tex_pt": 1.08
+  },
+  "source_sha256": {
+    "config/stable-callouts.tex": "c45e5fe86587388714977ee7726b6fa6760241a606870411c573c7dc1b9d6291",
+    "config/rules-v113.tex": "59df2363265e3a3e1fc6efc0dfc197aa643361776f1e7b663ca5a397b5f07f03",
+    "styles/book-stable-icons.tex": "da544959a9a607684350cc6ed5f4be97b5c5716a33708613161239242fdbeaa3",
+    "styles/book-callouts.tex": "213e1b399faaa9efb6dc8698603ccfb005034339d7f4b3ec3ff3b4fb5ce32714"
+  },
+  "visual_review": "pending_actual_views",
+  "physical_print_test": false,
+  "extraction_note": "Exact pre-existing Inter U+EE55 hyphen mapping is normalized before strict marker-order checks."
+}

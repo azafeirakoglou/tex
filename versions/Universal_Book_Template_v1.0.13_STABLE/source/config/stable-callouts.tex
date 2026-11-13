@@ -1,0 +1,16 @@
+% v1.0.13: one configuration for the three teaching callouts.
+% No palette or semantic colour role is redefined here.
+\renewcommand{\BookCalloutLabelSize}{9.5}
+\renewcommand{\BookCalloutLabelLeading}{12}
+\newcommand{\BookStableCalloutBeforeSkip}{7pt}
+\newcommand{\BookStableCalloutAfterSkip}{8pt}
+\newcommand{\BookStableCalloutVerticalPadding}{2.8mm}
+\newcommand{\BookStableThinkVerticalPadding}{3.8mm}
+\newcommand{\BookStableCalloutRuleWidth}{.8pt}
+% Visually balanced against the unchanged bulb (0.81), not forced into an
+% identical bounding rectangle. TikZ scales coordinates, not stroke widths.
+\newcommand{\BookWarningIconScale}{.90}
+\renewcommand{\BookHistoryIconScale}{.73}
+% The icons share the top alignment of the first title, rather than drifting
+% down to the centre of a large first fragment. TikZ stroke widths stay fixed.
+\newcommand{\BookCalloutIconTopPadding}{3.8mm}

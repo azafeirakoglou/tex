@@ -1,0 +1,4 @@
+# Verification and preview helpers. No Python packages are needed by XeLaTeX itself.
+Pillow==12.3.0
+pypdf==6.10.0
+PyMuPDF==1.26.6

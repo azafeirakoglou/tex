@@ -1,0 +1,21 @@
+% v1.0.13: semantic answer/choice colours with explicit local scopes.
+\renewcommand{\TrueFalseChoices}{%
+  \mbox{{\color{\BookTrueFalseLabelColor}Σ}\,\CheckSquare
+    \hspace{\BookTrueFalseGap}{\color{\BookTrueFalseLabelColor}Λ}\,\CheckSquare}%
+}
+% Keep each choice pair intact but allow it to move to the next line in a
+% narrow column. A forced no-break between statement and choices can overflow.
+\renewcommand{\TrueFalseItem}[1]{%
+  \item #1\unskip\hspace{0.6em}\TrueFalseChoices
+}
+\renewcommand{\Answer}[1]{%
+  \ifShowAnswers
+    \par\smallskip
+    \begingroup
+      \fontsize{8.2}{11}\selectfont\itshape
+      \textcolor{\BookAnswerLabelColor}{[Απ.: }%
+      {\color{\BookAnswerTextColor}#1}%
+      \textcolor{\BookAnswerLabelColor}{]}\par
+    \endgroup
+  \fi
+}

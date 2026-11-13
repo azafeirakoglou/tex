@@ -1,0 +1,29 @@
+% Real-PDF TOC: long unnumbered entry, three-digit pages and actual solutions.
+\documentclass[11pt,twoside,openright]{book}
+\input{config/book-config.tex}
+\newif\ifBookTwoInkProof
+\ifdefined\TOCPrint
+  \BookTwoInkProoftrue
+\else
+  \BookTwoInkProoffalse
+\fi
+\newif\ifPrintThreeInk
+\PrintThreeInkfalse
+\usepackage{styles/universalbook}
+\begin{document}
+\frontmatter
+\tableofcontents
+\mainmatter
+\setcounter{page}{123}
+\chapter{Κεφάλαιο δοκιμής}
+\section{Σύντομη ενότητα}
+Κείμενο δοκιμής.
+\WorksheetOpening{Δοκιμή}{WRAPBEGIN Περιγραφή και προσεκτική ερμηνεία της κίνησης μέσα από πειραματικά δεδομένα WRAPEND}
+Κείμενο φύλλου.
+% Real labels keep the shared solutions file free of unresolved references.
+\makeatletter
+\def\@currentlabel{Α1}\label{asq:KRI1-A1}
+\def\@currentlabel{Γ1}\label{asq:KRI1-G1}
+\makeatother
+\input{solutions/demo-assessment-solutions}
+\end{document}

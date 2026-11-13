@@ -1,0 +1,75 @@
+% Real-PDF figure standards: fixed physical strokes and readable label sizes.
+\documentclass[11pt,twoside,openright]{book}
+\input{config/book-config.tex}
+\newif\ifBookTwoInkProof
+\ifdefined\FiguresPrint
+  \BookTwoInkProoftrue
+\else
+  \BookTwoInkProoffalse
+\fi
+\newif\ifPrintThreeInk
+\PrintThreeInkfalse
+\usepackage{styles/universalbook}
+\pagestyle{empty}
+\newcommand{\FigureFixtureRow}[3]{%
+  \begin{scope}[shift={(0,#2)}]
+    \node[anchor=west] at (0,0) {#1};
+    \draw[#3] (30,0)--(70,0);
+  \end{scope}%
+}
+\begin{document}
+STYLEFIXTURE\par\medskip
+\noindent\begin{tikzpicture}[x=1mm,y=1mm]
+  \FigureFixtureRow{MAINCURVE}{0}{book/maincurve}
+  \FigureFixtureRow{SECONDCURVE}{-12}{book/secondarycurve}
+  \FigureFixtureRow{REFCURVE}{-24}{book/referencecurve}
+  \begin{scope}[shift={(0,-36)}]
+    \node[anchor=west] at (0,0) {MAINVECTOR};
+    \draw[book/mainvector] (30,0)--(70,0) node[above] {ATTACHEDLABEL};
+  \end{scope}
+  \FigureFixtureRow{SECONDVECTOR}{-48}{book/secondaryvector}
+  \FigureFixtureRow{REFVECTOR}{-60}{book/referencevector}
+  \FigureFixtureRow{AXIS}{-72}{book/axis}
+  \FigureFixtureRow{GUIDE}{-84}{book/guide}
+  \FigureFixtureRow{TICKROW}{-96}{book/tick}
+  \begin{scope}[shift={(0,-108)}]
+    \node[anchor=west] at (0,0) {SCALEONE};
+    \draw[book/maincurve] (30,0)--(50,0);
+  \end{scope}
+  \begin{scope}[shift={(0,-120)}]
+    \node[anchor=west] at (0,0) {SCALEHALF};
+    \begin{scope}[scale=.5]
+      \draw[book/maincurve] (60,0)--(100,0);
+    \end{scope}
+  \end{scope}
+  \node[anchor=west] at (0,-132) {DEFAULTFONT};
+  \node[book/ticklabel,anchor=west] at (0,-144) {TICKFONT};
+\end{tikzpicture}
+\clearpage
+FULLPLOT\par\medskip
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[book/plot,
+  xmin=0,xmax=6,ymin=0,ymax=4,
+  xtick={0,2,4,6},ytick={0,2,4},
+  xlabel={FULLX $t\,(\mathrm{s})$},ylabel={FULLY $x\,(\mathrm{m})$}]
+  \addplot[book/seriesA,domain=0:6,samples=2] {0.5*x+0.4};
+  \addplot[book/seriesB,domain=0:6,samples=2] {3.5-0.3*x};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+\clearpage
+COLUMNPLOT\par\medskip
+\noindent\begin{minipage}{63.5mm}
+\centering
+\begin{tikzpicture}
+\begin{axis}[book/plot-column,
+  xmin=0,xmax=6,ymin=0,ymax=4,
+  xtick={0,2,4,6},ytick={0,2,4},
+  xlabel={COLUMNX $t\,(\mathrm{s})$},ylabel={COLUMNY $x\,(\mathrm{m})$}]
+  \addplot[book/seriesA,domain=0:6,samples=2] {0.5*x+0.4};
+  \addplot[book/seriesB,domain=0:6,samples=2] {3.5-0.3*x};
+\end{axis}
+\end{tikzpicture}
+\end{minipage}
+\end{document}

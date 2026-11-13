@@ -1,0 +1,22 @@
+[
+  {
+    "name": "compat",
+    "exit_code": 0,
+    "log": "qa/compat/RUN.log"
+  },
+  {
+    "name": "editorial",
+    "exit_code": 0,
+    "log": "qa/probes/RUN.log"
+  },
+  {
+    "name": "examples",
+    "exit_code": 0,
+    "log": "qa/probes/EXAMPLES_RUN.log"
+  },
+  {
+    "name": "mainpreflight",
+    "exit_code": 0,
+    "log": "qa/main/RUN.log"
+  }
+]

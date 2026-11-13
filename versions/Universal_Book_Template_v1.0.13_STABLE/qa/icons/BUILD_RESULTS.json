@@ -1,0 +1,38 @@
+[
+  {
+    "name": "SCREEN",
+    "profile": "SCREEN",
+    "pdf": "qa/icons/SCREEN/icon-context.pdf",
+    "sha256": "a565d9f87abbcdb9387152312fae1ddc0a9cc26533feb35ae6d4896214508fee",
+    "pages": 7,
+    "diagnostics": {
+      "overfull": 0,
+      "underfull": 0,
+      "missing_characters": 0,
+      "warnings": [
+        "Package caption Warning: Unused \\captionsetup[figure] on input line 156.",
+        "Package caption Warning: Unused \\captionsetup[table] on input line 157."
+      ]
+    },
+    "all_42_marked_paragraphs_once_in_order": true,
+    "all_vector": true
+  },
+  {
+    "name": "PRINT",
+    "profile": "PRINT",
+    "pdf": "qa/icons/PRINT/icon-context.pdf",
+    "sha256": "3801f40fb8b650ee8fcb70878c7d74e65515fddc9b3088bb4248b230756cc2de",
+    "pages": 7,
+    "diagnostics": {
+      "overfull": 0,
+      "underfull": 0,
+      "missing_characters": 0,
+      "warnings": [
+        "Package caption Warning: Unused \\captionsetup[figure] on input line 156.",
+        "Package caption Warning: Unused \\captionsetup[table] on input line 157."
+      ]
+    },
+    "all_42_marked_paragraphs_once_in_order": true,
+    "all_vector": true
+  }
+]

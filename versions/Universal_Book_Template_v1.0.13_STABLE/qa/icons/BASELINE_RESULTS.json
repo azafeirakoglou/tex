@@ -1,0 +1,20 @@
+[
+  {
+    "name": "BASELINE_SCREEN",
+    "profile": "SCREEN",
+    "pdf": "qa/icons/BASELINE_SCREEN/icon-context.pdf",
+    "sha256": "c348d31bf3b2d2b14c42844a1885b3913cfb54fa058e1ec4ffdd3d46e9e38b27",
+    "pages": 7,
+    "diagnostics": {
+      "overfull": 0,
+      "underfull": 0,
+      "missing_characters": 0,
+      "warnings": [
+        "Package caption Warning: Unused \\captionsetup[figure] on input line 156.",
+        "Package caption Warning: Unused \\captionsetup[table] on input line 157."
+      ]
+    },
+    "all_42_marked_paragraphs_once_in_order": true,
+    "all_vector": true
+  }
+]

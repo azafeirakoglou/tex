@@ -1,0 +1,65 @@
+% v1.0.13: shared typography/geometry, independent right-hand vector marks.
+% Public entry points and all counters/TOC/marks retain their signatures.
+\newsavebox{\BookAssessmentRunningTitleBox}
+\newcommand{\BookSetAssessmentMarks}[1]{%
+  \ifdefempty{\BookRunningChapterTitle}{%
+    \sbox{\BookAssessmentRunningTitleBox}{{\BookHeaderTitleFont #1}}%
+    \ifdim\wd\BookAssessmentRunningTitleBox>\BookStandaloneAssessmentHeaderMaxWidth\relax
+      \markboth{\LabelAssessment\space\theassessment}{\LabelAssessment\space\theassessment}%
+    \else
+      \markboth{#1}{#1}%
+    \fi
+  }{\markboth{#1}{#1}}%
+}
+\newcommand{\BookMaterialHeading}[3]{%
+  \par\noindent
+  \begin{tcolorbox}[enhanced,sharp corners,frame hidden,boxrule=0pt,
+    colback=BookPrimary,
+    left=\BookMaterialHeadingHorizontalPadding,right=\BookMaterialHeaderRightPadding,
+    top=\BookMaterialHeadingVerticalPadding,bottom=\BookMaterialHeadingVerticalPadding,
+    before skip=0pt,after skip=7pt,
+    overlay={\node[anchor=east,inner sep=0pt,outer sep=0pt] at
+      ([xshift=-\BookMaterialHeaderIconInset]frame.east) {\BookMaterialHeaderIcon};}]
+    {\sffamily\mdseries\fontsize{\BookMaterialHeadingLabelSize}{\BookMaterialHeadingLabelLeading}%
+      \selectfont\color{white}#1\ifstrempty{#3}{}{\space #3}}\par\vspace{1.4mm}%
+    {\BookHeadingFont\bfseries\fontsize{\BookMaterialHeadingTitleSize}{\BookMaterialHeadingTitleLeading}%
+      \selectfont\color{white}\raggedright #2\par}%
+  \end{tcolorbox}%
+}
+\newcommand{\BookMaterialSection}[1]{%
+  \par\Needspace{5\baselineskip}\addvspace{8pt}%
+  \noindent\begin{tcolorbox}[enhanced,sharp corners,frame hidden,boxrule=0pt,
+    colback=\BookMaterialSectionBackground,
+    left=\BookMaterialSectionHorizontalPadding,right=\BookMaterialSectionHorizontalPadding,
+    top=\BookMaterialSectionVerticalPadding,bottom=\BookMaterialSectionVerticalPadding,
+    before skip=0pt,after skip=7pt]
+    {\sffamily\bfseries\fontsize{\BookMaterialSectionSize}{\BookMaterialSectionLeading}%
+      \selectfont\color{white}#1}%
+  \end{tcolorbox}%
+}
+\renewcommand{\WorksheetOpening}[2]{%
+  \clearpage\BookEditorialMaybeFirstBodyTitle
+  \setcounter{exercise}{0}\refstepcounter{worksheet}%
+  \BookTOCOpenCollection{worksheet}{Φύλλα εργασίας}%
+  \phantomsection\addcontentsline{toc}{bookitem}{Φύλλο εργασίας\space\theworksheet\space—\space #2}%
+  \markboth{Φύλλα εργασίας}{Φύλλα εργασίας}%
+  \begingroup
+    \renewcommand{\BookMaterialHeaderIcon}{\BookWorksheetHeaderIcon}%
+    \BookMaterialHeading{\LabelWorksheet}{#2}{\theworksheet}%
+  \endgroup
+  \ifBookWorksheetShowSubtitle
+    {\sffamily\fontsize{8.6}{11}\selectfont\color{BookInk}\BookShortName\enspace·\enspace #1\par}%
+    \medskip
+  \fi
+  \ignorespaces
+}
+\renewcommand{\WorksheetSection}[1]{\BookMaterialSection{#1}}
+\RenewDocumentCommand{\AssessmentTopic}{m}{%
+  \stepcounter{assessmenttopic}%
+  \gdef\BookAssessmentTopicLetter{#1}%
+  \setcounter{assessmentquestion}{0}%
+  \BookMaterialSection{\LabelAssessmentTopic\space #1}%
+}
+% The original Assessment environment calls BookMaterialHeading as well.
+% Its options, date/student/duration fields, counters, marks, TOC and closing
+% clearpage remain in the original environment definition.

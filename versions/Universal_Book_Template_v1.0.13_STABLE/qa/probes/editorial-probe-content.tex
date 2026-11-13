@@ -1,0 +1,353 @@
+% Original QA content: candidate geometry and typography, never published.
+\newcommand{\EditorialProbeParagraph}{Η τεκμηρίωση ενός φυσικού προβλήματος αρχίζει με τον ορισμό των μεγεθών
+και των μονάδων τους. Επιλέγουμε σύστημα αναφοράς, εξετάζουμε τις παραδοχές
+και συνδέουμε τα δεδομένα με τη μαθηματική περιγραφή. Ελέγχουμε το πρόσημο,
+τις διαστάσεις και την οριακή συμπεριφορά πριν διατυπώσουμε το συμπέρασμα.
+Η σύγκριση δύο ανεξάρτητων λύσεων βοηθά στην αναγνώριση πιθανών σφαλμάτων.\par}
+\frontmatter
+\tableofcontents
+\mainmatter
+\BookChapterPhoto[Μετρήσεις]{Μετρήσεις και επιστημονική τεκμηρίωση: από τη συστηματική παρατήρηση στην ερμηνεία σύνθετων φυσικών φαινομένων}{Μακρύς τίτλος, υπάρχουσα φωτογραφία και έναρξη με απλή παράγραφο}{chapter_photo}{Υπάρχον ουδέτερο φωτογραφικό υλικό}{\item Να αναγνωρίζεις τις μεταβλητές.\item Να ελέγχεις τις μονάδες.\item Να τεκμηριώνεις τα συμπεράσματα.}
+\texttt{PARAGRAPHSTART}\par
+\EditorialProbeParagraph
+\noindent\texttt{INLINEBODY}\quad
+Για $\alpha,\beta\in\mathbb R$ και $t_i\ge0$, η σχέση
+$x_i=x_0+\upsilon_0t_i+\tfrac12at_i^2$ δίνει θέση σε $\mathrm{m}$.
+Το χημικό σύμβολο $\mathrm{H_2O}$ παραμένει όρθιο.\par
+\begin{ThinkBox}
+\texttt{THINKSHORTBEGIN}\quad Θέτω $\Delta x=x_2-x_1$ και ελέγχω τη μονάδα $\mathrm{m}$.
+\texttt{THINKSHORTEND}
+\end{ThinkBox}
+\texttt{AFTERTHINKSHORT}\quad\EditorialProbeParagraph
+\clearpage
+\texttt{PARAGRAPHNEXT}\par\EditorialProbeParagraph
+\section{Μεγέθη και αναλυτική τεκμηρίωση}
+\subsection{Κλίμακα και ακρίβεια}
+\EditorialProbeParagraph
+\begin{ThinkBox}
+\texttt{THINKMATHBEGIN}\par
+\EditorialProbeParagraph
+\[
+ x_i=x_0+\upsilon_0t_i+\frac12at_i^2,\qquad
+ \sigma_x=\sqrt{\frac{\sum_{i=1}^{n}(x_i-\bar{x})^2}{n-1}}.
+\]
+\[
+ \lim_{h\to0}\frac{f(t+h)-f(t)}{h}=f'(t),\qquad
+ \int_0^T\upsilon(t)\,\mathrm{d}t=\Delta x.
+\]
+Οι μεταβλητές είναι πλάγιες, οι μονάδες όρθιες και οι εκθέτες διακριτοί.
+\texttt{THINKMATHEND}
+\end{ThinkBox}
+\clearpage
+\section{Εικονογράφηση και πολυγραμμικές λεζάντες}
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[x=.85cm,y=.65cm]
+\draw[book/axis] (0,0)--(6.2,0) node[right]{$t\,(\mathrm{s})$};
+\draw[book/axis] (0,0)--(0,4.2) node[above]{$x\,(\mathrm{m})$};
+\draw[book/maincurve] (0,.4)--(5.4,3.6);
+\node[book/physlabel,above] at (3.2,3.25) {$\upsilon=\frac{\Delta x}{\Delta t}$};
+\node[book/ticklabel,below] at (2,0) {$2$};
+\node[book/ticklabel,left] at (0,2) {$2$};
+\end{tikzpicture}
+\caption{FIGCAPBEGIN Η θέση ενός σώματος ως συνάρτηση του χρόνου σε σταθερό σύστημα αναφοράς. Η κλίση της ευθείας εκφράζει τη σταθερή ταχύτητα, ενώ οι μονάδες των αξόνων επιτρέπουν τον έλεγχο της διαστατικής συνέπειας και τη σύγκριση ανεξάρτητων πειραματικών μετρήσεων. FIGCAPEND}\label{fig:editorial-probe}
+\end{figure}
+\begin{table}[htbp]
+\centering
+\begin{BookPlainTable}
+\begin{tabularx}{\linewidth}{@{}Xcc@{}}
+\BookTableHeaderRow\BookTableHead{Μέτρηση} & \BookTableHead{Χρόνος} & \BookTableHead{Θέση}\\
+Πρώτη καταγραφή & $1\,\mathrm{s}$ & $2\,\mathrm{m}$\\
+Δεύτερη καταγραφή & $2\,\mathrm{s}$ & $4\,\mathrm{m}$\\
+\end{tabularx}
+\end{BookPlainTable}
+\caption{TABLECAPBEGIN Σύγκριση δύο καταγραφών του ίδιου πειράματος με κοινές μονάδες αναφοράς. Η περιγραφή είναι αρκετά εκτενής ώστε να αναδιπλώνεται σε περισσότερες γραμμές και να εξετάζεται η στοίχιση της δεύτερης γραμμής κάτω από το περιγραφικό κείμενο. TABLECAPEND}\label{tab:editorial-short}
+\end{table}
+\clearpage
+\texttt{CAPTIONREFS}\quad\ref{fig:editorial-probe}\quad\ref{tab:editorial-short}\par
+\BookChapter[Ανάλυση]{Ανάλυση δεδομένων και μαθηματικά μοντέλα: ολοκληρωμένη διερεύνηση σχέσεων με πολλές μεταβλητές και σαφείς περιορισμούς}{Μακρύς τίτλος χωρίς φωτογραφία και έναρξη με section}{\item Να αναλύεις δεδομένα.\item Να ελέγχεις μοντέλα.\item Να διαβάζεις διαγράμματα.}
+\section{Ενότητα που αρχίζει αμέσως}
+\texttt{SECTIONSTART}\par\EditorialProbeParagraph
+\clearpage
+\texttt{SECTIONNEXT}\par\EditorialProbeParagraph
+\clearpage
+\begin{ThinkBox}
+\texttt{PROBETHINKBEGIN}\par
+\texttt{PROBETHINKROW001}\quad\EditorialProbeParagraph
+\texttt{PROBETHINKROW002}\quad\EditorialProbeParagraph
+\texttt{PROBETHINKROW003}\quad\EditorialProbeParagraph
+\texttt{PROBETHINKROW004}\quad\EditorialProbeParagraph
+\texttt{PROBETHINKROW005}\quad\EditorialProbeParagraph
+\texttt{PROBETHINKROW006}\quad\EditorialProbeParagraph
+\texttt{PROBETHINKROW007}\quad\EditorialProbeParagraph
+\texttt{PROBETHINKROW008}\quad\EditorialProbeParagraph
+\[
+ x_i=x_0+\upsilon_0t_i+\frac12at_i^2,\qquad
+ \sigma_x=\sqrt{\frac{\sum_{i=1}^{n}(x_i-\bar{x})^2}{n-1}}.
+\]
+\[
+ \lim_{h\to0}\frac{f(t+h)-f(t)}{h}=f'(t),\qquad
+ \int_0^T\upsilon(t)\,\mathrm{d}t=\Delta x.
+\]
+\texttt{PROBETHINKROW009}\quad\EditorialProbeParagraph
+\texttt{PROBETHINKROW010}\quad\EditorialProbeParagraph
+\texttt{PROBETHINKROW011}\quad\EditorialProbeParagraph
+\texttt{PROBETHINKROW012}\quad\EditorialProbeParagraph
+\texttt{PROBETHINKROW013}\quad\EditorialProbeParagraph
+\texttt{PROBETHINKROW014}\quad\EditorialProbeParagraph
+\texttt{PROBETHINKROW015}\quad\EditorialProbeParagraph
+\texttt{PROBETHINKROW016}\quad\EditorialProbeParagraph
+\texttt{PROBETHINKROW017}\quad\EditorialProbeParagraph
+\texttt{PROBETHINKROW018}\quad\EditorialProbeParagraph
+\texttt{PROBETHINKROW019}\quad\EditorialProbeParagraph
+\texttt{PROBETHINKROW020}\quad\EditorialProbeParagraph
+\[
+ x_i=x_0+\upsilon_0t_i+\frac12at_i^2,\qquad
+ \sigma_x=\sqrt{\frac{\sum_{i=1}^{n}(x_i-\bar{x})^2}{n-1}}.
+\]
+\[
+ \lim_{h\to0}\frac{f(t+h)-f(t)}{h}=f'(t),\qquad
+ \int_0^T\upsilon(t)\,\mathrm{d}t=\Delta x.
+\]
+\texttt{PROBETHINKROW021}\quad\EditorialProbeParagraph
+\texttt{PROBETHINKROW022}\quad\EditorialProbeParagraph
+\texttt{PROBETHINKROW023}\quad\EditorialProbeParagraph
+\texttt{PROBETHINKROW024}\quad\EditorialProbeParagraph
+\texttt{PROBETHINKROW025}\quad\EditorialProbeParagraph
+\texttt{PROBETHINKROW026}\quad\EditorialProbeParagraph
+\texttt{PROBETHINKROW027}\quad\EditorialProbeParagraph
+\texttt{PROBETHINKROW028}\quad\EditorialProbeParagraph
+\texttt{PROBETHINKROW029}\quad\EditorialProbeParagraph
+\texttt{PROBETHINKROW030}\quad\EditorialProbeParagraph
+\texttt{PROBETHINKROW031}\quad\EditorialProbeParagraph
+\texttt{PROBETHINKROW032}\quad\EditorialProbeParagraph
+\[
+ x_i=x_0+\upsilon_0t_i+\frac12at_i^2,\qquad
+ \sigma_x=\sqrt{\frac{\sum_{i=1}^{n}(x_i-\bar{x})^2}{n-1}}.
+\]
+\[
+ \lim_{h\to0}\frac{f(t+h)-f(t)}{h}=f'(t),\qquad
+ \int_0^T\upsilon(t)\,\mathrm{d}t=\Delta x.
+\]
+\texttt{PROBETHINKROW033}\quad\EditorialProbeParagraph
+\texttt{PROBETHINKROW034}\quad\EditorialProbeParagraph
+\texttt{PROBETHINKROW035}\quad\EditorialProbeParagraph
+\texttt{PROBETHINKROW036}\quad\EditorialProbeParagraph
+\texttt{PROBETHINKEND}
+\end{ThinkBox}
+\clearpage
+\begin{AttentionBox}
+\texttt{PROBEATTENTIONBEGIN}\par
+\texttt{PROBEATTENTIONROW001}\quad\EditorialProbeParagraph
+\texttt{PROBEATTENTIONROW002}\quad\EditorialProbeParagraph
+\texttt{PROBEATTENTIONROW003}\quad\EditorialProbeParagraph
+\texttt{PROBEATTENTIONROW004}\quad\EditorialProbeParagraph
+\texttt{PROBEATTENTIONROW005}\quad\EditorialProbeParagraph
+\texttt{PROBEATTENTIONROW006}\quad\EditorialProbeParagraph
+\texttt{PROBEATTENTIONROW007}\quad\EditorialProbeParagraph
+\texttt{PROBEATTENTIONROW008}\quad\EditorialProbeParagraph
+\texttt{PROBEATTENTIONROW009}\quad\EditorialProbeParagraph
+\texttt{PROBEATTENTIONROW010}\quad\EditorialProbeParagraph
+\texttt{PROBEATTENTIONROW011}\quad\EditorialProbeParagraph
+\texttt{PROBEATTENTIONROW012}\quad\EditorialProbeParagraph
+\texttt{PROBEATTENTIONROW013}\quad\EditorialProbeParagraph
+\texttt{PROBEATTENTIONROW014}\quad\EditorialProbeParagraph
+\texttt{PROBEATTENTIONROW015}\quad\EditorialProbeParagraph
+\texttt{PROBEATTENTIONROW016}\quad\EditorialProbeParagraph
+\texttt{PROBEATTENTIONROW017}\quad\EditorialProbeParagraph
+\texttt{PROBEATTENTIONROW018}\quad\EditorialProbeParagraph
+\texttt{PROBEATTENTIONROW019}\quad\EditorialProbeParagraph
+\texttt{PROBEATTENTIONROW020}\quad\EditorialProbeParagraph
+\texttt{PROBEATTENTIONROW021}\quad\EditorialProbeParagraph
+\texttt{PROBEATTENTIONROW022}\quad\EditorialProbeParagraph
+\texttt{PROBEATTENTIONROW023}\quad\EditorialProbeParagraph
+\texttt{PROBEATTENTIONROW024}\quad\EditorialProbeParagraph
+\texttt{PROBEATTENTIONROW025}\quad\EditorialProbeParagraph
+\texttt{PROBEATTENTIONROW026}\quad\EditorialProbeParagraph
+\texttt{PROBEATTENTIONROW027}\quad\EditorialProbeParagraph
+\texttt{PROBEATTENTIONROW028}\quad\EditorialProbeParagraph
+\texttt{PROBEATTENTIONROW029}\quad\EditorialProbeParagraph
+\texttt{PROBEATTENTIONROW030}\quad\EditorialProbeParagraph
+\texttt{PROBEATTENTIONROW031}\quad\EditorialProbeParagraph
+\texttt{PROBEATTENTIONROW032}\quad\EditorialProbeParagraph
+\texttt{PROBEATTENTIONROW033}\quad\EditorialProbeParagraph
+\texttt{PROBEATTENTIONROW034}\quad\EditorialProbeParagraph
+\texttt{PROBEATTENTIONROW035}\quad\EditorialProbeParagraph
+\texttt{PROBEATTENTIONROW036}\quad\EditorialProbeParagraph
+\texttt{PROBEATTENTIONEND}
+\end{AttentionBox}
+\clearpage
+\begin{HistoryBox}[Ιστορική εξέλιξη της επιστημονικής μεθόδου]
+\texttt{PROBEHISTORYBEGIN}\par
+\texttt{PROBEHISTORYROW001}\quad\EditorialProbeParagraph
+\texttt{PROBEHISTORYROW002}\quad\EditorialProbeParagraph
+\texttt{PROBEHISTORYROW003}\quad\EditorialProbeParagraph
+\texttt{PROBEHISTORYROW004}\quad\EditorialProbeParagraph
+\texttt{PROBEHISTORYROW005}\quad\EditorialProbeParagraph
+\texttt{PROBEHISTORYROW006}\quad\EditorialProbeParagraph
+\texttt{PROBEHISTORYROW007}\quad\EditorialProbeParagraph
+\texttt{PROBEHISTORYROW008}\quad\EditorialProbeParagraph
+\texttt{PROBEHISTORYROW009}\quad\EditorialProbeParagraph
+\texttt{PROBEHISTORYROW010}\quad\EditorialProbeParagraph
+\texttt{PROBEHISTORYROW011}\quad\EditorialProbeParagraph
+\texttt{PROBEHISTORYROW012}\quad\EditorialProbeParagraph
+\texttt{PROBEHISTORYROW013}\quad\EditorialProbeParagraph
+\texttt{PROBEHISTORYROW014}\quad\EditorialProbeParagraph
+\texttt{PROBEHISTORYROW015}\quad\EditorialProbeParagraph
+\texttt{PROBEHISTORYROW016}\quad\EditorialProbeParagraph
+\texttt{PROBEHISTORYROW017}\quad\EditorialProbeParagraph
+\texttt{PROBEHISTORYROW018}\quad\EditorialProbeParagraph
+\texttt{PROBEHISTORYROW019}\quad\EditorialProbeParagraph
+\texttt{PROBEHISTORYROW020}\quad\EditorialProbeParagraph
+\texttt{PROBEHISTORYROW021}\quad\EditorialProbeParagraph
+\texttt{PROBEHISTORYROW022}\quad\EditorialProbeParagraph
+\texttt{PROBEHISTORYROW023}\quad\EditorialProbeParagraph
+\texttt{PROBEHISTORYROW024}\quad\EditorialProbeParagraph
+\texttt{PROBEHISTORYROW025}\quad\EditorialProbeParagraph
+\texttt{PROBEHISTORYROW026}\quad\EditorialProbeParagraph
+\texttt{PROBEHISTORYROW027}\quad\EditorialProbeParagraph
+\texttt{PROBEHISTORYROW028}\quad\EditorialProbeParagraph
+\texttt{PROBEHISTORYROW029}\quad\EditorialProbeParagraph
+\texttt{PROBEHISTORYROW030}\quad\EditorialProbeParagraph
+\texttt{PROBEHISTORYROW031}\quad\EditorialProbeParagraph
+\texttt{PROBEHISTORYROW032}\quad\EditorialProbeParagraph
+\texttt{PROBEHISTORYROW033}\quad\EditorialProbeParagraph
+\texttt{PROBEHISTORYROW034}\quad\EditorialProbeParagraph
+\texttt{PROBEHISTORYROW035}\quad\EditorialProbeParagraph
+\texttt{PROBEHISTORYROW036}\quad\EditorialProbeParagraph
+\texttt{PROBEHISTORYEND}
+\end{HistoryBox}
+\clearpage
+\section{Πίνακας πολλών σελίδων με πολυγραμμική λεζάντα}
+\begin{BookLongTable}[LONGCAPBEGIN Διαδοχικές μετρήσεις θέσης και χρόνου σε κοινό πείραμα. Η εκτενής λεζάντα παραμένει στην πρώτη σελίδα του πίνακα, αναδιπλώνεται με σταθερή στοίχιση και περιγράφει τις μονάδες, τη μέθοδο καταγραφής και τον έλεγχο της συνέπειας των δεδομένων. LONGCAPEND\label{tab:editorial-long}]{@{}p{38mm}p{56mm}p{22mm}@{}}{\BookTableHead{PROBETABLEHEAD} & \BookTableHead{Περιγραφή μέτρησης} & \BookTableHead{Θέση}}
+\texttt{PROBETABLEROW001} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $1\,\mathrm{m}$\\
+\texttt{PROBETABLEROW002} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $2\,\mathrm{m}$\\
+\texttt{PROBETABLEROW003} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $3\,\mathrm{m}$\\
+\texttt{PROBETABLEROW004} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $4\,\mathrm{m}$\\
+\texttt{PROBETABLEROW005} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $5\,\mathrm{m}$\\
+\texttt{PROBETABLEROW006} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $6\,\mathrm{m}$\\
+\texttt{PROBETABLEROW007} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $7\,\mathrm{m}$\\
+\texttt{PROBETABLEROW008} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $8\,\mathrm{m}$\\
+\texttt{PROBETABLEROW009} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $9\,\mathrm{m}$\\
+\texttt{PROBETABLEROW010} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $10\,\mathrm{m}$\\
+\texttt{PROBETABLEROW011} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $11\,\mathrm{m}$\\
+\texttt{PROBETABLEROW012} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $12\,\mathrm{m}$\\
+\texttt{PROBETABLEROW013} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $13\,\mathrm{m}$\\
+\texttt{PROBETABLEROW014} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $14\,\mathrm{m}$\\
+\texttt{PROBETABLEROW015} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $15\,\mathrm{m}$\\
+\texttt{PROBETABLEROW016} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $16\,\mathrm{m}$\\
+\texttt{PROBETABLEROW017} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $17\,\mathrm{m}$\\
+\texttt{PROBETABLEROW018} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $18\,\mathrm{m}$\\
+\texttt{PROBETABLEROW019} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $19\,\mathrm{m}$\\
+\texttt{PROBETABLEROW020} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $20\,\mathrm{m}$\\
+\texttt{PROBETABLEROW021} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $21\,\mathrm{m}$\\
+\texttt{PROBETABLEROW022} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $22\,\mathrm{m}$\\
+\texttt{PROBETABLEROW023} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $23\,\mathrm{m}$\\
+\texttt{PROBETABLEROW024} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $24\,\mathrm{m}$\\
+\texttt{PROBETABLEROW025} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $25\,\mathrm{m}$\\
+\texttt{PROBETABLEROW026} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $26\,\mathrm{m}$\\
+\texttt{PROBETABLEROW027} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $27\,\mathrm{m}$\\
+\texttt{PROBETABLEROW028} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $28\,\mathrm{m}$\\
+\texttt{PROBETABLEROW029} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $29\,\mathrm{m}$\\
+\texttt{PROBETABLEROW030} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $30\,\mathrm{m}$\\
+\texttt{PROBETABLEROW031} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $31\,\mathrm{m}$\\
+\texttt{PROBETABLEROW032} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $32\,\mathrm{m}$\\
+\texttt{PROBETABLEROW033} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $33\,\mathrm{m}$\\
+\texttt{PROBETABLEROW034} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $34\,\mathrm{m}$\\
+\texttt{PROBETABLEROW035} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $35\,\mathrm{m}$\\
+\texttt{PROBETABLEROW036} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $36\,\mathrm{m}$\\
+\texttt{PROBETABLEROW037} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $37\,\mathrm{m}$\\
+\texttt{PROBETABLEROW038} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $38\,\mathrm{m}$\\
+\texttt{PROBETABLEROW039} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $39\,\mathrm{m}$\\
+\texttt{PROBETABLEROW040} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $40\,\mathrm{m}$\\
+\texttt{PROBETABLEROW041} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $41\,\mathrm{m}$\\
+\texttt{PROBETABLEROW042} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $42\,\mathrm{m}$\\
+\texttt{PROBETABLEROW043} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $43\,\mathrm{m}$\\
+\texttt{PROBETABLEROW044} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $44\,\mathrm{m}$\\
+\texttt{PROBETABLEROW045} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $45\,\mathrm{m}$\\
+\texttt{PROBETABLEROW046} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $46\,\mathrm{m}$\\
+\texttt{PROBETABLEROW047} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $47\,\mathrm{m}$\\
+\texttt{PROBETABLEROW048} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $48\,\mathrm{m}$\\
+\texttt{PROBETABLEROW049} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $49\,\mathrm{m}$\\
+\texttt{PROBETABLEROW050} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $50\,\mathrm{m}$\\
+\texttt{PROBETABLEROW051} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $51\,\mathrm{m}$\\
+\texttt{PROBETABLEROW052} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $52\,\mathrm{m}$\\
+\texttt{PROBETABLEROW053} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $53\,\mathrm{m}$\\
+\texttt{PROBETABLEROW054} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $54\,\mathrm{m}$\\
+\texttt{PROBETABLEROW055} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $55\,\mathrm{m}$\\
+\texttt{PROBETABLEROW056} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $56\,\mathrm{m}$\\
+\texttt{PROBETABLEROW057} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $57\,\mathrm{m}$\\
+\texttt{PROBETABLEROW058} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $58\,\mathrm{m}$\\
+\texttt{PROBETABLEROW059} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $59\,\mathrm{m}$\\
+\texttt{PROBETABLEROW060} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $60\,\mathrm{m}$\\
+\texttt{PROBETABLEROW061} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $61\,\mathrm{m}$\\
+\texttt{PROBETABLEROW062} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $62\,\mathrm{m}$\\
+\texttt{PROBETABLEROW063} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $63\,\mathrm{m}$\\
+\texttt{PROBETABLEROW064} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $64\,\mathrm{m}$\\
+\texttt{PROBETABLEROW065} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $65\,\mathrm{m}$\\
+\texttt{PROBETABLEROW066} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $66\,\mathrm{m}$\\
+\texttt{PROBETABLEROW067} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $67\,\mathrm{m}$\\
+\texttt{PROBETABLEROW068} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $68\,\mathrm{m}$\\
+\texttt{PROBETABLEROW069} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $69\,\mathrm{m}$\\
+\texttt{PROBETABLEROW070} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $70\,\mathrm{m}$\\
+\texttt{PROBETABLEROW071} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $71\,\mathrm{m}$\\
+\texttt{PROBETABLEROW072} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $72\,\mathrm{m}$\\
+\texttt{PROBETABLEROW073} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $73\,\mathrm{m}$\\
+\texttt{PROBETABLEROW074} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $74\,\mathrm{m}$\\
+\texttt{PROBETABLEROW075} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $75\,\mathrm{m}$\\
+\texttt{PROBETABLEROW076} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $76\,\mathrm{m}$\\
+\texttt{PROBETABLEROW077} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $77\,\mathrm{m}$\\
+\texttt{PROBETABLEROW078} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $78\,\mathrm{m}$\\
+\texttt{PROBETABLEROW079} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $79\,\mathrm{m}$\\
+\texttt{PROBETABLEROW080} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $80\,\mathrm{m}$\\
+\texttt{PROBETABLEROW081} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $81\,\mathrm{m}$\\
+\texttt{PROBETABLEROW082} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $82\,\mathrm{m}$\\
+\texttt{PROBETABLEROW083} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $83\,\mathrm{m}$\\
+\texttt{PROBETABLEROW084} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $84\,\mathrm{m}$\\
+\texttt{PROBETABLEROW085} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $85\,\mathrm{m}$\\
+\texttt{PROBETABLEROW086} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $86\,\mathrm{m}$\\
+\texttt{PROBETABLEROW087} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $87\,\mathrm{m}$\\
+\texttt{PROBETABLEROW088} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $88\,\mathrm{m}$\\
+\texttt{PROBETABLEROW089} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $89\,\mathrm{m}$\\
+\texttt{PROBETABLEROW090} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $90\,\mathrm{m}$\\
+\texttt{PROBETABLEROW091} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $91\,\mathrm{m}$\\
+\texttt{PROBETABLEROW092} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $92\,\mathrm{m}$\\
+\texttt{PROBETABLEROW093} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $93\,\mathrm{m}$\\
+\texttt{PROBETABLEROW094} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $94\,\mathrm{m}$\\
+\texttt{PROBETABLEROW095} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $95\,\mathrm{m}$\\
+\texttt{PROBETABLEROW096} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $96\,\mathrm{m}$\\
+\texttt{PROBETABLEROW097} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $97\,\mathrm{m}$\\
+\texttt{PROBETABLEROW098} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $98\,\mathrm{m}$\\
+\texttt{PROBETABLEROW099} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $99\,\mathrm{m}$\\
+\texttt{PROBETABLEROW100} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $100\,\mathrm{m}$\\
+\texttt{PROBETABLEROW101} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $101\,\mathrm{m}$\\
+\texttt{PROBETABLEROW102} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $102\,\mathrm{m}$\\
+\texttt{PROBETABLEROW103} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $103\,\mathrm{m}$\\
+\texttt{PROBETABLEROW104} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $104\,\mathrm{m}$\\
+\texttt{PROBETABLEROW105} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $105\,\mathrm{m}$\\
+\texttt{PROBETABLEROW106} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $106\,\mathrm{m}$\\
+\texttt{PROBETABLEROW107} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $107\,\mathrm{m}$\\
+\texttt{PROBETABLEROW108} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $108\,\mathrm{m}$\\
+\texttt{PROBETABLEROW109} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $109\,\mathrm{m}$\\
+\texttt{PROBETABLEROW110} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $110\,\mathrm{m}$\\
+\texttt{PROBETABLEROW111} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $111\,\mathrm{m}$\\
+\texttt{PROBETABLEROW112} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $112\,\mathrm{m}$\\
+\texttt{PROBETABLEROW113} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $113\,\mathrm{m}$\\
+\texttt{PROBETABLEROW114} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $114\,\mathrm{m}$\\
+\texttt{PROBETABLEROW115} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $115\,\mathrm{m}$\\
+\texttt{PROBETABLEROW116} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $116\,\mathrm{m}$\\
+\texttt{PROBETABLEROW117} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $117\,\mathrm{m}$\\
+\texttt{PROBETABLEROW118} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $118\,\mathrm{m}$\\
+\texttt{PROBETABLEROW119} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $119\,\mathrm{m}$\\
+\texttt{PROBETABLEROW120} & Καταγραφή θέσης με κοινή μονάδα αναφοράς & $120\,\mathrm{m}$\\
+\end{BookLongTable}
+\texttt{LONGTABLEREF}\quad\ref{tab:editorial-long}\par
+\texttt{AFTERLONGTABLEBLACK}\quad Το κείμενο μετά τον πίνακα είναι μαύρο.
+\BookChapter[Έλεγχος]{Έλεγχος μοντέλων και σύνθεση επιστημονικών συμπερασμάτων}{Έναρξη κυρίως περιεχομένου με διδακτικό κουτί}{\item Να συνθέτεις σχέσεις.\item Να αξιολογείς τα αποτελέσματα.}
+\begin{AttentionBox}
+\texttt{CALLOUTSTART}\quad Η μονάδα του αποτελέσματος αποτελεί μέρος της απάντησης.
+\end{AttentionBox}
+\EditorialProbeParagraph
+\clearpage
+\texttt{CALLOUTNEXT}\par\EditorialProbeParagraph
+\texttt{EDITORIALPROBEEND}

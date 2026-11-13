@@ -1,0 +1,14 @@
+% v1.0.13: material-header additions only. Existing fonts/padding stay intact.
+\newcommand{\BookMaterialHeaderIconSize}{11mm}
+\newcommand{\BookMaterialHeaderIconInset}{4.5mm}
+\newcommand{\BookMaterialHeaderIconGap}{5mm}
+\newcommand{\BookMaterialHeaderIconLineWidth}{1pt}
+\newcommand{\BookMaterialHeaderRightPadding}{%
+  \dimexpr\BookMaterialHeaderIconInset+\BookMaterialHeaderIconSize+\BookMaterialHeaderIconGap\relax}
+% Book worksheets omit the book/unit subtitle. Enable it explicitly for a
+% stand-alone handout; the hidden branch contains neither text nor extra skip.
+\newif\ifBookWorksheetShowSubtitle
+\BookWorksheetShowSubtitlefalse
+% Stand-alone assessment running labels must leave room for the existing bird.
+% This does not constrain the full title inside the coloured material header.
+\newcommand{\BookStandaloneAssessmentHeaderMaxWidth}{\dimexpr\textwidth-15mm\relax}

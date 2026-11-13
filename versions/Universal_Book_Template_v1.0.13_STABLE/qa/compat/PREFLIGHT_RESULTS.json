@@ -1,0 +1,146 @@
+[
+  {
+    "design": "A",
+    "pair": "sample",
+    "exit_code": 0,
+    "elapsed_seconds": 8.78,
+    "report": "qa/compat/A/sample.preflight.json"
+  },
+  {
+    "design": "A",
+    "pair": "figures",
+    "exit_code": 0,
+    "elapsed_seconds": 7.4,
+    "report": "qa/compat/A/figures.preflight.json"
+  },
+  {
+    "design": "A",
+    "pair": "assessment",
+    "exit_code": 0,
+    "elapsed_seconds": 4.83,
+    "report": "qa/compat/A/assessment.preflight.json"
+  },
+  {
+    "design": "A",
+    "pair": "tables",
+    "exit_code": 0,
+    "elapsed_seconds": 1.55,
+    "report": "qa/compat/A/tables.preflight.json"
+  },
+  {
+    "design": "A",
+    "pair": "opening-goals",
+    "exit_code": 0,
+    "elapsed_seconds": 3.05,
+    "report": "qa/compat/A/opening-goals.preflight.json"
+  },
+  {
+    "design": "A",
+    "pair": "history-statements",
+    "exit_code": 0,
+    "elapsed_seconds": 2.84,
+    "report": "qa/compat/A/history-statements.preflight.json"
+  },
+  {
+    "design": "A",
+    "pair": "callouts",
+    "exit_code": 0,
+    "elapsed_seconds": 1.43,
+    "report": "qa/compat/A/callouts.preflight.json"
+  },
+  {
+    "design": "A",
+    "pair": "palette",
+    "exit_code": 0,
+    "elapsed_seconds": 2.32,
+    "report": "qa/compat/A/palette.preflight.json"
+  },
+  {
+    "design": "A",
+    "pair": "starter",
+    "exit_code": 0,
+    "elapsed_seconds": 3.65,
+    "report": "qa/compat/A/starter.preflight.json"
+  },
+  {
+    "design": "A",
+    "pair": "stress",
+    "exit_code": 0,
+    "elapsed_seconds": 24.4,
+    "report": "qa/compat/A/stress.preflight.json",
+    "stress_structure_exit_code": 0,
+    "stress_structure_report": "qa/compat/A/stress.structure.json"
+  },
+  {
+    "design": "B",
+    "pair": "sample",
+    "exit_code": 0,
+    "elapsed_seconds": 4.38,
+    "report": "qa/compat/B/sample.preflight.json"
+  },
+  {
+    "design": "B",
+    "pair": "figures",
+    "exit_code": 0,
+    "elapsed_seconds": 4.75,
+    "report": "qa/compat/B/figures.preflight.json"
+  },
+  {
+    "design": "B",
+    "pair": "assessment",
+    "exit_code": 0,
+    "elapsed_seconds": 4.86,
+    "report": "qa/compat/B/assessment.preflight.json"
+  },
+  {
+    "design": "B",
+    "pair": "tables",
+    "exit_code": 0,
+    "elapsed_seconds": 2.34,
+    "report": "qa/compat/B/tables.preflight.json"
+  },
+  {
+    "design": "B",
+    "pair": "opening-goals",
+    "exit_code": 0,
+    "elapsed_seconds": 2.73,
+    "report": "qa/compat/B/opening-goals.preflight.json"
+  },
+  {
+    "design": "B",
+    "pair": "history-statements",
+    "exit_code": 0,
+    "elapsed_seconds": 2.03,
+    "report": "qa/compat/B/history-statements.preflight.json"
+  },
+  {
+    "design": "B",
+    "pair": "callouts",
+    "exit_code": 0,
+    "elapsed_seconds": 1.23,
+    "report": "qa/compat/B/callouts.preflight.json"
+  },
+  {
+    "design": "B",
+    "pair": "palette",
+    "exit_code": 0,
+    "elapsed_seconds": 1.36,
+    "report": "qa/compat/B/palette.preflight.json"
+  },
+  {
+    "design": "B",
+    "pair": "starter",
+    "exit_code": 0,
+    "elapsed_seconds": 2.28,
+    "report": "qa/compat/B/starter.preflight.json"
+  },
+  {
+    "design": "B",
+    "pair": "stress",
+    "exit_code": 0,
+    "elapsed_seconds": 25.69,
+    "report": "qa/compat/B/stress.preflight.json",
+    "stress_structure_exit_code": 0,
+    "stress_structure_report": "qa/compat/B/stress.structure.json"
+  }
+]

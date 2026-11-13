@@ -1,0 +1,77 @@
+% Synthetic English markers are not Greek prose; ragged right avoids testing
+% unrelated English hyphenation while actual book fixtures remain untouched.
+\raggedright
+\newsavebox{\RefinementMathBox}
+\newsavebox{\RefinementChoicesBox}
+\mainmatter
+\BookChapter[Refinement]{REFINEMENT OPENING}{Controlled v1.0.13 component checks}{%
+\item OPENINGGOALONE Preserve unchanged scientific authoring content.
+\item OPENINGGOALTWO Use only the existing approved inks and tints.
+}
+\BookSection{REFINEMENT TEACHING RULES}
+\begin{AttentionBox}
+ATTENTIONMARK A short warning with black body text and a single accent rule.
+\end{AttentionBox}
+\begin{ThinkBox}
+THINKMARK A short method with $v=\Delta x/\Delta t$ and the reference bulb.
+\end{ThinkBox}
+\begin{HistoryBox}[Controlled history]
+HISTORYMARK A short history with preserved neutral background and source text.
+\end{HistoryBox}
+\begin{MethodBox}
+METHODMARK An older teaching API keeps its original typography and soft fill.
+\end{MethodBox}
+\clearpage
+\BookSection{REFINEMENT STATEMENTS AND GOALS}
+\begin{definitionbox}[DEFINITIONTITLE]
+% The QA marker is an artificial unhyphenated token, not book prose.
+\raggedright DEFINITIONMARK The statement retains its counter and all mathematical content.
+\end{definitionbox}
+\begin{theorembox}[THEOREMTITLE]
+THEOREMMARK The statement uses $a=b\Rightarrow a+c=b+c$ without new colours.
+\end{theorembox}
+\begin{LearningGoals}
+\begin{enumerate}[label=\arabic*.,leftmargin=13pt]
+\item LEARNINGGOALITEMONE Keep numbered goals and black explanatory text.
+\item LEARNINGGOALITEMTWO Keep the same padding and remove three borders.
+\end{enumerate}
+\end{LearningGoals}
+\clearpage
+\BookSection{REFINEMENT ANSWERS AND EXERCISES}
+\begin{exercise}[REFEX]{}
+EXERCISEBARMARK An existing numbered statement remains unchanged.
+\Answer{ANSWERCONTENT The value is $v=3\,\mathrm{m/s}$ and $\alpha=2$.}
+AFTERANSWERFONT Normal body text must be black and return to its original size.
+\end{exercise}
+\begin{booksolution}{REFEX}
+SOLUTIONBARMARK This related answer uses the same separator dimensions.
+\end{booksolution}
+\begin{AssessmentQuestion}[5]
+ASSESSMENTQUESTIONMARK A controlled question keeps black points.\label{asq:REFCHECK}
+\end{AssessmentQuestion}
+\begin{AssessmentSolution}{asq:REFCHECK}
+ASSESSMENTBARMARK The assessment solution keeps the same vertical separator.
+\end{AssessmentSolution}
+\clearpage
+\BookSection{REFINEMENT TRUE FALSE IN NARROW COLUMNS}
+\begin{multicols}{2}
+\begin{enumerate}
+\sbox{\RefinementMathBox}{$x_A+x_B+x_C+x_D=12\,\mathrm{m}$}%
+\sbox{\RefinementChoicesBox}{\TrueFalseChoices}%
+\typeout{REFINEMENT-MATH-WIDTH=\the\wd\RefinementMathBox}%
+\typeout{REFINEMENT-CHOICES-WIDTH=\the\wd\RefinementChoicesBox}%
+\typeout{REFINEMENT-COLUMN-WIDTH=\the\linewidth}%
+\ifdim\wd\RefinementMathBox>\linewidth
+  \PackageError{refinement-fixture}{Math object itself exceeds the column}{}%
+\fi
+\ifdim\dimexpr\wd\RefinementMathBox+\wd\RefinementChoicesBox+.6em\relax<\linewidth
+  \PackageError{refinement-fixture}{Math plus choices does not exercise wrapping}{}%
+\fi
+\TrueFalseItem{NARROWONE A measured statement has stable spacing and choices.}
+\TrueFalseItem{NARROWTWO A statement ending with the unbreakable expression
+\usebox{\RefinementMathBox}.}
+\TrueFalseItem{NARROWTHREE A longer synthetic explanation spans several short lines before the choice pair is placed safely.}
+\TrueFalseItem{NARROWFOUR The labels and both checkboxes use full second ink.}
+\end{enumerate}
+\end{multicols}
+AFTERTF Normal black body text after the choices.

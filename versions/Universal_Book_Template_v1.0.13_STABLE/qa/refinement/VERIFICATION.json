@@ -1,0 +1,204 @@
+{
+  "status": "passed",
+  "proofs": [
+    {
+      "profile": "SCREEN",
+      "exit_code": 0,
+      "log": "qa/refinement/results/SCREEN.build.log",
+      "pdf": "qa/refinement/pdf/REFINEMENT_SCREEN.pdf",
+      "sha256": "594e2d85f4467e1826e12027d631c9093889d26556843d58983ec176bd853e3a",
+      "diagnostics": {
+        "overfull": 0,
+        "underfull": 0,
+        "missing_characters": 0,
+        "warnings": 2
+      },
+      "checks": {
+        "native_geometry_and_no_raster_in_controlled_proof": true,
+        "chapter_indicator_Inter_SemiBold_9_5_primary": true,
+        "first_body_title_Noto_Medium_17_5_unchanged": true,
+        "opening_goal_title_and_bullets_primary_body_black": true,
+        "opening_title_rule_1_5_pt": true,
+        "ATTENTIONMARK_central_west_rule": true,
+        "THINKMARK_central_west_rule": true,
+        "HISTORYMARK_central_west_rule": true,
+        "METHODMARK_central_west_rule": true,
+        "DEFINITIONMARK_central_west_rule": true,
+        "THEOREMMARK_central_west_rule": true,
+        "LEARNINGGOALITEMONE_central_west_rule": true,
+        "LearningGoals_no_top_bottom_right_frame_numbers_primary_body_black": true,
+        "short_answer_prefix_55_body_and_math_black_8_2_italic": true,
+        "answer_does_not_leak_color_or_font_to_following_text": true,
+        "EXERCISEBARMARK_separator_size_and_primary": true,
+        "SOLUTIONBARMARK_separator_size_and_primary": true,
+        "ASSESSMENTBARMARK_separator_size_and_primary": true,
+        "all_four_TF_pairs_use_primary_labels": true,
+        "all_eight_TF_checkboxes_primary_and_unchanged_size": true,
+        "all_narrow_column_content_preserved": true,
+        "no_overfull_underfull_or_missing_glyphs": true
+      },
+      "measurements": {
+        "ATTENTIONMARK": {
+          "page": 2,
+          "width_tex_pt": 1,
+          "matched_rules": 1,
+          "body_rgb": "000000"
+        },
+        "THINKMARK": {
+          "page": 2,
+          "width_tex_pt": 1,
+          "matched_rules": 1,
+          "body_rgb": "000000"
+        },
+        "HISTORYMARK": {
+          "page": 2,
+          "width_tex_pt": 1,
+          "matched_rules": 1,
+          "body_rgb": "000000"
+        },
+        "METHODMARK": {
+          "page": 2,
+          "width_tex_pt": 1,
+          "matched_rules": 1,
+          "body_rgb": "000000"
+        },
+        "DEFINITIONMARK": {
+          "page": 3,
+          "width_tex_pt": 1.5,
+          "matched_rules": 1,
+          "body_rgb": "000000"
+        },
+        "THEOREMMARK": {
+          "page": 3,
+          "width_tex_pt": 1.5,
+          "matched_rules": 1,
+          "body_rgb": "000000"
+        },
+        "LEARNINGGOALITEMONE": {
+          "page": 3,
+          "width_tex_pt": 1,
+          "matched_rules": 1,
+          "body_rgb": "000000"
+        },
+        "pages": 5
+      },
+      "status": "passed"
+    },
+    {
+      "profile": "PRINT",
+      "exit_code": 0,
+      "log": "qa/refinement/results/PRINT.build.log",
+      "pdf": "qa/refinement/pdf/REFINEMENT_PRINT.pdf",
+      "sha256": "0591738a321a9dc85e00c6ef9056ce5cadd939d32a60889e0f7f681536abc8f9",
+      "diagnostics": {
+        "overfull": 0,
+        "underfull": 0,
+        "missing_characters": 0,
+        "warnings": 2
+      },
+      "checks": {
+        "native_geometry_and_no_raster_in_controlled_proof": true,
+        "chapter_indicator_Inter_SemiBold_9_5_primary": true,
+        "first_body_title_Noto_Medium_17_5_unchanged": true,
+        "opening_goal_title_and_bullets_primary_body_black": true,
+        "opening_title_rule_1_5_pt": true,
+        "ATTENTIONMARK_central_west_rule": true,
+        "THINKMARK_central_west_rule": true,
+        "HISTORYMARK_central_west_rule": true,
+        "METHODMARK_central_west_rule": true,
+        "DEFINITIONMARK_central_west_rule": true,
+        "THEOREMMARK_central_west_rule": true,
+        "LEARNINGGOALITEMONE_central_west_rule": true,
+        "LearningGoals_no_top_bottom_right_frame_numbers_primary_body_black": true,
+        "short_answer_prefix_55_body_and_math_black_8_2_italic": true,
+        "answer_does_not_leak_color_or_font_to_following_text": true,
+        "EXERCISEBARMARK_separator_size_and_primary": true,
+        "SOLUTIONBARMARK_separator_size_and_primary": true,
+        "ASSESSMENTBARMARK_separator_size_and_primary": true,
+        "all_four_TF_pairs_use_primary_labels": true,
+        "all_eight_TF_checkboxes_primary_and_unchanged_size": true,
+        "all_narrow_column_content_preserved": true,
+        "no_overfull_underfull_or_missing_glyphs": true
+      },
+      "measurements": {
+        "ATTENTIONMARK": {
+          "page": 2,
+          "width_tex_pt": 1,
+          "matched_rules": 1,
+          "body_rgb": "000000"
+        },
+        "THINKMARK": {
+          "page": 2,
+          "width_tex_pt": 1,
+          "matched_rules": 1,
+          "body_rgb": "000000"
+        },
+        "HISTORYMARK": {
+          "page": 2,
+          "width_tex_pt": 1,
+          "matched_rules": 1,
+          "body_rgb": "000000"
+        },
+        "METHODMARK": {
+          "page": 2,
+          "width_tex_pt": 1,
+          "matched_rules": 1,
+          "body_rgb": "000000"
+        },
+        "DEFINITIONMARK": {
+          "page": 3,
+          "width_tex_pt": 1.5,
+          "matched_rules": 1,
+          "body_rgb": "000000"
+        },
+        "THEOREMMARK": {
+          "page": 3,
+          "width_tex_pt": 1.5,
+          "matched_rules": 1,
+          "body_rgb": "000000"
+        },
+        "LEARNINGGOALITEMONE": {
+          "page": 3,
+          "width_tex_pt": 1,
+          "matched_rules": 1,
+          "body_rgb": "000000"
+        },
+        "pages": 5
+      },
+      "status": "passed"
+    }
+  ],
+  "source_sha256": {
+    "config/book-config.tex": "b6dea35bad684e1574d8080045046e23ba4b8eb8a14840e7d591cca0cd6886a8",
+    "config/color-map.json": "9ee30c9ae4fc9327afa48189602f249a9edc111b6307313019f896b9042d310b",
+    "config/color-roles.tex": "a08e0eaea4f6524267352a61337606fe9e5f6954509d046fd85c8297e0499938",
+    "config/editorial-config.tex": "9afbcb0867d544c13c6c9be770505d9b24c35e701fccdf03426ba829d3302a40",
+    "config/editorial-design.tex": "01b7fd576dbe84677b799b9187937e4205fb9075c746b8731c2a0750ace0fddd",
+    "config/generated-assets.tex": "f383bed5faf6c3c188a598e0b42ad6883d8fb3c472332238191ab9339b9d821c",
+    "config/material-v113.tex": "c9ffc0d0dfde39a1275c9afe3ce7c4d7d427865ebb4f0e79ed1d4d93dda99afe",
+    "config/palette-print2-spot.tex": "9afef79c76758b6d9d6f11464d274c48e0307c8e297db108e47f65e0d21e1545",
+    "config/palette-screen.tex": "ad82193a2da26a0accc3f27ee55eca1d4c10bf2ef891986135d98426dc72de69",
+    "config/refinement-v113.tex": "70727e44b4683f7a7f53cb0e34eb549d56f9f790506a5700a1f00ed34e30e39a",
+    "config/rules-v113.tex": "59df2363265e3a3e1fc6efc0dfc197aa643361776f1e7b663ca5a397b5f07f03",
+    "config/stable-callouts.tex": "c45e5fe86587388714977ee7726b6fa6760241a606870411c573c7dc1b9d6291",
+    "config/stable-config.tex": "d593887825812a62844fa0b70262ac9919cb435738ca91096c8368c1400e7277",
+    "config/stable-tables.tex": "c5e847b5f458f90e66a6571abbe58ea746a8337a9364e6011877e63427d70f73",
+    "styles/book-assets.tex": "059a6ab43aa4391d34c219249ec442838656e01e21e9e7289af5acd4de481260",
+    "styles/book-callouts.tex": "213e1b399faaa9efb6dc8698603ccfb005034339d7f4b3ec3ff3b4fb5ce32714",
+    "styles/book-editorial-flow.tex": "a10a35d02a52a5cf72cf925a04cc495967fe563f4824cd1a233fd6ceffb4e5e1",
+    "styles/book-editorial-openings.tex": "3eb05da398198c1e6c4cfc034944e8da1c8cf2ddb80d1cfc615e9507dff29ebd",
+    "styles/book-figures.tex": "0c9065ebc93db4601a283f021462b73722d25c09ac0795d8b9103cbf28e503e6",
+    "styles/book-history-icon.tex": "e81624518f89081471dc21d096eff6e59b8d2bfedd302db9b060d1e356b21858",
+    "styles/book-longtables.tex": "0b3090a11c9e335a4ea3f61f63f4d6f92cfcd36f977cccbfa07aab337eebed2c",
+    "styles/book-material-icons.tex": "f2f989045590a5d277d5908d740dd04bb1f9b4fdf70bf4f68cf22be41e07898c",
+    "styles/book-refinement-commands.tex": "85fe0983b92885ddd7b6c1ccc475233d5b3aa7f9e9a39d0d1282a14a96afc290",
+    "styles/book-stable-captions.tex": "ab019a114719174a1087039aa9c254fd4e08d002cf78b4fdb614bc5e2f105a59",
+    "styles/book-stable-examples.tex": "5b715e50756dc4a3254dc30135e8b10b6f6d9593704cafb41df06d8e3aee2c85",
+    "styles/book-stable-icons.tex": "da544959a9a607684350cc6ed5f4be97b5c5716a33708613161239242fdbeaa3",
+    "styles/book-stable-material.tex": "d881894d8b7c9482bd9a25ecf6fd159dcf09a129167461016a0f775498e271c0",
+    "styles/book-stable-tables.tex": "87122eda0e2fb23efce38ac31ea1b56a71d506bb405289a033f792b4df1c2c26",
+    "styles/book-toc.tex": "ca46c386677ade5c0fe4b765c91471402ddd439a7f3900f2a47e74f779f52c79",
+    "styles/universalbook.sty": "d9bb875b254f0a8da93da9df007d394f2ebab12dc15c8a3d2386687eb2b864de"
+  },
+  "role_colour_scope": "PyMuPDF display conversion of the unchanged v1.0.12 palette; paired preflight checks actual spot plates independently."
+}

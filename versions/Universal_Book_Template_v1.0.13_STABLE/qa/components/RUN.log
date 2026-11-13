@@ -1,0 +1,17 @@
+[
+  {
+    "kind": "refinement",
+    "exit_code": 0,
+    "report": "qa/components/refinement.preflight.json"
+  },
+  {
+    "kind": "material",
+    "exit_code": 0,
+    "report": "qa/components/material.preflight.json"
+  },
+  {
+    "kind": "icons",
+    "exit_code": 0,
+    "report": "qa/components/icons.preflight.json"
+  }
+]

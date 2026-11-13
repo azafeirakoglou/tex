@@ -1,0 +1,60 @@
+\documentclass[11pt,twoside,openright]{book}
+\input{config/book-config.tex}
+\newif\ifBookTwoInkProof
+\ifdefined\ProbePrint\BookTwoInkProoftrue\else\BookTwoInkProoffalse\fi
+\newif\ifPrintThreeInk\PrintThreeInkfalse
+\usepackage{styles/universalbook}
+\pagestyle{empty}
+\newsavebox{\MaterialMeasuredBox}
+\newcommand{\MeasureMaterialHeader}[2]{%
+  \begingroup #2%
+  \setbox\MaterialMeasuredBox=\vbox{\hsize=\textwidth
+    \BookMaterialHeading{HEADER LABEL}{SHORT TITLE}{1}}%
+  \typeout{MATERIALHEIGHT-#1=\the\dimexpr\ht\MaterialMeasuredBox+\dp\MaterialMeasuredBox\relax}%
+  \endgroup
+}
+\begin{document}
+\MeasureMaterialHeader{CURRENT}{}
+\MeasureMaterialHeader{NOICONBASELINE}{%
+  \renewcommand{\BookMaterialHeaderIcon}{}%
+  \renewcommand{\BookMaterialHeaderRightPadding}{\BookMaterialHeadingHorizontalPadding}}
+
+\WorksheetOpening{UNITMARK}{SHORT WORKSHEET}
+BODYSHORT A worksheet inside a book starts immediately after the shared header.
+\begin{LearningGoals}
+\begin{enumerate}
+\item First numbered goal, preserving normal black body text.
+\item Second numbered goal, preserving existing content geometry.
+\end{enumerate}
+\end{LearningGoals}
+
+\WorksheetOpening{UNITMARK}{WORKSHEETLONG Μετατόπιση και ερμηνεία διαγραμμάτων σε σύνθετες κινήσεις με πολλά στάδια και τεκμηρίωση των συμπερασμάτων}
+BODYLONG The worksheet title may wrap naturally without entering the pencil zone.
+
+\BookWorksheetShowSubtitletrue
+\WorksheetOpening{UNITMARK}{SHORT WORKSHEET}
+BODYSTANDALONE The optional book and unit subtitle is enabled for a separate handout.
+\BookWorksheetShowSubtitlefalse
+
+\begin{Assessment}{SHORT ASSESSMENT}
+BODYASSESS The clipboard/check mark remains distinct after worksheet use.
+\AssessmentTopic{Α}
+\begin{AssessmentQuestion}[5]
+ASSESSQUESTION Existing assessment text and black points remain unchanged.
+\end{AssessmentQuestion}
+\end{Assessment}
+
+\begin{Assessment}{ASSESSMENTLONG Αιτιολόγηση των χαρακτηριστικών μίας σύνθετης ευθύγραμμης κίνησης και αξιολόγηση των εναλλακτικών επιστημονικών ερμηνειών}
+% The artificial unbreakable marker is measurement metadata, not author prose.
+% Ragged-right QA body text avoids justified spacing caused by that marker;
+% the measured product header, title words, font and geometry stay unchanged.
+{\raggedright BODYASSESSLONG A multiline assessment title remains outside the clipboard zone.\par}
+\end{Assessment}
+
+\begingroup
+\renewcommand{\BookMaterialHeaderIcon}{}%
+\renewcommand{\BookMaterialHeaderRightPadding}{\BookMaterialHeadingHorizontalPadding}%
+\BookMaterialHeading{\LabelWorksheet}{SHORT WORKSHEET}{1}
+\endgroup
+BODYCONTROL The icon-free baseline has the same short-header height and no hidden subtitle gap.
+\end{document}

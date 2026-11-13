@@ -1,0 +1,14 @@
+%!TEX TS-program = xelatex
+% Δείγμα προς την Έλσα και τους συνεργάτες — χωρίς νέα συγγραφή βιβλίου.
+% Το ίδιο chapters/collab-content.tex χρησιμοποιείται και στις δύο εκδόσεις.
+\documentclass[11pt,twoside,openright]{book}
+\input{config/book-config.tex}
+\renewcommand{\BookAuthors}{Δείγμα μακέτας · προς συζήτηση}
+\newif\ifPrintThreeInk
+\PrintThreeInkfalse
+\newif\ifBookTwoInkProof
+\BookTwoInkProoffalse
+\usepackage{styles/universalbook}
+\begin{document}
+\input{chapters/collab-content.tex}
+\end{document}

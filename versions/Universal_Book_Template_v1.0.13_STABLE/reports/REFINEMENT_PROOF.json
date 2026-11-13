@@ -1,0 +1,473 @@
+{
+  "status": "passed",
+  "pdf": "pdf/REFINEMENT_PROOF.pdf",
+  "sha256": "71e360d42ca0f8407aca44f976d7cd4ecd87d3e80c3ba76f467d929dc2149bdc",
+  "pages": 56,
+  "page_mm": [
+    170,
+    240
+  ],
+  "scale": 1,
+  "all_pages_pixel_identical_to_sources_at_72dpi": true,
+  "source_sha256": {
+    "pdf/Universal_Book_Template_v1.0.13_SCREEN.pdf": "1c02da486cd3187824e89022f38bbc64b5bc57cae89d76d52fcbcd27753a78c2",
+    "qa/refinement/pdf/REFINEMENT_SCREEN.pdf": "594e2d85f4467e1826e12027d631c9093889d26556843d58983ec176bd853e3a",
+    "qa/material/SCREEN/material-proof.pdf": "869968d0477c147181ec75808e5b2ad7b592f7984bb3c37f0dbf7c4a04bada7f",
+    "qa/icons/SCREEN/icon-context.pdf": "a565d9f87abbcdb9387152312fae1ddc0a9cc26533feb35ae6d4896214508fee",
+    "pdf/Universal_Book_Template_v1.0.13_PRINT.pdf": "898c0f6d2622939a6d279f7b3c6b0596a59d04b0cac85134c1ec63d87cce11db",
+    "qa/refinement/pdf/REFINEMENT_PRINT.pdf": "0591738a321a9dc85e00c6ef9056ce5cadd939d32a60889e0f7f681536abc8f9",
+    "qa/material/PRINT/material-proof.pdf": "5a1d0265acdeb3ef64665497b076a0ed68f693044e51ea27337e4de45dc64277",
+    "qa/icons/PRINT/icon-context.pdf": "3801f40fb8b650ee8fcb70878c7d74e65515fddc9b3088bb4248b230756cc2de"
+  },
+  "page_map": [
+    {
+      "proof_page": 1,
+      "source": "pdf/Universal_Book_Template_v1.0.13_SCREEN.pdf",
+      "source_page": 5,
+      "profile": "SCREEN",
+      "scale": 1,
+      "overlays": false
+    },
+    {
+      "proof_page": 2,
+      "source": "pdf/Universal_Book_Template_v1.0.13_SCREEN.pdf",
+      "source_page": 6,
+      "profile": "SCREEN",
+      "scale": 1,
+      "overlays": false
+    },
+    {
+      "proof_page": 3,
+      "source": "pdf/Universal_Book_Template_v1.0.13_SCREEN.pdf",
+      "source_page": 7,
+      "profile": "SCREEN",
+      "scale": 1,
+      "overlays": false
+    },
+    {
+      "proof_page": 4,
+      "source": "pdf/Universal_Book_Template_v1.0.13_SCREEN.pdf",
+      "source_page": 9,
+      "profile": "SCREEN",
+      "scale": 1,
+      "overlays": false
+    },
+    {
+      "proof_page": 5,
+      "source": "pdf/Universal_Book_Template_v1.0.13_SCREEN.pdf",
+      "source_page": 10,
+      "profile": "SCREEN",
+      "scale": 1,
+      "overlays": false
+    },
+    {
+      "proof_page": 6,
+      "source": "pdf/Universal_Book_Template_v1.0.13_SCREEN.pdf",
+      "source_page": 11,
+      "profile": "SCREEN",
+      "scale": 1,
+      "overlays": false
+    },
+    {
+      "proof_page": 7,
+      "source": "pdf/Universal_Book_Template_v1.0.13_SCREEN.pdf",
+      "source_page": 12,
+      "profile": "SCREEN",
+      "scale": 1,
+      "overlays": false
+    },
+    {
+      "proof_page": 8,
+      "source": "pdf/Universal_Book_Template_v1.0.13_SCREEN.pdf",
+      "source_page": 15,
+      "profile": "SCREEN",
+      "scale": 1,
+      "overlays": false
+    },
+    {
+      "proof_page": 9,
+      "source": "pdf/Universal_Book_Template_v1.0.13_SCREEN.pdf",
+      "source_page": 18,
+      "profile": "SCREEN",
+      "scale": 1,
+      "overlays": false
+    },
+    {
+      "proof_page": 10,
+      "source": "pdf/Universal_Book_Template_v1.0.13_SCREEN.pdf",
+      "source_page": 19,
+      "profile": "SCREEN",
+      "scale": 1,
+      "overlays": false
+    },
+    {
+      "proof_page": 11,
+      "source": "qa/refinement/pdf/REFINEMENT_SCREEN.pdf",
+      "source_page": 1,
+      "profile": "SCREEN",
+      "scale": 1,
+      "overlays": false
+    },
+    {
+      "proof_page": 12,
+      "source": "qa/refinement/pdf/REFINEMENT_SCREEN.pdf",
+      "source_page": 2,
+      "profile": "SCREEN",
+      "scale": 1,
+      "overlays": false
+    },
+    {
+      "proof_page": 13,
+      "source": "qa/refinement/pdf/REFINEMENT_SCREEN.pdf",
+      "source_page": 3,
+      "profile": "SCREEN",
+      "scale": 1,
+      "overlays": false
+    },
+    {
+      "proof_page": 14,
+      "source": "qa/refinement/pdf/REFINEMENT_SCREEN.pdf",
+      "source_page": 4,
+      "profile": "SCREEN",
+      "scale": 1,
+      "overlays": false
+    },
+    {
+      "proof_page": 15,
+      "source": "qa/refinement/pdf/REFINEMENT_SCREEN.pdf",
+      "source_page": 5,
+      "profile": "SCREEN",
+      "scale": 1,
+      "overlays": false
+    },
+    {
+      "proof_page": 16,
+      "source": "qa/material/SCREEN/material-proof.pdf",
+      "source_page": 1,
+      "profile": "SCREEN",
+      "scale": 1,
+      "overlays": false
+    },
+    {
+      "proof_page": 17,
+      "source": "qa/material/SCREEN/material-proof.pdf",
+      "source_page": 2,
+      "profile": "SCREEN",
+      "scale": 1,
+      "overlays": false
+    },
+    {
+      "proof_page": 18,
+      "source": "qa/material/SCREEN/material-proof.pdf",
+      "source_page": 3,
+      "profile": "SCREEN",
+      "scale": 1,
+      "overlays": false
+    },
+    {
+      "proof_page": 19,
+      "source": "qa/material/SCREEN/material-proof.pdf",
+      "source_page": 4,
+      "profile": "SCREEN",
+      "scale": 1,
+      "overlays": false
+    },
+    {
+      "proof_page": 20,
+      "source": "qa/material/SCREEN/material-proof.pdf",
+      "source_page": 5,
+      "profile": "SCREEN",
+      "scale": 1,
+      "overlays": false
+    },
+    {
+      "proof_page": 21,
+      "source": "qa/material/SCREEN/material-proof.pdf",
+      "source_page": 6,
+      "profile": "SCREEN",
+      "scale": 1,
+      "overlays": false
+    },
+    {
+      "proof_page": 22,
+      "source": "qa/icons/SCREEN/icon-context.pdf",
+      "source_page": 1,
+      "profile": "SCREEN",
+      "scale": 1,
+      "overlays": false
+    },
+    {
+      "proof_page": 23,
+      "source": "qa/icons/SCREEN/icon-context.pdf",
+      "source_page": 2,
+      "profile": "SCREEN",
+      "scale": 1,
+      "overlays": false
+    },
+    {
+      "proof_page": 24,
+      "source": "qa/icons/SCREEN/icon-context.pdf",
+      "source_page": 3,
+      "profile": "SCREEN",
+      "scale": 1,
+      "overlays": false
+    },
+    {
+      "proof_page": 25,
+      "source": "qa/icons/SCREEN/icon-context.pdf",
+      "source_page": 4,
+      "profile": "SCREEN",
+      "scale": 1,
+      "overlays": false
+    },
+    {
+      "proof_page": 26,
+      "source": "qa/icons/SCREEN/icon-context.pdf",
+      "source_page": 5,
+      "profile": "SCREEN",
+      "scale": 1,
+      "overlays": false
+    },
+    {
+      "proof_page": 27,
+      "source": "qa/icons/SCREEN/icon-context.pdf",
+      "source_page": 6,
+      "profile": "SCREEN",
+      "scale": 1,
+      "overlays": false
+    },
+    {
+      "proof_page": 28,
+      "source": "qa/icons/SCREEN/icon-context.pdf",
+      "source_page": 7,
+      "profile": "SCREEN",
+      "scale": 1,
+      "overlays": false
+    },
+    {
+      "proof_page": 29,
+      "source": "pdf/Universal_Book_Template_v1.0.13_PRINT.pdf",
+      "source_page": 5,
+      "profile": "PRINT",
+      "scale": 1,
+      "overlays": false
+    },
+    {
+      "proof_page": 30,
+      "source": "pdf/Universal_Book_Template_v1.0.13_PRINT.pdf",
+      "source_page": 6,
+      "profile": "PRINT",
+      "scale": 1,
+      "overlays": false
+    },
+    {
+      "proof_page": 31,
+      "source": "pdf/Universal_Book_Template_v1.0.13_PRINT.pdf",
+      "source_page": 7,
+      "profile": "PRINT",
+      "scale": 1,
+      "overlays": false
+    },
+    {
+      "proof_page": 32,
+      "source": "pdf/Universal_Book_Template_v1.0.13_PRINT.pdf",
+      "source_page": 9,
+      "profile": "PRINT",
+      "scale": 1,
+      "overlays": false
+    },
+    {
+      "proof_page": 33,
+      "source": "pdf/Universal_Book_Template_v1.0.13_PRINT.pdf",
+      "source_page": 10,
+      "profile": "PRINT",
+      "scale": 1,
+      "overlays": false
+    },
+    {
+      "proof_page": 34,
+      "source": "pdf/Universal_Book_Template_v1.0.13_PRINT.pdf",
+      "source_page": 11,
+      "profile": "PRINT",
+      "scale": 1,
+      "overlays": false
+    },
+    {
+      "proof_page": 35,
+      "source": "pdf/Universal_Book_Template_v1.0.13_PRINT.pdf",
+      "source_page": 12,
+      "profile": "PRINT",
+      "scale": 1,
+      "overlays": false
+    },
+    {
+      "proof_page": 36,
+      "source": "pdf/Universal_Book_Template_v1.0.13_PRINT.pdf",
+      "source_page": 15,
+      "profile": "PRINT",
+      "scale": 1,
+      "overlays": false
+    },
+    {
+      "proof_page": 37,
+      "source": "pdf/Universal_Book_Template_v1.0.13_PRINT.pdf",
+      "source_page": 18,
+      "profile": "PRINT",
+      "scale": 1,
+      "overlays": false
+    },
+    {
+      "proof_page": 38,
+      "source": "pdf/Universal_Book_Template_v1.0.13_PRINT.pdf",
+      "source_page": 19,
+      "profile": "PRINT",
+      "scale": 1,
+      "overlays": false
+    },
+    {
+      "proof_page": 39,
+      "source": "qa/refinement/pdf/REFINEMENT_PRINT.pdf",
+      "source_page": 1,
+      "profile": "PRINT",
+      "scale": 1,
+      "overlays": false
+    },
+    {
+      "proof_page": 40,
+      "source": "qa/refinement/pdf/REFINEMENT_PRINT.pdf",
+      "source_page": 2,
+      "profile": "PRINT",
+      "scale": 1,
+      "overlays": false
+    },
+    {
+      "proof_page": 41,
+      "source": "qa/refinement/pdf/REFINEMENT_PRINT.pdf",
+      "source_page": 3,
+      "profile": "PRINT",
+      "scale": 1,
+      "overlays": false
+    },
+    {
+      "proof_page": 42,
+      "source": "qa/refinement/pdf/REFINEMENT_PRINT.pdf",
+      "source_page": 4,
+      "profile": "PRINT",
+      "scale": 1,
+      "overlays": false
+    },
+    {
+      "proof_page": 43,
+      "source": "qa/refinement/pdf/REFINEMENT_PRINT.pdf",
+      "source_page": 5,
+      "profile": "PRINT",
+      "scale": 1,
+      "overlays": false
+    },
+    {
+      "proof_page": 44,
+      "source": "qa/material/PRINT/material-proof.pdf",
+      "source_page": 1,
+      "profile": "PRINT",
+      "scale": 1,
+      "overlays": false
+    },
+    {
+      "proof_page": 45,
+      "source": "qa/material/PRINT/material-proof.pdf",
+      "source_page": 2,
+      "profile": "PRINT",
+      "scale": 1,
+      "overlays": false
+    },
+    {
+      "proof_page": 46,
+      "source": "qa/material/PRINT/material-proof.pdf",
+      "source_page": 3,
+      "profile": "PRINT",
+      "scale": 1,
+      "overlays": false
+    },
+    {
+      "proof_page": 47,
+      "source": "qa/material/PRINT/material-proof.pdf",
+      "source_page": 4,
+      "profile": "PRINT",
+      "scale": 1,
+      "overlays": false
+    },
+    {
+      "proof_page": 48,
+      "source": "qa/material/PRINT/material-proof.pdf",
+      "source_page": 5,
+      "profile": "PRINT",
+      "scale": 1,
+      "overlays": false
+    },
+    {
+      "proof_page": 49,
+      "source": "qa/material/PRINT/material-proof.pdf",
+      "source_page": 6,
+      "profile": "PRINT",
+      "scale": 1,
+      "overlays": false
+    },
+    {
+      "proof_page": 50,
+      "source": "qa/icons/PRINT/icon-context.pdf",
+      "source_page": 1,
+      "profile": "PRINT",
+      "scale": 1,
+      "overlays": false
+    },
+    {
+      "proof_page": 51,
+      "source": "qa/icons/PRINT/icon-context.pdf",
+      "source_page": 2,
+      "profile": "PRINT",
+      "scale": 1,
+      "overlays": false
+    },
+    {
+      "proof_page": 52,
+      "source": "qa/icons/PRINT/icon-context.pdf",
+      "source_page": 3,
+      "profile": "PRINT",
+      "scale": 1,
+      "overlays": false
+    },
+    {
+      "proof_page": 53,
+      "source": "qa/icons/PRINT/icon-context.pdf",
+      "source_page": 4,
+      "profile": "PRINT",
+      "scale": 1,
+      "overlays": false
+    },
+    {
+      "proof_page": 54,
+      "source": "qa/icons/PRINT/icon-context.pdf",
+      "source_page": 5,
+      "profile": "PRINT",
+      "scale": 1,
+      "overlays": false
+    },
+    {
+      "proof_page": 55,
+      "source": "qa/icons/PRINT/icon-context.pdf",
+      "source_page": 6,
+      "profile": "PRINT",
+      "scale": 1,
+      "overlays": false
+    },
+    {
+      "proof_page": 56,
+      "source": "qa/icons/PRINT/icon-context.pdf",
+      "source_page": 7,
+      "profile": "PRINT",
+      "scale": 1,
+      "overlays": false
+    }
+  ],
+  "purpose": "Mixed SCREEN/PRINT viewing proof, not the two-ink production PDF."
+}

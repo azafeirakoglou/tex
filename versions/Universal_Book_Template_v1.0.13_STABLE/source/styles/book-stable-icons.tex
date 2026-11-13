@@ -1,0 +1,18 @@
+% v1.0.13: one top alignment for all callout icons. Relative warning/hourglass
+% scales are controlled centrally; the bulb remains the visual reference.
+% This file is read after the original vector macros; public names stay valid.
+\renewcommand{\BookCalloutCenteredIcon}[1]{%
+  \node[anchor=north,inner sep=0pt] at
+    ([xshift=\BookCalloutIconOffset,yshift=-\BookCalloutIconTopPadding]frame.north west) {#1};%
+}
+\renewcommand{\BookCalloutWarning}{%
+  \begin{tikzpicture}[x=1mm,y=1mm,
+    scale={\BookCalloutIconScale*\BookWarningIconScale},
+    line cap=round,line join=round]
+    \draw[draw=BookCalloutAccent,line width=\BookWarningOutlineWidth]
+      (0,4.25)--(-3.9,-2.75)--(3.9,-2.75)--cycle;
+    \draw[draw=BookCalloutAccent,line width=\BookWarningDetailWidth]
+      (0,1.65)--(0,-.48);
+    \fill[BookCalloutAccent] (0,-1.65) circle (.37);
+  \end{tikzpicture}%
+}
